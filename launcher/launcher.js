@@ -4,7 +4,7 @@
  */
 
 const DEFAULT_MANIFEST_URL = "https://raw.githubusercontent.com/shimakazevn/Home-project/main/release_manifest.json";
-const DEFAULT_GAME_PASSWORD = "shimakazevn";
+const DEFAULT_GAME_PASSWORD = "seikowo";
 const DB_NAME = "HOME_VN_GAME_STORAGE";
 const STORE_NAME = "game_files";
 
