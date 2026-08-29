@@ -291,23 +291,27 @@
             };
         }
 
-        // Hook tag bgmovie (Video background)
-        if (kag.tag.bgmovie) {
-            const origTagBgmovie = kag.tag.bgmovie.start;
-            kag.tag.bgmovie.start = function(pm) {
-                if (pm.storage) {
-                    let storage = pm.storage;
-                    let fullPath = (storage.startsWith("data/") || storage.startsWith("http"))
-                        ? storage
-                        : `data/video/${storage}`;
-                    let cdnUrl = window.resolveCDNUrl(fullPath);
-                    if (cdnUrl !== fullPath && cdnUrl.startsWith("http")) {
-                        pm.storage = cdnUrl;
-                    }
+        // Hook tag bgmovie (Gracefully bypass on web to prevent video tag blocking)
+        kag.tag.bgmovie = {
+            pm: { time: 0, volume: 100, loop: "true", storage: "" },
+            start: function(pm) {
+                const targetKag = (this && this.kag) ? this.kag : TYRANO.kag;
+                if (targetKag && targetKag.ftag) {
+                    targetKag.ftag.nextOrder();
                 }
-                return origTagBgmovie.apply(this, arguments);
-            };
-        }
+            }
+        };
+
+        // Hook tag stop_bgmovie
+        kag.tag.stop_bgmovie = {
+            pm: { time: 0 },
+            start: function(pm) {
+                const targetKag = (this && this.kag) ? this.kag : TYRANO.kag;
+                if (targetKag && targetKag.ftag) {
+                    targetKag.ftag.nextOrder();
+                }
+            }
+        };
 
         // Hook tag playbgm
         const origTagPlaybgm = kag.tag.playbgm.start;
