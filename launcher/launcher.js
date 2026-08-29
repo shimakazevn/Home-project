@@ -4,6 +4,7 @@
  */
 
 const DEFAULT_MANIFEST_URL = "https://raw.githubusercontent.com/shimakazevn/Home-project/main/release_manifest.json";
+const DEFAULT_GAME_PASSWORD = "shimakazevn";
 const DB_NAME = "HOME_VN_GAME_STORAGE";
 const STORE_NAME = "game_files";
 
@@ -344,6 +345,7 @@ async function checkSystemState() {
     await initDB();
     const manifestUrl = localStorage.getItem("HOME_MANIFEST_URL") || DEFAULT_MANIFEST_URL;
     inputManifestUrl.value = manifestUrl;
+    inputGamePassword.value = localStorage.getItem("HOME_GAME_PASSWORD") || DEFAULT_GAME_PASSWORD;
 
     const isInstalled = await isGameInstalledLocally();
     const localVer = localStorage.getItem("HOME_GAME_VERSION") || "Chưa có";
