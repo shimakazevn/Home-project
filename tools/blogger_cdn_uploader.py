@@ -20,6 +20,26 @@ from PIL import Image
 
 sys.stdout.reconfigure(encoding='utf-8')
 
+# Bỏ proxy rác hệ thống để kết nối thẳng tới Google APIs
+os.environ['NO_PROXY'] = '*'
+for k in ['HTTP_PROXY', 'HTTPS_PROXY', 'ALL_PROXY', 'http_proxy', 'https_proxy', 'all_proxy']:
+    os.environ.pop(k, None)
+
+# Helper nạp .env nếu có
+def load_env_file(env_path=r"E:\HOME_\.env"):
+    if os.path.exists(env_path):
+        with open(env_path, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                k, v = line.split("=", 1)
+                k = k.strip()
+                v = v.strip().strip('"').strip("'")
+                os.environ[k] = v
+
+load_env_file()
+
 # Import module mã hóa audio
 sys.path.append(os.path.dirname(__file__))
 from audio_stego_encoder import encode_audio_to_png
@@ -39,6 +59,15 @@ class BloggerCDNUploader:
         
         self.db_path = db_path
         self._init_db()
+        self.local_thread = threading.local()
+        self.album_lock = threading.Lock()
+
+    def _get_session(self):
+        if not hasattr(self.local_thread, 'session'):
+            s = requests.Session()
+            s.trust_env = False
+            self.local_thread.session = s
+        return self.local_thread.session
 
     def _init_db(self):
         """Khởi tạo SQLite cache lưu trữ tiến trình upload đã hoàn thành"""
@@ -73,6 +102,7 @@ class BloggerCDNUploader:
             if self.access_token and time.time() < self.token_expiry:
                 return self.access_token
 
+            sess = self._get_session()
             url = "https://oauth2.googleapis.com/token"
             data = {
                 "client_id": self.client_id,
@@ -80,7 +110,7 @@ class BloggerCDNUploader:
                 "refresh_token": self.refresh_token,
                 "grant_type": "refresh_token"
             }
-            resp = requests.post(url, data=data, timeout=30)
+            resp = sess.post(url, data=data, timeout=30)
             if resp.status_code != 200:
                 raise RuntimeError(f"Lỗi xác thực Google OAuth2: {resp.text}")
             
@@ -90,12 +120,14 @@ class BloggerCDNUploader:
             self.token_expiry = time.time() + expires_in - 120 # Buffer 2 mins
             return self.access_token
 
-    def upload_bytes(self, data_bytes: bytes, filename: str, mime_type: str = "image/png", max_retries: int = 4) -> str:
+    def upload_bytes(self, data_bytes: bytes, filename: str, mime_type: str = "image/png", max_retries: int = 6) -> str:
         """Upload raw bytes lên Google Docs/Blogger Resumable endpoint và nhận link lh3.googleusercontent.com"""
+        sess = self._get_session()
         for attempt in range(max_retries):
             try:
                 token = self.refresh_access_token()
-                album_id = self.album_ids[self.current_album_idx % len(self.album_ids)]
+                with self.album_lock:
+                    album_id = self.album_ids[self.current_album_idx % len(self.album_ids)]
                 
                 # 1. Tạo session upload
                 session_url = f"https://docs.google.com/upload/blogger/photos/resumable?authuser=0&blogId={self.post_blog_id}"
@@ -119,15 +151,17 @@ class BloggerCDNUploader:
                     }
                 }
                 
-                init_resp = requests.post(session_url, headers=headers, json=payload, timeout=30)
+                init_resp = sess.post(session_url, headers=headers, json=payload, timeout=30)
                 if init_resp.status_code == 401:
-                    self.access_token = None
+                    with self.token_lock:
+                        self.access_token = None
                     continue
                 
                 if init_resp.status_code in (400, 403) or "REQUEST_REJECTED" in init_resp.text:
                     # Chuyển sang Album tiếp theo nếu album hiện tại đầy/lỗi
-                    self.current_album_idx = (self.current_album_idx + 1) % len(self.album_ids)
-                    time.sleep(1)
+                    with self.album_lock:
+                        self.current_album_idx = (self.current_album_idx + 1) % len(self.album_ids)
+                    time.sleep(0.5)
                     continue
 
                 upload_endpoint = init_resp.headers.get("X-Goog-Upload-URL")
@@ -141,13 +175,13 @@ class BloggerCDNUploader:
                     "Content-Type": "application/octet-stream"
                 }
                 
-                up_resp = requests.post(upload_endpoint, headers=upload_headers, data=data_bytes, timeout=60)
+                up_resp = sess.post(upload_endpoint, headers=upload_headers, data=data_bytes, timeout=90)
                 if up_resp.status_code == 200:
                     up_json = up_resp.json()
                     # Trích xuất url
+                    raw_url = None
                     try:
-                        url = up_json["sessionStatus"]["additionalInfo"]["uploader_service.GoogleRupioAdditionalInfo"]["completionInfo"]["customerSpecificInfo"]["url"]
-                        return url + "=s0"
+                        raw_url = up_json["sessionStatus"]["additionalInfo"]["uploader_service.GoogleRupioAdditionalInfo"]["completionInfo"]["customerSpecificInfo"]["url"]
                     except Exception:
                         # Fallback deep search
                         def search_url(obj):
@@ -162,10 +196,17 @@ class BloggerCDNUploader:
                                     res = search_url(item)
                                     if res: return res
                             return None
-                        found = search_url(up_json)
-                        if found:
-                            return found + "=s0"
-                        raise RuntimeError(f"Không trích xuất được URL ảnh: {up_resp.text}")
+                        raw_url = search_url(up_json)
+
+                    if raw_url:
+                        # Chèn /s0/ vào trước filename để lấy raw 100% gốc không nén
+                        clean_u = raw_url.split('=s0')[0].rstrip('/')
+                        parts = clean_u.rsplit('/', 1)
+                        if len(parts) == 2 and parts[1]:
+                            return f"{parts[0]}/s0/{parts[1]}"
+                        return clean_u + "=s0"
+                    
+                    raise RuntimeError(f"Không trích xuất được URL ảnh: {up_resp.text}")
 
                 time.sleep(2)
             except Exception as e:
@@ -255,6 +296,8 @@ def scan_and_upload_all(asar_path: str, uploader: BloggerCDNUploader, manifest_o
     print(f"[*] Khởi chạy tiến trình upload đa luồng ({max_workers} workers)...")
     completed = len(manifest)
     total = len(media_items)
+    start_time = time.time()
+    uploaded_new = 0
 
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         futures = {executor.submit(process_item, item): item for item in items_to_upload}
@@ -263,8 +306,14 @@ def scan_and_upload_all(asar_path: str, uploader: BloggerCDNUploader, manifest_o
                 rel_path, cdn_url = future.result()
                 manifest[rel_path] = cdn_url
                 completed += 1
+                uploaded_new += 1
                 pct = (completed / total) * 100
-                sys.stdout.write(f"\r  Progress: [{completed:,}/{total:,}] {pct:5.1f}% | Đã upload: {os.path.basename(rel_path)}".ljust(90))
+                elapsed = time.time() - start_time
+                speed = uploaded_new / elapsed if elapsed > 0 else 0
+                remaining = len(items_to_upload) - uploaded_new
+                eta_s = remaining / speed if speed > 0 else 0
+
+                sys.stdout.write(f"\r  Progress: [{completed:,}/{total:,}] {pct:5.1f}% | {speed:.1f} f/s | ETA: {int(eta_s)}s | {os.path.basename(rel_path)[:25]}".ljust(100))
                 sys.stdout.flush()
             except Exception as ex:
                 item = futures[future]
@@ -283,20 +332,24 @@ def scan_and_upload_all(asar_path: str, uploader: BloggerCDNUploader, manifest_o
 
 
 if __name__ == '__main__':
-    # Hướng dẫn sử dụng
-    if len(sys.argv) < 6:
-        print("Sử dụng: python blogger_cdn_uploader.py <app.asar> <client_id> <client_secret> <refresh_token> <blog_id> [album_ids]")
-        print("Ví dụ:")
-        print('  python tools/blogger_cdn_uploader.py "Game/resources/app.asar" "$CLIENT_ID" "$SECRET" "$REFRESH_TOKEN" "5603145815846388386" "7648132436102765169,..."')
+    asar_input = r"E:\HOME_\Game\resources\app.asar"
+    manifest_out = r"E:\HOME_\patch\data\asset_manifest.json"
+    workers = 20
+
+    if len(sys.argv) > 1 and sys.argv[1].endswith('.asar'):
+        asar_input = sys.argv[1]
+    if len(sys.argv) > 2 and sys.argv[2].endswith('.json'):
+        manifest_out = sys.argv[2]
+
+    cid = os.environ.get("GOOGLE_CLIENT_ID", "")
+    csec = os.environ.get("GOOGLE_CLIENT_SECRET", "")
+    rtok = os.environ.get("GOOGLE_REFRESH_TOKEN", "")
+    blog = os.environ.get("POST_BLOG_ID", "5603145815846388386")
+    albums = os.environ.get("ALBUM_IDS", "7625247545492055521,7625247664534735937,7648132436102765169,7645099798651155937,7652714830743122225,7652715109721514913,7652715263749318033,7649021495335468129,7648132784060485841")
+
+    if not cid or not csec or not rtok:
+        print("[LỖI] Thiếu Google credentials trong .env!")
         sys.exit(1)
-    
-    asar_input = sys.argv[1]
-    cid = sys.argv[2]
-    csec = sys.argv[3]
-    rtok = sys.argv[4]
-    blog = sys.argv[5]
-    albums = sys.argv[6] if len(sys.argv) > 6 else ""
 
     uploader_instance = BloggerCDNUploader(cid, csec, rtok, blog, albums)
-    manifest_out = r'E:\HOME_\patch\data\asset_manifest.json'
-    scan_and_upload_all(asar_input, uploader_instance, manifest_out)
+    scan_and_upload_all(asar_input, uploader_instance, manifest_out, max_workers=workers)

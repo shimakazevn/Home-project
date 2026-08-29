@@ -47,12 +47,13 @@ def build_web_distribution():
                 if 'files' in v:
                     extract_matching_files(v, curr_path)
                 else:
-                    ext = os.path.splitext(curr_path)[1].lower()
-                    # Chỉ lấy code, HTML, CSS, JS, font hệ thống (BỎ QUA toàn bộ ảnh/audio nặng)
+                    # Lấy toàn bộ code, kịch bản, scenario hệ thống, HTML, CSS, JS
+                    # CHỈ BỎ QUA các folder media nặng (đã đẩy lên Blogger CDN)
+                    media_dirs = ('data/bgimage/', 'data/sound/', 'data/bgm/', 'data/video/', 'data/fgimage/', 'data/image/')
                     should_extract = (
-                        curr_path.startswith(('tyrano/', 'data/system/', 'data/others/'))
+                        curr_path.startswith(('tyrano/', 'data/system/', 'data/others/', 'data/scenario/'))
                         or curr_path in ('index.html', 'package.json')
-                    ) and not curr_path.startswith(('data/bgimage/', 'data/sound/', 'data/bgm/', 'data/video/'))
+                    ) and not curr_path.startswith(media_dirs)
 
                     if should_extract:
                         off = int(v['offset'])
@@ -89,19 +90,26 @@ def build_web_distribution():
     with open(index_html_path, 'r', encoding='utf-8') as f:
         html = f.read()
 
-    # Chèn Mobile stylesheet & Plugins vào thẻ <head>
+    # Chèn meta referrer no-referrer, Mobile stylesheet & Plugins vào thẻ <head>
     injections = """
+<meta name="referrer" content="no-referrer" />
 <!-- HOME Web CDN & Save Extensions -->
 <link href="./tyrano/css/web_mobile.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="./data/others/plugin/cdn_interceptor/init.js"></script>
 <script type="text/javascript" src="./data/others/plugin/web_save/init.js"></script>
 """
     if "cdn_interceptor" not in html:
-        html = html.replace('</head>', f'{injections}\n</head>')
+        html = html.replace('<head>', f'<head>\n{injections}')
+    elif 'name="referrer"' not in html:
+        html = html.replace('<head>', '<head>\n<meta name="referrer" content="no-referrer" />')
 
     with open(index_html_path, 'w', encoding='utf-8') as f:
         f.write(html)
-    print("  [OK] Đã cấu hình index.html hoàn chỉnh.")
+    
+    # Tạo file .nojekyll để GitHub Pages không bỏ qua các file _preview.ks, _system.ks
+    with open(os.path.join(WEB_DIST_DIR, '.nojekyll'), 'w', encoding='utf-8') as f:
+        f.write("# Disable Jekyll\n")
+    print("  [OK] Đã cấu hình index.html và .nojekyll hoàn chỉnh.")
 
     # 4. Kiểm tra tổng dung lượng bản Web
     total_size = sum(

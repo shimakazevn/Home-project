@@ -1,141 +1,181 @@
-// ══════════════════════════════════════════════════════════════════════════════
-// HOME - TyranoScript Web CDN Interceptor & Stego Audio Engine
-// Tự động định tuyến toàn bộ hình ảnh và âm thanh sang Blogger CDN
-// ══════════════════════════════════════════════════════════════════════════════
+/**
+ * CDN Interceptor Plugin cho TyranoScript Web
+ * Tự động chuyển hướng toàn bộ hình ảnh, button, bgmovie và Stego Audio sang Google Blogger/Photos CDN
+ * Tự động chuẩn hóa âm lượng (Volume Softening & Normalization) cho trải nghiệm êm ái
+ */
 
 (function() {
-    console.log("[CDN Interceptor] Đang khởi tạo hệ thống CDN Interceptor...");
+    'use strict';
 
-    // 1. Tải Asset Manifest JSON
-    window.ASSET_MANIFEST = {};
-    window.ASSET_MANIFEST_LOADED = false;
-
-    const manifestUrl = "./data/asset_manifest.json";
-    fetch(manifestUrl)
-        .then(res => {
-            if (!res.ok) throw new Error("Không thể tải asset_manifest.json");
-            return res.json();
-        })
-        .then(data => {
-            window.ASSET_MANIFEST = data;
-            window.ASSET_MANIFEST_LOADED = true;
-            console.log(`[CDN Interceptor] ✅ Đã nạp thành công ${Object.keys(data).length} mục định tuyến CDN.`);
-        })
-        .catch(err => {
-            console.warn(`[CDN Interceptor] ⚠️ asset_manifest.json chưa có sẵn hoặc lỗi:`, err);
-        });
-
-    // Hàm tra cứu URL CDN
-    window.resolveCDNUrl = function(path) {
-        if (!path) return path;
-        // Chuẩn hóa đường dẫn (bỏ ./ ở đầu nếu có)
-        let cleanPath = path.replace(/^\.\//, "").replace(/\\/g, "/");
-        if (window.ASSET_MANIFEST && window.ASSET_MANIFEST[cleanPath]) {
-            return window.ASSET_MANIFEST[cleanPath];
-        }
-        return path;
-    };
-
-    // 2. Audio Steganography Cache & Decoder
-    const audioBufferCache = new Map();
-    let webAudioCtx = null;
-
-    function getAudioContext() {
-        if (!webAudioCtx) {
-            webAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        }
-        if (webAudioCtx.state === 'suspended') {
-            webAudioCtx.resume();
-        }
-        return webAudioCtx;
+    let metaRef = document.querySelector('meta[name="referrer"]');
+    if (!metaRef) {
+        metaRef = document.createElement('meta');
+        metaRef.name = 'referrer';
+        metaRef.content = 'no-referrer';
+        document.head.prepend(metaRef);
     }
 
-    // Giải mã PNG Stego thành AudioBuffer
-    window.decodeStegoAudioFromUrl = async function(pngUrl) {
-        if (audioBufferCache.has(pngUrl)) {
-            return audioBufferCache.get(pngUrl);
-        }
+    let assetManifest = null;
+    let audioCtx = null;
+    let activeBgmSource = null;
+    let activeBgmGainNode = null;
+    let activeSeSources = [];
 
-        const ctx = getAudioContext();
-        const resp = await fetch(pngUrl);
+    // Master volume scales (BGM 12%, SE 15% - Âm lượng nhẹ nhàng, êm ái)
+    const MASTER_BGM_SCALE = 0.12;
+    const MASTER_SE_SCALE = 0.15;
+
+    // Giảm âm lượng cho toàn bộ Video/Audio thẻ HTML (như bgmovie, title_bg.mp4)
+    try {
+        const origVolumeDesc = Object.getOwnPropertyDescriptor(HTMLMediaElement.prototype, 'volume');
+        if (origVolumeDesc && origVolumeDesc.set) {
+            Object.defineProperty(HTMLMediaElement.prototype, 'volume', {
+                set: function(val) {
+                    let scaled = Math.min(0.18, val * 0.15);
+                    return origVolumeDesc.set.call(this, scaled);
+                },
+                get: function() {
+                    return origVolumeDesc.get.call(this);
+                }
+            });
+        }
+    } catch(e) {}
+
+    // Tự động kiểm tra và giảm âm lượng cho mọi thẻ media được chèn vào trang
+    const mediaObserver = new MutationObserver(() => {
+        document.querySelectorAll('video, audio').forEach(el => {
+            if (el.volume > 0.20) {
+                el.volume = 0.15;
+            }
+        });
+    });
+    mediaObserver.observe(document.documentElement, { childList: true, subtree: true });
+
+    function getAudioContext() {
+        if (!audioCtx) {
+            const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+            audioCtx = new AudioContextClass();
+        }
+        if (audioCtx.state === 'suspended') {
+            audioCtx.resume();
+        }
+        return audioCtx;
+    }
+
+    // Unlock Web Audio trên user interaction đầu tiên (click, touch)
+    ['click', 'touchstart', 'keydown'].forEach(evt => {
+        window.addEventListener(evt, () => {
+            if (audioCtx && audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+        }, { once: false, passive: true });
+    });
+
+    // 1. Tải bảng manifest định tuyến CDN
+    async function loadManifest() {
+        if (assetManifest) return assetManifest;
+        try {
+            const resp = await fetch('./data/asset_manifest.json');
+            if (resp.ok) {
+                assetManifest = await resp.json();
+                console.log(`[CDN Interceptor] Đã nạp thành công ${Object.keys(assetManifest).length} CDN routes.`);
+            }
+        } catch (e) {
+            console.warn('[CDN Interceptor] Không thể nạp asset_manifest.json:', e);
+            assetManifest = {};
+        }
+        return assetManifest || {};
+    }
+
+    // 2. Chuyển đổi đường dẫn cục bộ -> URL Blogger CDN
+    window.resolveCDNUrl = function(rawPath) {
+        if (!assetManifest || !rawPath) return rawPath;
+        let clean = rawPath.replace(/^[./]+/, '').replace(/\\/g, '/');
+        if (assetManifest[clean]) {
+            return assetManifest[clean];
+        }
+        for (const k in assetManifest) {
+            if (clean.endsWith(k) || k.endsWith(clean)) {
+                return assetManifest[k];
+            }
+        }
+        return rawPath;
+    };
+
+    // 3. Giải mã Audio từ RGB24 Stego PNG
+    window.decodeStegoAudioFromUrl = async function(pngUrl) {
+        const resp = await fetch(pngUrl, { referrerPolicy: 'no-referrer' });
         const blob = await resp.blob();
         const bitmap = await createImageBitmap(blob);
 
-        const canvas = new OffscreenCanvas(bitmap.width, bitmap.height);
-        const c2d = canvas.getContext('2d');
-        c2d.drawImage(bitmap, 0, 0);
+        const canvas = document.createElement('canvas');
+        canvas.width = bitmap.width;
+        canvas.height = bitmap.height;
+        const ctx = canvas.getContext('2d', { willReadFrequently: true });
+        ctx.drawImage(bitmap, 0, 0);
 
-        const imgData = c2d.getImageData(0, 0, bitmap.width, bitmap.height).data;
-        
-        // 4 bytes data_len tại Pixel 1 và 2 (R1, G1, B1, R2 trong mảng RGB / RGBA phẳng)
-        const sz0 = imgData[5];
-        const sz1 = imgData[6];
-        const sz2 = imgData[8];
-        const sz3 = imgData[9];
-        const dataLen = (sz0 << 24) | (sz1 << 16) | (sz2 << 8) | sz3;
+        const imgData = ctx.getImageData(0, 0, bitmap.width, bitmap.height);
+        const pixels = imgData.data;
 
-        const rawBytes = new Uint8Array(dataLen);
-        let byteIdx = 0;
-        for (let i = 16; i < imgData.length && byteIdx < dataLen; i += 4) {
-            rawBytes[byteIdx++] = imgData[i];
-            if (byteIdx < dataLen) rawBytes[byteIdx++] = imgData[i + 1];
-            if (byteIdx < dataLen) rawBytes[byteIdx++] = imgData[i + 2];
+        // Trích xuất 12 bytes header (Magic 4 bytes + Size 4 bytes + Pad 4 bytes)
+        const headerBytes = new Uint8Array(12);
+        let hIdx = 0;
+        for (let i = 0; i < pixels.length && hIdx < 12; i += 4) {
+            headerBytes[hIdx++] = pixels[i];
+            if (hIdx < 12) headerBytes[hIdx++] = pixels[i + 1];
+            if (hIdx < 12) headerBytes[hIdx++] = pixels[i + 2];
         }
 
-        const audioBuffer = await ctx.decodeAudioData(rawBytes.buffer);
-        audioBufferCache.set(pngUrl, audioBuffer);
-        return audioBuffer;
-    };
-
-    // Preload Audio ở chế độ nền
-    window.preloadStegoAudio = function(audioRelPath) {
-        const cdnUrl = window.resolveCDNUrl(audioRelPath);
-        if (cdnUrl && cdnUrl.startsWith("http")) {
-            window.decodeStegoAudioFromUrl(cdnUrl).catch(() => {});
+        const magic = String.fromCharCode(...headerBytes.slice(0, 4));
+        if (magic !== 'AUDO') {
+            throw new Error(`Invalid Stego Magic: ${magic}`);
         }
+
+        const dataView = new DataView(headerBytes.buffer, headerBytes.byteOffset, 12);
+        const audioSize = dataView.getUint32(4, false);
+
+        // Trích xuất audio bytes
+        const audioBytes = new Uint8Array(audioSize);
+        let aIdx = 0;
+        let pOffset = 0;
+
+        for (let i = 0; i < pixels.length && aIdx < audioSize; i += 4) {
+            if (pOffset >= 12) {
+                audioBytes[aIdx++] = pixels[i];
+            }
+            pOffset++;
+
+            if (pOffset >= 12 && aIdx < audioSize) {
+                audioBytes[aIdx++] = pixels[i + 1];
+            }
+            pOffset++;
+
+            if (pOffset >= 12 && aIdx < audioSize) {
+                audioBytes[aIdx++] = pixels[i + 2];
+            }
+            pOffset++;
+        }
+
+        const actx = getAudioContext();
+        return await actx.decodeAudioData(audioBytes.buffer);
     };
 
-    // 3. Hook vào TyranoScript Engine khi sẵn sàng
+    // 4. Hook vào TyranoScript Engine
     function installTyranoHooks() {
-        if (!window.TYRANO || !TYRANO.kag) {
-            setTimeout(installTyranoHooks, 100);
+        if (!window.TYRANO || !TYRANO.kag || !TYRANO.kag.tag) {
+            setTimeout(installTyranoHooks, 50);
             return;
         }
 
         const kag = TYRANO.kag;
-        console.log("[CDN Interceptor] Đang gắn Hook vào TyranoScript KAG Engine...");
+        if (!kag.ftis && kag.ftag) {
+            kag.ftis = kag.ftag;
+        }
 
-        // ── A. Hook Hình ảnh (Background, Image, Chara) ────────────────────────
-        const origTagBg = kag.tag.bg.start;
-        kag.tag.bg.start = function(pm) {
-            if (pm.storage) {
-                let fullPath = pm.storage.includes("/") ? pm.storage : `data/bgimage/${pm.storage}`;
-                let cdnUrl = window.resolveCDNUrl(fullPath);
-                if (cdnUrl !== fullPath && cdnUrl.startsWith("http")) {
-                    pm.storage = cdnUrl;
-                }
-            }
-            return origTagBg.apply(this, arguments);
-        };
+        console.log("[CDN Interceptor] Đang gắn Hook vào TyranoScript engine...");
 
-        const origTagImage = kag.tag.image.start;
-        kag.tag.image.start = function(pm) {
-            if (pm.storage) {
-                let fullPath = pm.storage.includes("/") ? pm.storage : `data/fgimage/${pm.storage}`;
-                let cdnUrl = window.resolveCDNUrl(fullPath);
-                if (cdnUrl !== fullPath && cdnUrl.startsWith("http")) {
-                    pm.storage = cdnUrl;
-                }
-            }
-            return origTagImage.apply(this, arguments);
-        };
-
-        // ── B. Hook Âm thanh (PlayBGM, PlaySE) ──────────────────────────────────
-        let activeBgmSource = null;
-        let activeBgmGainNode = null;
-
-        // Custom PlayBGM qua Web Audio API cho file Stego PNG
-        kag.ft_play_stego_bgm = async function(cdnUrl, loop = true, volume = 1.0) {
+        // Hook BGM Player
+        kag.ft_play_stego_bgm = async function(cdnUrl, loop, rawVol) {
             try {
                 const ctx = getAudioContext();
                 if (activeBgmSource) {
@@ -149,7 +189,10 @@
                 
                 source.buffer = audioBuffer;
                 source.loop = loop;
-                gainNode.gain.value = volume;
+                
+                // Chuẩn hóa volume về mức êm dịu (MASTER_BGM_SCALE = 0.12)
+                let normVol = (rawVol > 1.0 ? rawVol / 100.0 : rawVol);
+                gainNode.gain.value = Math.max(0, Math.min(1.0, normVol * MASTER_BGM_SCALE));
 
                 source.connect(gainNode);
                 gainNode.connect(ctx.destination);
@@ -162,41 +205,151 @@
             }
         };
 
+        // Hook Sound Effect Player
+        kag.ft_play_stego_se = async function(cdnUrl, rawVol) {
+            try {
+                const ctx = getAudioContext();
+                const audioBuffer = await window.decodeStegoAudioFromUrl(cdnUrl);
+                const source = ctx.createBufferSource();
+                const gainNode = ctx.createGain();
+                
+                source.buffer = audioBuffer;
+                source.loop = false;
+                
+                // Chuẩn hóa volume về mức êm dịu (MASTER_SE_SCALE = 0.15)
+                let normVol = (rawVol > 1.0 ? rawVol / 100.0 : rawVol);
+                gainNode.gain.value = Math.max(0, Math.min(1.0, normVol * MASTER_SE_SCALE));
+
+                source.connect(gainNode);
+                gainNode.connect(ctx.destination);
+
+                source.start(0);
+                activeSeSources.push(source);
+                source.onended = () => {
+                    activeSeSources = activeSeSources.filter(s => s !== source);
+                };
+            } catch (err) {
+                console.error("[CDN Interceptor] Lỗi phát Stego SE:", err);
+            }
+        };
+
+        // Hook tag bg (Background image)
+        if (kag.tag.bg) {
+            const origTagBg = kag.tag.bg.start;
+            kag.tag.bg.start = function(pm) {
+                if (pm.storage) {
+                    let storage = pm.storage;
+                    let fullPath = (storage.startsWith("data/") || storage.startsWith("http")) 
+                        ? storage 
+                        : `data/bgimage/${storage}`;
+                    let cdnUrl = window.resolveCDNUrl(fullPath);
+                    if (cdnUrl !== fullPath && cdnUrl.startsWith("http")) {
+                        pm.storage = cdnUrl;
+                    }
+                }
+                return origTagBg.apply(this, arguments);
+            };
+        }
+
+        // Hook tag image (Foreground & general image)
+        if (kag.tag.image) {
+            const origTagImage = kag.tag.image.start;
+            kag.tag.image.start = function(pm) {
+                if (pm.storage) {
+                    let storage = pm.storage;
+                    let folder = pm.folder || "fgimage";
+                    let fullPath = (storage.startsWith("data/") || storage.startsWith("http"))
+                        ? storage
+                        : `data/${folder}/${storage}`;
+                    let cdnUrl = window.resolveCDNUrl(fullPath);
+                    if (cdnUrl !== fullPath && cdnUrl.startsWith("http")) {
+                        pm.storage = cdnUrl;
+                    }
+                }
+                return origTagImage.apply(this, arguments);
+            };
+        }
+
+        // Hook tag button (UI buttons on Title & Menus)
+        if (kag.tag.button) {
+            const origTagButton = kag.tag.button.start;
+            kag.tag.button.start = function(pm) {
+                let folder = pm.folder || "image";
+                ['graphic', 'enterimg', 'clickimg'].forEach(prop => {
+                    if (pm[prop]) {
+                        let graphic = pm[prop];
+                        let fullPath = (graphic.startsWith("data/") || graphic.startsWith("http"))
+                            ? graphic
+                            : `data/${folder}/${graphic}`;
+                        let cdnUrl = window.resolveCDNUrl(fullPath);
+                        if (cdnUrl !== fullPath && cdnUrl.startsWith("http")) {
+                            pm[prop] = cdnUrl;
+                        }
+                    }
+                });
+                return origTagButton.apply(this, arguments);
+            };
+        }
+
+        // Hook tag bgmovie (Video background)
+        if (kag.tag.bgmovie) {
+            const origTagBgmovie = kag.tag.bgmovie.start;
+            kag.tag.bgmovie.start = function(pm) {
+                if (pm.storage) {
+                    let storage = pm.storage;
+                    let fullPath = (storage.startsWith("data/") || storage.startsWith("http"))
+                        ? storage
+                        : `data/video/${storage}`;
+                    let cdnUrl = window.resolveCDNUrl(fullPath);
+                    if (cdnUrl !== fullPath && cdnUrl.startsWith("http")) {
+                        pm.storage = cdnUrl;
+                    }
+                }
+                return origTagBgmovie.apply(this, arguments);
+            };
+        }
+
+        // Hook tag playbgm
         const origTagPlaybgm = kag.tag.playbgm.start;
         kag.tag.playbgm.start = function(pm) {
+            const targetKag = (this && this.kag) ? this.kag : TYRANO.kag;
             if (pm.storage) {
                 let fullPath = pm.storage.includes("/") ? pm.storage : `data/bgm/${pm.storage}`;
                 let cdnUrl = window.resolveCDNUrl(fullPath);
                 
-                // Nếu URL là link Blogger CDN ngoài
                 if (cdnUrl !== fullPath && cdnUrl.startsWith("http")) {
-                    kag.ft_play_stego_bgm(cdnUrl, pm.loop !== "false", parseFloat(pm.volume || 1.0));
-                    kag.ftis.nextOrder();
+                    targetKag.ft_play_stego_bgm(cdnUrl, pm.loop !== "false", parseFloat(pm.volume || 100));
+                    if (targetKag.layer) targetKag.layer.showEventLayer();
+                    if (targetKag.ftag) targetKag.ftag.nextOrder();
                     return;
                 }
             }
             return origTagPlaybgm.apply(this, arguments);
         };
 
+        // Hook tag playse
         const origTagPlayse = kag.tag.playse.start;
         kag.tag.playse.start = function(pm) {
+            const targetKag = (this && this.kag) ? this.kag : TYRANO.kag;
             if (pm.storage) {
                 let fullPath = pm.storage.includes("/") ? pm.storage : `data/sound/${pm.storage}`;
                 let cdnUrl = window.resolveCDNUrl(fullPath);
                 
                 if (cdnUrl !== fullPath && cdnUrl.startsWith("http")) {
-                    kag.ft_play_stego_bgm(cdnUrl, false, parseFloat(pm.volume || 1.0));
-                    kag.ftis.nextOrder();
+                    targetKag.ft_play_stego_se(cdnUrl, parseFloat(pm.volume || 100));
+                    if (targetKag.layer) targetKag.layer.showEventLayer();
+                    if (targetKag.ftag) targetKag.ftag.nextOrder();
                     return;
                 }
             }
             return origTagPlayse.apply(this, arguments);
         };
 
-        console.log("[CDN Interceptor] ✅ Đã gắn hoàn tất toàn bộ Hook.");
+        console.log("[CDN Interceptor] ✅ Đã gắn hoàn tất toàn bộ Hook (bg, image, button, bgmovie, audio).");
     }
 
-    // Khởi động khi DOM ready
+    // Khởi động
+    loadManifest();
     if (document.readyState === "loading") {
         document.addEventListener("DOMContentLoaded", installTyranoHooks);
     } else {
