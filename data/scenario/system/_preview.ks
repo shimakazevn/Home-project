@@ -1,0 +1,5 @@
+[hidemenubutton] 
+[preload  storage="./data/bgimage/sin_nagi_haharoom.png"  ]
+[preload  storage="./data/fgimage/chara/178/ADV_nagi_00_03c.gif"  ]
+[preload  storage="./data/bgimage/black.jpg"  ]
+[return] 

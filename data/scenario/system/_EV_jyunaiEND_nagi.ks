@@ -1,0 +1,6 @@
+[preload  storage="./data/bgimage/sin_nagi_DK.png"  ]
+[preload  storage="./data/bgimage/event/nagi_jyunaiEND.png"  ]
+[preload  storage="./data/bgimage/black.jpg"  ]
+[preload  storage="./data/bgimage/event_fin2.jpg"  ]
+[preload  storage="./data/bgimage/event_fin.jpg"  ]
+[return]

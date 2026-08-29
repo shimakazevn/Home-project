@@ -1,0 +1,5 @@
+[preload  storage="./data/bgimage/event/gohan_nagi.png"  ]
+[preload  storage="./data/bgimage/event/gohan_rinko.png"  ]
+[preload  storage="./data/bgimage/event/gohan_tubomi.png"  ]
+[preload  storage="./data/bgimage/event/gohan_hayato.png"  ]
+[return]
