@@ -21,7 +21,7 @@
 *top
 
 [tb_start_text mode=1 ]
-[舜]「今日は日曜日か」[p]
+[舜]「Hôm nay là Chủ Nhật à.」[p]
 
 [_tb_end_text]
 
@@ -34,7 +34,7 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=4 ]
-[舜]「特に用も無いし、どうしようかな」
+[舜]「Cũng chẳng có việc gì đặc biệt, nên làm gì bây giờ nhỉ.」
 [_tb_end_text]
 
 [glink  color="btn_05_black"  storage="room_Sunday.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Đi mua sắm"  _clickable_img=""  target="*kaimono"  ]
@@ -43,7 +43,7 @@
 *deto
 
 [tb_start_text mode=1 ]
-[舜]「そういえば、今日は出かける予定があったんだっけ。準備して出かけよう」[p]
+[舜]「Nhắc mới nhớ, hôm nay mình có lịch đi ra ngoài nhỉ. Chuẩn bị đồ đạc rồi đi thôi.」[p]
 [_tb_end_text]
 
 [stopbgm  time="1000"  fadeout="true"  ]
@@ -126,7 +126,7 @@
 *kaimono
 
 [tb_start_text mode=1 ]
-[舜]「準備して出かけよう」[p]
+[舜]「Chuẩn bị đồ đạc rồi đi ra ngoài thôi.」[p]
 [_tb_end_text]
 
 [call  storage="BGM.ks"  target="*date"  ]
@@ -134,7 +134,7 @@
 *neru
 
 [tb_start_text mode=1 ]
-[舜]「特に予定も無いし…寝て過ごそう……」[p]
+[舜]「Cũng chẳng có lịch trình gì đặc biệt... Thôi cứ ngủ cho qua ngày vậy...」[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="job_daiseikou.mp3"  ]
@@ -144,7 +144,7 @@
 [tb_eval  exp="f.para_sutoresu_updated-=20"  name="para_sutoresu_updated"  cmd="-="  op="t"  val="20"  val_2="undefined"  ]
 [call  storage="ui_parameter.ks"  target="*sutoresu_update"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]体力が上昇した[resetfont][r][font color="yellow"]ストレスが減少した[resetfont][r][font color="yellow"]テンションが少し上がった[resetfont][p]
+[font color="yellow"]Thể lực đã tăng[resetfont][r][font color="yellow"]Căng thẳng đã giảm[resetfont][r][font color="yellow"]Chỉ số hưng phấn đã tăng nhẹ[resetfont][p]
 [_tb_end_text]
 
 [wait  time="1000"  ]
@@ -154,8 +154,8 @@
 [stopbgm  time="1000"  fadeout="true"  ]
 [tb_eval  exp="f.takarakuji=Math.floor(Math.random()*(30-1+1)+1)"  name="takarakuji"  cmd="="  op="r"  val="1"  val_2="30"  ]
 [tb_start_text mode=1 ]
-[舜]「そういえば、今日は先日買った宝くじの抽選日だったような」[p]
-[舜]「ネットで結果が発表されてるみたいだ。どれどれ…」[p]
+[舜]「Nhắc mới nhớ, hình như hôm nay là ngày quay thưởng tờ vé số mình mua hôm nọ thì phải.」[p]
+[舜]「Hình như kết quả đã được công bố trên mạng rồi. Xem nào...」[p]
 [_tb_end_text]
 
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
@@ -183,7 +183,7 @@
 *hazure
 
 [tb_start_text mode=1 ]
-[舜]「300円が一枚か…。まぁそんなもんだよな」[p]
+[舜]「Trúng một tờ 300 Yên à... Chà, cũng chỉ đến thế thôi nhỉ.」[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
@@ -194,7 +194,7 @@
 *takarakuji_3tou
 
 [tb_start_text mode=1 ]
-[舜]「1万円当選か…。1万円分買ってこの結果なら…まぁ、こんなもんだよな」[p]
+[舜]「Trúng 10.000 Yên à... Bỏ ra 10.000 Yên mua mà kết quả thế này thì... Chà, cũng chỉ đến thế thôi nhỉ.」[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
@@ -205,7 +205,7 @@
 *takarakuji_2tou
 
 [tb_start_text mode=1 ]
-[舜]「3万円当選した！やった、ラッキー！」[p]
+[舜]「Trúng 30.000 Yên rồi! Tuyệt quá, may mắn ghê!」[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
@@ -216,7 +216,7 @@
 *takarakuji_1tou
 
 [tb_start_text mode=1 ]
-[舜]「10万円当選！やった！本当に当たるもんなんだなぁ…！」[p]
+[舜]「Trúng 100.000 Yên! Tuyệt quá! Đúng là có trúng thật này...!」[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]

@@ -20,7 +20,7 @@
 [wait  time="1000"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（よし、今なら自由に動けそうだな）[p]
+[舜]（Tốt rồi, giờ thì mình có thể tự do hành động.）[p]
 [_tb_end_text]
 
 [wait  time="500"  ]
@@ -28,7 +28,7 @@
 
 [tb_show_message_window  ]
 [tb_start_text mode=4 ]
-[舜]（凛子さんが来ないうちにさっさと終わらせよう）
+[舜]（Phải nhanh chóng làm cho xong trước khi chị Rinko đến mới được.）
 [_tb_end_text]
 
 [wait  time="800"  ]
@@ -68,11 +68,11 @@
 [tb_show_message_window  ]
 [mask_off  time="2000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[舜]（よし、そろそろ帰ろう……）[p]
+[舜]（Được rồi, chuẩn bị về thôi......）[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]テンションが上がった[resetfont][p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.tension+=2"  name="tension"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]

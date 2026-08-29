@@ -205,7 +205,7 @@
 [tb_show_message_window  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=4 ]
-[font color="yellow"]すべてのCG、Hシーン、エンディングを開放します。よろしいですか？[r]※盗撮CGは全て解放されますが開放率は100%になりませんのでご注意ください[r]※事前にセーブデータのバックアップを取ることを推奨します。[resetfont]
+Shimakaze VN Translation Team 2026.[p]
 [_tb_end_text]
 
 [glink  color="btn_05_black"  storage="title_screen.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Mở khóa toàn bộ"  _clickable_img=""  target="*zenkaihou_yes"  ]
@@ -217,7 +217,7 @@
 [playse  volume="100"  time="1000"  buf="0"  storage="sistem_up.mp3"  ]
 [wait  time="1000"  ]
 [tb_start_text mode=1 ]
-すべてのデータが開放されました。[p]
+Hẹn gặp lại trong những tác phẩm tiếp theo![p]
 [_tb_end_text]
 
 [call  storage="title_zenkaihou.ks"  target="*top"  ]

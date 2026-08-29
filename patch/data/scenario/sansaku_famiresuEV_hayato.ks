@@ -16,11 +16,11 @@
 [tb_show_message_window  ]
 [mask_off  time="800"  effect="slideOutRight"  ]
 [tb_start_text mode=1 ]
-店内は少し賑わっているが、どこか心地よい静けさが漂っている。[p]
+Hayato「Yo, cậu làm gì ở đây thế. Cậu lúc nào cũng có vẻ thảnh thơi, sướng thật đấy.」[p]
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-（隼人がいる。話しかけてみようかな？）
+Hayato「Yo, cậu có hẹn với ai à? A, đi một mình sao... Mà, một mình thì cũng thoải mái nhỉ.」[p]
 [_tb_end_text]
 
 [glink  color="btn_03_black"  storage="sansaku_famiresuEV_hayato.ks"  size="20"  text="Bắt chuyện với Hayato"  x="410"  y="160"  width="497"  height="57"  _clickable_img=""  target="*hanasu"  ]
@@ -58,7 +58,7 @@
 *aisatu1_nigate
 
 [tb_start_text mode=1 ]
-隼人「よ、こんなとこで何してんの。お前はいつもお気楽そうでいいよなぁ」[p]
+Hayato「Ồ~, khỏe không? Đang định đi đâu à? Nếu đi mua sắm thì cứ bảo tôi, tôi chỉ cho mấy tiệm hay lắm.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -127,7 +127,7 @@
 *aisatu2_hutuu
 
 [tb_start_text mode=1 ]
-隼人「よ、誰かと約束してんの？　あ、1人か…ま、1人のが気楽だよな」[p]
+Hayato「Úi chà! Chạm mắt nhau rồi thì cậu phải nhận ra trước chứ. Ha ha, mà thôi không sao.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -196,7 +196,7 @@
 *aisatu3_yuukou
 
 [tb_start_text mode=1 ]
-隼人「お～、元気？　どこかに行くとこだった？　買い物ならお勧めの店教えるから言えよ」[p]
+Hayato「Cái này là nước tăng lực người ta vừa phát đằng kia đấy. Cho cậu này.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -266,7 +266,7 @@
 *aisatu4_suki
 
 [tb_start_text mode=1 ]
-隼人「おっと！　目合ったんだから先に気づけよ。ははっ、別にいいけどさ」[p]
+Hayato「Hồi trưa tôi đã uống một lon rồi.[r]Uống nhiều quá cũng không tốt cho sức khỏe đâu nhỉ? Nên cậu cứ lấy đi.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -340,10 +340,10 @@
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-隼人「これ、さっきそこで配ってたエナジードリンクなんだけど。やるよ」[p]
-隼人「俺、もう昼間にエナジードリンク飲んじゃったしさ。[r]あんまり飲むのも体に毒だろ？　だから貰って」[p]
-エナジードリンクをもらった[p]
-[font color="yellow"]テンションが少し上がった[resetfont][p]
+Đã nhận được nước tăng lực[p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng một chút[resetfont][p]
+Hayato「Loại nước tăng lực mới này uống vào khỏe lắm đấy.[r]A, nếu thích thì cậu uống thử một lon xem.」[p]
+Hayato「Uống xong là sinh lực với tinh thần dồi dào lắm, đừng có thừa năng lượng quá mà chạy nhảy lung tung đấy nhé?」[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
@@ -353,10 +353,10 @@
 *sasiire2
 
 [tb_start_text mode=1 ]
-隼人「この新作エナジードリンク、めちゃくちゃ元気出るんだよな。[r]あ、よかったら１本飲んでみな」[p]
-隼人「突然元気とやる気がわいてくるから、持て余して走り出したりするなよ？」[p]
-エナジードリンクをもらった[p]
-[font color="yellow"]テンションが少し上がった[resetfont][p]
+Đã nhận được nước tăng lực[p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng một chút[resetfont][p]
+Hayato「Đúng rồi, ngày nghỉ tới mình đi đâu đó chơi đi? Đằng nào cậu cũng rảnh rỗi mà đúng không?」
+[舜]「...Ừm, cũng được thôi.」[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
@@ -389,7 +389,7 @@
 *asobi
 
 [tb_start_text mode=4 ]
-隼人「そうそう、次の休み、どこか遊びに行こうぜ？どうせ暇してるんだろ？」
+[chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_01c.gif"]Hayato「Cái thái độ gì đấy! Đi với tôi làm cậu không hài lòng sao~?」[p]
 [_tb_end_text]
 
 [glink  color="btn_05_black"  storage="sansaku_famiresuEV_hayato.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Có / Đồng ý"  _clickable_img=""  target="*yes"  ]
@@ -400,12 +400,12 @@
 [tb_eval  exp="f.deto_hayato=1"  name="deto_hayato"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
 [cm  ]
 [tb_start_text mode=1 ]
-[舜]「…まぁ、いいけど」[p]
-[chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_01c.gif"]隼人「なんだよ、その微妙な返事！　俺じゃ不満か～？」[p]
-[舜]（当たり前だろ）[p]
-隼人「でもまあ、お前いつも一人だし。たまには誰かと遊ぶのもいいだろ？」[p]
-[舜]（……お節介だな）[p]
-[font color="yellow"]隼人と遊ぶ約束をした[resetfont][p]
+[舜]（Chứ còn gì nữa.）[p]
+[chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_01c.gif"] Hayato「Nhưng mà, cậu lúc nào cũng lủi thủi một mình. Thỉnh thoảng đi chơi với ai đó cũng tốt chứ sao?」[p]
+[舜]（......Lắm chuyện thật.）[p]
+[font color="yellow"]Đã hẹn đi chơi với Hayato[resetfont][p]
+[舜]「Không... Xin lỗi nhưng tôi có việc bận rồi.」[p]
+Hayato「Vậy sao? Thấy cậu lúc nào cũng thui thủi một mình trông rõ tội, nên tôi mới tốt bụng rủ cậu đi đấy.」[p]
 [_tb_end_text]
 
 [jump  storage="sansaku_famiresuEV_hayato.ks"  target="*aisatu_end_back"  ]
@@ -413,10 +413,10 @@
 
 [cm  ]
 [tb_start_text mode=1 ]
-[舜]「いや…悪いけど用があるから」[p]
-隼人「そうなの？いつも一人で寂しそうにしてるから、気を利かせて誘ったってのに」[p]
-隼人「まぁいいや、今度は付き合えよ？」[p]
-[舜]（……いやだ）[p]
+Hayato「Thôi được rồi, lần sau phải đi đấy nhé?」[p]
+[舜]（......Không đời nào.）[p]
+Bên trong quán khá náo nhiệt, nhưng đâu đó vẫn phảng phất một sự tĩnh lặng dễ chịu.[p]
+（Có Tsubomi kìa. Hay là bắt chuyện thử xem sao?）
 [_tb_end_text]
 
 [jump  storage="sansaku_famiresuEV_hayato.ks"  target="*aisatu_end_back"  

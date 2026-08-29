@@ -258,8 +258,8 @@
 *Aomoide_nigate_sippai1
 
 [tb_start_text mode=1 ]
-思い出の話＿失敗①（凪苦手状態）[p]
-（微妙な空気になってしまった）[p]
+Kể chuyện ngày xưa_Thất bại 1 (Nagi trạng thái Không thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_nigate_sippai+=1"  name="Aomoide_nigate_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -270,8 +270,8 @@
 *Aomoide_nigate_sippai2
 
 [tb_start_text mode=1 ]
-思い出の話＿失敗②（凪苦手状態）[p]
-（微妙な空気になってしまった）[p]
+Kể chuyện ngày xưa_Thất bại 2 (Nagi trạng thái Không thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_nigate_sippai+=1"  name="Aomoide_nigate_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -282,8 +282,8 @@
 *Aomoide_nigate_sippai3
 
 [tb_start_text mode=1 ]
-思い出の話＿失敗③（凪苦手状態）[p]
-（微妙な空気になってしまった）[p]
+Kể chuyện ngày xưa_Thất bại 3 (Nagi trạng thái Không thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_nigate_sippai=0"  name="Aomoide_nigate_sippai"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -294,8 +294,8 @@
 *Aomoide_nigate_seikou1
 
 [tb_start_text mode=1 ]
-思い出の話＿成功①（凪苦手状態）[p]
-（朗らかな顔をしている）[p]
+Kể chuyện ngày xưa_Thành công 1 (Nagi trạng thái Không thích)[p]
+（Khuôn mặt cô ấy trông rất rạng rỡ.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_nigate_seikou+=1"  name="Aomoide_nigate_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -306,8 +306,8 @@
 *Aomoide_nigate_seikou2
 
 [tb_start_text mode=1 ]
-思い出の話＿成功②（凪苦手状態）[p]
-（朗らかな顔をしている）[p]
+Kể chuyện ngày xưa_Thành công 2 (Nagi trạng thái Không thích)[p]
+（Khuôn mặt cô ấy trông rất rạng rỡ.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_nigate_seikou+=1"  name="Aomoide_nigate_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -318,8 +318,8 @@
 *Aomoide_nigate_seikou3
 
 [tb_start_text mode=1 ]
-思い出の話＿成功③（凪普通状態）[p]
-（朗らかな顔をしている）[p]
+Kể chuyện ngày xưa_Thành công 3 (Nagi trạng thái Không thích)[p]
+（Khuôn mặt cô ấy trông rất rạng rỡ.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_nigate_seikou=0"  name="Aomoide_nigate_seikou"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -330,8 +330,8 @@
 *Aomoide_hutuu_sippai1
 
 [tb_start_text mode=1 ]
-思い出の話＿失敗①（凪普通状態）[p]
-（微妙な空気になってしまった）[p]
+Kể chuyện ngày xưa_Thất bại 1 (Nagi trạng thái Bình thường)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_hutuu_sippai+=1"  name="Aomoide_hutuu_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -342,8 +342,8 @@
 *Aomoide_hutuu_sippai2
 
 [tb_start_text mode=1 ]
-思い出の話＿失敗②（凪普通状態）[p]
-（微妙な空気になってしまった）[p]
+Kể chuyện ngày xưa_Thất bại 2 (Nagi trạng thái Bình thường)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_hutuu_sippai+=1"  name="Aomoide_hutuu_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -354,8 +354,8 @@
 *Aomoide_hutuu_sippai3
 
 [tb_start_text mode=1 ]
-思い出の話＿失敗③（凪普通状態）[p]
-（微妙な空気になってしまった）[p]
+Kể chuyện ngày xưa_Thất bại 3 (Nagi trạng thái Bình thường)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_hutuu_sippai=0"  name="Aomoide_hutuu_sippai"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -366,8 +366,8 @@
 *Aomoide_hutuu_seikou1
 
 [tb_start_text mode=1 ]
-思い出の話＿成功①（凪普通状態）[p]
-（空気が少し和やかになった）[p]
+Kể chuyện ngày xưa_Thành công 1 (Nagi trạng thái Bình thường)[p]
+（Bầu không khí đã dịu đi một chút.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_hutuu_seikou+=1"  name="Aomoide_hutuu_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -378,8 +378,8 @@
 *Aomoide_hutuu_seikou2
 
 [tb_start_text mode=1 ]
-思い出の話＿成功②（凪普通状態）[p]
-（空気が少し和やかになった）[p]
+Kể chuyện ngày xưa_Thành công 2 (Nagi trạng thái Bình thường)[p]
+（Bầu không khí đã dịu đi một chút.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_hutuu_seikou+=1"  name="Aomoide_hutuu_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -390,8 +390,8 @@
 *Aomoide_hutuu_seikou3
 
 [tb_start_text mode=1 ]
-思い出の話＿成功③（凪普通状態）[p]
-（空気が少し和やかになった）[p]
+Kể chuyện ngày xưa_Thành công 3 (Nagi trạng thái Bình thường)[p]
+（Bầu không khí đã dịu đi một chút.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_hutuu_seikou=0"  name="Aomoide_hutuu_seikou"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -402,8 +402,8 @@
 *Aomoide_yuukou_sippai1
 
 [tb_start_text mode=1 ]
-思い出の話＿失敗①（凪友好状態）[p]
-（微妙な空気になってしまった）[p]
+Kể chuyện ngày xưa_Thất bại 1 (Nagi trạng thái Thân thiện)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_yuukou_sippai+=1"  name="Aomoide_yuukou_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -414,8 +414,8 @@
 *Aomoide_yuukou_sippai2
 
 [tb_start_text mode=1 ]
-思い出の話＿失敗②（凪友好状態）[p]
-（微妙な空気になってしまった）[p]
+Kể chuyện ngày xưa_Thất bại 2 (Nagi trạng thái Thân thiện)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_yuukou_sippai+=1"  name="Aomoide_yuukou_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -426,8 +426,8 @@
 *Aomoide_yuukou_sippai3
 
 [tb_start_text mode=1 ]
-思い出の話＿失敗③（凪友好状態）[p]
-（微妙な空気になってしまった）[p]
+Kể chuyện ngày xưa_Thất bại 3 (Nagi trạng thái Thân thiện)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_yuukou_sippai=0"  name="Aomoide_yuukou_sippai"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -438,8 +438,8 @@
 *Aomoide_yuukou_seikou1
 
 [tb_start_text mode=1 ]
-思い出の話＿成功①（凪友好状態）[p]
-（楽しそうにしている）[p]
+Kể chuyện ngày xưa_Thành công 1 (Nagi trạng thái Thân thiện)[p]
+（Trông cô ấy có vẻ rất vui.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_yuukou_seikou+=1"  name="Aomoide_yuukou_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -450,8 +450,8 @@
 *Aomoide_yuukou_seikou2
 
 [tb_start_text mode=1 ]
-思い出の話＿成功②（凪友好状態）[p]
-（楽しそうにしている）[p]
+Kể chuyện ngày xưa_Thành công 2 (Nagi trạng thái Thân thiện)[p]
+（Trông cô ấy có vẻ rất vui.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_yuukou_seikou+=1"  name="Aomoide_yuukou_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -462,8 +462,8 @@
 *Aomoide_yuukou_seikou3
 
 [tb_start_text mode=1 ]
-思い出の話＿成功③（凪友好状態）[p]
-（楽しそうにしている）[p]
+Kể chuyện ngày xưa_Thành công 3 (Nagi trạng thái Thân thiện)[p]
+（Trông cô ấy có vẻ rất vui.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_yuukou_seikou=0"  name="Aomoide_yuukou_seikou"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -474,8 +474,8 @@
 *Aomoide_yuukou_tokimeki
 
 [tb_start_text mode=1 ]
-思い出の話＿友好（凪ときめき状態）[p]
-（いつも以上に楽しそうだ）[p]
+Kể chuyện ngày xưa_Thân thiện (Nagi trạng thái Xao xuyến)[p]
+（Trông cô ấy vui vẻ hơn hẳn bình thường.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.love+=15"  name="love"  cmd="+="  op="t"  val="15"  val_2="undefined"  ]
@@ -484,8 +484,8 @@
 *Aomoide_suki_sippai1
 
 [tb_start_text mode=1 ]
-思い出の話＿失敗①（凪好き状態）[p]
-（微妙な空気になってしまった）[p]
+Kể chuyện ngày xưa_Thất bại 1 (Nagi trạng thái Thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_suki_sippai+=1"  name="Aomoide_suki_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -496,8 +496,8 @@
 *Aomoide_suki_sippai2
 
 [tb_start_text mode=1 ]
-思い出の話＿失敗②（凪好き状態）[p]
-（微妙な空気になってしまった）[p]
+Kể chuyện ngày xưa_Thất bại 2 (Nagi trạng thái Thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_suki_sippai+=1"  name="Aomoide_suki_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -508,8 +508,8 @@
 *Aomoide_suki_sippai3
 
 [tb_start_text mode=1 ]
-思い出の話＿失敗③（凪好き状態）[p]
-（微妙な空気になってしまった）[p]
+Kể chuyện ngày xưa_Thất bại 3 (Nagi trạng thái Thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_suki_sippai=0"  name="Aomoide_suki_sippai"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -520,8 +520,8 @@
 *Aomoide_suki_seikou1
 
 [tb_start_text mode=1 ]
-思い出の話＿成功①（凪好き状態）[p]
-（熱い視線を感じる）[p]
+Kể chuyện ngày xưa_Thành công 1 (Nagi trạng thái Thích)[p]
+（Cảm nhận được ánh nhìn say đắm từ cô ấy.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_suki_seikou+=1"  name="Aomoide_suki_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -532,8 +532,8 @@
 *Aomoide_suki_seikou2
 
 [tb_start_text mode=1 ]
-思い出の話＿成功②（凪好き状態）[p]
-（熱い視線を感じる）[p]
+Kể chuyện ngày xưa_Thành công 2 (Nagi trạng thái Thích)[p]
+（Cảm nhận được ánh nhìn say đắm từ cô ấy.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_suki_seikou+=1"  name="Aomoide_suki_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -544,8 +544,8 @@
 *Aomoide_suki_seikou3
 
 [tb_start_text mode=1 ]
-思い出の話＿成功③（凪好き状態）[p]
-（熱い視線を感じる）[p]
+Kể chuyện ngày xưa_Thành công 3 (Nagi trạng thái Thích)[p]
+（Cảm nhận được ánh nhìn say đắm từ cô ấy.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Aomoide_suki_seikou=0"  name="Aomoide_suki_seikou"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -556,8 +556,8 @@
 *Aomoide_suki_tokimeki
 
 [tb_start_text mode=1 ]
-思い出の話＿好き（凪ときめき状態）[p]
-（いつも以上に楽しそうだ）[p]
+Kể chuyện ngày xưa_Thích (Nagi trạng thái Xao xuyến)[p]
+（Trông cô ấy vui vẻ hơn hẳn bình thường.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.love+=15"  name="love"  cmd="+="  op="t"  val="15"  val_2="undefined"  ]
@@ -762,8 +762,8 @@
 *Bsukinahito_nigate_sippai1
 
 [tb_start_text mode=1 ]
-好きな人の話＿失敗①（凪苦手状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện người trong mộng_Thất bại 1 (Nagi trạng thái Không thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_nigate_sippai+=1"  name="Bsukinahito_nigate_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -774,8 +774,8 @@
 *Bsukinahito_nigate_sippai2
 
 [tb_start_text mode=1 ]
-好きな人の話＿失敗②（凪苦手状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện người trong mộng_Thất bại 2 (Nagi trạng thái Không thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_nigate_sippai+=1"  name="Bsukinahito_nigate_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -786,8 +786,8 @@
 *Bsukinahito_nigate_sippai3
 
 [tb_start_text mode=1 ]
-好きな人の話＿失敗③（凪苦手状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện người trong mộng_Thất bại 3 (Nagi trạng thái Không thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_nigate_sippai=0"  name="Bsukinahito_nigate_sippai"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -798,8 +798,8 @@
 *Bsukinahito_nigate_seikou1
 
 [tb_start_text mode=1 ]
-好きな人の話＿成功①（凪苦手状態）[p]
-（張りつめていた空気が少し和やかになった）[p]
+Chuyện người trong mộng_Thành công 1 (Nagi trạng thái Không thích)[p]
+（Bầu không khí căng thẳng đã dịu đi một chút.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_nigate_seikou+=1"  name="Bsukinahito_nigate_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -810,8 +810,8 @@
 *Bsukinahito_nigate_seikou2
 
 [tb_start_text mode=1 ]
-好きな人の話＿成功②（凪苦手状態）[p]
-（張りつめていた空気が少し和やかになった）[p]
+Chuyện người trong mộng_Thành công 2 (Nagi trạng thái Không thích)[p]
+（Bầu không khí căng thẳng đã dịu đi một chút.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_nigate_seikou+=1"  name="Bsukinahito_nigate_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -822,8 +822,8 @@
 *Bsukinahito_nigate_seikou3
 
 [tb_start_text mode=1 ]
-好きな人の話＿成功③（凪苦手状態）[p]
-（張りつめていた空気が少し和やかになった）[p]
+Chuyện người trong mộng_Thành công 3 (Nagi trạng thái Không thích)[p]
+（Bầu không khí căng thẳng đã dịu đi một chút.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_nigate_seikou=0"  name="Bsukinahito_nigate_seikou"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -834,8 +834,8 @@
 *Bsukinahito_hutuu_sippai1
 
 [tb_start_text mode=1 ]
-好きな人の話＿失敗①（凪普通状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện người trong mộng_Thất bại 1 (Nagi trạng thái Bình thường)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_hutuu_sippai+=1"  name="Bsukinahito_hutuu_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -846,8 +846,8 @@
 *Bsukinahito_hutuu_sippai2
 
 [tb_start_text mode=1 ]
-好きな人の話＿失敗②（凪普通状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện người trong mộng_Thất bại 2 (Nagi trạng thái Bình thường)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_hutuu_sippai+=1"  name="Bsukinahito_hutuu_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -858,8 +858,8 @@
 *Bsukinahito_hutuu_sippai3
 
 [tb_start_text mode=1 ]
-好きな人の話＿失敗③（凪普通状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện người trong mộng_Thất bại 3 (Nagi trạng thái Bình thường)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_hutuu_sippai=0"  name="Bsukinahito_hutuu_sippai"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -870,8 +870,8 @@
 *Bsukinahito_hutuu_seikou1
 
 [tb_start_text mode=1 ]
-好きな人の話＿成功①（凪普通状態）[p]
-（空気が少し和やかになった）[p]
+Chuyện người trong mộng_Thành công 1 (Nagi trạng thái Bình thường)[p]
+（Bầu không khí đã dịu đi một chút.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_hutuu_seikou+=1"  name="Bsukinahito_hutuu_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -882,8 +882,8 @@
 *Bsukinahito_hutuu_seikou2
 
 [tb_start_text mode=1 ]
-好きな人の話＿成功②（凪普通状態）[p]
-（空気が少し和やかになった）[p]
+Chuyện người trong mộng_Thành công 2 (Nagi trạng thái Bình thường)[p]
+（Bầu không khí đã dịu đi một chút.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_hutuu_seikou+=1"  name="Bsukinahito_hutuu_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -894,8 +894,8 @@
 *Bsukinahito_hutuu_seikou3
 
 [tb_start_text mode=1 ]
-好きな人の話＿成功③（凪普通状態）[p]
-（空気が少し和やかになった）[p]
+Chuyện người trong mộng_Thành công 3 (Nagi trạng thái Bình thường)[p]
+（Bầu không khí đã dịu đi một chút.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_hutuu_seikou=0"  name="Bsukinahito_hutuu_seikou"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -906,8 +906,8 @@
 *Bsukinahito_yuukou_sippai1
 
 [tb_start_text mode=1 ]
-好きな人の話＿失敗①（凪友好状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện người trong mộng_Thất bại 1 (Nagi trạng thái Thân thiện)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_yuukou_sippai+=1"  name="Bsukinahito_yuukou_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -918,8 +918,8 @@
 *Bsukinahito_yuukou_sippai2
 
 [tb_start_text mode=1 ]
-好きな人の話＿失敗②（凪友好状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện người trong mộng_Thất bại 2 (Nagi trạng thái Thân thiện)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_yuukou_sippai+=1"  name="Bsukinahito_yuukou_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -930,8 +930,8 @@
 *Bsukinahito_yuukou_sippai3
 
 [tb_start_text mode=1 ]
-好きな人の話＿失敗③（凪友好状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện người trong mộng_Thất bại 3 (Nagi trạng thái Thân thiện)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_yuukou_sippai=0"  name="Bsukinahito_yuukou_sippai"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -942,8 +942,8 @@
 *Bsukinahito_yuukou_seikou1
 
 [tb_start_text mode=1 ]
-好きな人の話＿成功①（凪友好状態）[p]
-（楽しそうにしている）[p]
+Chuyện người trong mộng_Thành công 1 (Nagi trạng thái Thân thiện)[p]
+（Trông cô ấy có vẻ rất vui.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_yuukou_seikou+=1"  name="Bsukinahito_yuukou_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -954,8 +954,8 @@
 *Bsukinahito_yuukou_seikou2
 
 [tb_start_text mode=1 ]
-好きな人の話＿成功②（凪友好状態）[p]
-（楽しそうにしている）[p]
+Chuyện người trong mộng_Thành công 2 (Nagi trạng thái Thân thiện)[p]
+（Trông cô ấy có vẻ rất vui.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_yuukou_seikou+=1"  name="Bsukinahito_yuukou_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -966,8 +966,8 @@
 *Bsukinahito_yuukou_seikou3
 
 [tb_start_text mode=1 ]
-好きな人の話＿成功③（凪友好状態）[p]
-（楽しそうにしている）[p]
+Chuyện người trong mộng_Thành công 3 (Nagi trạng thái Thân thiện)[p]
+（Trông cô ấy có vẻ rất vui.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_yuukou_seikou=0"  name="Bsukinahito_yuukou_seikou"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -978,8 +978,8 @@
 *Bsukinahito_yuukou_tokimeki
 
 [tb_start_text mode=1 ]
-好きな人の話＿友好（凪ときめき状態）[p]
-（いつも以上に楽しそうだ）[p]
+Chuyện người trong mộng_Thân thiện (Nagi trạng thái Xao xuyến)[p]
+（Trông cô ấy vui vẻ hơn hẳn bình thường.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.love+=15"  name="love"  cmd="+="  op="t"  val="15"  val_2="undefined"  ]
@@ -988,8 +988,8 @@
 *Bsukinahito_suki_sippai1
 
 [tb_start_text mode=1 ]
-好きな人の話＿失敗①（凪好き状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện người trong mộng_Thất bại 1 (Nagi trạng thái Thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_suki_sippai+=1"  name="Bsukinahito_suki_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1000,8 +1000,8 @@
 *Bsukinahito_suki_sippai2
 
 [tb_start_text mode=1 ]
-好きな人の話＿失敗②（凪好き状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện người trong mộng_Thất bại 2 (Nagi trạng thái Thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_suki_sippai+=1"  name="Bsukinahito_suki_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1012,8 +1012,8 @@
 *Bsukinahito_suki_sippai3
 
 [tb_start_text mode=1 ]
-好きな人の話＿失敗③（凪好き状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện người trong mộng_Thất bại 3 (Nagi trạng thái Thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_suki_sippai=0"  name="Bsukinahito_suki_sippai"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1024,8 +1024,8 @@
 *Bsukinahito_suki_seikou1
 
 [tb_start_text mode=1 ]
-好きな人の話＿成功①（凪好き状態）[p]
-（熱い視線を感じる）[p]
+Chuyện người trong mộng_Thành công 1 (Nagi trạng thái Thích)[p]
+（Cảm nhận được ánh nhìn say đắm từ cô ấy.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_suki_seikou+=1"  name="Bsukinahito_suki_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1036,8 +1036,8 @@
 *Bsukinahito_suki_seikou2
 
 [tb_start_text mode=1 ]
-好きな人の話＿成功②（凪好き状態）[p]
-（熱い視線を感じる）[p]
+Chuyện người trong mộng_Thành công 2 (Nagi trạng thái Thích)[p]
+（Cảm nhận được ánh nhìn say đắm từ cô ấy.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_suki_seikou+=1"  name="Bsukinahito_suki_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1048,8 +1048,8 @@
 *Bsukinahito_suki_seikou3
 
 [tb_start_text mode=1 ]
-好きな人の話＿成功③（凪好き状態）[p]
-（熱い視線を感じる）[p]
+Chuyện người trong mộng_Thành công 3 (Nagi trạng thái Thích)[p]
+（Cảm nhận được ánh nhìn say đắm từ cô ấy.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Bsukinahito_suki_seikou=0"  name="Bsukinahito_suki_seikou"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1060,8 +1060,8 @@
 *Bsukinahito_suki_tokimeki
 
 [tb_start_text mode=1 ]
-好きな人の話＿好き（凪ときめき状態）[p]
-（いつも以上に楽しそうだ）[p]
+Chuyện người trong mộng_Thích (Nagi trạng thái Xao xuyến)[p]
+（Trông cô ấy vui vẻ hơn hẳn bình thường.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.love+=15"  name="love"  cmd="+="  op="t"  val="15"  val_2="undefined"  ]
@@ -1266,8 +1266,8 @@
 *Ckekkon_nigate_sippai1
 
 [tb_start_text mode=1 ]
-結婚の話＿失敗①（凪苦手状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện kết hôn_Thất bại 1 (Nagi trạng thái Không thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_nigate_sippai+=1"  name="Ckekkon_nigate_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1278,8 +1278,8 @@
 *Ckekkon_nigate_sippai2
 
 [tb_start_text mode=1 ]
-結婚の話＿失敗②（凪苦手状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện kết hôn_Thất bại 2 (Nagi trạng thái Không thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_nigate_sippai+=1"  name="Ckekkon_nigate_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1290,8 +1290,8 @@
 *Ckekkon_nigate_sippai3
 
 [tb_start_text mode=1 ]
-結婚の話＿失敗③（凪苦手状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện kết hôn_Thất bại 3 (Nagi trạng thái Không thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_nigate_sippai=0"  name="Ckekkon_nigate_sippai"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1302,8 +1302,8 @@
 *Ckekkon_nigate_seikou1
 
 [tb_start_text mode=1 ]
-結婚の話＿成功①（凪苦手状態）[p]
-（張りつめていた空気が少し和やかになった）[p]
+Chuyện kết hôn_Thành công 1 (Nagi trạng thái Không thích)[p]
+（Bầu không khí căng thẳng đã dịu đi một chút.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_nigate_seikou+=1"  name="Ckekkon_nigate_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1314,8 +1314,8 @@
 *Ckekkon_nigate_seikou2
 
 [tb_start_text mode=1 ]
-結婚の話＿成功②（凪苦手状態）[p]
-（張りつめていた空気が少し和やかになった）[p]
+Chuyện kết hôn_Thành công 2 (Nagi trạng thái Không thích)[p]
+（Bầu không khí căng thẳng đã dịu đi một chút.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_nigate_seikou+=1"  name="Ckekkon_nigate_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1326,8 +1326,8 @@
 *Ckekkon_nigate_seikou3
 
 [tb_start_text mode=1 ]
-結婚の話＿成功③（凪苦手状態）[p]
-（張りつめていた空気が少し和やかになった）[p]
+Chuyện kết hôn_Thành công 3 (Nagi trạng thái Không thích)[p]
+（Bầu không khí căng thẳng đã dịu đi một chút.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_nigate_seikou=0"  name="Ckekkon_nigate_seikou"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1338,8 +1338,8 @@
 *Ckekkon_hutuu_sippai1
 
 [tb_start_text mode=1 ]
-結婚の話＿失敗①（凪普通状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện kết hôn_Thất bại 1 (Nagi trạng thái Bình thường)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_hutuu_sippai+=1"  name="Ckekkon_hutuu_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1350,8 +1350,8 @@
 *Ckekkon_hutuu_sippai2
 
 [tb_start_text mode=1 ]
-結婚の話＿失敗②（凪普通状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện kết hôn_Thất bại 2 (Nagi trạng thái Bình thường)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_hutuu_sippai+=1"  name="Ckekkon_hutuu_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1362,8 +1362,8 @@
 *Ckekkon_hutuu_sippai3
 
 [tb_start_text mode=1 ]
-結婚の話＿失敗③（凪普通状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện kết hôn_Thất bại 3 (Nagi trạng thái Bình thường)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_hutuu_sippai=0"  name="Ckekkon_hutuu_sippai"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1374,8 +1374,8 @@
 *Ckekkon_hutuu_seikou1
 
 [tb_start_text mode=1 ]
-結婚の話＿成功①（凪普通状態）[p]
-（空気が少し和やかになった）[p]
+Chuyện kết hôn_Thành công 1 (Nagi trạng thái Bình thường)[p]
+（Bầu không khí đã dịu đi một chút.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_hutuu_seikou+=1"  name="Ckekkon_hutuu_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1386,8 +1386,8 @@
 *Ckekkon_hutuu_seikou2
 
 [tb_start_text mode=1 ]
-結婚の話＿成功②（凪普通状態）[p]
-（空気が少し和やかになった）[p]
+Chuyện kết hôn_Thành công 2 (Nagi trạng thái Bình thường)[p]
+（Bầu không khí đã dịu đi một chút.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_hutuu_seikou+=1"  name="Ckekkon_hutuu_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1398,8 +1398,8 @@
 *Ckekkon_hutuu_seikou3
 
 [tb_start_text mode=1 ]
-結婚の話＿成功③（凪普通状態）[p]
-（空気が少し和やかになった）[p]
+Chuyện kết hôn_Thành công 3 (Nagi trạng thái Bình thường)[p]
+（Bầu không khí đã dịu đi một chút.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_hutuu_seikou=0"  name="Ckekkon_hutuu_seikou"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1410,8 +1410,8 @@
 *Ckekkon_yuukou_sippai1
 
 [tb_start_text mode=1 ]
-結婚の話＿失敗①（凪友好状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện kết hôn_Thất bại 1 (Nagi trạng thái Thân thiện)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_yuukou_sippai+=1"  name="Ckekkon_yuukou_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1422,8 +1422,8 @@
 *Ckekkon_yuukou_sippai2
 
 [tb_start_text mode=1 ]
-結婚の話＿失敗②（凪友好状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện kết hôn_Thất bại 2 (Nagi trạng thái Thân thiện)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_yuukou_sippai+=1"  name="Ckekkon_yuukou_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1434,8 +1434,8 @@
 *Ckekkon_yuukou_sippai3
 
 [tb_start_text mode=1 ]
-結婚の話＿失敗③（凪友好状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện kết hôn_Thất bại 3 (Nagi trạng thái Thân thiện)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_yuukou_sippai=0"  name="Ckekkon_yuukou_sippai"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1446,8 +1446,8 @@
 *Ckekkon_yuukou_seikou1
 
 [tb_start_text mode=1 ]
-結婚の話＿成功①（凪友好状態）[p]
-（楽しそうにしている）[p]
+Chuyện kết hôn_Thành công 1 (Nagi trạng thái Thân thiện)[p]
+（Trông cô ấy có vẻ rất vui.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_yuukou_seikou+=1"  name="Ckekkon_yuukou_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1458,8 +1458,8 @@
 *Ckekkon_yuukou_seikou2
 
 [tb_start_text mode=1 ]
-結婚の話＿成功②（凪友好状態）[p]
-（楽しそうにしている）[p]
+Chuyện kết hôn_Thành công 2 (Nagi trạng thái Thân thiện)[p]
+（Trông cô ấy có vẻ rất vui.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_yuukou_seikou+=1"  name="Ckekkon_yuukou_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1470,8 +1470,8 @@
 *Ckekkon_yuukou_seikou3
 
 [tb_start_text mode=1 ]
-結婚の話＿成功③（凪友好状態）[p]
-（楽しそうにしている）[p]
+Chuyện kết hôn_Thành công 3 (Nagi trạng thái Thân thiện)[p]
+（Trông cô ấy có vẻ rất vui.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_yuukou_seikou=0"  name="Ckekkon_yuukou_seikou"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1482,8 +1482,8 @@
 *Ckekkon_yuukou_tokimeki
 
 [tb_start_text mode=1 ]
-結婚の話＿友好（凪ときめき状態）[p]
-（いつも以上に楽しそうだ）[p]
+Chuyện kết hôn_Thân thiện (Nagi trạng thái Xao xuyến)[p]
+（Trông cô ấy vui vẻ hơn hẳn bình thường.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.love+=15"  name="love"  cmd="+="  op="t"  val="15"  val_2="undefined"  ]
@@ -1492,8 +1492,8 @@
 *Ckekkon_suki_sippai1
 
 [tb_start_text mode=1 ]
-結婚の話＿失敗①（凪好き状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện kết hôn_Thất bại 1 (Nagi trạng thái Thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_suki_sippai+=1"  name="Ckekkon_suki_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1504,8 +1504,8 @@
 *Ckekkon_suki_sippai2
 
 [tb_start_text mode=1 ]
-結婚の話＿失敗②（凪好き状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện kết hôn_Thất bại 2 (Nagi trạng thái Thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_suki_sippai+=1"  name="Ckekkon_suki_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1516,8 +1516,8 @@
 *Ckekkon_suki_sippai3
 
 [tb_start_text mode=1 ]
-結婚の話＿失敗③（凪好き状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện kết hôn_Thất bại 3 (Nagi trạng thái Thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_suki_sippai=0"  name="Ckekkon_suki_sippai"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1528,8 +1528,8 @@
 *Ckekkon_suki_seikou1
 
 [tb_start_text mode=1 ]
-結婚の話＿成功①（凪好き状態）[p]
-（熱い視線を感じる）[p]
+Chuyện kết hôn_Thành công 1 (Nagi trạng thái Thích)[p]
+（Cảm nhận được ánh nhìn say đắm từ cô ấy.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_suki_seikou+=1"  name="Ckekkon_suki_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1540,8 +1540,8 @@
 *Ckekkon_suki_seikou2
 
 [tb_start_text mode=1 ]
-結婚の話＿成功②（凪好き状態）[p]
-（熱い視線を感じる）[p]
+Chuyện kết hôn_Thành công 2 (Nagi trạng thái Thích)[p]
+（Cảm nhận được ánh nhìn say đắm từ cô ấy.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_suki_seikou+=1"  name="Ckekkon_suki_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1552,8 +1552,8 @@
 *Ckekkon_suki_seikou3
 
 [tb_start_text mode=1 ]
-結婚の話＿成功③（凪好き状態）[p]
-（熱い視線を感じる）[p]
+Chuyện kết hôn_Thành công 3 (Nagi trạng thái Thích)[p]
+（Cảm nhận được ánh nhìn say đắm từ cô ấy.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Ckekkon_suki_seikou=0"  name="Ckekkon_suki_seikou"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1564,8 +1564,8 @@
 *Ckekkon_suki_tokimeki
 
 [tb_start_text mode=1 ]
-結婚の話＿好き（凪ときめき状態）[p]
-（いつも以上に楽しそうだ）[p]
+Chuyện kết hôn_Thích (Nagi trạng thái Xao xuyến)[p]
+（Trông cô ấy vui vẻ hơn hẳn bình thường.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.love+=15"  name="love"  cmd="+="  op="t"  val="15"  val_2="undefined"  ]
@@ -1770,8 +1770,8 @@
 *Detti_nigate_sippai1
 
 [tb_start_text mode=1 ]
-えっちな話＿失敗①（凪苦手状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện nhạy cảm_Thất bại 1 (Nagi trạng thái Không thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_nigate_sippai+=1"  name="Detti_nigate_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1781,8 +1781,8 @@
 *Detti_nigate_sippai2
 
 [tb_start_text mode=1 ]
-えっちな話＿失敗②（凪苦手状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện nhạy cảm_Thất bại 2 (Nagi trạng thái Không thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_nigate_sippai+=1"  name="Detti_nigate_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1792,8 +1792,8 @@
 *Detti_nigate_sippai3
 
 [tb_start_text mode=1 ]
-えっちな話＿失敗③（凪苦手状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện nhạy cảm_Thất bại 3 (Nagi trạng thái Không thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_nigate_sippai=0"  name="Detti_nigate_sippai"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1804,8 +1804,8 @@
 *Detti_nigate_seikou1
 
 [tb_start_text mode=1 ]
-えっちな話＿成功①（凪苦手状態）[p]
-（恥ずかしそうにしている）[p]
+Chuyện nhạy cảm_Thành công 1 (Nagi trạng thái Không thích)[p]
+（Trông cô ấy có vẻ đang xấu hổ.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_nigate_seikou+=1"  name="Detti_nigate_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1816,8 +1816,8 @@
 *Detti_nigate_seikou2
 
 [tb_start_text mode=1 ]
-えっちな話＿成功②（凪苦手状態）[p]
-（恥ずかしそうにしている）[p]
+Chuyện nhạy cảm_Thành công 2 (Nagi trạng thái Không thích)[p]
+（Trông cô ấy có vẻ đang xấu hổ.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_nigate_seikou+=1"  name="Detti_nigate_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1828,8 +1828,8 @@
 *Detti_nigate_seikou3
 
 [tb_start_text mode=1 ]
-えっちな話＿成功③（凪苦手状態）[p]
-（恥ずかしそうにしている）[p]
+Chuyện nhạy cảm_Thành công 3 (Nagi trạng thái Không thích)[p]
+（Trông cô ấy có vẻ đang xấu hổ.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_nigate_seikou=0"  name="Detti_nigate_seikou"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1840,8 +1840,8 @@
 *Detti_hutuu_sippai1
 
 [tb_start_text mode=1 ]
-えっちな話＿失敗①（凪普通状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện nhạy cảm_Thất bại 1 (Nagi trạng thái Bình thường)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_hutuu_sippai+=1"  name="Detti_hutuu_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1852,8 +1852,8 @@
 *Detti_hutuu_sippai2
 
 [tb_start_text mode=1 ]
-えっちな話＿失敗②（凪普通状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện nhạy cảm_Thất bại 2 (Nagi trạng thái Bình thường)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_hutuu_sippai+=1"  name="Detti_hutuu_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1864,8 +1864,8 @@
 *Detti_hutuu_sippai3
 
 [tb_start_text mode=1 ]
-えっちな話＿失敗③（凪普通状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện nhạy cảm_Thất bại 3 (Nagi trạng thái Bình thường)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_hutuu_sippai=0"  name="Detti_hutuu_sippai"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1876,8 +1876,8 @@
 *Detti_hutuu_seikou1
 
 [tb_start_text mode=1 ]
-えっちな話＿成功①（凪普通状態）[p]
-（恥ずかしそうにしている）[p]
+Chuyện nhạy cảm_Thành công 1 (Nagi trạng thái Bình thường)[p]
+（Trông cô ấy có vẻ đang xấu hổ.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_hutuu_seikou+=1"  name="Detti_hutuu_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1888,8 +1888,8 @@
 *Detti_hutuu_seikou2
 
 [tb_start_text mode=1 ]
-えっちな話＿成功②（凪普通状態）[p]
-（恥ずかしそうにしている）[p]
+Chuyện nhạy cảm_Thành công 2 (Nagi trạng thái Bình thường)[p]
+（Trông cô ấy có vẻ đang xấu hổ.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_hutuu_seikou+=1"  name="Detti_hutuu_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1900,8 +1900,8 @@
 *Detti_hutuu_seikou3
 
 [tb_start_text mode=1 ]
-えっちな話＿成功③（凪普通状態）[p]
-（恥ずかしそうにしている）[p]
+Chuyện nhạy cảm_Thành công 3 (Nagi trạng thái Bình thường)[p]
+（Trông cô ấy có vẻ đang xấu hổ.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_hutuu_seikou=0"  name="Detti_hutuu_seikou"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1912,8 +1912,8 @@
 *Detti_yuukou_sippai1
 
 [tb_start_text mode=1 ]
-えっちな話＿失敗①（凪友好状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện nhạy cảm_Thất bại 1 (Nagi trạng thái Thân thiện)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_yuukou_sippai+=1"  name="Detti_yuukou_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1924,8 +1924,8 @@
 *Detti_yuukou_sippai2
 
 [tb_start_text mode=1 ]
-えっちな話＿失敗②（凪友好状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện nhạy cảm_Thất bại 2 (Nagi trạng thái Thân thiện)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_yuukou_sippai+=1"  name="Detti_yuukou_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1936,8 +1936,8 @@
 *Detti_yuukou_sippai3
 
 [tb_start_text mode=1 ]
-えっちな話＿失敗③（凪友好状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện nhạy cảm_Thất bại 3 (Nagi trạng thái Thân thiện)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_yuukou_sippai=0"  name="Detti_yuukou_sippai"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1948,8 +1948,8 @@
 *Detti_yuukou_seikou1
 
 [tb_start_text mode=1 ]
-えっちな話＿成功①（凪友好状態）[p]
-（恥ずかしそうにしている）[p]
+Chuyện nhạy cảm_Thành công 1 (Nagi trạng thái Thân thiện)[p]
+（Trông cô ấy có vẻ đang xấu hổ.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_yuukou_seikou+=1"  name="Detti_yuukou_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1960,8 +1960,8 @@
 *Detti_yuukou_seikou2
 
 [tb_start_text mode=1 ]
-えっちな話＿成功②（凪友好状態）[p]
-（恥ずかしそうにしている）[p]
+Chuyện nhạy cảm_Thành công 2 (Nagi trạng thái Thân thiện)[p]
+（Trông cô ấy có vẻ đang xấu hổ.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_yuukou_seikou+=1"  name="Detti_yuukou_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1972,8 +1972,8 @@
 *Detti_yuukou_seikou3
 
 [tb_start_text mode=1 ]
-えっちな話＿成功③（凪友好状態）[p]
-（恥ずかしそうにしている）[p]
+Chuyện nhạy cảm_Thành công 3 (Nagi trạng thái Thân thiện)[p]
+（Trông cô ấy có vẻ đang xấu hổ.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_yuukou_seikou=0"  name="Detti_yuukou_seikou"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1984,8 +1984,8 @@
 *Detti_yuukou_tokimeki
 
 [tb_start_text mode=1 ]
-えっちな話＿友好（凪ときめき状態）[p]
-（顔が真っ赤だ、かわいいなぁ）[p]
+Chuyện nhạy cảm_Thân thiện (Nagi trạng thái Xao xuyến)[p]
+（Mặt cô ấy đỏ bừng rồi, đáng yêu quá đi mất.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.love+=20"  name="love"  cmd="+="  op="t"  val="20"  val_2="undefined"  ]
@@ -1994,8 +1994,8 @@
 *Detti_suki_sippai1
 
 [tb_start_text mode=1 ]
-えっちな話＿失敗①（凪好き状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện nhạy cảm_Thất bại 1 (Nagi trạng thái Thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_suki_sippai+=1"  name="Detti_suki_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2006,8 +2006,8 @@
 *Detti_suki_sippai2
 
 [tb_start_text mode=1 ]
-えっちな話＿失敗②（凪好き状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện nhạy cảm_Thất bại 2 (Nagi trạng thái Thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_suki_sippai+=1"  name="Detti_suki_sippai"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2018,8 +2018,8 @@
 *Detti_suki_sippai3
 
 [tb_start_text mode=1 ]
-えっちな話＿失敗③（凪好き状態）[p]
-（微妙な空気になってしまった）[p]
+Chuyện nhạy cảm_Thất bại 3 (Nagi trạng thái Thích)[p]
+（Bầu không khí trở nên gượng gạo mất rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_suki_sippai=0"  name="Detti_suki_sippai"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2030,8 +2030,8 @@
 *Detti_suki_seikou1
 
 [tb_start_text mode=1 ]
-えっちな話＿成功①（凪好き状態）[p]
-（熱い視線を感じる）[p]
+Chuyện nhạy cảm_Thành công 1 (Nagi trạng thái Thích)[p]
+（Cảm nhận được ánh nhìn say đắm từ cô ấy.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_suki_seikou+=1"  name="Detti_suki_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2042,8 +2042,8 @@
 *Detti_suki_seikou2
 
 [tb_start_text mode=1 ]
-えっちな話＿成功②（凪好き状態）[p]
-（熱い視線を感じる）[p]
+Chuyện nhạy cảm_Thành công 2 (Nagi trạng thái Thích)[p]
+（Cảm nhận được ánh nhìn say đắm từ cô ấy.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_suki_seikou+=1"  name="Detti_suki_seikou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2054,8 +2054,8 @@
 *Detti_suki_seikou3
 
 [tb_start_text mode=1 ]
-えっちな話＿成功③（凪好き状態）[p]
-（熱い視線を感じる）[p]
+Chuyện nhạy cảm_Thành công 3 (Nagi trạng thái Thích)[p]
+（Cảm nhận được ánh nhìn say đắm từ cô ấy.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Detti_suki_seikou=0"  name="Detti_suki_seikou"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2066,8 +2066,8 @@
 *Detti_suki_tokimeki
 
 [tb_start_text mode=1 ]
-えっちな話＿好き（凪ときめき状態）[p]
-（いつも以上に楽しそうだ）[p]
+Chuyện nhạy cảm_Thích (Nagi trạng thái Xao xuyến)[p]
+（Trông cô ấy vui vẻ hơn hẳn bình thường.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.love+=20"  name="love"  cmd="+="  op="t"  val="20"  val_2="undefined"  ]

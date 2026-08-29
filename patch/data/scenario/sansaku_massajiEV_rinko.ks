@@ -16,11 +16,11 @@
 [tb_show_message_window  ]
 [mask_off  time="800"  effect="slideOutRight"  ]
 [tb_start_text mode=1 ]
-店内は空いており、いつものように穏やかな時間が流れている。[p]
+Bên trong tiệm khá vắng vẻ, một khoảng thời gian êm đềm vẫn trôi qua như thường lệ.[p]
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-（凛子さんが働いている。話しかけてみようかな？）
+（Cô Rinko đang làm việc kìa. Có nên bắt chuyện thử không nhỉ?）
 [_tb_end_text]
 
 [glink  color="btn_03_black"  storage="sansaku_massajiEV_rinko.ks"  size="20"  text="Bắt chuyện với Rinko"  x="415"  y="180"  width="497"  height="57"  _clickable_img=""  target="*hanasu"  ]
@@ -68,9 +68,9 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[舜]「凛子さん」[p]
+[舜]「Cô Rinko ơi.」[p]
 #凛子
-凛子「あ…えーと…何か忘れもの、かな？　どうかした？」[p]
+Rinko「A... ừm... cháu để quên thứ gì sao? Có chuyện gì vậy?」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -146,7 +146,7 @@
 
 [tb_start_text mode=1 ]
 #凛子
-凛子「[舜]くん。お疲れ様。[r]ひょっとしてマッサージの勉強しにきたの？　ふふ、熱心ね」[p]
+Rinko「Shun-kun. Cháu vất vả rồi.[r]Có phải cháu đến để học hỏi về massage không? Khc, cháu nhiệt tình thật đấy.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -222,7 +222,7 @@
 
 [tb_start_text mode=1 ]
 #凛子
-凛子「やっぱり。ドアの開け方が[舜]くんっぽいなって思ってたから。音でわかっちゃうの」[p]
+Rinko「Quả nhiên là vậy. Cô đã nghĩ cách mở cửa nghe giống Shun-kun mà. Chỉ cần nghe tiếng là cô nhận ra ngay.」[p]
 [_tb_end_text]
 
 [call  storage="sansaku_massajiEV_rinko.ks"  target="*sasiire1"  cond="f.sasiire_rinko==0"  ]
@@ -237,7 +237,7 @@
 
 [tb_start_text mode=1 ]
 #凛子
-凛子「いらっしゃい。ふふ、会いたいなぁって思ってたら来てくれるのね。不思議」[p]
+Rinko「Chào mừng cháu. Khc, cô vừa mới nghĩ muốn gặp cháu thì cháu lại đến. Thật kỳ diệu.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -315,7 +315,7 @@
 
 [tb_start_text mode=1 ]
 #凛子
-凛子「いらっしゃいませ、お客様。ご予約は？　[r]なんて、冗談よ。ふふ、こんにちは」[p]
+Rinko「Kính chào quý khách. Quý khách đã đặt lịch trước chưa ạ?[r]Cô đùa thôi. Khc, chào cháu nhé.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -386,10 +386,10 @@
 *sasiire1
 
 [tb_start_text mode=1 ]
-凛子「そうだ、さっきお客様からドーナツを頂いたの。[r]よかったら食べて？　甘くてとっても美味しかった」[p]
-凛子「ふふ、このままじゃ１人で食べて太っちゃうから…人助けだと思って、ね？」[p]
-ドーナツをもらった[p]
-[font color="yellow"]テンションが少し上がった[resetfont][p]
+Rinko「Đúng rồi, lúc nãy cô được khách hàng tặng bánh donut đấy.[r]Cháu có muốn ăn thử không? Ngọt và ngon lắm đó.」[p]
+Rinko「Khc, cứ để thế này mà ăn một mình thì cô sẽ mập lên mất... Cứ coi như cháu đang giúp người đi, nhé?」[p]
+Đã nhận được bánh donut[p]
+[font color="yellow"]Chỉ số Hưng phấn tăng nhẹ[resetfont][p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
@@ -399,10 +399,10 @@
 *sasiire2
 
 [tb_start_text mode=1 ]
-凛子「いい匂いしてるでしょ？　久しぶりにドーナッツを揚げてみたの」[p]
-凛子「休憩中ってお腹空くでしょ？　だから[舜]くんに食べてほしいな、って思って。[r]好みの味だといいんだけど。どうかな？」[p]
-ドーナツをもらった[p]
-[font color="yellow"]テンションが少し上がった[resetfont][p]
+Rinko「Mùi thơm lắm đúng không? Đã lâu rồi cô mới thử chiên bánh donut đấy.」[p]
+Rinko「Giờ nghỉ giải lao chắc cháu cũng đói bụng rồi nhỉ? Thế nên cô muốn Shun-kun ăn thử.[r]Hy vọng là hợp khẩu vị của cháu. Thế nào?」[p]
+Đã nhận được bánh donut[p]
+[font color="yellow"]Chỉ số Hưng phấn tăng nhẹ[resetfont][p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]

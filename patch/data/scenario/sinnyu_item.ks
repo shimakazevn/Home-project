@@ -575,7 +575,7 @@
 
 [tb_show_message_window  ]
 [tb_start_text mode=4 ]
-媚薬を使用しますか？
+Có sử dụng Thuốc kích dục không?
 [_tb_end_text]
 
 [glink  color="btn_05_black"  storage="sinnyu_item.ks"  size="20"  x="416"  y="230"  width="425"  height="58"  text="Sử dụng (Viên Spirytus)"  _clickable_img=""  target="*item_1_nagi_ev_yes"  ]
@@ -584,7 +584,7 @@
 *biyaku_kameranasi
 
 [tb_start_text mode=1 ]
-[舜]「これを使うなら、[font color="yellow"]まずは最適の場所にカメラを設置しなくちゃな。[resetfont][r]そうだな…やっぱり[font color="yellow"]パソコン前[resetfont]かな」[p]
+[舜]「Nếu dùng cái này thì, [font color="yellow"]trước tiên phải đặt camera ở chỗ thích hợp nhất đã.[resetfont][r]Để xem... Quả nhiên là [font color="yellow"]trước máy tính[resetfont] nhỉ.」[p]
 [_tb_end_text]
 
 [jump  storage="sinnyu_item.ks"  target="*item_EV_end"  ]
@@ -595,14 +595,14 @@
 [tb_eval  exp="f.itemEV_biyaku=1"  name="itemEV_biyaku"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
 [tb_eval  exp="f.item_on=1"  name="item_on"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
 [tb_start_text mode=1 ]
-[舜]「…よし、媚薬を使おう」[p]
+[舜]「...Được rồi, dùng thuốc kích dục thôi.」[p]
 [_tb_end_text]
 
 [bg  time="500"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
-[舜]「…本当に、こんなのに効果なんてあるのか？」[p]
-[舜]（カプセルを割って、ジュースに混ぜて…と）[p]
-[舜]「まあ、試してみるだけだ。バレなきゃ、それでいいか」[p]
+[舜]「...Thứ này thật sự có hiệu quả không đây?」[p]
+[舜]（Bẻ viên nang ra, trộn vào nước trái cây... xong.）[p]
+[舜]「Mà, cứ thử xem sao. Không bị phát hiện là được.」[p]
 [_tb_end_text]
 
 [jump  storage="sinnyu_item.ks"  target="*item_EV_end"  ]
@@ -616,7 +616,7 @@
 
 [tb_show_message_window  ]
 [tb_start_text mode=4 ]
-媚薬プレミアムを使用しますか？
+Có sử dụng Thuốc kích dục cao cấp không?
 [_tb_end_text]
 
 [glink  color="btn_05_black"  storage="sinnyu_item.ks"  size="20"  x="416"  y="230"  width="425"  height="58"  text="Sử dụng (Viên Spirytus)"  _clickable_img=""  target="*item_2_nagi_ev_yes"  ]
@@ -625,7 +625,7 @@
 *bitaku2_kameranasi
 
 [tb_start_text mode=1 ]
-[舜]「これを使うなら、[font color="yellow"]まずは最適の場所にカメラを設置しなくちゃな。[resetfont][r]やっぱり…[font color="yellow"]凪の部屋[resetfont]なら間違い無いかな」[p]
+[舜]「Nếu dùng cái này thì, [font color="yellow"]trước tiên phải đặt camera ở chỗ thích hợp nhất đã.[resetfont][r]Quả nhiên... là [font color="yellow"]phòng Nagi[resetfont] thì không sai vào đâu được.」[p]
 [_tb_end_text]
 
 [jump  storage="sinnyu_item.ks"  target="*item_EV_end"  ]
@@ -636,14 +636,14 @@
 [tb_eval  exp="f.itemEV_biyaku2=1"  name="itemEV_biyaku2"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
 [tb_eval  exp="f.item_on=1"  name="item_on"  cmd="="  op="t"  val="1"  ]
 [tb_start_text mode=1 ]
-[舜]「…よし、媚薬プレミアムを使おう」[p]
+[舜]「...Được rồi, dùng thuốc kích dục cao cấp thôi.」[p]
 [_tb_end_text]
 
 [bg  time="500"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
-[舜]「…結構いい値段したけど、効果あるのか…?」[p]
-[舜]（カプセルを割って、ジュースに中身を静かに混ぜて…と）[p]
-[舜]「バレるわけないし…うまくいけば儲けもんだよな」[p]
+[舜]「...Giá cũng khá chát đấy, không biết có hiệu quả không...?」[p]
+[舜]（Bẻ viên nang ra, lén lút trộn vào nước trái cây... xong.）[p]
+[舜]「Không thể nào bị phát hiện được... Nếu suôn sẻ thì đúng là vớ bở.」[p]
 [_tb_end_text]
 
 [jump  storage="sinnyu_item.ks"  target="*item_EV_end"  ]
@@ -657,7 +657,7 @@
 
 [tb_show_message_window  ]
 [tb_start_text mode=4 ]
-媚薬クリームを使用しますか？
+Bạn có muốn sử dụng kem kích dục không?
 [_tb_end_text]
 
 [glink  color="btn_05_black"  storage="sinnyu_item.ks"  size="20"  x="416"  y="230"  width="425"  height="58"  text="Sử dụng (Viên Spirytus)"  _clickable_img=""  target="*item_3_nagi_ev_yes"  ]
@@ -666,7 +666,7 @@
 *biyaku3_kameranasi
 
 [tb_start_text mode=1 ]
-[舜]「これを使うなら、[font color="yellow"]まずは最適の場所にカメラを設置しなくちゃな。[resetfont][r]欲を言えば[font color="yellow"]病院のトイレ[resetfont]でオナニーしてる姿が見れたら最高なんだけどな…」[p]
+[舜]「Nếu dùng cái này thì [font color="yellow"]trước tiên phải lắp camera ở vị trí thích hợp đã.[resetfont][r]Tham lam một chút thì nếu được thấy cảnh cô ấy thủ dâm trong [font color="yellow"]nhà vệ sinh bệnh viện[resetfont] thì tuyệt vời nhất...」[p]
 [_tb_end_text]
 
 [jump  storage="sinnyu_item.ks"  target="*item_EV_end"  ]
@@ -677,13 +677,13 @@
 [tb_eval  exp="f.itemEV_biyakucream3=1"  name="itemEV_biyakucream3"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
 [tb_eval  exp="f.item_on=1"  name="item_on"  cmd="="  op="t"  val="1"  ]
 [tb_start_text mode=1 ]
-[舜]「…よし、媚薬クリームを使おう」[p]
+[舜]「...Được rồi, dùng kem kích dục thôi.」[p]
 [_tb_end_text]
 
 [bg  time="500"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
-[舜]「適当に下着のクロッチにでも塗っておけばいいかな？」[p]
-[舜]「…ほんとに効くんだろうな、これ」[p]
+[舜]「Cứ bôi đại vào đũng quần lót là được nhỉ?」[p]
+[舜]「...Cái này có thực sự hiệu quả không đấy.」[p]
 [_tb_end_text]
 
 [jump  storage="sinnyu_item.ks"  target="*item_EV_end"  ]
@@ -697,7 +697,7 @@
 
 [tb_show_message_window  ]
 [tb_start_text mode=4 ]
-睡眠薬を使用しますか？
+Bạn có muốn sử dụng thuốc ngủ không?
 [_tb_end_text]
 
 [glink  color="btn_05_black"  storage="sinnyu_item.ks"  size="20"  x="416"  y="230"  width="425"  height="58"  text="Sử dụng (Viên Spirytus)"  _clickable_img=""  target="*item_4_nagi_ev_yes"  ]
@@ -709,13 +709,13 @@
 [tb_eval  exp="f.itemEV_suimin=1"  name="itemEV_suimin"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
 [tb_eval  exp="f.item_on=1"  name="item_on"  cmd="="  op="t"  val="1"  ]
 [tb_start_text mode=1 ]
-[舜]「…よし、睡眠薬を使おう」[p]
+[舜]「...Được rồi, dùng thuốc ngủ thôi.」[p]
 [_tb_end_text]
 
 [bg  time="500"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
-[舜]「適当に2、3粒砕いて…っと。冷蔵庫のお茶にでも入れておくか」[p]
-[舜]「これで夜はぐっすり眠れるはずだ。ちょっと心配だけど…まあ、大丈夫だろう」[p]
+[舜]「Nghiền nát 2, 3 viên ra... rồi. Cứ cho vào bình trà trong tủ lạnh vậy.」[p]
+[舜]「Thế này thì tối nay cô ấy sẽ ngủ say như chết thôi. Hơi lo một chút nhưng... chắc là không sao đâu.」[p]
 [_tb_end_text]
 
 [jump  storage="sinnyu_item.ks"  target="*item_EV_end"  ]
@@ -726,7 +726,7 @@
 *item_ev_no
 
 [tb_start_text mode=1 ]
-[舜]「…急いで使う事は無いよな。やめておこう」[p]
+[舜]「...Cũng không cần phải vội vàng dùng ngay. Thôi bỏ đi.」[p]
 [_tb_end_text]
 
 [jump  storage="sinnyu_item.ks"  target="*item_EV_end"  ]
@@ -738,7 +738,7 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[舜]「ひとまず今日はこれだけで様子を見るか。欲張ってバレたら元も子もないしな」[p]
+[舜]「Tạm thời hôm nay cứ thế này để xem tình hình đã. Tham lam quá mà bị lộ thì xôi hỏng bỏng không.」[p]
 [_tb_end_text]
 
 [jump  storage="sinnyu_item.ks"  target="*item_EV_end"  

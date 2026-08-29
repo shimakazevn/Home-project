@@ -4,9 +4,9 @@
 *3P_kaiwa1
 
 [tb_start_text mode=1 ]
-凛子「蕾にも幸せになってほしいけど…私も[舜]くんを諦められないの。ごめんね？」[p]
-蕾「それなら、この場で[舜]にどっちがいいのか選んでもらえばいいんでしょ？」[p]
-凛子「それがいいかもね…[舜]くんが蕾を選んだなら、私も諦めがつくかもしれないし」[p]
+Rinko「Mẹ cũng muốn Tsubomi được hạnh phúc... nhưng mẹ cũng không thể từ bỏ anh [舜] được. Xin lỗi con nhé?」[p]
+Tsubomi「Nếu vậy thì, ngay tại đây cứ để anh [舜] chọn xem ai tốt hơn là được chứ gì?」[p]
+Rinko「Thế cũng được... Nếu anh [舜] chọn Tsubomi, thì có lẽ mẹ cũng sẽ từ bỏ được.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -14,9 +14,9 @@
 *3P_kaiwa2
 
 [tb_start_text mode=1 ]
-[舜]「選ばないで、２人と一緒にいて家族になればいいって思ってたんだけど」[p]
-蕾「そっ、そんなのダメに決まってるでしょ！　２人と付き合うなんてあり得ないからっ！」[p]
-凛子「そう？　私は[舜]くんが選んだなら、それでもかまわないけど…」[p]
+[舜]「Anh định sẽ không chọn ai cả, mà sẽ ở bên cả hai người và trở thành một gia đình cơ.」[p]
+Tsubomi「Ch-Chuyện đó chắc chắn là không được rồi! Hẹn hò với cả hai người là chuyện không thể nào!」[p]
+Rinko「Vậy sao? Nếu anh [舜] chọn như thế, thì mẹ cũng không bận tâm đâu...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -24,9 +24,9 @@
 *3P_kaiwa3
 
 [tb_start_text mode=1 ]
-蕾「どっちのほうが体の相性がよくてセックスが気持ちいいのか、実際に試して決めてよ…」[p]
-凛子「セックスの気持ちよさなら、負けないかもしれないよ？　[舜]くんを満足させてあげるから」[p]
-蕾「ママ、余裕みたいだけど…私のほうがお肌は若くてプリプリだし…アソコだって締まるんだから」[p]
+Tsubomi「Cơ thể của ai hợp với anh hơn và làm tình sướng hơn, anh cứ thử thực tế rồi quyết định đi...」[p]
+Rinko「Nếu là độ sướng khi làm tình, thì có lẽ mẹ sẽ không thua đâu? Mẹ sẽ làm cho anh [舜] thỏa mãn.」[p]
+Tsubomi「Mẹ có vẻ tự tin quá nhỉ... nhưng da của con trẻ trung và căng mịn hơn... Hơn nữa chỗ đó cũng thít chặt hơn mà.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa=0"  name="H_kaiwa"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -34,8 +34,8 @@
 *3P_kiss_tubomi1
 
 [tb_start_text mode=1 ]
-蕾「うぅっ♡　ちゅっちゅ、ちゅぷ、ちゅ♡　はふ、ね？　私のキスのほうが気持ちいいでしょ？」[舜]「ん～、もっとキスしてみないとわかんないなぁ。蕾からもキスしてくれないと」[p]
-蕾「ちゅぷ、ちゅっちゅ…わざと言ってるでしょっ。ちゅ、ちゅっちゅ…ちゅくちゅく♡」[p]
+Tsubomi「Ưư♡ Chụt chụt, chụt, chụt♡ Hà, thấy chưa? Nụ hôn của em sướng hơn đúng không?」[舜]「Ưm~, phải hôn thêm nữa thì anh mới biết được. Tsubomi cũng phải hôn anh đi chứ.」[p]
+Tsubomi「Chụt, chụt chụt... Anh cố tình nói thế đúng không. Chụt, chụt chụt... sột soạt♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low1==1"  ]
@@ -45,9 +45,9 @@
 *3P_kiss_tubomi2
 
 [tb_start_text mode=1 ]
-蕾「ちゅっちゅっちゅ♡　は～っ♡　は～っ♡　あぁ、私のほうが気持ちよくなってきちゃったぁ」[p]
-蕾「[舜]のこと…気持ちよくさせるつもりだったのに…んんっ、ちゅ、ちゅっちゅ♡　ちゅぷ♡」[p]
-蕾「上手にキスできるんだってトコ…あんたに見せてやるんだから…ちゅっちゅっちゅ♡」[p]
+Tsubomi「Chụt chụt chụt♡ Hà~♡ Hà~♡ A, em lại thấy sướng hơn mất rồi.」[p]
+Tsubomi「Rõ ràng là em định làm cho anh Shun sướng cơ mà... Ưm, chụt, chụt chụt♡ Chụt♡」[p]
+Tsubomi「Em sẽ cho anh thấy... là em cũng biết hôn giỏi lắm đấy nhé... Chụt chụt chụt♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss+=1"  name="H_kiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -57,9 +57,9 @@
 *3P_kiss_tubomi3
 
 [tb_start_text mode=1 ]
-蕾「ちゅ、んっ、ちゅっちゅ♡　はぁ、はふ♡　私たちがキスしてるとこ…ママに見せてあげてよ♡」[p]
-蕾「私たち、いっつもこうやってエッチなキスしてるんだって…教えてあげなくちゃ…♡」[p]
-蕾「ちゅくちゅくちゅくっ♡　ふぅ、ふっ…はーっ♡　ほら、あんただってエッチな顔になってる♡」[p]
+Tsubomi「Chụt, ưm, chụt chụt♡ Hà, ha♡ Hãy cho mẹ xem... cảnh chúng ta đang hôn nhau đi♡」[p]
+Tsubomi「Phải cho mẹ biết là... lúc nào chúng ta cũng hôn nhau dâm đãng thế này chứ...♡」[p]
+Tsubomi「Chụt chụt chụt♡ Phù, phù... Hà♡ Nhìn xem, anh cũng đang làm bộ mặt dâm đãng rồi kìa♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss=0"  name="H_kiss"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -71,9 +71,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ちゅっちゅっちゅ♡　んふぅぅっ♡　んっ♡　キスだけ、なのにっ♡　ビリビリって…」[p]
-蕾「気持ちいいのが、全身に広がってく…♡　はぁ、体の奥熱くなっちゃったみたい♡」[p]
-蕾「はふ、このままひとり占めしたいのにぃ…♡　２人でずーっとキスしていたいよぉ♡」[p]
+Tsubomi「Chụt chụt chụt♡ Ưm phưưư♡ Ưm♡ Rõ ràng chỉ là hôn thôi mà♡ Tê rần cả lên...」[p]
+Tsubomi「Cảm giác sung sướng, đang lan tỏa khắp toàn thân...♡ Hà, sâu bên trong cơ thể em nóng ran lên rồi♡」[p]
+Tsubomi「Ha, em muốn chiếm trọn lấy anh thế này cơ...♡ Em muốn hai chúng ta cứ hôn nhau mãi thôi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -81,9 +81,9 @@
 *3P_kiss_rinko1
 
 [tb_start_text mode=1 ]
-凛子「ちゅ♡　ちゅ、ちゅ、ふふっ…今日はすっごく優しくキスしてくれるんだね、[舜]くん」[p]
-凛子「ひょっとして、蕾に見られて興奮してる？　それともちょっと気まずくなっちゃった…？」[p]
-凛子「気にしなくていいって言うのは難しいかもしれないけど…楽しんだらいんじゃない？」[p]
+Rinko「Chụt♡ Chụt, chụt, khc... Hôm nay anh Shun hôn dịu dàng quá nhỉ.」[p]
+Rinko「Không lẽ, bị Tsubomi nhìn thấy nên anh hưng phấn sao? Hay là thấy hơi ngại ngùng rồi...?」[p]
+Rinko「Bảo anh đừng để ý thì chắc cũng khó... nhưng cứ tận hưởng là được mà?」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low2==1"  ]
@@ -93,9 +93,9 @@
 *3P_kiss_rinko2
 
 [tb_start_text mode=1 ]
-凛子「ちゅく、ちゅ、ちゅ、ちゅ♡　はぁ、ふぅ♡　蕾と比べてどうかな？　やっぱり違う？」[p]
-凛子「肌の質感とか張りじゃ敵わないかもしれないけど…柔らかさとキスの仕方は自信があるから」[p]
-凛子「ちゅっちゅ♡　[舜]くんのこと、気持ちよくしてあげたいな♡　いっぱいキスしちゃおうね♡」[p]
+Rinko「Chụt, chụt, chụt, chụt♡ Hà, phù♡ So với Tsubomi thì thế nào? Quả nhiên là khác biệt nhỉ?」[p]
+Rinko「Về độ căng mịn của làn da thì có lẽ mẹ không bằng con bé được... nhưng về độ mềm mại và cách hôn thì mẹ tự tin lắm.」[p]
+Rinko「Chụt chụt♡ Mẹ muốn làm cho anh Shun sướng cơ♡ Mình hôn nhau thật nhiều nhé♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss+=1"  name="H_kiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -105,9 +105,9 @@
 *3P_kiss_rinko3
 
 [tb_start_text mode=1 ]
-凛子「んっ、ちゅぷ、ちゅ、ちゅっ…ふぅ、ふっ…[舜]くんとのキス、大好き…♡」[p]
-[舜]「俺も凛子さんとのキス大好きだよ…満足させようって一生懸命になってくれるとこも好き」[p]
-凛子「[舜]くんの悦ばせ方、普段から勉強してるから♡　蕾にはまだまだ負けないつもり♡」[p]
+Rinko「Ưm, chụt, chụt, chụt... Phù, phù... Mẹ thích hôn anh Shun lắm...♡」[p]
+[舜]「Anh cũng thích hôn Rinko lắm... Anh cũng thích cả cái dáng vẻ cố gắng hết sức để làm anh thỏa mãn của em nữa.」[p]
+Rinko「Bình thường mẹ vẫn luôn học cách làm anh Shun sung sướng mà♡ Mẹ sẽ không thua Tsubomi đâu♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss=0"  name="H_kiss"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -119,9 +119,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ちゅくちゅく♡　んんっ♡　ふぅぅっ♡　はぁ、はっ…やだ…キスですっごく疼いちゃった…」[p]
-[舜]「どこがどんなふうに疼いたのか、ちゃんと教えてくれないと。凛子さんなら言えるでしょ？」[p]
-凛子「もう…♡　そうやって意地悪言うんだから♡　おまんこが熱くてウズウズしちゃったみたい♡」[p]
+Rinko「Chụt chụt♡ Ưm♡ Phù♡ Hà, hà... Chết thật... Chỉ hôn thôi mà nhức nhối quá đi mất...」[p]
+[舜]「Em phải nói rõ xem chỗ nào nhức nhối thế nào chứ. Rinko thì chắc chắn là nói được đúng không?」[p]
+Rinko「Thiệt tình...♡ Anh cứ nói lời trêu chọc mãi thôi♡ Cô bé của mẹ nóng ran và rạo rực hết cả lên rồi này♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -129,9 +129,9 @@
 *3P_naderu1
 
 [tb_start_text mode=1 ]
-蕾「あっ♡　はぁ、んっ…♡　お尻同時に撫でて…感触の違い確かめてるの？　あっ♡　はぁん♡」[p]
-凛子「私、お尻少し大きいから…恥ずかしいな♡　肌も柔らかくなっちゃってるし…変じゃない？」[p]
-[舜]「いや、めちゃくちゃエロいよ…柔らかくて指沈み込む感じ、たまんない…」[p]
+Tsubomi「A♡ Hà, ưm...♡ Vuốt ve mông cùng lúc... anh đang xác nhận sự khác biệt của cảm giác sao? A♡ Hà♡」[p]
+Rinko「Mông của mẹ hơi to... nên xấu hổ lắm♡ Da cũng mềm nhão ra rồi... Có kỳ lạ không anh?」[p]
+[舜]「Không đâu, dâm đãng cực kỳ luôn... Cảm giác mềm mại đến mức ngón tay chìm hẳn vào, không chịu nổi luôn...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_naderu+=1"  name="H_naderu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -141,9 +141,9 @@
 *3P_naderu2
 
 [tb_start_text mode=1 ]
-蕾「ママのほうばっかり見てないで、私のことも見てよ♡　ほら、プリップリのお尻なんだから♡」[p]
-[舜]「ん…キュッとしまった小尻もたまんないな…ケツ掴んで、チンポ挿れたくてウズウズする…」[p]
-凛子「蕾にばっかり興奮しちゃうなんて…妬けちゃうな♡　私のお尻でしごいてもいいのに」[p]
+Tsubomi「Đừng có nhìn mỗi mẹ thế chứ, nhìn cả em nữa đi♡ Nhìn xem, mông em căng tròn luôn này♡」[p]
+[舜]「Ưm... Cái mông nhỏ nhắn siết chặt lại cũng tuyệt lắm... Anh muốn giữ chặt lấy mông rồi đút dương vật vào quá...」[p]
+Rinko「Anh chỉ hưng phấn với mỗi Tsubomi thôi... mẹ ghen đấy nhé♡ Anh dùng mông mẹ để sục cũng được mà.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_naderu+=1"  name="H_naderu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -153,9 +153,9 @@
 *3P_naderu3
 
 [tb_start_text mode=1 ]
-[舜]「質感も大きさも違うから…どっちのお尻も最高だ。ずーっと揉みしだいていられる…」[p]
-蕾「両方いいじゃダメなのっ♡　どっちのお尻のほうが好きなのか決めてくれないと嫌だよっ♡」[p]
-凛子「気を使わなくていいんだからね♡　触って舐めて、好きに使ってどっちが好みか決めて♡」[p]
+[舜]「Cảm giác và kích thước đều khác nhau... mông của ai cũng tuyệt vời cả. Anh có thể nhào nặn mãi không chán luôn...」[p]
+Tsubomi「Cả hai đều tốt là không được đâu nhé♡ Anh phải quyết định xem mình thích mông của ai hơn thì em mới chịu♡」[p]
+Rinko「Anh không cần phải khách sáo đâu nhé♡ Cứ sờ soạng, liếm láp, dùng tùy ý rồi quyết định xem anh thích ai hơn đi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_naderu=0"  name="H_naderu"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -167,9 +167,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あっ♡　あぁぁぁっ♡　鷲掴みにされちゃったぁ♡　んんっ、やだ、足の間熱くなってる♡」[p]
-蕾「あはぁ、んっ♡　気持ちいいの…もっと撫でて♡　お尻だけじゃなくて違うトコも…♡」[p]
-[舜]「おねだりの仕方は２人ともそっくりだな。別のトコもあとでしっかり撫でてやるからな」[p]
+Rinko「A♡ A a a♡ Bị bóp chặt lấy rồi♡ Ưm, không chịu đâu, giữa hai chân mẹ nóng ran lên rồi♡」[p]
+Tsubomi「A hà, ưm♡ Sướng quá... vuốt ve thêm nữa đi anh♡ Không chỉ mỗi mông mà cả chỗ khác nữa...♡」[p]
+[舜]「Cách vòi vĩnh của hai người giống hệt nhau nhỉ. Lát nữa anh sẽ vuốt ve kỹ cả chỗ khác nữa nhé.」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -177,9 +177,9 @@
 *3P_sumata1
 
 [tb_start_text mode=1 ]
-蕾「あっ♡　んんっ♡　あっつ…ガチガチになってるじゃないっ♡　割れ目の間、擦れてるっ♡」[p]
-凛子「ふーっ…ふーっ♡　[舜]くんも気持ちよくなれてる？　好きに腰動かしていいからね♡」[p]
-凛子「あぁぁっ♡　んっ、ビクビクって反応しちゃったの？　おちんちん気持ちよくなって♡」[p]
+Tsubomi「A♡ Ưm♡ Nóng quá... Cứng ngắc lại rồi này♡ Đang cọ xát ở giữa khe dâm kìa♡」[p]
+Rinko「Phù... Phù♡ Anh Shun cũng đang thấy sướng đúng không? Anh cứ tùy ý di chuyển hông đi nhé♡」[p]
+Rinko「A a a♡ Ưm, nó giật giật phản ứng lại rồi kìa? Dương vật sướng quá rồi đúng không♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low4==1"  ]
@@ -189,9 +189,9 @@
 *3P_sumata2
 
 [tb_start_text mode=1 ]
-[舜]「あー、めちゃくちゃ気持ちいい…！　おまんこの感触、全然違うんだな…」[p]
-蕾「あんっ♡　どっちのほうが気持ちいいの？　はぁ♡　ほら…擦れるたびビクビクしてるよ？」[p]
-凛子「はぁ、あっ♡　まだ選べないよね？　じっくり味わって、決めてくれていいからね♡」[p]
+[舜]「A, sướng cực kỳ luôn...! Cảm giác bên trong cô bé, khác biệt hoàn toàn nhỉ...」[p]
+Tsubomi「A♡ Của ai sướng hơn hả anh? Hà♡ Nhìn xem... mỗi lần cọ xát nó lại giật giật kìa?」[p]
+Rinko「Hà, a♡ Anh vẫn chưa chọn được đúng không? Cứ thong thả thưởng thức rồi quyết định cũng được mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata+=1"  name="H_sumata"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -201,9 +201,9 @@
 *3P_sumata3
 
 [tb_start_text mode=1 ]
-蕾「おっ♡　おおっ♡　擦れて…ヒダもめくり上がっちゃってりゅ♡　[舜]のおちんちんすごいの♡」[p]
-凛子「はぁっ♡　あんっ♡　すごい…ヌルヌルトロトロになっちゃったね…♡　とろけちゃいそう♡」[p]
-蕾「ひぅぅっ♡　あぁっ…滑って中に入っちゃえばいいのにぃ♡　奥までズッポリ挿れてほしいの♡」[p]
+Tsubomi「Ơ♡ Ơ ơ♡ Cọ xát... mép thịt cũng bị lật tung lên hết rồi♡ Dương vật của anh Shun tuyệt quá đi♡」[p]
+Rinko「Hà♡ A♡ Tuyệt quá... ướt sũng mềm nhũn ra hết rồi này...♡ Mẹ sắp tan chảy mất thôi♡」[p]
+Tsubomi「Hiưư♡ A... Cứ thế trơn tuột đâm vào trong luôn thì tốt biết mấy♡ Em muốn anh đâm ngập đến tận sâu bên trong cơ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata=0"  name="H_sumata"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -215,9 +215,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ひあぁっ♡　あっ♡　入り口…擦れてるっ♡　[舜]くん…滑って入っちゃいそう…♡」[p]
-蕾「あぁぁんっ♡　ママばっかりズルいっ♡　私にもぴったりくっつけて擦りつけてよぉっ♡」[p]
-凛子「んっ♡　はぁ、もっと…めちゃくちゃに腰振って私たちの間に出してもいいんだからね♡[p]
+Rinko「Hi a♡ A♡ Cửa vào... đang bị cọ xát kìa♡ Anh Shun... sắp trơn tuột đâm vào trong mất...♡」[p]
+Tsubomi「A a a♡ Mẹ ăn gian quá đi♡ Anh cũng phải áp sát vào rồi cọ xát cho em nữa chứ♡」[p]
+Rinko「Ưm♡ Hà, anh cứ... lắc hông kịch liệt hơn nữa rồi bắn ra giữa hai mẹ con cũng được mà♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -225,9 +225,9 @@
 *3P_teman1
 
 [tb_start_text mode=1 ]
-凛子「あっ♡　あっ♡　あっ♡　ゴツゴツの指っ…お、奥っ、届いてるよ…[舜]くん上手だね♡」[p]
-蕾「あぁっ♡　くぅっ…内側っ、そんな優しく撫でないでぇ♡　すぐイッちゃうからぁっ♡」[p]
-凛子「はぁっ♡　蕾…まだまだ刺激に敏感なんだね…♡　あぁ、気持ちよさそうな顔しちゃって♡」[p]
+Rinko「A♡ A♡ A♡ Ngón tay thô ráp... ch-chạm đến tận sâu bên trong rồi... Anh Shun giỏi quá đi♡」[p]
+Tsubomi「A♡ Kư... Bên trong, đừng vuốt ve nhẹ nhàng thế mà♡ Em ra ngay mất thôi♡」[p]
+Rinko「Hà♡ Tsubomi... vẫn còn nhạy cảm với kích thích lắm nhỉ...♡ A, làm bộ mặt sung sướng thế kia cơ mà♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low5==1"  ]
@@ -237,9 +237,9 @@
 *3P_teman2
 
 [tb_start_text mode=1 ]
-[舜]「すごいな…やっぱ中の感触が全然違う…比べてみるとはっきりわかるもんだな…」[p]
-蕾「んんっ♡　私のはどうなのっ？　はぁっ♡　あぁ、キュンキュン締め付けられてるでしょっ♡」[p]
-凛子「私のほうは…熱くてトロトロになってるんじゃない？　[舜]くんのこと包み込んであげる♡」[p]
+[舜]「Tuyệt thật... Quả nhiên cảm giác bên trong khác biệt hoàn toàn... Thử so sánh mới thấy rõ ràng được...」[p]
+Tsubomi「Ưm♡ Của em thì thế nào? Hà♡ A, đang siết chặt nhức nhối lắm đúng không♡」[p]
+Rinko「Của mẹ thì... đang nóng ran và ướt sũng rồi đúng không? Mẹ sẽ bao bọc lấy anh Shun nhé♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman+=1"  name="H_teman"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -249,9 +249,9 @@
 *3P_teman3
 
 [tb_start_text mode=1 ]
-凛子「んんっ♡　はぁ、あんっ♡　[舜]くんのおかげで、トロトロになって開いてきちゃった…♡」[p]
-蕾「私だって…♡　もうおちんちん挿れる準備できちゃったんだから♡　先に挿れてほしいの♡」[p]
-蕾「あっ♡　はぁ、あぁ♡　それで、私のおまんこのほうが気持ちいいんだって言わせるんだから♡」[p]
+Rinko「Ưm♡ Hà, a♡ Nhờ có anh Shun, mà nó ướt sũng rồi mở toang ra mất rồi...♡」[p]
+Tsubomi「Cả em nữa...♡ Em cũng đã sẵn sàng để đút dương vật vào rồi cơ mà♡ Em muốn anh đút vào em trước cơ♡」[p]
+Tsubomi「A♡ Hà, a♡ Rồi em sẽ bắt anh phải nói là cô bé của em sướng hơn cho xem♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman=0"  name="H_teman"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -263,9 +263,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひあぁぁぁっ♡　やっ…そこ、弱いのに♡　なんで２人同時なのにっ…弱いトコわかっちゃうの」[p]
-凛子「はぁっ♡　あぁぁぁっ♡　私もっ、気持ちいいトコ当たってるっ♡　[舜]くん、すごいっ♡」[p]
-[舜]「２人が触ってほしいトコなら、全部わかってるから…ぐちゃぐちゃにしてあげられるんだよ」[p]
+Tsubomi「Hi a a a♡ Đừng... Chỗ đó, nhạy cảm lắm mà♡ Tại sao cùng lúc làm hai người... mà anh vẫn biết được chỗ nhạy cảm chứ.」[p]
+Rinko「Hà♡ A a a♡ Mẹ cũng, bị chạm trúng chỗ sướng rồi này♡ Anh Shun, tuyệt quá đi♡」[p]
+[舜]「Chỗ mà hai người muốn được sờ, anh biết hết cả rồi... nên anh có thể khuấy đảo nát bét hết cho xem.」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -273,9 +273,9 @@
 *3P_anaruseme1
 
 [tb_start_text mode=1 ]
-蕾「あっ♡　あぁ♡　私のお尻、好きにしていいよ♡　ねぇ、私のほうがいいでしょう？」[p]
-凛子「ふーっ♡　そんなことないよね♡　[舜]くん、私のほうがほぐれるの早いから好きでしょう？」[p]
-凛子「ふふっ…蕾相手に本気で貼り合っちゃった♡　だって[舜]くんに悦んでほしいんだもの♡」[p]
+Tsubomi「A♡ A♡ Anh cứ tùy ý làm gì mông em cũng được♡ Này, của em tốt hơn đúng không?」[p]
+Rinko「Phù♡ Đâu có chuyện đó chứ♡ Anh Shun, của mẹ mềm ra nhanh hơn nên anh thích hơn đúng không?」[p]
+Rinko「Khc... Mẹ lại đi so đo thật sự với Tsubomi mất rồi♡ Tại mẹ muốn làm anh Shun sung sướng mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruseme+=1"  name="H_anaruseme"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -285,9 +285,9 @@
 *3P_anaruseme2
 
 [tb_start_text mode=1 ]
-[舜]「ヤバ、お尻の穴、ヒクヒクしてきた…このままほぐしたら簡単に指入っちゃいそうだな」[p]
-凛子「くぅぅっ♡　んっ♡　はぁ♡　とろんって緩んできたでしょ？　受け入れる準備してるの」[p]
-蕾「私のお尻…す～っごく締まるよ♡　指でもおちんちんでも好きなもの挿れていいんだからね♡」[p]
+[舜]「Tuyệt thật, lỗ hậu môn, bắt đầu giật giật rồi này... Cứ tiếp tục xoa bóp thế này thì ngón tay dễ dàng đút vào mất thôi.」[p]
+Rinko「Kưưư♡ Ưm♡ Hà♡ Mềm nhũn giãn ra rồi đúng không? Mẹ đang chuẩn bị để tiếp nhận anh đấy.」[p]
+Tsubomi「Mông em... siết chặt lắ~m đấy nhé♡ Ngón tay hay dương vật, anh thích đút cái gì vào cũng được hết♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruseme+=1"  name="H_anaruseme"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -297,9 +297,9 @@
 *3P_anaruseme3
 
 [tb_start_text mode=1 ]
-凛子「あぁぁっ♡　やだ…お尻なんて恥ずかしいはずなのに…♡　気持ちよくなってるの♡」[p]
-凛子「[舜]くんの触り方が上手なんだもの♡　いっぱい撫でて、もっとほぐしてっ♡」[p]
-蕾「ママのほうばっかりにかかりきりにならないでよぉ♡　私のお尻もいっぱい触って♡」[p]
+Rinko「A a a♡ Chết thật... Rõ ràng là mông thì đáng xấu hổ lắm cơ mà...♡ Lại thấy sướng mất rồi♡」[p]
+Rinko「Tại cách sờ của anh Shun điêu luyện quá mà♡ Vuốt ve thật nhiều, làm cho nó mềm ra nữa đi anh♡」[p]
+Tsubomi「Đừng có chỉ tập trung mỗi vào mẹ thế chứ♡ Sờ mông em nhiều vào nữa đi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruseme=0"  name="H_anaruseme"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -311,9 +311,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「んおおおおっ♡　お尻っ…トロトロになっちゃう♡　気持ちいいっ♡　はっ♡　はぁ♡　あぁ♡」[p]
-凛子「私もっ♡　あ゛あ゛っ♡　んっ♡　[舜]くん、２人相手にしても気持ちよくできちゃうんだね」[p]
-蕾「私だって…[舜]のこと気持ちよくするんだから♡　あんっ♡　されてばっかりじゃないぃ♡」[p]
+Tsubomi「Ưm ơ ơ ơ ơ♡ Mông em... ướt sũng ra mất♡ Sướng quá đi♡ Hà♡ Hà♡ A♡」[p]
+Rinko「Mẹ cũng thế♡ A a♡ Ưm♡ Anh Shun, dù phải làm với hai người cùng lúc mà vẫn làm cho sướng được nhỉ.」[p]
+Tsubomi「Cả em nữa... Em cũng sẽ làm cho anh Shun sướng cơ mà♡ A♡ Em không chỉ biết nhận không đâu nhé♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -321,9 +321,9 @@
 *3P_pisuton_yukkuri_rinko1
 
 [tb_start_text mode=1 ]
-凛子「はぁっ♡　あんっ♡　なんか、変な感じ…蕾に見られながらセックスしてるなんて…」[p]
-凛子「あっ♡　あぁっ♡　こんなこと…今までじゃ絶対にあり得ないし考えたこともなかったのにっ♡」[p]
-蕾「私だって…ママと同じ人と付き合って…こうやって一緒にセックスしちゃうなんて思わなかった」[p]
+Rinko「Hà♡ A♡ Cảm giác, kỳ lạ quá... Vừa bị Tsubomi nhìn vừa làm tình thế này...」[p]
+Rinko「A♡ A♡ Chuyện thế này... Từ trước đến giờ mẹ chưa từng nghĩ tới và tuyệt đối không thể xảy ra cơ mà♡」[p]
+Tsubomi「Cả em cũng vậy... Hẹn hò cùng một người với mẹ... rồi lại cùng nhau làm tình thế này, em chưa từng nghĩ tới luôn đấy.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri_rin+=1"  name="H_supiritasu_pisuton_yukkuri_rin"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -333,9 +333,9 @@
 *3P_pisuton_yukkuri_rinko2
 
 [tb_start_text mode=1 ]
-凛子「ひぅぅっ♡　あんっ♡　[舜]くん、今日意地悪だね♡　焦らすみたいに…浅いトコばっかり♡」[p]
-[舜]「蕾に見せてるんだよ…凛子さんはどんな風に気持ちよくなって、乱れるのか…！」[p]
-凛子「そんな、恥ずかしい…♡　あっ、あぁっ♡　私、母親じゃなくて女の顔になってるものっ♡」[p]
+Rinko「Hiưư♡ A♡ Anh Shun, hôm nay anh trêu chọc quá nhỉ♡ Cứ như đang trêu ngươi... chỉ đâm ở chỗ nông thôi♡」[p]
+[舜]「Anh đang cho Tsubomi xem đấy... xem Rinko sẽ sướng và rối bời thế nào...!」[p]
+Rinko「Chuyện đó, xấu hổ lắm...♡ A, a a♡ Khuôn mặt mẹ bây giờ đâu phải là của một người mẹ nữa, mà là của một người phụ nữ mất rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri_rin+=1"  name="H_supiritasu_pisuton_yukkuri_rin"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -345,9 +345,9 @@
 *3P_pisuton_yukkuri_rinko3
 
 [tb_start_text mode=1 ]
-凛子「んっ♡　くぅぅっ♡　い、いきなりっ…深いトコ…突き上げられると…おかしくなっちゃう♡」[p]
-蕾「ママ、こんなふうにセックスするんだ…すっごいやらしい…♡　悔しいけど…私よりエッチかも」[p]
-[舜]「そうなんだよ…凛子さんは奥ばっかり狙うと、どんどん乱れてエロい顔になってくんだ」[p]
+Rinko「Ưm♡ Kưưư♡ Đ-Đột nhiên... bị thúc mạnh... vào tận nơi sâu nhất... mẹ sẽ trở nên kỳ lạ mất thôi♡」[p]
+Tsubomi「Mẹ, làm tình thế này sao... Dâm đãng quá đi...♡ Tức thật nhưng mà... có khi còn dâm đãng hơn cả em nữa.」[p]
+[舜]「Đúng vậy đấy... Rinko mà cứ bị nhắm vào sâu bên trong, là sẽ ngày càng rối bời và làm bộ mặt dâm đãng ra đấy.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri_rin=0"  name="H_supiritasu_pisuton_yukkuri_rin"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -359,9 +359,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あ゛っ♡　あ゛あ゛あ゛っ♡　そこっ、気持ちいいの…[舜]くん、好きぃっ♡」[p]
-[舜]「あ～、エッロ。おっぱいぶるぶる揺らして腰ヘコさせて。娘に見られてんのにいいの？」[p]
-凛子「あ゛あ゛っ♡　そんなのだめぇっ♡　ごめんっ、ごめんね蕾っ♡　こんな恥ずかしい姿見せて」[p]
+Rinko「A♡ A a a♡ Chỗ đó, sướng quá... Anh Shun, mẹ thích lắm♡」[p]
+[舜]「A~, dâm đãng quá. Vú lắc lư rung bần bật còn hông thì nảy lên liên tục. Bị con gái nhìn thấy mà vẫn không sao à?」[p]
+Rinko「A a♡ Chuyện đó không được đâu♡ Xin lỗi, xin lỗi con nhé Tsubomi♡ Để con phải thấy dáng vẻ đáng xấu hổ này.」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]
@@ -369,9 +369,9 @@
 *3P_pisuton_hagesiku_rinko1
 
 [tb_start_text mode=1 ]
-凛子「あ゛っ♡　あ゛っ♡　ひう゛ぅっ♡　[舜]くんのおちんちん、1番奥まで当たってる…！」[p]
-[舜]「先っぽでいいトコよ～くこねてあげないとな…気持ちいい顔、蕾に見せてやらないと…！」[p]
-凛子「ああぁっ♡　恥ずかしいのに…余計にっ、お腹の奥反応して気持ちよくなってるのっ♡」[p]
+Rinko「A♡ A♡ Hi ư♡ Dương vật của anh Shun, chạm đến tận nơi sâu nhất rồi...!」[p]
+[舜]「Phải dùng phần đầu khuấy đảo thật kỹ chỗ sướng mới được... Phải cho Tsubomi thấy khuôn mặt sung sướng của em chứ...!」[p]
+Rinko「A a a♡ Rõ ràng là xấu hổ lắm... thế mà sâu trong bụng lại càng phản ứng mạnh và sướng hơn mất rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku_rin+=1"  name="H_supiritasu_pisuton_hagesiku_rin"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -381,9 +381,9 @@
 *3P_pisuton_hagesiku_rinko2
 
 [tb_start_text mode=1 ]
-凛子「んっ、くぅぅぅっ♡　はっ♡　はぁ♡　こ、腰勝手に動いて…止まらなくなっちゃう♡」[p]
-蕾「本気のセックスになってるじゃない…ずるいっ、ずるいっ…！　私がいること忘れないでよ？」[p]
-凛子「大丈夫…蕾のこともちゃんと感じてるからね♡　蕾も一緒に気持ちよくなろうね♡」[p]
+Rinko「Ưm, kưưư♡ Hà♡ Hà♡ H-Hông cứ tự động di chuyển... không dừng lại được mất♡」[p]
+Tsubomi「Hai người làm tình thật luôn rồi kìa... Ăn gian, ăn gian quá đi...! Đừng quên là em cũng đang ở đây đấy nhé?」[p]
+Rinko「Không sao đâu... Mẹ cũng đang cảm nhận được Tsubomi mà♡ Tsubomi cũng cùng sướng nhé♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku_rin+=1"  name="H_supiritasu_pisuton_hagesiku_rin"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -393,9 +393,9 @@
 *3P_pisuton_hagesiku_rinko3
 
 [tb_start_text mode=1 ]
-[舜]「あー、ヤバ、興奮する…！　チンポバキバキで収まんないわ…！」[p]
-凛子「ひっぐぅ♡　おっ♡　おっ♡　おおっ♡　激し、壊れちゃうっ♡　すごいのっ…♡」[p]
-凛子「[舜]くんのこと、興奮させられてるっ♡　あぁぁ、幸せっ♡　もっと頂戴…♡」[p]
+[舜]「A, tuyệt quá, hưng phấn quá đi...! Dương vật cứng ngắc không xìu xuống được nữa rồi...!」[p]
+Rinko「Hi gư♡ Ơ♡ Ơ♡ Ơ ơ♡ Kịch liệt quá, hỏng mất thôi♡ Tuyệt quá đi...♡」[p]
+Rinko「Mẹ đang làm cho anh Shun hưng phấn rồi này♡ A a, hạnh phúc quá♡ Cho mẹ thêm nữa đi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku_rin=0"  name="H_supiritasu_pisuton_hagesiku_rin"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -407,9 +407,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「お゛っ♡　あぅぅっ♡　体勝手に動いてるっ♡　あぁぁっ♡　[舜]くん、気持ちいいよぉ♡」[p]
-[舜]「エッロ。完全にメスになってんなぁ。ほら、チンポもっとほしいんだろ？」[p]
-凛子「だって気持ちいいんだもの♡　頂戴♡　奥まで突き上げて♡　中に全部出し切ってもいいよ♡」[p]
+Rinko「Ơ♡ A ưư♡ Cơ thể tự động di chuyển mất rồi♡ A a a♡ Anh Shun, sướng quá đi mất♡」[p]
+[舜]「Dâm đãng quá. Trở thành giống cái hoàn toàn rồi nhỉ. Nào, em muốn dương vật thêm nữa đúng không?」[p]
+Rinko「Tại vì sướng quá mà♡ Cho mẹ đi♡ Thúc lên tận sâu bên trong đi anh♡ Bắn hết tất cả vào trong cũng được đấy♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]
@@ -417,9 +417,9 @@
 *3P_2_kaiwa1
 
 [tb_start_text mode=1 ]
-蕾「私とのセックスのほうが気持ちいいって、わかってるくせに♡　体の相性だっていいでしょ？」[p]
-凛子「ふふ、私としてる時の[舜]くんも気持ちよさそうだよ？　頭空っぽにしてくれてるもんね？」[p]
-蕾「ね、私とママ、どっちのほうが好きか…どっちのセックスのほうが気持ちいいか決めてよ♡」[p]
+Tsubomi「Anh biết thừa là làm tình với em sướng hơn cơ mà♡ Cơ thể chúng ta cũng hòa hợp hơn đúng không?」[p]
+Rinko「Khc, lúc làm với mẹ anh Shun cũng có vẻ sướng lắm đấy? Đầu óc anh trống rỗng hết cả rồi kìa?」[p]
+Tsubomi「Này, em và mẹ, anh thích ai hơn... làm tình với ai sướng hơn, anh hãy quyết định đi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -427,9 +427,9 @@
 *3P_2_kaiwa2
 
 [tb_start_text mode=1 ]
-凛子「[舜]くん、きて…♡　いつもみたいに夢中になってる姿、蕾に見せてあげましょ♡」[p]
-蕾「私とだって、わけわかんないくらい腰振ってるもんね！？　ママに教えてあげてよっ！」[p]
-[舜]「順番にするから、待ってろって。いい子にしてないと、チンポ挿れてあげないからな？」[p]
+Rinko「Anh Shun, đến đây...♡ Hãy cho Tsubomi thấy dáng vẻ say đắm như mọi khi của anh đi nào♡」[p]
+Tsubomi「Với em, anh cũng lắc hông đến mức không biết trời trăng gì nữa cơ mà!? Hãy cho mẹ biết đi chứ!」[p]
+[舜]「Làm theo thứ tự, cứ đợi đi. Không ngoan là anh không đút cu vào cho đâu đấy nhé?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -437,9 +437,9 @@
 *3P_2_kaiwa3
 
 [tb_start_text mode=1 ]
-凛子「ふふ、[舜]くんに躾けられてるみたいで興奮しちゃう♡　今日は何してくれるんだろう？」[p]
-蕾「私にも…いつもみたいにたっぷり焦らしてから、ビンビンに反り返ったおちんちん挿れてよ♡」[p]
-凛子「へぇ、[舜]くん…蕾には欲望を遠慮なくぶつけてるのね。ちょっと嫉妬しちゃうなぁ♡」[p]
+Rinko「Khc... Cứ như đang được anh Shun huấn luyện ấy, làm em hưng phấn quá đi♡ Hôm nay anh sẽ làm gì em đây?」[p]
+Tsubomi「Với em nữa... Hãy cứ trêu chọc em thật nhiều như mọi khi, rồi đút con cu đang cong vút lên vì nứng vào đi anh♡」[p]
+Rinko「Chà, anh Shun... Anh trút hết dục vọng lên Tsubomi mà chẳng nể nang gì nhỉ. Làm em có chút ghen tị rồi đấy♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa=0"  name="H_kaiwa"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -447,9 +447,9 @@
 *3P_2_Dkiss_tubomi1
 
 [tb_start_text mode=1 ]
-蕾「ちゅぷ、ちゅ、じゅぷ、じゅるるるっ♡　ん、はぁ、食べられちゃうみたいなキス大好き♡」[p]
-蕾「この角度じゃなくって…ちゃんとキスして舌絡ませてるとこ…ママに見えるようにしてよ♡」[p]
-蕾「ちゅ、ちゅぷ、じゅるるるっ♡　はぁ、あふ、こんなにトロトロのキスできてるんだよって♡」[p]
+Tsubomi「Chụt, chu, chụt, rột rột...♡ Ưm, haa, em thích những nụ hôn như muốn nuốt chửng lấy nhau thế này lắm♡」[p]
+Tsubomi「Góc này không được đâu... Phải hôn và quấn lấy lưỡi nhau đàng hoàng... sao cho mẹ nhìn thấy rõ cơ♡」[p]
+Tsubomi「Chu, chụt, rột rột...♡ Haa, a phu, để mẹ thấy chúng ta đang trao nhau nụ hôn ướt át đến nhường nào chứ♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low1==1"  ]
@@ -459,9 +459,9 @@
 *3P_2_Dkiss_tubomi2
 
 [tb_start_text mode=1 ]
-[舜]「ほら、舌出せ…エロいキスしたいんだろ？　アヘ顔でベロチューおねだりしないとな」[p]
-蕾「はひ♡　ベロチューしてぇ♡　お願い♡　ちゅっちゅ、これがいいの♡　じゅるるるっ♡」[p]
-蕾「あはぁ♡　れろ、ちゅぷ、ちゅ♡　ヌルヌルのあったかい舌、絡ませるのすっごく好きなの♡」[p]
+[舜]「Nào, thè lưỡi ra... Em muốn hôn kiểu dâm đãng đúng không? Phải làm khuôn mặt phê pha rồi nài nỉ anh hôn lưỡi chứ.」[p]
+Tsubomi「Vâng ạ♡ Hôn lưỡi em đi♡ Xin anh đấy♡ Chụt chụt, thế này sướng quá♡ Rột rột...♡」[p]
+Tsubomi「A haa♡ Rero, chụt, chu♡ Quấn lấy chiếc lưỡi ấm nóng, ướt át của anh... em thích lắm cơ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_Dkiss+=1"  name="H_Dkiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -471,9 +471,9 @@
 *3P_2_Dkiss_tubomi3
 
 [tb_start_text mode=1 ]
-蕾「ちゅぷ、ちゅっちゅ♡　じゅるるるるっ♡　はぁ、あはぁ♡　口の中、とろけちゃいそ…♡」[p]
-[舜]「凛子さんに見られて余計興奮するなんて、蕾は変態だな…」[p]
-蕾「だってっ…こんなにエッチで気持ちいいキスしたら…体ウズウズしちゃうに決まってるでしょ♡」[p]
+Tsubomi「Chụt, chụt chụt♡ Rột rột rột...♡ Haa, a haa♡ Khoang miệng em, như sắp tan chảy ra rồi...♡」[p]
+[舜]「Bị mẹ Rinko nhìn thấy lại càng hưng phấn hơn, Tsubomi đúng là đồ biến thái mà...」[p]
+Tsubomi「Nhưng mà... trao nhau nụ hôn dâm đãng và sướng thế này... thì cơ thể em rạo rực lên là điều hiển nhiên mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_Dkiss=0"  name="H_Dkiss"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -485,9 +485,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「んぉぉっ♡　ちゅぷじゅぷじゅるるるっ♡　キスでゾクゾクおまんこ反応しちゃってるっ♡」[p]
-蕾「ちゅぷ、んんっ♡　んっ、お口でセックス…先に体験しちゃったぁ♡　ぎもちいいのっ♡」[p]
-蕾「はひっ♡　ちゅっちゅっちゅ♡　ちゅぷ、じゅるるるる…私のこと、食べちゃって…♡」[p]
+Tsubomi「Ưm ô ô...♡ Chụt chụt rột rột...♡ Chỉ hôn thôi mà cô bé của em đã run lên phản ứng lại rồi này...♡」[p]
+Tsubomi「Chụt, ưm...♡ Ưm, làm tình bằng miệng... em được trải nghiệm trước rồi nhé♡ Sướng quá đi mất...♡」[p]
+Tsubomi「Vâng ạ...♡ Chụt chụt chụt♡ Chụt, rột rột rột... Anh cứ nuốt chửng lấy em đi...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -495,9 +495,9 @@
 *3P_2_Dkiss_rinko1
 
 [tb_start_text mode=1 ]
-凛子「んんっ♡　ちゅぷ、じゅぷ、ちゅっちゅ♡　ふ～っ♡　あぁ、がっついてくれるの…？」[p]
-凛子「ちゅぷ、ちゅっちゅ、舌も…入ってきて…んんっ♡　はふっ、息するの、やっとなくらいっ♡」[p]
-凛子「求めてくれて嬉しいの…♡　私も応えたいって思ってるよ♡　ちゅっちゅ、ちゅぷ、じゅるる」[p]
+Rinko「Ưm...♡ Chụt, chụt, chụt chụt♡ Phù...♡ A, anh ngấu nghiến em thế sao...?」[p]
+Rinko「Chụt, chụt chụt, lưỡi anh... tiến vào rồi... Ưm...♡ Ha phu, em gần như chẳng thở nổi nữa rồi...♡」[p]
+Rinko「Được anh khao khát, em vui lắm...♡ Em cũng muốn đáp lại anh cơ♡ Chụt chụt, chụt, rột rột...」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low2==1"  ]
@@ -507,9 +507,9 @@
 *3P_2_Dkiss_rinko2
 
 [tb_start_text mode=1 ]
-凛子「ちゅく、ちゅっちゅ♡　じゅるるる♡　あはぁ…舌もとろけちゃいそう♡　ちゅぷ、ちゅ♡」[p]
-凛子「[舜]くんの口の中、すっごく熱くなってる…おちんちんも同じくらい熱くなってるのかな？」[p]
-凛子「フーッ♡　フーッ♡　興奮しちゃった？　欲望、全部ぶつけてくれていいんだからね♡」[p]
+Rinko「Chu, chụt chụt♡ Rột rột rột♡ A haa... Lưỡi em như sắp tan chảy ra luôn rồi♡ Chụt, chu♡」[p]
+Rinko「Khoang miệng của anh Shun, đang nóng rực lên rồi... Liệu con cu của anh có đang nóng rực lên giống vậy không nhỉ?」[p]
+Rinko「Phù...♡ Phù...♡ Anh hưng phấn rồi sao? Anh cứ trút hết mọi dục vọng lên em đi nhé♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_Dkiss+=1"  name="H_Dkiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -519,9 +519,9 @@
 *3P_2_Dkiss_rinko3
 
 [tb_start_text mode=1 ]
-凛子「じゅるるる、にちゅ、ちゅぷ♡　んん、[舜]くん、顔が真剣になってるよ♡　ふぅ、んんっ♡」[p]
-凛子「男の子って顔…その顔、すっごく好きなの♡　あぁ…お腹の奥きゅ～んって疼いちゃった♡」[p]
-凛子「ちゅ、ちゅぷちゅぷ、じゅるる♡　体の芯まで女なんだってわからせてくれるんだもん♡」」[p]
+Rinko「Rột rột, chụt, chụt♡ Ưm, anh Shun, vẻ mặt anh trở nên nghiêm túc rồi kìa♡ Phù, ưm...♡」[p]
+Rinko「Khuôn mặt của một người đàn ông... Khuôn mặt đó, em thích lắm cơ♡ A... sâu trong bụng em nhói lên thèm khát rồi này♡」[p]
+Rinko「Chu, chụt chụt, rột rột♡ Vì anh đã cho em hiểu được rằng đến tận sâu trong tâm can, em vẫn là một người phụ nữ mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_Dkiss=0"  name="H_Dkiss"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -533,9 +533,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「んっふぅぅっ♡　ちゅぷ、じゅぷじゅるるるるっ♡　あぁ、濡れてきちゃったぁ♡」[p]
-凛子「今っ…足の間…じゅわって溢れてるの…♡　キスだけで気持ちよくなっちゃったから♡」[p]
-[舜]「俺もチンポ疼いちゃったよ。今すぐ奥まで挿れて腰振りたいくらいだ…」[p]
+Rinko「Ưm phu...♡ Chụt, chụt rột rột rột...♡ A, em ướt đẫm mất rồi...♡」[p]
+Rinko「Bây giờ... giữa hai chân em... nước đang trào ra ướt nhẹp rồi này...♡ Chỉ hôn thôi mà em đã sướng thế này rồi cơ mà♡」[p]
+[舜]「Con cu của anh cũng nhức nhối rồi đây. Chỉ muốn đút sâu vào trong rồi dập hông ngay lập tức thôi...」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -543,9 +543,9 @@
 *3P_2_supankingu1
 
 [tb_start_text mode=1 ]
-蕾「ひあぁぁっ♡　あっ♡　お尻、叩かれてるとこジンジンしてる♡　赤くなっちゃう♡」[p]
-凛子「蕾ばっかり強く叩いてるんじゃない？　ずるいよ[舜]くん♡　私のことも力いっぱい叩いて♡」[p]
-[舜]「叩かれるのおねだりか…ほんっと、スケベな親子だなぁ…！」[p]
+Tsubomi「Hi a...♡ A...♡ Chỗ mông bị đánh đang tê rần lên rồi này♡ Nó đỏ ửng lên mất thôi♡」[p]
+Rinko「Anh chỉ đánh mạnh tay với mỗi Tsubomi thôi sao? Anh ăn gian quá đấy anh Shun♡ Hãy đánh em thật mạnh vào đi anh♡」[p]
+[舜]「Nài nỉ đòi bị đánh đòn cơ đấy... Đúng là cặp mẹ con dâm đãng mà...!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supankingu+=1"  name="H_supankingu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -555,9 +555,9 @@
 *3P_2_supankingu2
 
 [tb_start_text mode=1 ]
-[舜]「ほらっ！　手形残るくらいっ、叩いてやるよ…！　ありがとうございますが言えないとな…！」[p]
-凛子「あっ♡　ありがとうございますっ♡　はぁ、あんっ♡　気持ちよくしてもらえて嬉しいの♡」[p]
-蕾「ひっぐぅぅっ♡　ありがとうっ、ございますっ♡　おまんこウズウズしてきちゃったぁっ♡」[p]
+[舜]「Này! Anh sẽ đánh đến mức in hằn cả dấu tay lên luôn...! Để xem hai người có nói được câu cảm ơn không nhé...!」[p]
+Rinko「A...♡ Cảm ơn anh ạ...♡ Haa, a...♡ Được anh làm cho sung sướng thế này em vui lắm cơ♡」[p]
+Tsubomi「Hức ư ư...♡ Cảm ơn, anh ạ...♡ Cô bé của em lại rạo rực lên mất rồi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supankingu+=1"  name="H_supankingu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -567,9 +567,9 @@
 *3P_2_supankingu3
 
 [tb_start_text mode=1 ]
-[舜]「あー、いい音。でもやっぱ音もちょっと違う気がするなぁ…！　どっちの音のほうがいいかな」[p]
-蕾「私、でしょっ♡　パチンっておっきい音出てるもの♡　はぁ、んっ♡　私のこと選んで♡」[p]
-凛子「私だって…あっ♡　やらしい音出てるよね、[舜]くん♡　エッチな声だって出ちゃうよ♡」[p]
+[舜]「A, âm thanh nghe đã thật. Nhưng mà hình như tiếng kêu có chút khác biệt thì phải...! Không biết âm thanh của ai nghe hay hơn nhỉ?」[p]
+Tsubomi「Là của em, đúng không...♡ Nghe tiếng \"Bốp\" rõ to cơ mà♡ Haa, ưm...♡ Anh hãy chọn em đi♡」[p]
+Rinko「Của em cũng... A...♡ Phát ra âm thanh dâm đãng lắm đúng không, anh Shun♡ Đến cả giọng nói dâm đãng cũng phát ra luôn rồi này♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supankingu=0"  name="H_supankingu"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -581,9 +581,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あぁぁんっ♡　痛いはずなのに…気持ちいい振動がお腹奥まで届いてるのっ♡」[p]
-凛子「はぁっ♡　はぁっ♡　あんっ…私もすっごく気持ちよくなってるの…♡」[p]
-[舜]「２人とも、おまんこ濡らしすぎだろ。お尻叩かれただけで興奮するなんて変態だな…！」[p]
+Tsubomi「A a...♡ Đáng lẽ phải đau chứ... thế mà độ rung sướng rơn này lại truyền đến tận sâu trong bụng em cơ...♡」[p]
+Rinko「Haa...♡ Haa...♡ A... Em cũng đang sướng rơn người lên rồi này...♡」[p]
+[舜]「Cả hai người, làm cô bé ướt đẫm quá rồi đấy. Chỉ bị đánh đòn vào mông thôi mà đã hưng phấn thế này, đúng là biến thái mà...!」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -591,9 +591,9 @@
 *3P_2_sumata1
 
 [tb_start_text mode=1 ]
-蕾「ひぅ♡　はぁ♡　あぁ♡　[舜]、すっごいおっきくなってるじゃない♡　あぁ…擦れてる♡」[p]
-凛子「んっ♡　ふふ、２人の割れ目トンネルはどう？　トロトロの感触、楽しんでもらえてるかな？」[p]
-[舜]「あぁ、最高だよ。んっ…割れ目に擦りつけてるだけなのに…根元から先っぽまで気持ちいいよ」[p]
+Tsubomi「Hi ư...♡ Haa...♡ A...♡ Shun, của anh bự chà bá luôn rồi kìa♡ A... đang cọ xát vào rồi này♡」[p]
+Rinko「Ưm...♡ Khc, đường hầm khe thịt của hai mẹ con em thế nào? Anh có thích cảm giác ướt át nhầy nhụa này không?」[p]
+[舜]「A, tuyệt vời lắm. Ưm... chỉ cọ xát vào khe thịt thôi mà... từ gốc đến ngọn đều sướng tê người luôn.」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low4==1"  ]
@@ -603,9 +603,9 @@
 *3P_2_sumata2
 
 [tb_start_text mode=1 ]
-凛子「あっ♡　はぁ、あんっ♡　[舜]くん、先っぽもパンパンに膨れちゃってるんだね…おっきい♡」[p]
-蕾「あっ♡　あぁぁっ♡　クリ押しつぶされてるっ♡　くぅぅっ♡　こんなの、イッちゃう♡」[p]
-凛子「んん♡　私はまだ大丈夫だから…私のほうにたっぷり擦りつけてもらっていいからね♡」[p]
+Rinko「A...♡ Haa, a...♡ Anh Shun, phần đầu cũng sưng vù lên rồi này... bự quá đi♡」[p]
+Tsubomi「A...♡ A a...♡ Hột le bị ép chặt quá...♡ Khư ư...♡ Thế này thì, em ra mất thôi♡」[p]
+Rinko「Ưm...♡ Em vẫn chưa sao đâu... Anh cứ cọ xát thật nhiều vào bên em cũng được nhé♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata+=1"  name="H_sumata"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -615,9 +615,9 @@
 *3P_2_sumata3
 
 [tb_start_text mode=1 ]
-凛子「あぁ♡　[舜]くんのおちんちん、ビクビク脈打ちっぱなしだね♡　もう限界になってる？」[p]
-蕾「はぁ♡　あっ♡　動いてるの、おまんこに直接伝わってきちゃってる♡　すごいよぉっ♡」[p]
-[舜]「くっ…んんっ♡　今ここで出したら、２人とも俺の精子まみれになりそうだなぁ…！」[p]
+Rinko「A...♡ Con cu của anh Shun, cứ giật giật đập thình thịch liên hồi kìa♡ Anh đến giới hạn rồi sao?」[p]
+Tsubomi「Haa...♡ A...♡ Cảm giác cọ xát, truyền trực tiếp đến cô bé luôn rồi này♡ Sướng quá đi mất...♡」[p]
+[舜]「Hừ... Ưm...♡ Giờ mà bắn ở đây, chắc cả hai người sẽ ngập ngụa trong tinh trùng của anh mất thôi...!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata=0"  name="H_sumata"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -629,9 +629,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あ゛あ゛あ゛っ♡　先っぽ、引っかかって擦れてっ…♡　だめだめ♡　気持ちいいのっ♡」[p]
-[舜]「くっ…腰、ガクガク動かすからっ…余計に擦れて…あぁっ！　ヤバ、マジで出そうだ…」[p]
-凛子「あぁぁっ♡　３人で一緒に気持ちよくなっちゃってる♡　はぁっ♡　あんっ…♡　幸せだね♡」[p]
+Tsubomi「A a a...♡ Phần đầu, đang vướng vào cọ xát kìa...♡ Không được đâu...♡ Sướng quá đi mất...♡」[p]
+[舜]「Hừ... Hông cứ giật giật thế này... càng cọ xát mạnh hơn... A! Chết tiệt, anh sắp bắn thật rồi...」[p]
+Rinko「A a...♡ Cả ba người chúng ta cùng sướng rơn lên rồi này♡ Haa...♡ A...♡ Hạnh phúc quá đi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -639,9 +639,9 @@
 *3P_2_teman1
 
 [tb_start_text mode=1 ]
-蕾「おおおおっ♡　しゅごっ♡　潮吹き、止まんないっ♡　おっおぉ♡　弱いトコばっかりっ♡」[p]
-凛子「はぁ、あっ♡　[舜]くんっ…どうしてそんなに気持ちいいところばっかりわかっちゃうの♡」[p]
-[舜]「すっごい潮吹いてる…どこ触れば気持ちいいかなんて、もうとっくに覚えてるんだよ」[p]
+Tsubomi「Ô ô ô...♡ Sướng quá...♡ Phun nước, không dừng lại được...♡ Ô ô...♡ Toàn nhắm vào điểm yếu thôi...♡」[p]
+Rinko「Haa, a...♡ Anh Shun... sao anh lại rành mấy chỗ sướng rơn thế này vậy chứ♡」[p]
+[舜]「Phun nước lênh láng luôn rồi này... Chạm vào đâu để sướng, anh đã ghi nhớ từ lâu rồi.」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low5==1"  ]
@@ -651,9 +651,9 @@
 *3P_2_teman2
 
 [tb_start_text mode=1 ]
-[舜]「もっと奥まで欲しいの？　じゃ、腰ヘコさせて、スケベにおねだり聞かせてよ」[p]
-凛子「じゃあ、私からっ♡　あぁっ♡　もっと[舜]くんの指でズポズポってしてほしいのっ♡」[p]
-蕾「私もっ…♡　ママより激しくおまんこぐちゃぐちゃにして♡　とろけるほどほぐしてよぉっ♡」[p]
+[舜]「Muốn đút vào sâu hơn nữa sao? Vậy thì, hãy cong hông lên, rồi nài nỉ anh bằng giọng dâm đãng đi nào.」[p]
+Rinko「Vậy thì, em trước nhé...♡ A...♡ Em muốn được ngón tay của anh Shun thụt ra thụt vào thật mạnh cơ...♡」[p]
+Tsubomi「Cả em nữa...♡ Hãy làm cô bé của em nát bét dữ dội hơn cả mẹ đi anh♡ Hãy nới lỏng đến mức tan chảy ra luôn đi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman+=1"  name="H_teman"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -663,9 +663,9 @@
 *3P_2_teman3
 
 [tb_start_text mode=1 ]
-蕾「んぉぉっ♡　奥トントン気持ちいいっ♡　それっ、それ…♡　イグイグ、イッちゃうぅ♡」[p]
-凛子「あぁぁぁっ♡　顔、だらしなくなっちゃうのっ♡　や、あんまり見ないでぇっ♡　おおおっ♡」[p]
-[舜]「ヤバ、全然潮吹き止まんないじゃん…敏感なのも潮吹きやすいのもそっくりだな…！」[p]
+Tsubomi「Ưm ô ô...♡ Thọc sâu vào sướng quá đi...♡ Đúng rồi, chỗ đó...♡ Sắp ra, em ra mất thôi...♡」[p]
+Rinko「A a a...♡ Khuôn mặt em, trở nên dâm đãng mất rồi...♡ Không, đừng nhìn em chằm chằm thế mà...♡ Ô ô ô...♡」[p]
+[舜]「Chết tiệt, nước cứ phun ra không ngừng kìa... Độ nhạy cảm với mức độ dễ phun nước của hai người giống hệt nhau luôn...!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman=0"  name="H_teman"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -677,9 +677,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「おおおおっ♡　んぉ♡　ピュルピュルって…潮…いっぱい出ちゃってる♡　気持ちいい♡」[p]
-蕾「あぁ♡　もう完全に奥までパックリ開いちゃったぁ♡　おちんちん挿れる準備できちゃったの♡」[p]
-凛子「私の中も…もう準備万端なのっ♡　はぁ♡　ああ♡　トロトロホカホカおまんこ、味わって♡」[p]
+Rinko「Ô ô ô...♡ Ưm...♡ Dâm thủy... phun ra thành tia... lênh láng luôn rồi này♡ Sướng quá đi mất♡」[p]
+Tsubomi「A...♡ Giờ thì bên trong mở toang ra hết cỡ rồi này♡ Đã chuẩn bị sẵn sàng để đút cu vào rồi đó anh♡」[p]
+Rinko「Bên trong em cũng... đã chuẩn bị tươm tất rồi đây...♡ Haa...♡ A a...♡ Hãy nếm thử cô bé ướt át ấm nóng này đi anh♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -687,9 +687,9 @@
 *3P_2_anaruseme1
 
 [tb_start_text mode=1 ]
-蕾「はーっ♡　はーっ♡　どっちのお尻のほうが好きか決まった？　エッチなほう選んで♡」[p]
-[舜]「蕾のプリプリのお尻も、凛子さんの柔らかくて触り心地最高なお尻もどっちもたまんない」[p]
-凛子「ふふ、選べなくなっちゃった？　欲張りだね♡　じゃあ両方同時に楽しむしかないのかな♡」[p]
+Tsubomi「Haa...♡ Haa...♡ Anh đã quyết định xem thích cái mông nào hơn chưa? Hãy chọn cái nào dâm đãng hơn đi anh♡」[p]
+[舜]「Cái mông căng tròn của Tsubomi, hay cái mông mềm mại sờ sướng tay của Rinko, cả hai đều tuyệt vời không thể tả.」[p]
+Rinko「Khc, anh không chọn được sao? Tham lam quá đi♡ Vậy thì đành phải thưởng thức cả hai cùng lúc thôi nhỉ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruseme+=1"  name="H_anaruseme"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -699,9 +699,9 @@
 *3P_2_anaruseme2
 
 [tb_start_text mode=1 ]
-凛子「んんっ♡　はぁ、あっ♡　焦らなくても…私も蕾もいなくなったりしないから大丈夫だよ♡」[p]
-凛子「んっ♡　激し…♡　むさぼるみたいにお尻の穴開こうとしちゃだめ♡　あっ♡　あぁぁぁっ♡」[p]
-蕾「はぁっ♡　あぁっ♡　開いてきちゃったぁ♡　ヒクヒクして…指、入っちゃいそうなんだけど♡」[p]
+Rinko「Ưm...♡ Haa, a...♡ Không cần vội đâu... Em và Tsubomi sẽ không biến mất đâu, nên không sao đâu anh♡」[p]
+Rinko「Ưm...♡ Mãnh liệt quá...♡ Đừng cố mở toang lỗ đít như muốn ngấu nghiến em thế chứ♡ A...♡ A a a...♡」[p]
+Tsubomi「Haa...♡ A...♡ Mở toang ra mất rồi...♡ Cứ giật giật thế này... ngón tay, sắp đút lọt vào luôn rồi kìa♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruseme+=1"  name="H_anaruseme"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -711,9 +711,9 @@
 *3P_2_anaruseme3
 
 [tb_start_text mode=1 ]
-蕾「あっ♡　あぁぁぁっ♡　指、入ってきたぁ♡　んっ、くぅ♡　お尻、開かれちゃってるっ♡」[p]
-凛子「はーっ♡　あぁ♡　ふ、普段誰にも見せてない粘膜まで…開かれて見られちゃってるのっ♡」[p]
-[舜]「２人とも、ピンク色で可愛いアナルしてんなぁ。ヒクヒクして疼いてんだろ」[p]
+Tsubomi「A...♡ A a a...♡ Ngón tay, đút vào rồi...♡ Ưm, khư ư...♡ Lỗ đít, bị banh ra mất rồi...♡」[p]
+Rinko「Haa...♡ A...♡ L-Lớp niêm mạc bình thường chẳng cho ai xem... giờ lại bị banh ra nhìn thấy hết rồi...♡」[p]
+[舜]「Cả hai người, đều có cái hậu môn màu hồng đáng yêu quá nhỉ. Cứ giật giật nhức nhối thèm khát rồi đúng không.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruseme=0"  name="H_anaruseme"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -725,9 +725,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あっ♡　あぁぁぁっ♡　ゆ、指…にゅるにゅるって…出たり入ったりして…すごいっ♡」[p]
-蕾「くぅぅっ♡　はっ♡　はっ♡　息するのだけで…やっとになってるっ♡　お尻犯されてる♡」[p]
-蕾「おっ♡　おおおおっ♡　お尻でイッちゃう…気持ちよくなって癖になっちゃうってばぁ♡」[p]
+Rinko「A...♡ A a a...♡ Ng-Ngón tay... trơn tuột... cứ thụt ra thụt vào... sướng quá đi...♡」[p]
+Tsubomi「Khư ư...♡ Hộc...♡ Hộc...♡ Chỉ thở thôi mà... cũng khó khăn quá...♡ Lỗ đít đang bị làm tình này...♡」[p]
+Tsubomi「Ô...♡ Ô ô ô...♡ Em ra bằng lỗ đít mất... Sướng quá thành nghiện luôn rồi này...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -735,9 +735,9 @@
 *3P_pisuton_yukkuri_tubomi1
 
 [tb_start_text mode=1 ]
-蕾「あっ♡　はぁ、あんっ♡　深いところまできてる…んんっ♡　押し上げられちゃってる♡」[p]
-[舜]「あー、すっごい締まるっ…♡　めちゃくちゃエロい顔だなぁ、ずっと待ってたんだもんな？」[p]
-凛子「２人の気持ちよさそうな顔見せられちゃったら、嫉妬しちゃう…私も混ぜてもらうからね」[p]
+Tsubomi「A...♡ Haa, a...♡ Vào đến tận sâu bên trong rồi... Ưm...♡ Bị đẩy ngược lên trên luôn rồi...♡」[p]
+[舜]「A, siết chặt quá đi...♡ Khuôn mặt dâm đãng quá đấy, em đã mong chờ khoảnh khắc này từ lâu rồi đúng không?」[p]
+Rinko「Nhìn khuôn mặt sướng rơn của hai người, làm em ghen tị quá đi... Cho em tham gia cùng với nhé.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri_tubo+=1"  name="H_supiritasu_pisuton_yukkuri_tubo"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -747,9 +747,9 @@
 *3P_pisuton_yukkuri_tubomi2
 
 [tb_start_text mode=1 ]
-凛子「ふーっ♡　ふーっ♡　[舜]くん、蕾としてる時はこんなに無邪気な顔になるんだね♡」[p]
-[舜]「蕾は意地悪されると興奮するんだよ…今度は凛子さんにもいっぱい意地悪してあげようかな」[p]
-蕾「あ゛っ♡　や、だぁっ♡　だめっ♡　意地悪して可愛がってくれるのは私だけなんだからっ♡」[p]
+Rinko「Phù...♡ Phù...♡ Anh Shun, khi làm tình với Tsubomi khuôn mặt anh lại ngây thơ đến thế này sao♡」[p]
+[舜]「Tsubomi hễ bị bắt nạt là lại hưng phấn mà... Lần này chắc anh cũng phải bắt nạt Rinko thật nhiều mới được.」[p]
+Tsubomi「A...♡ Kh-Không chịu đâu...♡ Không được...♡ Chỉ có em mới được anh bắt nạt và cưng chiều thôi cơ mà...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri_tubo+=1"  name="H_supiritasu_pisuton_yukkuri_tubo"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -759,9 +759,9 @@
 *3P_pisuton_yukkuri_tubomi3
 
 [tb_start_text mode=1 ]
-蕾「おっ♡　おおおっ♡　奥っ♡　もっといっぱい突いて♡　[舜]のおちんちんほしいのぉ♡」[p]
-凛子「エッチになるまで、[舜]くんが教え込んだの？　私が知らないところでいっぱいしたんだね」[p]
-[舜]「凛子さん、妬いてるんだ？　でも同じくらい凛子さんともエロいセックスしてるだろ」[p]
+Tsubomi「Ô...♡ Ô ô ô...♡ Bên trong...♡ Hãy đâm thật nhiều vào đi anh♡ Em thèm con cu của Shun lắm rồi...♡」[p]
+Rinko「Anh Shun đã dạy dỗ con bé dâm đãng đến mức này sao? Chắc hai người đã lén lút làm tình rất nhiều sau lưng em nhỉ.」[p]
+[舜]「Rinko đang ghen đấy à? Nhưng mà anh cũng làm tình dâm đãng với Rinko nhiều không kém cơ mà.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri_tubo=0"  name="H_supiritasu_pisuton_yukkuri_tubo"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -773,9 +773,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひぐぅぅっ♡　す、すっご…呼吸、できないっ♡　奥まで圧迫されちゃってりゅ♡　おおおっ♡」[p]
-凛子「はぁ♡　はぁ♡　あぁ、あんまり気持ちよさそうな声出すから…私まで興奮してきちゃった♡」[p]
-蕾「んぉぉぉっ♡　奥っ、壊れちゃうぅ♡　だめだめだめっ…♡　おかしくなっちゃうのっ…♡」　[p]
+Tsubomi「Hức ư ư...♡ T-Tuyệt quá... Không thở, nổi nữa rồi...♡ Tận sâu bên trong bị chèn ép chặt cứng luôn...♡ Ô ô ô...♡」[p]
+Rinko「Haa...♡ Haa...♡ A, nghe tiếng rên rỉ sướng rơn của con bé... làm em cũng hưng phấn lây rồi này♡」[p]
+Tsubomi「Ưm ô ô...♡ Bên trong, hỏng bét mất thôi...♡ Không được không được không được...♡ Em phát điên lên mất...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]
@@ -783,9 +783,9 @@
 *3P_pisuton_hagesiku_tubomi1
 
 [tb_start_text mode=1 ]
-蕾「お゛っ♡　お゛っ♡　お゛っ♡　激しっ…汚い声、出ちゃうっ♡　今変な顔になってるよぉ♡」[p]
-凛子「大丈夫、隠さないで。余裕ないぐちゃぐちゃになった顔が可愛いんでしょ？　ね、[舜]くん？」[p]
-[舜]「そうそう…もっといじめてエロい顔にしてやろうって興奮するんだよ…！」[p]
+Tsubomi「Ô...♡ Ô...♡ Ô...♡ Mãnh liệt quá... Phát ra mấy âm thanh khó nghe mất rồi...♡ Chắc mặt em giờ trông dị hợm lắm...♡」[p]
+Rinko「Không sao đâu, đừng che giấu. Khuôn mặt dâm đãng khi không còn giữ được bình tĩnh mới là đáng yêu nhất đúng không? Nhỉ, anh Shun?」[p]
+[舜]「Đúng vậy... càng nhìn khuôn mặt dâm đãng đó anh lại càng hưng phấn muốn bắt nạt thêm đấy...!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku_tubo+=1"  name="H_supiritasu_pisuton_hagesiku_tubo"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -795,9 +795,9 @@
 *3P_pisuton_hagesiku_tubomi2
 
 [tb_start_text mode=1 ]
-蕾「ひあぁっ♡　動けないよぉっ♡　刺激受け流せないっ♡　気持ちいいのダイレクトにきちゃう♡」[p]
-凛子「はー♡　はー♡　[舜]くんの大きいおちんちん、出し入れしてるとこも全部見えちゃってる♡」[p]
-蕾「やっ…そんなこと言われたらイッちゃうぅっ♡　おまんこキュンキュンしてるっ♡」[p]
+Tsubomi「Hi a...♡ Không cử động nổi nữa rồi...♡ Không né được kích thích này...♡ Cảm giác sướng rơn truyền trực tiếp đến luôn này...♡」[p]
+Rinko「Haa...♡ Haa...♡ Con cu to bự của anh Shun, cứ thụt ra thụt vào em đều nhìn thấy hết rồi này♡」[p]
+Tsubomi「A... Mẹ nói thế làm em ra mất thôi...♡ Cô bé của em đang giật giật nhói lên rồi này...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku_tubo+=1"  name="H_supiritasu_pisuton_hagesiku_tubo"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -807,9 +807,9 @@
 *3P_pisuton_hagesiku_tubomi3
 
 [tb_start_text mode=1 ]
-[舜]「蕾。セックスしてるとこ、ちゃんと凛子さんに見てもらわないと。見てって言うんだよ！」[p]
-蕾「ひぅぅ♡　やっ、恥ずかし…み、見てっ♡　[舜]とセックスしてるとこ…全部見てほしいのっ♡」[p]
-凛子「見てるよ…気持ちよさそうで、さっきから私もずーっとムズムズしてるんだから…♡」[p]
+[舜]「Tsubomi. Cảnh làm tình này, phải để Rinko nhìn thấy rõ ràng chứ. Hãy bảo Rinko nhìn đi nào!」[p]
+Tsubomi「Hi ư ư...♡ A, xấu hổ quá... H-Hãy nhìn đi...♡ Cảnh con đang làm tình với Shun... mẹ hãy nhìn cho thật kỹ vào nhé...♡」[p]
+Rinko「Mẹ đang nhìn đây... Trông sướng rơn thế kia, làm mẹ nãy giờ cũng rạo rực hết cả người rồi đây này...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku_tubo=0"  name="H_supiritasu_pisuton_hagesiku_tubo"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -821,9 +821,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「お゛っ♡　お゛ほぉぉっ♡　ぎもぢいっ♡　わかんないっ、わかんなくなってりゅっ♡」[p]
-[舜]「くっ…！　体のけ反りすぎだろ…！　あぁぁっ、そんな締め付けんなっ…くぅぅ」[p]
-蕾「そんなこと言っても無理っ…気持ちいいの止まんないのっ♡　おっ♡　おっ♡　おおおおっ♡」[p]
+Tsubomi「Ô...♡ Ô hô ô...♡ Sướng quá đi...♡ Em không biết, không biết gì nữa rồi...♡」[p]
+[舜]「Hừ...! Em uốn cong người quá rồi đấy...! A a, đừng siết chặt thế chứ... Khư ư...」[p]
+Tsubomi「Anh nói thế cũng vô ích thôi... Cảm giác sướng rơn không dừng lại được này...♡ Ô...♡ Ô...♡ Ô ô ô...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]

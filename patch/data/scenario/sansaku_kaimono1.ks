@@ -22,7 +22,7 @@
 [tb_show_message_window  ]
 [call  storage="system.ks"  target="*fade_out"  ]
 [tb_start_text mode=1 ]
-[舜]「あぁ、涼しいな。さて、ちょっとぶらぶらしてみるか」[p]
+[舜]「Chà, mát mẻ thật. Giờ thì đi dạo loanh quanh một chút xem sao.」[p]
 [_tb_end_text]
 
 *kaden
@@ -67,7 +67,7 @@
 
 [call  storage="system.ks"  target="*fade_out_effect"  ]
 [tb_start_text mode=4 ]
-[舜]（何を買おうかな）
+[舜]（Nên mua gì đây nhỉ.）
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -145,7 +145,7 @@
 
 [mask_off  time="600"  effect="slideOutRight"  ]
 [tb_start_text mode=4 ]
-[舜]（何を買おうかな）
+[舜]（Nên mua gì đây nhỉ.）
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -239,7 +239,7 @@
 
 [mask_off  time="600"  effect="slideOutRight"  ]
 [tb_start_text mode=4 ]
-[舜]（何を買おうかな）
+[舜]（Nên mua gì đây nhỉ.）
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -350,7 +350,7 @@
 
 [mask_off  time="600"  effect="slideOutRight"  ]
 [tb_start_text mode=4 ]
-[舜]（何を買おうかな）
+[舜]（Nên mua gì đây nhỉ.）
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -436,7 +436,7 @@
 
 [mask_off  time="600"  effect="slideOutRight"  ]
 [tb_start_text mode=4 ]
-[舜]（何を買おうかな）
+[舜]（Nên mua gì đây nhỉ.）
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -477,7 +477,7 @@
 
 [bg  time="500"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
-[舜]「よし、こんなもんかな」[p]
+[舜]「Được rồi, chắc thế này là đủ.」[p]
 [_tb_end_text]
 
 [jump  storage="sansaku.ks"  target="*end"  

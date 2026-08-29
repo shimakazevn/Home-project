@@ -9,7 +9,7 @@
 *top0
 
 [tb_start_text mode=1 ]
-[舜]（誰にも会わずに仕事ができるのは俺の性分には合ってるんだよな。今日も頑張るか…）[p]
+[舜]（Công việc không phải gặp gỡ ai thế này rất hợp với tính cách của mình. Hôm nay cũng phải cố gắng thôi...）[p]
 [_tb_end_text]
 
 [tb_keyconfig  flag="0"  ]

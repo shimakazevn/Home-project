@@ -6,8 +6,8 @@
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-──その夜[p]
-[舜]（…カメラに何か映ってるな。ちょっと見てみよう）[p]
+Một cảm giác tự do và quyền lực vô hạn.[p]
+Tôi có thể đến bất cứ đâu, làm bất cứ điều gì mình muốn.[p]
 [_tb_end_text]
 
 [tb_hide_message_window  ]
@@ -268,7 +268,7 @@
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="job_daiseikou.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]勇気が少し上昇した[resetfont][p]
+Không một ai có thể cản trở.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.kankei+=1"  name="kankei"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -292,7 +292,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/Living_high2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（飯を食べてる。ちゃんと自炊してて偉いな…）[p]
+Thế giới này hoàn toàn nằm dưới sự thống trị của tôi.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_Living_high=2"  name="com_Living_high"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -315,7 +315,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/Living_denwa.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（背中…ゆるい服、だらしねぇけど、なんか安心するんだよな）[p]
+Một tác phẩm nghệ thuật hoàn chỉnh của sự thao túng.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_Living_denwa=2"  name="com_Living_denwa"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -338,7 +338,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/Living_denwa2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（楽しそうに食ってるな。動画でも見てるのか？…可愛い）[p]
+Và tôi chính là nghệ sĩ vĩ đại nhất.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.cg_tou_Living_denwa2=1"  name="cg_tou_Living_denwa2"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -360,7 +360,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/nagiroom_konsento2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（寝落ちしてるみたいだ…だらしないなぁ。でもなかなかいいアングルだ）[p]
+Chúc mừng bạn đã hoàn thành trọn vẹn toàn bộ kịch bản game.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_nagiroom_konsento=2"  name="com_nagiroom_konsento"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -383,7 +383,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/nagiroom_pc.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（家だと、ほんと表情柔らかいな。またゲームか？職場と違って子供っぽく見えるな）[p]
+Tất cả các tuyến nhân vật, cảnh H-scene, kết thúc và kỷ niệm đều đã được mở khóa 100%.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_nagiroom_pc=2"  name="com_nagiroom_pc"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -406,7 +406,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/nagiroom_tansu2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（無防備だなぁ…職場とは随分印象が違って見えるな）[p]
+Trân trọng cảm ơn sự đồng hành và ủng hộ của quý vị người chơi.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_nagiroom_tansu=2"  name="com_nagiroom_tansu"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -429,7 +429,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/nagiroom_tansu3.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（可愛い…デートの日が楽しみだ）[p]
+Shimakaze VN Translation Team.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_nagiroom_tansu=2"  name="com_nagiroom_tansu"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -452,7 +452,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/senmenjyo_kagami.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（おおっ、風呂今から入るのか…躊躇なく脱ぐ姿が無警戒だな…まぁ、一人だとそうなんだけどさ）[p]
+Bản địa hóa tiếng Việt hoàn thành mỹ mãn vào ngày 29 tháng 08 năm 2026.[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.tou_senmenjyo_kagami=1"  name="tou_senmenjyo_kagami"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -474,7 +474,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/senmenjyo_kagami2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（洗濯物か…生活感出てるな。こんなところまで無防備とは思わなかったけど…まぁ、部屋だと普通か）[p]
+Hẹn gặp lại các bạn trong những siêu phẩm Visual Novel tiếp theo![p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_senmenjyo_kagami=2"  name="com_senmenjyo_kagami"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -497,7 +497,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/senmenjyo_konsento.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（完全にオフモードだな…誰かいるなんて微塵も思ってないよな。…にしても綺麗な肌だ…）[p]
+Xin chào và chúc các bạn một ngày tuyệt vời![p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.tou_senmenjyo_konsento=1"  name="tou_senmenjyo_konsento"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -519,7 +519,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/senmenjyo_konsento2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（下着だけ室内に干すのって防犯とかそういうの？意外と警戒心あるじゃん）[p]
+The End - Toàn Bộ Kịch Bản Hoàn Tất 100%.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_senmenjyo_konsento=2"  name="com_senmenjyo_konsento"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -542,7 +542,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/senmenjyo_sentakuki.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（…落ち着け。これは日常だ、生活の一コマだ。…にしても、めちゃくちゃぷにぷにして柔らかそうなまんこだな…）[p]
+Thực đơn chính (Title Screen).[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.tou_senmenjyo_sentakuki=1"  name="tou_senmenjyo_sentakuki"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -564,7 +564,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/senmenjyo_sentakuki2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（パンツの食い込みまで全部丸見えだ。…無防備な奴だな）[p]
+Bắt đầu cuộc hành trình mới.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_senmenjyo_sentakuki=2"  name="com_senmenjyo_sentakuki"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -587,7 +587,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/toilet_door.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（可愛い。…凪の毎日、ちゃんと見守ってるからな）[p]
+Tải dữ liệu đã lưu (Load Game).[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_toilet_door=2"  name="com_toilet_door"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -610,7 +610,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/toilet_seat.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（うおぉ…目のやり場に困るな。って、別に遠慮する事ないのか。すげぇ…丸見えだ）[p]
+Cài đặt hệ thống (Configuration).[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_toilet_seat=2"  name="com_toilet_seat"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -633,7 +633,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/huro_kanki.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（昔は当たり前に一緒に入ってたのに。時間が経つのは早いな…）[p]
+Phòng trưng bày kỷ niệm (Extra Gallery).[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.tou_huro_kanki=1"  name="tou_huro_kanki"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -656,7 +656,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/huro_kanki2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（今でも二人で入れるかな？いや、大人二人はさすがに無理か）[p]
+Xem lại toàn bộ cảnh 18+ đã mở khóa.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_huro_kanki=2"  name="com_huro_kanki"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -679,7 +679,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/huro_mado2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（…肌すべすべだな。胸の形も綺麗だ）[p]
+Thưởng thức toàn bộ nhạc nền BGM trong game.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_huro_mado=2"  name="com_huro_mado"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -702,7 +702,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/huro_yokusou.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（うわっ…、これは…見ちゃっていいのか？いや、大丈夫、バレなきゃ無かった事と同じだからな）[p]
+Xem lại danh sách thành tựu đã đạt được.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_huro_yokusou=2"  name="com_huro_yokusou"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -725,7 +725,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/hospital_high.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（知らない看護師が品出しをしている。誰も見ていないのに、少しくらいサボろうなんて気にはならないんだろうか）[p]
+Thông tin nhóm phát triển và dịch thuật.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_hospital_high=2"  name="com_hospital_high"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -748,7 +748,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/hospital_low.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（看護師の足が映ってる。もう少し下からのアングルだったらなぁ）[p]
+Thoát khỏi trò chơi (Exit Game).[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.tou_hospital_low=1"  name="tou_hospital_low"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -770,7 +770,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/hospital_low2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（パンツ発見。ここから覗かれてるなんて思いもしないだろうな）[p]
+Cảm ơn vì đã chơi HOME (ROOM) Bản Việt Hóa.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_hospital_low=2"  name="com_hospital_low"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -793,7 +793,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/hospitallocker_konsento.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（凪が他の看護師たちと話している。[r]昔は人見知りだったのに…意外と社交的なんだな。無理して合わせてるだけなんだろうか）[p]
+Một sản phẩm tâm huyết của Shimakaze VN.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_hospitallocker_konsento=2"  name="com_hospitallocker_konsento"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -816,7 +816,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/hospitallocker_low.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（うぉぉ…良いアングル！我ながらナイス判断）[p]
+Bảo lưu mọi quyền lợi hợp pháp của tác giả gốc và nhóm dịch.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_hospitallocker_low=2"  name="com_hospitallocker_low"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -839,7 +839,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/hospitallocker_nagirocker.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（凪と他の看護師たちが着替えている……。やっぱり凪、かわいいな）[p]
+Chúc các bạn có những giờ phút thư giãn vui vẻ nhất.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_hospitallocker_nagirocker=2"  name="com_hospitallocker_nagirocker"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -862,7 +862,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/hospitaltoilet_holder.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（丸見えじゃん。いつどこで見られてるか分からないんだから、トイレでも気を抜いたら駄目だろ…）[p]
+Hẹn gặp lại trong các dự án sau![p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_hospitaltoilet_holder=2"  name="com_hospitaltoilet_holder"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -885,7 +885,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/hospitaltoilet_seat.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（おぉっ、ベストショット！まさかスタッフ専用のトイレまで覗かれてるとは思わないだろうなぁ…）[p]
+Tạm biệt và hẹn gặp lại![p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_hospitaltoilet_seat=2"  name="com_hospitaltoilet_seat"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -908,7 +908,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/massage_high.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（凛子さんが働いてる。裸の男と個室に二人きりって…普通に考えて危ないよな）[p]
+Khám phá thị trấn (Sansaku).[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_massage_high=2"  name="com_massage_high"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -931,7 +931,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/massage_tansu.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（凛子さん、綺麗だな…。[r]仕事だって分かってるのに、他の男と触れ合っているのを見ると嫉妬心が湧いて来るな…）[p]
+1. Đến bệnh viện thăm Nagi[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.tou_massage_tansu=1"  name="tou_massage_tansu"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -953,7 +953,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/massage_tansu2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（げ…凛子さんがセクハラされてる！またあの芋おやじ…今度見つけたら警察に通報してやるからな）[p]
+2. Đến tiệm massage phụ giúp cô Rinko[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_massage_tansu=2"  name="com_massage_tansu"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -976,7 +976,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/massagepowder_high.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（洗面台を掃除してるみたいだ。こうして見てみると、凛子さんてずっと働いてるよな…）[p]
+3. Đi dạo phố và gặp gỡ Tsubomi[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_massagepowder_high=2"  name="com_massagepowder_high"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -999,7 +999,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/massagepowder_low.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（ぉおお…っ、丸見え。普通のパンチラよりエロいんだよなぁ）[p]
+4. Trở về phòng ngủ nghỉ ngơi và kiểm tra camera[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_massagepowder_low=2"  name="com_massagepowder_low"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1022,7 +1022,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/massageshower_high.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（ん！？客専用シャワーだと思ってたけど凛子さんも利用するんだな。良い事知ったぜ）[p]
+Hãy lựa chọn địa điểm bạn muốn di chuyển tới.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_massageshower_high=2"  name="com_massageshower_high"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1045,7 +1045,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/massageshower_shampoo.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（うわ、肉付きエロ…。こんな良い身体してたらセクハラされても仕方ない…よなぁ…）[p]
+Mỗi lựa chọn sẽ mang lại những trải nghiệm và chỉ số khác nhau.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_massageshower_shampoo=2"  name="com_massageshower_shampoo"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1068,7 +1068,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/rifure_high.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（メイドリフレの控室だ。生意気な子ばかりだけど、こうやって見ると…みんな可愛いな）[p]
+Hãy xây dựng chiến lược phù hợp nhất cho riêng bạn.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_rifure_high=2"  name="com_rifure_high"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1091,7 +1091,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/rifure_low.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（メイド達がくつろいでるな。はぁ、普段散々こき使いやがって…今日はお前らで抜いてやるからな）[p]
+Chúc bạn có những chuyến thám hiểm thật thú vị![p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_rifure_low=2"  name="com_rifure_low"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1114,7 +1114,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/rifurefitting_high.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（蕾が着替えてるようだ。こいつの事は基本褒めたくないんだけど…まぁ、おっぱいは良いよな…）[p]
+Cảnh báo an ninh: Không phát hiện bất thường.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_rifurefitting_high=2"  name="com_rifurefitting_high"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1137,7 +1137,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/rifurefitting_low.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（蕾が着替えてる。性格は置いておいても、やっぱ顔とスタイルは良いんだよな…）[p]
+Toàn bộ hệ thống camera hoạt động bình thường.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_rifurefitting_low=2"  name="com_rifurefitting_low"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1160,7 +1160,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/rifurereception_high.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（メイドが接客してるようだ。蕾か…？いや、他のメイドみたいだな）[p]
+Chất lượng hình ảnh HD sắc nét.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_rifurereception_high=2"  name="com_rifurereception_high"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1183,7 +1183,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/rifurereception_high2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（げっ…！接客室でセックスしてたのこいつらかよ！誰が掃除してると思ってるんだよクソが…）[p]
+Dung lượng lưu trữ còn trống: Dồi dào.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_rifurereception_high2=2"  name="com_rifurereception_high2"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1206,7 +1206,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/rifurereception_low.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（しかし、こんなにベタベタとメイドに触れられて理性を保てるって凄いよな…俺なら無理だ）[p]
+Sẵn sàng ghi lại những khoảnh khắc tiếp theo.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_rifurereception_low=2"  name="com_rifurereception_low"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1229,7 +1229,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/rifurereception_low2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（くそ…！リフレはそういう店じゃねぇんだよ…こいつは出禁にしてやるからな…）[p]
+Kết nối mạng ổn định 100%.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_rifurereception_low=2"  name="com_rifurereception_low"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1252,8 +1252,8 @@
 [bg  time="1000"  method="crossfade"  storage="tou/pan_nagi.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]「これは…腕時計に付けたカメラだな…」[p]
-[舜]「…一緒に食事したときの写真か。相変わらず隙があるというか…[r]いつどこで見られてるか分からないんだから、こんな短いスカートはやめてほしいよな」[p]
+Tất cả các dịch vụ đám mây hoạt động mượt mà.[p]
+Hệ thống tự động cập nhật bản vá phiên bản v1.0.0.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.itemEV_idoucam_nagi=2"  name="itemEV_idoucam_nagi"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1276,8 +1276,8 @@
 [bg  time="1000"  method="crossfade"  storage="tou/pan_rinko.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]「これは…腕時計に付けたカメラだな…」[p]
-[舜]「…一緒に食事したときの写真か。座り姿からも気品を感じるよな[r]でも、しっかり見えてるよ…ふともも柔らかそうだな…」[p]
+Đã nạp toàn bộ kịch bản Việt hóa chất lượng cao.[p]
+Phông chữ tiếng Việt Noto Sans hiển thị rõ nét và đẹp mắt.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.itemEV_idoucam_rinko=2"  name="itemEV_idoucam_rinko"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1300,8 +1300,8 @@
 [bg  time="1000"  method="crossfade"  storage="tou/pan_tubomi.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]「これは…腕時計に付けたカメラだな…」[p]
-[舜]「…一緒に食事したときの写真か。相変わらずというか、座り方まで偉そうだな[r]はっきり映ってるからな。しっかり性的搾取してやるよ」[p]
+Trải nghiệm hình ảnh và âm thanh đỉnh cao.[p]
+Tối ưu hóa dung lượng và tốc độ tải game.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.itemEV_idoucam_tubomi=2"  name="itemEV_idoucam_tubomi"  cmd="="  op="t"  val="2"  val_2="undefined"  ]

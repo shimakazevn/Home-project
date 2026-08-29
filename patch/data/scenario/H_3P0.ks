@@ -31,7 +31,7 @@
 
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_3P_kaisi1.mp3" buf="2"]蕾「私とママ、どっちがいいのか…今セックスで決めてよ」[p]
+[playse storage="tubomi/voice_3P_kaisi1.mp3" buf="2"]Tsubomi「Giữa em và mẹ, anh thích ai hơn... Hãy dùng tình dục để quyết định ngay bây giờ đi.」[p]
 [_tb_end_text]
 
 [wait  time="1500"  ]
@@ -210,10 +210,10 @@
 
 [cm  ]
 [tb_start_text mode=1 ]
-凛子「あっ♡　あぁぁぁっ♡　[舜]くんのおちんちん、もう限界なんだね♡　いいの、出して…♡」[p]
-[舜]「中でいいんだ？　ってことは…蕾に弟か妹、できちゃうかもなぁ♡」[p]
-凛子「はぁっ♡　はぁっ♡　それでいいの…♡　中に出して…赤ちゃん作ろ…♡」[p]
-[舜]「じゃあ望み通り出してやる…！　あぁ、出るっ！　　んんんっ！」[p]
+Rinko「A♡ Aaaa♡ Con cu của anh Shun, đến giới hạn rồi nhỉ♡ Không sao đâu, cứ bắn ra đi...♡」[p]
+[舜]「Bắn vào trong luôn sao? Vậy là... Tsubomi có thể sắp có thêm em trai hoặc em gái rồi đấy♡」[p]
+Rinko「Hà♡ Hà♡ Thế cũng được mà...♡ Cứ bắn vào trong đi... sinh em bé cho em nhé...♡」[p]
+[舜]「Vậy anh sẽ bắn ra theo đúng ý em...! A, ra rồi! Ưm!」[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="3"  ]
@@ -226,9 +226,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「お゛お゛お゛っ♡　あっ♡　あぁ♡　ビュルビュル…いっぱい出て…溢れる、溢れちゃう♡」[p]
-蕾「やだ、すごい…わ、私も…こんなふうにいっぱい中に出してほしいのにぃ♡」[p]
-凛子「はひ♡　こ、こんなに出されたら…絶対デキちゃった♡　またママにされちゃったよ♡」[p]
+Rinko「Ooo♡ A♡ A♡ Tinh dịch... bắn ra nhiều quá... trào ra, trào ra ngoài mất thôi♡」[p]
+Tsubomi「Trời ơi, kinh khủng quá... E-Em cũng... muốn được bắn ngập vào trong nhiều như thế này cơ♡」[p]
+Rinko「Hí♡ B-Bị bắn nhiều thế này... chắc chắn là dính bầu rồi♡ Em lại bị anh biến thành một người mẹ mất rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_nakadasi_rinko+=1"  name="Hresult_nakadasi_rinko"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -239,12 +239,12 @@
 
 [cm  ]
 [tb_start_text mode=1 ]
-蕾「あぁぁぁっ♡　もう、出して…中にほしいのっ♡　ねぇ、早くっ…♡」[p]
-[舜]「はぁ、あっ、あぁ、もう出すぞ…！　ほら、凛子さんに中に出してもらうって宣言しろ！」[p]
-蕾「はぁ♡　あぁ♡　ママっ♡　私、[舜]のできたて精子、中に注いでもらうねっ♡」[p]
-凛子「とろけた顔になっちゃってるものね…たっぷり注いでもらいなさい」[p]
-蕾「んっ♡　あぁぁ、わかったぁっ♡　全部、出してもらうねっ♡　おっ♡　おっ、おおおっ♡」[p]
-[舜]「出るっ…！　イクイクイクイクっ！　あっ、あぁぁぁぁっ！」[p]
+Tsubomi「Aaaa♡ Nhanh lên, bắn ra đi... em muốn anh bắn vào trong cơ♡ Này, nhanh lên đi...♡」[p]
+[舜]「Hà, a, a, anh bắn đây...! Này, mau tuyên bố với Rinko là em sắp được bắn vào trong đi!」[p]
+Tsubomi「Hà♡ A♡ Mẹ ơi♡ Con sắp được anh Shun rót đầy tinh dịch nóng hổi vào trong rồi này♡」[p]
+Rinko「Mặt con đê mê nhũn ra hết rồi kìa... Cứ để cậu ấy rót đầy vào đi.」[p]
+Tsubomi「Ưm♡ Aaa, con biết rồi♡ Con sẽ để anh ấy bắn hết vào trong nhé♡ O♡ O, ooo♡」[p]
+[舜]「Ra rồi...! Bắn bắn bắn bắn đây! A, aaaa!」[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="3"  ]
@@ -257,9 +257,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「お゛っ♡　しゅっごぉ♡　な、中っ♡　ビクビクってして…いっぱい出てるっ♡」[p]
-凛子「蕾、出してもらったら[舜]くんにお礼を言わなくっちゃ♡　ほら、顔を見せてあげて」[p]
-蕾「んんっ♡　くぅっ♡　はぁ、はっ♡　だ、出してくれてありがと♡　気持ちよかったの…♡」[p]
+Tsubomi「O♡ Tuyệt quá♡ B-Bên trong♡ Đang giật giật... bắn ra nhiều quá đi♡」[p]
+Rinko「Tsubomi, được bắn vào trong rồi thì phải cảm ơn anh Shun chứ♡ Kìa, ngẩng mặt lên cho cậu ấy xem đi.」[p]
+Tsubomi「Ưm♡ Kư♡ Hà, hà♡ C-Cảm ơn anh vì đã bắn vào trong em nhé♡ Sướng quá đi mất...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_nakadasi_tubomi+=1"  name="Hresult_nakadasi_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]

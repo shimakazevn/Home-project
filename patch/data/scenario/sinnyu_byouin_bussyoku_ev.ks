@@ -4,14 +4,14 @@
 *syuunou1
 
 [tb_start_text mode=1 ]
-[舜]（力任せに引いたら開いてしまった…）[p]
-[舜]（これ…先輩の私物っぽいな）[p]
-[舜]「ごめんなさい先輩、きっといつか返します…たぶん」[p]
+[舜]（Dùng sức kéo thử thì mở được luôn...）[p]
+[舜]（Đây... có vẻ là đồ cá nhân của tiền bối.）[p]
+[舜]「Xin lỗi tiền bối, nhất định có ngày em sẽ trả... chắc vậy.」[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]4000円を拾った[resetfont][p]
+[font color="yellow"]Đã nhặt được 4000 Yên[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.money_updated+=4000"  name="money_updated"  cmd="+="  op="t"  val="4000"  val_2="undefined"  ]
@@ -21,7 +21,7 @@
 *syuunou2
 
 [tb_start_text mode=1 ]
-[舜]（気づいたけど、上向きに押し込めばあっさり開くんだよな。[r]こんな簡単なロッカーで大丈夫なのか？）[p]
+[舜]（Mình nhận ra là chỉ cần đẩy ngược lên trên là tủ mở dễ dàng.[r]Tủ đồ đơn giản thế này có ổn không đấy?）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_syuunou+=1"  name="bussyoku_syuunou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -29,8 +29,8 @@
 *syuunou3
 
 [tb_start_text mode=1 ]
-[舜]（俺みたいなヤツに漁られることもあるわけだし…ロッカーってもうちょい防御力が必要だよな）[p]
-[舜]（……って、俺が言っても説得力ねぇけど）[p]
+[舜]（Cũng có lúc bị những kẻ như mình lục lọi mà... Tủ đồ thì cần phải chắc chắn hơn chút chứ.）[p]
+[舜]（......Cơ mà, mình nói câu này nghe chẳng có sức thuyết phục gì cả.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_syuunou+=1"  name="bussyoku_syuunou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -38,9 +38,9 @@
 *soujiyougu1
 
 [tb_start_text mode=1 ]
-[舜]（おっ、こんなとこに医療品のストックが入ってるのか）[p]
-[舜]（包帯とかガーゼとか…いろいろ入ってるじゃん）[p]
-[舜]（そういえば、看護師が何度か出入りしてるの見たな）[p]
+[舜]（Ồ, chỗ này chứa đồ y tế dự trữ à.）[p]
+[舜]（Băng gạc, bông y tế... đủ thứ luôn này.）[p]
+[舜]（Nhắc mới nhớ, mình từng thấy y tá ra vào đây vài lần.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_soujiyougu+=1"  name="bussyoku_soujiyougu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -48,8 +48,8 @@
 *soujiyougu2
 
 [tb_start_text mode=1 ]
-[舜]（ここ、下からのアングルで撮影できるんじゃないか？）[p]
-[舜]（仕事の間にも楽しみができちゃったなぁ）[p]
+[舜]（Chỗ này, quay từ dưới lên được đúng không?）[p]
+[舜]（Có thêm thú vui trong lúc làm việc rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_soujiyougu+=1"  name="bussyoku_soujiyougu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -57,7 +57,7 @@
 *soujiyougu3
 
 [tb_start_text mode=1 ]
-[舜]（整理整頓よし！……って、俺、完全にバイトに毒されてるな）[p]
+[舜]（Sắp xếp gọn gàng! ......Ủa, mình hoàn toàn bị công việc làm thêm đầu độc rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_soujiyougu+=1"  name="bussyoku_soujiyougu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -65,8 +65,8 @@
 *keijiban1
 
 [tb_start_text mode=1 ]
-[舜]（へー、掃除の仕方が書かれてるのか）[p]
-[舜]（指導してもらった通りだから目新しいことはなさそうだ）[p]
+[舜]（Hê, có ghi cả cách dọn dẹp nữa à.）[p]
+[舜]（Giống hệt những gì được hướng dẫn nên chắc chẳng có gì mới.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_keijiban+=1"  name="bussyoku_keijiban"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -74,9 +74,9 @@
 *keijiban2
 
 [tb_start_text mode=1 ]
-[舜]（シフト表だな。うんうん、希望通りのシフトになってる）[p]
-[舜]（清掃員なんてブラックかと思ったけど、案外ホワイトだよな）[p]
-[舜]（しばらくは、ここで頑張るか）[p]
+[舜]（Bảng phân ca đây rồi. Ừm ừm, đúng ca mình muốn.）[p]
+[舜]（Cứ tưởng làm lao công thì bóc lột lắm, ai ngờ lại nhàn hạ phết.）[p]
+[舜]（Tạm thời cứ cố gắng làm ở đây vậy.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_keijiban+=1"  name="bussyoku_keijiban"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -84,8 +84,8 @@
 *keijiban3
 
 [tb_start_text mode=1 ]
-[舜]（『ルールを守って使おう』か。禁煙、ごみのポイ捨て……）[p]
-[舜]（うーん、さすがにそこまでマナー違反する奴はいなさそうだけど）[p]
+[舜]（"Hãy sử dụng đúng quy định" à. Cấm hút thuốc, cấm xả rác bừa bãi......）[p]
+[舜]（Hừm, chắc không có ai vô ý thức đến mức đó đâu.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_keijiban+=1"  name="bussyoku_keijiban"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -93,8 +93,8 @@
 *rokka1_1
 
 [tb_start_text mode=1 ]
-[舜]（凪、ロッカーの中にいろいろ置いてあるな）[p]
-[舜]（服からほんのり凪の家の匂いがする…安心する匂いだ）[p]
+[舜]（Nagi để đủ thứ trong tủ đồ nhỉ.）[p]
+[舜]（Quần áo thoang thoảng mùi nhà Nagi... Mùi hương mang lại cảm giác yên bình.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_rokka+=1"  name="bussyoku_rokka"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -102,9 +102,9 @@
 *rokka1_2
 
 [tb_start_text mode=1 ]
-[舜]（手帳発見。何か書いてあるかな？）[p]
-[舜]（スケジュール欄のマークは…お母さんのお見舞いの日か）[p]
-[舜]（よく見たら母親中心でスケジュールが組まれている。凪…お母さん想いなんだな）[p]
+[舜]（Phát hiện sổ tay. Không biết có ghi gì không?）[p]
+[舜]（Ký hiệu trong phần lịch trình là... ngày đi thăm mẹ à.）[p]
+[舜]（Nhìn kỹ thì lịch trình toàn xoay quanh mẹ. Nagi... đúng là một người con hiếu thảo.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_rokka+=1"  name="bussyoku_rokka"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -112,8 +112,8 @@
 *rokka1_3
 
 [tb_start_text mode=1 ]
-[舜]（スマホも置いてある。あぁ、さすがにロックかかってて触れないか）[p]
-（見れたとしても、ここだとゆっくり見れないか）[p]
+[舜]（Có cả điện thoại nữa. A, bị khóa rồi nên không xem được.）[p]
+（Mà có xem được thì ở đây cũng không thể thong thả xem được.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_rokka+=1"  name="bussyoku_rokka"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -121,7 +121,7 @@
 *rokka2_1
 
 [tb_start_text mode=1 ]
-[舜]（この病院のロッカーって、上向きに押し込めば結構簡単に開くんだよなぁ。今まで盗難が無かったのが奇跡だな）[p]
+[舜]（Tủ đồ ở bệnh viện này chỉ cần đẩy ngược lên là mở được dễ dàng. Từ trước đến giờ không bị trộm đúng là kỳ tích.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_rokka2+=1"  name="bussyoku_rokka2"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -129,9 +129,9 @@
 *rokka2_2
 
 [tb_start_text mode=1 ]
-[舜]（このロッカーは…凪の先輩のものかな）[p]
-[舜]（このバッグ、ＳＮＳでよく見るけど。有名なブランドのものか？）[p]
-[舜]（凪はこういう派手めなバッグ、全然持ってないよなぁ）[p]
+[舜]（Tủ đồ này là... của tiền bối Nagi chăng.）[p]
+[舜]（Túi xách này, hay thấy trên mạng xã hội lắm. Đồ hiệu nổi tiếng à?）[p]
+[舜]（Nagi chẳng bao giờ dùng mấy cái túi lòe loẹt thế này.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_rokka2+=1"  name="bussyoku_rokka2"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -139,13 +139,13 @@
 *rokka2_3
 
 [tb_start_text mode=1 ]
-[舜]（おっ、現金がそのまま入ってるぞ…）[p]
-[舜]（5000円か…申し訳ないけど拝借するか。臨時収入だな）[p]
+[舜]（Ồ, có cả tiền mặt để hớ hênh thế này...）[p]
+[舜]（5000 Yên à... Xin lỗi nhé nhưng tôi mượn tạm vậy. Có thêm khoản thu nhập bất ngờ.）[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]5000円を拾った[resetfont][p]
+[font color="yellow"]Đã nhặt được 5000 Yên[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.money_updated+=5000"  name="money_updated"  cmd="+="  op="t"  val="5000"  val_2="undefined"  ]
@@ -155,8 +155,8 @@
 *eakon1
 
 [tb_start_text mode=1 ]
-[舜]（あ、エアコンから撮影できそうだな）[p]
-[舜]（このアングルなら、いい感じで部屋の中が撮れるんじゃないか？[p]
+[舜]（A, có vẻ quay được từ chỗ máy lạnh này.）[p]
+[舜]（Góc này thì chắc quay được rõ cảnh trong phòng đấy nhỉ?[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_eakon+=1"  name="bussyoku_eakon"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -164,9 +164,9 @@
 *eakon2
 
 [tb_start_text mode=1 ]
-[舜]（設定温度は…ちょっと高めだな…）[p]
-[舜]（女の子は寒いのが苦手ってよく聞くけど本当なのか…）[p]
-[舜]（俺なら汗だくになりそうだ）[p]
+[舜]（Nhiệt độ cài đặt... hơi cao thì phải...）[p]
+[舜]（Nghe nói con gái chịu lạnh kém lắm, không biết có thật không...）[p]
+[舜]（Phải mình thì chắc mồ hôi nhễ nhại rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_eakon+=1"  name="bussyoku_eakon"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -174,9 +174,9 @@
 *eakon3
 
 [tb_start_text mode=1 ]
-[舜]（エアコンはきれいに掃除されてるみたいだな…）[p]
-[舜]（さすが病院だ。俺の部屋のエアコンなんて掃除したことないぞ）[p]
-[舜]（ちょっと心配になってきた）[p]
+[舜]（Máy lạnh có vẻ được vệ sinh sạch sẽ nhỉ...）[p]
+[舜]（Quả là bệnh viện. Máy lạnh phòng mình chưa bao giờ được dọn dẹp cả.）[p]
+[舜]（Tự dưng thấy lo lo rồi đấy.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_eakon+=1"  name="bussyoku_eakon"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -184,8 +184,8 @@
 *konsento1
 
 [tb_start_text mode=1 ]
-[舜]（この角度、下からのアングルで撮影できそうだな）[p]
-[舜]（凪のエロい姿も撮影できるかも）[p]
+[舜]（Góc này, có thể quay từ dưới lên được đấy.）[p]
+[舜]（Biết đâu lại quay được cảnh gợi cảm của Nagi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_konsento+=1"  name="bussyoku_konsento"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -193,9 +193,9 @@
 *konsento2
 
 [tb_start_text mode=1 ]
-[舜]（コンセントは盗撮盗聴でよく使われるって聞くけど…）[p]
-[舜]（すでにカメラとかマイクが仕掛けてあったりして）[p]
-[舜]（なわけないか…）[p]
+[舜]（Nghe nói ổ cắm điện hay bị dùng để gắn máy quay lén với máy nghe lén...）[p]
+[舜]（Không chừng đã có sẵn camera hay mic ở đây rồi cũng nên.）[p]
+[舜]（Làm gì có chuyện đó...）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_konsento+=1"  name="bussyoku_konsento"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -203,9 +203,9 @@
 *konsento3
 
 [tb_start_text mode=1 ]
-[舜]（このコンセント、普段何で使ってんだ？）[p]
-[舜]（あ…スマホの充電を勝手にやってんのか）[p]
-[舜]（目に浮かぶなぁ…）[p]
+[舜]（Ổ cắm này bình thường dùng để làm gì nhỉ?）[p]
+[舜]（A... Chắc là lén sạc điện thoại đây mà.）[p]
+[舜]（Tưởng tượng ra ngay cảnh đó...）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_konsento+=1"  name="bussyoku_konsento"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -213,9 +213,9 @@
 *benki_byouin1
 
 [tb_start_text mode=1 ]
-[舜]（こんなとこでムラってるとか、俺なにしてんだ）[p]
-[舜]（でも、誰来るかわかんねーし、捕まったらシャレになんねぇ）[p]
-[舜]（よし、戻ろ。妄想は妄想で止めとけ）[p]
+[舜]（Lên cơn nứng ở cái chỗ này, mình đang làm cái quái gì vậy.）[p]
+[舜]（Nhưng mà, nhỡ có ai đến, bị tóm thì không phải chuyện đùa đâu.）[p]
+[舜]（Thôi, quay lại nào. Ảo tưởng thì cứ để là ảo tưởng thôi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_benki_byouin+=1"  name="bussyoku_benki_byouin"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -223,8 +223,8 @@
 *benki_byouin2
 
 [tb_start_text mode=1 ]
-[舜]（掃除はさっきしたし…ばっちり綺麗だ）[p]
-[舜]（我ながらいい仕事したな）[p]
+[舜]（Vừa dọn dẹp xong... sạch sẽ hoàn hảo.）[p]
+[舜]（Tự thấy mình làm việc cũng ra trò phết.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_benki_byouin+=1"  name="bussyoku_benki_byouin"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -232,8 +232,8 @@
 *benki_byouin3
 
 [tb_start_text mode=1 ]
-[舜]（綺麗になったトイレで、一発目に用を足してもいいけど…）[p]
-[舜]（今は別に尿意もないし。戻るか）[p]
+[舜]（Giải quyết nỗi buồn mở hàng cho cái nhà vệ sinh sạch sẽ này cũng được, nhưng...）[p]
+[舜]（Hiện tại cũng không buồn tè. Thôi về nào.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_benki_byouin+=1"  name="bussyoku_benki_byouin"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -241,8 +241,8 @@
 *surippa1
 
 [tb_start_text mode=1 ]
-[舜]（凪もこのスリッパ履いてるのか…いい匂いとかしたりして）[p]
-[舜]（……いや、ダメだ。不衛生すぎる。嗅ぐとかその発想がもう危ない）[p]
+[舜]（Nagi cũng đi dép này à... Không biết có mùi thơm không nhỉ.）[p]
+[舜]（......Không, không được. Mất vệ sinh quá. Mới nghĩ đến chuyện ngửi thôi là đã thấy nguy hiểm rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_surippa+=1"  name="bussyoku_surippa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -250,7 +250,7 @@
 *surippa2
 
 [tb_start_text mode=1 ]
-[舜]（…いやいや、ないないない。病院のスリッパなんて嗅ぐ気になれねぇよ）[p]
+[舜]（...Không không, không đời nào. Dép bệnh viện thì ai mà muốn ngửi chứ.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_surippa+=1"  name="bussyoku_surippa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -258,9 +258,9 @@
 *surippa3
 
 [tb_start_text mode=1 ]
-[舜]（なんで毎回確認しちまうんだよ、俺…）[p]
-[舜]（クソ…今回だけ、ちょっとだけな…）[p]
-[舜]（……ヴぇっ！最悪。気分悪すぎ）[p]
+[舜]（Sao lần nào mình cũng kiểm tra thế này...）[p]
+[舜]（Chết tiệt... Chỉ lần này thôi, một chút thôi...）[p]
+[舜]（......Oẹ! Tởm quá. Buồn nôn chết đi được.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_surippa+=1"  name="bussyoku_surippa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -268,8 +268,8 @@
 *doa1
 
 [tb_start_text mode=1 ]
-[舜]（誰か来たか…？）[p]
-[舜]（いや、気のせいか。ただあまり長居はよくないだろうな）[p]
+[舜]（Có ai đến à...?）[p]
+[舜]（Không, chắc do mình tưởng tượng thôi. Nhưng ở lâu cũng không tốt.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_doa+=1"  name="bussyoku_doa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -277,8 +277,8 @@
 *doa2
 
 [tb_start_text mode=1 ]
-[舜]（見つかっても掃除してたって言えばいいだけなんだけど…）[p]
-[舜]（やっぱりソワソワするなぁ。俺ってスリル厨？）[p]
+[舜]（Bị phát hiện thì cứ bảo là đang dọn dẹp là xong, nhưng...）[p]
+[舜]（Vẫn thấy bồn chồn quá. Mình nghiện cảm giác mạnh à?）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_doa+=1"  name="bussyoku_doa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -286,8 +286,8 @@
 *doa3
 
 [tb_start_text mode=1 ]
-[舜]（やべ、本当に誰かが来そうだ）[p]
-[舜]（そろそろ出なくちゃな）[p]
+[舜]（Chết, hình như có người đến thật.）[p]
+[舜]（Phải chuồn thôi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_doa+=1"  name="bussyoku_doa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]

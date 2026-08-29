@@ -20,12 +20,12 @@
 [tb_show_message_window  ]
 [mask_off  time="800"  effect="slideOutRight"  ]
 [tb_start_text mode=1 ]
-繁華街の喧騒の中で、ひときわ可憐な雰囲気を放つメイドリフレが目にとまった。[p]
-まるで別世界のような癒しの空気が漂っている。[p]
+Giữa sự ồn ào náo nhiệt của khu phố sầm uất, một quán bấm huyệt hầu gái toát lên bầu không khí đặc biệt đáng yêu thu hút ánh nhìn của tôi.[p]
+Bầu không khí thư giãn lan tỏa tựa như một thế giới khác biệt hoàn toàn.[p]
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-知ってる人はいないようだ。ちょっと入ってみようかな？
+Có vẻ không có người quen nào ở đây. Có nên ghé vào thử một chút không nhỉ?
 [_tb_end_text]
 
 [glink  color="btn_03_black"  storage="sansaku_rihureEV.ks"  size="20"  text="Vào quán Maid (Tăng Dũng cảm / -5,000 Yên)"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*rihure"  ]
@@ -51,7 +51,7 @@
 [tb_eval  exp="f.para_sutoresu_updated-=4"  name="para_sutoresu_updated"  cmd="-="  op="t"  val="4"  val_2="undefined"  ]
 [call  storage="ui_parameter.ks"  target="*sutoresu_update"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]ストレスが4減少した[resetfont][r][font color="yellow"]勇気が7上昇した[resetfont][r][font color="yellow"]テンションが少し上がった[resetfont][r][font color="yellow"]5000円支払った[resetfont][p]
+[font color="yellow"]Mức độ Căng thẳng giảm 4 điểm[resetfont][r][font color="yellow"]Dũng khí tăng 7 điểm[resetfont][r][font color="yellow"]Chỉ số Hưng phấn tăng nhẹ[resetfont][r][font color="yellow"]Đã thanh toán 5000 Yên[resetfont][p]
 [_tb_end_text]
 
 [call  storage="ui_onoff.ks"  target="*tension_UP"  ]
@@ -59,8 +59,8 @@
 *okanenasi
 
 [tb_start_text mode=1 ]
-（さすがにこの手持ちじゃ断られるか）[p]
-（仕方ない。今日は諦めよう）[p]
+（Với số tiền mang theo ngần này thì chắc chắn sẽ bị từ chối rồi.）[p]
+（Đành chịu vậy. Hôm nay đành từ bỏ thôi.）[p]
 [_tb_end_text]
 
 [jump  storage="sansaku.ks"  target="*end"  

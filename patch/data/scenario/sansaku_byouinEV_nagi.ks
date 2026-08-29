@@ -23,11 +23,11 @@
 [tb_show_message_window  ]
 [mask_off  time="800"  effect="slideOutRight"  ]
 [tb_start_text mode=1 ]
-夕食時のせいだろうか、院内はいつも以上に静かだ。[p]
+Có lẽ vì đang là giờ ăn tối nên bệnh viện yên tĩnh hơn mọi khi.[p]
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-（凪がいる。話しかけてみようかな？）
+（Có Nagi kìa. Hay là bắt chuyện thử xem sao?）
 [_tb_end_text]
 
 [glink  color="btn_03_black"  storage="sansaku_byouinEV_nagi.ks"  size="20"  text="Bắt chuyện với Nagi"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*hanasu"  ]
@@ -73,7 +73,7 @@
 
 [tb_start_text mode=1 ]
 #凪
-凪「あっ…話かけてくれるなんて、珍しいね。何かあった？」[p]
+Nagi「A... Cậu chủ động bắt chuyện với tớ, hiếm thấy nha. Có chuyện gì thế?」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -149,7 +149,7 @@
 
 [tb_start_text mode=1 ]
 #凪
-凪「あ、今日は診察？　なんだか病院で会うと不思議な感じだね」[p]
+Nagi「A, hôm nay cậu đến khám bệnh à? Gặp nhau ở bệnh viện thế này có cảm giác lạ lạ nhỉ.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -225,7 +225,7 @@
 
 [tb_start_text mode=1 ]
 #凪
-凪「[舜]ちゃんの顔見ると、なんだかホッとするね。今日は朝から忙しかったから」[p]
+Nagi「Nhìn thấy mặt Shun-chan, tự nhiên tớ thấy nhẹ nhõm hẳn. Hôm nay từ sáng đã bận rộn suốt rồi.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -302,7 +302,7 @@
 
 [tb_start_text mode=1 ]
 #凪
-凪「あっ…いきなり来るなんて。今日忙しくて髪の毛ボサボサなんだけどな…恥ずかし」[p]
+Nagi「A... Cậu đến đột ngột quá. Hôm nay bận rộn nên tóc tai tớ rối bù hết cả rồi... Xấu hổ chết đi được.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -379,7 +379,7 @@
 
 [tb_start_text mode=1 ]
 #凪
-凪「もしもし患者さん？　今他の看護師を見ていませんでしたか？　[r]ふふ、よそ見禁止だよ？」[p]
+Nagi「Alo bệnh nhân ơi? Có phải anh vừa nhìn y tá khác không đấy? [r]Khc, cấm không được nhìn ngó lung tung đâu nhé?」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -448,10 +448,10 @@
 *sasiire1
 
 [tb_start_text mode=1 ]
-凪「あ、[舜]ちゃん。よかったらチョコ食べない？」[p]
-凪「お腹空いた時とか集中力が切れた時に口に入れると元気になるんだよ。[r]あ、看護師長には内緒ね？　[舜]ちゃんもどうぞ」[p]
-ひとくちチョコレートをもらった[p]
-[font color="yellow"]テンションが少し上がった[resetfont][p]
+Nagi「A, Shun-chan. Cậu có muốn ăn chút sô cô la không?」[p]
+Nagi「Lúc nào đói bụng hay mất tập trung mà ngậm một viên là tỉnh táo lại ngay đấy.[r]A, giữ bí mật với y tá trưởng nhé? Shun-chan cũng ăn thử đi.」[p]
+Nagi「À đúng rồi, cậu còn nhớ món bánh flan này không? Món bánh flan hồi nhỏ tụi mình hay ăn cùng nhau ấy. Hoài niệm quá nên tớ mua luôn.」[p]
+Nagi「Cho Shun-chan này. Ăn vào là nhớ lại chuyện ngày xưa ngay nhỉ? [r]Khc, có khi lại trở về làm trẻ con luôn ấy chứ?」[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
@@ -461,10 +461,10 @@
 *sasiire2
 
 [tb_start_text mode=1 ]
-凪「そうそう、このプリン覚えてる？　小さい頃一緒に食べたプリン。懐かしくて買っちゃった」[p]
-凪「[舜]ちゃんにもどうぞ。食べると昔のこと思い出せそうでしょ？　[r]ふふ、子供に返っちゃうかもよ？」[p]
-プリンをもらった[p]
-[font color="yellow"]テンションが少し上がった[resetfont][p]
+Đã nhận được bánh flan[p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng một chút[resetfont][p]
+Có lẽ vì đang là giờ ăn tối nên bệnh viện yên tĩnh hơn mọi khi.[p]
+（Có Nagi và Hayato kìa. Hay là bắt chuyện thử xem sao?）
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]

@@ -19,9 +19,9 @@
 [chara_hide  name="kankei"  time="0"  wait="true"  pos_mode="false"  ]
 [call  storage="system.ks"  target="*fade_out"  ]
 [tb_start_text mode=1 ]
-凪「……なにこれ。 ゴミ箱の中に…コンドーム…？」[p]
-凪「…これ、使われてる……？ え…ど、どういうこと………？」[p]
-凪「…やだ……気持ち悪い……もう、何も考えたくないよ……」[p]
+Tương thích hoàn hảo trên mọi thiết bị và trình duyệt.[p]
+Một kiệt tác Visual Novel đã sẵn sàng trong tay bạn.[p]
+Hãy đắm chìm vào thế giới đầy mê hoặc của HOME (ROOM).[p]
 [_tb_end_text]
 
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]

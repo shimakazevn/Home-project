@@ -6,9 +6,9 @@
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 #ガイド
-こんにちは[p]
-これは新しいプロジェクトです[p]
-ドラッグ＆ドロップして要素を追加してください[p]
+Xin chào[p]
+Đây là một dự án mới[p]
+Hãy kéo và thả để thêm các yếu tố[p]
 [_tb_end_text]
 
 [s  

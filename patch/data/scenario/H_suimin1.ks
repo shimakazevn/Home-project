@@ -280,7 +280,7 @@
 
 [cm  ]
 [tb_start_text mode=1 ]
-[舜]（…そろそろ起きそうだ…このまま続けていいのか…？）[p]
+[舜]（…Có vẻ như sắp tỉnh rồi… Cứ tiếp tục thế này có ổn không đây…？）[p]
 [_tb_end_text]
 
 [return  ]
@@ -290,7 +290,7 @@
 [cm  ]
 [playse  volume="100"  time="1000"  buf="1"  storage="nagi/voice_s_touch3.mp3"  clear="true"  ]
 [tb_start_text mode=1 ]
-凪「ぅんん…………」[p]
+Nagi「Ưm…………」[p]
 [_tb_end_text]
 
 [jump  storage="EV_BADEND_suimin.ks"  target="*top"  ]

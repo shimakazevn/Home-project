@@ -8,7 +8,7 @@
 *top0
 
 [tb_start_text mode=1 ]
-[舜]（体調を整えるのも大事だよな。今日は一日ゆっくり過ごそう）[p]
+[舜]（Việc bồi dưỡng sức khỏe cũng quan trọng lắm. Hôm nay cứ thong thả nghỉ ngơi cả ngày vậy.）[p]
 [_tb_end_text]
 
 [wait  time="1000"  ]
@@ -54,7 +54,7 @@
 [wait  time="500"  ]
 [call  storage="system.ks"  target="*job_end"  ]
 [tb_start_text mode=4 ]
-ぐっすり眠って体力と気力が回復した。
+Ngủ một giấc thật say, thể lực và tinh thần đã được hồi phục.
 [_tb_end_text]
 
 *daiseikou_return

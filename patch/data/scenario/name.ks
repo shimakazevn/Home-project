@@ -9,7 +9,7 @@
 [wait  time="1000"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=4 ]
-主人公の名前を入力してください。
+Hãy nhập tên nhân vật chính.[p]
 [_tb_end_text]
 
 [tb_keyconfig  flag="1"  ]
@@ -31,7 +31,7 @@ $(".text_box").eq(1).val(f.name);
 [commit  ]
 [cm  ]
 [tb_start_text mode=4 ]
-[emb exp="f.familyname"]  [emb exp="f.name"]でよろしいですか？
+Tên của bạn là [emb exp="f.familyname"] [emb exp="f.name"] phải không?[p]
 [_tb_end_text]
 
 [glink  color="btn_05_black"  storage="name.ks"  size="20"  text="Có / Đồng ý"  x="430"  y="260"  width="471"  height="50"  _clickable_img=""  target="*yes"  ]
@@ -75,7 +75,7 @@ $(".text_box").eq(1).val(f.name);
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=4 ]
-[font color="yellow"]オープニングをスキップしますか？[font color="yellow"]
+[font color="yellow"]Bạn có muốn bỏ qua phần mở đầu không?[font color="yellow"]
 [_tb_end_text]
 
 [glink  color="btn_05_blue"  storage="name.ks"  size="20"  text="Xem đoạn mở đầu (Opening)"  x="430"  y="260"  width="471"  height="50"  _clickable_img=""  target="*noskip"  ]

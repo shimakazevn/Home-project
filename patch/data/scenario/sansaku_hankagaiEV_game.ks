@@ -23,7 +23,7 @@
 
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-失敗[p]
+Thất bại[p]
 [_tb_end_text]
 
 [tb_hide_message_window  ]
@@ -32,7 +32,7 @@
 
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-成功！[p]
+Thành công![p]
 [_tb_end_text]
 
 [tb_hide_message_window  ]

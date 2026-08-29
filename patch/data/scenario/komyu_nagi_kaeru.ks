@@ -95,7 +95,7 @@
 
 [mask_off  time="1000"  effect="slideOutRight"  ]
 [tb_start_text mode=1 ]
-・・・・・・・・・・・・・・・[p]
+……………[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -120,7 +120,7 @@
 *koukandobetu_kome_kimadui
 
 [tb_start_text mode=1 ]
-凪「えっと、私おしゃべりするの苦手で。退屈だったらごめんね」[p]
+Nagi「Ừm thì, tớ không giỏi nói chuyện cho lắm. Nếu cậu thấy chán thì cho tớ xin lỗi nhé.」[p]
 
 [_tb_end_text]
 
@@ -128,21 +128,21 @@
 *koukandobetu_kome_odayaka
 
 [tb_start_text mode=1 ]
-凪「二人で帰るのも、たまにはいいね」[p]
+Nagi「Thỉnh thoảng hai đứa cùng đi về thế này cũng hay nhỉ.」[p]
 [_tb_end_text]
 
 [jump  storage="komyu_nagi_kaeru.ks"  target="*koukandobetu_kome_end"  ]
 *koukandobetu_kome_suki
 
 [tb_start_text mode=1 ]
-凪「一緒にいるだけで楽しい。なんだか、昔に戻ったみたいだね」[p]
+Nagi「Chỉ cần ở bên cậu là tớ đã thấy vui rồi. Cứ như thể chúng mình được quay trở lại ngày xưa vậy.」[p]
 [_tb_end_text]
 
 [jump  storage="komyu_nagi_kaeru.ks"  target="*koukandobetu_kome_end"  ]
 *koukandobetu_kome_end
 
 [tb_start_text mode=4 ]
-（何か話しかけてみようか）
+（Mình có nên bắt chuyện thử không nhỉ?）
 [_tb_end_text]
 
 *komyukomando2
@@ -171,7 +171,7 @@
 
 [cm  ]
 [tb_start_text mode=4 ]
-（何を話そうかな）
+（Nên nói chuyện gì đây nhỉ?）
 
 [_tb_end_text]
 
@@ -202,7 +202,7 @@
 
 [cm  ]
 [tb_start_text mode=4 ]
-[font color="yellow"]（コミュ力が試されそうだ）[resetfont]
+[font color="yellow"]（Có vẻ như Năng lực giao tiếp sẽ được thử thách đây）[resetfont]
 
 [_tb_end_text]
 
@@ -285,7 +285,7 @@
 *sasou_base
 
 [tb_start_text mode=1 ]
-[font color="yellow"]（もう少し会話が弾んでからにしよう）[resetfont][p]
+[font color="yellow"]（Để lúc nào nói chuyện sôi nổi hơn chút nữa rồi hẵng tính）[resetfont][p]
 [_tb_end_text]
 
 [return  ]
@@ -293,7 +293,7 @@
 
 [cm  ]
 [tb_start_text mode=4 ]
-[font color="yellow"]（勇気が試されそうだ）【推奨：勇気「A」】[resetfont]
+[font color="yellow"]（Có vẻ như Dũng khí sẽ được thử thách đây） 【Khuyến nghị: Dũng khí "A"】[resetfont]
 
 [_tb_end_text]
 
@@ -338,52 +338,52 @@
 *kokuhaku_nigate
 
 [tb_start_text mode=1 ]
-告白→そっけなく凪に断られる（未実装）[p]
+Tỏ tình → Bị Nagi từ chối một cách lạnh lùng (Chưa triển khai)[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-なんとなく気まずい雰囲気になってしまった。[p]
-凪「わっ、わたし、先に帰ります！」[p]
-凪「ごめんなさい！」[p]
+Bầu không khí bỗng chốc trở nên gượng gạo.[p]
+Nagi「T-Tớ, tớ xin phép về trước đây!」[p]
+Nagi「Xin lỗi cậu!」[p]
 [_tb_end_text]
 
 [jump  storage="komyu_nagi_kaeru.ks"  target="*kokuhaku_end"  ]
 *kokuhaku_hutuu
 
 [tb_start_text mode=1 ]
-告白→普通に凪に断られる（未実装）[p]
+Tỏ tình → Bị Nagi từ chối một cách bình thường (Chưa triển khai)[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-なんとなく気まずい雰囲気になってしまった。[p]
-凪「わっ、わたし、先に帰ります！」[p]
-凪「ごめんなさい！」[p]
+Bầu không khí bỗng chốc trở nên gượng gạo.[p]
+Nagi「T-Tớ, tớ xin phép về trước đây!」[p]
+Nagi「Xin lỗi cậu!」[p]
 [_tb_end_text]
 
 [jump  storage="komyu_nagi_kaeru.ks"  target="*kokuhaku_end"  ]
 *kokuhaku_yuukou
 
 [tb_start_text mode=1 ]
-告白→困った感じで断られる（未実装）[p]
+Tỏ tình → Bị Nagi từ chối một cách khó xử (Chưa triển khai)[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-なんとなく気まずい雰囲気になってしまった。[p]
-凪「わっ、わたし、先に帰ります！」[p]
-凪「ごめんなさい！」[p]
+Bầu không khí bỗng chốc trở nên gượng gạo.[p]
+Nagi「T-Tớ, tớ xin phép về trước đây!」[p]
+Nagi「Xin lỗi cậu!」[p]
 [_tb_end_text]
 
 [jump  storage="komyu_nagi_kaeru.ks"  target="*kokuhaku_end"  ]
 *kokuhaku_suki
 
 [tb_start_text mode=1 ]
-告白→告白イベントのフラグが立つ（未実装）[p]
+Tỏ tình → Kích hoạt flag Sự kiện tỏ tình (Chưa triển khai)[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-なんとなく気まずい雰囲気になってしまった。[p]
-凪「わっ、わたし、先に帰ります！」[p]
-凪「ごめんなさい！」[p]
+Bầu không khí bỗng chốc trở nên gượng gạo.[p]
+Nagi「T-Tớ, tớ xin phép về trước đây!」[p]
+Nagi「Xin lỗi cậu!」[p]
 [_tb_end_text]
 
 *kokuhaku_end
@@ -393,8 +393,8 @@
 
 [cm  ]
 [tb_start_text mode=1 ]
-（別に無理して話す必要は無いな）[p]
-（このまま黙っていよう）[p]
+（Mình cũng chẳng cần thiết phải gượng ép bắt chuyện làm gì.）[p]
+（Cứ im lặng thế này đi.）[p]
 [_tb_end_text]
 
 [mask  time="500"  effect="fadeIn"  color="0x000000"  ]
@@ -411,13 +411,13 @@
 [call  storage="ui_onoff.ks"  target="*UI_on"  ]
 [mask_off  time="700"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凪「送ってくれてありがとう。それじゃ…おやすみ」[p]
+Nagi「Cảm ơn cậu đã đưa tớ về. Vậy thì... chúc ngủ ngon nhé.」[p]
 [_tb_end_text]
 
 [chara_hide  name="kyara_nagi"  time="500"  wait="true"  pos_mode="false"  ]
 [tb_start_text mode=1 ]
-（少し寂しそうだったな）[p]
-（何か話した方が良かったかな？）[p]
+（Trông em ấy có vẻ hơi buồn thì phải.）[p]
+（Lẽ ra mình nên nói chuyện gì đó thì hơn chăng?）[p]
 [_tb_end_text]
 
 [bg  time="500"  method="crossfade"  storage="black.jpg"  ]
@@ -622,7 +622,7 @@
 *gohan_seikou_nigate
 
 [tb_start_text mode=1 ]
-食事に誘う（成功）苦手[p]
+Rủ đi ăn (Thành công) Kém[p]
 [_tb_end_text]
 
 [call  storage="deto_gohan.ks"  target="*nagi"  ]
@@ -630,7 +630,7 @@
 *gohan_seikou_hutuu
 
 [tb_start_text mode=1 ]
-食事に誘う（成功）普通[p]
+Rủ đi ăn (Thành công) Bình thường[p]
 [_tb_end_text]
 
 [call  storage="deto_gohan.ks"  target="*nagi"  ]
@@ -638,7 +638,7 @@
 *gohan_seikou_yuukou
 
 [tb_start_text mode=1 ]
-食事に誘う（成功）友好[p]
+Rủ đi ăn (Thành công) Thân thiện[p]
 [_tb_end_text]
 
 [call  storage="deto_gohan.ks"  target="*nagi"  ]
@@ -646,7 +646,7 @@
 *gohan_seikou_suki
 
 [tb_start_text mode=1 ]
-食事に誘う（成功）好き[p]
+Rủ đi ăn (Thành công) Thích[p]
 [_tb_end_text]
 
 [call  storage="deto_gohan.ks"  target="*nagi"  ]
@@ -696,15 +696,15 @@
 *sasou_b_nigate
 
 [tb_start_text mode=1 ]
-【デートに誘う】未実装（苦手）[p]
-凪「うん、OK」[p]
-凪「じゃあ、次の土曜日ね。楽しみにしてるね」[p]
+【Rủ đi hẹn hò】 Chưa triển khai (Kém)[p]
+Nagi「Ừm, OK.」[p]
+Nagi「Vậy thì thứ Bảy tuần sau nhé. Tớ sẽ mong chờ lắm đấy.」[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]凪とデートの約束をした[resetfont][p]
-（来週の土曜日か、忘れないようにしないとな）[p]
+[font color="yellow"]Đã hẹn hò với Nagi[resetfont][p]
+（Thứ Bảy tuần sau à, mình phải nhớ kỹ mới được.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.deto_nagi=1"  name="deto_nagi"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -712,14 +712,14 @@
 *sasou_b_hutuu
 
 [tb_start_text mode=1 ]
-【デートに誘う】未実装（普通）[p]
-凪「うん、OK」[p]
-凪「じゃあ、次の土曜日ね。楽しみにしてるね」[p]
+【Rủ đi hẹn hò】 Chưa triển khai (Bình thường)[p]
+Nagi「Ừm, OK.」[p]
+Nagi「Vậy thì thứ Bảy tuần sau nhé. Tớ sẽ mong chờ lắm đấy.」[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]凪とデートの約束をした[resetfont][p]
-（来週の土曜日か、忘れないようにしないとな）[p]
+[font color="yellow"]Đã hẹn hò với Nagi[resetfont][p]
+（Thứ Bảy tuần sau à, mình phải nhớ kỹ mới được.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.deto_nagi=1"  name="deto_nagi"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -727,14 +727,14 @@
 *sasou_b_yuukou
 
 [tb_start_text mode=1 ]
-【デートに誘う】未実装（友好）[p]
-凪「うん、OK」[p]
-凪「じゃあ、次の土曜日ね。楽しみにしてるね」[p]
+【Rủ đi hẹn hò】 Chưa triển khai (Thân thiện)[p]
+Nagi「Ừm, OK.」[p]
+Nagi「Vậy thì thứ Bảy tuần sau nhé. Tớ sẽ mong chờ lắm đấy.」[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]凪とデートの約束をした[resetfont][p]
-（来週の土曜日か、忘れないようにしないとな）[p]
+[font color="yellow"]Đã hẹn hò với Nagi[resetfont][p]
+（Thứ Bảy tuần sau à, mình phải nhớ kỹ mới được.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.deto_nagi=1"  name="deto_nagi"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -742,14 +742,14 @@
 *sasou_b_suki
 
 [tb_start_text mode=1 ]
-【デートに誘う】未実装（好き）[p]
-凪「うん、OK」[p]
-凪「じゃあ、次の土曜日ね。楽しみにしてるね」[p]
+【Rủ đi hẹn hò】 Chưa triển khai (Thích)[p]
+Nagi「Ừm, OK.」[p]
+Nagi「Vậy thì thứ Bảy tuần sau nhé. Tớ sẽ mong chờ lắm đấy.」[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]凪とデートの約束をした[resetfont][p]
-（来週の土曜日か、忘れないようにしないとな）[p]
+[font color="yellow"]Đã hẹn hò với Nagi[resetfont][p]
+（Thứ Bảy tuần sau à, phải nhớ kỹ mới được.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.deto_nagi=1"  name="deto_nagi"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -757,16 +757,16 @@
 *sasou_b2
 
 [tb_start_text mode=1 ]
-【デートに誘う（既に誘ってる）】未実装[p]
-凪「はやく土曜日来ないかな。」[p]
+【Mời hẹn hò (Đã mời)】Chưa khả dụng[p]
+Nagi「Mau tới thứ Bảy đi nào.」[p]
 [_tb_end_text]
 
 [jump  storage="komyu_nagi.ks"  target="*end"  ]
 *sasou_deto_jyuuhuku
 
 [tb_start_text mode=1 ]
-（たしか次の休みは予定が入ってたな）[p]
-（今回はやめておこう）[p]
+（Nhớ không nhầm thì ngày nghỉ tới mình có lịch mất rồi.）[p]
+（Lần này đành thôi vậy.）[p]
 [_tb_end_text]
 
 [jump  storage="komyu_nagi_kaeru.ks"  target="*komyukomando2"  ]
@@ -806,28 +806,28 @@
 *sasou_c_nigate
 
 [tb_start_text mode=1 ]
-【えっちしたい】未実装（苦手）[p]
+【Muốn làm tình】Chưa khả dụng (Không thích)[p]
 [_tb_end_text]
 
 [jump  storage="komyu_nagi.ks"  target="*end"  ]
 *sasou_c_hutuu
 
 [tb_start_text mode=1 ]
-【えっちしたい】未実装（普通）[p]
+【Muốn làm tình】Chưa khả dụng (Bình thường)[p]
 [_tb_end_text]
 
 [jump  storage="komyu_nagi.ks"  target="*end"  ]
 *sasou_c_yuukou
 
 [tb_start_text mode=1 ]
-【えっちしたい】未実装（友好）[p]
+【Muốn làm tình】Chưa khả dụng (Thân thiện)[p]
 [_tb_end_text]
 
 [jump  storage="komyu_nagi.ks"  target="*end"  ]
 *sasou_c_suki
 
 [tb_start_text mode=1 ]
-【えっちしたい】未実装（好き）[p]
+【Muốn làm tình】Chưa khả dụng (Thích)[p]
 [_tb_end_text]
 
 [jump  storage="komyu_nagi.ks"  target="*end"  ]
@@ -903,7 +903,7 @@
 [call  storage="ui_onoff.ks"  target="*UI_on"  ]
 [mask_off  time="500"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-（家についてしまった）[p]
+（Về đến nhà mất rồi.）[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -938,15 +938,15 @@
 *kaeri_serihu_hutuu
 
 [tb_start_text mode=1 ]
-凪「家まで送ってくれてありがとう」（好感度普通会話）[p]
-舜「いえいえ、同じ団地だしな」[p]
+Nagi「Cảm ơn cậu đã đưa tớ về nhà nhé.」（Hội thoại hảo cảm bình thường）[p]
+[舜]「Có gì đâu, dù sao cũng cùng khu chung cư mà.」[p]
 
 [_tb_end_text]
 
 [jump  storage="komyu_nagi_kaeru.ks"  target="*kaeri_lovemax"  cond="f.love>99"  ]
 [tb_start_text mode=1 ]
-凪「それもそうだね。[r]それじゃ、おやすみ」[p]
-[font color="yellow"]テンションが上がった[resetfont][p]
+Nagi「Cũng đúng nhỉ.[r]Vậy thì, chúc ngủ ngon.」[p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng[resetfont][p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP2"  ]
@@ -955,15 +955,15 @@
 *kaeri_serihu_yuukou
 
 [tb_start_text mode=1 ]
-凪「家まで送ってくれてありがとう」（好感度友好会話）[p]
-舜「いえいえ、同じ団地だしな」[p]
+Nagi「Cảm ơn cậu đã đưa tớ về nhà nhé.」（Hội thoại hảo cảm thân thiện）[p]
+[舜]「Có gì đâu, dù sao cũng cùng khu chung cư mà.」[p]
 
 [_tb_end_text]
 
 [jump  storage="komyu_nagi_kaeru.ks"  target="*kaeri_lovemax"  cond="f.love>99"  ]
 [tb_start_text mode=1 ]
-凪「それもそうだね。[r]それじゃ、おやすみ」[p]
-[font color="yellow"]テンションが上がった[resetfont][p]
+Nagi「Cũng đúng nhỉ.[r]Vậy thì, chúc ngủ ngon.」[p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng[resetfont][p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP2"  ]
@@ -972,15 +972,15 @@
 *kaeri_serihu_suki
 
 [tb_start_text mode=1 ]
-凪「家まで送ってくれてありがとう」（好感度普通会話）[p]
-舜「いえいえ、同じ団地だしな」[p]
+Nagi「Cảm ơn cậu đã đưa tớ về nhà nhé.」（Hội thoại hảo cảm bình thường）[p]
+[舜]「Có gì đâu, dù sao cũng cùng khu chung cư mà.」[p]
 
 [_tb_end_text]
 
 [jump  storage="komyu_nagi_kaeru.ks"  target="*kaeri_lovemax"  cond="f.love>99"  ]
 [tb_start_text mode=1 ]
-凪「それもそうだね。[r]それじゃ、おやすみ」[p]
-[font color="yellow"]テンションが上がった[resetfont][p]
+Nagi「Cũng đúng nhỉ.[r]Vậy thì, chúc ngủ ngon.」[p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng[resetfont][p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP"  ]
@@ -990,21 +990,21 @@
 *kaeri_lovemax
 
 [tb_start_text mode=1 ]
-凪「あとね」[p]
-舜「？」[p]
+Nagi「Với lại nhé.」[p]
+[舜]「?」[p]
 [_tb_end_text]
 
 [chara_mod  name="kyara_nagi"  time="500"  cross="false"  storage="chara/153/adv_nagi_job_tere.gif"  ]
 [tb_start_text mode=1 ]
-凪「すっごく楽しかったよ。また一緒に帰ろうね」[p]
-凪「それじゃ、おやすみ」[p]
+Nagi「Hôm nay tớ vui lắm. Bữa sau lại cùng về nữa nhé.」[p]
+Nagi「Vậy thì, chúc ngủ ngon.」[p]
 [_tb_end_text]
 
 [chara_hide  name="kyara_nagi"  time="500"  wait="false"  pos_mode="false"  ]
 [tb_start_text mode=1 ]
-（顔を赤くして帰ってしまった）[p]
-（少しだけ凪と仲良くなれた気がする）[p]
-[font color="yellow"]テンションが上がった[resetfont][p]
+（Cô ấy đỏ mặt rồi đi về mất.）[p]
+（Cảm giác như mình đã thân thiết với Nagi hơn một chút.）[p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng[resetfont][p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP"  ]

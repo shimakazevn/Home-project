@@ -45,7 +45,7 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=4 ]
-[emb exp="f.value"]円の報酬を受け取った
+Đã nhận được [emb exp="f.value"] Yên tiền thưởng
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -91,7 +91,7 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=4 ]
-[emb exp="f.value"]円の報酬を受け取った
+Đã nhận được [emb exp="f.value"] Yên tiền thưởng
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -138,7 +138,7 @@ f.value = Math.round(f.ran / 1000) * 1000;
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=4 ]
-[emb exp="f.value"]円の報酬を受け取った
+Đã nhận được [emb exp="f.value"] Yên tiền thưởng
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -186,7 +186,7 @@ f.value = Math.round(f.ran / 1000) * 1000;
 
 [call  storage="system.ks"  target="*job_end"  ]
 [tb_start_text mode=4 ]
-[emb exp="f.value"]円の報酬を受け取った
+Đã nhận được [emb exp="f.value"] Yên tiền thưởng
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -225,8 +225,8 @@ f.value = Math.round(f.ran / 1000) * 1000;
 
 [call  storage="system.ks"  target="*job_end"  ]
 [tb_start_text mode=4 ]
-[emb exp="f.value"]円の報酬を受け取った[r]
-[舜]（体調不良で効率が悪かったかな…少しは休まないとな）
+Đã nhận được [emb exp="f.value"] Yên tiền thưởng[r]
+[舜]（Sức khỏe không tốt nên làm việc kém hiệu quả sao... Phải nghỉ ngơi một chút thôi.）
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -265,8 +265,8 @@ f.value = Math.round(f.ran / 1000) * 1000;
 
 [call  storage="system.ks"  target="*job_end"  ]
 [tb_start_text mode=4 ]
-[emb exp="f.value"]円の報酬を受け取った[r]
-[舜]（体調不良で効率が悪かったかな…少しは休まないとな）
+Đã nhận được [emb exp="f.value"] Yên tiền thưởng[r]
+[舜]（Sức khỏe không tốt nên làm việc kém hiệu quả sao... Phải nghỉ ngơi một chút thôi.）
 [_tb_end_text]
 
 [tb_start_tyrano_code]

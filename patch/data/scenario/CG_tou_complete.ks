@@ -28,8 +28,8 @@
 [playse  volume="100"  time="1000"  buf="0"  storage="sistem_omoide.mp3"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]Congratulations! CG Collection Complete![p]
-スタート画面の画像が変更出来るようになりました[resetfont][p]
+Bên cạnh người con gái tôi yêu thương và chiếm hữu.[p]
+Mọi thứ thật hoàn hảo.[p]
 [_tb_end_text]
 
 [l  ]

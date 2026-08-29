@@ -23,7 +23,7 @@
 
 [cm  ]
 [tb_start_text mode=4 ]
-（何を話そうかな？）
+（Mình nên nói chuyện gì đây?）
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -140,7 +140,7 @@
 *end_top
 
 [tb_start_text mode=1 ]
-（別に仲良くする必要も無いな）[p]
+（Cũng chẳng cần phải thân thiết làm gì.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.pure_kettei_on=0"  name="pure_kettei_on"  cmd="="  op="t"  val="0"  ]
@@ -155,8 +155,8 @@
 *kaiwa_1nigate
 
 [tb_start_text mode=1 ]
-蕾は視線を逸らしたままつまらなそうに話を聞いている。[r]その様子からは苛立ちの気配さえ感じ取れる。[p]
-適当な話題をふってその場を切り上げることにした。[p]
+Tsubomi đảo mắt đi chỗ khác, lắng nghe một cách chán nản.[r]Nhìn dáng vẻ ấy còn có thể cảm nhận được sự bực dọc.[p]
+Tôi kiếm bừa một chủ đề rồi kết thúc cuộc trò chuyện.[p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP3"  ]
@@ -169,8 +169,8 @@
 *kaiwa_2hutuu
 
 [tb_start_text mode=1 ]
-蕾はどこか気だるげに話を聞いている。[r]不愛想だが完全に無関心というわけではないようだ。[p]
-空気が重くなる前にその場を切り上げることにした。[p]
+Tsubomi lắng nghe với vẻ uể oải.[r]Tuy thái độ lạnh nhạt nhưng có vẻ không hoàn toàn thờ ơ.[p]
+Tôi quyết định rời đi trước khi bầu không khí trở nên nặng nề.[p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP3"  ]
@@ -183,8 +183,8 @@
 *kaiwa_3yuukou
 
 [tb_start_text mode=1 ]
-蕾は穏やかに微笑みながらこちらの話に耳を傾けてくれている。[r]会話は自然と続き、目が合うと軽くうなずいてくれた。[p]
-ほんの少しだけ心の距離が近づいた気がする。[p]
+Tsubomi mỉm cười dịu dàng lắng nghe tôi nói.[r]Cuộc trò chuyện diễn ra tự nhiên, khi chạm mắt, cô ấy khẽ gật đầu.[p]
+Tôi cảm thấy khoảng cách trong lòng đã thu hẹp lại một chút.[p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP3"  ]
@@ -197,8 +197,8 @@
 *kaiwa_4suki
 
 [tb_start_text mode=1 ]
-蕾はこちらの話に耳を傾けながら、時折微笑んでくれる。[r]まっすぐに向けられた眼差しには特別な温もりが感じられた。[p]
-ほんの少しだけ心の距離が近づいた気がする。[p]
+Tsubomi lắng nghe tôi nói, thỉnh thoảng lại mỉm cười.[r]Ánh mắt nhìn thẳng của cô ấy mang một sự ấm áp đặc biệt.[p]
+Tôi cảm thấy khoảng cách trong lòng đã thu hẹp lại một chút.[p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP3"  ]
@@ -218,15 +218,15 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif"]蕾「素敵！　ありがとう…！　これ高いから自分じゃ手が届かなかったから嬉しい」[p]
-蕾「つけてくれる？」[p]
-[舜]「もちろん…はいはいどうぞ」[p]
-蕾「ありがとう…！　[r]どう？　似合ってる？　ま、私ならどんなものでもに合っちゃうと思うけど」[p]
-（すごく喜んでくれたようだ）[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif"]Tsubomi「Đẹp quá! Cảm ơn anh...! Món này đắt lắm nên em không mua nổi, em vui lắm.」[p]
+Tsubomi「Anh đeo cho em được không?」[p]
+[舜]「Tất nhiên rồi... Đây đây.」[p]
+Tsubomi「Cảm ơn anh...! [r]Sao nào? Hợp không? Mà, em nghĩ em mặc gì cũng hợp cả thôi.」[p]
+（Có vẻ cô ấy rất vui.）[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]テンションが少し上がった[resetfont][p]
+[font color="yellow"]Chỉ số hưng phấn tăng nhẹ[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.pure_akuse-=1"  name="pure_akuse"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
@@ -250,15 +250,15 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_01c.gif"]蕾「コーヒー豆？　へー、あんたもコーヒーの味とかわかるんだ？」[p]
-蕾「私普段豆からコーヒーを入れることとかないから…試してみよっかな。[r]ママもきっと喜ぶと思うし」[p]
-蕾「あ、ママのお店に置いといて、休憩時間にみんなで飲むのもいいんじゃない？　[r]うん、それがいいかも」[p]
-[舜]（蕾にあげたつもりだったんだけど…お店への差し入れみたいになっちゃったな）[p]
-(まずまず喜んでくれたようだ)[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_01c.gif"]Tsubomi「Hạt cà phê sao? Hê, anh cũng biết thưởng thức cà phê cơ à?」[p]
+Tsubomi「Bình thường em không tự pha cà phê từ hạt... Chắc phải thử xem sao.[r]Mẹ chắc cũng sẽ thích lắm đây.」[p]
+Tsubomi「A, hay là để ở tiệm của mẹ, lúc nghỉ giải lao mọi người cùng uống nhỉ?[r]Ừm, thế có khi lại hay.」[p]
+[舜]（Định tặng cho Tsubomi mà... lại thành quà biếu cho tiệm mất rồi.）[p]
+(Có vẻ cô ấy cũng khá vui.)[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]テンションが少し上がった[resetfont][p]
+[font color="yellow"]Chỉ số hưng phấn tăng nhẹ[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.pure_coffee-=1"  name="pure_coffee"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
@@ -282,14 +282,14 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_00c.gif"]蕾「なんでゲーム…？　私ゲームなんてやらないんだけど…」[p]
-蕾「気持ちはありがたいんだけどさ…[r]自分が喜ぶものはみんなが喜ぶって言うの、間違いだからね？」[p]
-蕾「っていうか、女の子に自分の趣味を押し付けるのはよくないよ？」[p]
-[舜]（うっ…叱られてしまった）[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_00c.gif"]Tsubomi「Sao lại là game...? Em có chơi game bao giờ đâu...」[p]
+Tsubomi「Em ghi nhận tấm lòng của anh...[r]Nhưng cái suy nghĩ mình thích gì thì người khác cũng thích nấy là sai lầm đấy nhé?」[p]
+Tsubomi「Nói đúng hơn, áp đặt sở thích của mình cho con gái là không tốt đâu?」[p]
+[舜]（Ư... Bị mắng mất rồi.）[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]テンションが少し上がった[resetfont][p]
+[font color="yellow"]Chỉ số hưng phấn tăng nhẹ[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.pure_game-=1"  name="pure_game"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
@@ -317,14 +317,14 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_01c.gif"]蕾「えっ、花束？　ふふ、ステージ終わりにファンから貰ったみたいね」[p]
-蕾「いつか両手に抱えきれないほどの花束を受け取れるかなー」[p]
-蕾「な、何ニヤニヤしてるのよ…！　ただ将来の夢を話しただけじゃない…！」[p]
-(まずまず喜んでくれたようだ)[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_01c.gif"]Tsubomi「Hả, hoa sao? Fufu, giống như được fan tặng sau khi diễn xong ấy nhỉ.」[p]
+Tsubomi「Không biết bao giờ em mới được nhận bó hoa to đến mức ôm không xuể nhỉ~」[p]
+Tsubomi「A-Anh cười tủm tỉm cái gì thế...! Em chỉ nói ước mơ tương lai thôi mà...!」[p]
+(Có vẻ cô ấy cũng khá vui.)[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]テンションが少し上がった[resetfont][p]
+[font color="yellow"]Chỉ số hưng phấn tăng nhẹ[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.pure_hana-=1"  name="pure_hana"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
@@ -348,15 +348,15 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif"]蕾「え、すごい…！　あんた、どうやってこのコスメ選んだの？」[p]
-[舜]「店員に聞いた」[p]
-蕾「やるじゃない。見直したかも。ふふ、すっごく嬉しい。ありがとね」[p]
-蕾「早く使ってみたいな～。似合うかどうか、ちゃんと見てよね？」[p]
-（すごく喜んでくれたようだ）[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif"]Tsubomi「Oa, tuyệt quá...! Sao anh biết chọn loại mỹ phẩm này vậy?」[p]
+[舜]「Anh hỏi nhân viên cửa hàng đấy.」[p]
+Tsubomi「Khá đấy chứ. Chắc em phải nhìn anh bằng con mắt khác rồi. Fufu, em vui lắm. Cảm ơn anh nhé.」[p]
+Tsubomi「Muốn dùng thử ghê~. Anh phải nhìn kỹ xem em có hợp không đấy nhé?」[p]
+（Có vẻ cô ấy rất vui.）[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]テンションが少し上がった[resetfont][p]
+[font color="yellow"]Chỉ số hưng phấn tăng nhẹ[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.pure_konpakuto-=1"  name="pure_konpakuto"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
@@ -380,14 +380,14 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_01c.gif"]蕾「わぁ、美味しそ…甘くていい香り～」[p]
-蕾「はっ…！　でもっ、今ダイエット中なのよね…くぅ～、甘い誘惑をくれるだなんて…」[p]
-蕾「ちょっとくらいなら食べてもいい、かな？」[p]
-(まずまず喜んでくれたようだ)[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_01c.gif"]Tsubomi「Oa, ngon quá... Thơm mùi ngọt ngào ghê~」[p]
+Tsubomi「Á...! Nhưng mà, em đang ăn kiêng... Ư~, sao anh lại mang đến sự cám dỗ ngọt ngào thế này...」[p]
+Tsubomi「Chắc ăn một chút cũng không sao đâu, nhỉ?」[p]
+(Có vẻ cô ấy cũng khá vui.)[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]テンションが少し上がった[resetfont][p]
+[font color="yellow"]Chỉ số hưng phấn tăng nhẹ[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.pure_wagasi-=1"  name="pure_wagasi"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
@@ -404,15 +404,15 @@
 *deto_nigate_seikou
 
 [tb_start_text mode=1 ]
-蕾「あんたと？…まぁ、別にいいけど」[p]
-蕾「その代わり、私が行きたいところに行くから文句言わないでよ」[p]
-[舜]（成功…なのか？）[p]
+Tsubomi「Đi với anh á? ...Mà, cũng được thôi.」[p]
+Tsubomi「Thay vào đó, em sẽ đi đến nơi em muốn nên anh cấm phàn nàn đấy.」[p]
+[舜]（Thành công... rồi sao?）[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]蕾とデートの約束をした[resetfont][p]
-（次の休日か、忘れないようにしないとな）[p]
+[font color="yellow"]Đã hẹn hò với Tsubomi[resetfont][p]
+（Ngày nghỉ tiếp theo à, mình phải nhớ mới được.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.deto_tubomi=1"  name="deto_tubomi"  cmd="="  op="t"  val="1"  ]
@@ -420,15 +420,15 @@
 *deto_hutuu_seikou
 
 [tb_start_text mode=1 ]
-蕾「デート？　じゃあ美味しいモノご馳走してもらおうかな～」[p]
-[舜]「まさか高級店じゃないだろうな」[p]
-蕾「ふっふっふ、それは行ってのお楽しみって事にしましょ」[p]
+Tsubomi「Hẹn hò sao? Vậy anh phải khao em món gì ngon ngon đấy nhé~」[p]
+[舜]「Đừng bảo là nhà hàng cao cấp nhé.」[p]
+Tsubomi「Fufufu, cứ đi rồi sẽ biết.」[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]蕾とデートの約束をした[resetfont][p]
-（次の休日か、忘れないようにしないとな）[p]
+[font color="yellow"]Đã hẹn hò với Tsubomi[resetfont][p]
+（Ngày nghỉ tiếp theo à, mình phải nhớ mới được.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.deto_tubomi=1"  name="deto_tubomi"  cmd="="  op="t"  val="1"  ]
@@ -436,16 +436,16 @@
 *deto_yuukou_seikou
 
 [tb_start_text mode=1 ]
-蕾「デート？　どこに行く？　私、この前ＳＮＳで見たんだけど…」[p]
-[舜]「ん！？　結局オッケーなの？　ダメなの？」[p]
-蕾「え？　オッケーのその先の話をしてるんだってば。どこに行こっか」[p]
+Tsubomi「Hẹn hò sao? Đi đâu đây? Hôm trước em có thấy trên mạng xã hội...」[p]
+[舜]「Hả!? Rốt cuộc là em đồng ý hay không?」[p]
+Tsubomi「Hả? Em đang nói chuyện sau khi đồng ý mà. Đi đâu đây nhỉ.」[p]
 
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]蕾とデートの約束をした[resetfont][p]
-（次の休日か、忘れないようにしないとな）[p]
+[font color="yellow"]Đã hẹn hò với Tsubomi[resetfont][p]
+（Ngày nghỉ tiếp theo à, mình phải nhớ mới được.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.deto_tubomi=1"  name="deto_tubomi"  cmd="="  op="t"  val="1"  ]
@@ -453,15 +453,15 @@
 *deto_suki_seikou
 
 [tb_start_text mode=1 ]
-蕾「デート？　ストレートに誘われると…なんか恥ずかしいね」[p]
-蕾「もちろん行くわ！　すっごく楽しみ…！」[p]
-蕾「何着て行こうかな～。ね、どんな服が好きかあとで教えてよ」[p]
+Tsubomi「Hẹn hò sao? Bị rủ thẳng thừng thế này... cứ thấy ngại ngại.」[p]
+Tsubomi「Tất nhiên là em đi rồi! Em mong chờ lắm đấy...!」[p]
+Tsubomi「Nên mặc gì đi nhỉ~. Này, lát nữa anh nói cho em biết anh thích kiểu đồ nào nhé.」[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]蕾とデートの約束をした[resetfont][p]
-（次の休日か、忘れないようにしないとな）[p]
+[font color="yellow"]Đã hẹn hò với Tsubomi[resetfont][p]
+（Ngày nghỉ tiếp theo à, mình phải nhớ mới được.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.deto_tubomi=1"  name="deto_tubomi"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -469,15 +469,15 @@
 *deto_koibito_seikou
 
 [tb_start_text mode=1 ]
-蕾「すごい、偶然…！　私もどこかに行こうって声かけようと思ってたとこ」[p]
-蕾「でもデートに誘ってもらえるって、やっぱり嬉しいかも[r]ね、もう１回言ってよ。デート行こうよって」[p]
-[舜](なんだかものすごく喜んでくれてるぞ）[p]
+Tsubomi「Tuyệt quá, trùng hợp ghê...! Em cũng định rủ anh đi đâu đó.」[p]
+Tsubomi「Nhưng được rủ đi hẹn hò, đúng là vui thật đấy.[r]Này, nói lại lần nữa đi. Nói là chúng ta đi hẹn hò nhé đi.」[p]
+[舜](Sao cô ấy có vẻ vui mừng quá vậy.）[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]蕾とデートの約束をした[resetfont][p]
-（次の休日か、忘れないようにしないとな）[p]
+[font color="yellow"]Đã hẹn hò với Tsubomi[resetfont][p]
+（Ngày nghỉ tiếp theo à, mình phải nhớ mới được.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.deto_tubomi=1"  name="deto_tubomi"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -517,14 +517,14 @@
 *syokuji_nigate_seikou
 
 [tb_start_text mode=1 ]
-蕾「別にいいけど…お店のデートコースってことでいいでしょ？」[p]
+Tsubomi「Cũng được thôi... Xem như đây là buổi hẹn hò ở tiệm nhé?」[p]
 [_tb_end_text]
 
 [jump  storage="EV_deto_dinner.ks"  target="*tubomi"  ]
 *syokuji_nigate_sippai
 
 [tb_start_text mode=1 ]
-蕾「嫌よ。じゃあね」[p]
+Tsubomi「Không thích. Tạm biệt.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.syokuji_sippai=1"  name="syokuji_sippai"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -532,8 +532,8 @@
 *syokuji_hutuu_seikou
 
 [tb_start_text mode=1 ]
-蕾「まぁいいわよ。もちろんあんたの奢りよね？」[p]
-蕾「あ、それなら駅前のフレンチ行きましょ。ＳＮＳで見て気になってたの」[p]
+Tsubomi「Cũng được thôi. Tất nhiên là anh khao đúng không?」[p]
+Tsubomi「A, vậy thì đi ăn đồ Pháp trước ga đi. Em thấy trên mạng xã hội nên tò mò lắm.」[p]
 
 [_tb_end_text]
 
@@ -541,8 +541,8 @@
 *syokuji_hutuu_sippai
 
 [tb_start_text mode=1 ]
-蕾「あ～、忙しいしダイエット中だからパスさせて」[p]
-蕾「お買い物に付き合ってほしい、とかなら一緒に回ってあげる。[r]もちろん有料で、ね？」[p]
+Tsubomi「A~, em đang bận với lại đang ăn kiêng nên cho qua đi.」[p]
+Tsubomi「Nếu anh muốn em đi mua sắm cùng thì em đi chung cho.[r]Tất nhiên là có tính phí nhé?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.syokuji_sippai=1"  name="syokuji_sippai"  cmd="="  op="t"  val="1"  ]
@@ -550,8 +550,8 @@
 *syokuji_yuukou_seikou
 
 [tb_start_text mode=1 ]
-蕾「丁度お腹空いてたの。行きましょ！　[r]その代わり、ヘルシーなお店一択だからね？」[p]
-蕾「女の子ががっつり夕飯食べるわけないでしょ！　文句言わずに付き合って」[p]
+Tsubomi「Em cũng đang đói. Đi thôi! [r]Thay vào đó, chỉ được chọn quán nào đồ ăn healthy thôi đấy nhé?」[p]
+Tsubomi「Con gái làm sao mà ăn tối nhiều được! Cứ đi theo em, cấm phàn nàn.」[p]
 
 [_tb_end_text]
 
@@ -559,8 +559,8 @@
 *syokuji_yuukou_sippai
 
 [tb_start_text mode=1 ]
-蕾「ごめんね、今ダイエットしてるから外食は控えてるの」[p]
-蕾「可愛くありたいって気持ち、わかるでしょ？　ってわけで、また今度ね」[p]
+Tsubomi「Xin lỗi anh, em đang ăn kiêng nên hạn chế ăn ngoài.」[p]
+Tsubomi「Anh hiểu cảm giác muốn mình luôn xinh đẹp đúng không? Vậy nên hẹn anh dịp khác nhé.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.syokuji_sippai=1"  name="syokuji_sippai"  cmd="="  op="t"  val="1"  ]
@@ -568,8 +568,8 @@
 *syokuji_suki_seikou
 
 [tb_start_text mode=1 ]
-蕾「えっ、行きたい！　ご飯食べに行きましょ」[p]
-蕾「あんたが行きたいとこなら、どこでもいいわよ…[r]一緒にいられるだけで楽しいし」[p]
+Tsubomi「Hả, em muốn đi! Đi ăn thôi.」[p]
+Tsubomi「Anh muốn đi đâu cũng được...[r]Chỉ cần ở bên anh là vui rồi.」[p]
 
 [_tb_end_text]
 
@@ -577,9 +577,9 @@
 *syokuji_suki_sippai
 
 [tb_start_text mode=1 ]
-蕾「も～、早く誘ってよ～。行けないじゃない」[p]
-[舜]「だよな、忙しそうだし無理しなくても──」[p]
-蕾「だめ！　次は絶対に行くから…！　[r]スケジュール合わせてご飯食べに行きましょ」[p]
+Tsubomi「Mồ~, sao không rủ sớm hơn chứ~. Giờ sao mà đi được.」[p]
+[舜]「Cũng phải, em có vẻ bận nên không cần ép bản thân đâu──」[p]
+Tsubomi「Không được! Lần tới nhất định em sẽ đi...! [r]Mình sắp xếp lịch rồi đi ăn nhé.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.syokuji_sippai=1"  name="syokuji_sippai"  cmd="="  op="t"  val="1"  ]
@@ -587,17 +587,17 @@
 *syokuji_koibito_seikou
 
 [tb_start_text mode=1 ]
-蕾「あ、私もＳＮＳで見つけたお店、一緒に行きたいって思ってたの」[p]
-蕾「何が食べたいって希望があれば、そのお店に行きましょ。[r]私はなんでもいいわよ…」[p]
-蕾「あ、あんたと一緒ならなんでも美味しいから…あー恥ずかしっ！」[p]
+Tsubomi「A, em cũng định rủ anh đi quán em tìm thấy trên mạng xã hội đấy.」[p]
+Tsubomi「Anh có muốn ăn gì thì cứ nói, mình đi quán đó.[r]Em thì sao cũng được...」[p]
+Tsubomi「V-Vì đi với anh thì ăn gì cũng ngon mà... A, xấu hổ quá!」[p]
 [_tb_end_text]
 
 [jump  storage="EV_deto_dinner.ks"  target="*tubomi"  ]
 *syokuji_koibito_sippai
 
 [tb_start_text mode=1 ]
-蕾「残念、今日は駄目なの。[r]なんだ～、誘ってもらえるってわかってたら空けといたのに…」[p]
-蕾「今度夕飯美味しいもの食べよ？　約束だからね！」[p]
+Tsubomi「Tiếc quá, hôm nay không được rồi.[r]Trời ạ~, biết anh rủ thì em đã để trống lịch rồi...」[p]
+Tsubomi「Lần tới đi ăn món gì ngon ngon nhé? Hứa rồi đấy!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.syokuji_sippai=1"  name="syokuji_sippai"  cmd="="  op="t"  val="1"  ]
@@ -605,7 +605,7 @@
 *okanenasi
 
 [tb_start_text mode=1 ]
-（さすがにこの手持ちじゃ無理か）[p]
+（Với số tiền hiện tại thì chắc là không đủ rồi.）[p]
 [_tb_end_text]
 
 [jump  storage="komyu_tubomi.ks"  target="*top"  ]
@@ -613,16 +613,16 @@
 *deto_sasoenai1
 
 [tb_start_text mode=1 ]
-蕾「デート、楽しみ。ね、行く先のこと色々調べちゃった」[p]
-蕾「あとでチャットで送るから見ておいてよ？」[p]
+Tsubomi「Em mong chờ buổi hẹn hò lắm. Này, em tìm hiểu đủ chỗ đi chơi rồi đấy.」[p]
+Tsubomi「Lát em gửi qua tin nhắn, anh nhớ xem nhé?」[p]
 [_tb_end_text]
 
 [jump  storage="komyu_tubomi.ks"  target="*top"  ]
 *deto_sasoenai2
 
 [tb_start_text mode=1 ]
-（たしか次の休みは予定が入ってたな）[p]
-（今回はやめておこう）[p]
+（Hình như ngày nghỉ tiếp theo mình có hẹn mất rồi.）[p]
+（Lần này thôi vậy.）[p]
 [_tb_end_text]
 
 [jump  storage="komyu_tubomi.ks"  target="*top"  ]
@@ -632,7 +632,7 @@
 *pure_nikaime
 
 [tb_start_text mode=1 ]
-[舜]（あんまり渡しすぎると、絶対図に乗るからな）[p]
+[舜]（Tặng nhiều quá thế nào em ấy cũng được nước lấn tới cho xem.）[p]
 [_tb_end_text]
 
 [jump  storage="komyu_tubomi.ks"  target="*top"  

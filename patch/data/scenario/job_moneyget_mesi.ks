@@ -16,7 +16,7 @@
 [stopbgm  time="1000"  fadeout="true"  ]
 [tb_keyconfig  flag="1"  ]
 [tb_start_text mode=4 ]
-[舜]「もうこんな時間か。これからどうしようかな」
+[舜]「Đã giờ này rồi sao. Giờ phải làm gì đây nhỉ.」
 [_tb_end_text]
 
 [glink  color="btn_05_black"  storage="job_moneyget_mesi.ks"  size="20"  text="Ra ngoài"  x="382"  y="220"  width="543"  height="56"  _clickable_img=""  target="*soto"  ]
@@ -27,8 +27,8 @@
 [cm  ]
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
-[舜]「特にやる事はないし、家でゴロゴロしようかな」[p]
-[font color="yellow"]テンションが少し上がった[resetfont][r][font color="yellow"]体力が少し上がった[resetfont][r][font color="yellow"]ストレスが少し下がった[resetfont][p]
+[舜]「Cũng chẳng có việc gì làm, hay là ở nhà nằm ườn ra nhỉ.」[p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng một chút[resetfont][r][font color="yellow"]Thể lực đã tăng một chút[resetfont][r][font color="yellow"]Mức độ Căng thẳng đã giảm một chút[resetfont][p]
 [_tb_end_text]
 
 [playse  volume="50"  time="0"  buf="0"  storage="job_daiseikou.mp3"  ]

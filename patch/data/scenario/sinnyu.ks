@@ -60,7 +60,7 @@
 [tb_show_message_window  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[舜]「さてと、どこに行こうか」[p]
+Chúc các bạn chơi game thật vui vẻ![p]
 [_tb_end_text]
 
 [tb_hide_message_window  ]
@@ -143,7 +143,7 @@
 [cm  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]「急ぐ必要は無いな。一度家に戻ろう」[p]
+Trân trọng cảm ơn tất cả các bạn![p]
 [_tb_end_text]
 
 [mask  time="500"  effect="fadeIn"  color="0x000000"  ]

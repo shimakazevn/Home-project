@@ -112,7 +112,7 @@
 *end2
 
 [tb_start_text mode=1 ]
-(そろそろ帰ろう)[p]
+Và khám phá tất cả những bí mật đang chờ đợi bạn.[p]
 [_tb_end_text]
 
 [stopbgm  time="1000"  fadeout="true"  ]

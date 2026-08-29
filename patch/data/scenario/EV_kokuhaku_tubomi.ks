@@ -26,34 +26,34 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[舜]「あれ？蕾から着信だ」[p]
-[舜]「もしもし、どうした？ リフレで何かあったのか？」[p]
+[舜]「Ủa? Tsubomi gọi này.」[p]
+[舜]「Alo, sao thế? Ở quán Reflex có chuyện gì à?」[p]
 #蕾
-蕾「…あ、あの……えっと。」[p]
+Tsubomi「...A, ừm...... à thì.」[p]
 [_tb_end_text]
 
 [call  storage="BGM.ks"  target="*love1"  ]
 [tb_start_text mode=1 ]
 #蕾
-蕾「ううん、そうじゃなくて……。[r]も、もし近くにいるなら、一緒に帰れたらなって……駄目？」[p]
-[舜]「いいよ。リフレまで行くから、店の前で待ってて」[p]
+Tsubomi「Không, không phải chuyện đó......[r]N-Nếu anh đang ở gần đây, thì mình cùng về chung được không...... Không được sao?」[p]
+[舜]「Được chứ. Anh sẽ qua quán Reflex, em đợi trước cửa quán nhé.」[p]
 [_tb_end_text]
 
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
-急いでリフレに向かうと、すでに蕾が待っていた。[p]
-いつものように「遅い！」と文句を言われるのを覚悟していたが、[r]今日はめずらしく大人しい様子だった。[p]
-それどころか、いつもの元気もなく、笑顔もなければ口数も少ない。[r]あの意地悪な冗談さえ、今日は影を潜めていた。[p]
+Tôi vội vàng chạy đến quán Reflex thì Tsubomi đã đứng đợi sẵn.[p]
+Tôi đã chuẩn bị tinh thần sẽ bị cằn nhằn "Chậm quá!" như mọi khi,[r]nhưng hôm nay em ấy lại ngoan ngoãn đến lạ thường.[p]
+Thậm chí, em ấy còn chẳng tràn đầy sức sống như mọi ngày, không cười mà cũng ít nói hơn hẳn.[r]Ngay cả những lời trêu chọc ác ý thường ngày hôm nay cũng lặn mất tăm.[p]
 [_tb_end_text]
 
 [bg  time="1000"  method="crossfade"  storage="back_kaerimiti_yoru.png"  ]
 [call  storage="character.ks"  target="*tubomi_hudangi_hutuu"  ]
 [tb_start_text mode=1 ]
-俺はあえて深く聞かず、蕾と並んで帰り道を歩き始めた。[p]
-[舜]「何かあったのか？　まさか客に何かされたとか…」[p]
+Tôi cố tình không gặng hỏi thêm, chỉ lẳng lặng bước đi sóng đôi cùng Tsubomi trên đường về.[p]
+[舜]「Có chuyện gì sao? Đừng bảo là bị khách làm gì rồi nhé...」[p]
 #蕾
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_03c.gif"]蕾「それ、あんたが言う？　違う。オーディションで失敗しただけよ」[p]
-蕾は力なく笑い、通り道にあった公園に入っていく。[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_03c.gif"]Tsubomi「Câu đó mà anh cũng nói được à? Không phải. Chỉ là em thi rớt buổi thử vai thôi.」[p]
+Tsubomi cười gượng gạo rồi bước vào một công viên nằm trên đường đi.[p]
 [_tb_end_text]
 
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
@@ -63,64 +63,64 @@
 [bg  time="0"  method="crossfade"  storage="black.jpg"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾がブランコに腰を下ろしたので、俺も真似して隣のブランコに座る。[r]徐々に彼女の声が湿ったモノに変わっていった。[p]
+Thấy Tsubomi ngồi xuống xích đu, tôi cũng bắt chước ngồi xuống chiếc xích đu bên cạnh.[r]Giọng nói của em ấy dần trở nên ướt át, nghẹn ngào.[p]
 [_tb_end_text]
 
 [bg  time="2000"  method="fadeInDown"  storage="event/tubomi5.png"  ]
 [tb_cg  id="cg_tubomi_kokuhaku"  ]
 [tb_start_text mode=1 ]
 #蕾
-蕾「会場に行ったら、私なんかより可愛くて綺麗でスタイルのいい子がいっぱいいるんだもん」[p]
+Tsubomi「Đến hội trường rồi mới thấy, ở đó có đầy những cô gái vừa dễ thương, vừa xinh đẹp lại có thân hình chuẩn hơn em nhiều.」[p]
 #蕾
-蕾「私、超場違いでさ…恥ずかしかった。もう帰りたくてしょうがなくて。頭の中も真っ白で…」[p]
-その大きな瞳に、いまにも涙が零れそうだった。けれど、彼女は必死にこらえている。[p]
+Tsubomi「Em thấy mình thật lạc lõng... xấu hổ lắm. Em chỉ muốn đi về ngay lập tức thôi. Đầu óc thì trống rỗng...」[p]
+Đôi mắt to tròn ấy như sắp chực trào nước mắt. Nhưng em ấy vẫn đang cố kìm nén.[p]
 #蕾
-蕾「でも、そうなっちゃう自分が1番許せない。[r]逃げ出しちゃうくらいの覚悟だったんだ、って…がっかりした」[p]
-[舜]「いや、わかる、わかるよ…[r]俺なんて、言いたいことが言えなくて、変な汗かいて、気を失いかけたことだってある」[p]
-たくさんの人に値踏みされるあの感覚。[r]就職面接のたびに、自信を砕かれ、何度も立ちすくんだあの日々。[p]
-あの痛みは、誰よりわかっているつもりだった。[p]
+Tsubomi「Nhưng mà, em không thể tha thứ cho bản thân mình nhất khi trở nên như vậy.[r]Chỉ mới thế thôi mà đã muốn bỏ chạy rồi... em thật sự thất vọng về bản thân.」[p]
+[舜]「Không, anh hiểu, anh hiểu mà...[r]Anh đây còn từng không nói được những điều mình muốn nói, vã mồ hôi hột rồi suýt ngất xỉu nữa kìa.」[p]
+Cái cảm giác bị vô số người đánh giá, dò xét ấy.[r]Những ngày tháng liên tục bị dập tắt sự tự tin, đứng chôn chân không biết bao nhiêu lần mỗi khi đi phỏng vấn xin việc.[p]
+Nỗi đau ấy, tôi tự nhủ mình hiểu rõ hơn bất kỳ ai.[p]
 #蕾
-蕾「ふふっ、それはさすがにダサすぎ…」[p]
-こわばっていた蕾の表情が少しだけ緩んだ気がした。[p]
-[舜]「ほらな？　俺のがはるかにひどいだろ」[p]
+Tsubomi「Khc..., như thế thì thảm hại quá rồi...」[p]
+Tôi cảm giác nét mặt căng thẳng của Tsubomi đã giãn ra đôi chút.[p]
+[舜]「Thấy chưa? Anh còn thê thảm hơn em nhiều đúng không?」[p]
 #蕾
-蕾「ありがとう…慰めてくれてるんでしょ。おかげでちょっと元気出た」[p]
+Tsubomi「Cảm ơn anh... Anh đang an ủi em đúng không. Nhờ anh mà em cũng thấy khá hơn chút rồi.」[p]
 #蕾
-蕾「でも…あんたは今、うまくいってるじゃない」[p]
+Tsubomi「Nhưng mà... hiện tại mọi chuyện của anh vẫn đang suôn sẻ mà.」[p]
 #蕾
-蕾「ママから見たら最高のバイトくんだし。[r]自分にとってぴったりの場所に立てば輝けるんだね」[p]
-[舜]「こんなふうになるなんて、自分が1番驚いてる」[p]
+Tsubomi「Trong mắt mẹ, anh là nhân viên làm thêm tuyệt vời nhất đấy.[r]Chỉ cần đứng đúng nơi dành cho mình thì ai cũng có thể tỏa sáng nhỉ.」[p]
+[舜]「Chính anh cũng là người ngạc nhiên nhất khi mọi chuyện lại thành ra thế này đấy.」[p]
 #蕾
-蕾「ふふっ、何それ…！」[p]
-今度は声を上げて笑ってくれる。[p]
+Tsubomi「Khc..., gì vậy chứ...!」[p]
+Lần này thì em ấy đã bật cười thành tiếng.[p]
 #蕾
-蕾「私にもそういう場所、あるかな？　新しい夢探してみるのもいいかも」[p]
+Tsubomi「Không biết em có nơi nào như thế không nhỉ? Có lẽ thử tìm kiếm một ước mơ mới cũng không tồi.」[p]
 #蕾
-蕾「ごめんね、いろいろ付き合ってもらったのに」[p]
-[舜]「別に謝ることないって。俺何もしてないし」[p]
+Tsubomi「Xin lỗi anh nhé, dù đã bắt anh phải đi cùng em nãy giờ.」[p]
+[舜]「Có gì đâu mà phải xin lỗi. Anh cũng chẳng làm gì cả mà.」[p]
 #蕾
-蕾「私はしてもらったって思ってるの！　[r]ねぇ、私頑張るからさ…この先も見ててくれない？」[p]
-[舜]「え？　そのつもりだけど？」[p]
+Tsubomi「Em thì lại nghĩ là anh đã làm rất nhiều đấy! [r]Này, em sẽ cố gắng hết sức... từ nay về sau anh vẫn sẽ dõi theo em chứ?」[p]
+[舜]「Hả? Thì anh vẫn định thế mà?」[p]
 #蕾
-蕾「なにそのうすいリアクション！　…もう！　鈍感なんだから！」[p]
-[舜]「な、なんだよ…！　わかりやすく言えよ」[p]
+Tsubomi「Cái phản ứng nhạt nhẽo gì vậy hả! ...Thiệt tình! Đồ ngốc nghếch!」[p]
+[舜]「G-Gì chứ...! Có gì thì nói rõ ràng ra xem nào.」[p]
 #蕾
-蕾「……だから」[p]
-ぽつりと口を開いたあと、蕾はしばらく黙り込んだ。[r]小さく息を吸って、でもすぐには言葉が続かない。[p]
-目を伏せたまま、唇がかすかに震えていた。[p]
+Tsubomi「……Thế nên là」[p]
+Sau khi thốt lên vài tiếng, Tsubomi chìm vào im lặng một lúc.[r]Em ấy khẽ hít một hơi, nhưng vẫn chưa thể nói tiếp ngay được.[p]
+Đôi mắt vẫn cụp xuống, bờ môi khẽ run rẩy.[p]
 #蕾
-蕾「……一度しか言わないからね」[p]
+Tsubomi「……Em chỉ nói một lần thôi đấy nhé.」[p]
 #蕾
-蕾「ちゃんと聞いてよ？」[p]
-静かに顔を上げて、目を合わせる。[r]その瞳には、もう迷いがなかった。[p]
+Tsubomi「Phải nghe cho kỹ đấy, biết chưa?」[p]
+Em ấy nhẹ nhàng ngẩng mặt lên, chạm ánh mắt với tôi.[r]Trong đôi mắt ấy, chẳng còn chút do dự nào nữa.[p]
 #蕾
-蕾「私……[舜]のこと、好きなの」[p]
+Tsubomi「Em…… thích anh, [舜].」[p]
 #蕾
-蕾「彼氏になってよ……」[p]
+Tsubomi「Làm bạn trai em đi……」[p]
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-[舜](マジかよ…！　俺の気持ちは──)
+[舜](Thật luôn sao...! Cảm xúc của mình là──)
 [_tb_end_text]
 
 [glink  color="btn_05_black"  storage="EV_kokuhaku_tubomi.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Đồng ý nhận lời"  _clickable_img=""  target="*yes"  ]
@@ -131,30 +131,30 @@
 [tb_eval  exp="f.koukando_tubomi_koibito=1"  name="koukando_tubomi_koibito"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
 [cm  ]
 [tb_start_text mode=1 ]
-一瞬、言葉が出てこなかった。だけど、心はもう決まっていた。[p]
-[舜]「……そういうことなら、もちろん」[p]
+Trong khoảnh khắc, tôi không thốt nên lời. Nhưng trong thâm tâm, tôi đã có câu trả lời.[p]
+[舜]「……Nếu đã nói vậy rồi, thì tất nhiên là anh đồng ý.」[p]
 #蕾
-蕾「ホント？　私でいいの？　生意気だし振り回されちゃうかもよ？」[p]
-[舜]「それでもいい。むしろ…めちゃくちゃ努力家で、可愛いし」[p]
+Tsubomi「Thật á? Là em cũng được sao? Em vừa xấc xược lại còn hay làm anh quay mòng mòng đấy nhé?」[p]
+[舜]「Thế cũng được. Trái lại... em rất nỗ lực, lại còn dễ thương nữa.」[p]
 #蕾
-蕾「なっ…いきなりかっこいいこと言うなんて。[舜]にドキッとさせられちゃったじゃない。」[p]
-ふと、蕾と目が合った。[r]その瞳の奥にある想いを、はっきりと感じた気がした。[p]
+Tsubomi「Gì chứ... tự dưng lại nói mấy lời ngầu thế. Làm tim em đập thình thịch vì [舜] rồi này.」[p]
+Chợt, ánh mắt tôi chạm ánh mắt Tsubomi.[r]Tôi có thể cảm nhận rõ ràng tình cảm ẩn sâu trong đôi mắt ấy.[p]
 #蕾
-蕾「……ねぇ」[p]
+Tsubomi「……Này」[p]
 #蕾
-蕾「今日は……このまま帰りたくない」[p]
+Tsubomi「Hôm nay…… em không muốn cứ thế này mà về đâu.」[p]
 #蕾
-蕾「もっと、[舜]と一緒にいたい」[p]
-震えるような声。だけど、その言葉には真っ直ぐな気持ちが込められていた。[p]
-[舜]「……じゃあ、うち来る？」[p]
+Tsubomi「Em muốn ở bên cạnh [舜] nhiều hơn nữa.」[p]
+Giọng nói như đang run rẩy. Nhưng những lời nói ấy lại chứa đựng tình cảm vô cùng chân thành.[p]
+[舜]「……Vậy, đến nhà anh nhé?」[p]
 #蕾
-蕾「うん…」[p]
+Tsubomi「Vâng...」[p]
 [_tb_end_text]
 
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
-そっと手を差し出すと、蕾の手がそっと重なった。[r]少しだけうつむきながらも、そのぬくもりはしっかりと伝わってくる。[p]
-俺はその手を優しく握りしめ、ふたりでゆっくりと歩き出した。[p]
+Tôi nhẹ nhàng chìa tay ra, Tsubomi liền khẽ đặt tay mình lên tay tôi.[r]Dù em ấy hơi cúi mặt xuống, nhưng hơi ấm ấy vẫn truyền đến thật rõ ràng.[p]
+Tôi dịu dàng nắm lấy bàn tay ấy, cả hai cùng nhau chậm rãi bước đi.[p]
 [_tb_end_text]
 
 [wait  time="2000"  ]
@@ -165,19 +165,19 @@
 
 [bg  time="1000"  method="crossfade"  storage="back_room_yoru0.png"  ]
 [tb_start_text mode=1 ]
-乱れた髪を指でそっと整えながら、蕾は恥ずかしそうに顔を伏せた。[p]
+Vừa dùng ngón tay vuốt lại mái tóc rối, Tsubomi vừa cúi mặt xuống đầy vẻ ngượng ngùng.[p]
 #蕾
-蕾「……なんか、顔見るの恥ずかしい。あんたは平気なの？　悔しい……」[p]
-その言葉に返す間もなく、蕾が身を寄せてきて、頬にふわりと唇が触れる。[r]驚いた俺の顔を見て、蕾はいたずらっぽく微笑んだ。[p]
+Tsubomi「……Tự dưng thấy xấu hổ khi nhìn mặt anh quá. Anh thấy bình thường sao? Tức thật đấy……」[p]
+Chưa kịp đáp lại lời nào, Tsubomi đã nép sát vào người tôi, đặt một nụ hôn phớt nhẹ lên má tôi.[r]Nhìn vẻ mặt ngạc nhiên của tôi, Tsubomi nở nụ cười đầy tinh nghịch.[p]
 #蕾
-蕾「ふふっ、余裕ぶってるの、ズルいもん」[p]
-俺が何か言うより早く、蕾はそっと手をつないだ。[r]この先、きっと彼女に振り回されっぱなしになる――そんな未来が、なんとなく目に浮かんだ。[p]
-でもそれは、案外悪くないかもしれない、なんて思った。[p]
+Tsubomi「Khc..., cứ tỏ ra thong dong như thế, anh ăn gian quá.」[p]
+Nhanh hơn cả lúc tôi kịp mở lời, Tsubomi đã khẽ đan tay vào tay tôi.[r]Từ nay về sau, chắc chắn tôi sẽ bị em ấy xoay như chong chóng mất thôi――một tương lai như thế bất chợt hiện lên trong tâm trí tôi.[p]
+Nhưng mà, tôi chợt nghĩ, như vậy có khi cũng không tệ chút nào.[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="sistem_omoide.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]蕾と恋人状態になった[resetfont][p]
+[font color="yellow"]Đã trở thành người yêu của Tsubomi[resetfont][p]
 [_tb_end_text]
 
 [jump  storage="room_yoru.ks"  target="*top"  ]
@@ -197,20 +197,20 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[舜]「ごめん…」[p]
+[舜]「Anh xin lỗi...」[p]
 #蕾
-蕾「…そう、そっか。ママのこと好きなの？」[p]
+Tsubomi「...Vậy à, ra là vậy. Anh thích mẹ em sao?」[p]
 [舜]「……」[p]
-蕾は涙を一杯にためて、笑い声を上げる。[p]
+Nước mắt lưng tròng, Tsubomi bật cười thành tiếng.[p]
 #蕾
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_00c.gif"]蕾「ダッサ、振られちゃったんだけど！　[r]でもスッキリしたからいいや…新しい1歩踏み出せそう」[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_00c.gif"]Tsubomi「Thảm hại quá, bị đá mất tiêu rồi! [r]Nhưng mà thấy nhẹ nhõm hẳn nên không sao... Chắc em sẽ bước tiếp được một bước mới thôi.」[p]
 #蕾
-蕾「ありがとね。じゃあ…」[p]
+Tsubomi「Cảm ơn anh nhé. Vậy thì...」[p]
 [_tb_end_text]
 
 [call  storage="character.ks"  target="*taijyou"  ]
 [tb_start_text mode=1 ]
-くるりと振り向き、彼女は走り去っていく。俺はその背中を見送った。[p]
+Em ấy quay ngoắt lại rồi chạy vụt đi. Tôi đứng lặng nhìn theo bóng lưng ấy.[p]
 [_tb_end_text]
 
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]

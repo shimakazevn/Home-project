@@ -71,7 +71,7 @@
 
 [call  storage="BGM.ks"  target="*jisitu"  ]
 [tb_start_text mode=1 ]
-[舜]（今日はどうしようか）[p]
+[舜]（Hôm nay nên làm gì đây nhỉ.）[p]
 [_tb_end_text]
 
 [bg  time="500"  method="crossfade"  storage="back_room1.png"  ]

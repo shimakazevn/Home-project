@@ -5,7 +5,7 @@
 
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-(どこに設置しようか。)[p]
+(Nên lắp đặt ở đâu đây.)[p]
 [_tb_end_text]
 
 [jump  storage="sinnyu_nagi_haiti.ks"  target="*top"  ]

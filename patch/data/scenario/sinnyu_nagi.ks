@@ -24,14 +24,14 @@
 [tb_show_message_window  ]
 [call  storage="BGM.ks"  target="*sinnyu"  ]
 [tb_start_text mode=1 ]
-(…お邪魔します…と)[p]
+(...Xin phép làm phiền nhé...)[p]
 [_tb_end_text]
 
 [wait  time="500"  ]
 *top
 
 [tb_start_text mode=4 ]
-(さてと、どうしようかな)
+(Giờ thì, phải làm sao đây.)
 [_tb_end_text]
 
 [wait  time="800"  ]
@@ -93,17 +93,17 @@
 [tb_show_message_window  ]
 [tb_eval  exp="f.item_on=0"  name="item_on"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 [tb_start_text mode=1 ]
-[舜]（もうこんな時間か…。あまり長居はすべきじゃないな）[p]
+[舜]（Đã giờ này rồi sao... Không nên nán lại quá lâu.）[p]
 [_tb_end_text]
 
 [stopbgm  time="1000"  fadeout="true"  ]
 [bg  time="1000"  method="crossfade"  storage="sora.jpg"  ]
 [tb_start_text mode=1 ]
-[舜]（よし、そろそろ帰ろう……）[p]
+[舜]（Được rồi, chuẩn bị về thôi......）[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]テンションが上がった[resetfont][p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.tension+=1"  name="tension"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -116,8 +116,8 @@
 
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
-[舜]（そういえば小型カメラを持っていたな）[p]
-[舜][font color="yellow"]（せっかく持って来たんだから、どこかにカメラを設置してみるかな）[resetfont][p]
+[舜]（Nhắc mới nhớ, mình có mang theo camera siêu nhỏ quay lén.）[p]
+[舜][font color="yellow"]（Đã cất công mang đến rồi, hay là thử lắp camera ở đâu đó xem sao nhỉ.）[resetfont][p]
 
 [_tb_end_text]
 

@@ -13,8 +13,8 @@
 [jump  storage="sinnyu_comhaiti.ks"  target="*nasi"  cond="f.item_com==0"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-(よし、ここに設置しよう)[p]
-小型カメラを1つ消費した[p]
+(Được rồi, đặt ở đây vậy.)[p]
+Đã tiêu hao 1 Camera siêu nhỏ[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.item_com-=1"  name="item_com"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
@@ -31,8 +31,8 @@
 [jump  storage="sinnyu_comhaiti.ks"  target="*nasi"  cond="f.item_com_bousui==0"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-(よし、ここに設置しよう)[p]
-防水小型カメラを1つ消費した[p]
+(Được rồi, đặt ở đây vậy.)[p]
+Đã tiêu hao 1 Camera chống nước[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.item_com_bousui-=1"  name="item_com_bousui"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
@@ -48,7 +48,7 @@
 
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-(カメラを持っていない。調達してこなくちゃな)[p]
+(Mình không mang camera. Phải đi kiếm mới được.)[p]
 [_tb_end_text]
 
 [return  ]

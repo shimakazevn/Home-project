@@ -12,7 +12,7 @@
 *nagi
 
 [tb_start_text mode=4 ]
-（どこに誘おうか）
+（Nên rủ cô ấy đi đâu đây nhỉ?）
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -50,9 +50,9 @@
 *nagi_H1_jyunai
 
 [tb_start_text mode=1 ]
-[chara_mod name="kyara_nagi_sabun2" cross="false" time="500" storage="chara/179/ADV_nagi_01_04c.gif" wait="false"]凪「もちろん。ゆっくり楽しもうね♡　早く帰りたくなっちゃうよ…」[p]
-凪「楽しみで、このあとずっとそわそわしちゃう…変に思われたらどうしよう」[p]
-凪「…イチャイチャしたあとは、そのまま泊まっていく？　[r]なんて、[舜]ちゃんは忙しいか」[p]
+[chara_mod name="kyara_nagi_sabun2" cross="false" time="500" storage="chara/179/ADV_nagi_01_04c.gif" wait="false"] Nagi「Tất nhiên rồi. Chúng mình cùng thong thả tận hưởng nhé♡ Tớ muốn về nhà sớm quá...」[p]
+Nagi「Tớ mong chờ đến mức từ giờ trở đi cứ bồn chồn mãi thôi... Lỡ bị mọi người thấy lạ thì sao đây.」[p]
+Nagi「...Tình tứ xong thì cậu ngủ lại luôn nhé?[r]Đùa thôi, chắc Shun-chan bận lắm nhỉ.」[p]
 [_tb_end_text]
 
 [jump  storage="EV_nagi_J.ks"  target="*EV1_top"  ]
@@ -60,12 +60,12 @@
 *nagi_H2_jyunai
 
 [tb_start_text mode=1 ]
-[chara_mod name="kyara_nagi_sabun2" cross="false" time="500" storage="chara/179/ADV_nagi_01_03c.gif" wait="false"]凪「えっ…それは…いいのかな？　誰かに見つかっちゃったらどうしよう」[p]
-[舜]「大丈夫だよ。この時間はバックルームに人も少ないし、個室トイレなら誰も入ってこないよ」[p]
-[舜]「少しイチャイチャするくらいなら問題ないって」[p]
-凪「でも…ドキドキしちゃう。短い時間なら…平気かな？」[p]
-凪「声、頑張ってこらえるから…あの…あんまり激しくしないでね？」[p]
-[舜]（それは凪次第かな）[p]
+[chara_mod name="kyara_nagi_sabun2" cross="false" time="500" storage="chara/179/ADV_nagi_01_03c.gif" wait="false"] Nagi「Hả... Như thế... có ổn không? Lỡ bị ai phát hiện thì sao đây.」[p]
+[舜]「Không sao đâu. Giờ này phòng nghỉ cho nhân viên ít người lắm, vào phòng vệ sinh riêng thì chẳng ai vào đâu.」[p]
+[舜]「Chỉ tình tứ một chút thôi thì không có vấn đề gì đâu.」[p]
+Nagi「Nhưng mà... tớ hồi hộp lắm. Nếu chỉ một lát thôi thì... chắc không sao đâu nhỉ?」[p]
+Nagi「Tớ sẽ cố gắng kìm nén giọng nói... nên là... cậu đừng làm mạnh quá nhé?」[p]
+[舜]（Cái đó thì còn tùy thuộc vào Nagi thôi.）[p]
 [_tb_end_text]
 
 [jump  storage="EV_nagi_J.ks"  target="*EV3_top"  ]
@@ -73,8 +73,8 @@
 *nagi_H3_jyunai
 
 [tb_start_text mode=1 ]
-[舜]「後で会いに行くから、仕事が終わったら連絡してよ」[p]
-凪「うんっ、また会えると思うと顔がニヤけちゃう。また連絡するね」[p]
+[舜]「Lát nữa anh sẽ đến gặp em, nên tan làm thì liên lạc cho anh nhé.」[p]
+Nagi「Ừm, cứ nghĩ đến chuyện lại được gặp anh là em lại cười tủm tỉm. Lát nữa em sẽ liên lạc nhé.」[p]
 [_tb_end_text]
 
 [jump  storage="EV_nagi_J.ks"  target="*EV2_top"  ]
@@ -111,9 +111,9 @@
 *nagi_H1_kyouai_talk
 
 [tb_start_text mode=1 ]
-凪「うん…今日は[舜]ちゃんにどんなことされちゃうんだろ…ドキドキしてる…」[p]
-凪「私が知らなかった気持ちいいこと、教えてくれるんでしょ…♡」[p]
-凪「楽しみ…もうムズムズしちゃってる♡　[r][舜]ちゃんが満足するまでめちゃくちゃにしてね…」[p]
+Nagi「Vâng... Không biết hôm nay anh Shun sẽ làm gì em đây... Em hồi hộp quá...」[p]
+Nagi「Anh sẽ dạy cho em những chuyện sung sướng mà em chưa từng biết đúng không...♡」[p]
+Nagi「Em mong chờ quá... Chỗ đó của em đã râm ran cả lên rồi đây này♡ [r]Anh Shun cứ làm em rối tung lên cho đến khi anh thỏa mãn nhé...」[p]
 [_tb_end_text]
 
 [jump  storage="EV_nagi_R.ks"  target="*EV1_top"  ]
@@ -121,9 +121,9 @@
 *nagi_H2_kyouai_talk
 
 [tb_start_text mode=1 ]
-[舜]「夜に部屋に行くから」[p]
-凪「あ…うん…これって、期待してもいいやつだよね？」[p]
-凪「楽しみで身体が熱くなって来ちゃった。なるべく早く帰るから……楽しみにしてるね」[p]
+[舜]「Tối anh sẽ sang phòng em.」[p]
+Nagi「A... Vâng... Chuyện này, em có thể mong chờ được đúng không?」[p]
+Nagi「Vì quá mong chờ mà cơ thể em đã nóng bừng lên rồi đây này. Em sẽ cố gắng về nhà sớm nhất có thể...... Em mong chờ lắm đấy nhé.」[p]
 [_tb_end_text]
 
 [jump  storage="EV_nagi_R.ks"  target="*EV2_top"  ]
@@ -131,9 +131,9 @@
 *nagi_H3_kyouai_talk
 
 [tb_start_text mode=1 ]
-凪「[舜]ちゃんの部屋で、めちゃくちゃにされちゃうんだ…」[p]
-凪「[舜]ちゃんがそうしてほしいって言うなら、なんでもするからね♡」[p]
-凪「もう我慢できないみたい…[r]今すぐ、[舜]ちゃんの家にに行きたいな…[舜]ちゃんを気持ちよくするよ」[p]
+Nagi「Được anh Shun làm cho rối tung lên ngay tại phòng anh ấy...」[p]
+Nagi「Chỉ cần anh Shun muốn, em sẽ làm bất cứ điều gì♡」[p]
+Nagi「Có vẻ như em không thể nhịn thêm được nữa rồi...[r]Em muốn đến nhà anh Shun ngay bây giờ... Em sẽ làm cho anh Shun sướng nhé.」[p]
 [_tb_end_text]
 
 [jump  storage="EV_nagi_R.ks"  target="*EV3_top"  ]
@@ -141,7 +141,7 @@
 *rinko
 
 [tb_start_text mode=4 ]
-（どこに誘おうか）
+（Nên rủ cô ấy đi đâu đây nhỉ?）
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -170,8 +170,8 @@
 *rinko_H1_jyunai
 
 [tb_start_text mode=1 ]
-[舜]「閉店後にまた来ますよ」[p]
-[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_01c.gif" wait="false"]凛子「ありがとう、待ってるね。…ふふ、また[舜]くんと会えると思うと、お仕事頑張れそう」[p]
+[舜]「Sau khi đóng cửa cháu sẽ lại đến.」[p]
+[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_01c.gif" wait="false"] Rinko「Cảm ơn cháu, cô sẽ đợi nhé. ...Hehe, cứ nghĩ đến chuyện lại được gặp cậu Shun là cô lại có thêm động lực để làm việc.」[p]
 [_tb_end_text]
 
 [jump  storage="EV_rinko_J.ks"  target="*EV1_top"  ]
@@ -179,8 +179,8 @@
 *rinko_H2_jyunai
 
 [tb_start_text mode=1 ]
-[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_04c.gif" wait="false"]凛子「あ…[舜]くん、また変なこと考えてる？　実は…私も同じ…ふふ、楽しみね」[p]
-凛子「でも、もちろんお店が終わった後よ？」[p]
+[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_04c.gif" wait="false"] Rinko「A... Cậu Shun lại đang nghĩ mấy chuyện kỳ lạ đúng không? Thực ra... chị cũng vậy... Hehe, mong chờ quá đi.」[p]
+Rinko「Nhưng mà, tất nhiên là phải sau khi đóng cửa tiệm đấy nhé?」[p]
 [_tb_end_text]
 
 [jump  storage="EV_rinko_J.ks"  target="*EV2_top"  ]
@@ -214,8 +214,8 @@
 *rinko_H1_kyouai_talk
 
 [tb_start_text mode=1 ]
-[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_04c.gif" wait="false"]凛子「[舜]くん…もしかして興奮してるの？　抑えきれないって顔してるから…」[p]
-凛子「ふふ…実は私もドキドキしてる。…お仕事が終わってから、ゆっくり遊ぼうね」[p]
+[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_04c.gif" wait="false"] Rinko「Cậu Shun... có phải em đang hưng phấn không? Nhìn mặt em cứ như không kìm nén được nữa ấy...」[p]
+Rinko「Hehe... Thực ra chị cũng đang hồi hộp lắm đây. ...Sau khi tan làm, chúng mình cùng thong thả vui vẻ nhé.」[p]
 [_tb_end_text]
 
 [jump  storage="EV_rinko_R.ks"  target="*EV2_top"  ]
@@ -223,8 +223,8 @@
 *rinko_H2_kyouai_talk
 
 [tb_start_text mode=1 ]
-[舜]「閉店後にまた来ますよ」[p]
-[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_00c.gif" wait="false"]凛子「ええ、分かったわ。…今日はちょっと予約が多くてバタバタしちゃうかも…」[p]
+[舜]「Sau khi đóng cửa cháu sẽ lại đến.」[p]
+[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_00c.gif" wait="false"] Rinko「Ừm, cô hiểu rồi. ...Hôm nay tiệm có hơi nhiều khách đặt trước nên chắc cô sẽ bận rộn lắm đây...」[p]
 [_tb_end_text]
 
 [jump  storage="EV_rinko_R.ks"  target="*EV1_top"  ]
@@ -232,9 +232,9 @@
 *rinko_H3_kyouai_talk
 
 [tb_start_text mode=1 ]
-凛子「……どうしたの？ 何か伝えたいことがあるのかな…。いつもと様子が違うもの」[p]
-舜「はい。俺たちにとってとても大事な話です。閉店後に、また来ます」[p]
-凛子「……そう、分かったわ」[p]
+Rinko「......Sao thế? Cháu có chuyện gì muốn nói với cô à... Trông cháu khác hẳn mọi ngày.」[p]
+Shun「Vâng. Một chuyện rất quan trọng đối với chúng ta. Sau khi đóng cửa, cháu sẽ lại đến.」[p]
+Rinko「......Vậy à, cô hiểu rồi.」[p]
 [_tb_end_text]
 
 [jump  storage="EV_3P.ks"  target="*top"  ]
@@ -242,7 +242,7 @@
 *tubomi
 
 [tb_start_text mode=4 ]
-（どこに誘おうか）
+（Nên rủ em ấy đi đâu đây nhỉ?）
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -271,8 +271,8 @@
 *tubomi_H1_jyunai
 
 [tb_start_text mode=1 ]
-[舜]「今日のシフト最後までだろ？また連絡するよ」[p]
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif" wait="false"]蕾「…うん、わかった。終わったらすぐに連絡するから！」[p]
+[舜]「Hôm nay em làm ca đến lúc đóng cửa đúng không? Lát nữa anh sẽ liên lạc lại nhé.」[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif" wait="false"] Tsubomi「...Vâng, em biết rồi. Làm xong em sẽ liên lạc ngay!」[p]
 [_tb_end_text]
 
 [jump  storage="EV_tubomi_J.ks"  target="*EV1_top"  ]
@@ -280,9 +280,9 @@
 *tubomi_H2_jyunai
 
 [tb_start_text mode=1 ]
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_00c.gif" wait="false"]蕾「部屋に連れ込もうとしてるの？　何するつもり…？　あ、言わなくていいからね？」[p]
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif" wait="false"]蕾「言われちゃうと…意識してこのあと変な感じになっちゃうでしょ…」[p]
-蕾「行ってからのお楽しみでいいから…あ、お楽しみって…恥ずかしいこと言っちゃった」[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_00c.gif" wait="false"] Tsubomi「Anh định lôi em vào phòng à? Định làm gì em thế...? A, anh không cần nói ra đâu nhé?」[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif" wait="false"] Tsubomi「Anh mà nói ra thì... từ giờ đến lúc đó em sẽ cứ để ý rồi thấy kỳ lạ lắm...」[p]
+Tsubomi「Cứ để đến đó rồi tận hưởng cũng được... A, tận hưởng gì chứ... Em lại lỡ lời nói mấy câu đáng xấu hổ rồi.」[p]
 [_tb_end_text]
 
 [jump  storage="EV_tubomi_J.ks"  target="*EV2_top"  ]
@@ -317,8 +317,8 @@
 *tubomi_H1_kyouai_talk
 
 [tb_start_text mode=1 ]
-[舜]「今日のシフト最後までだろ？また連絡するよ」[p]
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif" wait="false"]蕾「ん…じゃあ…お店が終わったあとにね…」[p]
+[舜]「Hôm nay em làm ca đến lúc đóng cửa đúng không? Lát nữa anh sẽ liên lạc lại nhé.」[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif" wait="false"] Tsubomi「Ưm... Vậy thì... sau khi đóng cửa tiệm nhé...」[p]
 [_tb_end_text]
 
 [jump  storage="EV_tubomi_R.ks"  target="*EV1_top"  ]
@@ -326,8 +326,8 @@
 *tubomi_H2_kyouai_talk
 
 [tb_start_text mode=1 ]
-[舜]「今日はどうする？仕事が終わったら家においでよ」[p]
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif" wait="false"]蕾「えっと…じゃあ、お邪魔しちゃおうかな…♡ そこまでお願いされちゃうと断れないわよね」[p]
+[舜]「Hôm nay em tính sao? Tan làm thì đến nhà anh đi.」[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif" wait="false"] Tsubomi「Ừm thì... Vậy em sang làm phiền anh nhé...♡ Anh đã nài nỉ đến thế thì em cũng không thể từ chối được.」[p]
 [_tb_end_text]
 
 [jump  storage="EV_tubomi_R.ks"  target="*EV2_top"  ]
@@ -335,8 +335,8 @@
 *tubomi_H3_kyouai_talk
 
 [tb_start_text mode=1 ]
-[舜]「そうだな…とりあえず凛子さんに会いに行こうか」[p]
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_00c.gif" wait="false"]蕾「もしかして、私達のことママに伝えるつもり…？」[p]
+[舜]「Để xem nào... Trước tiên chúng ta cứ đến gặp cô Rinko đi.」[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_00c.gif" wait="false"] Tsubomi「Không lẽ anh định nói chuyện của chúng mình cho mẹ biết sao...?」[p]
 [_tb_end_text]
 
 [jump  storage="EV_3P.ks"  target="*top"  ]

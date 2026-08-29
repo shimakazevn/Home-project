@@ -28,44 +28,44 @@
 
 [tb_start_text mode=1 ]
 #蕾
-蕾「はぁ、今日も疲れた～」[p]
-ついに「おかえりなさいませご主人様」の挨拶もなくなってしまったようだ。[r]蕾は心底呆れた顔で部屋に入ってくる。[p]
-[舜]「ずいぶん愛想のないメイドが来たな、ホントにアメリアちゃんか？」[p]
+Tsubomi「Hà, hôm nay mệt rã rời luôn~」[p]
+Rốt cuộc thì câu chào "Kính chào Chủ nhân đã về" cũng biến mất luôn rồi.[r]Tsubomi bước vào phòng với vẻ mặt chán nản tột độ.[p]
+[舜]「Hôm nay có cô hầu gái chẳng thân thiện chút nào đến phục vụ nhỉ, có đúng là bé Amelia không đấy?」[p]
 #蕾
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_02c.gif" wait="false"]蕾「くっ…おかえりなさいませご主人様。また帰ってきたんですね～」[p]
-[舜]「普段帰ってこないテイで話を進めるなよ…」[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_02c.gif" wait="false"]Tsubomi「Khừ... Kính chào Chủ nhân đã về. Ngài lại về nữa rồi à~」[p]
+[舜]「Đừng có nói cái kiểu như bình thường anh không về nhà chứ...」[p]
 #蕾
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_00c.gif" wait="false"]蕾「そのくらい察しなさいよ、ご主人様」[p]
-[舜]「今凛子さんに、施術の練習させてもらってるから。いろんなサービスを勉強してんの」[p]
-本当はただ蕾の顔を見に来てるだけなのだが…それっぽい言い訳をしてみる。[r]素直な蕾は「そうなんだ」と納得したようにうなずいた。[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_00c.gif" wait="false"]Tsubomi「Chủ nhân cũng phải tự hiểu đi chứ.」[p]
+[舜]「Anh đang được cô Rinko hướng dẫn thực hành massage mà. Anh phải học hỏi nhiều dịch vụ khác nhau chứ.」[p]
+Thật ra tôi chỉ đến để nhìn mặt Tsubomi thôi... nhưng tôi cứ thử bịa ra một lý do nghe có vẻ hợp lý xem sao.[r]Tsubomi ngây thơ gật gù ra chiều đã hiểu "Ra là vậy".[p]
 #蕾
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_07c.gif" wait="false"]蕾「ママ、美人だけど。変なことしないでよ？」[p]
-[舜]「わ、わかってるよ。真面目に働いてんだろ」[p]
-蕾はアルコールを俺の手に吹き付け、手のマッサージを始める。[r]集中すると少し下唇が出るらしい。可愛い一面を発見し、1人にやりとした。[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_07c.gif" wait="false"]Tsubomi「Mẹ tôi đẹp thì đẹp thật đấy. Nhưng anh đừng có làm trò gì kỳ quặc đấy nhé?」[p]
+[舜]「A-Anh biết rồi mà. Anh đang làm việc nghiêm túc cơ mà.」[p]
+Tsubomi xịt cồn lên tay tôi rồi bắt đầu massage tay.[r]Có vẻ như khi tập trung, môi dưới của cô ấy sẽ hơi trề ra. Khám phá ra một nét đáng yêu này, tôi khẽ nhếch mép cười thầm.[p]
 #蕾
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_00c.gif" wait="false"]蕾「それは知ってる…ママ褒めてたもん。よくあんたの話してる」[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_00c.gif" wait="false"]Tsubomi「Chuyện đó thì tôi biết... Mẹ khen anh suốt mà. Mẹ hay nhắc đến anh lắm.」[p]
 #蕾
-蕾「言った約束は絶対守るし、1回説明したら覚えてくれるし真面目だって……」[p]
+Tsubomi「Mẹ bảo anh đã hứa là tuyệt đối sẽ giữ lời, giải thích một lần là nhớ ngay, lại còn chăm chỉ nữa……」[p]
 #蕾
-蕾「それに、ママ、最近楽しそうなんだよね…あんたが来てからイキイキしてるっていうか」[p]
+Tsubomi「Với lại, dạo này trông mẹ có vẻ vui lắm... Từ lúc anh đến làm, mẹ cứ như được tiếp thêm sức sống ấy.」[p]
 #蕾
-蕾「私からしたら、あんたマジキモいんだけど。[r]でも…ありがとね。あんなに楽しそうなママ、久しぶりに見たから」[p]
-視線は俺の手の平から外さないまま、微かに微笑んだ。[r]なんだか急に恥ずかしくなり、考える間もなく口をついた言葉は──[p]
-[舜]「お礼ついでにしゃぶってくれてもいいけど？」[p]
+Tsubomi「Đối với tôi thì anh đúng là tởm lợm thật.[r]Nhưng mà... cảm ơn anh nhé. Lâu lắm rồi tôi mới thấy mẹ vui vẻ như vậy.」[p]
+Vẫn không rời mắt khỏi lòng bàn tay tôi, cô ấy khẽ mỉm cười.[r]Không hiểu sao tự dưng tôi lại thấy xấu hổ, chưa kịp suy nghĩ thì lời nói đã tuôn ra khỏi miệng──[p]
+[舜]「Nhân tiện cảm ơn thì cô mút cu cho anh luôn cũng được đấy?」[p]
 #蕾
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_07c.gif" wait="false"]蕾「は？」[p]
-[舜]（くっ…つい冗談が…でもこれ絶対怒られるやつだろ──）[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_07c.gif" wait="false"]Tsubomi「Hả?」[p]
+[舜]（Khỉ thật... lỡ đùa quá trớn rồi... Kiểu gì cũng bị ăn chửi cho xem──）[p]
 #蕾
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_00c.gif" wait="false"]蕾「いいよ」[p]
-今度は俺が「は？」という番だった。[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_00c.gif" wait="false"]Tsubomi「Được thôi.」[p]
+Lần này đến lượt tôi phải thốt lên "Hả?".[p]
 #蕾
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif" wait="false"]蕾「お、お店には内緒にして…あと割増しで料金払ってくれるなら」[p]
-視線は合わせないまま、恥ずかしそうにモゴモゴする。[r]その初めて見る様子に…たまらなく興奮した。[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif" wait="false"]Tsubomi「Nh-Nhưng anh phải giữ bí mật với tiệm đấy... Với lại anh phải trả thêm tiền boa cho tôi nữa.」[p]
+Không dám nhìn thẳng vào mắt tôi, cô ấy ấp úng với vẻ mặt ngượng ngùng.[r]Được chứng kiến bộ dạng lần đầu tiên cô ấy thể hiện này... khiến tôi hưng phấn không chịu nổi.[p]
 #蕾
-蕾「オーディション行くにはお金が必要なの。レッスンも受けようと思って」[p]
+Tsubomi「Tôi cần tiền để đi thử vai. Tôi cũng định đăng ký lớp học kỹ năng nữa.」[p]
 #蕾
-蕾「だから…いいよ。脱いで」[p]
-蕾の気が変わる前にと、慌てて立ち上がりズボンと下着を下ろす。[r]すでにその気になった性器が元気よく待っていた。[p]
+Tsubomi「Thế nên... tôi đồng ý. Anh cởi đồ ra đi.」[p]
+Sợ Tsubomi đổi ý, tôi vội vàng đứng dậy tuột quần dài và quần lót xuống.[r]Dương vật đã rạo rực từ nãy giờ đang cương cứng chực chờ.[p]
 [_tb_end_text]
 
 [stopbgm  time="2000"  fadeout="true"  ]
@@ -75,11 +75,11 @@
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
 #蕾
-蕾「こ、これを…」[p]
-[舜]「そう、舐めるんだよ。やっぱ怖気づいたか？」[p]
+Tsubomi「C-Cái này á...」[p]
+[舜]「Đúng thế, cô phải liếm nó đấy. Sao, sợ rồi à?」[p]
 #蕾
-蕾「そんなわけないでしょ…！」[p]
-するとムッとした顔になり、蕾は勢いよく性器の先端を咥える。[r]すぐにかりっと固い物が当たり、思わず飛び上がってしまった。[p]
+Tsubomi「Làm gì có chuyện đó...!」[p]
+Lập tức sưng sỉa mặt mày, Tsubomi ngậm phập lấy phần đỉnh dương vật.[r]Ngay sau đó, một vật cứng cạ vào khiến tôi bất giác giật nảy mình.[p]
 [_tb_end_text]
 
 [bg  time="2000"  method="crossfade"  storage="event/tubomi2.gif"  ]
@@ -87,38 +87,38 @@
 [call  storage="BGM.ks"  target="*love2"  ]
 [playse  volume="60"  time="2000"  buf="0"  storage="fera1.mp3"  loop="true"  fadein="true"  ]
 [tb_start_text mode=1 ]
-[舜]「いてて、歯立てるなよ…！」[p]
+[舜]「Ây da, đừng có cắn chứ...!」[p]
 #蕾
-蕾「しょうがないでしょ…初めてなんだから。うぇ、変な味…舌ビリビリするし苦いんだけど」[p]
-拙いながら、舌をチロチロ出して亀頭とカリ首を舐め始める。[p]
-温かい舌先の感触がダイレクトに伝わってくる。[r]くすぐったいような心地良さに吐息が漏れた。[p]
-[舜]「ん、くっ…気持ちいい」[p]
+Tsubomi「Biết làm sao được... Lần đầu của tôi mà. Ọe, mùi vị kỳ quá... Đầu lưỡi cứ tê rần mà còn đắng nữa.」[p]
+Dù còn vụng về, nhưng cô ấy đã bắt đầu thò lưỡi ra liếm láp phần quy đầu và rãnh khấc.[p]
+Cảm giác ấm áp từ đầu lưỡi truyền đến trực tiếp.[r]Sự nhồn nhột dễ chịu khiến tôi buột miệng thở hắt ra.[p]
+[舜]「Ưm, a... sướng quá.」[p]
 #蕾
-蕾「ちゅ、ちゅぷ、ん、ホント？　もっとしてあげる…んむっ」[p]
+Tsubomi「Chụt, chụt, ưm, thật không? Vậy tôi làm thêm cho anh nhé... ưm.」[p]
 
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-蕾はためらうことなく性器をぱっくりと咥える。[p]
-口内の熱と、ぬるりとした感触に腰が引けそうになるのを必死でこらえた。[p]
-きっと蕾のことだ、俺が快感で崩れれば馬鹿にするに決まっている。[r]ぐっと堪え、踏ん張った。[p]
+Tsubomi không chút do dự há miệng ngậm trọn lấy dương vật.[p]
+Hơi nóng cùng cảm giác trơn ướt trong khoang miệng khiến tôi muốn nhũn cả hông, nhưng tôi vẫn cố cắn răng chịu đựng.[p]
+Với tính cách của Tsubomi, nếu tôi mà gục ngã vì sung sướng thì chắc chắn sẽ bị cô nàng cười nhạo cho xem.[r]Tôi cố kìm nén, gắng gượng chống đỡ.[p]
 #蕾
-蕾「ん、ふぅ、ちゅ、息荒くなってる……」[p]
-俺の興奮が伝線したのかもしれない。[r]彼女も赤く染まった頬をへこませ、思い切り吸い上げる。[p]
-思わず彼女の頭を抑え込み、根元まで押し付けた。[p]
+Tsubomi「Ưm, phù, chụt, anh thở hổn hển rồi kìa……」[p]
+Có lẽ sự hưng phấn của tôi đã lây sang cô ấy.[r]Đôi má ửng đỏ của Tsubomi hóp lại, ra sức mút mạnh.[p]
+Tôi bất giác đè đầu cô ấy xuống, ấn sâu vào tận gốc.[p]
 #蕾
-蕾「ん、おえっ…苦し…んんっ…」[p]
-[舜]「はーっ、はーっ…もっと吸い上げるんだよ…」[p]
+Tsubomi「Ưm, ọe... ngạt thở quá... ưm...」[p]
+[舜]「Hà, hà... mút mạnh hơn nữa đi...」[p]
 #蕾
-蕾「んッ、そんなこと、言ったってぇ」[p]
+Tsubomi「Ưm, anh có nói thế thì...」[p]
 #蕾
-蕾「ん、ちゅ、ちゅぷ、なんか余計苦くなってきたぁ。じゅるるるるっ」[p]
-蕾は目を閉じたまま、必死に頭を振り始める。[p]
-周りに聞こえるんじゃないかと思うほど、[r]じゅぷじゅぷと激しい水音と彼女の吐息が漏れ聞こえていた。[p]
-拙い吸い上げる感触に、あっという間に限界が近づいてきてしまう──[p]
-[舜]「…あぁ、もう出る…！」[p]
-喉の１番奥…柔らかなところへ押し当て、思い切り欲望を吐き出す。[p]
-蕾は涙目になりながら口に含んだものを苦し気に飲み込んだ。[p]
+Tsubomi「Ưm, chụt, chụt, sao tự dưng lại thấy đắng hơn thế này. Chùn chụt.」[p]
+Tsubomi nhắm tịt mắt, bắt đầu tuyệt vọng lắc đầu qua lại.[p]
+Âm thanh nhóp nhép dữ dội cùng tiếng thở dốc của cô ấy vang lên,[r]đến mức tôi cứ ngỡ những người xung quanh cũng có thể nghe thấy.[p]
+Cảm giác mút mát vụng về ấy khiến tôi nhanh chóng chạm đến giới hạn──[p]
+[舜]「...A, anh ra mất...!」[p]
+Tôi ấn chặt vào tận sâu trong cuống họng... nơi mềm mại nhất, rồi thỏa sức phóng thích dục vọng.[p]
+Tsubomi ứa nước mắt, nhọc nhằn nuốt chửng thứ chất lỏng đang ngậm trong miệng.[p]
 [_tb_end_text]
 
 [mask  time="500"  effect="fadeIn"  color="0xffffff"  ]
@@ -127,18 +127,18 @@
 [wait  time="2000"  ]
 [mask_off  time="2000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[舜]「お、おい。飲む必要ないんだって」[p]
+[舜]「N-Này. Anh đã bảo là không cần phải nuốt đâu mà.」[p]
 #蕾
-蕾「その分、お代はちゃんともらうからね？」[p]
-[舜]「わかったよ…！」[p]
+Tsubomi「Đổi lại, em sẽ nhận tiền công đàng hoàng đấy nhé?」[p]
+[舜]「Anh biết rồi...!」[p]
 #蕾
-蕾「それから…私こういうことしたの初めてなんだから。誰にでもしてるって思わないで」[p]
-よく見れば蕾の頬は真っ赤に染まっている。[p]
-ときめきながら、俺は何度もうなずいた。[p]
+Tsubomi「Với lại... Đây là lần đầu tiên em làm chuyện này đấy. Đừng có nghĩ là em làm thế với bất kỳ ai nhé.」[p]
+Nhìn kỹ thì hai má Tsubomi đang đỏ bừng.[p]
+Trái tim đập rộn ràng, tôi gật đầu hết lần này đến lần khác.[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]テンションが上がった[resetfont][p]
+[font color="yellow"]Chỉ số hưng phấn đã tăng[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.tension+=2"  name="tension"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]

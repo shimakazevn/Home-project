@@ -4,8 +4,8 @@
 *tenjyou1
 
 [tb_start_text mode=1 ]
-[舜]（ここから撮影すれば、部屋全体がばっちり映りそうだな）[p]
-[舜]（どんな景色が拝めるかな？）[p]
+[舜]（Nếu quay từ đây thì chắc chắn sẽ thấy được toàn bộ căn phòng.）[p]
+[舜]（Không biết sẽ được chiêm ngưỡng cảnh tượng gì đây nhỉ?）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_tenjyou+=1"  name="bussyoku_tenjyou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -13,8 +13,8 @@
 *tenjyou2
 
 [tb_start_text mode=1 ]
-[舜]（落ち着く色の照明だよな…こだわって選んでるのかな）[p]
-[舜]（今度凛子さんに聞いてみよっかな）[p]
+[舜]（Ánh sáng màu này dễ chịu thật... Chắc cô ấy cất công chọn lựa kỹ lắm.）[p]
+[舜]（Lần tới hỏi cô Rinko thử xem sao.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_tenjyou+=1"  name="bussyoku_tenjyou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -22,8 +22,8 @@
 *tenjyou3
 
 [tb_start_text mode=1 ]
-[舜]（この明るさで施術を受けたら、眠くなるだろうなぁ…）[p]
-[舜]（っていうかエロい雰囲気にもなりやすそうだな）[p]
+[舜]（Được massage dưới ánh sáng thế này thì buồn ngủ chết mất...）[p]
+[舜]（Nói đúng hơn là cũng dễ tạo bầu không khí gợi tình đấy.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_tenjyou+=1"  name="bussyoku_tenjyou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -31,8 +31,8 @@
 *tana1
 
 [tb_start_text mode=1 ]
-[舜]（オイルとクリームだ…普段凛子さんが使ってるものか）[p]
-[舜]（肌にいいものを選んでるって言ってたっけ）[p]
+[舜]（Dầu và kem dưỡng... Chắc là loại cô Rinko hay dùng.）[p]
+[舜]（Hình như cô ấy bảo là chọn loại tốt cho da thì phải.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_tana_massaji+=1"  name="bussyoku_tana_massaji"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -40,14 +40,14 @@
 *tana2
 
 [tb_start_text mode=1 ]
-[舜]（ん…これは…パスケース？　お客さんの忘れものかな）[p]
-[舜]（中にもいくらか入ってそうだな）[p]
-[舜]（これは神様からのご褒美ってことで、いただいておこう）[p]
+[舜]（Hửm... Đây là... bao đựng thẻ à? Khách để quên sao.）[p]
+[舜]（Có vẻ bên trong cũng có chút tiền đấy.）[p]
+[舜]（Cứ coi như đây là phần thưởng của Thượng đế, xin nhận vậy.）[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]5000円を拾った[resetfont][p]
+[font color="yellow"]Đã nhặt được 5000 Yên[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.money_updated+=5000"  name="money_updated"  cmd="+="  op="t"  val="5000"  val_2="undefined"  ]
@@ -57,14 +57,14 @@
 *tana3
 
 [tb_start_text mode=1 ]
-[舜]（小銭入れか…2000円入ってるなぁ）[p]
-[舜]（貰ってもバレない、よな…持ち主には悪いけど）[p]
-[舜]（大切に使わせてもらおっと）[p]
+[舜]（Ví đựng tiền xu à... Có 2000 Yên trong này.）[p]
+[舜]（Có lấy chắc cũng không ai biết đâu, nhỉ... Hơi có lỗi với chủ nhân của nó.）[p]
+[舜]（Mình sẽ sử dụng thật cẩn thận.）[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]2000円を拾った[resetfont][p]
+[font color="yellow"]Đã nhặt được 2000 Yên[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.money_updated+=5000"  name="money_updated"  cmd="+="  op="t"  val="5000"  val_2="undefined"  ]
@@ -74,9 +74,9 @@
 *bed1
 
 [tb_start_text mode=1 ]
-[舜]（凛子さん、このベッドでお客さんにいやらしいことしてたりとか…）[p]
-[舜]（…そんなわけないよな、凛子さんに限って）[p]
-[舜]（やめやめ、嫉妬するだけ損だ）[p]
+[舜]（Cô Rinko, không biết có làm trò đồi bại gì với khách trên chiếc giường này không...）[p]
+[舜]（...Làm gì có chuyện đó, cô Rinko thì chắc chắn không rồi.）[p]
+[舜]（Thôi thôi, ghen tuông chỉ tổ thiệt thân.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_bed+=1"  name="bussyoku_bed"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -84,8 +84,8 @@
 *bed2
 
 [tb_start_text mode=1 ]
-[舜]（俺にもマッサージ覚えてほしいって言ってたよな…）[p]
-[舜]（練習して、少しでも凛子さんの役に立たなくちゃな）[p]
+[舜]（Cô ấy cũng bảo muốn mình học massage mà...）[p]
+[舜]（Phải luyện tập để giúp ích được phần nào cho cô Rinko mới được.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_bed+=1"  name="bussyoku_bed"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -93,9 +93,9 @@
 *bed3
 
 [tb_start_text mode=1 ]
-[舜]（ここで昼寝とか…いやいや、さすがにそれはまずいよな）[p]
-[舜]（いつか凛子さんと2人でここで…）[p]
-[舜]（考えるだけで興奮してきたぞ）[p]
+[舜]（Ngủ trưa ở đây... Không không, thế thì không ổn chút nào.）[p]
+[舜]（Biết đâu một ngày nào đó, chỉ có mình và cô Rinko ở đây...）[p]
+[舜]（Mới nghĩ thôi đã thấy hưng phấn rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_bed+=1"  name="bussyoku_bed"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -103,8 +103,8 @@
 *katen1
 
 [tb_start_text mode=1 ]
-[舜]（ここ、いつもカーテン閉まってるよな…）[p]
-[舜]（外は…そうか、人通りの多い国道だもんな。カーテンが開いてたら落ち着かないか…）[p]
+[舜]（Chỗ này lúc nào rèm cũng đóng nhỉ...）[p]
+[舜]（Bên ngoài là... À đúng rồi, quốc lộ đông người qua lại mà. Mở rèm thì làm sao mà yên tâm được...）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_katen+=1"  name="bussyoku_katen"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -112,8 +112,8 @@
 *katen2
 
 [tb_start_text mode=1 ]
-[舜]（カーテン閉まってれば、外からも見えないのか…）[p]
-[舜]（ということは、ここで何してもオッケーってことだよな？）[p]
+[舜]（Đóng rèm thế này thì bên ngoài cũng không nhìn thấy gì...）[p]
+[舜]（Nói cách khác là, ở đây làm gì cũng được đúng không?）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_katen+=1"  name="bussyoku_katen"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -121,8 +121,8 @@
 *katen3
 
 [tb_start_text mode=1 ]
-[舜]（カーテンからもいい匂いがする）[p]
-[舜]（柔軟剤かな？　それともスプレーを振りかけてるのか？　さすが凛子さん、こだわってるんだな）[p]
+[舜]（Rèm cửa cũng có mùi thơm.）[p]
+[舜]（Nước xả vải chăng? Hay là xịt nước hoa? Quả là cô Rinko, chú trọng đến từng chi tiết.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_katen+=1"  name="bussyoku_katen"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -130,9 +130,9 @@
 *raito1
 
 [tb_start_text mode=1 ]
-[舜]（このライトの位置から撮影したら、全体がばっちり映りそうだな）[p]
-[舜]（凛子さんの裸も…どんなふうにシャワー浴びてるのかもわかるのか）[p]
-[舜]（うん、悪くないな…）[p]
+[舜]（Nếu quay từ vị trí bóng đèn này, chắc chắn sẽ thấy được toàn bộ.）[p]
+[舜]（Cơ thể trần truồng của cô Rinko... Cả dáng vẻ lúc tắm cũng sẽ thấy hết sao.）[p]
+[舜]（Ừm, không tồi đâu...）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_raito+=1"  name="bussyoku_raito"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -140,8 +140,8 @@
 *raito2
 
 [tb_start_text mode=1 ]
-[舜]（施術室と違って、明るいライトだな）[p]
-[舜]（全体もよく見える…撮影したら細かい部分まで映りそうだ）[p]
+[舜]（Khác với phòng massage, đèn ở đây sáng thật.）[p]
+[舜]（Nhìn rõ toàn bộ luôn... Quay phim thì chắc thấy rõ từng chi tiết mất.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_raito+=1"  name="bussyoku_raito"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -149,8 +149,8 @@
 *raito3
 
 [tb_start_text mode=1 ]
-[舜]（ライトの周りまで、じっくり見る奴はいないもんなぁ）[p]
-[舜]（カメラを仕掛けてもバレなさそうだよな）[p]
+[舜]（Đâu có ai rảnh rỗi mà nhìn kỹ xung quanh bóng đèn làm gì.）[p]
+[舜]（Đặt camera ở đây chắc không bị phát hiện đâu.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_raito+=1"  name="bussyoku_raito"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -158,9 +158,9 @@
 *ameniteli1
 
 [tb_start_text mode=1 ]
-[舜]（なるほど、これが凛子さんこだわりのボディソープか）[p]
-[舜]（無添加で肌に優しいって言ってたよな）[p]
-[舜]（ドラッグストアでは見たことない種類だなぁ…）[p]
+[舜]（Ra vậy, đây là sữa tắm mà cô Rinko ưng ý sao.）[p]
+[舜]（Cô ấy bảo là loại không phụ gia, dịu nhẹ cho da thì phải.）[p]
+[舜]（Loại này chưa thấy bán ở hiệu thuốc bao giờ...）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_ameniteli+=1"  name="bussyoku_ameniteli"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -168,9 +168,9 @@
 *ameniteli2
 
 [tb_start_text mode=1 ]
-[舜]（凛子さんも同じもの使ってるんだろうな…）[p]
-[舜]（だからあんなに肌が綺麗なのか。俺も使ってみるか…？）[p]
-[舜]（男でも肌が綺麗なほうがいいに決まってるもんな）[p]
+[舜]（Chắc cô Rinko cũng dùng loại này...）[p]
+[舜]（Thảo nào da cô ấy đẹp thế. Mình cũng dùng thử xem sao...?）[p]
+[舜]（Đàn ông thì da đẹp cũng tốt mà.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_ameniteli+=1"  name="bussyoku_ameniteli"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -178,9 +178,9 @@
 *ameniteli3
 
 [tb_start_text mode=1 ]
-[舜]（な、なんて書いてあるんだ？　ハーバル、アロマ…）[p]
-[舜]（だめだ、難しくて読めない…！）[p]
-[舜]（とりあえず、いいものってことだけわかったからいいか）[p]
+[舜]（V-Viết cái gì đây? Herbal, Aroma...）[p]
+[舜]（Chịu, khó đọc quá...!）[p]
+[舜]（Tóm lại là đồ tốt, thế là được rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_ameniteli+=1"  name="bussyoku_ameniteli"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -188,9 +188,9 @@
 *hurodoa1
 
 [tb_start_text mode=1 ]
-[舜]（凛子さん、来ては…ないな）[p]
-[舜]（あんまりここでウロウロしてると怪しまれるか）[p]
-[舜]（いろいろ見終わったら、早いトコ出なきゃな）[p]
+[舜]（Cô Rinko, không... đến đây.）[p]
+[舜]（Cứ lảng vảng ở đây mãi nhỡ bị nghi ngờ thì sao.）[p]
+[舜]（Xem xong xuôi thì phải chuồn lẹ thôi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_hurodoa+=1"  name="bussyoku_hurodoa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -198,8 +198,8 @@
 *hurodoa2
 
 [tb_start_text mode=1 ]
-[舜]（あっちに誰か立ってると、影でわかるのか）[p]
-[舜]（シャワー使用中にうっかりパウダールームに入らないようにしないと）[p]
+[舜]（Có ai đứng đằng kia là thấy bóng in lên liền à.）[p]
+[舜]（Phải cẩn thận kẻo lúc có người tắm lại đi nhầm vào phòng trang điểm.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_hurodoa+=1"  name="bussyoku_hurodoa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -207,8 +207,8 @@
 *hurodoa3
 
 [tb_start_text mode=1 ]
-[舜]（向こうからも、シャワー使ってる影が見えるのか）[p]
-[舜]（１度くらい凛子さんがシャワー浴びてるシルエット見たいもんだな）[p]
+[舜]（Từ bên kia cũng thấy bóng người đang tắm sao.）[p]
+[舜]（Ít nhất cũng muốn thấy bóng dáng cô Rinko lúc tắm một lần.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_hurodoa+=1"  name="bussyoku_hurodoa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -216,8 +216,8 @@
 *syawaroom1
 
 [tb_start_text mode=1 ]
-[舜]（シャワールームも綺麗になってんなぁ）[p]
-[舜]（俺の家の風呂とは全然違うわ…）[p]
+[舜]（Phòng tắm cũng sạch sẽ thật.）[p]
+[舜]（Khác một trời một vực với phòng tắm nhà mình...）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_syawaroom+=1"  name="bussyoku_syawaroom"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -225,9 +225,9 @@
 *syawaroom2
 
 [tb_start_text mode=1 ]
-[舜]（めちゃくちゃいい匂い…シャンプーかボディソープの匂いか）[p]
-[舜]（凛子さんこだわりのものを置いてあるって言ってたもんな）[p]
-[舜]（そういえば凛子さんと同じ匂いがするぞ）[p]
+[舜]（Mùi thơm quá... Mùi dầu gội hay sữa tắm đây.）[p]
+[舜]（Cô Rinko có nói là để toàn đồ cô ấy ưng ý mà.）[p]
+[舜]（Nhắc mới nhớ, mùi này giống hệt mùi của cô Rinko.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_syawaroom+=1"  name="bussyoku_syawaroom"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -235,8 +235,8 @@
 *syawaroom3
 
 [tb_start_text mode=1 ]
-[舜]（凛子さんもここでシャワー浴びたりするんだよな？）[p]
-[舜]（施術で汗かいたらサッパリ汗流すって言ってたし…）[p]
+[舜]（Cô Rinko cũng hay tắm ở đây nhỉ?）[p]
+[舜]（Cô ấy bảo làm việc đổ mồ hôi xong là phải tắm cho sạch sẽ mà...）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_syawaroom+=1"  name="bussyoku_syawaroom"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -244,7 +244,7 @@
 *kagami1
 
 [tb_start_text mode=1 ]
-[舜]（鏡もピカピカだなぁ。さすが凛子さん…掃除が行き届いてる）[p]
+[舜]（Gương cũng sáng bóng luôn. Quả là cô Rinko... Dọn dẹp cẩn thận thật.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_kagami+=1"  name="bussyoku_kagami"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -252,7 +252,7 @@
 *kagami2
 
 [tb_start_text mode=1 ]
-[舜]「おっと、拭きのこしが。……俺、できる男になってきてる気がする」[p]
+[舜]「Ái chà, vẫn còn sót chỗ chưa lau này. ......Cảm giác mình đang dần trở thành một người đàn ông tháo vát rồi đấy.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_kagami+=1"  name="bussyoku_kagami"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -260,8 +260,8 @@
 *kagami3
 
 [tb_start_text mode=1 ]
-[舜]（おっと、髪が乱れてる…一応身だしなみは気を付けないと）[p]
-[舜]（蕾にもうるさく言われそうだし…鏡は見とくべきだな）[p]
+[舜]（Chết, tóc rối rồi... Phải chú ý vẻ bề ngoài mới được.）[p]
+[舜]（Kiểu gì cũng bị Tsubomi cằn nhằn cho xem... Phải soi gương kỹ mới được.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_kagami+=1"  name="bussyoku_kagami"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -269,8 +269,8 @@
 *gomibako1
 
 [tb_start_text mode=1 ]
-[舜]（ゴミ箱の中も…綺麗になってる。こまめに捨ててるのか）[p]
-[舜]（ついチェックしちゃうの、もはや職業病だな…）[p]
+[舜]（Trong thùng rác cũng... sạch trơn. Chắc là thường xuyên vứt rác đây.）[p]
+[舜]（Cứ tiện tay kiểm tra, đúng là bệnh nghề nghiệp rồi...）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_gomibako_massaji+=1"  name="bussyoku_gomibako_massaji"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -278,8 +278,8 @@
 *gomibako2
 
 [tb_start_text mode=1 ]
-[舜]（ここに凛子さんのものが捨ててあったら持ち帰りたいとこだけど）[p]
-[舜]（残念。ここには何も捨ててないか…）[p]
+[舜]（Nếu có đồ của cô Rinko vứt ở đây thì mình cũng muốn mang về đấy.）[p]
+[舜]（Tiếc thật. Chẳng có gì vứt ở đây cả...）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_gomibako_massaji+=1"  name="bussyoku_gomibako_massaji"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -287,8 +287,8 @@
 *gomibako3
 
 [tb_start_text mode=1 ]
-[舜]（コンドームとか捨ててあったら、ショック受けるところだけど）[p]
-[舜]（特に何もなくて本当によかった）[p]
+[舜]（Nếu mà vứt bao cao su ở đây thì chắc mình sốc chết mất.）[p]
+[舜]（Cũng may là không có gì đặc biệt.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_gomibako_massaji+=1"  name="bussyoku_gomibako_massaji"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]

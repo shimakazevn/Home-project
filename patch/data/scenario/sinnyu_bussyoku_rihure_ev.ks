@@ -4,8 +4,8 @@
 *isyou1
 
 [tb_start_text mode=1 ]
-[舜]（メイド服だ…　眩しい…眩しすぎる）[p]
-[舜]（この甘い匂い…。ふーっ……理性、頑張れ）[p]
+[舜]（Đồng phục hầu gái... Chói mắt... Chói mắt quá đi.）[p]
+[舜]（Mùi hương ngọt ngào này... Phù...... Lý trí ơi, cố lên.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_isyou+=1"  name="bussyoku_isyou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -13,8 +13,8 @@
 *isyou2
 
 [tb_start_text mode=1 ]
-[舜]（この格好で『ご主人様』って呼ばれるのは男の夢だよな）[p]
-[舜]（……俺、ちょっと疲れてんのかも）[p]
+[舜]（Mặc bộ đồ này rồi gọi "Chủ nhân" đúng là giấc mơ của mọi thằng đàn ông.）[p]
+[舜]（......Chắc mình hơi mệt rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_isyou+=1"  name="bussyoku_isyou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -22,8 +22,8 @@
 *isyou3
 
 [tb_start_text mode=1 ]
-[舜]（シコりたいところだけど…今はダメだ。完全にアウト。詰む）[p]
-[舜]（……深呼吸しよ、俺）[p]
+[舜]（Muốn sục một phát ghê... nhưng giờ thì không được. Hoàn toàn không được. Xong đời mất.）[p]
+[舜]（......Hít thở sâu nào.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_isyou+=1"  name="bussyoku_isyou"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -31,9 +31,9 @@
 *reizouko1
 
 [tb_start_text mode=1 ]
-[舜]（このペットボトル…名前書いてある。『アメリア』って蕾だよな）[p]
-[舜]（まあ、一口くらい…）[p]
-[舜]（…うわ、うま。……って、俺なにしてんだ）[p]
+[舜]（Chai nước này... có ghi tên. "Amelia" là Tsubomi nhỉ.）[p]
+[舜]（Mà, uống một ngụm chắc không sao...）[p]
+[舜]（...Oa, ngon quá. ......Ủa, mình đang làm cái quái gì vậy.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_reizouko_rihure+=1"  name="bussyoku_reizouko_rihure"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -41,8 +41,8 @@
 *reizouko2
 
 [tb_start_text mode=1 ]
-[舜]（あの女に見つかったら、めんどくさいことになりそうだな）[p]
-[舜]（でもまぁ…バレなきゃいいんだよ、バレなきゃ）[p]
+[舜]（Nhỡ bị con nhỏ đó phát hiện thì phiền phức to.）[p]
+[舜]（Nhưng mà... không bị phát hiện là được chứ gì.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_reizouko_rihure+=1"  name="bussyoku_reizouko_rihure"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -50,8 +50,8 @@
 *reizouko3
 
 [tb_start_text mode=1 ]
-[舜]（ちゃんと元の場所に戻しておかないとな。…よし、ラベルの向きもバッチリ）[p]
-[舜]（慎重に、慎重に。油断は禁物だ）[p]
+[舜]（Phải để lại đúng vị trí cũ mới được. ...Ngon, nhãn chai cũng hướng đúng rồi.）[p]
+[舜]（Cẩn thận, cẩn thận. Không được lơ là.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_reizouko_rihure+=1"  name="bussyoku_reizouko_rihure"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -59,14 +59,14 @@
 *kyukei1
 
 [tb_start_text mode=1 ]
-[舜]（可愛い財布発見。中身は…結構入ってるなぁ）[p]
-[舜]（やっぱリフレ嬢は儲かるんだな）[p]
-[舜]（申し訳ないけど、数枚だけもらっておこう）[p]
+[舜]（Phát hiện một cái ví xinh xắn. Bên trong... cũng nhiều tiền phết.）[p]
+[舜]（Làm hầu gái bấm huyệt đúng là hái ra tiền nhỉ.）[p]
+[舜]（Xin lỗi nhé, nhưng tôi xin vài tờ vậy.）[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]2000円を拾った[resetfont][p]
+[font color="yellow"]Đã nhặt được 2000 Yên[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.money_updated+=2000"  name="money_updated"  cmd="+="  op="t"  val="2000"  val_2="undefined"  ]
@@ -76,13 +76,13 @@
 *kyukei2
 
 [tb_start_text mode=1 ]
-[舜]（こっちも忘れものかな？　お、キャラクタものの小銭入れ）[p]
-[舜]（ごめんなさい、大切に使わせてもらいます）[p]
+[舜]（Bên này cũng có đồ để quên à? Ồ, ví tiền xu hình nhân vật hoạt hình.）[p]
+[舜]（Xin lỗi nhé, tôi sẽ sử dụng cẩn thận.）[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]500円を拾った[resetfont][p]
+[font color="yellow"]Đã nhặt được 500 Yên[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.money_updated+=500"  name="money_updated"  cmd="+="  op="t"  val="500"  val_2="undefined"  ]
@@ -92,14 +92,14 @@
 *kyukei3
 
 [tb_start_text mode=1 ]
-[舜]（お客さんからのプレゼント、置きっぱなしじゃん）[p]
-[舜]（うーん、さすがにぬいぐるみはないよな…俺でもわかるぞ）[p]
-[舜]（あれ？　でも中に現金入ってるぞ。ラッキー）[p]
+[舜]（Quà khách tặng mà vứt lăn lóc thế này.）[p]
+[舜]（Hừm, tặng gấu bông thì đúng là bó tay... Mình còn biết điều đó cơ mà.）[p]
+[舜]（Ủa? Nhưng bên trong có tiền mặt này. May quá.）[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]2000円を拾った[resetfont][p]
+[font color="yellow"]Đã nhặt được 2000 Yên[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.money_updated+=2000"  name="money_updated"  cmd="+="  op="t"  val="2000"  val_2="undefined"  ]
@@ -109,8 +109,8 @@
 *kouisitu1
 
 [tb_start_text mode=1 ]
-[舜]（女の子が使う控室って、もっといい匂いだと思ったんだけど）[p]
-[舜]（なんか…男の部室みたいな匂いだな）[p]
+[舜]（Tưởng phòng nghỉ của con gái thì phải thơm tho lắm chứ.）[p]
+[舜]（Sao mùi... cứ như phòng câu lạc bộ nam sinh thế này.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_kouisitu+=1"  name="bussyoku_kouisitu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -118,9 +118,9 @@
 *kouisitu2
 
 [tb_start_text mode=1 ]
-[舜]（部屋の一部が更衣室として使われているようだ。[r]…おっ、シフト表発見…けっこうみんな自由に休んでるのか）[p]
-[舜]（その中では蕾、ちゃんと律儀に出勤してんじゃん）[p]
-[舜]（ああ見えて、真面目なんだろうな）[p]
+[舜]（Có vẻ một góc phòng được dùng làm chỗ thay đồ.[r]...Ồ, phát hiện bảng phân ca... Mọi người nghỉ phép thoải mái gớm.）[p]
+[舜]（Trong số đó thì Tsubomi đi làm chăm chỉ đấy chứ.）[p]
+[舜]（Nhìn thế thôi chứ chắc cũng nghiêm túc lắm.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_kouisitu+=1"  name="bussyoku_kouisitu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -128,8 +128,8 @@
 *kouisitu3
 
 [tb_start_text mode=1 ]
-[舜]（『ミミリン』『ジョディ』『きゃわたん』源氏名、自由だな）[p]
-[舜]（アメリアがまだいい感じに聞こえるのが不思議だ…）[p]
+[舜]（"Mimirin", "Jody", "Kyawatan", nghệ danh tự do thật đấy.）[p]
+[舜]（Cái tên Amelia nghe còn lọt tai nhất mới lạ...）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_kouisitu+=1"  name="bussyoku_kouisitu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -137,7 +137,7 @@
 *pureto1
 
 [tb_start_text mode=1 ]
-[舜]（使用中プレートでもつけておけば、誰も入って来ないのでは？）[p]
+[舜]（Treo biển Đang sử dụng thì chắc không ai vào đâu nhỉ?）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_pureto+=1"  name="bussyoku_pureto"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -145,8 +145,8 @@
 *pureto2
 
 [tb_start_text mode=1 ]
-[舜]（カーテンが閉まっているいる時は中で着替えてるってことだ）[p]
-[舜]（覗くにしても、イタズラするにしてもチャンスかも）[p]
+[舜]（Rèm đóng tức là có người đang thay đồ bên trong.）[p]
+[舜]（Dù là nhìn trộm hay giở trò thì đây cũng là cơ hội.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_pureto+=1"  name="bussyoku_pureto"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -154,8 +154,8 @@
 *pureto3
 
 [tb_start_text mode=1 ]
-[舜]（ここに女の子が今いますって言ってるようなもんだし）[p]
-[舜]（使用中って見せるの、本当は危ないよな…俺みたいな奴がいる場合は）[p]
+[舜]（Thế này chẳng khác nào báo cho người ta biết là có con gái ở đây.）[p]
+[舜]（Treo biển Đang sử dụng thật ra rất nguy hiểm... Nếu có những kẻ như mình.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_pureto+=1"  name="bussyoku_pureto"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -163,8 +163,8 @@
 *tenjyou1
 
 [tb_start_text mode=1 ]
-[舜]（天井にカメラつけたら…上から撮影できるかも）[p]
-[舜]（そうすれば着替えも撮影できるかな？）[p]
+[舜]（Gắn camera trên trần nhà... có thể quay từ trên xuống.）[p]
+[舜]（Như vậy thì có quay được cảnh thay đồ không nhỉ?）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_tenjyou_rihure+=1"  name="bussyoku_tenjyou_rihure"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -172,8 +172,8 @@
 *tenjyou2
 
 [tb_start_text mode=1 ]
-[舜]（まさか誰かに撮られてるなんて思わないだろうしな…）[p]
-[舜]（油断してる着替えシーン、ばっちり撮れちゃいそうだ）[p]
+[舜]（Chắc không ai nghĩ mình đang bị quay lén đâu...）[p]
+[舜]（Cảnh thay đồ hớ hênh, chắc chắn sẽ quay được trọn vẹn.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_tenjyou_rihure+=1"  name="bussyoku_tenjyou_rihure"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -181,8 +181,8 @@
 *tenjyou3
 
 [tb_start_text mode=1 ]
-[舜]（天井を掃除してるふりして、カメラを仕掛ければいいか）[p]
-[舜]（あとは誰もいないタイミングを見計らうしかないかな）[p]
+[舜]（Cứ giả vờ lau trần nhà rồi lén đặt camera là được.）[p]
+[舜]（Giờ chỉ còn cách canh lúc không có ai thôi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_tenjyou_rihure+=1"  name="bussyoku_tenjyou_rihure"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -190,7 +190,7 @@
 *yuka1
 
 [tb_start_text mode=1 ]
-[舜]（特に変わったところはなさそうだな…）[p]
+[舜]（Có vẻ không có gì đặc biệt...）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_yuka+=1"  name="bussyoku_yuka"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -198,7 +198,7 @@
 *yuka2
 
 [tb_start_text mode=1 ]
-[舜]（この辺にカメラをつけたら、下からのローアングルも狙えそうだな）[p]
+[舜]（Đặt camera quanh đây thì có thể quay được góc thấp từ dưới lên.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_yuka+=1"  name="bussyoku_yuka"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -206,13 +206,13 @@
 *yuka3
 
 [tb_start_text mode=1 ]
-[舜]（ん？誰かの忘れものか？　靴下…の下に何か──）[p]
-[舜]（お金だ。忘れていくなんて不用心だな。頂いておこう）[p]
+[舜]（Hửm? Đồ ai bỏ quên à? Dưới chiếc tất... có cái gì đó──）[p]
+[舜]（Là tiền. Bỏ quên thế này đúng là bất cẩn. Xin nhận vậy.）[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]2000円を拾った[resetfont][p]
+[font color="yellow"]Đã nhặt được 2000 Yên[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.money_updated+=2000"  name="money_updated"  cmd="+="  op="t"  val="2000"  val_2="undefined"  ]
@@ -222,9 +222,9 @@
 *kami1
 
 [tb_start_text mode=1 ]
-[舜]（ハグ3000円に添い寝5000円…やっぱり高いな）[p]
-[舜]（マッサージしかしない、って蕾は言ってたけど）[p]
-[舜]（実際はここでエロいこともしてんだろうな）[p]
+[舜]（Ôm 3000 Yên, ngủ cùng 5000 Yên... Đúng là đắt thật.）[p]
+[舜]（Tsubomi bảo là chỉ massage thôi nhưng mà...）[p]
+[舜]（Thực tế chắc cũng làm mấy trò đồi bại ở đây chứ gì.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_kami+=1"  name="bussyoku_kami"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -232,9 +232,9 @@
 *kami2
 
 [tb_start_text mode=1 ]
-[舜]（表向きは「何もありません」って態度だけど…まあ、限りなくグレーだよな）[p]
-[舜]（蕾も、もしかしてそういうことしてんのかなって思うけど…）[p]
-[舜]（あの性格だしな。……いやいや、さすがにないだろ）[p]
+[舜]（Bề ngoài thì tỏ thái độ "Không có gì đâu" nhưng... Mà, cũng xám xịt lắm.）[p]
+[舜]（Mình cũng nghĩ không biết Tsubomi có làm mấy chuyện đó không...）[p]
+[舜]（Với cái tính cách đó thì... Không không, chắc chắn là không có đâu.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_kami+=1"  name="bussyoku_kami"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -242,8 +242,8 @@
 *kami3
 
 [tb_start_text mode=1 ]
-[舜]（交渉次第でエッチもしてくれるってことか…）[p]
-[舜]（なんかやる気出てきたぞ）[p]
+[舜]（Nghĩa là tùy vào thỏa thuận mà có thể làm tình luôn sao...）[p]
+[舜]（Tự dưng thấy có hứng ghê.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_kami+=1"  name="bussyoku_kami"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -251,8 +251,8 @@
 *gomibako1
 
 [tb_start_text mode=1 ]
-[舜]（変なものは…流石に捨ててないか）[p]
-[舜]（コンドームくらいあるかと思ったけどな）[p]
+[舜]（Mấy thứ linh tinh... chắc không vứt ở đây đâu nhỉ.）[p]
+[舜]（Tưởng ít ra cũng phải có bao cao su chứ.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_gomibako_rihure+=1"  name="bussyoku_gomibako_rihure"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -260,8 +260,8 @@
 *gomibako2
 
 [tb_start_text mode=1 ]
-[舜]（綺麗なもんだな…いや、こんなに何もないのはおかしい）[p]
-[舜]（女の子が自分で捨ててんのか…証拠隠滅ってやつだな）[p]
+[舜]（Sạch sẽ phết... Không, trống trơn thế này mới là lạ.）[p]
+[舜]（Mấy cô gái tự vứt đi sao... Tiêu hủy chứng cứ đây mà.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_gomibako_rihure+=1"  name="bussyoku_gomibako_rihure"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -269,8 +269,8 @@
 *gomibako3
 
 [tb_start_text mode=1 ]
-[舜]（綺麗になってると、掃除する側としては楽でいいや）[p]
-[舜]（もし万が一何か見つけた時は…その女の子に話してみてもいいな）[p]
+[舜]（Sạch sẽ thế này thì người dọn dẹp cũng nhàn.）[p]
+[舜]（Nhỡ đâu tìm thấy thứ gì đó... mang ra nói chuyện với cô gái đó cũng hay.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_gomibako_rihure+=1"  name="bussyoku_gomibako_rihure"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -278,8 +278,8 @@
 *bed1
 
 [tb_start_text mode=1 ]
-[舜]（金額次第で女の子とエロいことできるのか…？）[p]
-[舜]（蕾はあり得ないって言ってたけど、他の子はしてんのかなぁ）[p]
+[舜]（Tùy số tiền mà có thể làm chuyện đồi bại với các cô gái sao...?）[p]
+[舜]（Tsubomi bảo là không có chuyện đó, nhưng mấy đứa khác thì sao nhỉ.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_bed_rihure+=1"  name="bussyoku_bed_rihure"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -287,8 +287,8 @@
 *bed2
 
 [tb_start_text mode=1 ]
-[舜]（たまに面倒な客もいるって聞くし、見てるよりよっぽどキツいんだろうな）[p]
-[舜]（それでも笑顔でいられるの、すげぇよ）[p]
+[舜]（Nghe nói thỉnh thoảng cũng có khách khó chiều, chắc công việc này vất vả hơn mình tưởng.）[p]
+[舜]（Vậy mà vẫn giữ được nụ cười, đỉnh thật.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_bed_rihure+=1"  name="bussyoku_bed_rihure"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -296,8 +296,8 @@
 *bed3
 
 [tb_start_text mode=1 ]
-[舜]（うまくいけば、俺でもワンチャンあるか？）[p]
-[舜]（……いやいや、ここで目立ったら全部パーだ。冷静にいけ）[p]
+[舜]（Biết đâu mình cũng có cơ hội thì sao?）[p]
+[舜]（......Không không, gây sự chú ý ở đây là hỏng bét. Phải bình tĩnh.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_bed_rihure+=1"  name="bussyoku_bed_rihure"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -305,8 +305,8 @@
 *telissyu1
 
 [tb_start_text mode=1 ]
-[舜]（うわ、またティッシュ少なくなってる。補充、忘れないようにしないと）[p]
-[舜]（いや、それより在庫考えてる俺…完全にバイト脳だな）[p]
+[舜]（Oa, khăn giấy lại sắp hết rồi. Phải nhớ bổ sung mới được.）[p]
+[舜]（Không, lại còn lo nghĩ đến hàng tồn kho... Đầu óc mình hoàn toàn thuộc về công việc làm thêm rồi.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_telissyu+=1"  name="bussyoku_telissyu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -314,7 +314,7 @@
 *telissyu2
 
 [tb_start_text mode=1 ]
-[舜]（まぁ、ティッシュの使い道なんて想像つくよな）[p]
+[舜]（Mà, khăn giấy dùng để làm gì thì cũng đoán được phần nào.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_telissyu+=1"  name="bussyoku_telissyu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -322,8 +322,8 @@
 *telissyu3
 
 [tb_start_text mode=1 ]
-[舜]（ここでヤってたのかもって考えると、変にテンション上がるけど）[p]
-[舜]（冷静になると、やっぱ許せねぇな）[p]
+[舜]（Nghĩ đến việc họ làm chuyện đó ở đây, tự dưng thấy hưng phấn lạ thường.）[p]
+[舜]（Nhưng nghĩ lại thì, đúng là không thể tha thứ được.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_telissyu+=1"  name="bussyoku_telissyu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]

@@ -20,7 +20,7 @@
 [wait  time="1000"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（よし、誰もいないな）[p]
+[舜]（Tốt, không có ai.）[p]
 [_tb_end_text]
 
 [wait  time="500"  ]
@@ -33,7 +33,7 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=4 ]
-[舜]（さてと、人が来ないうちにさっさと終わらせよう）
+[舜]（Giờ thì, giải quyết nhanh gọn trước khi có người đến nào.）
 [_tb_end_text]
 
 [wait  time="800"  ]
@@ -73,7 +73,7 @@
 [tb_show_message_window  ]
 [mask_off  time="2000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[舜]（長居は無用だからな。そろそろ帰るか）[p]
+[舜]（Ở lâu cũng chẳng ích gì. Chắc nên về thôi.）[p]
 [_tb_end_text]
 
 [stopbgm  time="1000"  ]

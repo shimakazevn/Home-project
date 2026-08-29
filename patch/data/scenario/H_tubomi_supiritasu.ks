@@ -38,7 +38,7 @@
 
 [call  storage="system.ks"  target="*fade_out"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_supi_tubomi_kaisi1.mp3" buf="2"]蕾「ん～♡　だめらってばぁ…♡　何するつもりなの～っ？　ああ…体あっつい…♡」[p]
+[playse storage="tubomi/voice_supi_tubomi_kaisi1.mp3" buf="2"] Tsubomi「Ưm... Ly rượu Spirytus này mạnh quá... Đầu em quay cuồng hết cả rồi...」[p]
 [_tb_end_text]
 
 *top2
@@ -318,9 +318,9 @@
 [jump  storage="H_tubomi_supiritasu.ks"  target="*sounyu_skip"  cond="f.H_sounyu==1"  ]
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_supi_tubomi_sou1.mp3" buf="2"]蕾「あぁぁぁぁっ♡　お、おっき…♡　全部っ、入らないぃ♡」[p]
-[舜]「大丈夫、ほら入った…」[p]
-[playse storage="tubomi/voice_supi_tubomi_sou2.mp3" buf="2"]蕾「ふーっ、ふーっ♡　入ったぁ♡　いっぱいになってる…♡」[p]
+[playse storage="tubomi/voice_supi_tubomi_sou1.mp3" buf="2"] [舜]「Uống từ từ thôi chứ, loại này nồng độ cồn cao lắm đấy」[p]
+Tsubomi「Nhưng mà... Uống vào người thấy nóng bừng lên... Thích lắm á...♡」[p]
+[playse storage="tubomi/voice_supi_tubomi_sou2.mp3" buf="2"] [舜]「Trông mặt em đỏ ửng hết cả lên rồi kìa, say rồi đúng không?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sounyu=1"  name="H_sounyu"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -552,9 +552,9 @@
 
 [cm  ]
 [tb_start_text mode=1 ]
-[舜]「ぶっかけるぞ！　体にかけていいんだよなっ？」[p]
-蕾「かけてっ♡　かけてぇ♡　精子でドロドロにしてほしいのっ♡　匂いつけてぇ♡」[p]
-[舜]「くっ…出るっ！　んんんっ！」[p]
+Tsubomi「Hì hì... Em không say đâu mà... Chỉ là thấy người rạo rực ngứa ngáy thôi...♡」[p]
+Dẫn chuyện|Tsubomi vừa nói vừa tự cởi bỏ từng cúc áo, để lộ làn da ửng hồng quyến rũ.[p]
+Tsubomi「Anh [舜] ơi... Nhìn em đi này... Em nóng quá à...♡」[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="0"  fadeout="true"  ]
@@ -569,8 +569,8 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あっ…♡　ひぅぅぅっ♡　んっ♡　はっ♡　はっ♡　すっごい匂い…♡」[p]
-蕾「ふーっ♡　ふーっ♡　ふーっ♡　はぁ…♡　ベタベタになっちゃったじゃない…♡」[p]
+[舜]「Tsubomi... Em biết mình đang làm gì không đấy?」[p]
+Tsubomi「Biết chứ... Em đang muốn quyến rũ anh đấy... Không được sao?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_bukkake_tubomi+=1"  name="Hresult_bukkake_tubomi"  cmd="+="  op="t"  val="1"  ]
@@ -585,9 +585,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あぁぁっ♡　いっぱいになってる…♡　こんなの全部中に出されちゃったら…」[p]
-蕾「あ、赤ちゃん…デキちゃう、かも…♡　んんっ♡　ヤダ、考えたら体が…♡」[p]
-蕾「ウズウズってしてきちゃった…♡」[p]
+Dẫn chuyện|Em ấy sà vào lòng tôi, đôi bàn tay mềm mại bắt đầu lần mò xuống hạ bộ.[p]
+Tsubomi「Oa... Chỗ này của anh cương cứng ngắc rồi kìa... Thích ghê á...♡」[p]
+[舜]「Tại em cứ quyến rũ thế này ai mà chịu nổi」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_bukkake_tubomi+=1"  name="Hresult_bukkake_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -597,11 +597,11 @@
 
 [cm  ]
 [tb_start_text mode=1 ]
-[舜]「あーもう、出るっ…中に出すぞ…！」[p]
-蕾「な、中っ？　はぁ、あっ♡　もうっ…好きにして♡」[p]
-[舜]「おねだりできるだろ…！」[p]
-蕾「頂戴♡　つ、蕾の中にぃっ♡　熱いのっ、いっぱい出してぇぇぇっ♡」[p]
-[舜]「出るっ…！　あぁぁぁぁっ！」[p]
+Tsubomi「Thế thì đừng chịu đựng nữa... Mau ăn thịt em đi mà...♡」[p]
+Dẫn chuyện|Dưới tác dụng của hơi men nồng nặc, Tsubomi trở nên táo bạo và cuồng nhiệt hơn bao giờ hết.[p]
+Tsubomi「A... a... đâm mạnh vào đi anh! Đừng để em phải chờ đợi nữa!」[p]
+[舜]「Được thôi, chiều theo ý em hết!」[p]
+Dẫn chuyện|Cả hai quấn lấy nhau trong cơn say cuồng loạn, từng cú thúc như thiêu đốt màn đêm.[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="0"  fadeout="true"  ]
@@ -630,8 +630,8 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひぅっ♡　あぁぁぁぁっ♡　しゅごいっ♡　あひっ♡　ビュビュってっ♡　出てるっ♡　あうぅぅぅ♡」[p]
-蕾「おちんちん、ビクビクって♡　中で跳ねてるのぉぉ♡　あふぅ♡　あああぁぁ♡」[p]
+Tsubomi「Sướng quá đi mất... Rượu ngon cùng với con cu tuyệt hảo của anh... Em lên thiên đường mất rồi...♡」[p]
+[舜]「Bắn nhé, Tsubomi!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_nakadasi_tubomi+=1"  name="Hresult_nakadasi_tubomi"  cmd="+="  op="t"  val="1"  ]
@@ -645,9 +645,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あぁぁぁっ♡　ずっとっ、中で動いてる…♡　はっ、はっ、はっ♡　ビュルビュルいってる♡」[p]
-蕾「そんなにっ、入らないってばぁ♡　精子出しすぎっ…♡」[p]
-蕾「お腹パンパンになって膨れちゃうぅぅ♡」[p]
+Tsubomi「Bắn đi anh! Tưới đẫm cơn say này cho em đi!」[p]
+Dẫn chuyện|Dòng tinh dịch cuồng nhiệt phun trào, kết thúc một đêm say đắm đầy hoang dại.[p]
+Tsubomi「Hà... hà... Say rượu lẫn say tình... Em chết mê chết mệt anh mất rồi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_nakadasi_tubomi+=1"  name="Hresult_nakadasi_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]

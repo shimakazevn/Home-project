@@ -5,7 +5,7 @@
 
 [tb_eval  exp="f.pure_kettei_on=0"  name="pure_kettei_on"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 [tb_start_text mode=4 ]
-（何を渡そうか）
+（Nên tặng gì đây nhỉ?）
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -50,7 +50,7 @@
 
 [tb_eval  exp="f.pure_kettei_on=0"  name="pure_kettei_on"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 [tb_start_text mode=4 ]
-（何を渡そうか）
+（Nên tặng gì đây nhỉ?）
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -90,7 +90,7 @@
 
 [tb_eval  exp="f.pure_kettei_on=0"  name="pure_kettei_on"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 [tb_start_text mode=4 ]
-（何を渡そうか）
+（Nên tặng gì đây nhỉ?）
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -130,7 +130,7 @@
 
 [tb_eval  exp="f.pure_kettei_on=0"  name="pure_kettei_on"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 [tb_start_text mode=4 ]
-（何を渡そうか）
+（Nên tặng gì đây nhỉ?）
 [_tb_end_text]
 
 [tb_start_tyrano_code]

@@ -104,14 +104,14 @@ $('.zettyou_active').css({
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_j_nagi_zettyou1_1.mp3" buf="1"]凪「なんか…変なのきちゃう…！　あっ、あぁぁぁっ♡」[p]
+[playse storage="nagi/voice_j_nagi_zettyou1_1.mp3" buf="1"]Nagi「Cảm giác... kỳ lạ quá...! A, aaaa♡」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_j_nagi_zettyou1_2.mp3" buf="1"]凪「はぁ、はぁ…やだ、恥ずかしい…今のがイッちゃうって感覚なんだ…」[p]
-[playse storage="nagi/voice_j_nagi_zettyou1_3.mp3" buf="1"]凪「頭の中、フワフワして…まだ体が変…」[p]
+[playse storage="nagi/voice_j_nagi_zettyou1_2.mp3" buf="1"]Nagi「Hà, hà... thôi mà, xấu hổ quá... cảm giác vừa rồi là lên đỉnh sao...」[p]
+[playse storage="nagi/voice_j_nagi_zettyou1_3.mp3" buf="1"]Nagi「Đầu óc em cứ lâng lâng... cơ thể vẫn còn kỳ lạ lắm...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_nagi+=1"  name="Hresult_ikaseta_nagi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -141,14 +141,14 @@ $('.zettyou_active').css({
 *zettyou2
 
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_j_nagi_zettyou2_1.mp3" buf="1"]凪「はぁ、はっ…だめ…また気持ちいいのこみ上げてきて…うっ、あぁぁぁっ」[p]
+[playse storage="nagi/voice_j_nagi_zettyou2_1.mp3" buf="1"]Nagi「Hà, hà... không được... cảm giác sướng lại trào lên rồi... ư, aaaa」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[舜]「上手にイケたな」[p]
-[playse storage="nagi/voice_j_nagi_zettyou2_2.mp3" buf="1"]凪「もう、わざわざ言わないでよ…恥ずかしいから…」[p]
+[舜]「Em lên đỉnh giỏi lắm đấy.」[p]
+[playse storage="nagi/voice_j_nagi_zettyou2_2.mp3" buf="1"]Nagi「Thôi mà, anh đừng cố tình nói ra chứ... xấu hổ lắm...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_nagi+=1"  name="Hresult_ikaseta_nagi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -178,14 +178,14 @@ $('.zettyou_active').css({
 *zettyou3
 
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_j_nagi_zettyou3_1.mp3" buf="1"]凪「またイッちゃう…！　見ないで、恥ずかしいから…あ、あぁぁぁぁっ♡」[p]
+[playse storage="nagi/voice_j_nagi_zettyou3_1.mp3" buf="1"]Nagi「Lại lên đỉnh mất thôi...! Anh đừng nhìn mà, xấu hổ lắm... a, aaaa♡」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_j_nagi_zettyou3_2.mp3" buf="1"]凪「はぁっ、はぁ…はぁ…んっ…♡　気持ちよくて…変になっちゃいそう」[p]
-[playse storage="nagi/voice_j_nagi_zettyou3_3.mp3" buf="1"]凪「も～、顔見ないでってばぁ」[p]
+[playse storage="nagi/voice_j_nagi_zettyou3_2.mp3" buf="1"]Nagi「Hà, hà... hà... ưm...♡ Sướng quá... chắc em trở nên kỳ lạ mất thôi.」[p]
+[playse storage="nagi/voice_j_nagi_zettyou3_3.mp3" buf="1"]Nagi「Đã bảo anh đừng có nhìn mặt em rồi mà.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_nagi+=1"  name="Hresult_ikaseta_nagi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -215,14 +215,14 @@ $('.zettyou_active').css({
 *zettyou4
 
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_j_nagi_zettyou4_1.mp3" buf="1"]凪「あっ…あぁぁぁっ♡　嘘、またイク、イクイクイクっ♡」[p]
+[playse storage="nagi/voice_j_nagi_zettyou4_1.mp3" buf="1"]Nagi「A... aaaa♡ Đùa chứ, lại ra, ra, ra mất thôi♡」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_j_nagi_zettyou4_2.mp3" buf="1"]凪「あん、あぁぁ…おへその下、キュンキュンってしてる…」[p]
-[playse storage="nagi/voice_j_nagi_zettyou4_3.mp3" buf="1"]凪「すごく切ないの…♡　私の体、変になっちゃったのかな？」[p]
+[playse storage="nagi/voice_j_nagi_zettyou4_2.mp3" buf="1"]Nagi「A, aaaa... Dưới rốn em cứ giật thót liên hồi...」[p]
+[playse storage="nagi/voice_j_nagi_zettyou4_3.mp3" buf="1"]Nagi「Khó chịu lắm cơ...♡ Cơ thể em, trở nên kỳ lạ mất rồi sao?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_nagi+=1"  name="Hresult_ikaseta_nagi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -252,14 +252,14 @@ $('.zettyou_active').css({
 *zettyou5
 
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_j_nagi_zettyou5_1.mp3" buf="1"]凪「もうだめ、イケないからぁぁっ♡　あ、あっ、あぁぁぁぁっ♡」[p]
+[playse storage="nagi/voice_j_nagi_zettyou5_1.mp3" buf="1"]Nagi「Không được nữa đâu, em không lên đỉnh được nữa đâu♡ A, a, aaaa♡」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_j_nagi_zettyou5_2.mp3" buf="1"]凪「も…意地悪なんだから…はぁ、はっ、はぁ…体に力入らなくなっちゃったぁ♡」[p]
-[playse storage="nagi/voice_j_nagi_zettyou5_3.mp3" buf="1"]凪「だって…すっごく気持ちいいんだもん…」[p]
+[playse storage="nagi/voice_j_nagi_zettyou5_2.mp3" buf="1"]Nagi「Anh... xấu tính lắm... hà, hà, hà... cơ thể em không còn chút sức lực nào nữa rồi♡」[p]
+[playse storage="nagi/voice_j_nagi_zettyou5_3.mp3" buf="1"]Nagi「Tại vì... sướng quá đi mất mà...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_nagi+=1"  name="Hresult_ikaseta_nagi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -289,14 +289,14 @@ $('.zettyou_active').css({
 *zettyou6
 
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_j_nagi_zettyou6_1.mp3" buf="1"]凪「どうしよう、またイッちゃうの…イク、あ、イクイクっ♡　あ、あぁぁぁんっ♡」[p]
+[playse storage="nagi/voice_j_nagi_zettyou6_1.mp3" buf="1"]Nagi「Làm sao đây, em lại lên đỉnh mất... ra, a, ra, ra mất♡ A, aaaa♡」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[舜]「すっごい可愛い…」[p]
-[playse storage="nagi/voice_j_nagi_zettyou6_2.mp3" buf="1"]凪「恥ずかしい…でも幸せ♡　エッチってこんなに気持ちいいんだね♡」[p]
+[舜]「Đáng yêu quá đi mất...」[p]
+[playse storage="nagi/voice_j_nagi_zettyou6_2.mp3" buf="1"]Nagi「Xấu hổ quá... nhưng mà hạnh phúc lắm♡ Làm tình lại sướng đến thế này cơ đấy♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_nagi+=1"  name="Hresult_ikaseta_nagi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -359,14 +359,14 @@ $('.zettyou_active').css({
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_r_nagi_zettyou1_1.mp3" buf="1"]凪「あ、だめ…変…体が熱く…あっ♡　あっ♡　あっ♡　あぁぁぁぁっ♡」[p]
+[playse storage="nagi/voice_r_nagi_zettyou1_1.mp3" buf="1"]Nagi「A, không được... kỳ lạ quá... cơ thể nóng ran... a♡ A♡ A♡ Aaaa♡」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[舜]「イク時はちゃんとイクって言わなきゃ…」[p]
-[playse storage="nagi/voice_r_nagi_zettyou1_2.mp3" buf="1"]凪「ごめんなさい…ちゃんとイクって言いますから…♡」[p]
+[舜]「Lúc lên đỉnh thì phải nói đàng hoàng là lên đỉnh chứ...」[p]
+[playse storage="nagi/voice_r_nagi_zettyou1_2.mp3" buf="1"]Nagi「Em xin lỗi... em sẽ nói đàng hoàng là lên đỉnh mà...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_nagi+=1"  name="Hresult_ikaseta_nagi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -397,14 +397,14 @@ $('.zettyou_active').css({
 *zettyou2_nikubenki
 
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_r_nagi_zettyou2_1.mp3" buf="1"]凪「んんっ♡　ふっ、ふぅっ♡　あ、イク…イッちゃいます…♡　イックゥゥッ♡」[p]
+[playse storage="nagi/voice_r_nagi_zettyou2_1.mp3" buf="1"]Nagi「Ưm♡ Phù, phù♡ A, ra... em lên đỉnh mất...♡ Lên đỉnnhhh♡」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[舜]「次はちゃんと『見ててください』って言えるだろ」[p]
-[playse storage="nagi/voice_r_nagi_zettyou2_2.mp3" buf="1"]凪「はいっ…♡　はい♡　言います♡　見ててくださいって…言えます♡」[p]
+[舜]「Lần tới phải nói đàng hoàng là 『Hãy nhìn em đi』 nhé.」[p]
+[playse storage="nagi/voice_r_nagi_zettyou2_2.mp3" buf="1"]Nagi「Vâng...♡ Vâng♡ Em sẽ nói♡ Rằng hãy nhìn em đi... em nói được mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_nagi+=1"  name="Hresult_ikaseta_nagi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -435,14 +435,14 @@ $('.zettyou_active').css({
 *zettyou3_nikubenki
 
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_r_nagi_zettyou3_1.mp3" buf="1"]凪「んっ♡　んっ♡　あぁっ、イクゥッ♡　見ててくださ……あっ、あぁぁぁ♡」[p]
+[playse storage="nagi/voice_r_nagi_zettyou3_1.mp3" buf="1"]Nagi「Ưm♡ Ưm♡ A, ra mất♡ Hãy nhìn em đi... a, aaaa♡」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_r_nagi_zettyou3_2.mp3" buf="1"]凪「はぁっ、はぁ…はぁ♡　あぁ…うぅぅ…♡　まだ、体ビクビクってしてる…♡」[p]
-[playse storage="nagi/voice_r_nagi_zettyou3_3.mp3" buf="1"]凪「これ以上は…おかしくなっちゃう…♡」[p]
+[playse storage="nagi/voice_r_nagi_zettyou3_2.mp3" buf="1"]Nagi「Hà, hà... hà♡ A... ư...♡ Cơ thể em, vẫn đang giật giật liên hồi...♡」[p]
+[playse storage="nagi/voice_r_nagi_zettyou3_3.mp3" buf="1"]Nagi「Hơn nữa là... em trở nên kỳ lạ mất thôi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_nagi+=1"  name="Hresult_ikaseta_nagi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -473,14 +473,14 @@ $('.zettyou_active').css({
 *zettyou4_nikubenki
 
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_r_nagi_zettyou4_1.mp3" buf="1"]凪「ひぅっ♡　あっ♡　あぅっ♡　だめ、だめほんとにっ、おかしくなる…♡」[p]
-[playse storage="nagi/voice_r_nagi_zettyou4_2.mp3" buf="1"]凪「イクイクイクっ♡　またイッちゃう…♡　あっ、だめ、イクぅぅぅ♡」[p]
+[playse storage="nagi/voice_r_nagi_zettyou4_1.mp3" buf="1"]Nagi「Hiu♡ A♡ Au♡ Không được, không được đâu thật đấy, em trở nên kỳ lạ mất...♡」[p]
+[playse storage="nagi/voice_r_nagi_zettyou4_2.mp3" buf="1"]Nagi「Ra, ra, ra mất♡ Lại lên đỉnh mất thôi...♡ A, không được, ra mất thôiii♡」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_r_nagi_zettyou4_3.mp3" buf="1"]凪「はーっ♡　はーっ♡　はーっ♡　もう無理…だめなの…♡」[p]
+[playse storage="nagi/voice_r_nagi_zettyou4_3.mp3" buf="1"]Nagi「Hà♡ Hà♡ Hà♡ Em hết chịu nổi rồi... không được đâu...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_nagi+=1"  name="Hresult_ikaseta_nagi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -511,8 +511,8 @@ $('.zettyou_active').css({
 *zettyou5_nikubenki
 
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_r_nagi_zettyou5_1.mp3" buf="1"]凪「んぅぅっ♡　くぅぅっ♡　はぅっ、またイク…うぅぅっ、もうらめぇぇ…♡」[p]
-[playse storage="nagi/voice_r_nagi_zettyou5_2.mp3" buf="1"]凪「んっくっ…♡　あ゛あ゛っ♡　らめ、らってばぁ…♡　もうっ♡　イグゥゥゥ♡」[p]
+[playse storage="nagi/voice_r_nagi_zettyou5_1.mp3" buf="1"]Nagi「Ưm♡ Ư♡ Hau, lại ra mất... ư, không được nữa đâuuu...♡」[p]
+[playse storage="nagi/voice_r_nagi_zettyou5_2.mp3" buf="1"]Nagi「Ưm...♡ Aaa♡ Đã bảo là, không được mà...♡ Thôi mà♡ Ra mất thôiii♡」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
@@ -545,14 +545,14 @@ $('.zettyou_active').css({
 *zettyou6_nikubenki
 
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_r_nagi_zettyou6_1.mp3" buf="1"]凪「あ゛っ♡　あ゛っ♡　ん゛っ♡　ん゛ぉぉ♡　イク、イクイクイク♡　あ゛ぁ゛ぁっ♡」[p]
+[playse storage="nagi/voice_r_nagi_zettyou6_1.mp3" buf="1"]Nagi「A♡ A♡ Ưm♡ Ưm♡ Ra, ra, ra, ra mất♡ Aaaa♡」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_r_nagi_zettyou6_2.mp3" buf="1"]凪「はっ♡　はっ♡　はっ♡　おまんこ馬鹿になっちゃう…♡　おかしくなっちゃうのぉぉ」[p]
-[playse storage="nagi/voice_r_nagi_zettyou6_3.mp3" buf="1"]凪「気持ちいい…♡　ずっと、キュンキュンしてるの止まんない…♡」[p]
+[playse storage="nagi/voice_r_nagi_zettyou6_2.mp3" buf="1"]Nagi「Hà♡ Hà♡ Hà♡ Cô bé của em ngốc nghếch mất thôi...♡ Trở nên kỳ lạ mất thôiiii」[p]
+[playse storage="nagi/voice_r_nagi_zettyou6_3.mp3" buf="1"]Nagi「Sướng quá đi...♡ Cứ giật thót liên hồi không dừng lại được...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_nagi+=1"  name="Hresult_ikaseta_nagi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -583,14 +583,14 @@ $('.zettyou_active').css({
 *zettyou7_nikubenki
 
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_r_nagi_zettyou7_1.mp3" buf="1"]凪「あ゛っ♡　おまんこっ♡　イクッ♡　気持ちいいのきちゃうぅ♡　あぁぁぁぁ♡」[p]
+[playse storage="nagi/voice_r_nagi_zettyou7_1.mp3" buf="1"]Nagi「A♡ Cô bé♡ Ra mất♡ Cảm giác sướng ập đến rồiii♡ Aaaa♡」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_r_nagi_zettyou7_2.mp3" buf="1"]凪「ひぅぅ♡　あ゛う゛う゛っ♡　気持ちいいの収まんないっ♡　お゛っ♡　ぎもぢぃぃ♡」[p]
-[playse storage="nagi/voice_r_nagi_zettyou7_3.mp3" buf="1"]凪「イキっぱなしっ、止まんないよぉ♡」[p]
+[playse storage="nagi/voice_r_nagi_zettyou7_2.mp3" buf="1"]Nagi「Hiu♡ Auuu♡ Cảm giác sướng không chịu dừng lại♡ O♡ Sướng quá điiii♡」[p]
+[playse storage="nagi/voice_r_nagi_zettyou7_3.mp3" buf="1"]Nagi「Cứ lên đỉnh liên tục, không dừng lại được đâuuu♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_nagi+=1"  name="Hresult_ikaseta_nagi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -621,14 +621,14 @@ $('.zettyou_active').css({
 *zettyou8_nikubenki
 
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_r_nagi_zettyou8_1.mp3" buf="1"]凪「お゛ほぉっ♡　お゛っ♡　お゛っ♡　おまんこっ♡　イグイグイグ♡　お゛お゛お゛っ♡」[p]
+[playse storage="nagi/voice_r_nagi_zettyou8_1.mp3" buf="1"]Nagi「Oho♡ O♡ O♡ Cô bé♡ Ra, ra, ra mất♡ Ooo♡」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[舜]「だらしない顔になってるぞ」[p]
-[playse storage="nagi/voice_r_nagi_zettyou8_2.mp3" buf="1"]凪「はひ♡　お゛っ♡　おほぉ♡　だらしない顔でっ♡　ごめんなさ…んぉぉっ♡」[p]
+[舜]「Mặt mũi đờ đẫn hết cả ra rồi kìa.」[p]
+[playse storage="nagi/voice_r_nagi_zettyou8_2.mp3" buf="1"]Nagi「Vâng♡ O♡ Oho♡ Mặt mũi đờ đẫn mất rồi♡ Em xin lỗ... ưm♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_nagi+=1"  name="Hresult_ikaseta_nagi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -659,14 +659,14 @@ $('.zettyou_active').css({
 *zettyou9_nikubenki
 
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_r_nagi_zettyou9_1.mp3" buf="1"]凪「お゛っ♡　お゛っ♡　お゛っ♡　ん゛ぉ゛っ♡　おまんこイグゥゥゥゥッ♡」[p]
+[playse storage="nagi/voice_r_nagi_zettyou9_1.mp3" buf="1"]Nagi「O♡ O♡ O♡ Ưm♡ Cô bé ra mất thôiiii♡」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_r_nagi_zettyou9_2.mp3" buf="1"]凪「あひぃ♡　おほぉ♡　おちんちんビクビク跳ねてる♡　おぉぉん♡　ぎもぢぃぃぃ♡」[p]
-[playse storage="nagi/voice_r_nagi_zettyou9_3.mp3" buf="1"]凪「腰っ♡　へこへこっ、止まんないぃ♡」[p]
+[playse storage="nagi/voice_r_nagi_zettyou9_2.mp3" buf="1"]Nagi「Ahi♡ Oho♡ Con cu đang giật nảy lên kìa♡ Ooon♡ Sướng quá điiii♡」[p]
+[playse storage="nagi/voice_r_nagi_zettyou9_3.mp3" buf="1"]Nagi「Hông♡ Cứ dập liên hồi, không dừng lại được đâuuu♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_nagi+=1"  name="Hresult_ikaseta_nagi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -697,14 +697,14 @@ $('.zettyou_active').css({
 *zettyou10_nikubenki
 
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_r_nagi_zettyou10_1.mp3" buf="1"]凪「ん゛お゛っ♡　お゛お゛お゛お゛っ♡　イグゥ♡　おちんちんぎもぢぃぃぃ♡」[p]
+[playse storage="nagi/voice_r_nagi_zettyou10_1.mp3" buf="1"]Nagi「Ưm♡ Oooo♡ Ra mất♡ Con cu sướng quá điiii♡」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_r_nagi_zettyou10_2.mp3" buf="1"]凪「おっ、ほぉぉ♡　んぅっ♡　はっ♡　はっ♡　はっ♡　おまんこ、おまんこ気持ちいい♡」[p]
-[playse storage="nagi/voice_r_nagi_zettyou10_3.mp3" buf="1"]凪「おちんちんだいしゅき♡　イキまくりおまんこ見てくだしゃい…♡」[p]
+[playse storage="nagi/voice_r_nagi_zettyou10_2.mp3" buf="1"]Nagi「O, hoo♡ Ưm♡ Hà♡ Hà♡ Hà♡ Cô bé, cô bé sướng quá đi mất♡」[p]
+[playse storage="nagi/voice_r_nagi_zettyou10_3.mp3" buf="1"]Nagi「Thích con cu nhất trần đờiii♡ Hãy nhìn cô bé đang lên đỉnh liên tục của em điii...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_nagi+=1"  name="Hresult_ikaseta_nagi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]

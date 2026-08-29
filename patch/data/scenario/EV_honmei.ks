@@ -11,11 +11,11 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-彼女への暖かな感情がどんどん膨らんでいく。[p]
+Tình cảm ấm áp dành cho cô ấy đang ngày một lớn dần lên.[p]
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-[font color="yellow"]凪を本命にしますか？[resetfont]
+[font color="yellow"]Bạn có muốn chọn Nagi làm Honmei không?[resetfont]
 [_tb_end_text]
 
 [glink  color="btn_05_black"  storage="EV_honmei.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Chọn làm người yêu duy nhất"  _clickable_img=""  target="*yes_nagi"  ]
@@ -41,11 +41,11 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-彼女への暖かな感情がどんどん膨らんでいく。[p]
+Tình cảm ấm áp dành cho cô ấy đang ngày một lớn dần lên.[p]
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-[font color="yellow"]凛子を本命にしますか？[resetfont]
+[font color="yellow"]Bạn có muốn chọn Rinko làm Honmei không?[resetfont]
 [_tb_end_text]
 
 [glink  color="btn_05_black"  storage="EV_honmei.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Chọn làm người yêu duy nhất"  _clickable_img=""  target="*yes_rinko"  ]
@@ -71,11 +71,11 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-彼女への暖かな感情がどんどん膨らんでいく。[p]
+Tình cảm ấm áp dành cho cô ấy đang ngày một lớn dần lên.[p]
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-[font color="yellow"]蕾を本命にしますか？[resetfont]
+[font color="yellow"]Bạn có muốn chọn Tsubomi làm Honmei không?[resetfont]
 [_tb_end_text]
 
 [glink  color="btn_05_black"  storage="EV_honmei.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Chọn làm người yêu duy nhất"  _clickable_img=""  target="*yes_tubomi"  ]
