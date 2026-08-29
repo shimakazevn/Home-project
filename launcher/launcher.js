@@ -85,49 +85,80 @@ function formatTime(seconds) {
     return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
 }
 
-// Tải một file từ URL với bộ theo dõi tiến trình (Progress Tracker)
+// Tải một file từ URL với bộ theo dõi tiến trình (Progress Tracker) & Tự động vượt lỗi CORS
 async function fetchWithProgress(url, label, totalTracker) {
     statusText.textContent = label;
-    const res = await fetch(url);
-    if (!res.ok) throw new Error(`Lỗi tải từ máy chủ (${res.status}): ${url}`);
 
-    const contentLength = +res.headers.get('Content-Length') || 0;
-    const reader = res.body.getReader();
-    let received = 0;
-    let chunks = [];
-    let lastTime = Date.now();
-    let lastReceived = 0;
+    let res = null;
+    let usedUrl = url;
 
-    while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        chunks.push(value);
-        received += value.length;
-        if (totalTracker) totalTracker.downloaded += value.length;
+    // Thử 1: Fetch trực tiếp từ URL nguồn
+    try {
+        res = await fetch(url);
+    } catch (e) {
+        console.warn("Direct fetch failed (có thể do CORS), đang thử lại qua CDN Proxy...", e);
+    }
 
-        const now = Date.now();
-        const diff = (now - lastTime) / 1000;
-        if (diff >= 0.3) {
-            const speed = (received - lastReceived) / diff; // Bytes/sec
-            lastReceived = received;
-            lastTime = now;
-
-            const totalExpected = totalTracker ? totalTracker.total : contentLength;
-            const currentDone = totalTracker ? totalTracker.downloaded : received;
-            const percent = totalExpected > 0 ? Math.min(100, Math.floor((currentDone / totalExpected) * 100)) : 0;
-
-            statusPercent.textContent = `${percent}%`;
-            progressBar.style.width = `${percent}%`;
-            statDownloaded.textContent = `${formatBytes(currentDone)} / ${formatBytes(totalExpected)}`;
-            statSpeed.textContent = `${formatBytes(speed)}/s`;
-
-            const remBytes = totalExpected - currentDone;
-            const etaSecs = speed > 0 ? remBytes / speed : 0;
-            statEta.textContent = `ETA: ${formatTime(etaSecs)}`;
+    // Thử 2: Nếu bị CORS chặn trên trình duyệt Web/Safari -> Chuyển qua CORS CDN Proxy
+    if (!res || !res.ok) {
+        try {
+            usedUrl = "https://corsproxy.io/?" + encodeURIComponent(url);
+            res = await fetch(usedUrl);
+        } catch (e2) {
+            console.warn("CORS proxy 1 failed, trying fallback...", e2);
         }
     }
 
-    return new Blob(chunks);
+    if (!res || !res.ok) {
+        throw new Error(`Không thể kết nối tải tệp (${res ? res.status : 'CORS Error'}). Vui lòng kiểm tra lại mạng hoặc thử lại.`);
+    }
+
+    const contentLength = +res.headers.get('Content-Length') || 0;
+    
+    // Nếu có stream reader
+    if (res.body && typeof res.body.getReader === "function") {
+        const reader = res.body.getReader();
+        let received = 0;
+        let chunks = [];
+        let lastTime = Date.now();
+        let lastReceived = 0;
+
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            chunks.push(value);
+            received += value.length;
+            if (totalTracker) totalTracker.downloaded += value.length;
+
+            const now = Date.now();
+            const diff = (now - lastTime) / 1000;
+            if (diff >= 0.3) {
+                const speed = (received - lastReceived) / diff; // Bytes/sec
+                lastReceived = received;
+                lastTime = now;
+
+                const totalExpected = totalTracker ? totalTracker.total : contentLength;
+                const currentDone = totalTracker ? totalTracker.downloaded : received;
+                const percent = totalExpected > 0 ? Math.min(100, Math.floor((currentDone / totalExpected) * 100)) : 0;
+
+                statusPercent.textContent = `${percent}%`;
+                progressBar.style.width = `${percent}%`;
+                statDownloaded.textContent = `${formatBytes(currentDone)} / ${formatBytes(totalExpected)}`;
+                statSpeed.textContent = `${formatBytes(speed)}/s`;
+
+                const remBytes = totalExpected - currentDone;
+                const etaSecs = speed > 0 ? remBytes / speed : 0;
+                statEta.textContent = `ETA: ${formatTime(etaSecs)}`;
+            }
+        }
+
+        return new Blob(chunks);
+    } else {
+        // Fallback đọc toàn bộ blob nếu stream không hỗ trợ
+        const blob = await res.blob();
+        if (totalTracker) totalTracker.downloaded += blob.size;
+        return blob;
+    }
 }
 
 // Giải nén gói zip hoặc asar và lưu trực tiếp vào kho lưu trữ
