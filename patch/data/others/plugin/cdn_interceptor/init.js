@@ -556,6 +556,227 @@
 
         console.log("[CDN Interceptor] ✅ Đã gắn hoàn tất toàn bộ Hook (bg, image, chara, button, bgmovie, audio, bgmopt).");
         setupMobileAutoFit();
+        injectMobileSideWings();
+    }
+
+    // ══════════════════════════════════════════════════════════════════════════
+    // 5. MOBILE SIDE TOUCH CONTROLLER (TRÍCH XUẤT NÚT SANG 2 BÊN SƯỜN MÀN HÌNH)
+    // ══════════════════════════════════════════════════════════════════════════
+    function injectMobileSideWings() {
+        if (document.getElementById('mobile_left_wing')) return;
+
+        const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || window.matchMedia('(pointer: coarse)').matches;
+        const isMobileDevice = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) || isTouch;
+
+        if (!isMobileDevice) {
+            console.log("[Mobile Controller] Thiết bị hiện tại là PC Desktop. Giữ nguyên giao diện chuẩn.");
+            return;
+        }
+
+        console.log("[Mobile Controller] Đã phát hiện thiết bị di động / cảm ứng! Đang kích hoạt bộ nút 2 bên sườn màn hình...");
+
+        // Haptic feedback helper
+        const triggerHaptic = () => {
+            try {
+                if (navigator.vibrate) navigator.vibrate(12);
+            } catch(e) {}
+        };
+
+        // 1. Cánh trái: Hệ thống Save / Load / Quản lý tệp
+        const leftWing = document.createElement('div');
+        leftWing.id = 'mobile_left_wing';
+        leftWing.className = 'mobile-side-wing';
+        leftWing.innerHTML = `
+            <button class="mobile-wing-btn" id="btn_m_qsave" title="Lưu nhanh (Quick Save)">
+                <span class="btn-icon">💾</span>
+                <span class="btn-label">L.Nhanh</span>
+            </button>
+            <button class="mobile-wing-btn" id="btn_m_qload" title="Nạp nhanh (Quick Load)">
+                <span class="btn-icon">📂</span>
+                <span class="btn-label">T.Nhanh</span>
+            </button>
+            <button class="mobile-wing-btn" id="btn_m_save" title="Bảng lưu game">
+                <span class="btn-icon">📋</span>
+                <span class="btn-label">Lưu/Nạp</span>
+            </button>
+            <button class="mobile-wing-btn" id="btn_m_export" title="Tải file .sav về máy">
+                <span class="btn-icon">📥</span>
+                <span class="btn-label">Tải .sav</span>
+            </button>
+            <button class="mobile-wing-btn" id="btn_m_import" title="Nạp file .sav từ máy">
+                <span class="btn-icon">📤</span>
+                <span class="btn-label">Nạp .sav</span>
+            </button>
+            <button class="mobile-wing-toggle" id="toggle_left_wing" title="Thu gọn / Mở rộng">
+                <span>◀</span>
+            </button>
+        `;
+
+        // 2. Cánh phải: Hệ thống Điều khiển kịch bản & Cài đặt
+        const rightWing = document.createElement('div');
+        rightWing.id = 'mobile_right_wing';
+        rightWing.className = 'mobile-side-wing';
+        rightWing.innerHTML = `
+            <button class="mobile-wing-btn" id="btn_m_skip" title="Bật/Tắt Tua nhanh (Skip)">
+                <span class="btn-icon">⏩</span>
+                <span class="btn-label">Tua</span>
+            </button>
+            <button class="mobile-wing-btn" id="btn_m_auto" title="Bật/Tắt Tự đọc thoại (Auto)">
+                <span class="btn-icon">▶️</span>
+                <span class="btn-label">Tự đọc</span>
+            </button>
+            <button class="mobile-wing-btn" id="btn_m_log" title="Xem lại lịch sử thoại (Backlog)">
+                <span class="btn-icon">📜</span>
+                <span class="btn-label">Nhật ký</span>
+            </button>
+            <button class="mobile-wing-btn" id="btn_m_window" title="Ẩn khung lời thoại">
+                <span class="btn-icon">👁️</span>
+                <span class="btn-label">Ẩn chữ</span>
+            </button>
+            <button class="mobile-wing-btn" id="btn_m_config" title="Cài đặt âm lượng & tốc độ">
+                <span class="btn-icon">⚙️</span>
+                <span class="btn-label">Cài đặt</span>
+            </button>
+            <button class="mobile-wing-btn" id="btn_m_title" title="Về màn hình Title">
+                <span class="btn-icon">🏠</span>
+                <span class="btn-label">Title</span>
+            </button>
+            <button class="mobile-wing-toggle" id="toggle_right_wing" title="Thu gọn / Mở rộng">
+                <span>▶</span>
+            </button>
+        `;
+
+        document.body.appendChild(leftWing);
+        document.body.appendChild(rightWing);
+
+        // 3. Gắn sự kiện điều khiển
+        // Cánh trái
+        document.getElementById('btn_m_qsave')?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            triggerHaptic();
+            if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.menu) {
+                window.TYRANO.kag.menu.setQuickSave();
+            }
+        });
+
+        document.getElementById('btn_m_qload')?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            triggerHaptic();
+            if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.menu) {
+                window.TYRANO.kag.menu.loadQuickSave();
+            }
+        });
+
+        document.getElementById('btn_m_save')?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            triggerHaptic();
+            if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.menu) {
+                window.TYRANO.kag.menu.displaySave();
+            }
+        });
+
+        document.getElementById('btn_m_export')?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            triggerHaptic();
+            if (window.exportCurrentSaveToFile) window.exportCurrentSaveToFile();
+        });
+
+        document.getElementById('btn_m_import')?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            triggerHaptic();
+            if (window.importSaveFromFile) window.importSaveFromFile();
+        });
+
+        // Cánh phải
+        document.getElementById('btn_m_skip')?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            triggerHaptic();
+            if (window.TYRANO && window.TYRANO.kag) {
+                if (window.TYRANO.kag.stat.is_skip) {
+                    window.TYRANO.kag.ftag.startTag("skipstop", {});
+                } else {
+                    window.TYRANO.kag.ftag.startTag("skipstart", {});
+                }
+            }
+        });
+
+        document.getElementById('btn_m_auto')?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            triggerHaptic();
+            if (window.TYRANO && window.TYRANO.kag) {
+                if (window.TYRANO.kag.stat.is_auto) {
+                    window.TYRANO.kag.ftag.startTag("autostop", { next: "false" });
+                } else {
+                    window.TYRANO.kag.ftag.startTag("autostart", {});
+                }
+            }
+        });
+
+        document.getElementById('btn_m_log')?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            triggerHaptic();
+            if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.menu) {
+                window.TYRANO.kag.menu.displayLog();
+            }
+        });
+
+        document.getElementById('btn_m_window')?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            triggerHaptic();
+            if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.layer) {
+                window.TYRANO.kag.layer.hideMessageLayers();
+            }
+        });
+
+        document.getElementById('btn_m_config')?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            triggerHaptic();
+            if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.ftag) {
+                window.TYRANO.kag.ftag.startTag("sleepgame", { storage: "../others/plugin/theme_kopanda_09_2/config.ks", next: false });
+            }
+        });
+
+        document.getElementById('btn_m_title')?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            triggerHaptic();
+            if (window.TYRANO && window.TYRANO.kag) {
+                window.TYRANO.kag.backTitle();
+            }
+        });
+
+        // Toggle thu gọn/mở rộng cánh
+        const toggleLeft = document.getElementById('toggle_left_wing');
+        toggleLeft?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            triggerHaptic();
+            leftWing.classList.toggle('collapsed-left');
+            toggleLeft.innerHTML = leftWing.classList.contains('collapsed-left') ? '<span>▶</span>' : '<span>◀</span>';
+        });
+
+        const toggleRight = document.getElementById('toggle_right_wing');
+        toggleRight?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            triggerHaptic();
+            rightWing.classList.toggle('collapsed-right');
+            toggleRight.innerHTML = rightWing.classList.contains('collapsed-right') ? '<span>◀</span>' : '<span>▶</span>';
+        });
+
+        // 4. Đồng bộ trạng thái Auto / Skip hiển thị đèn báo theo thời gian thực
+        setInterval(() => {
+            if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.stat) {
+                const isSkip = !!window.TYRANO.kag.stat.is_skip;
+                const isAuto = !!window.TYRANO.kag.stat.is_auto;
+                
+                const btnSkip = document.getElementById('btn_m_skip');
+                if (btnSkip) {
+                    btnSkip.classList.toggle('active-skip', isSkip);
+                }
+                const btnAuto = document.getElementById('btn_m_auto');
+                if (btnAuto) {
+                    btnAuto.classList.toggle('active-auto', isAuto);
+                }
+            }
+        }, 250);
     }
 
     // Tự động căn giữa tuyệt đối và co giãn màn hình hoàn hảo trên mọi thiết bị
@@ -619,8 +840,12 @@
     // Khởi động
     loadManifest();
     if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", installTyranoHooks);
+        document.addEventListener("DOMContentLoaded", () => {
+            installTyranoHooks();
+            injectMobileSideWings();
+        });
     } else {
         installTyranoHooks();
+        injectMobileSideWings();
     }
 })();
