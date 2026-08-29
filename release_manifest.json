@@ -13,20 +13,56 @@
     {
       "name": "Lõi Kịch Bản & Giao Diện",
       "filename": "HOME_Patch_Core_v1.0.0.zip",
-      "description": "Chứa toàn bộ 267 kịch bản Việt hóa, Font Noto Sans và mã hệ thống",
+      "description": "Toàn bộ 267 kịch bản Việt hóa, Font Noto Sans và mã hệ thống",
       "size": 9602968,
       "size_formatted": "9.16 MB",
       "sha256": "5eebbebd20edc556ef0b86308e73d42bf5a1263b36796246ddf216f5d6e8b69d",
       "url": "https://github.com/shimakazevn/Home-project/releases/download/v1.0.0/HOME_Patch_Core_v1.0.0.zip"
     },
     {
-      "name": "Gói Đồ Họa & Âm Thanh",
-      "filename": "HOME_Media_Assets_v1.0.0.zip",
-      "description": "Chứa 3,600+ hình ảnh 1080p H-Scene, Voice lồng tiếng và BGM",
-      "size": 8566743115,
-      "size_formatted": "7.98 GB",
-      "sha256": "2e231db2dfa6301177e699b04229a7d29b20fef1237e63092e1e76c88b041d26",
-      "url": "https://github.com/shimakazevn/Home-project/releases/download/v1.0.0/HOME_Media_Assets_v1.0.0.zip"
+      "name": "Gói Hình Ảnh H-Scene Phần 1",
+      "filename": "HOME_Media_Part1_v1.0.0.zip",
+      "description": "Dữ liệu hoạt họa CG H-Scene phần 1",
+      "size": 1853739776,
+      "size_formatted": "1.73 GB",
+      "sha256": "be91ccf5ab9a6721d1c92eb51993f3e4ce3e9aff772c5f3908c3917a2cd5a1aa",
+      "url": "https://github.com/shimakazevn/Home-project/releases/download/v1.0.0/HOME_Media_Part1_v1.0.0.zip"
+    },
+    {
+      "name": "Gói Hình Ảnh H-Scene Phần 2",
+      "filename": "HOME_Media_Part2_v1.0.0.zip",
+      "description": "Dữ liệu hoạt họa CG H-Scene phần 2",
+      "size": 1964361259,
+      "size_formatted": "1.83 GB",
+      "sha256": "89eee454edbf5c81299ee1c147a55f79ccb9cb7c403c47b5bf84acc0d1c80506",
+      "url": "https://github.com/shimakazevn/Home-project/releases/download/v1.0.0/HOME_Media_Part2_v1.0.0.zip"
+    },
+    {
+      "name": "Gói Hình Ảnh H-Scene Phần 3",
+      "filename": "HOME_Media_Part3_v1.0.0.zip",
+      "description": "Dữ liệu hoạt họa CG H-Scene phần 3",
+      "size": 1817316608,
+      "size_formatted": "1.69 GB",
+      "sha256": "e5fc347e0a5f0d3b549310f8868985c15968db391df11a1bd94c435e87ab0ecc",
+      "url": "https://github.com/shimakazevn/Home-project/releases/download/v1.0.0/HOME_Media_Part3_v1.0.0.zip"
+    },
+    {
+      "name": "Gói Hình Ảnh H-Scene Phần 4",
+      "filename": "HOME_Media_Part4_v1.0.0.zip",
+      "description": "Dữ liệu hoạt họa CG H-Scene phần 4",
+      "size": 1808966336,
+      "size_formatted": "1.68 GB",
+      "sha256": "03ab93af57e433f8fcd406f99ddb3dba8b5135e2d788d00a24b7cc051f2a331f",
+      "url": "https://github.com/shimakazevn/Home-project/releases/download/v1.0.0/HOME_Media_Part4_v1.0.0.zip"
+    },
+    {
+      "name": "Gói Âm Thanh & Nhân Vật",
+      "filename": "HOME_Media_Part5_Sound_v1.0.0.zip",
+      "description": "Nhạc nền BGM, Voice lồng tiếng, và Sprite nhân vật đứng",
+      "size": 1122330432,
+      "size_formatted": "1.05 GB",
+      "sha256": "b9066bd79b0b72dd01cedbbaa88f0c6c6fcc06e73e7ee29b4f850f864dd3dade",
+      "url": "https://github.com/shimakazevn/Home-project/releases/download/v1.0.0/HOME_Media_Part5_Sound_v1.0.0.zip"
     }
   ]
 }
