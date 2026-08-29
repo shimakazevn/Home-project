@@ -23,7 +23,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 # ─── CONFIG ───────────────────────────────────────────────────────────────────
 PATCH_DIR   = r'E:\HOME_\patch'
 OUTPUT_DIR  = r'E:\HOME_\dist'
-PATCHER_SRC = r'E:\HOME_\tools\asar_surgical_patcher.py'
+PATCHER_SRC = r'E:\HOME_\tools\asar_stream_patcher.py'
 VERSION     = 'v1.1.0'
 ZIP_NAME    = f'HOME_VietHoa_Patch_{VERSION}.zip'
 REPO_URL    = 'https://github.com/shimakazevn/Home-project'
@@ -32,7 +32,7 @@ REPO_URL    = 'https://github.com/shimakazevn/Home-project'
 # Cách hoạt động:
 #  1. Tìm thư mục game tự động (hoặc hỏi user)
 #  2. Backup app.asar gốc (1 lần duy nhất)
-#  3. Chạy asar_surgical_patcher.py → patch trực tiếp vào binary (~1 giây!)
+#  3. Chạy asar_stream_patcher.py → stream copy 1-pass hoàn tất trong ~10 giây
 INSTALL_BAT = r"""@echo off
 chcp 65001 >nul
 setlocal enabledelayedexpansion
@@ -40,7 +40,7 @@ color 0A
 
 echo.
 echo ==========================================================
-echo   HOME (ROOM) - PATCH VIET HOA  [Surgical Patcher v2]
+echo   HOME (ROOM) - PATCH VIET HOA  [Stream Patcher v2.0]
 echo   Shimakaze VN Translation Team
 echo ==========================================================
 echo.
@@ -51,7 +51,7 @@ set "BASE=%BASE:~0,-1%"
 :: ──────────────────────────────────────────
 :: Buoc 1: Tim thu muc game
 :: ──────────────────────────────────────────
-echo [1/3] Tim kiem thu muc game...
+echo [1/2] Tim kiem thu muc game...
 
 set "GAME_DIR="
 for %%D in (
@@ -90,33 +90,13 @@ if not exist "%GAME_DIR%\resources\app.asar" (
 )
 
 set "ASAR=%GAME_DIR%\resources\app.asar"
-set "BACKUP=%GAME_DIR%\resources\app.asar.backup_goc"
 
 :: ──────────────────────────────────────────
-:: Buoc 2: Backup app.asar goc
+:: Buoc 2: Patch truc tiep (Stream 1-Pass)
 :: ──────────────────────────────────────────
 echo.
-echo [2/3] Backup file goc...
-
-if not exist "%BACKUP%" (
-    echo      Dang sao luu app.asar...
-    copy /y "%ASAR%" "%BACKUP%" >nul
-    if errorlevel 1 (
-        echo [LOI] Khong the backup. Kiem tra quyen ghi vao thu muc game.
-        pause
-        exit /b 1
-    )
-    echo [OK] Backup: app.asar.backup_goc
-) else (
-    echo [OK] Da co backup san, bo qua.
-)
-
-:: ──────────────────────────────────────────
-:: Buoc 3: Patch truc tiep (khong can extract!)
-:: ──────────────────────────────────────────
-echo.
-echo [3/3] Dang patch Viet hoa...
-echo      (Qua trinh chi mat khoang 1-2 giay)
+echo [2/2] Dang patch Viet hoa...
+echo      (Qua trinh stream mat khoang 10-15 giay)
 
 set "PY=%BASE%\_tools\python\python.exe"
 if not exist "%PY%" (
@@ -132,11 +112,10 @@ if not exist "%PY%" (
     )
 )
 
-"%PY%" "%BASE%\_patcher\asar_surgical_patcher.py" "%ASAR%" "%BASE%\patch_files"
+"%PY%" "%BASE%\_patcher\asar_stream_patcher.py" "%ASAR%" "%BASE%\patch_files"
 if errorlevel 1 (
     echo.
-    echo [LOI] Patch that bai! Dang khoi phuc ban goc...
-    copy /y "%BACKUP%" "%ASAR%" >nul
+    echo [LOI] Patch that bai!
     pause
     exit /b 1
 )
@@ -310,11 +289,11 @@ def build():
             count += 1
     print(f"  Copied {count} patch files")
 
-    # 2. Copy surgical patcher
+    # 2. Copy stream patcher
     patcher_dir = os.path.join(OUTPUT_DIR, '_patcher')
     os.makedirs(patcher_dir)
-    shutil.copy2(PATCHER_SRC, os.path.join(patcher_dir, 'asar_surgical_patcher.py'))
-    print("  Copied asar_surgical_patcher.py")
+    shutil.copy2(PATCHER_SRC, os.path.join(patcher_dir, 'asar_stream_patcher.py'))
+    print("  Copied asar_stream_patcher.py")
 
     # 3. Ghi .bat files
     scripts = {
