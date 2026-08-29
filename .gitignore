@@ -16,6 +16,9 @@ build-android-project/android/app/src/main/assets/public/data/bgm/
 unpacked_game_app/
 extracted_scripts/
 dist/
+dist_web/
+test_web_cdn/
+upload_cache.db
 
 # Archive builds
 *.zip
@@ -26,3 +29,4 @@ dist/
 __pycache__/
 *.pyc
 *.sav
+
