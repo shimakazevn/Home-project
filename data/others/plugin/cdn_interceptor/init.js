@@ -159,8 +159,8 @@
         }
 
         const magic = String.fromCharCode(headerBytes[0], headerBytes[1], headerBytes[2], headerBytes[3]);
-        if (magic !== 'STEG') {
-            throw new Error(`Invalid Stego Magic Header: ${magic}`);
+        if (magic !== 'AUDO' && magic !== 'STEG') {
+            console.warn(`[CDN Interceptor] Magic header: ${magic}, proceeding with audio extraction.`);
         }
 
         const dataSize = (headerBytes[4]) | (headerBytes[5] << 8) | (headerBytes[6] << 16) | (headerBytes[7] << 24);
