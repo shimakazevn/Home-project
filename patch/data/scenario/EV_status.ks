@@ -622,4 +622,4 @@ Nhưng ẩn sâu dưới vẻ bình yên ấy là những bí mật đen tối �
 [tb_eval  exp="f.money_updated-=10000"  name="money_updated"  cmd="-="  op="t"  val="10000"  val_2="undefined"  ]
 [call  storage="ui_parameter.ks"  target="*money_update"  ]
 [call  storage="komyuhyouka_hayato.ks"  target="*top"  ]
-[jump  storage="EV_status.ks"  target="*hayato_end"  
+[jump  storage="EV_status.ks"  target="*hayato_end" ]

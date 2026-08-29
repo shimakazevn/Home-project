@@ -1864,4 +1864,4 @@ Nagi「Cứ như quay lại ngày xưa ấy. Vui quá đi mất.」[p]
 
 [bg  time="500"  method="crossfade"  storage="kaeri_nagi3.gif"  ]
 [tb_eval  exp="f.kaiwa_hato_max=1"  name="kaiwa_hato_max"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
-[return  
+[return ]

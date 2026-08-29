@@ -103,4 +103,4 @@ Rinko「Khc, cô hiểu mà nên không sao đâu. Đúng không nào? Shun-kun.
 
 [call  storage="komyuhyouka_rinko.ks"  target="*top"  ]
 [call  storage="komyuhyouka_tubomi.ks"  target="*top"  ]
-[jump  storage="sansaku.ks"  target="*end"  
+[jump  storage="sansaku.ks"  target="*end" ]

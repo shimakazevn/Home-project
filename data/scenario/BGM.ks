@@ -55,4 +55,4 @@
 *omoide
 
 [playbgm  volume="70"  time="1000"  loop="true"  storage="kodomo.mp3"  fadein="false"  ]
-[return  
+[return ]

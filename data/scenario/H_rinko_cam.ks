@@ -144,4 +144,4 @@
 [tb_eval  exp="f.H_cam1_on=0"  name="H_cam1_on"  cmd="="  op="t"  val="0"  ]
 [tb_eval  exp="f.H_cam2_on=1"  name="H_cam2_on"  cmd="="  op="t"  val="1"  ]
 [call  storage="H_rinko_gazou.ks"  target="*H1_hagesiku_cam2"  ]
-[return  
+[return ]

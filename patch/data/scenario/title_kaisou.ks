@@ -449,4 +449,4 @@
 [tb_eval  exp="f.kaisou=1"  name="kaisou"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
 [tb_show_message_window  ]
-[jump  storage="EV_haremEND.ks"  target="*top"  
+[jump  storage="EV_haremEND.ks"  target="*top" ]

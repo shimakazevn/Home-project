@@ -294,4 +294,4 @@
 
 [return  ]
 [bg  time="0"  method="crossfade"  storage="sin_nagi_nagiroom_bussyoku.png"  ]
-[tb_image_show  time="1000"  storage="default/d_ev.gif"  width="80"  height="80"  x="310"  y="352"  _clickable_img=""  name="img_102"  
+[tb_image_show  time="1000"  storage="default/d_ev.gif"  width="80"  height="80"  x="310"  y="352"  _clickable_img=""  name="img_102" ]

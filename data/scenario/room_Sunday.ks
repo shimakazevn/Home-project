@@ -222,4 +222,4 @@
 [tb_eval  exp="f.money_updated+=100000"  name="money_updated"  cmd="+="  op="t"  val="100000"  val_2="undefined"  ]
 [call  storage="ui_parameter.ks"  target="*money_update"  ]
 [tb_eval  exp="f.takarakuji=0"  name="takarakuji"  cmd="="  op="t"  val="0"  ]
-[return  
+[return ]

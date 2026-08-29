@@ -433,4 +433,4 @@
 [chara_hide  name="kyara_tubomi"  time="500"  wait="false"  pos_mode="false"  ]
 [chara_hide  name="kyara_rinko_sabun"  time="500"  wait="false"  pos_mode="false"  ]
 [chara_hide  name="kyara_rinko"  time="500"  wait="false"  pos_mode="false"  ]
-[wait  time="500"  
+[wait  time="500" ]

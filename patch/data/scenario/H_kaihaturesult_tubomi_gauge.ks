@@ -17,4 +17,4 @@ $('.kaihatu_active').css({
 });
 [endscript]
 
-[return  
+[return ]

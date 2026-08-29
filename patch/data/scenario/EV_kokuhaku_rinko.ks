@@ -224,4 +224,4 @@ Không thể cất lời gọi theo bóng lưng ấy, tôi chỉ biết đứng 
 
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="rinko_kokuhaku"  ]
-[jump  storage="room_yoru.ks"  target="*top"  
+[jump  storage="room_yoru.ks"  target="*top" ]

@@ -290,4 +290,4 @@
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_doa+=1"  name="bussyoku_doa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
-[return  
+[return ]

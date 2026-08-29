@@ -420,4 +420,4 @@ Trạng thái rất tốt. Một phiên giao dịch lý tưởng.[r]
 
 [wait  time="500"  ]
 [return  ]
-[jump  storage="job_sd.ks"  target="*seisou3"  
+[jump  storage="job_sd.ks"  target="*seisou3" ]

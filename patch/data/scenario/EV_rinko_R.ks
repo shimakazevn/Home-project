@@ -185,4 +185,4 @@ Rinko「Shun-kun, cháu sao thế──」[p]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [call  storage="EV_honmei.ks"  target="*rinko"  ]
 [call  storage="komyuhyouka_rinko.ks"  target="*top"  ]
-[jump  storage="room_yoru.ks"  target="*top"  
+[jump  storage="room_yoru.ks"  target="*top" ]

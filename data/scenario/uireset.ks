@@ -5,4 +5,4 @@
 [cm  ]
 [tb_ptext_hide  time="0"  ]
 [chara_hide_all  time="0"  wait="true"  ]
-[return  
+[return ]

@@ -1306,4 +1306,4 @@ Tối ưu hóa dung lượng và tốc độ tải game.[p]
 [tb_eval  exp="f.itemEV_idoucam_tubomi=2"  name="itemEV_idoucam_tubomi"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
 [tb_eval  exp="sf.tou_pan_tubomi=1"  name="tou_pan_tubomi"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
 [tb_eval  exp="f.cg_tou_pan_tubomi=1"  name="cg_tou_pan_tubomi"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
-[jump  storage="EV_tousatuCG.ks"  target="*hanbai"  
+[jump  storage="EV_tousatuCG.ks"  target="*hanbai" ]

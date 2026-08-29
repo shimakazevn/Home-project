@@ -115,4 +115,4 @@ Vừa lẩm bẩm trong lòng, tôi vừa khẽ nắm chặt nắm đấm.[p]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [call  storage="komyuhyouka_rinko.ks"  target="*top"  ]
 [stopbgm  time="1000"  fadeout="true"  ]
-[jump  storage="room_yoru.ks"  target="*top"  
+[jump  storage="room_yoru.ks"  target="*top" ]

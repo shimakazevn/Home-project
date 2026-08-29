@@ -159,4 +159,4 @@ Giả vờ như không để ý, tôi tiếp tục lắng nghe câu chuyện c�
 [call  storage="komyuhyouka_rinko.ks"  target="*top"  ]
 [call  storage="komyuhyouka_tubomi.ks"  target="*top"  ]
 [stopbgm  time="1000"  fadeout="true"  ]
-[jump  storage="EV_OP_map.ks"  target="*top"  
+[jump  storage="EV_OP_map.ks"  target="*top" ]

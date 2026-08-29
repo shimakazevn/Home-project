@@ -133,4 +133,4 @@
 [bg  time="0"  method="crossfade"  storage="black.jpg"  ]
 [tb_show_message_window  ]
 [mask_off  time="600"  effect="fadeOut"  ]
-[return  
+[return ]

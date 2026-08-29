@@ -128,4 +128,4 @@
 [jump target="*top"]
 [_tb_end_tyrano_code]
 
-[jump  storage="sinnyu_rihure_haiti.ks"  target="*top"  
+[jump  storage="sinnyu_rihure_haiti.ks"  target="*top" ]

@@ -179,4 +179,4 @@ Tôi mở lại bức ảnh chụp tối qua một lần nữa, chậm rãi ng�
 
 [tb_eval  exp="f.itemEV_supiritasu_tubomi=2"  name="itemEV_supiritasu_tubomi"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
 [wait  time="1500"  ]
-[return  
+[return ]

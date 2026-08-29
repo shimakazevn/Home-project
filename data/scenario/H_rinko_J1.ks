@@ -690,4 +690,4 @@ Rinko「Chị đã được dạy cho cách massage sướng thế này rồi...
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="rinko_HJ1"  ]
 [call  storage="H_kaihaturesult_rinko.ks"  target="*top"  ]
-[jump  storage="EV_rinko_J.ks"  target="*EV1_back"  
+[jump  storage="EV_rinko_J.ks"  target="*EV1_back" ]

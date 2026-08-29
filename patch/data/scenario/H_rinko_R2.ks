@@ -690,4 +690,4 @@ Rinko「Ưm♡ Hà, hà♡ Chị biết rồi, nhưng mà... đầy ứ rồi n�
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="rinko_HR2"  ]
 [call  storage="H_kaihaturesult_rinko.ks"  target="*top"  ]
-[jump  storage="EV_rinko_R.ks"  target="*EV2_back"  
+[jump  storage="EV_rinko_R.ks"  target="*EV2_back" ]

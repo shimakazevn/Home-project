@@ -162,4 +162,4 @@
 [jump target="*sentaku_top"]
 [_tb_end_tyrano_code]
 
-[jump  storage="sinnyu_nagi_haiti_nagiroom.ks"  target="*sentaku_top"  
+[jump  storage="sinnyu_nagi_haiti_nagiroom.ks"  target="*sentaku_top" ]

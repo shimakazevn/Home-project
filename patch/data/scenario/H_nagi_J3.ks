@@ -693,4 +693,4 @@ Nagi「Ưm♡ A... tr-trào ra mất... tràn ra ngoài mất thôi...♡」[p]
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="nagi_HJ3"  ]
 [call  storage="H_kaihaturesult_nagi.ks"  target="*top"  ]
-[jump  storage="EV_nagi_J.ks"  target="*EV3_back"  
+[jump  storage="EV_nagi_J.ks"  target="*EV3_back" ]

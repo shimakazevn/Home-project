@@ -91,4 +91,4 @@ Trân trọng giới thiệu đến toàn thể cộng đồng game thủ.[p]
 [bg  time="0"  method="crossfade"  storage="back_rihure_hikaesitu.png"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [call  storage="BGM.ks"  target="*jisitu"  ]
-[return  
+[return ]

@@ -152,4 +152,4 @@ Nhưng Nagi vẫn ngắm nhìn chiếc nhẫn ấy với vẻ mặt vô cùng h�
 [stopse  time="1000"  buf="0"  fadeout="true"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [stopbgm  time="1000"  fadeout="true"  ]
-[jump  storage="room_yoru.ks"  target="*top"  
+[jump  storage="room_yoru.ks"  target="*top" ]

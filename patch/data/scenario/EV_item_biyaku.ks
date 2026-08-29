@@ -84,4 +84,4 @@ Hayato「Shun… Tao có chuyện muốn nói với mày」[p]
 [stopbgm  time="1000"  fadeout="true"  ]
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="nagi_item_biyaku1"  ]
-[return  
+[return ]

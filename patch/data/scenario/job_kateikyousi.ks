@@ -269,4 +269,4 @@
 [chara_hide  name="job"  time="0"  wait="false"  pos_mode="false"  ]
 [chara_show  name="job"  time="0"  wait="true"  storage="chara/169/job_jimu1.png"  width="496"  height="280"  left="368"  top="165"  ]
 [wait  time="500"  ]
-[jump  storage="job_kateikyousi.ks"  target="*sippai_return"  
+[jump  storage="job_kateikyousi.ks"  target="*sippai_return" ]

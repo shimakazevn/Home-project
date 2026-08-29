@@ -1,4 +1,4 @@
-n][_tb_system_call storage=system/_mesi_jisui.ks]
+[_tb_system_call storage=system/_mesi_jisui.ks]
 
 [tb_show_message_window  ]
 [mask  time="500"  effect="fadeIn"  color="0x000000"  ]

@@ -449,4 +449,4 @@ Nagi「Khc, hôm nay tớ có linh cảm là sẽ gặp được Shun-chan. Trú
 [_tb_end_tyrano_code]
 
 [call  storage="sansaku_byouinEV_nagi.ks"  target="*sasiire2"  cond="f.sasiire_nagi==1"  ]
-[jump  storage="sansaku_byouinEV_nagi.ks"  target="*aisatu_end"  
+[jump  storage="sansaku_byouinEV_nagi.ks"  target="*aisatu_end" ]

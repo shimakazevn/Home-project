@@ -23,25 +23,9 @@
     let activeSeSources = [];
     const audioBufferCache = new Map();
 
-    // Master volume scales (BGM 12%, SE 15% - Âm lượng nhẹ nhàng, êm ái)
-    const MASTER_BGM_SCALE = 0.12;
-    const MASTER_SE_SCALE = 0.15;
-
-    // Giảm âm lượng cho toàn bộ Video/Audio thẻ HTML (như bgmovie, title_bg.mp4)
-    try {
-        const origVolumeDesc = Object.getOwnPropertyDescriptor(HTMLMediaElement.prototype, 'volume');
-        if (origVolumeDesc && origVolumeDesc.set) {
-            Object.defineProperty(HTMLMediaElement.prototype, 'volume', {
-                set: function(val) {
-                    let scaled = Math.min(0.18, val * 0.15);
-                    return origVolumeDesc.set.call(this, scaled);
-                },
-                get: function() {
-                    return origVolumeDesc.get.call(this);
-                }
-            });
-        }
-    } catch(e) {}
+    // Chuẩn hóa âm lượng tự nhiên, rõ nét (BGM 90%, SE 100%)
+    const MASTER_BGM_SCALE = 0.90;
+    const MASTER_SE_SCALE = 1.00;
 
     // Intercept toàn diện HTMLImageElement src để không một ảnh nào bị lọt
     try {
@@ -75,16 +59,6 @@
         };
     } catch(e) {}
 
-    // Tự động kiểm tra và giảm âm lượng cho mọi thẻ media được chèn vào trang
-    const mediaObserver = new MutationObserver(() => {
-        document.querySelectorAll('video, audio').forEach(el => {
-            if (el.volume > 0.20) {
-                el.volume = 0.15;
-            }
-        });
-    });
-    mediaObserver.observe(document.documentElement, { childList: true, subtree: true });
-
     function getAudioContext() {
         if (!audioCtx) {
             const AudioContextClass = window.AudioContext || window.webkitAudioContext;
@@ -96,13 +70,18 @@
         return audioCtx;
     }
 
-    // Unlock Web Audio trên user interaction đầu tiên (click, touch)
-    ['click', 'touchstart', 'keydown'].forEach(evt => {
-        window.addEventListener(evt, () => {
-            if (audioCtx && audioCtx.state === 'suspended') {
-                audioCtx.resume();
-            }
-        }, { once: false, passive: true });
+    // Tự động mở khóa Web Audio trên tương tác đầu tiên của người dùng (click, touch, phím)
+    const unlockAudio = () => {
+        if (!audioCtx) {
+            getAudioContext();
+        }
+        if (audioCtx && audioCtx.state === 'suspended') {
+            audioCtx.resume();
+        }
+    };
+    ['click', 'touchstart', 'touchend', 'mousedown', 'mouseup', 'keydown'].forEach(evt => {
+        window.addEventListener(evt, unlockAudio, { passive: true });
+        document.addEventListener(evt, unlockAudio, { passive: true });
     });
 
     // 1. Tải bảng manifest định tuyến CDN
@@ -216,6 +195,9 @@
         kag.ft_play_stego_bgm = async function(cdnUrl, loop, rawVol) {
             try {
                 const ctx = getAudioContext();
+                if (ctx.state === 'suspended') {
+                    ctx.resume();
+                }
                 if (activeBgmSource) {
                     try { activeBgmSource.stop(); } catch(e) {}
                     activeBgmSource = null;
@@ -228,7 +210,6 @@
                 source.buffer = audioBuffer;
                 source.loop = loop;
                 
-                // Chuẩn hóa volume về mức êm dịu (MASTER_BGM_SCALE = 0.12)
                 let normVol = (rawVol > 1.0 ? rawVol / 100.0 : rawVol);
                 gainNode.gain.value = Math.max(0, Math.min(1.0, normVol * MASTER_BGM_SCALE));
 
@@ -248,6 +229,9 @@
         kag.ft_play_stego_se = async function(cdnUrl, rawVol) {
             try {
                 const ctx = getAudioContext();
+                if (ctx.state === 'suspended') {
+                    ctx.resume();
+                }
                 const audioBuffer = await window.decodeStegoAudioFromUrl(cdnUrl);
                 const source = ctx.createBufferSource();
                 const gainNode = ctx.createGain();
@@ -255,7 +239,6 @@
                 source.buffer = audioBuffer;
                 source.loop = false;
                 
-                // Chuẩn hóa volume về mức êm dịu (MASTER_SE_SCALE = 0.15)
                 let normVol = (rawVol > 1.0 ? rawVol / 100.0 : rawVol);
                 gainNode.gain.value = Math.max(0, Math.min(1.0, normVol * MASTER_SE_SCALE));
 

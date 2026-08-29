@@ -277,4 +277,4 @@ f.value = Math.round(f.ran / 1000) * 1000;
 
 [wait  time="2000"  ]
 [cm  ]
-[jump  storage="job_moneyget_mesi.ks"  target="*top"  
+[jump  storage="job_moneyget_mesi.ks"  target="*top" ]

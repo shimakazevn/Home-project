@@ -64,4 +64,4 @@ Không phát hiện lỗi cú pháp hay thẻ lệnh nào bị hỏng.[p]
 [tb_show_message_window  ]
 [bg  time="1000"  method="crossfade"  storage="sin_nagi_DK.png"  ]
 [tb_eval  exp="f.sinnyu_hajimete=2"  name="sinnyu_hajimete"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
-[jump  storage="sinnyu_nagi.ks"  target="*top"  
+[jump  storage="sinnyu_nagi.ks"  target="*top" ]

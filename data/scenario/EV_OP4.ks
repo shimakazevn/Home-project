@@ -82,4 +82,4 @@ Tsubomi「...Xin đừng làm trò gì kỳ quặc nhé~?」[p]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_eval  exp="f.EV_hatukinmu_tubomi=1"  name="EV_hatukinmu_tubomi"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
 [tb_eval  exp="sf.puro_tubomi_sigoto=1"  name="puro_tubomi_sigoto"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
-[jump  storage="job_moneyget_mesi.ks"  target="*top"  
+[jump  storage="job_moneyget_mesi.ks"  target="*top" ]

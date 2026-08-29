@@ -37,4 +37,4 @@
 [jump  storage="sansaku_hankagaiEV.ks"  target="*top2"  ]
 *hanasu
 
-[jump  storage="sansaku_famiresuEV_tubomi.ks"  target="*hanasu"  
+[jump  storage="sansaku_famiresuEV_tubomi.ks"  target="*hanasu" ]

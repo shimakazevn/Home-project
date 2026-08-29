@@ -292,4 +292,4 @@ Nhìn Nagi cười bẽn lẽn, trong đầu tôi giờ chỉ toàn nghĩ đến
 [call  storage="ui_onoff.ks"  target="*UI_off"  ]
 [call  storage="character.ks"  target="*taijyou"  ]
 [call  storage="BGM.ks"  target="*love1"  ]
-[return  
+[return ]

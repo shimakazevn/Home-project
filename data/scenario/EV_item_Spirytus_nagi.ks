@@ -261,4 +261,4 @@ Chiếc còng số tám lạnh buốt tra vào cổ tay, chấm dứt tất cả
 [stopbgm  time="1000"  fadeout="true"  ]
 [tb_eval  exp="f.itemEV_supiritasu_nagi=2"  name="itemEV_supiritasu_nagi"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
 [wait  time="1000"  ]
-[return  
+[return ]

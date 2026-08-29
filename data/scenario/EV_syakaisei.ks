@@ -101,4 +101,4 @@ Quyền kiểm soát không gian và thời gian thuộc về tôi.[p]
 [bg  time="0"  method="crossfade"  storage="back_byouin.png"  cross="false"  ]
 [call  storage="BGM.ks"  target="*jisitu"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
-[return  
+[return ]

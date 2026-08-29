@@ -585,4 +585,4 @@ base.addEventListener('DOMMouseScroll', _tySlideWheelHandler, {passive:false, ca
 [舜]（Nagi......... Cảm ơn em đã chọn anh.）[p]
 [_tb_end_text]
 
-[jump  storage="sinnyu_PC.ks"  target="*end"  
+[jump  storage="sinnyu_PC.ks"  target="*end" ]

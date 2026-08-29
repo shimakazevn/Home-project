@@ -111,4 +111,4 @@ Bên trong quán khá náo nhiệt, nhưng đâu đó vẫn phảng phất một
 （Giờ thì, phải làm sao đây?）
 [_tb_end_text]
 
-[jump  storage="sansaku.ks"  target="*end"  
+[jump  storage="sansaku.ks"  target="*end" ]

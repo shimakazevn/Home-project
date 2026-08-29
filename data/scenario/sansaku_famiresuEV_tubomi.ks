@@ -464,4 +464,4 @@ Tsubomi「Chỗ này, ngay gốc ngón tay... là vùng phản xạ của hệ t
 [return  ]
 *aisatu_end
 
-[jump  storage="komyu_tubomi.ks"  target="*top"  
+[jump  storage="komyu_tubomi.ks"  target="*top" ]

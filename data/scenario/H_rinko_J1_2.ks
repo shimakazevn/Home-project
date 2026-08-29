@@ -682,4 +682,4 @@ Rinko「Em phải chịu trách nhiệm đấy nhé? Mỗi lần chị rạo r�
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="rinko_HJ1_2"  ]
 [call  storage="H_kaihaturesult_rinko.ks"  target="*top"  ]
-[jump  storage="EV_rinko_J.ks"  target="*EV2_back"  
+[jump  storage="EV_rinko_J.ks"  target="*EV2_back" ]

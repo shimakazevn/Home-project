@@ -36,4 +36,4 @@ Mọi thứ thật hoàn hảo.[p]
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [bg  time="0000"  method="crossfade"  storage="black.jpg"  ]
 [tb_hide_message_window  ]
-[return  
+[return ]

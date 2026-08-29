@@ -694,4 +694,4 @@ Nagi「Hà, hà, với tư thế này... tinh dịch sẽ đâm một mạch và
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="nagi_HK1"  ]
 [call  storage="H_kaihaturesult_nagi.ks"  target="*top"  ]
-[jump  storage="EV_nagi_R.ks"  target="*EV1_back"  
+[jump  storage="EV_nagi_R.ks"  target="*EV1_back" ]

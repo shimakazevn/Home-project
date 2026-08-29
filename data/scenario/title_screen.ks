@@ -235,4 +235,4 @@ Hẹn gặp lại trong những tác phẩm tiếp theo![p]
 [playse  volume="100"  time="1000"  buf="0"  storage="sistem_start.mp3"  ]
 [tb_eval  exp="sf.zenkaihou=2"  name="zenkaihou"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
 [jump  storage="title_screen.ks"  target="*back"  ]
-[tb_eval  exp="sf.zenkaihou=1"  name="zenkaihou"  cmd="="  op="t"  val="1"  val_2="undefined"  
+[tb_eval  exp="sf.zenkaihou=1"  name="zenkaihou"  cmd="="  op="t"  val="1"  val_2="undefined" ]

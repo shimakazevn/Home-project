@@ -52,4 +52,4 @@
 [chara_hide  name="statusUP"  time="1500"  wait="false"  pos_mode="false"  ]
 [wait  time="1500"  ]
 [call  storage="system.ks"  target="*start_keyconfig"  ]
-[return  
+[return ]

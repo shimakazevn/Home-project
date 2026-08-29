@@ -102,4 +102,4 @@ Từ sự quan tâm chăm sóc ân cần của người bề trên.[p]
 [bg  time="0"  method="crossfade"  storage="black.jpg"  ]
 [call  storage="character.ks"  target="*taijyou"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
-[return  
+[return ]

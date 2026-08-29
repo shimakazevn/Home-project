@@ -111,4 +111,4 @@ f.para_kinryoku_display = 0;
 }
 [endscript]
 
-[return  
+[return ]

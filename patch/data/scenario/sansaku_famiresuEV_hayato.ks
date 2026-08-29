@@ -418,4 +418,4 @@ Bên trong quán khá náo nhiệt, nhưng đâu đó vẫn phảng phất một
 （Có Tsubomi kìa. Hay là bắt chuyện thử xem sao?）
 [_tb_end_text]
 
-[jump  storage="sansaku_famiresuEV_hayato.ks"  target="*aisatu_end_back"  
+[jump  storage="sansaku_famiresuEV_hayato.ks"  target="*aisatu_end_back" ]

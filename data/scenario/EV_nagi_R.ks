@@ -281,4 +281,4 @@ Nagi「Của anh Shun... Em chỉ là của riêng anh Shun thôi...」[p]
 [call  storage="ui_onoff.ks"  target="*UI_off"  ]
 [call  storage="character.ks"  target="*taijyou"  ]
 [call  storage="BGM.ks"  target="*love_R"  ]
-[return  
+[return ]

@@ -410,4 +410,4 @@ Rinko「Giờ nghỉ giải lao chắc cháu cũng đói bụng rồi nhỉ? Th�
 [return  ]
 *aisatu_end
 
-[jump  storage="komyu_rinko.ks"  target="*top"  
+[jump  storage="komyu_rinko.ks"  target="*top" ]

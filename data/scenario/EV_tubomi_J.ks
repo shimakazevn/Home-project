@@ -180,4 +180,4 @@ Tôi cười gượng, khẽ gật đầu.[p]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [call  storage="EV_honmei.ks"  target="*tubomi"  ]
 [call  storage="komyuhyouka_tubomi.ks"  target="*top"  ]
-[jump  storage="room_yoru.ks"  target="*top"  
+[jump  storage="room_yoru.ks"  target="*top" ]

@@ -17,4 +17,4 @@ $('.heart_active').css({
 });
 [endscript]
 
-[return  
+[return ]

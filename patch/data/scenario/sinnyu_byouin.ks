@@ -77,4 +77,4 @@
 
 [stopbgm  time="1000"  ]
 [wait  time="1000"  ]
-[jump  storage="room_yoru.ks"  target="*top"  
+[jump  storage="room_yoru.ks"  target="*top" ]

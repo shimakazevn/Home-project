@@ -728,4 +728,4 @@ Nagi「Hôm đó tớ sẽ chuẩn bị thật tươm tất... Nhờ cậu nhé?
 *H
 
 [cm  ]
-[jump  storage="komyu_H.ks"  target="*nagi"  
+[jump  storage="komyu_H.ks"  target="*nagi" ]
