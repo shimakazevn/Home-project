@@ -214,7 +214,7 @@
 *suimin
 
 [tb_start_tyrano_code]
-;ボタンの表示(睡眠薬)
+;ボタンの表示(Thuốc ngủ)
 [button graphic="../fgimage/default/item_trap_suimin.png" storage="sansaku_kaimono_item.ks" target="*suimin2" x=120 y=152 ]
 [_tb_end_tyrano_code]
 
@@ -243,7 +243,7 @@
 *biyaku
 
 [tb_start_tyrano_code]
-;ボタンの表示(媚薬)
+;ボタンの表示(Thuốc kích dục)
 [button graphic="../fgimage/default/item_trap_biyaku.png" storage="sansaku_kaimono_item.ks" target="*biyaku_2" x=384 y=152 ]
 [_tb_end_tyrano_code]
 
@@ -272,7 +272,7 @@
 *biyaku2
 
 [tb_start_tyrano_code]
-;ボタンの表示(媚薬プレミアム)
+;ボタンの表示(Thuốc kích dụcプレミアム)
 [button graphic="../fgimage/default/item_trap_biyaku2.png" storage="sansaku_kaimono_item.ks" target="*biyaku2_2" x=648 y=152 ]
 [_tb_end_tyrano_code]
 
@@ -301,7 +301,7 @@
 *biyaku3
 
 [tb_start_tyrano_code]
-;ボタンの表示(媚薬クリーム)
+;ボタンの表示(Thuốc kích dụcクリーム)
 [button graphic="../fgimage/default/item_trap_cream.png" storage="sansaku_kaimono_item.ks" target="*biyaku3_2" x=912 y=152 ]
 [_tb_end_tyrano_code]
 

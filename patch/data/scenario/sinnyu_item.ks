@@ -537,7 +537,7 @@
 
 [tb_start_tyrano_code]
 ;item1ボタン
-[button storage=sinnyu_item.ks target=*item_1_nagi_ev graphic=shinnyu_item1.png x=1088 y=8 name="sinnyu" hint=媚薬]
+[button storage=sinnyu_item.ks target=*item_1_nagi_ev graphic=shinnyu_item1.png x=1088 y=8 name="sinnyu" hint=Thuốc kích dục]
 [_tb_end_tyrano_code]
 
 [return  ]
@@ -545,7 +545,7 @@
 
 [tb_start_tyrano_code]
 ;item2ボタン
-[button storage=sinnyu_item.ks target=*item_2_nagi_ev graphic=shinnyu_item2.png x=1136 y=8 name="sinnyu" hint=媚薬プレミアム]
+[button storage=sinnyu_item.ks target=*item_2_nagi_ev graphic=shinnyu_item2.png x=1136 y=8 name="sinnyu" hint=Thuốc kích dụcプレミアム]
 [_tb_end_tyrano_code]
 
 [return  ]
@@ -553,7 +553,7 @@
 
 [tb_start_tyrano_code]
 ;item3ボタン
-[button storage=sinnyu_item.ks target=*item_3_nagi_ev graphic=shinnyu_item3.png x=1184 y=8 name="sinnyu" hint=媚薬クリーム]
+[button storage=sinnyu_item.ks target=*item_3_nagi_ev graphic=shinnyu_item3.png x=1184 y=8 name="sinnyu" hint=Thuốc kích dụcクリーム]
 [_tb_end_tyrano_code]
 
 [return  ]
@@ -561,7 +561,7 @@
 
 [tb_start_tyrano_code]
 ;item4ボタン
-[button storage=sinnyu_item.ks target=*item_4_nagi_ev graphic=shinnyu_item4.png x=1232 y=8 name="sinnyu" hint=睡眠薬]
+[button storage=sinnyu_item.ks target=*item_4_nagi_ev graphic=shinnyu_item4.png x=1232 y=8 name="sinnyu" hint=Thuốc ngủ]
 [_tb_end_tyrano_code]
 
 [return  ]

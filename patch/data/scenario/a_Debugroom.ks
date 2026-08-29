@@ -66,7 +66,7 @@
 [glink  color="btn_02_black"  storage="a_Debugroom.ks"  size="20"  text="Đi mua sắm"  x="1031"  y="479"  width=""  height=""  _clickable_img=""  target="*kaimono"  ]
 [glink  color="btn_02_black"  storage="a_Debugroom.ks"  size="20"  text="Phòng riêng (Buổi Sáng)"  x="1031"  y="545"  width=""  height=""  _clickable_img=""  target="*room"  ]
 [glink  color="btn_02_black"  storage="a_Debugroom.ks"  size="20"  text="Phòng riêng (Buổi Tối)"  x="1155"  y="536"  width=""  height=""  _clickable_img=""  target="*room_yoru"  ]
-[glink  color="btn_02_black"  storage="a_Debugroom.ks"  size="20"  text="散策"  x="1031"  y="607"  width=""  height=""  _clickable_img=""  target="*sansaku"  ]
+[glink  color="btn_02_black"  storage="a_Debugroom.ks"  size="20"  text="Đi dạo"  x="1031"  y="607"  width=""  height=""  _clickable_img=""  target="*sansaku"  ]
 [glink  color="btn_30_red"  storage="a_Debugroom.ks"  size="20"  text="Nhảy đến Ngày cuối cùng"  x="806"  y="61"  width=""  height=""  _clickable_img=""  target="*saisyuubi"  ]
 [s  ]
 *2syuume

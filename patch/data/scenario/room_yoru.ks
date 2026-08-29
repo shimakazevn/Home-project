@@ -37,19 +37,19 @@
 [endif]
 
 ;アイテムイベントの発生★
-;睡眠薬
+;Thuốc ngủ
 [if exp="f.itemEV_suimin == 1"]
 [jump storage="EV_item_suimin.ks" target="*top"]
 
-;媚薬1
+;Thuốc kích dục1
 [elsif exp="f.itemEV_biyaku == 1"]
 [call storage="EV_item_biyaku.ks" target="*top"]
 
-;媚薬2
+;Thuốc kích dục2
 [elsif exp="f.itemEV_biyaku2 == 1"]
 [call storage="EV_item_biyaku2.ks" target="*top"]
 
-;媚薬3
+;Thuốc kích dục3
 [elsif exp="f.itemEV_biyakucream3 == 1"]
 [call storage="EV_item_biyaku3.ks" target="*top"]
 
