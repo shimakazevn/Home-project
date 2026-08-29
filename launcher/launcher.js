@@ -88,57 +88,73 @@ function formatTime(seconds) {
     return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
 }
 
-// Tải một file với XMLHttpRequest để tương thích 100% Safari & CORS
+// Tải một file với XMLHttpRequest & Hỗ trợ chuyển tiếp CORS
 function fetchBlobWithXHR(url, label, totalTracker) {
     return new Promise((resolve, reject) => {
         statusText.textContent = label;
-        const xhr = new XMLHttpRequest();
-        xhr.open("GET", url, true);
-        xhr.responseType = "blob";
+        
+        function tryDownload(targetUrl, isRetry) {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", targetUrl, true);
+            xhr.responseType = "blob";
 
-        let lastTime = Date.now();
-        let lastLoaded = 0;
+            let lastTime = Date.now();
+            let lastLoaded = 0;
 
-        xhr.onprogress = (e) => {
-            const now = Date.now();
-            const diff = (now - lastTime) / 1000;
-            if (diff >= 0.25) {
-                const currentLoaded = e.loaded;
-                const speed = (currentLoaded - lastLoaded) / diff;
-                lastLoaded = currentLoaded;
-                lastTime = now;
+            xhr.onprogress = (e) => {
+                const now = Date.now();
+                const diff = (now - lastTime) / 1000;
+                if (diff >= 0.25) {
+                    const currentLoaded = e.loaded;
+                    const speed = (currentLoaded - lastLoaded) / diff;
+                    lastLoaded = currentLoaded;
+                    lastTime = now;
 
-                const totalExpected = totalTracker ? totalTracker.total : (e.total || 0);
-                const currentDone = totalTracker ? (totalTracker.downloaded + currentLoaded) : currentLoaded;
-                const pct = totalExpected > 0 ? Math.min(100, Math.floor((currentDone / totalExpected) * 100)) : 0;
+                    const totalExpected = totalTracker ? totalTracker.total : (e.total || 0);
+                    const currentDone = totalTracker ? (totalTracker.downloaded + currentLoaded) : currentLoaded;
+                    const pct = totalExpected > 0 ? Math.min(100, Math.floor((currentDone / totalExpected) * 100)) : 0;
 
-                statusPercent.textContent = `${pct}%`;
-                progressBar.style.width = `${pct}%`;
-                statDownloaded.textContent = `${formatBytes(currentDone)} / ${formatBytes(totalExpected)}`;
-                statSpeed.textContent = `${formatBytes(speed)}/s`;
+                    statusPercent.textContent = `${pct}%`;
+                    progressBar.style.width = `${pct}%`;
+                    statDownloaded.textContent = `${formatBytes(currentDone)} / ${formatBytes(totalExpected)}`;
+                    statSpeed.textContent = `${formatBytes(speed)}/s`;
 
-                const remBytes = totalExpected - currentDone;
-                const etaSecs = speed > 0 ? remBytes / speed : 0;
-                statEta.textContent = `ETA: ${formatTime(etaSecs)}`;
-            }
-        };
-
-        xhr.onload = () => {
-            if (xhr.status >= 200 && xhr.status < 300) {
-                if (totalTracker && xhr.response) {
-                    totalTracker.downloaded += xhr.response.size;
+                    const remBytes = totalExpected - currentDone;
+                    const etaSecs = speed > 0 ? remBytes / speed : 0;
+                    statEta.textContent = `ETA: ${formatTime(etaSecs)}`;
                 }
-                resolve(xhr.response);
-            } else {
-                reject(new Error(`Máy chủ phản hồi mã lỗi: ${xhr.status}`));
-            }
-        };
+            };
 
-        xhr.onerror = () => {
-            reject(new Error("Lỗi kết nối mạng hoặc chặn CORS."));
-        };
+            xhr.onload = () => {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    if (totalTracker && xhr.response) {
+                        totalTracker.downloaded += xhr.response.size;
+                    }
+                    resolve(xhr.response);
+                } else if (!isRetry) {
+                    // Thử lại qua CORS Proxy
+                    console.warn(`Direct download failed with ${xhr.status}, trying CORS proxy...`);
+                    const proxyUrl = "https://corsproxy.io/?url=" + encodeURIComponent(url);
+                    tryDownload(proxyUrl, true);
+                } else {
+                    reject(new Error(`Máy chủ phản hồi mã lỗi: ${xhr.status}`));
+                }
+            };
 
-        xhr.send();
+            xhr.onerror = () => {
+                if (!isRetry) {
+                    console.warn("Direct download hit CORS error, trying CORS proxy fallback...");
+                    const proxyUrl = "https://corsproxy.io/?url=" + encodeURIComponent(url);
+                    tryDownload(proxyUrl, true);
+                } else {
+                    reject(new Error("Lỗi CORS từ máy chủ. Trình duyệt chặn kết nối tải trực tiếp."));
+                }
+            };
+
+            xhr.send();
+        }
+
+        tryDownload(url, false);
     });
 }
 
@@ -212,10 +228,7 @@ async function handleLocalFileImport(file) {
         progressBar.style.width = "80%";
         statusPercent.textContent = "80%";
 
-        const patchUrl = currentManifest && currentManifest.packages && currentManifest.packages[0] 
-            ? currentManifest.packages[0].url 
-            : "https://raw.githubusercontent.com/shimakazevn/Home-project/main/launcher/patch/HOME_Patch_Core_v1.0.0.zip";
-
+        const patchUrl = "https://cdn.jsdelivr.net/gh/shimakazevn/Home-project@main/launcher/patch/HOME_Patch_Core_v1.0.0.zip";
         const patchBlob = await fetchBlobWithXHR(patchUrl + "?t=" + Date.now(), "Đang tải bản vá tiếng Việt (9 MB)...", null);
         await unpackFileToStorage(patchBlob, "HOME_Patch_Core_v1.0.0.zip", "Vá Tiếng Việt & Font Chữ");
 
@@ -289,7 +302,7 @@ async function startFullDownloadAndPatch() {
         btnAction.onclick = launchGame;
     } catch (err) {
         console.error("Lỗi trong quá trình tải & vá:", err);
-        statusText.textContent = `❌ Lỗi tải: ${err.message}. Bạn có thể dùng nút 'Nạp File Có Sẵn' để nạp app.asar từ máy.`;
+        statusText.innerHTML = `❌ Lỗi: Trình duyệt chặn tải file 8GB qua mạng (CORS).<br>👉 Hãy bấm nút <b>'📁 Nạp File Có Sẵn'</b> để nạp file <code>app.asar</code> từ máy vào chơi ngay!`;
         btnAction.disabled = false;
         btnImportLocal.disabled = false;
         btnIcon.textContent = "🔄";
@@ -307,10 +320,9 @@ async function startPatchOnlyUpdate() {
     btnText.textContent = "Đang Cập Nhật Bản Vá...";
 
     try {
-        const corePkg = currentManifest.packages.find(p => p.filename.includes("Patch_Core") || p.name.includes("Lõi Kịch Bản")) || currentManifest.packages[0];
-
-        const patchBlob = await fetchBlobWithXHR(corePkg.url + "?t=" + Date.now(), `Đang tải bản dịch mới (${corePkg.size_formatted})...`, null);
-        await unpackFileToStorage(patchBlob, corePkg.filename || "patch.zip", "Đang áp dụng bản dịch mới vào game");
+        const patchUrl = "https://cdn.jsdelivr.net/gh/shimakazevn/Home-project@main/launcher/patch/HOME_Patch_Core_v1.0.0.zip";
+        const patchBlob = await fetchBlobWithXHR(patchUrl + "?t=" + Date.now(), "Đang tải bản dịch mới (9 MB)...", null);
+        await unpackFileToStorage(patchBlob, "HOME_Patch_Core_v1.0.0.zip", "Đang áp dụng bản dịch mới vào game");
 
         localStorage.setItem("HOME_GAME_VERSION", currentManifest.version);
         localVersionEl.textContent = currentManifest.version;
@@ -369,7 +381,7 @@ async function checkSystemState() {
         if (!isInstalled) {
             gameStatusLabel.textContent = "Chưa cài đặt game";
             gameStatusLabel.className = "info-value text-accent";
-            statusText.textContent = `Sẵn sàng tải hoặc nạp file game gốc để tự động vá tiếng Việt.`;
+            statusText.textContent = `Sẵn sàng nạp file game gốc để tự động vá tiếng Việt.`;
             
             btnAction.disabled = false;
             btnImportLocal.style.display = "inline-flex";
@@ -418,7 +430,7 @@ async function checkSystemState() {
             btnAction.onclick = launchGame;
         } else {
             gameStatusLabel.textContent = "Chưa có dữ liệu game";
-            statusText.textContent = "Bạn có thể dùng nút 'Nạp File Có Sẵn' để nạp file app.asar trực tiếp từ máy.";
+            statusText.textContent = "Hãy dùng nút 'Nạp File Có Sẵn' để nạp file app.asar trực tiếp từ máy.";
             btnAction.disabled = true;
             btnImportLocal.style.display = "inline-flex";
             btnIcon.textContent = "📁";
@@ -440,11 +452,11 @@ btnSettings.onclick = () => { settingsModal.style.display = "flex"; };
 btnCloseSettings.onclick = () => { settingsModal.style.display = "none"; };
 btnSaveSettings.onclick = () => {
     const val = inputManifestUrl.value.trim();
-    if (val) {
-        localStorage.setItem("HOME_MANIFEST_URL", val);
-        settingsModal.style.display = "none";
-        checkSystemState();
-    }
+    const pass = inputGamePassword.value.trim();
+    if (val) localStorage.setItem("HOME_MANIFEST_URL", val);
+    if (pass) localStorage.setItem("HOME_GAME_PASSWORD", pass);
+    settingsModal.style.display = "none";
+    checkSystemState();
 };
 
 window.addEventListener("DOMContentLoaded", checkSystemState);
