@@ -75,9 +75,13 @@
                 <span class="btn-icon" id="btn-icon">⏳</span>
                 <span class="btn-text" id="btn-text">Vui Lòng Chờ...</span>
             </button>
+            <button class="btn btn-outline" id="btn-import-local" title="Nạp file app.asar hoặc game.zip có sẵn trên máy">
+                📁 Nạp File Có Sẵn
+            </button>
             <button class="btn btn-secondary" id="btn-settings" title="Cấu hình nguồn tải">
                 ⚙ Cài Đặt
             </button>
+            <input type="file" id="input-local-file" accept=".asar,.zip" style="display:none;">
         </footer>
     </main>
 
@@ -100,9 +104,9 @@
         </div>
     </div>
 
-    <!-- Thư viện giải nén Zip & ASAR -->
-    <script src="jszip.min.js"></script>
-    <script src="asar_extractor.js"></script>
-    <script src="launcher.js"></script>
+    <!-- Thư viện giải nén Zip & ASAR (Đã thêm cache-buster) -->
+    <script src="jszip.min.js?v=2.0"></script>
+    <script src="asar_extractor.js?v=2.0"></script>
+    <script src="launcher.js?v=2.0"></script>
 </body>
 </html>
