@@ -147,25 +147,57 @@ async function unpackFileToStorage(fileBlob, fileName, labelPrefix) {
     }
 }
 
-// NẠP FILE GAME GỐC (app.asar hoặc zip) CÓ SẴN TRÊN MÁY VÀ VÁ TỰ ĐỘNG
-async function handleLocalFileImport(file) {
-    if (!file) return;
+// XỬ LÝ NẠP FILE (HỖ TRỢ CẢ FILE ĐƠN app.asar VÀ NHIỀU FILE PART .z01, .z02...)
+async function handleLocalFileList(fileList) {
+    if (!fileList || fileList.length === 0) return;
 
     btnImportLocal.disabled = true;
-    btnImportLocal.innerHTML = "⏳ Đang Nạp & Vá Game...";
+    btnImportLocal.innerHTML = "⏳ Đang Ghép & Nạp Dữ Liệu...";
 
     try {
-        statusText.textContent = `Đang đọc file ${file.name} (${formatBytes(file.size)})...`;
-        progressBar.style.width = "20%";
-        statusPercent.textContent = "20%";
+        let finalBlob = null;
+        let finalName = "";
+
+        if (fileList.length === 1) {
+            // Nạp 1 file đơn lẻ (app.asar hoặc app.zip)
+            finalBlob = fileList[0];
+            finalName = fileList[0].name;
+        } else {
+            // Người dùng chọn nhiều file Part (app.z01, app.z02, ... app.zip)
+            statusText.textContent = `Đang tự động ghép ${fileList.length} phần dữ liệu...`;
+            
+            // Sắp xếp các part theo thứ tự đúng: .z01 -> .z02 -> ... -> .zip
+            const filesArray = Array.from(fileList);
+            filesArray.sort((a, b) => {
+                const getExtScore = (name) => {
+                    const ext = name.split('.').pop().toLowerCase();
+                    if (ext.startsWith('z') && !isNaN(parseInt(ext.slice(1)))) {
+                        return parseInt(ext.slice(1));
+                    }
+                    if (ext === 'zip') return 999;
+                    return 0;
+                };
+                return getExtScore(a.name) - getExtScore(b.name);
+            });
+
+            const totalSize = filesArray.reduce((acc, f) => acc + f.size, 0);
+            console.log("Ghép các file:", filesArray.map(f => f.name));
+
+            // Ghép thành 1 chuỗi Blob hoàn chỉnh tức thì
+            finalBlob = new Blob(filesArray);
+            finalName = "app.zip";
+            statusText.textContent = `Đã ghép thành công ${filesArray.length} phần (${formatBytes(totalSize)})!`;
+        }
 
         // 1. Trích xuất file game gốc vào bộ nhớ máy
-        await unpackFileToStorage(file, file.name, "Trích xuất Game Gốc");
+        progressBar.style.width = "30%";
+        statusPercent.textContent = "30%";
+        await unpackFileToStorage(finalBlob, finalName, "Trích xuất Game Gốc");
 
         // 2. Tự động kéo bản vá tiếng Việt từ CDN về chép đè
-        statusText.textContent = "Đang tải bản vá tiếng Việt (9 MB)...";
-        progressBar.style.width = "80%";
-        statusPercent.textContent = "80%";
+        statusText.textContent = "Đang tải bản vá tiếng Việt mới nhất (9 MB)...";
+        progressBar.style.width = "85%";
+        statusPercent.textContent = "85%";
 
         const patchBlob = await fetchBlobWithXHR(PATCH_CORE_URL + "?t=" + Date.now(), "Đang nạp bản vá tiếng Việt (9 MB)...");
         await unpackFileToStorage(patchBlob, "HOME_Patch_Core_v1.0.0.zip", "Vá Tiếng Việt & Font Chữ");
@@ -251,16 +283,14 @@ async function checkSystemState() {
     }
 
     if (!isInstalled) {
-        // Chưa cài đặt game
         gameStatusLabel.textContent = "Chưa có dữ liệu game";
         gameStatusLabel.className = "info-value text-accent";
-        statusText.textContent = "Vui lòng chọn file app.asar từ máy để tự động vá tiếng Việt.";
+        statusText.textContent = "Vui lòng chọn file game đã tải để tự động ghép & vá tiếng Việt.";
 
         btnImportLocal.style.display = "inline-flex";
         btnAction.style.display = "none";
-        if (guideBox) guideBox.style.display = "block";
+        if (guideBox) guideBox.style.display = "flex";
     } else if (currentManifest && localVer !== currentManifest.version) {
-        // Có bản cập nhật kịch bản mới
         gameStatusLabel.textContent = `Có bản cập nhật mới (${currentManifest.version})`;
         gameStatusLabel.className = "info-value text-accent";
         statusText.textContent = `Phát hiện bản dịch mới trên GitHub (${currentManifest.version})!`;
@@ -272,7 +302,6 @@ async function checkSystemState() {
         btnAction.innerHTML = "✨ Cập Nhật Bản Dịch Mới (9 MB)";
         btnAction.onclick = startPatchOnlyUpdate;
     } else {
-        // Game đã sẵn sàng
         gameStatusLabel.textContent = "Đã cập nhật bản mới nhất";
         gameStatusLabel.className = "info-value text-success";
         statusText.textContent = "Game đã sẵn sàng! Bạn có thể vào chơi ngay.";
@@ -288,26 +317,12 @@ async function checkSystemState() {
     }
 }
 
-// Sự kiện nút Nạp file từ máy
+// Sự kiện nút Nạp file từ máy (cho phép chọn nhiều file cùng lúc)
 btnImportLocal.onclick = () => inputLocalFile.click();
 inputLocalFile.onchange = (e) => {
     if (e.target.files && e.target.files.length > 0) {
-        handleLocalFileImport(e.target.files[0]);
+        handleLocalFileList(e.target.files);
     }
 };
-
-// Sự kiện sao chép mật khẩu 1 click
-const btnCopyPass = document.getElementById("btn-copy-pass");
-if (btnCopyPass) {
-    btnCopyPass.onclick = () => {
-        navigator.clipboard.writeText("seikowo").then(() => {
-            const hint = btnCopyPass.querySelector(".copy-hint");
-            if (hint) {
-                hint.textContent = "✔ Đã chép!";
-                setTimeout(() => { hint.textContent = "(Sao chép)"; }, 2000);
-            }
-        });
-    };
-}
 
 window.addEventListener("DOMContentLoaded", checkSystemState);

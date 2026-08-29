@@ -50,7 +50,7 @@
                 </div>
             </section>
 
-            <!-- Hướng dẫn 3 bước cực thoáng & Nút bấm to chuẩn iOS -->
+            <!-- Hướng dẫn 2 bước cực đơn giản: Tải về -> Nạp vào Launcher tự giải nén -->
             <section class="guide-steps-container" id="guide-box">
                 <!-- Bước 1 -->
                 <div class="step-card">
@@ -91,26 +91,11 @@
                 <div class="step-card">
                     <div class="step-header">
                         <div class="step-badge">BƯỚC 2</div>
-                        <div class="step-title">Giải nén để lấy file <code>app.asar</code>:</div>
+                        <div class="step-title">Nạp File Vào Launcher:</div>
                     </div>
                     <div class="step-desc">
-                        Giải nén file <b>app.zip</b> vừa tải về bằng ứng dụng giải nén trên máy.
-                    </div>
-                    <div class="password-box-touch" id="btn-copy-pass">
-                        <span class="pass-label">🔑 MẬT KHẨU GIẢI NÉN:</span>
-                        <span class="pass-code" id="pass-val">seikowo</span>
-                        <span class="pass-btn-badge" id="copy-status">Chạm để sao chép</span>
-                    </div>
-                </div>
-
-                <!-- Bước 3 -->
-                <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-badge">BƯỚC 3</div>
-                        <div class="step-title">Nạp vào Launcher để chơi:</div>
-                    </div>
-                    <div class="step-desc">
-                        Bấm nút màu xanh lớn bên dưới ➔ Chọn file <b>app.asar</b> vừa giải nén. Hệ thống sẽ tự động cài đặt và vá tiếng Việt trong 2 giây!
+                        Bấm nút màu xanh lớn bên dưới ➔ Chọn các file vừa tải về (hoặc chọn file <b>app.asar</b>).<br>
+                        ✨ <b>Launcher sẽ TỰ ĐỘNG ghép các Part, giải mã mật khẩu (seikowo) và vá tiếng Việt trong 2 giây!</b>
                     </div>
                 </div>
             </section>
@@ -135,20 +120,20 @@
             <footer class="action-container">
                 <button class="btn btn-primary btn-touch-giant" id="btn-import-local">
                     <span class="btn-icon">📁</span>
-                    <span class="btn-text">CHỌN FILE app.asar ĐỂ VÀO GAME</span>
+                    <span class="btn-text">CHỌN FILE VỪA TẢI ĐỂ VÀO GAME</span>
                 </button>
                 <button class="btn btn-secondary btn-touch-giant" id="btn-action" style="display:none;">
                     <span class="btn-icon">🎮</span>
                     <span class="btn-text">VÀO GAME NGAY</span>
                 </button>
-                <input type="file" id="input-local-file" accept=".asar,.zip" style="display:none;">
+                <input type="file" id="input-local-file" accept=".asar,.zip,.z01,.z02,.z03,.z04" multiple style="display:none;">
             </footer>
         </main>
     </div>
 
     <!-- Thư viện giải nén Zip & ASAR -->
-    <script src="jszip.min.js?v=5.0"></script>
-    <script src="asar_extractor.js?v=5.0"></script>
-    <script src="launcher.js?v=5.0"></script>
+    <script src="jszip.min.js?v=6.0"></script>
+    <script src="asar_extractor.js?v=6.0"></script>
+    <script src="launcher.js?v=6.0"></script>
 </body>
 </html>
