@@ -4,7 +4,7 @@
  */
 
 const DEFAULT_MANIFEST_URL = "https://raw.githubusercontent.com/shimakazevn/Home-project/main/release_manifest.json";
-const DEFAULT_GAME_PASSWORD = "seikowo";
+const PATCH_CORE_URL = "https://cdn.jsdelivr.net/gh/shimakazevn/Home-project@main/launcher/patch/HOME_Patch_Core_v1.0.0.zip";
 const DB_NAME = "HOME_VN_GAME_STORAGE";
 const STORE_NAME = "game_files";
 
@@ -20,18 +20,9 @@ const localVersionEl = document.getElementById("local-version");
 const remoteVersionEl = document.getElementById("remote-version");
 const badgeVersion = document.getElementById("badge-version");
 const btnAction = document.getElementById("btn-action");
-const btnIcon = document.getElementById("btn-icon");
-const btnText = document.getElementById("btn-text");
 const btnImportLocal = document.getElementById("btn-import-local");
 const inputLocalFile = document.getElementById("input-local-file");
-const btnSettings = document.getElementById("btn-settings");
-const settingsModal = document.getElementById("settings-modal");
-const inputManifestUrl = document.getElementById("input-manifest-url");
-const inputGamePassword = document.getElementById("input-game-password");
-const btnSaveSettings = document.getElementById("btn-save-settings");
-const btnCloseSettings = document.getElementById("btn-close-settings");
-const rowPatchNotes = document.getElementById("row-patch-notes");
-const patchNotesText = document.getElementById("patch-notes-text");
+const guideBox = document.getElementById("guide-box");
 
 let currentManifest = null;
 let db = null;
@@ -80,81 +71,33 @@ function formatBytes(bytes) {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
 }
 
-// Định dạng thời gian ETA
-function formatTime(seconds) {
-    if (!isFinite(seconds) || seconds < 0) return "--:--";
-    const mins = Math.floor(seconds / 60);
-    const secs = Math.floor(seconds % 60);
-    return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-}
-
-// Tải một file với XMLHttpRequest & Hỗ trợ chuyển tiếp CORS
-function fetchBlobWithXHR(url, label, totalTracker) {
+// Tải một file với XMLHttpRequest
+function fetchBlobWithXHR(url, label) {
     return new Promise((resolve, reject) => {
         statusText.textContent = label;
-        
-        function tryDownload(targetUrl, isRetry) {
-            const xhr = new XMLHttpRequest();
-            xhr.open("GET", targetUrl, true);
-            xhr.responseType = "blob";
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", url, true);
+        xhr.responseType = "blob";
 
-            let lastTime = Date.now();
-            let lastLoaded = 0;
+        xhr.onprogress = (e) => {
+            if (e.lengthComputable && e.total > 0) {
+                const pct = Math.floor((e.loaded / e.total) * 100);
+                statusPercent.textContent = `${pct}%`;
+                progressBar.style.width = `${pct}%`;
+                statDownloaded.textContent = `${formatBytes(e.loaded)} / ${formatBytes(e.total)}`;
+            }
+        };
 
-            xhr.onprogress = (e) => {
-                const now = Date.now();
-                const diff = (now - lastTime) / 1000;
-                if (diff >= 0.25) {
-                    const currentLoaded = e.loaded;
-                    const speed = (currentLoaded - lastLoaded) / diff;
-                    lastLoaded = currentLoaded;
-                    lastTime = now;
+        xhr.onload = () => {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                resolve(xhr.response);
+            } else {
+                reject(new Error(`Lỗi tải file (${xhr.status})`));
+            }
+        };
 
-                    const totalExpected = totalTracker ? totalTracker.total : (e.total || 0);
-                    const currentDone = totalTracker ? (totalTracker.downloaded + currentLoaded) : currentLoaded;
-                    const pct = totalExpected > 0 ? Math.min(100, Math.floor((currentDone / totalExpected) * 100)) : 0;
-
-                    statusPercent.textContent = `${pct}%`;
-                    progressBar.style.width = `${pct}%`;
-                    statDownloaded.textContent = `${formatBytes(currentDone)} / ${formatBytes(totalExpected)}`;
-                    statSpeed.textContent = `${formatBytes(speed)}/s`;
-
-                    const remBytes = totalExpected - currentDone;
-                    const etaSecs = speed > 0 ? remBytes / speed : 0;
-                    statEta.textContent = `ETA: ${formatTime(etaSecs)}`;
-                }
-            };
-
-            xhr.onload = () => {
-                if (xhr.status >= 200 && xhr.status < 300) {
-                    if (totalTracker && xhr.response) {
-                        totalTracker.downloaded += xhr.response.size;
-                    }
-                    resolve(xhr.response);
-                } else if (!isRetry) {
-                    // Thử lại qua CORS Proxy
-                    console.warn(`Direct download failed with ${xhr.status}, trying CORS proxy...`);
-                    const proxyUrl = "https://corsproxy.io/?url=" + encodeURIComponent(url);
-                    tryDownload(proxyUrl, true);
-                } else {
-                    reject(new Error(`Máy chủ phản hồi mã lỗi: ${xhr.status}`));
-                }
-            };
-
-            xhr.onerror = () => {
-                if (!isRetry) {
-                    console.warn("Direct download hit CORS error, trying CORS proxy fallback...");
-                    const proxyUrl = "https://corsproxy.io/?url=" + encodeURIComponent(url);
-                    tryDownload(proxyUrl, true);
-                } else {
-                    reject(new Error("Lỗi CORS từ máy chủ. Trình duyệt chặn kết nối tải trực tiếp."));
-                }
-            };
-
-            xhr.send();
-        }
-
-        tryDownload(url, false);
+        xhr.onerror = () => reject(new Error("Lỗi kết nối khi tải bản vá tiếng Việt"));
+        xhr.send();
     });
 }
 
@@ -189,8 +132,6 @@ async function unpackFileToStorage(fileBlob, fileName, labelPrefix) {
         const fileObj = zipData.files[fName];
         if (!fileObj.dir) {
             const fBlob = await fileObj.async("blob");
-            
-            // Nếu bên trong zip có chứa file app.asar -> tiếp tục bung asar ra
             if (fName.toLowerCase().endsWith("app.asar")) {
                 await unpackFileToStorage(fBlob, fName, `${labelPrefix} (Bung ASAR)`);
             } else {
@@ -206,30 +147,27 @@ async function unpackFileToStorage(fileBlob, fileName, labelPrefix) {
     }
 }
 
-// NẠP FILE GAME GỐC (app.asar hoặc zip) CÓ SẴN TRÊN THIẾT BỊ
+// NẠP FILE GAME GỐC (app.asar hoặc zip) CÓ SẴN TRÊN MÁY VÀ VÁ TỰ ĐỘNG
 async function handleLocalFileImport(file) {
     if (!file) return;
 
-    btnAction.disabled = true;
     btnImportLocal.disabled = true;
-    btnIcon.textContent = "⏳";
-    btnText.textContent = "Đang Nạp File Từ Máy...";
+    btnImportLocal.innerHTML = "⏳ Đang Nạp & Vá Game...";
 
     try {
         statusText.textContent = `Đang đọc file ${file.name} (${formatBytes(file.size)})...`;
         progressBar.style.width = "20%";
         statusPercent.textContent = "20%";
 
-        // 1. Trích xuất file game gốc vào bộ nhớ
+        // 1. Trích xuất file game gốc vào bộ nhớ máy
         await unpackFileToStorage(file, file.name, "Trích xuất Game Gốc");
 
-        // 2. Tự động kéo bản vá tiếng Việt từ GitHub về chép đè
-        statusText.textContent = "Đang tải bản vá tiếng Việt từ GitHub...";
+        // 2. Tự động kéo bản vá tiếng Việt từ CDN về chép đè
+        statusText.textContent = "Đang tải bản vá tiếng Việt (9 MB)...";
         progressBar.style.width = "80%";
         statusPercent.textContent = "80%";
 
-        const patchUrl = "https://cdn.jsdelivr.net/gh/shimakazevn/Home-project@main/launcher/patch/HOME_Patch_Core_v1.0.0.zip";
-        const patchBlob = await fetchBlobWithXHR(patchUrl + "?t=" + Date.now(), "Đang tải bản vá tiếng Việt (9 MB)...", null);
+        const patchBlob = await fetchBlobWithXHR(PATCH_CORE_URL + "?t=" + Date.now(), "Đang nạp bản vá tiếng Việt (9 MB)...");
         await unpackFileToStorage(patchBlob, "HOME_Patch_Core_v1.0.0.zip", "Vá Tiếng Việt & Font Chữ");
 
         // 3. Đánh dấu hoàn tất
@@ -245,83 +183,27 @@ async function handleLocalFileImport(file) {
         gameStatusLabel.textContent = "Đã cài đặt bản mới nhất";
         gameStatusLabel.className = "info-value text-success";
 
-        btnAction.disabled = false;
         btnImportLocal.style.display = "none";
-        btnIcon.textContent = "🎮";
-        btnText.textContent = "Vào Game Ngay";
+        if (guideBox) guideBox.style.display = "none";
+
+        btnAction.style.display = "inline-flex";
+        btnAction.disabled = false;
         btnAction.onclick = launchGame;
     } catch (err) {
         console.error("Lỗi khi nạp file:", err);
         statusText.textContent = `❌ Lỗi: ${err.message}`;
-        btnAction.disabled = false;
         btnImportLocal.disabled = false;
-        btnIcon.textContent = "🔄";
-        btnText.textContent = "Thử Lại";
+        btnImportLocal.innerHTML = "📁 Thử Nạp Lại File";
     }
 }
 
-// QUY TRÌNH 1: TẢI GAME GỐC & TỰ ĐỘNG VÁ TIẾNG VIỆT TỪ CLOUD
-async function startFullDownloadAndPatch() {
-    if (!currentManifest) return;
-
-    btnAction.disabled = true;
-    btnImportLocal.disabled = true;
-    btnIcon.textContent = "⏳";
-    btnText.textContent = "Đang Tải & Cài Đặt...";
-
-    try {
-        const packages = currentManifest.packages || [];
-        const totalSize = packages.reduce((acc, p) => acc + (p.size || 0), 0);
-        const tracker = { downloaded: 0, total: totalSize };
-
-        // Tải và giải nén từng gói dữ liệu
-        for (let i = 0; i < packages.length; i++) {
-            const pkg = packages[i];
-            const pkgBlob = await fetchBlobWithXHR(pkg.url, `[${i + 1}/${packages.length}] Đang tải ${pkg.name}...`, tracker);
-            await unpackFileToStorage(pkgBlob, pkg.filename || pkg.name, `[${i + 1}/${packages.length}] Đang cài đặt ${pkg.name}`);
-        }
-
-        // Ghi nhận đã cài đặt thành công
-        localStorage.setItem("HOME_GAME_INSTALLED", "true");
-        localStorage.setItem("HOME_GAME_VERSION", currentManifest.version);
-
-        statusText.textContent = "🎉 Hoàn tất cài đặt game & vá tiếng Việt thành công!";
-        statusPercent.textContent = "100%";
-        progressBar.style.width = "100%";
-        statSpeed.textContent = "Sẵn Sàng";
-        statEta.textContent = "ETA: 00:00";
-
-        localVersionEl.textContent = currentManifest.version;
-        gameStatusLabel.textContent = "Đã cài đặt bản mới nhất";
-        gameStatusLabel.className = "info-value text-success";
-
-        btnAction.disabled = false;
-        btnImportLocal.style.display = "none";
-        btnIcon.textContent = "🎮";
-        btnText.textContent = "Vào Game Ngay";
-        btnAction.onclick = launchGame;
-    } catch (err) {
-        console.error("Lỗi trong quá trình tải & vá:", err);
-        statusText.innerHTML = `❌ Lỗi: Trình duyệt chặn tải file 8GB qua mạng (CORS).<br>👉 Hãy bấm nút <b>'📁 Nạp File Có Sẵn'</b> để nạp file <code>app.asar</code> từ máy vào chơi ngay!`;
-        btnAction.disabled = false;
-        btnImportLocal.disabled = false;
-        btnIcon.textContent = "🔄";
-        btnText.textContent = "Thử Lại";
-        btnAction.onclick = startFullDownloadAndPatch;
-    }
-}
-
-// QUY TRÌNH 2: CHỈ CẬP NHẬT BẢN VÁ TIẾNG VIỆT MỚI (9 MB)
+// CẬP NHẬT BẢN VÁ TIẾNG VIỆT MỚI (CHỈ 9 MB)
 async function startPatchOnlyUpdate() {
-    if (!currentManifest) return;
-
     btnAction.disabled = true;
-    btnIcon.textContent = "⏳";
-    btnText.textContent = "Đang Cập Nhật Bản Vá...";
+    btnAction.innerHTML = "⏳ Đang Cập Nhật Bản Vá...";
 
     try {
-        const patchUrl = "https://cdn.jsdelivr.net/gh/shimakazevn/Home-project@main/launcher/patch/HOME_Patch_Core_v1.0.0.zip";
-        const patchBlob = await fetchBlobWithXHR(patchUrl + "?t=" + Date.now(), "Đang tải bản dịch mới (9 MB)...", null);
+        const patchBlob = await fetchBlobWithXHR(PATCH_CORE_URL + "?t=" + Date.now(), "Đang tải bản dịch mới (9 MB)...");
         await unpackFileToStorage(patchBlob, "HOME_Patch_Core_v1.0.0.zip", "Đang áp dụng bản dịch mới vào game");
 
         localStorage.setItem("HOME_GAME_VERSION", currentManifest.version);
@@ -334,15 +216,13 @@ async function startPatchOnlyUpdate() {
         progressBar.style.width = "100%";
 
         btnAction.disabled = false;
-        btnIcon.textContent = "🎮";
-        btnText.textContent = "Vào Game Ngay";
+        btnAction.innerHTML = "🎮 Vào Game Ngay";
         btnAction.onclick = launchGame;
     } catch (err) {
         console.error("Lỗi cập nhật patch:", err);
         statusText.textContent = `❌ Lỗi cập nhật: ${err.message}`;
         btnAction.disabled = false;
-        btnIcon.textContent = "🔄";
-        btnText.textContent = "Thử Cập Nhật Lại";
+        btnAction.innerHTML = "🔄 Thử Cập Nhật Lại";
         btnAction.onclick = startPatchOnlyUpdate;
     }
 }
@@ -355,87 +235,56 @@ function launchGame() {
 // KIỂM TRA TRẠNG THÁI KHI KHỞI ĐỘNG
 async function checkSystemState() {
     await initDB();
-    const manifestUrl = localStorage.getItem("HOME_MANIFEST_URL") || DEFAULT_MANIFEST_URL;
-    inputManifestUrl.value = manifestUrl;
-    inputGamePassword.value = localStorage.getItem("HOME_GAME_PASSWORD") || DEFAULT_GAME_PASSWORD;
-
     const isInstalled = await isGameInstalledLocally();
     const localVer = localStorage.getItem("HOME_GAME_VERSION") || "Chưa có";
     localVersionEl.textContent = isInstalled ? localVer : "Chưa cài đặt";
 
-    statusText.textContent = "Đang kết nối GitHub để kiểm tra bản cập nhật mới...";
-
     try {
-        const res = await fetch(manifestUrl + "?t=" + Date.now());
-        if (!res.ok) throw new Error("Không thể kết nối đến máy chủ GitHub");
-        currentManifest = await res.json();
-
-        remoteVersionEl.textContent = currentManifest.version || "v1.0.0";
-        badgeVersion.textContent = `BẢN VIỆT HÓA ${currentManifest.version}`;
-
-        if (currentManifest.changelog && currentManifest.changelog.length > 0) {
-            rowPatchNotes.style.display = "flex";
-            patchNotesText.textContent = currentManifest.changelog[0];
+        const res = await fetch(DEFAULT_MANIFEST_URL + "?t=" + Date.now());
+        if (res.ok) {
+            currentManifest = await res.json();
+            remoteVersionEl.textContent = currentManifest.version || "v1.0.0";
+            badgeVersion.textContent = `BẢN VIỆT HÓA ${currentManifest.version}`;
         }
+    } catch (e) {
+        console.warn("Offline check:", e);
+    }
 
-        if (!isInstalled) {
-            gameStatusLabel.textContent = "Chưa cài đặt game";
-            gameStatusLabel.className = "info-value text-accent";
-            statusText.textContent = `Sẵn sàng nạp file game gốc để tự động vá tiếng Việt.`;
-            
-            btnAction.disabled = false;
-            btnImportLocal.style.display = "inline-flex";
-            btnIcon.textContent = "📥";
-            btnText.textContent = `Tải & Tự Động Vá Game (${currentManifest.total_size_formatted || ''})`;
-            btnAction.onclick = startFullDownloadAndPatch;
-        } else if (localVer !== currentManifest.version) {
-            gameStatusLabel.textContent = `Có bản cập nhật mới (${currentManifest.version})`;
-            gameStatusLabel.className = "info-value text-accent";
-            statusText.textContent = `Phát hiện bản dịch mới trên GitHub (${currentManifest.version})!`;
+    if (!isInstalled) {
+        // Chưa cài đặt game
+        gameStatusLabel.textContent = "Chưa có dữ liệu game";
+        gameStatusLabel.className = "info-value text-accent";
+        statusText.textContent = "Vui lòng chọn file app.asar từ máy để tự động vá tiếng Việt.";
 
-            const corePkg = currentManifest.packages.find(p => p.filename.includes("Patch_Core")) || { size_formatted: "~9 MB" };
-            btnAction.disabled = false;
-            btnImportLocal.style.display = "none";
-            btnIcon.textContent = "✨";
-            btnText.textContent = `Cập Nhật Bản Dịch Mới (${corePkg.size_formatted})`;
-            btnAction.onclick = startPatchOnlyUpdate;
-        } else {
-            gameStatusLabel.textContent = "Đã cập nhật bản mới nhất";
-            gameStatusLabel.className = "info-value text-success";
-            statusText.textContent = "Game đã sẵn sàng! Bạn có thể vào chơi ngay.";
-            statusPercent.textContent = "100%";
-            progressBar.style.width = "100%";
+        btnImportLocal.style.display = "inline-flex";
+        btnAction.style.display = "none";
+        if (guideBox) guideBox.style.display = "block";
+    } else if (currentManifest && localVer !== currentManifest.version) {
+        // Có bản cập nhật kịch bản mới
+        gameStatusLabel.textContent = `Có bản cập nhật mới (${currentManifest.version})`;
+        gameStatusLabel.className = "info-value text-accent";
+        statusText.textContent = `Phát hiện bản dịch mới trên GitHub (${currentManifest.version})!`;
 
-            btnAction.disabled = false;
-            btnImportLocal.style.display = "none";
-            btnIcon.textContent = "🎮";
-            btnText.textContent = "Vào Game Ngay";
-            btnAction.onclick = launchGame;
-        }
-    } catch (err) {
-        console.warn("Chế độ Offline:", err);
-        remoteVersionEl.textContent = "Ngoại tuyến (Offline)";
+        btnImportLocal.style.display = "none";
+        if (guideBox) guideBox.style.display = "none";
 
-        if (isInstalled) {
-            gameStatusLabel.textContent = "Chế độ Ngoại Tuyến (Offline)";
-            gameStatusLabel.className = "info-value text-success";
-            statusText.textContent = "Không có kết nối mạng. Sẵn sàng chơi Offline!";
-            progressBar.style.width = "100%";
-            statusPercent.textContent = "100%";
+        btnAction.style.display = "inline-flex";
+        btnAction.innerHTML = "✨ Cập Nhật Bản Dịch Mới (9 MB)";
+        btnAction.onclick = startPatchOnlyUpdate;
+    } else {
+        // Game đã sẵn sàng
+        gameStatusLabel.textContent = "Đã cập nhật bản mới nhất";
+        gameStatusLabel.className = "info-value text-success";
+        statusText.textContent = "Game đã sẵn sàng! Bạn có thể vào chơi ngay.";
+        statusPercent.textContent = "100%";
+        progressBar.style.width = "100%";
 
-            btnAction.disabled = false;
-            btnImportLocal.style.display = "none";
-            btnIcon.textContent = "🎮";
-            btnText.textContent = "Chơi Ngoại Tuyến";
-            btnAction.onclick = launchGame;
-        } else {
-            gameStatusLabel.textContent = "Chưa có dữ liệu game";
-            statusText.textContent = "Hãy dùng nút 'Nạp File Có Sẵn' để nạp file app.asar trực tiếp từ máy.";
-            btnAction.disabled = true;
-            btnImportLocal.style.display = "inline-flex";
-            btnIcon.textContent = "📁";
-            btnText.textContent = "Cần Nạp Dữ Liệu Game";
-        }
+        btnImportLocal.style.display = "none";
+        if (guideBox) guideBox.style.display = "none";
+
+        btnAction.style.display = "inline-flex";
+        btnAction.innerHTML = "🎮 Vào Game Ngay";
+        btnAction.onclick = launchGame;
     }
 }
 
@@ -445,18 +294,6 @@ inputLocalFile.onchange = (e) => {
     if (e.target.files && e.target.files.length > 0) {
         handleLocalFileImport(e.target.files[0]);
     }
-};
-
-// Cài đặt Modal
-btnSettings.onclick = () => { settingsModal.style.display = "flex"; };
-btnCloseSettings.onclick = () => { settingsModal.style.display = "none"; };
-btnSaveSettings.onclick = () => {
-    const val = inputManifestUrl.value.trim();
-    const pass = inputGamePassword.value.trim();
-    if (val) localStorage.setItem("HOME_MANIFEST_URL", val);
-    if (pass) localStorage.setItem("HOME_GAME_PASSWORD", pass);
-    settingsModal.style.display = "none";
-    checkSystemState();
 };
 
 window.addEventListener("DOMContentLoaded", checkSystemState);
