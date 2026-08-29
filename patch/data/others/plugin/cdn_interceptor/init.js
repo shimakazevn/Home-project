@@ -346,6 +346,48 @@
         };
 
         console.log("[CDN Interceptor] ✅ Đã gắn hoàn tất toàn bộ Hook (bg, image, button, bgmovie, audio).");
+        setupMobileAutoFit();
+    }
+
+    // Tự động căn chỉnh và kích hoạt Fullscreen trên Mobile / Safari iPhone
+    function setupMobileAutoFit() {
+        function autoFitScreen() {
+            const base = document.getElementById('tyrano_base');
+            if (!base) return;
+
+            const winW = window.innerWidth || document.documentElement.clientWidth;
+            const winH = window.innerHeight || document.documentElement.clientHeight;
+            const gameW = 1280;
+            const gameH = 720;
+
+            const scale = Math.min(winW / gameW, winH / gameH);
+            const offsetX = (winW - gameW * scale) / 2;
+            const offsetY = (winH - gameH * scale) / 2;
+
+            base.style.transformOrigin = '0 0';
+            base.style.transform = `scale(${scale})`;
+            base.style.left = `${Math.max(0, offsetX)}px`;
+            base.style.top = `${Math.max(0, offsetY)}px`;
+        }
+
+        window.addEventListener('resize', autoFitScreen);
+        window.addEventListener('orientationchange', () => {
+            setTimeout(() => {
+                window.scrollTo(0, 1);
+                autoFitScreen();
+            }, 300);
+        });
+
+        ['touchstart', 'touchend', 'click'].forEach(evt => {
+            document.addEventListener(evt, () => {
+                window.scrollTo(0, 1);
+                autoFitScreen();
+            }, { passive: true });
+        });
+
+        autoFitScreen();
+        setTimeout(autoFitScreen, 100);
+        setTimeout(autoFitScreen, 500);
     }
 
     // Khởi động

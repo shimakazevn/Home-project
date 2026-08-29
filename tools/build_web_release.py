@@ -90,9 +90,13 @@ def build_web_distribution():
     with open(index_html_path, 'r', encoding='utf-8') as f:
         html = f.read()
 
-    # Chèn meta referrer no-referrer, Mobile stylesheet & Plugins vào thẻ <head>
+    # Chèn meta referrer no-referrer, iOS PWA/Fullscreen, Mobile stylesheet & Plugins vào thẻ <head>
     injections = """
 <meta name="referrer" content="no-referrer" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="HOME" />
+<meta name="mobile-web-app-capable" content="yes" />
 <!-- HOME Web CDN & Save Extensions -->
 <link href="./tyrano/css/web_mobile.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="./data/others/plugin/cdn_interceptor/init.js"></script>
@@ -100,8 +104,10 @@ def build_web_distribution():
 """
     if "cdn_interceptor" not in html:
         html = html.replace('<head>', f'<head>\n{injections}')
-    elif 'name="referrer"' not in html:
-        html = html.replace('<head>', '<head>\n<meta name="referrer" content="no-referrer" />')
+    elif 'name="apple-mobile-web-app-capable"' not in html:
+        html = html.replace('<head>', f'<head>\n{injections}')
+
+    html = html.replace('user-scalable=no">', 'user-scalable=no,viewport-fit=cover">')
 
     with open(index_html_path, 'w', encoding='utf-8') as f:
         f.write(html)
