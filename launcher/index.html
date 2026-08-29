@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>HOME - Trình Khởi Chạy & Cập Nhật Tự Động</title>
+    <link rel="stylesheet" href="launcher.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="particles" id="particles"></div>
+
+    <main class="launcher-card">
+        <header class="header">
+            <div class="game-badge">VIỆT HÓA v1.0</div>
+            <h1 class="title">HOME (ROOM)</h1>
+            <p class="subtitle">Trình Khởi Chạy Tự Động & Đồng Bộ Dữ Liệu</p>
+        </header>
+
+        <section class="status-container">
+            <div class="status-header">
+                <span class="status-text" id="status-text">Đang kiểm tra dữ liệu game...</span>
+                <span class="status-percent" id="status-percent">0%</span>
+            </div>
+
+            <div class="progress-bar-wrapper">
+                <div class="progress-bar" id="progress-bar">
+                    <div class="progress-glow"></div>
+                </div>
+            </div>
+
+            <div class="stats-row">
+                <span id="stat-downloaded">0 MB / 0 MB</span>
+                <span id="stat-speed">0 MB/s</span>
+                <span id="stat-eta">--:--</span>
+            </div>
+        </section>
+
+        <section class="info-box" id="info-box">
+            <div class="info-item">
+                <span class="info-label">Phiên bản cục bộ:</span>
+                <span class="info-value" id="local-version">Chưa tải</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Phiên bản máy chủ:</span>
+                <span class="info-value" id="remote-version">Đang kết nối...</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Kênh cập nhật:</span>
+                <span class="info-value">GitHub Releases CDN</span>
+            </div>
+        </section>
+
+        <footer class="action-container">
+            <button class="btn btn-primary" id="btn-action" disabled>
+                <span class="btn-icon">⚡</span>
+                <span class="btn-text" id="btn-text">Vui Lòng Chờ...</span>
+            </button>
+            <button class="btn btn-secondary" id="btn-settings">
+                ⚙ Cài Đặt Repo
+            </button>
+        </footer>
+    </main>
+
+    <!-- Modal Cài đặt Repository URL -->
+    <div class="modal-overlay" id="settings-modal">
+        <div class="modal-card">
+            <h2>⚙ Cấu Hình Nguồn Cập Nhật (GitHub)</h2>
+            <p>Nhập URL file <code>release_manifest.json</code> từ kho lưu trữ GitHub của bạn:</p>
+            <input type="text" id="input-manifest-url" placeholder="https://raw.githubusercontent.com/username/repo/main/release_manifest.json" class="input-url">
+            <div class="modal-buttons">
+                <button class="btn btn-secondary" id="btn-save-settings">Lưu Cấu Hình</button>
+                <button class="btn btn-outline" id="btn-close-settings">Đóng</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="jszip.min.js"></script>
+    <script src="launcher.js"></script>
+</body>
+</html>

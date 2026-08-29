@@ -1,0 +1,13 @@
+n][preload  storage="./data/bgimage/H/HR02_02_00_00.gif"  ]
+[preload  storage="./data/bgimage/H/HR02_02_01_01.gif"  ]
+[preload  storage="./data/bgimage/H/HR02_02_02_01.gif"  ]
+[preload  storage="./data/bgimage/H/HR02_02_03_03.gif"  ]
+[preload  storage="./data/bgimage/H/HR02_02_04_01.gif"  ]
+[preload  storage="./data/bgimage/H/HR02_02_06_06.gif"  ]
+[preload  storage="./data/bgimage/H/HR02_02_00_01.gif"  ]
+[preload  storage="./data/bgimage/black.jpg"  ]
+[preload  storage="./data/bgimage/H/HR02_02_G3.png"  ]
+[preload  storage="./data/bgimage/H/HR02_02_G4.png"  ]
+[preload  storage="./data/bgimage/H/HR02_02_G1.png"  ]
+[preload  storage="./data/bgimage/H/HR02_02_G2.png"  ]
+[retur

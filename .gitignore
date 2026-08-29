@@ -1,0 +1,23 @@
+# Ignore heavy media assets & original game binaries (>8GB)
+Game/
+[Ryuugames]*.rar
+*.rar
+full_web_assets/
+mobile_optimized_assets/
+build-releases/
+build-android-project/android/app/build/
+build-android-project/android/.gradle/
+build-android-project/node_modules/
+build-android-project/android/app/src/main/assets/public/data/bgimage/
+build-android-project/android/app/src/main/assets/public/data/sound/
+build-android-project/android/app/src/main/assets/public/data/bgm/
+
+# Archive builds
+*.zip
+*.apk
+*.ipa
+
+# Python cache & save files
+__pycache__/
+*.pyc
+*.sav

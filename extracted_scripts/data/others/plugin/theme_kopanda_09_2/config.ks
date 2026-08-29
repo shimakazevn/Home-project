@@ -1,0 +1,611 @@
+
+
+; 2018/09/29 @ko10panda edit
+;=========================================
+
+; コンフィグ モード　画面作成
+
+;=========================================
+	[layopt layer="message0" visible="false"]
+	[clearfix]
+	[stop_keyconfig]
+	[free_layermode time="100" wait="true"]
+	[reset_camera time="100" wait="true"]
+
+	[plugin name="uiparts_set" ]
+
+	[iscript]
+	$(".layer_camera").empty();
+	[endscript]
+
+	[hidemenubutton]
+
+	[iscript]
+
+// TG.config.autoRecordLabel = "true";
+
+tf.current_bgm_vol = parseInt(TG.config.defaultBgmVolume);
+
+	tf.current_bgm_vol = parseInt(TG.config.defaultBgmVolume);
+	tf.current_se_vol = parseInt(TG.config.defaultSeVolume);
+	tf.current_voice_1_vol = parseInt(TYRANO.kag.stat.map_se_volume[1]);
+	tf.current_voice_2_vol = parseInt(TYRANO.kag.stat.map_se_volume[2]);
+	tf.current_voice_3_vol = parseInt(TYRANO.kag.stat.map_se_volume[3]);
+
+	tf.current_ch_speed = parseInt(TG.config.chSpeed);
+	tf.current_auto_speed = parseInt(TG.config.autoSpeed);
+
+if (sf.config_default_set !== true) {
+    tf.current_bgm_vol = 50;
+    tf.current_se_vol = 50;
+    tf.current_voice_1_vol = 70;
+    tf.current_voice_2_vol = 70;
+    tf.current_voice_3_vol = 70;
+    tf.current_ch_speed = 50;
+    tf.current_auto_speed = 2500;
+
+    TG.config.defaultBgmVolume = 50;
+    TG.config.defaultSeVolume = 50;
+    TG.config.chSpeed = 50;
+    TG.config.autoSpeed = 2500;
+
+    TYRANO.kag.stat.map_se_volume[1] = 70;
+    TYRANO.kag.stat.map_se_volume[2] = 70;
+    TYRANO.kag.stat.map_se_volume[3] = 70;
+
+    sf.config_default_set = true;
+}
+
+	tf.text_skip ="ON";
+        	tf.slider_ch_speed = 101 - tf.current_ch_speed;
+	tf.slider_auto_speed = 5001 - tf.current_auto_speed;
+
+	if(TG.config.unReadTextSkip != "true"){
+		tf.text_skip ="OFF";
+	}
+
+	if(f.workanime === undefined){
+		f.workanime = 1
+	}
+	tf.current_workanime = f.workanime
+
+	tf._old_setting_value = {
+    current_bgm_vol: 50,
+    current_se_vol: 50,
+    current_voice_1_vol: 70,
+    current_voice_2_vol: 70,
+    current_voice_3_vol: 70,
+    current_ch_speed: 50,
+    current_auto_speed: 2500,
+    current_workanime: 1,
+}
+
+	[endscript]
+
+	[iscript]
+
+	tf.img_path = '../others/plugin/theme_kopanda_09_2/image/config/';
+	tf.btn_path_off = tf.img_path + 'off.gif';
+	tf.btn_path_on  = tf.img_path + 'on.png';
+	tf.img_check    = tf.img_path + 'check.png';
+	tf.config_x = [1074, 375, 425, 475, 525, 575, 625, 675, 725, 775, 825];
+	tf.config_num_bgm;
+	tf.config_num_se;
+	tf.config_num_voice;
+	tf.config_num_ch;
+	tf.config_num_auto;
+
+	switch(tf.current_bgm_vol){
+		case   0: tf.config_num_bgm =  0; break;
+		case  10: tf.config_num_bgm =  1; break;
+		case  20: tf.config_num_bgm =  2; break;
+		case  30: tf.config_num_bgm =  3; break;
+		case  40: tf.config_num_bgm =  4; break;
+		case  50: tf.config_num_bgm =  5; break;
+		case  60: tf.config_num_bgm =  6; break;
+		case  70: tf.config_num_bgm =  7; break;
+		case  80: tf.config_num_bgm =  8; break;
+		case  90: tf.config_num_bgm =  9; break;
+		case 100: tf.config_num_bgm = 10; break;
+
+		default: break;
+	};
+
+	switch(tf.current_se_vol){
+		case   0: tf.config_num_se =  0; break;
+		case  10: tf.config_num_se =  1; break;
+		case  20: tf.config_num_se =  2; break;
+		case  30: tf.config_num_se =  3; break;
+		case  40: tf.config_num_se =  4; break;
+		case  50: tf.config_num_se =  5; break;
+		case  60: tf.config_num_se =  6; break;
+		case  70: tf.config_num_se =  7; break;
+		case  80: tf.config_num_se =  8; break;
+		case  90: tf.config_num_se =  9; break;
+		case 100: tf.config_num_se = 10; break;
+
+		default: break;
+	};
+
+	switch(tf.current_voice_vol){
+		case   0: tf.config_num_voice =  0; break;
+		case  10: tf.config_num_voice =  1; break;
+		case  20: tf.config_num_voice =  2; break;
+		case  30: tf.config_num_voice =  3; break;
+		case  40: tf.config_num_voice =  4; break;
+		case  50: tf.config_num_voice =  5; break;
+		case  60: tf.config_num_voice =  6; break;
+		case  70: tf.config_num_voice =  7; break;
+		case  80: tf.config_num_voice =  8; break;
+		case  90: tf.config_num_voice =  9; break;
+		case 100: tf.config_num_voice = 10; break;
+
+		default: break;
+	};
+
+	switch(tf.current_ch_speed){
+		case 100: tf.config_num_ch =  0; break;
+		case  80: tf.config_num_ch =  1; break;
+		case  50: tf.config_num_ch =  2; break;
+		case  40: tf.config_num_ch =  3; break;
+		case  30: tf.config_num_ch =  4; break;
+		case  25: tf.config_num_ch =  5; break;
+		case  20: tf.config_num_ch =  6; break;
+		case  11: tf.config_num_ch =  7; break;
+		case   8: tf.config_num_ch =  8; break;
+		case   5: tf.config_num_ch =  9; break;
+		case   1: tf.config_num_ch = 10; break;
+
+		default: break;
+	};
+
+	switch(tf.current_auto_speed){
+		case 5000: tf.config_num_auto =  0; break;
+		case 4500: tf.config_num_auto =  1; break;
+		case 4000: tf.config_num_auto =  2; break;
+		case 3500: tf.config_num_auto =  3; break;
+		case 3000: tf.config_num_auto =  4; break;
+		case 2500: tf.config_num_auto =  5; break;
+		case 2000: tf.config_num_auto =  6; break;
+		case 1300: tf.config_num_auto =  7; break;
+		case  800: tf.config_num_auto =  8; break;
+		case  500: tf.config_num_auto =  9; break;
+
+		default: break;
+	};
+
+	// ミュート用のBGM、SE音量管理
+	if( typeof f.prev_vol_list === 'undefined'){
+		f.prev_vol_list = {//[tf.current_bgm_vol, tf.config_num_bgm, tf.current_se_vol, tf.config_num_se, tf.current_voice_vol, tf.config_num_voice, tf.current_ch_speed, tf.config_num_ch];
+			bgm: tf.current_bgm_vol,
+			se: tf.current_se_vol,
+			voice: [
+				tf.current_voice_1_vol,
+				tf.current_voice_2_vol,
+				tf.current_voice_3_vol
+			],
+			text: tf.current_ch_speed,
+			auto: tf.current_auto_speed,
+		}
+	}
+
+	tf.change_bgm = function(){
+		TYRANO.kag.ftag.startTag("bgmopt", {
+			volume: tf.current_bgm_vol,
+		})
+	}
+	[endscript]
+
+[cm]
+
+	[bg storage="&tf.img_path +'bg_config.jpg'" time="286"]
+	[button fix="true" graphic="&tf.img_path + 'c_btn_back.png'" enterimg="&tf.img_path + 'c_btn_back2.png'" target="*backtitle" x="1208" y="7"]
+	[button fix="true" graphic="&tf.img_path + 'config_reset_off.png'" enterimg="&tf.img_path + 'config_reset_on.png'" target="*reset" x="1064" y="680" ]
+[jump target="*config_page"]
+
+
+*config_page
+[clearstack]
+;------------------------------------------------------------------------------------------------------
+; BGM音量
+;------------------------------------------------------------------------------------------------------
+[slider name="bgm" var="tf.current_bgm_vol" x="219" y="161" width="290" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*vol_bgm_change" exp="tf.change_bgm()"]
+[call target="*mute_bgm_button" ]
+; 	[button name="bgmvol,bgmvol_10"  fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[1]"  y="112" exp="tf.current_bgm_vol =  10; tf.config_num_bgm =  1"]
+; 	[button name="bgmvol,bgmvol_20"  fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[2]"  y="112" exp="tf.current_bgm_vol =  20; tf.config_num_bgm =  2"]
+; 	[button name="bgmvol,bgmvol_30"  fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[3]"  y="112" exp="tf.current_bgm_vol =  30; tf.config_num_bgm =  3"]
+; 	[button name="bgmvol,bgmvol_40"  fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[4]"  y="112" exp="tf.current_bgm_vol =  40; tf.config_num_bgm =  4"]
+; 	[button name="bgmvol,bgmvol_50"  fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[5]"  y="112" exp="tf.current_bgm_vol =  50; tf.config_num_bgm =  5"]
+; 	[button name="bgmvol,bgmvol_60"  fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[6]"  y="112" exp="tf.current_bgm_vol =  60; tf.config_num_bgm =  6"]
+; 	[button name="bgmvol,bgmvol_70"  fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[7]"  y="112" exp="tf.current_bgm_vol =  70; tf.config_num_bgm =  7"]
+; 	[button name="bgmvol,bgmvol_80"  fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[8]"  y="112" exp="tf.current_bgm_vol =  80; tf.config_num_bgm =  8"]
+; 	[button name="bgmvol,bgmvol_90"  fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[9]"  y="112" exp="tf.current_bgm_vol =  90; tf.config_num_bgm =  9"]
+; 	[button name="bgmvol,bgmvol_100" fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[10]" y="112" exp="tf.current_bgm_vol = 100; tf.config_num_bgm = 10"]
+
+; ;	BGMミュート
+; ;	[button name="bgmvol,bgmvol_0"   fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="32" height="32" x="956" y="197" exp="tf.current_bgm_vol = 0; tf.config_num_bgm = 0"]
+; 	[button name="bgmvol,bgmvol_0"   fix="true" target="*vol_bgm_mute" graphic="&tf.btn_path_off" width="32" height="32" x="956" y="112"]
+
+;------------------------------------------------------------------------------------------------------
+; SE音量
+;------------------------------------------------------------------------------------------------------
+[slider name="se" var="tf.current_se_vol" x="219" y="233" width="290" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*vol_se_change"]
+[call target="*mute_se_button" ]
+
+; 	[button name="sevol,sevol_10"  fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[1]"  y="170" exp="tf.current_se_vol =  10; tf.config_num_se =  1"]
+; 	[button name="sevol,sevol_20"  fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[2]"  y="170" exp="tf.current_se_vol =  20; tf.config_num_se =  2"]
+; 	[button name="sevol,sevol_30"  fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[3]"  y="170" exp="tf.current_se_vol =  30; tf.config_num_se =  3"]
+; 	[button name="sevol,sevol_40"  fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[4]"  y="170" exp="tf.current_se_vol =  40; tf.config_num_se =  4"]
+; 	[button name="sevol,sevol_50"  fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[5]"  y="170" exp="tf.current_se_vol =  50; tf.config_num_se =  5"]
+; 	[button name="sevol,sevol_60"  fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[6]"  y="170" exp="tf.current_se_vol =  60; tf.config_num_se =  6"]
+; 	[button name="sevol,sevol_70"  fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[7]"  y="170" exp="tf.current_se_vol =  70; tf.config_num_se =  7"]
+; 	[button name="sevol,sevol_80"  fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[8]"  y="170" exp="tf.current_se_vol =  80; tf.config_num_se =  8"]
+; 	[button name="sevol,sevol_90"  fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[9]"  y="170" exp="tf.current_se_vol =  90; tf.config_num_se =  9"]
+; 	[button name="sevol,sevol_100" fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[10]" y="170" exp="tf.current_se_vol = 100; tf.config_num_se = 10"]
+
+; ;	SEミュート
+; ;	[button name="sevol,sevol_0"   fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="32" height="32" x="956" y="280" exp="tf.current_se_vol = 0; tf.config_num_se = 0"]
+; 	[button name="sevol,sevol_0"   fix="true" target="*vol_se_mute" graphic="&tf.btn_path_off" width="32" height="32" x="956" y="170"]
+
+;------------------------------------------------------------------------------------------------------
+; ボイス音量
+;------------------------------------------------------------------------------------------------------
+[slider name="voice_1" var="tf.current_voice_1_vol" x="883" y="161" width="249" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*vol_voice_change"]
+[slider name="voice_2" var="tf.current_voice_2_vol" x="883" y="233" width="249" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*vol_voice_change"]
+[slider name="voice_3" var="tf.current_voice_3_vol" x="883" y="305" width="249" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*vol_voice_change"]
+[call target="*mute_voice_button" ]
+; 	[button name="voicevol,voicevol_10"  fix="true" target="*vol_voice_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[1]"  y="231" exp="tf.current_voice_vol =  10; tf.config_num_voice =  1"]
+; 	[button name="voicevol,voicevol_20"  fix="true" target="*vol_voice_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[2]"  y="231" exp="tf.current_voice_vol =  20; tf.config_num_voice =  2"]
+; 	[button name="voicevol,voicevol_30"  fix="true" target="*vol_voice_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[3]"  y="231" exp="tf.current_voice_vol =  30; tf.config_num_voice =  3"]
+; 	[button name="voicevol,voicevol_40"  fix="true" target="*vol_voice_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[4]"  y="231" exp="tf.current_voice_vol =  40; tf.config_num_voice =  4"]
+; 	[button name="voicevol,voicevol_50"  fix="true" target="*vol_voice_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[5]"  y="231" exp="tf.current_voice_vol =  50; tf.config_num_voice =  5"]
+; 	[button name="voicevol,voicevol_60"  fix="true" target="*vol_voice_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[6]"  y="231" exp="tf.current_voice_vol =  60; tf.config_num_voice =  6"]
+; 	[button name="voicevol,voicevol_70"  fix="true" target="*vol_voice_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[7]"  y="231" exp="tf.current_voice_vol =  70; tf.config_num_voice =  7"]
+; 	[button name="voicevol,voicevol_80"  fix="true" target="*vol_voice_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[8]"  y="231" exp="tf.current_voice_vol =  80; tf.config_num_voice =  8"]
+; 	[button name="voicevol,voicevol_90"  fix="true" target="*vol_voice_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[9]"  y="231" exp="tf.current_voice_vol =  90; tf.config_num_voice =  9"]
+; 	[button name="voicevol,voicevol_100" fix="true" target="*vol_voice_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[10]" y="231" exp="tf.current_voice_vol = 100; tf.config_num_voice = 10"]
+
+; ;	SEミュート
+; ;	[button name="sevol,sevol_0"   fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="32" height="32" x="956" y="280" exp="tf.current_se_vol = 0; tf.config_num_se = 0"]
+; 	[button name="voicevol,voicevol_0"   fix="true" target="*vol_voice_mute" graphic="&tf.btn_path_off" width="32" height="32" x="956" y="231"]
+
+;------------------------------------------------------------------------------------------------------
+; テキスト速度
+;------------------------------------------------------------------------------------------------------
+[slider name="text" var="tf.slider_ch_speed" x="219" y="377" width="290" height="8" min="1" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*ch_speed_skip"]
+[call target="*mute_text_button" ]
+	; [button name="ch,ch_100" fix="true" target="*ch_speed_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[1]"  y="289" exp="tf.current_ch_speed =100; tf.config_num_ch = 0"]
+	; [button name="ch,ch_80"  fix="true" target="*ch_speed_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[2]"  y="289" exp="tf.current_ch_speed = 80; tf.config_num_ch = 1"]
+	; [button name="ch,ch_50"  fix="true" target="*ch_speed_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[3]"  y="289" exp="tf.current_ch_speed = 50; tf.config_num_ch = 2"]
+	; [button name="ch,ch_40"  fix="true" target="*ch_speed_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[4]"  y="289" exp="tf.current_ch_speed = 40; tf.config_num_ch = 3"]
+	; [button name="ch,ch_30"  fix="true" target="*ch_speed_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[5]"  y="289" exp="tf.current_ch_speed = 30; tf.config_num_ch = 4"]
+	; [button name="ch,ch_25"  fix="true" target="*ch_speed_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[6]"  y="289" exp="tf.current_ch_speed = 25; tf.config_num_ch = 5"]
+	; [button name="ch,ch_20"  fix="true" target="*ch_speed_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[7]"  y="289" exp="tf.current_ch_speed = 20; tf.config_num_ch = 6"]
+	; [button name="ch,ch_11"  fix="true" target="*ch_speed_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[8]"  y="289" exp="tf.current_ch_speed = 11; tf.config_num_ch = 7"]
+	; [button name="ch,ch_8"   fix="true" target="*ch_speed_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[9]"  y="289" exp="tf.current_ch_speed =  8; tf.config_num_ch = 8"]
+	; [button name="ch,ch_5"   fix="true" target="*ch_speed_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[10]" y="289" exp="tf.current_ch_speed =  5; tf.config_num_ch = 9"]
+
+	; [button name="ch,ch_0"   fix="true" target="*ch_speed_skip" graphic="&tf.btn_path_off" width="32" height="32" x="956" y="289"]
+
+;------------------------------------------------------------------------------------------------------
+; オート速度
+;------------------------------------------------------------------------------------------------------
+[slider name="auto" var="tf.slider_auto_speed" x="219" y="449" width="290" height="8" min="1" max="5000" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*auto_speed_change"]
+[call target="*mute_auto_button" ]
+	; [button name="auto,auto_5000" fix="true" target="*auto_speed_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[1]"  y="347" exp="tf.set_auto_speed = 5000; tf.config_num_auto = 0"]
+	; [button name="auto,auto_4500" fix="true" target="*auto_speed_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[2]"  y="347" exp="tf.set_auto_speed = 4500; tf.config_num_auto = 1"]
+	; [button name="auto,auto_4000" fix="true" target="*auto_speed_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[3]"  y="347" exp="tf.set_auto_speed = 4000; tf.config_num_auto = 2"]
+	; [button name="auto,auto_3500" fix="true" target="*auto_speed_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[4]"  y="347" exp="tf.set_auto_speed = 3500; tf.config_num_auto = 3"]
+	; [button name="auto,auto_3000" fix="true" target="*auto_speed_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[5]"  y="347" exp="tf.set_auto_speed = 3000; tf.config_num_auto = 4"]
+	; [button name="auto,auto_2500" fix="true" target="*auto_speed_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[6]"  y="347" exp="tf.set_auto_speed = 2500; tf.config_num_auto = 5"]
+	; [button name="auto,auto_2000" fix="true" target="*auto_speed_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[7]"  y="347" exp="tf.set_auto_speed = 2000; tf.config_num_auto = 6"]
+	; [button name="auto,auto_1300" fix="true" target="*auto_speed_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[8]"  y="347" exp="tf.set_auto_speed = 1300; tf.config_num_auto = 7"]
+	; [button name="auto,auto_800"  fix="true" target="*auto_speed_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[9]"  y="347" exp="tf.set_auto_speed =  800; tf.config_num_auto = 8"]
+	; [button name="auto,auto_500"  fix="true" target="*auto_speed_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[10]" y="347" exp="tf.set_auto_speed =  500; tf.config_num_auto = 9"]
+
+;------------------------------------------------------------------------------------------------------
+; 未読スキップ
+;------------------------------------------------------------------------------------------------------
+;	未読スキップオン
+;	[button name="unread_on" fix="true" target="*skip_on" graphic="&tf.btn_path_off" width="32" height="32" x="956" y="360"]
+
+;------------------------------------------------------------------------------------------------------
+; アニメーション
+;------------------------------------------------------------------------------------------------------
+[call target="*anime_button" ]
+
+;------------------------------------------------------------------------------------------------------
+; コンフィグ起動時の画面更新
+;------------------------------------------------------------------------------------------------------
+
+[layopt layer="0" visible="true"]
+[test_message_start]
+[s]
+
+;--------------------------------------------------------------------------------
+; コンフィグモードの終了
+;--------------------------------------------------------------------------------
+*backtitle
+[cm]
+
+[layopt layer="message1" visible="false"]
+[clearfix]
+[start_keyconfig]
+[clearstack]
+
+[awakegame_ex bgm_over="false"]
+[s]
+
+
+;--------------------------------------------------------------------------------
+; 初期値に戻す
+;--------------------------------------------------------------------------------
+*reset
+[iscript]
+
+f.workanime = 0
+tf.current_workanime = 0
+
+tf.current_bgm_vol = 50
+tf.current_se_vol = 50
+
+TG.config.defaultBgmVolume = 50
+TG.config.defaultSeVolume = 50
+
+tf.current_voice_1_vol = 70
+tf.current_voice_2_vol = 70
+tf.current_voice_3_vol = 70
+
+sf._skskpnt_volume[0] = 50
+sf._skskpnt_volume[1] = 70
+sf._skskpnt_volume[2] = 70
+sf._skskpnt_volume[3] = 70
+
+tf.current_ch_speed = 50
+tf.current_auto_speed = 2500
+
+tf.slider_ch_speed = 51
+tf.slider_auto_speed = 2501
+
+[endscript]
+
+[bgmopt volume="50"]
+[seopt buf="0" volume="50"]
+[seopt buf="1" volume="70"]
+[seopt buf="2" volume="70"]
+[seopt buf="3" volume="70"]
+
+[configdelay speed="50"]
+[autoconfig speed="2500"]
+
+[call target="*mute_bgm_button"]
+[call target="*mute_se_button"]
+[call target="*mute_voice_button"]
+[call target="*mute_text_button"]
+[call target="*mute_auto_button"]
+[call target="*anime_button"]
+
+[jump]
+[s]
+
+;================================================================================
+
+; ボタンクリック時の処理
+
+;================================================================================
+;--------------------------------------------------------------------------------
+; BGM音量
+;--------------------------------------------------------------------------------
+*vol_bgm_mute
+[iscript]
+	// ミュート
+	if( tf.isMute_bgm ){
+		f.prev_vol_list.bgm = tf.current_bgm_vol;
+		//f.prev_vol_list[1] = tf.config_num_bgm;
+		tf.current_bgm_vol = 0;
+		//tf.config_num_bgm  = 0;
+
+	// 解除
+	} else {
+		tf.current_bgm_vol = f.prev_vol_list.bgm;
+		//tf.config_num_bgm  = f.prev_vol_list[1];
+	}
+[endscript]
+
+*vol_bgm_change
+
+	[free layer="0" name="bgmvol" time="0" wait="true"]
+	[bgmopt volume="&tf.current_bgm_vol"]
+[call target="*mute_bgm_button" ]
+
+[return]
+
+;--------------------------------------------------------------------------------
+; SE音量
+;--------------------------------------------------------------------------------
+*vol_se_mute
+
+[iscript]
+	// ミュート
+	if( tf.isMute_se ){
+		f.prev_vol_list.se = tf.current_se_vol;
+		//f.prev_vol_list[3] = tf.config_num_se;
+		tf.current_se_vol = 0;
+		//tf.config_num_se  = 0;
+
+	// 解除
+	} else {
+		tf.current_se_vol = f.prev_vol_list.se;
+		//tf.config_num_se  = f.prev_vol_list[3];
+	}
+[endscript]
+
+*vol_se_change
+	[iscript ]
+		sf._skskpnt_volume[0] = tf.current_se_vol
+	[endscript ]
+	[free layer="0" name="sevol" time="0" wait="true"]
+	[seopt buf="0" volume="&tf.current_se_vol"]
+[call target="*mute_se_button" ]
+
+[return]
+
+;--------------------------------------------------------------------------------
+; ボイス音量
+;--------------------------------------------------------------------------------
+*vol_voice_mute
+
+[iscript]
+	// ミュート
+	if( tf.isMute ){
+		f.prev_vol_list.voice[tf.isMuteNum] = tf["current_voice_" + (tf.isMuteNum + 1) + "_vol"];
+		tf["current_voice_" + (tf.isMuteNum + 1) + "_vol"] = 0;
+
+	// 解除
+	} else {
+		tf["current_voice_" + (tf.isMuteNum + 1)+ "_vol"] = f.prev_vol_list.voice[tf.isMuteNum];
+	}
+[endscript]
+
+*vol_voice_change
+[iscript ]
+	sf._skskpnt_volume[1] = tf.current_voice_1_vol
+	sf._skskpnt_volume[2] = tf.current_voice_2_vol
+	sf._skskpnt_volume[3] = tf.current_voice_3_vol
+[endscript ]
+[seopt buf="1" volume="&tf.current_voice_1_vol"]
+[seopt buf="2" volume="&tf.current_voice_2_vol"]
+[seopt buf="3" volume="&tf.current_voice_3_vol"]
+[call target="*mute_voice_button" ]
+
+[return]
+
+
+;---------------------------------------------------------------------------------
+; テキスト速度
+;--------------------------------------------------------------------------------
+
+*vol_text_mute
+[iscript]
+	// 一括表示
+	if( tf.isMute_text ){
+		f.prev_vol_list.text = tf.current_ch_speed;
+		//f.prev_vol_list[7] = tf.config_num_ch;
+		tf.current_ch_speed = 1;
+		//tf.config_num_ch  = 10;
+
+	// 解除
+	} else {
+		tf.current_ch_speed = f.prev_vol_list.text;
+		//tf.config_num_ch  = f.prev_vol_list[7];
+	}
+[endscript]
+*ch_speed_skip
+*ch_speed_change
+[eval exp="tf.current_ch_speed = 101 - tf.slider_ch_speed"]
+[configdelay speed="&tf.current_ch_speed"]
+[test_message_reset]
+[call target="*mute_text_button"]
+[return]
+;--------------------------------------------------------------------------------
+; オート速度
+;--------------------------------------------------------------------------------
+*vol_auto_mute
+[iscript]
+	// 一括表示
+	if( tf.isMute_auto ){
+		f.prev_vol_list.auto = tf.current_auto_speed;
+		//f.prev_vol_list[7] = tf.config_num_ch;
+		tf.current_auto_speed = 1;
+		//tf.config_num_ch  = 10;
+
+	// 解除
+	} else {
+		tf.current_auto_speed = f.prev_vol_list.auto;
+		//tf.config_num_ch  = f.prev_vol_list[7];
+	}
+[endscript]
+
+*auto_speed_change
+[eval exp="tf.current_auto_speed = 5001 - tf.slider_auto_speed"]
+[autoconfig speed="&tf.current_auto_speed"]
+[test_message_reset]
+[call target="*mute_auto_button"]
+[return]
+
+;--------------------------------------------------------------------------------
+; スキップ処理
+;--------------------------------------------------------------------------------
+*skip_on
+
+	[if exp="tf.text_skip == 'ON'"]
+	[free layer="0" name="skip" time="0" wait="true"]
+	[eval exp="tf.text_skip = 'OFF'"]
+	[config_record_label skip="false"]
+	[else]
+	[image name="skip" layer="0" storage="&tf.img_check" x="956" y="360" width="32" height="32"]
+	[eval exp="tf.text_skip = 'ON'"]
+	[config_record_label skip="true"]
+	[endif]
+
+[return]
+
+;--------------------------------------------------------------------------------
+; アニメON/OFF処理
+;--------------------------------------------------------------------------------
+*anime_on
+[iscript ]
+f.workanime = tf.current_workanime
+[endscript ]
+[call target="*anime_button" ]
+[return]
+
+
+
+
+;--------------------------------------------------------------------------------
+; ボタン系更新処理
+;--------------------------------------------------------------------------------
+*mute_bgm_button
+[clearfix name="bgm_mute" ]
+[button name="bgm_mute" fix="true" x="544" y="152" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_bgm_mute"  exp="tf.isMute_bgm = true"  cond="tf.current_bgm_vol > 0"   ]
+[button name="bgm_mute" fix="true" x="544" y="152" graphic="&tf.img_path + 'on.png'"  width="24" height="24" target="*vol_bgm_mute"  exp="tf.isMute_bgm = false" cond="tf.current_bgm_vol == 0"   ]
+[return ]
+
+
+*mute_se_button
+[clearfix name="se_mute" ]
+[button name="se_mute" fix="true" x="544" y="224" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_se_mute"  exp="tf.isMute_se = true"  cond="tf.current_se_vol > 0"    ]
+[button name="se_mute" fix="true" x="544" y="224" graphic="&tf.img_path + 'on.png'"  width="24" height="24" target="*vol_se_mute"  exp="tf.isMute_se = false" cond="tf.current_se_vol == 0"   ]
+[return ]
+
+
+*mute_voice_button
+[clearfix name="voice_mute" ]
+[button name="voice_mute" fix="true" x="1168" y="152" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = true;  tf.isMuteNum = 0"  cond="tf.current_voice_1_vol > 0"    ]
+[button name="voice_mute" fix="true" x="1168" y="152" graphic="&tf.img_path + 'on.png'"  width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = false; tf.isMuteNum = 0"  cond="tf.current_voice_1_vol == 0"   ]
+[button name="voice_mute" fix="true" x="1168" y="224" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = true;  tf.isMuteNum = 1"  cond="tf.current_voice_2_vol > 0"    ]
+[button name="voice_mute" fix="true" x="1168" y="224" graphic="&tf.img_path + 'on.png'"  width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = false; tf.isMuteNum = 1"  cond="tf.current_voice_2_vol == 0"   ]
+[button name="voice_mute" fix="true" x="1168" y="296" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = true;  tf.isMuteNum = 2"  cond="tf.current_voice_3_vol > 0"    ]
+[button name="voice_mute" fix="true" x="1168" y="296" graphic="&tf.img_path + 'on.png'"  width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = false; tf.isMuteNum = 2"  cond="tf.current_voice_3_vol == 0"   ]
+[return ]
+
+
+*mute_text_button
+[clearfix name="text_mute" ]
+[button name="text_mute" fix="true" x="544" y="368" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_text_mute"  exp="tf.isMute_text = true"  cond="tf.current_ch_speed > 1"    ]
+[button name="text_mute" fix="true" x="544" y="368" graphic="&tf.img_path + 'on.png'"  width="24" height="24" target="*vol_text_mute"  exp="tf.isMute_text = false" cond="tf.current_ch_speed < 2"   ]
+[return ]
+
+
+*mute_auto_button
+[clearfix name="auto_mute" ]
+[button name="auto_mute" fix="true" x="544" y="440" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_auto_mute"  exp="tf.isMute_auto = true"  cond="tf.current_auto_speed > 1"    ]
+[button name="auto_mute" fix="true" x="544" y="440" graphic="&tf.img_path + 'on.png'"  width="24" height="24" target="*vol_auto_mute"  exp="tf.isMute_auto = false" cond="tf.current_auto_speed < 2"   ]
+[return ]
+
+*anime_button
+[clearfix name="anime_on" ]
+[button name="anime_on" fix="true" target="*anime_on"  graphic="&tf.img_path + 'anime2.png'" x="920" y="440" exp="tf.current_workanime = 1" cond="tf.current_workanime == 0" ]
+[button name="anime_on" fix="true" target="*anime_on"  graphic="&tf.img_path + 'anime.png'"  x="920" y="440" exp="tf.current_workanime = 0" cond="tf.current_workanime == 1" ]
+[return ]

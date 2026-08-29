@@ -1,0 +1,32 @@
+{
+  "version": "v1.0.0",
+  "game_title": "HOME (ROOM) - Việt Hóa",
+  "release_date": "2026-08-29",
+  "author": "Shimakaze VN Translation Team",
+  "changelog": [
+    "Việt hóa 100% toàn bộ giao diện nút bấm và menu lựa chọn (323 dòng UI).",
+    "Tích hợp font chữ tiếng Việt Noto Sans JP và tự động xuống dòng.",
+    "Hỗ trợ tải và cập nhật tự động qua GitHub Releases CDN."
+  ],
+  "total_size_formatted": "7.99 GB",
+  "packages": [
+    {
+      "name": "Lõi Kịch Bản & Giao Diện",
+      "filename": "HOME_Patch_Core_v1.0.0.zip",
+      "description": "Chứa toàn bộ 267 kịch bản Việt hóa, Font Noto Sans và mã hệ thống",
+      "size": 9602968,
+      "size_formatted": "9.16 MB",
+      "sha256": "5eebbebd20edc556ef0b86308e73d42bf5a1263b36796246ddf216f5d6e8b69d",
+      "url": "https://github.com/shimakazevn/Home-project/releases/download/v1.0.0/HOME_Patch_Core_v1.0.0.zip"
+    },
+    {
+      "name": "Gói Đồ Họa & Âm Thanh",
+      "filename": "HOME_Media_Assets_v1.0.0.zip",
+      "description": "Chứa 3,600+ hình ảnh 1080p H-Scene, Voice lồng tiếng và BGM",
+      "size": 8566743115,
+      "size_formatted": "7.98 GB",
+      "sha256": "2e231db2dfa6301177e699b04229a7d29b20fef1237e63092e1e76c88b041d26",
+      "url": "https://github.com/shimakazevn/Home-project/releases/download/v1.0.0/HOME_Media_Assets_v1.0.0.zip"
+    }
+  ]
+}

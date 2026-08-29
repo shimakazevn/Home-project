@@ -1,0 +1,5 @@
+n][preload  storage="./data/bgimage/back_massajiten2.png"  ]
+[preload  storage="./data/bgimage/black.jpg"  ]
+[preload  storage="./data/bgimage/event/rinko1.png"  ]
+[preload  storage="./data/bgimage/back_massajiten3.png"  ]
+[retur

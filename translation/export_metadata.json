@@ -1,0 +1,1070 @@
+{
+  "EV_OP.ks": {
+    "total_lines": 163,
+    "entry_count": 88
+  },
+  "EV_OP2.ks": {
+    "total_lines": 163,
+    "entry_count": 62
+  },
+  "EV_OP3.ks": {
+    "total_lines": 172,
+    "entry_count": 62
+  },
+  "EV_OP4.ks": {
+    "total_lines": 86,
+    "entry_count": 32
+  },
+  "EV_OP_map.ks": {
+    "total_lines": 94,
+    "entry_count": 10
+  },
+  "first.ks": {
+    "total_lines": 34,
+    "entry_count": 0
+  },
+  "name.ks": {
+    "total_lines": 121,
+    "entry_count": 7
+  },
+  "scene1.ks": {
+    "total_lines": 14,
+    "entry_count": 3
+  },
+  "EV_honmei.ks": {
+    "total_lines": 93,
+    "entry_count": 12
+  },
+  "EV_nagi.ks": {
+    "total_lines": 152,
+    "entry_count": 63
+  },
+  "EV_nagi2.ks": {
+    "total_lines": 137,
+    "entry_count": 50
+  },
+  "EV_nagi3.ks": {
+    "total_lines": 232,
+    "entry_count": 77
+  },
+  "EV_nagi_J.ks": {
+    "total_lines": 295,
+    "entry_count": 91
+  },
+  "EV_nagi_R.ks": {
+    "total_lines": 285,
+    "entry_count": 91
+  },
+  "EV_rinko.ks": {
+    "total_lines": 119,
+    "entry_count": 42
+  },
+  "EV_rinko2.ks": {
+    "total_lines": 153,
+    "entry_count": 60
+  },
+  "EV_rinko3.ks": {
+    "total_lines": 159,
+    "entry_count": 59
+  },
+  "EV_rinko_J.ks": {
+    "total_lines": 177,
+    "entry_count": 60
+  },
+  "EV_rinko_R.ks": {
+    "total_lines": 189,
+    "entry_count": 66
+  },
+  "EV_tubomi.ks": {
+    "total_lines": 127,
+    "entry_count": 44
+  },
+  "EV_tubomi2.ks": {
+    "total_lines": 155,
+    "entry_count": 59
+  },
+  "EV_tubomi3.ks": {
+    "total_lines": 132,
+    "entry_count": 44
+  },
+  "EV_tubomi_J.ks": {
+    "total_lines": 183,
+    "entry_count": 69
+  },
+  "EV_tubomi_R.ks": {
+    "total_lines": 168,
+    "entry_count": 63
+  },
+  "limit.ks": {
+    "total_lines": 115,
+    "entry_count": 0
+  },
+  "room_Sunday.ks": {
+    "total_lines": 226,
+    "entry_count": 14
+  },
+  "room_asa.ks": {
+    "total_lines": 431,
+    "entry_count": 1
+  },
+  "room_yoru.ks": {
+    "total_lines": 805,
+    "entry_count": 12
+  },
+  "room_yoru_kankei.ks": {
+    "total_lines": 38,
+    "entry_count": 0
+  },
+  "room_yoru_save.ks": {
+    "total_lines": 21,
+    "entry_count": 0
+  },
+  "komyu_H.ks": {
+    "total_lines": 343,
+    "entry_count": 67
+  },
+  "komyu_hayato.ks": {
+    "total_lines": 618,
+    "entry_count": 84
+  },
+  "komyu_nagi.ks": {
+    "total_lines": 731,
+    "entry_count": 123
+  },
+  "komyu_nagi_kaeru.ks": {
+    "total_lines": 1014,
+    "entry_count": 95
+  },
+  "komyu_nagi_kaeru_hato.ks": {
+    "total_lines": 21,
+    "entry_count": 0
+  },
+  "komyu_nagi_kaeru_humikonda.ks": {
+    "total_lines": 2075,
+    "entry_count": 224
+  },
+  "komyu_nagi_kaeru_nitijyoukaiwa.ks": {
+    "total_lines": 1868,
+    "entry_count": 226
+  },
+  "komyu_purezento.ks": {
+    "total_lines": 168,
+    "entry_count": 4
+  },
+  "komyu_rinko.ks": {
+    "total_lines": 628,
+    "entry_count": 99
+  },
+  "komyu_syu.ks": {
+    "total_lines": 255,
+    "entry_count": 36
+  },
+  "komyu_tubomi.ks": {
+    "total_lines": 638,
+    "entry_count": 100
+  },
+  "komyuhyouka_hayato.ks": {
+    "total_lines": 138,
+    "entry_count": 0
+  },
+  "komyuhyouka_nagi.ks": {
+    "total_lines": 137,
+    "entry_count": 0
+  },
+  "komyuhyouka_point.ks": {
+    "total_lines": 653,
+    "entry_count": 0
+  },
+  "komyuhyouka_point_hayato.ks": {
+    "total_lines": 652,
+    "entry_count": 0
+  },
+  "komyuhyouka_point_rinko.ks": {
+    "total_lines": 653,
+    "entry_count": 0
+  },
+  "komyuhyouka_point_tubomi.ks": {
+    "total_lines": 653,
+    "entry_count": 0
+  },
+  "komyuhyouka_rinko.ks": {
+    "total_lines": 138,
+    "entry_count": 0
+  },
+  "komyuhyouka_tubomi.ks": {
+    "total_lines": 138,
+    "entry_count": 0
+  },
+  "EV_trap_reaction.ks": {
+    "total_lines": 252,
+    "entry_count": 31
+  },
+  "EV_trap_reaction_kenka.ks": {
+    "total_lines": 183,
+    "entry_count": 50
+  },
+  "sinnyu_PC.ks": {
+    "total_lines": 589,
+    "entry_count": 17
+  },
+  "sinnyu_bussyoku_massaji_ev.ks": {
+    "total_lines": 295,
+    "entry_count": 70
+  },
+  "sinnyu_bussyoku_rihure_ev.ks": {
+    "total_lines": 330,
+    "entry_count": 72
+  },
+  "sinnyu_byouin.ks": {
+    "total_lines": 81,
+    "entry_count": 3
+  },
+  "sinnyu_byouin_bussyoku.ks": {
+    "total_lines": 176,
+    "entry_count": 1
+  },
+  "sinnyu_byouin_bussyoku_ev.ks": {
+    "total_lines": 294,
+    "entry_count": 69
+  },
+  "sinnyu_byouin_bussyoku_rokka.ks": {
+    "total_lines": 178,
+    "entry_count": 0
+  },
+  "sinnyu_byouin_bussyoku_toire.ks": {
+    "total_lines": 130,
+    "entry_count": 0
+  },
+  "sinnyu_byouin_haiti.ks": {
+    "total_lines": 135,
+    "entry_count": 1
+  },
+  "sinnyu_byouin_rokka_haiti.ks": {
+    "total_lines": 168,
+    "entry_count": 0
+  },
+  "sinnyu_byouin_toire_haiti.ks": {
+    "total_lines": 128,
+    "entry_count": 0
+  },
+  "sinnyu_comhaiti.ks": {
+    "total_lines": 617,
+    "entry_count": 75
+  },
+  "sinnyu_item.ks": {
+    "total_lines": 744,
+    "entry_count": 31
+  },
+  "sinnyu_massaji.ks": {
+    "total_lines": 79,
+    "entry_count": 4
+  },
+  "sinnyu_massaji_bussyoku.ks": {
+    "total_lines": 196,
+    "entry_count": 1
+  },
+  "sinnyu_massaji_bussyoku_pauda.ks": {
+    "total_lines": 128,
+    "entry_count": 0
+  },
+  "sinnyu_massaji_bussyoku_syawa.ks": {
+    "total_lines": 129,
+    "entry_count": 0
+  },
+  "sinnyu_massaji_haiti.ks": {
+    "total_lines": 135,
+    "entry_count": 1
+  },
+  "sinnyu_massaji_pauda_haiti.ks": {
+    "total_lines": 128,
+    "entry_count": 0
+  },
+  "sinnyu_massaji_syawa_haiti.ks": {
+    "total_lines": 128,
+    "entry_count": 0
+  },
+  "sinnyu_nagi.ks": {
+    "total_lines": 126,
+    "entry_count": 7
+  },
+  "sinnyu_nagi_bussyoku.ks": {
+    "total_lines": 270,
+    "entry_count": 1
+  },
+  "sinnyu_nagi_bussyoku_datui.ks": {
+    "total_lines": 235,
+    "entry_count": 0
+  },
+  "sinnyu_nagi_bussyoku_ev.ks": {
+    "total_lines": 1130,
+    "entry_count": 217
+  },
+  "sinnyu_nagi_bussyoku_hayato.ks": {
+    "total_lines": 205,
+    "entry_count": 0
+  },
+  "sinnyu_nagi_bussyoku_huro.ks": {
+    "total_lines": 264,
+    "entry_count": 0
+  },
+  "sinnyu_nagi_bussyoku_nagiroom.ks": {
+    "total_lines": 298,
+    "entry_count": 0
+  },
+  "sinnyu_nagi_bussyoku_toire.ks": {
+    "total_lines": 180,
+    "entry_count": 0
+  },
+  "sinnyu_nagi_haiti.ks": {
+    "total_lines": 140,
+    "entry_count": 1
+  },
+  "sinnyu_nagi_haiti_datui.ks": {
+    "total_lines": 166,
+    "entry_count": 0
+  },
+  "sinnyu_nagi_haiti_huro.ks": {
+    "total_lines": 195,
+    "entry_count": 0
+  },
+  "sinnyu_nagi_haiti_nagiroom.ks": {
+    "total_lines": 166,
+    "entry_count": 0
+  },
+  "sinnyu_nagi_haiti_toilet.ks": {
+    "total_lines": 138,
+    "entry_count": 0
+  },
+  "sinnyu_nagi_haiti_wasitu.ks": {
+    "total_lines": 77,
+    "entry_count": 0
+  },
+  "sinnyu_rihure.ks": {
+    "total_lines": 79,
+    "entry_count": 4
+  },
+  "sinnyu_rihure_bussyoku.ks": {
+    "total_lines": 196,
+    "entry_count": 1
+  },
+  "sinnyu_rihure_bussyoku_kouisitu.ks": {
+    "total_lines": 130,
+    "entry_count": 0
+  },
+  "sinnyu_rihure_bussyoku_sekkyaku.ks": {
+    "total_lines": 164,
+    "entry_count": 0
+  },
+  "sinnyu_rihure_haiti.ks": {
+    "total_lines": 132,
+    "entry_count": 1
+  },
+  "sinnyu_rihure_kouisitu_haiti.ks": {
+    "total_lines": 128,
+    "entry_count": 0
+  },
+  "sinnyu_rihure_sekkyaku_haiti.ks": {
+    "total_lines": 128,
+    "entry_count": 0
+  },
+  "job_anime.ks": {
+    "total_lines": 7,
+    "entry_count": 0
+  },
+  "job_fx.ks": {
+    "total_lines": 254,
+    "entry_count": 1
+  },
+  "job_kateikyousi.ks": {
+    "total_lines": 273,
+    "entry_count": 1
+  },
+  "job_kintore.ks": {
+    "total_lines": 227,
+    "entry_count": 1
+  },
+  "job_massaji.ks": {
+    "total_lines": 264,
+    "entry_count": 1
+  },
+  "job_moneyget.ks": {
+    "total_lines": 281,
+    "entry_count": 8
+  },
+  "job_moneyget_mesi.ks": {
+    "total_lines": 48,
+    "entry_count": 5
+  },
+  "job_neru.ks": {
+    "total_lines": 95,
+    "entry_count": 2
+  },
+  "job_sd.ks": {
+    "total_lines": 424,
+    "entry_count": 15
+  },
+  "job_seisou.ks": {
+    "total_lines": 269,
+    "entry_count": 1
+  },
+  "job_ten_byouki.ks": {
+    "total_lines": 150,
+    "entry_count": 0
+  },
+  "job_ten_daiseikou.ks": {
+    "total_lines": 297,
+    "entry_count": 0
+  },
+  "job_ten_hikui.ks": {
+    "total_lines": 488,
+    "entry_count": 0
+  },
+  "mesi_jisui.ks": {
+    "total_lines": 18,
+    "entry_count": 1
+  },
+  "sansaku_byouinEV.ks": {
+    "total_lines": 79,
+    "entry_count": 10
+  },
+  "sansaku_byouinEV_nagi.ks": {
+    "total_lines": 476,
+    "entry_count": 17
+  },
+  "sansaku_byouinEV_nagihayato.ks": {
+    "total_lines": 115,
+    "entry_count": 26
+  },
+  "sansaku_famiresuEV.ks": {
+    "total_lines": 150,
+    "entry_count": 24
+  },
+  "sansaku_famiresuEV_hayato.ks": {
+    "total_lines": 422,
+    "entry_count": 31
+  },
+  "sansaku_famiresuEV_tubomi.ks": {
+    "total_lines": 468,
+    "entry_count": 21
+  },
+  "sansaku_hankagaiEV.ks": {
+    "total_lines": 164,
+    "entry_count": 19
+  },
+  "sansaku_hankagaiEV_game.ks": {
+    "total_lines": 39,
+    "entry_count": 4
+  },
+  "sansaku_hankagaiEV_hayato.ks": {
+    "total_lines": 448,
+    "entry_count": 36
+  },
+  "sansaku_hankagaiEV_nagi.ks": {
+    "total_lines": 453,
+    "entry_count": 12
+  },
+  "sansaku_hankagaiEV_tubomi.ks": {
+    "total_lines": 41,
+    "entry_count": 6
+  },
+  "sansaku_hankagaiEV_tubomihayato.ks": {
+    "total_lines": 100,
+    "entry_count": 25
+  },
+  "sansaku_kaimono1.ks": {
+    "total_lines": 483,
+    "entry_count": 7
+  },
+  "sansaku_kaimono_item.ks": {
+    "total_lines": 632,
+    "entry_count": 40
+  },
+  "sansaku_massajiEV.ks": {
+    "total_lines": 88,
+    "entry_count": 10
+  },
+  "sansaku_massajiEV_rinko.ks": {
+    "total_lines": 414,
+    "entry_count": 19
+  },
+  "sansaku_massajiEV_rinkohayato.ks": {
+    "total_lines": 101,
+    "entry_count": 25
+  },
+  "sansaku_massajiEV_rinkotubomi.ks": {
+    "total_lines": 107,
+    "entry_count": 26
+  },
+  "sansaku_ran.ks": {
+    "total_lines": 270,
+    "entry_count": 0
+  },
+  "sansaku_rihureEV.ks": {
+    "total_lines": 66,
+    "entry_count": 8
+  },
+  "sansaku_rihureEV_tubomi.ks": {
+    "total_lines": 53,
+    "entry_count": 8
+  },
+  "EV_date.ks": {
+    "total_lines": 575,
+    "entry_count": 169
+  },
+  "EV_deto_dinner.ks": {
+    "total_lines": 206,
+    "entry_count": 36
+  },
+  "EV_hukusyu_hayato.ks": {
+    "total_lines": 180,
+    "entry_count": 87
+  },
+  "EV_kokuhaku_nagi.ks": {
+    "total_lines": 332,
+    "entry_count": 114
+  },
+  "EV_kokuhaku_rinko.ks": {
+    "total_lines": 228,
+    "entry_count": 74
+  },
+  "EV_kokuhaku_tubomi.ks": {
+    "total_lines": 218,
+    "entry_count": 75
+  },
+  "EV_omoidenokakera.ks": {
+    "total_lines": 155,
+    "entry_count": 66
+  },
+  "H_3P.ks": {
+    "total_lines": 675,
+    "entry_count": 28
+  },
+  "H_3P0.ks": {
+    "total_lines": 281,
+    "entry_count": 17
+  },
+  "H_3P_2.ks": {
+    "total_lines": 676,
+    "entry_count": 28
+  },
+  "H_commandONOFF.ks": {
+    "total_lines": 12,
+    "entry_count": 0
+  },
+  "H_kaihaturesult_nagi.ks": {
+    "total_lines": 94,
+    "entry_count": 0
+  },
+  "H_kaihaturesult_nagi_gauge.ks": {
+    "total_lines": 18,
+    "entry_count": 0
+  },
+  "H_kaihaturesult_rinko.ks": {
+    "total_lines": 93,
+    "entry_count": 0
+  },
+  "H_kaihaturesult_rinko_gauge.ks": {
+    "total_lines": 21,
+    "entry_count": 0
+  },
+  "H_kaihaturesult_tubomi.ks": {
+    "total_lines": 95,
+    "entry_count": 0
+  },
+  "H_kaihaturesult_tubomi_gauge.ks": {
+    "total_lines": 21,
+    "entry_count": 0
+  },
+  "H_kandocheck.ks": {
+    "total_lines": 369,
+    "entry_count": 0
+  },
+  "H_nagi_J1.ks": {
+    "total_lines": 703,
+    "entry_count": 26
+  },
+  "H_nagi_J1_2.ks": {
+    "total_lines": 670,
+    "entry_count": 27
+  },
+  "H_nagi_J2.ks": {
+    "total_lines": 696,
+    "entry_count": 25
+  },
+  "H_nagi_J2_2.ks": {
+    "total_lines": 689,
+    "entry_count": 26
+  },
+  "H_nagi_J3.ks": {
+    "total_lines": 697,
+    "entry_count": 27
+  },
+  "H_nagi_J3_2.ks": {
+    "total_lines": 693,
+    "entry_count": 28
+  },
+  "H_nagi_R1.ks": {
+    "total_lines": 698,
+    "entry_count": 27
+  },
+  "H_nagi_R1_2.ks": {
+    "total_lines": 693,
+    "entry_count": 27
+  },
+  "H_nagi_R2.ks": {
+    "total_lines": 702,
+    "entry_count": 26
+  },
+  "H_nagi_R2_2.ks": {
+    "total_lines": 695,
+    "entry_count": 27
+  },
+  "H_nagi_R3.ks": {
+    "total_lines": 703,
+    "entry_count": 27
+  },
+  "H_nagi_R3_2.ks": {
+    "total_lines": 696,
+    "entry_count": 28
+  },
+  "H_nagi_cam.ks": {
+    "total_lines": 172,
+    "entry_count": 0
+  },
+  "H_nagi_gauge.ks": {
+    "total_lines": 734,
+    "entry_count": 47
+  },
+  "H_nagi_gazou.ks": {
+    "total_lines": 144,
+    "entry_count": 0
+  },
+  "H_nagi_hajimete.ks": {
+    "total_lines": 660,
+    "entry_count": 26
+  },
+  "H_rinko_J1.ks": {
+    "total_lines": 694,
+    "entry_count": 27
+  },
+  "H_rinko_J1_2.ks": {
+    "total_lines": 686,
+    "entry_count": 26
+  },
+  "H_rinko_J2.ks": {
+    "total_lines": 694,
+    "entry_count": 28
+  },
+  "H_rinko_J2_2.ks": {
+    "total_lines": 685,
+    "entry_count": 26
+  },
+  "H_rinko_R1.ks": {
+    "total_lines": 693,
+    "entry_count": 29
+  },
+  "H_rinko_R1_2.ks": {
+    "total_lines": 687,
+    "entry_count": 27
+  },
+  "H_rinko_R2.ks": {
+    "total_lines": 694,
+    "entry_count": 26
+  },
+  "H_rinko_R2_2.ks": {
+    "total_lines": 693,
+    "entry_count": 27
+  },
+  "H_rinko_cam.ks": {
+    "total_lines": 148,
+    "entry_count": 0
+  },
+  "H_rinko_gauge.ks": {
+    "total_lines": 742,
+    "entry_count": 48
+  },
+  "H_rinko_gazou.ks": {
+    "total_lines": 123,
+    "entry_count": 0
+  },
+  "H_rinko_hajimete.ks": {
+    "total_lines": 663,
+    "entry_count": 27
+  },
+  "H_rinko_supiritasu.ks": {
+    "total_lines": 650,
+    "entry_count": 24
+  },
+  "H_serihu_nagi.ks": {
+    "total_lines": 5581,
+    "entry_count": 1365
+  },
+  "H_serihu_rinko.ks": {
+    "total_lines": 4251,
+    "entry_count": 1040
+  },
+  "H_serihu_rinkotubomi.ks": {
+    "total_lines": 830,
+    "entry_count": 209
+  },
+  "H_serihu_tubomi.ks": {
+    "total_lines": 4342,
+    "entry_count": 1048
+  },
+  "H_suimin1.ks": {
+    "total_lines": 312,
+    "entry_count": 2
+  },
+  "H_suimin_serihu.ks": {
+    "total_lines": 243,
+    "entry_count": 56
+  },
+  "H_suimingauge.ks": {
+    "total_lines": 21,
+    "entry_count": 0
+  },
+  "H_tubomi_J1.ks": {
+    "total_lines": 694,
+    "entry_count": 26
+  },
+  "H_tubomi_J1_2.ks": {
+    "total_lines": 690,
+    "entry_count": 27
+  },
+  "H_tubomi_J2.ks": {
+    "total_lines": 698,
+    "entry_count": 28
+  },
+  "H_tubomi_J2_2.ks": {
+    "total_lines": 688,
+    "entry_count": 26
+  },
+  "H_tubomi_R1.ks": {
+    "total_lines": 700,
+    "entry_count": 29
+  },
+  "H_tubomi_R1_2.ks": {
+    "total_lines": 694,
+    "entry_count": 29
+  },
+  "H_tubomi_R2.ks": {
+    "total_lines": 706,
+    "entry_count": 28
+  },
+  "H_tubomi_R2_2.ks": {
+    "total_lines": 695,
+    "entry_count": 28
+  },
+  "H_tubomi_cam.ks": {
+    "total_lines": 172,
+    "entry_count": 0
+  },
+  "H_tubomi_gauge.ks": {
+    "total_lines": 756,
+    "entry_count": 48
+  },
+  "H_tubomi_gazou.ks": {
+    "total_lines": 141,
+    "entry_count": 0
+  },
+  "H_tubomi_hajimete.ks": {
+    "total_lines": 658,
+    "entry_count": 28
+  },
+  "H_tubomi_supiritasu.ks": {
+    "total_lines": 663,
+    "entry_count": 22
+  },
+  "EV_TrueEND_nagi.ks": {
+    "total_lines": 149,
+    "entry_count": 59
+  },
+  "EV_haremEND.ks": {
+    "total_lines": 103,
+    "entry_count": 46
+  },
+  "EV_hukusyuEND_nagi.ks": {
+    "total_lines": 155,
+    "entry_count": 56
+  },
+  "EV_jyunaiEND_nagi.ks": {
+    "total_lines": 112,
+    "entry_count": 40
+  },
+  "EV_jyunaiEND_rinko.ks": {
+    "total_lines": 115,
+    "entry_count": 40
+  },
+  "EV_jyunaiEND_tubomi.ks": {
+    "total_lines": 132,
+    "entry_count": 45
+  },
+  "EV_kyouaiEND_nagi.ks": {
+    "total_lines": 103,
+    "entry_count": 33
+  },
+  "EV_kyouaiEND_rinko.ks": {
+    "total_lines": 143,
+    "entry_count": 49
+  },
+  "EV_kyouaiEND_tubomi.ks": {
+    "total_lines": 120,
+    "entry_count": 49
+  },
+  "EV_nikubenkiEND_nagi.ks": {
+    "total_lines": 117,
+    "entry_count": 47
+  },
+  "EV_nikubenkiEND_rinko_tubomi.ks": {
+    "total_lines": 134,
+    "entry_count": 50
+  },
+  "EV_yuujyouEND_hayato.ks": {
+    "total_lines": 63,
+    "entry_count": 20
+  },
+  "EV_BADEND_hayato.ks": {
+    "total_lines": 93,
+    "entry_count": 35
+  },
+  "EV_BADEND_houmon.ks": {
+    "total_lines": 67,
+    "entry_count": 15
+  },
+  "EV_BADEND_nagi.ks": {
+    "total_lines": 80,
+    "entry_count": 20
+  },
+  "EV_BADEND_rinko.ks": {
+    "total_lines": 48,
+    "entry_count": 11
+  },
+  "EV_BADEND_suimin.ks": {
+    "total_lines": 91,
+    "entry_count": 22
+  },
+  "EV_BADEND_tubomi.ks": {
+    "total_lines": 50,
+    "entry_count": 13
+  },
+  "BGM.ks": {
+    "total_lines": 59,
+    "entry_count": 0
+  },
+  "CG_EV.ks": {
+    "total_lines": 25,
+    "entry_count": 0
+  },
+  "CG_EVCG.ks": {
+    "total_lines": 19,
+    "entry_count": 0
+  },
+  "CG_EVCG_base.ks": {
+    "total_lines": 35,
+    "entry_count": 0
+  },
+  "CG_EVCG_nagi.ks": {
+    "total_lines": 26,
+    "entry_count": 0
+  },
+  "CG_EVCG_rinko.ks": {
+    "total_lines": 16,
+    "entry_count": 0
+  },
+  "CG_EVCG_tubomi.ks": {
+    "total_lines": 15,
+    "entry_count": 0
+  },
+  "CG_replay_EV_nagi.ks": {
+    "total_lines": 20,
+    "entry_count": 0
+  },
+  "CG_replay_H_nagi.ks": {
+    "total_lines": 27,
+    "entry_count": 0
+  },
+  "CG_replay_H_rinko.ks": {
+    "total_lines": 20,
+    "entry_count": 0
+  },
+  "CG_replay_H_tubomi.ks": {
+    "total_lines": 19,
+    "entry_count": 0
+  },
+  "CG_tou.ks": {
+    "total_lines": 31,
+    "entry_count": 0
+  },
+  "CG_tou2.ks": {
+    "total_lines": 28,
+    "entry_count": 0
+  },
+  "CG_tou2_top.ks": {
+    "total_lines": 28,
+    "entry_count": 0
+  },
+  "CG_tou_complete.ks": {
+    "total_lines": 39,
+    "entry_count": 3
+  },
+  "CG_tou_top.ks": {
+    "total_lines": 31,
+    "entry_count": 0
+  },
+  "EV_3P.ks": {
+    "total_lines": 90,
+    "entry_count": 40
+  },
+  "EV_Htalk.ks": {
+    "total_lines": 201,
+    "entry_count": 77
+  },
+  "EV_item_Spirytus_nagi.ks": {
+    "total_lines": 265,
+    "entry_count": 103
+  },
+  "EV_item_Spirytus_rinko.ks": {
+    "total_lines": 172,
+    "entry_count": 59
+  },
+  "EV_item_Spirytus_tubomi.ks": {
+    "total_lines": 183,
+    "entry_count": 61
+  },
+  "EV_item_biyaku.ks": {
+    "total_lines": 87,
+    "entry_count": 35
+  },
+  "EV_item_biyaku2.ks": {
+    "total_lines": 106,
+    "entry_count": 46
+  },
+  "EV_item_biyaku3.ks": {
+    "total_lines": 91,
+    "entry_count": 30
+  },
+  "EV_item_suimin.ks": {
+    "total_lines": 92,
+    "entry_count": 20
+  },
+  "EV_sigoto.ks": {
+    "total_lines": 173,
+    "entry_count": 39
+  },
+  "EV_sigoto2.ks": {
+    "total_lines": 95,
+    "entry_count": 18
+  },
+  "EV_sinnyu.ks": {
+    "total_lines": 68,
+    "entry_count": 13
+  },
+  "EV_status.ks": {
+    "total_lines": 626,
+    "entry_count": 120
+  },
+  "EV_syakaisei.ks": {
+    "total_lines": 105,
+    "entry_count": 19
+  },
+  "EV_tousatuCG.ks": {
+    "total_lines": 1310,
+    "entry_count": 51
+  },
+  "_preview.ks": {
+    "total_lines": 35,
+    "entry_count": 3
+  },
+  "a_Debugroom.ks": {
+    "total_lines": 316,
+    "entry_count": 42
+  },
+  "a_taikenban.ks": {
+    "total_lines": 34,
+    "entry_count": 0
+  },
+  "character.ks": {
+    "total_lines": 436,
+    "entry_count": 0
+  },
+  "make.ks": {
+    "total_lines": 14,
+    "entry_count": 0
+  },
+  "minigame.ks": {
+    "total_lines": 59,
+    "entry_count": 0
+  },
+  "profile_nagi.ks": {
+    "total_lines": 267,
+    "entry_count": 0
+  },
+  "profile_rinko.ks": {
+    "total_lines": 187,
+    "entry_count": 0
+  },
+  "profile_tubomi.ks": {
+    "total_lines": 187,
+    "entry_count": 0
+  },
+  "sansaku.ks": {
+    "total_lines": 134,
+    "entry_count": 1
+  },
+  "sinnyu.ks": {
+    "total_lines": 167,
+    "entry_count": 2
+  },
+  "statusUP.ks": {
+    "total_lines": 56,
+    "entry_count": 0
+  },
+  "system.ks": {
+    "total_lines": 136,
+    "entry_count": 0
+  },
+  "title_kaisou.ks": {
+    "total_lines": 452,
+    "entry_count": 0
+  },
+  "title_screen.ks": {
+    "total_lines": 239,
+    "entry_count": 4
+  },
+  "title_sf.ks": {
+    "total_lines": 89,
+    "entry_count": 0
+  },
+  "title_zenkaihou.ks": {
+    "total_lines": 173,
+    "entry_count": 0
+  },
+  "ui_base.ks": {
+    "total_lines": 172,
+    "entry_count": 0
+  },
+  "ui_month.ks": {
+    "total_lines": 145,
+    "entry_count": 0
+  },
+  "ui_onoff.ks": {
+    "total_lines": 133,
+    "entry_count": 0
+  },
+  "ui_para.ks": {
+    "total_lines": 354,
+    "entry_count": 0
+  },
+  "ui_parameter.ks": {
+    "total_lines": 342,
+    "entry_count": 0
+  },
+  "uireset.ks": {
+    "total_lines": 9,
+    "entry_count": 0
+  },
+  "volume.ks": {
+    "total_lines": 21,
+    "entry_count": 0
+  }
+}

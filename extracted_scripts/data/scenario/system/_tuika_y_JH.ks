@@ -1,0 +1,13 @@
+n][preload  storage="./data/bgimage/room_Living_yoru.png"  ]
+[preload  storage="./data/bgimage/black.jpg"  ]
+[preload  storage="./data/bgimage/H21_01_01_00.gif"  ]
+[preload  storage="./data/fgimage/default/HUI_pistopad_.png"  ]
+[preload  storage="./data/fgimage/default/HUI_pistonhagesiku_off.png"  ]
+[preload  storage="./data/fgimage/default/HUI_pistonyukkuri_off.png"  ]
+[preload  storage="./data/fgimage/default/HUI_otokzetcho2_off.png"  ]
+[preload  storage="./data/bgimage/H21_01_02_00.gif"  ]
+[preload  storage="./data/bgimage/H21_00_00_00.png"  ]
+[preload  storage="./data/bgimage/H21_00_00_01.png"  ]
+[preload  storage="./data/bgimage/event_fin.jpg"  ]
+[preload  storage="./data/bgimage/event_fin2.jpg"  ]
+[retur

@@ -1,0 +1,10 @@
+n][preload  storage="./data/bgimage/sora.jpg"  ]
+[preload  storage="./data/bgimage/room_Living_yoru.png"  ]
+[preload  storage="./data/bgimage/itemEV1.png"  ]
+[preload  storage="./data/bgimage/back_mansyonmae.jpg"  ]
+[preload  storage="./data/bgimage/black.jpg"  ]
+[preload  storage="./data/bgimage/back_mansyonrouka_yoru.jpg"  ]
+[preload  storage="./data/bgimage/itemEV2.png"  ]
+[preload  storage="./data/bgimage/itemEV3.png"  ]
+[preload  storage="./data/bgimage/itemEV4.png"  ]
+[retur

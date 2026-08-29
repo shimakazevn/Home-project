@@ -1,0 +1,14 @@
+{
+  "appId": "com.sorarevo.home.vn",
+  "appName": "HOME VN",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": false
+  },
+  "server": {
+    "androidScheme": "https",
+    "cleartext": true
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "project": {
+    "rj_code": "RJ01556529",
+    "jp_title": "HOME",
+    "vn_title": "HOME",
+    "vn_sub": "Ký Ức Mùa Hè & Căn Hộ Chung Cư",
+    "game_id": "RJ01556529",
+    "release_name": "HOME_VN",
+    "version": "1.0.0",
+    "author": "SORAREVO",
+    "engine": "TyranoBuilder / TyranoScript"
+  },
+  "source_project": "E:\\HOME_",
+  "paths": {
+    "pristine_game": "Game",
+    "translation_dir": "translation",
+    "legacy_patch_dir": "patch",
+    "patch_release_dir": "patch-release",
+    "test_game_dir": "Game"
+  },
+  "build": {
+    "root": "build-vn",
+    "pc_dir": "pc",
+    "patch_dir": "patch",
+    "releases_dir": "releases",
+    "data_vn_dir": "data_vn"
+  },
+  "csv": {
+    "main": "text_export.csv",
+    "scenario": "scenario_export.csv",
+    "system": "system_text.csv"
+  },
+  "fonts": {
+    "target_family": "NotoSansVN",
+    "preferred_names": [
+      "Noto Sans", "Noto Sans Vietnamese", "NotoSans-Vietnamese",
+      "Be Vietnam Pro", "Be Vietnam", "Inter", "Roboto",
+      "Segoe UI", "Tahoma", "Verdana", "Arial"
+    ],
+    "system_font_dirs": [
+      "%WINDIR%\\Fonts",
+      "%LOCALAPPDATA%\\Microsoft\\Windows\\Fonts"
+    ],
+    "project_font_dirs": [
+      "Game\\data\\others\\font",
+      "patch\\data\\others\\font"
+    ],
+    "bundle_ext": "woff2",
+    "keep_ttf": true,
+    "deploy_to": [
+      "build-pc", "patch", "patch-release"
+    ],
+    "download_google": false,
+    "google": { "family": "Noto Sans", "weight": "500", "subset": "vietnamese" }
+  },
+  "qa": {
+    "require_all_translated": true,
+    "max_untranslated_rows": 0,
+    "check_control_codes": true,
+    "structure_parity": true,
+    "min_font_coverage": 1.0
+  },
+  "release": {
+    "zip_game": true,
+    "zip_patch": true,
+    "checksums": true,
+    "copy_to_patch_release": true
+  }
+}
