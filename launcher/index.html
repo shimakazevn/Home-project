@@ -21,106 +21,134 @@
     <div class="background-overlay"></div>
     <div class="particles" id="particles"></div>
 
-    <main class="launcher-card">
-        <header class="header">
-            <div class="game-badge" id="badge-version">BẢN VIỆT HÓA v1.0.0</div>
-            <h1 class="title">HOME (ROOM)</h1>
-            <p class="subtitle">Trình Tải Game Gốc, Tự Động Vá Tiếng Việt & Cập Nhật</p>
-        </header>
+    <div class="app-scroll-container">
+        <main class="launcher-card">
+            <!-- Header chuẩn iOS Mobile -->
+            <header class="header">
+                <div class="game-badge" id="badge-version">BẢN VIỆT HÓA v1.0.0</div>
+                <h1 class="title">HOME (ROOM)</h1>
+                <p class="subtitle">Trình Tải Game Gốc, Tự Động Vá Tiếng Việt & Cập Nhật</p>
+            </header>
 
-        <!-- Trạng thái kết nối & tiến trình -->
-        <section class="status-container">
-            <div class="status-header">
-                <span class="status-text" id="status-text">Đang kiểm tra trạng thái game...</span>
-                <span class="status-percent" id="status-percent">0%</span>
-            </div>
-
-            <div class="progress-bar-wrapper">
-                <div class="progress-bar" id="progress-bar">
-                    <div class="progress-glow"></div>
+            <!-- Trạng thái kết nối & tiến trình -->
+            <section class="status-container">
+                <div class="status-header">
+                    <span class="status-text" id="status-text">Đang kiểm tra trạng thái game...</span>
+                    <span class="status-percent" id="status-percent">0%</span>
                 </div>
-            </div>
 
-            <div class="stats-row">
-                <span id="stat-downloaded">0 MB / 0 MB</span>
-                <span id="stat-speed">-- MB/s</span>
-                <span id="stat-eta">ETA: --:--</span>
-            </div>
-        </section>
-
-        <!-- Hướng dẫn cài đặt 3 bước trực quan cho người dùng mới -->
-        <section class="guide-steps-container" id="guide-box">
-            <div class="step-card">
-                <div class="step-badge">BƯỚC 1</div>
-                <div class="step-content">
-                    <div class="step-title">Tải 5 Part Dữ Liệu Game Gốc:</div>
-                    <div class="part-buttons-grid">
-                        <a href="https://github.com/shimakazevn/Home-project/releases/download/0.0.0/app.z01" target="_blank" class="btn-part">📥 Part 1 (1.9 GB)</a>
-                        <a href="https://github.com/shimakazevn/Home-project/releases/download/0.0.0/app.z02" target="_blank" class="btn-part">📥 Part 2 (1.9 GB)</a>
-                        <a href="https://github.com/shimakazevn/Home-project/releases/download/0.0.0/app.z03" target="_blank" class="btn-part">📥 Part 3 (1.9 GB)</a>
-                        <a href="https://github.com/shimakazevn/Home-project/releases/download/0.0.0/app.z04" target="_blank" class="btn-part">📥 Part 4 (1.9 GB)</a>
-                        <a href="https://github.com/shimakazevn/Home-project/releases/download/0.0.0/app.zip" target="_blank" class="btn-part">📥 Part 5 (560 MB)</a>
+                <div class="progress-bar-wrapper">
+                    <div class="progress-bar" id="progress-bar">
+                        <div class="progress-glow"></div>
                     </div>
                 </div>
-            </div>
 
-            <div class="step-card">
-                <div class="step-badge">BƯỚC 2</div>
-                <div class="step-content">
-                    <div class="step-title">Giải Nén Để Lấy File <code>app.asar</code>:</div>
+                <div class="stats-row">
+                    <span id="stat-downloaded">0 MB / 0 MB</span>
+                    <span id="stat-speed">-- MB/s</span>
+                    <span id="stat-eta">ETA: --:--</span>
+                </div>
+            </section>
+
+            <!-- Hướng dẫn 3 bước cực thoáng & Nút bấm to chuẩn iOS -->
+            <section class="guide-steps-container" id="guide-box">
+                <!-- Bước 1 -->
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-badge">BƯỚC 1</div>
+                        <div class="step-title">Tải 5 phần dữ liệu game gốc về máy:</div>
+                    </div>
+                    <div class="part-buttons-list">
+                        <a href="https://github.com/shimakazevn/Home-project/releases/download/0.0.0/app.z01" target="_blank" class="btn-part-large">
+                            <span class="part-icon">📥</span>
+                            <span class="part-name">Tải Phần 1</span>
+                            <span class="part-size">1.9 GB</span>
+                        </a>
+                        <a href="https://github.com/shimakazevn/Home-project/releases/download/0.0.0/app.z02" target="_blank" class="btn-part-large">
+                            <span class="part-icon">📥</span>
+                            <span class="part-name">Tải Phần 2</span>
+                            <span class="part-size">1.9 GB</span>
+                        </a>
+                        <a href="https://github.com/shimakazevn/Home-project/releases/download/0.0.0/app.z03" target="_blank" class="btn-part-large">
+                            <span class="part-icon">📥</span>
+                            <span class="part-name">Tải Phần 3</span>
+                            <span class="part-size">1.9 GB</span>
+                        </a>
+                        <a href="https://github.com/shimakazevn/Home-project/releases/download/0.0.0/app.z04" target="_blank" class="btn-part-large">
+                            <span class="part-icon">📥</span>
+                            <span class="part-name">Tải Phần 4</span>
+                            <span class="part-size">1.9 GB</span>
+                        </a>
+                        <a href="https://github.com/shimakazevn/Home-project/releases/download/0.0.0/app.zip" target="_blank" class="btn-part-large">
+                            <span class="part-icon">📥</span>
+                            <span class="part-name">Tải Phần 5</span>
+                            <span class="part-size">560 MB</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bước 2 -->
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-badge">BƯỚC 2</div>
+                        <div class="step-title">Giải nén để lấy file <code>app.asar</code>:</div>
+                    </div>
                     <div class="step-desc">
-                        Giải nén file <b>app.zip</b> vừa tải. Mật khẩu giải nén: 
-                        <span class="password-chip" id="btn-copy-pass" title="Nhấp để sao chép mật khẩu">
-                            🔑 <b id="pass-val">seikowo</b> <span class="copy-hint">(Sao chép)</span>
-                        </span>
+                        Giải nén file <b>app.zip</b> vừa tải về bằng ứng dụng giải nén trên máy.
+                    </div>
+                    <div class="password-box-touch" id="btn-copy-pass">
+                        <span class="pass-label">🔑 MẬT KHẨU GIẢI NÉN:</span>
+                        <span class="pass-code" id="pass-val">seikowo</span>
+                        <span class="pass-btn-badge" id="copy-status">Chạm để sao chép</span>
                     </div>
                 </div>
-            </div>
 
-            <div class="step-card">
-                <div class="step-badge">BƯỚC 3</div>
-                <div class="step-content">
-                    <div class="step-title">Nạp Vào Launcher & Tự Động Vá Tiếng Việt:</div>
+                <!-- Bước 3 -->
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-badge">BƯỚC 3</div>
+                        <div class="step-title">Nạp vào Launcher để chơi:</div>
+                    </div>
                     <div class="step-desc">
-                        Bấm nút màu xanh bên dưới $\rightarrow$ Chọn file <b>app.asar</b> vừa giải nén. Launcher sẽ tự động cài đặt và vá bản dịch mới nhất trong 2 giây!
+                        Bấm nút màu xanh lớn bên dưới ➔ Chọn file <b>app.asar</b> vừa giải nén. Hệ thống sẽ tự động cài đặt và vá tiếng Việt trong 2 giây!
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Thông tin hệ thống -->
-        <section class="info-box">
-            <div class="info-item">
-                <span class="info-label">Trạng thái game:</span>
-                <span class="info-value text-accent" id="game-status-label">Đang kiểm tra...</span>
-            </div>
-            <div class="info-item">
-                <span class="info-label">Phiên bản:</span>
-                <span class="info-value" id="local-version">Chưa cài đặt</span>
-            </div>
-            <div class="info-item">
-                <span class="info-label">Bản vá mới nhất:</span>
-                <span class="info-value text-success" id="remote-version">v1.0.0 (Sẵn sàng)</span>
-            </div>
-        </section>
+            <!-- Thông tin tóm tắt -->
+            <section class="info-box">
+                <div class="info-item">
+                    <span class="info-label">Trạng thái:</span>
+                    <span class="info-value text-accent" id="game-status-label">Đang kiểm tra...</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Phiên bản:</span>
+                    <span class="info-value" id="local-version">Chưa cài đặt</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Bản vá tiếng Việt:</span>
+                    <span class="info-value text-success" id="remote-version">v1.0.0 (Sẵn sàng)</span>
+                </div>
+            </section>
 
-        <!-- Nút tương tác chính -->
-        <footer class="action-container">
-            <button class="btn btn-primary btn-large" id="btn-import-local">
-                <span class="btn-icon">📁</span>
-                <span class="btn-text">CHỌN FILE app.asar & VÀO GAME NGAY</span>
-            </button>
-            <button class="btn btn-secondary btn-large" id="btn-action" style="display:none;">
-                <span class="btn-icon">🎮</span>
-                <span class="btn-text">VÀO GAME NGAY</span>
-            </button>
-            <input type="file" id="input-local-file" accept=".asar,.zip" style="display:none;">
-        </footer>
-    </main>
+            <!-- Nút hành động chính chuẩn iOS Touch -->
+            <footer class="action-container">
+                <button class="btn btn-primary btn-touch-giant" id="btn-import-local">
+                    <span class="btn-icon">📁</span>
+                    <span class="btn-text">CHỌN FILE app.asar ĐỂ VÀO GAME</span>
+                </button>
+                <button class="btn btn-secondary btn-touch-giant" id="btn-action" style="display:none;">
+                    <span class="btn-icon">🎮</span>
+                    <span class="btn-text">VÀO GAME NGAY</span>
+                </button>
+                <input type="file" id="input-local-file" accept=".asar,.zip" style="display:none;">
+            </footer>
+        </main>
+    </div>
 
     <!-- Thư viện giải nén Zip & ASAR -->
-    <script src="jszip.min.js?v=4.0"></script>
-    <script src="asar_extractor.js?v=4.0"></script>
-    <script src="launcher.js?v=4.0"></script>
+    <script src="jszip.min.js?v=5.0"></script>
+    <script src="asar_extractor.js?v=5.0"></script>
+    <script src="launcher.js?v=5.0"></script>
 </body>
 </html>
