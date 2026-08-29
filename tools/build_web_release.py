@@ -29,8 +29,13 @@ def build_web_distribution():
     print("   HOME - XÂY DỰNG BẢN WEB (GITHUB PAGES)")
     print("==================================================")
 
+    def remove_readonly(func, path, excinfo):
+        import stat
+        os.chmod(path, stat.S_IWRITE)
+        func(path)
+
     if os.path.exists(WEB_DIST_DIR):
-        shutil.rmtree(WEB_DIST_DIR)
+        shutil.rmtree(WEB_DIST_DIR, onexc=remove_readonly)
     os.makedirs(WEB_DIST_DIR, exist_ok=True)
 
     # 1. Trích xuất các file tĩnh thiết yếu từ app.asar (JS engine, CSS, system)

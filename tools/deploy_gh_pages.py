@@ -28,10 +28,15 @@ def deploy():
     with open(nojekyll_path, 'w', encoding='utf-8') as f:
         f.write("# Disable Jekyll\n")
 
+    def remove_readonly(func, path, excinfo):
+        import stat
+        os.chmod(path, stat.S_IWRITE)
+        func(path)
+
     # Xóa thư mục .git cũ trong dist_web nếu có để tạo mới sạch sẽ
     git_dir = os.path.join(WEB_DIST_DIR, '.git')
     if os.path.exists(git_dir):
-        shutil.rmtree(git_dir, ignore_errors=True)
+        shutil.rmtree(git_dir, onexc=remove_readonly)
 
     cmds = [
         ['git', 'init'],

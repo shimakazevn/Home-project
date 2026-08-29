@@ -106,45 +106,46 @@
         input.click();
     };
 
-    // ─── 3. Tạo nút Export/Import trên giao diện Web ──────────────────────────
+    // ─── 3. Tạo nút Export/Import tối giản ở góc dưới bên trái ────────────────
     function injectSaveExportUI() {
         const btnContainer = document.createElement("div");
         btnContainer.id = "webSaveToolbox";
         btnContainer.style.cssText = `
             position: fixed;
-            bottom: 12px;
-            right: 12px;
+            bottom: 6px;
+            left: 6px;
             z-index: 999999;
             display: flex;
-            gap: 8px;
+            gap: 6px;
             font-family: sans-serif;
+            opacity: 0.35;
+            transition: opacity 0.2s ease;
         `;
+
+        btnContainer.onmouseenter = () => { btnContainer.style.opacity = "0.9"; };
+        btnContainer.onmouseleave = () => { btnContainer.style.opacity = "0.35"; };
 
         btnContainer.innerHTML = `
             <button onclick="window.exportCurrentSaveToFile()" style="
-                background: rgba(15, 23, 42, 0.85);
-                color: #38bdf8;
-                border: 1px solid #0284c7;
-                padding: 6px 12px;
-                border-radius: 6px;
-                font-size: 12px;
-                font-weight: bold;
+                background: rgba(0, 0, 0, 0.5);
+                color: #cbd5e1;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                padding: 3px 7px;
+                border-radius: 4px;
+                font-size: 11px;
                 cursor: pointer;
-                backdrop-filter: blur(4px);
-                box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-            " title="Tải file tiến trình save về máy">📥 Tải Save (.sav)</button>
+                outline: none;
+            " title="Tải file tiến trình save về máy">Tải save</button>
             <button onclick="window.importSaveFromFile()" style="
-                background: rgba(15, 23, 42, 0.85);
-                color: #4ade80;
-                border: 1px solid #16a34a;
-                padding: 6px 12px;
-                border-radius: 6px;
-                font-size: 12px;
-                font-weight: bold;
+                background: rgba(0, 0, 0, 0.5);
+                color: #cbd5e1;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                padding: 3px 7px;
+                border-radius: 4px;
+                font-size: 11px;
                 cursor: pointer;
-                backdrop-filter: blur(4px);
-                box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-            " title="Nạp file tiến trình save từ máy">📤 Nạp Save</button>
+                outline: none;
+            " title="Nạp file tiến trình save từ máy">Nạp save</button>
         `;
 
         document.body.appendChild(btnContainer);
