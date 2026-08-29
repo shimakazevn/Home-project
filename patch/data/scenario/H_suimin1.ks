@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_H_suimin1.ks]
 
 [tb_start_tyrano_code]

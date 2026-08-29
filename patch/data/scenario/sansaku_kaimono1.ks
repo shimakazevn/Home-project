@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_sansaku_kaimono1.ks]
 
 [tb_start_tyrano_code]

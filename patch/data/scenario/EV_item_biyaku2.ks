@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_EV_item_biyaku2.ks]
 
 [tb_start_tyrano_code]

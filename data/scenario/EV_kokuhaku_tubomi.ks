@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_EV_kokuhaku_tubomi.ks]
 
 [tb_start_tyrano_code]

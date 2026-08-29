@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_sinnyu_massaji_syawa_haiti.ks]
 
 *top

@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_H_nagi_J3.ks]
 
 [tb_start_tyrano_code]

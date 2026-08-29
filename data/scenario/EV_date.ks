@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_EV_date.ks]
 
 [call  storage="ui_onoff.ks"  target="*UI_on"  ]

@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_komyu_nagi_kaeru_hato.ks]
 
 *set

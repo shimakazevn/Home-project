@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_H_nagi_gazou.ks]
 
 *H1_yukkuri_cam1

@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_sansaku_byouinEV_nagihayato.ks]
 
 [call  storage="ui_base.ks"  target="*top"  ]

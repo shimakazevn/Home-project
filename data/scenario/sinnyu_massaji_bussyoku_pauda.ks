@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_sinnyu_massaji_bussyoku_pauda.ks]
 
 [tb_start_tyrano_code]

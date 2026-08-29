@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_komyu_nagi_kaeru_nitijyoukaiwa.ks]
 
 [bg  time="0"  method="crossfade"  storage="kaeri_nagi.png"  ]

@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_job_ten_byouki.ks]
 
 [tb_start_tyrano_code]

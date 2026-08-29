@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_sinnyu_nagi_bussyoku_huro.ks]
 
 [tb_start_tyrano_code]

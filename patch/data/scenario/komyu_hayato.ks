@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_komyu_hayato.ks]
 
 [tb_show_message_window  ]

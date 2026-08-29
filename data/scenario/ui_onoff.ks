@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_ui_onoff.ks]
 
 *UI_on0

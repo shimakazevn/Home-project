@@ -1,6 +1,6 @@
 /**
  * CDN Interceptor Plugin cho TyranoScript Web
- * Tự động chuyển hướng toàn bộ hình ảnh, button, bgmovie và Stego Audio sang Google Blogger/Photos CDN
+ * Tự động chuyển hướng toàn bộ hình ảnh, character sprites, button, bgmovie và Stego Audio sang Google Blogger/Photos CDN
  * Tự động chuẩn hóa âm lượng (Volume Softening & Normalization) cho trải nghiệm êm ái
  */
 
@@ -39,6 +39,38 @@
                 }
             });
         }
+    } catch(e) {}
+
+    // Intercept toàn diện HTMLImageElement src để không một ảnh nào bị lọt
+    try {
+        const origImgSrcDesc = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, 'src');
+        if (origImgSrcDesc && origImgSrcDesc.set) {
+            Object.defineProperty(HTMLImageElement.prototype, 'src', {
+                set: function(val) {
+                    if (typeof val === 'string' && !val.startsWith('data:') && !val.startsWith('blob:')) {
+                        let cdnUrl = window.resolveCDNUrl(val);
+                        if (cdnUrl && cdnUrl !== val && cdnUrl.startsWith('http')) {
+                            val = cdnUrl;
+                        }
+                    }
+                    return origImgSrcDesc.set.call(this, val);
+                },
+                get: function() {
+                    return origImgSrcDesc.get.call(this);
+                }
+            });
+        }
+
+        const origSetAttribute = HTMLImageElement.prototype.setAttribute;
+        HTMLImageElement.prototype.setAttribute = function(name, val) {
+            if (name === 'src' && typeof val === 'string' && !val.startsWith('data:') && !val.startsWith('blob:')) {
+                let cdnUrl = window.resolveCDNUrl(val);
+                if (cdnUrl && cdnUrl !== val && cdnUrl.startsWith('http')) {
+                    val = cdnUrl;
+                }
+            }
+            return origSetAttribute.call(this, name, val);
+        };
     } catch(e) {}
 
     // Tự động kiểm tra và giảm âm lượng cho mọi thẻ media được chèn vào trang
@@ -89,14 +121,30 @@
 
     // 2. Chuyển đổi đường dẫn cục bộ -> URL Blogger CDN
     window.resolveCDNUrl = function(rawPath) {
-        if (!assetManifest || !rawPath) return rawPath;
+        if (!assetManifest || !rawPath || typeof rawPath !== 'string') return rawPath;
+        if (rawPath.startsWith('https://lh3.googleusercontent.com')) return rawPath;
+
         let clean = rawPath.replace(/^[./]+/, '').replace(/\\/g, '/');
+        if (clean.includes('/data/')) {
+            clean = 'data/' + clean.split('/data/')[1];
+        } else if (clean.startsWith('http') && clean.includes('data/')) {
+            clean = 'data/' + clean.split('data/')[1];
+        }
+
         if (assetManifest[clean]) {
             return assetManifest[clean];
         }
         for (const k in assetManifest) {
             if (clean.endsWith(k) || k.endsWith(clean)) {
                 return assetManifest[k];
+            }
+        }
+        let filename = clean.split('/').pop();
+        if (filename && filename.includes('.')) {
+            for (const k in assetManifest) {
+                if (k.endsWith('/' + filename)) {
+                    return assetManifest[k];
+                }
             }
         }
         return rawPath;
@@ -118,63 +166,45 @@
         const pixels = imgData.data;
 
         // Trích xuất 12 bytes header (Magic 4 bytes + Size 4 bytes + Pad 4 bytes)
-        const headerBytes = new Uint8Array(12);
-        let hIdx = 0;
-        for (let i = 0; i < pixels.length && hIdx < 12; i += 4) {
-            headerBytes[hIdx++] = pixels[i];
-            if (hIdx < 12) headerBytes[hIdx++] = pixels[i + 1];
-            if (hIdx < 12) headerBytes[hIdx++] = pixels[i + 2];
+        let headerBytes = [];
+        let p = 0;
+        for (let i = 0; i < 4; i++) {
+            headerBytes.push(pixels[p], pixels[p + 1], pixels[p + 2]);
+            p += 4;
         }
 
-        const magic = String.fromCharCode(...headerBytes.slice(0, 4));
-        if (magic !== 'AUDO') {
-            throw new Error(`Invalid Stego Magic: ${magic}`);
+        const magic = String.fromCharCode(headerBytes[0], headerBytes[1], headerBytes[2], headerBytes[3]);
+        if (magic !== 'STEG') {
+            throw new Error(`Invalid Stego Magic Header: ${magic}`);
         }
 
-        const dataView = new DataView(headerBytes.buffer, headerBytes.byteOffset, 12);
-        const audioSize = dataView.getUint32(4, false);
+        const dataSize = (headerBytes[4]) | (headerBytes[5] << 8) | (headerBytes[6] << 16) | (headerBytes[7] << 24);
+        const audioBufferData = new Uint8Array(dataSize);
 
-        // Trích xuất audio bytes
-        const audioBytes = new Uint8Array(audioSize);
-        let aIdx = 0;
-        let pOffset = 0;
+        let byteIdx = 0;
+        let totalPixels = bitmap.width * bitmap.height;
 
-        for (let i = 0; i < pixels.length && aIdx < audioSize; i += 4) {
-            if (pOffset >= 12) {
-                audioBytes[aIdx++] = pixels[i];
-            }
-            pOffset++;
-
-            if (pOffset >= 12 && aIdx < audioSize) {
-                audioBytes[aIdx++] = pixels[i + 1];
-            }
-            pOffset++;
-
-            if (pOffset >= 12 && aIdx < audioSize) {
-                audioBytes[aIdx++] = pixels[i + 2];
-            }
-            pOffset++;
+        for (let i = 4; i < totalPixels && byteIdx < dataSize; i++) {
+            let px = i * 4;
+            audioBufferData[byteIdx++] = pixels[px];
+            if (byteIdx < dataSize) audioBufferData[byteIdx++] = pixels[px + 1];
+            if (byteIdx < dataSize) audioBufferData[byteIdx++] = pixels[px + 2];
         }
 
-        const actx = getAudioContext();
-        return await actx.decodeAudioData(audioBytes.buffer);
+        const audioCtx = getAudioContext();
+        return await audioCtx.decodeAudioData(audioBufferData.buffer);
     };
 
-    // 4. Hook vào TyranoScript Engine
+    // 4. Hook các tag của TyranoScript Engine
     function installTyranoHooks() {
-        if (!window.TYRANO || !TYRANO.kag || !TYRANO.kag.tag) {
+        if (!window.TYRANO || !window.TYRANO.kag) {
             setTimeout(installTyranoHooks, 50);
             return;
         }
 
-        const kag = TYRANO.kag;
-        if (!kag.ftis && kag.ftag) {
-            kag.ftis = kag.ftag;
-        }
+        const kag = window.TYRANO.kag;
 
-        console.log("[CDN Interceptor] Đang gắn Hook vào TyranoScript engine...");
-
-        // Hook BGM Player
+        // Hook Background Music Player
         kag.ft_play_stego_bgm = async function(cdnUrl, loop, rawVol) {
             try {
                 const ctx = getAudioContext();
@@ -291,6 +321,118 @@
             };
         }
 
+        // Hook Character tags (chara_show, chara_mod, chara_new, chara_face, chara_part, chara_layer)
+        if (kag.tag.chara_new) {
+            const origCharaNew = kag.tag.chara_new.start;
+            kag.tag.chara_new.start = function(pm) {
+                if (pm.storage) {
+                    let fullPath = (pm.storage.startsWith("data/") || pm.storage.startsWith("http"))
+                        ? pm.storage
+                        : `data/fgimage/${pm.storage}`;
+                    let cdnUrl = window.resolveCDNUrl(fullPath);
+                    if (cdnUrl !== fullPath && cdnUrl.startsWith("http")) {
+                        pm.storage = cdnUrl;
+                    }
+                }
+                return origCharaNew.apply(this, arguments);
+            };
+        }
+
+        if (kag.tag.chara_show) {
+            const origCharaShow = kag.tag.chara_show.start;
+            kag.tag.chara_show.start = function(pm) {
+                if (pm.storage) {
+                    let fullPath = (pm.storage.startsWith("data/") || pm.storage.startsWith("http"))
+                        ? pm.storage
+                        : `data/fgimage/${pm.storage}`;
+                    let cdnUrl = window.resolveCDNUrl(fullPath);
+                    if (cdnUrl !== fullPath && cdnUrl.startsWith("http")) {
+                        pm.storage = cdnUrl;
+                    }
+                }
+                return origCharaShow.apply(this, arguments);
+            };
+        }
+
+        if (kag.tag.chara_mod) {
+            const origCharaMod = kag.tag.chara_mod.start;
+            kag.tag.chara_mod.start = function(pm) {
+                if (pm.storage) {
+                    let fullPath = (pm.storage.startsWith("data/") || pm.storage.startsWith("http"))
+                        ? pm.storage
+                        : `data/fgimage/${pm.storage}`;
+                    let cdnUrl = window.resolveCDNUrl(fullPath);
+                    if (cdnUrl !== fullPath && cdnUrl.startsWith("http")) {
+                        pm.storage = cdnUrl;
+                    }
+                }
+                return origCharaMod.apply(this, arguments);
+            };
+        }
+
+        if (kag.tag.chara_face) {
+            const origCharaFace = kag.tag.chara_face.start;
+            kag.tag.chara_face.start = function(pm) {
+                if (pm.storage) {
+                    let fullPath = (pm.storage.startsWith("data/") || pm.storage.startsWith("http"))
+                        ? pm.storage
+                        : `data/fgimage/${pm.storage}`;
+                    let cdnUrl = window.resolveCDNUrl(fullPath);
+                    if (cdnUrl !== fullPath && cdnUrl.startsWith("http")) {
+                        pm.storage = cdnUrl;
+                    }
+                }
+                return origCharaFace.apply(this, arguments);
+            };
+        }
+
+        if (kag.tag.chara_layer) {
+            const origCharaLayer = kag.tag.chara_layer.start;
+            kag.tag.chara_layer.start = function(pm) {
+                if (pm.storage) {
+                    let fullPath = (pm.storage.startsWith("data/") || pm.storage.startsWith("http"))
+                        ? pm.storage
+                        : `data/fgimage/${pm.storage}`;
+                    let cdnUrl = window.resolveCDNUrl(fullPath);
+                    if (cdnUrl !== fullPath && cdnUrl.startsWith("http")) {
+                        pm.storage = cdnUrl;
+                    }
+                }
+                return origCharaLayer.apply(this, arguments);
+            };
+        }
+
+        if (kag.tag.chara_part) {
+            const origCharaPart = kag.tag.chara_part.start;
+            kag.tag.chara_part.start = function(pm) {
+                for (let key in pm) {
+                    if (typeof pm[key] === 'string' && (pm[key].endsWith('.png') || pm[key].endsWith('.jpg') || pm[key].endsWith('.gif'))) {
+                        let fullPath = (pm[key].startsWith("data/") || pm[key].startsWith("http"))
+                            ? pm[key]
+                            : `data/fgimage/${pm[key]}`;
+                        let cdnUrl = window.resolveCDNUrl(fullPath);
+                        if (cdnUrl !== fullPath && cdnUrl.startsWith("http")) {
+                            pm[key] = cdnUrl;
+                        }
+                    }
+                }
+                return origCharaPart.apply(this, arguments);
+            };
+        }
+
+        if (kag.preload) {
+            const origPreload = kag.preload;
+            kag.preload = function(src, cb) {
+                if (typeof src === 'string') {
+                    let cdnUrl = window.resolveCDNUrl(src);
+                    if (cdnUrl !== src && cdnUrl.startsWith("http")) {
+                        src = cdnUrl;
+                    }
+                }
+                return origPreload.call(this, src, cb);
+            };
+        }
+
         // Hook tag bgmovie (Gracefully bypass on web to prevent video tag blocking)
         kag.tag.bgmovie = {
             pm: { time: 0, volume: 100, loop: "true", storage: "" },
@@ -349,7 +491,7 @@
             return origTagPlayse.apply(this, arguments);
         };
 
-        console.log("[CDN Interceptor] ✅ Đã gắn hoàn tất toàn bộ Hook (bg, image, button, bgmovie, audio).");
+        console.log("[CDN Interceptor] ✅ Đã gắn hoàn tất toàn bộ Hook (bg, image, chara, button, bgmovie, audio).");
         setupMobileAutoFit();
     }
 

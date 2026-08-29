@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_system.ks]
 
 [tb_start_tyrano_code]

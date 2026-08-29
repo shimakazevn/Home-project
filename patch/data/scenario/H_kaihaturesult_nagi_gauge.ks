@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_H_kaihaturesult_nagi_gauge.ks]
 
 *set

@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_komyuhyouka_nagi.ks]
 
 [tb_show_message_window  ]

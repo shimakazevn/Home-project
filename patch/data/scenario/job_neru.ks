@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_job_neru.ks]
 
 [tb_show_message_window  ]

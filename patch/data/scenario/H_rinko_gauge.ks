@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_H_rinko_gauge.ks]
 
 *voice_J_1

@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_sinnyu_byouin_bussyoku_ev.ks]
 
 *syuunou1

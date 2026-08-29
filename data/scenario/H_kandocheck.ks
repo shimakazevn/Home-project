@@ -1,4 +1,3 @@
-]
 [_tb_system_call storage=system/_H_kandocheck.ks]
 
 *top_4
