@@ -12,6 +12,11 @@ build-android-project/android/app/src/main/assets/public/data/bgimage/
 build-android-project/android/app/src/main/assets/public/data/sound/
 build-android-project/android/app/src/main/assets/public/data/bgm/
 
+# Heavy game extraction dirs (>8GB, never commit)
+unpacked_game_app/
+extracted_scripts/
+dist/
+
 # Archive builds
 *.zip
 *.apk

@@ -1,14 +1,11 @@
-]
-;このファイルは削除しないでください！
-;
-;make.ks はデータをロードした時に呼ばれる特別なKSファイルです。
-;Fixレイヤーの初期化など、ロード時点で再構築したい処理をこちらに記述してください。
-;
-;
+;make.ks
+; Không xóa file này!
+; File được gọi tự động khi tải lại dữ liệu / thoát menu cài đặt
+
 [button_ex_restore]
 
-;コンフィグ改変用
+; Khởi tạo âm lượng
 [call storage="volume.ks" ]
 
-;return 必須
-[retur
+; return bắt buộc
+[return]
