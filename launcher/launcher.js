@@ -296,4 +296,18 @@ inputLocalFile.onchange = (e) => {
     }
 };
 
+// Sự kiện sao chép mật khẩu 1 click
+const btnCopyPass = document.getElementById("btn-copy-pass");
+if (btnCopyPass) {
+    btnCopyPass.onclick = () => {
+        navigator.clipboard.writeText("seikowo").then(() => {
+            const hint = btnCopyPass.querySelector(".copy-hint");
+            if (hint) {
+                hint.textContent = "✔ Đã chép!";
+                setTimeout(() => { hint.textContent = "(Sao chép)"; }, 2000);
+            }
+        });
+    };
+}
+
 window.addEventListener("DOMContentLoaded", checkSystemState);

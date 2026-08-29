@@ -48,6 +48,46 @@
             </div>
         </section>
 
+        <!-- Hướng dẫn cài đặt 3 bước trực quan cho người dùng mới -->
+        <section class="guide-steps-container" id="guide-box">
+            <div class="step-card">
+                <div class="step-badge">BƯỚC 1</div>
+                <div class="step-content">
+                    <div class="step-title">Tải 5 Part Dữ Liệu Game Gốc:</div>
+                    <div class="part-buttons-grid">
+                        <a href="https://github.com/shimakazevn/Home-project/releases/download/0.0.0/app.z01" target="_blank" class="btn-part">📥 Part 1 (1.9 GB)</a>
+                        <a href="https://github.com/shimakazevn/Home-project/releases/download/0.0.0/app.z02" target="_blank" class="btn-part">📥 Part 2 (1.9 GB)</a>
+                        <a href="https://github.com/shimakazevn/Home-project/releases/download/0.0.0/app.z03" target="_blank" class="btn-part">📥 Part 3 (1.9 GB)</a>
+                        <a href="https://github.com/shimakazevn/Home-project/releases/download/0.0.0/app.z04" target="_blank" class="btn-part">📥 Part 4 (1.9 GB)</a>
+                        <a href="https://github.com/shimakazevn/Home-project/releases/download/0.0.0/app.zip" target="_blank" class="btn-part">📥 Part 5 (560 MB)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-badge">BƯỚC 2</div>
+                <div class="step-content">
+                    <div class="step-title">Giải Nén Để Lấy File <code>app.asar</code>:</div>
+                    <div class="step-desc">
+                        Giải nén file <b>app.zip</b> vừa tải. Mật khẩu giải nén: 
+                        <span class="password-chip" id="btn-copy-pass" title="Nhấp để sao chép mật khẩu">
+                            🔑 <b id="pass-val">seikowo</b> <span class="copy-hint">(Sao chép)</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-badge">BƯỚC 3</div>
+                <div class="step-content">
+                    <div class="step-title">Nạp Vào Launcher & Tự Động Vá Tiếng Việt:</div>
+                    <div class="step-desc">
+                        Bấm nút màu xanh bên dưới $\rightarrow$ Chọn file <b>app.asar</b> vừa giải nén. Launcher sẽ tự động cài đặt và vá bản dịch mới nhất trong 2 giây!
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Thông tin hệ thống -->
         <section class="info-box">
             <div class="info-item">
@@ -55,51 +95,32 @@
                 <span class="info-value text-accent" id="game-status-label">Đang kiểm tra...</span>
             </div>
             <div class="info-item">
-                <span class="info-label">Phiên bản đã cài:</span>
+                <span class="info-label">Phiên bản:</span>
                 <span class="info-value" id="local-version">Chưa cài đặt</span>
             </div>
             <div class="info-item">
-                <span class="info-label">Bản vá mới nhất (GitHub):</span>
+                <span class="info-label">Bản vá mới nhất:</span>
                 <span class="info-value text-success" id="remote-version">v1.0.0 (Sẵn sàng)</span>
-            </div>
-            <div class="info-item">
-                <span class="info-label">Mật khẩu giải nén:</span>
-                <span class="info-value text-accent">seikowo</span>
-            </div>
-        </section>
-
-        <!-- Hướng dẫn & Link tải trực tiếp khi chưa cài game -->
-        <section class="download-guide-box" id="guide-box">
-            <div class="guide-title">📥 Link Tải Trực Tiếp Game Gốc (Không Bị Chặn CORS):</div>
-            <div class="part-buttons-grid">
-                <a href="https://github.com/shimakazevn/Home-project/releases/download/0.0.0/app.z01" target="_blank" class="btn-part">Tải Part 1 (1.9 GB)</a>
-                <a href="https://github.com/shimakazevn/Home-project/releases/download/0.0.0/app.z02" target="_blank" class="btn-part">Tải Part 2 (1.9 GB)</a>
-                <a href="https://github.com/shimakazevn/Home-project/releases/download/0.0.0/app.z03" target="_blank" class="btn-part">Tải Part 3 (1.9 GB)</a>
-                <a href="https://github.com/shimakazevn/Home-project/releases/download/0.0.0/app.z04" target="_blank" class="btn-part">Tải Part 4 (1.9 GB)</a>
-                <a href="https://github.com/shimakazevn/Home-project/releases/download/0.0.0/app.zip" target="_blank" class="btn-part">Tải Part 5 (560 MB)</a>
-            </div>
-            <div class="guide-desc">
-                💡 <i>Sau khi giải nén ra file <b>app.asar</b> (mật khẩu: <b>seikowo</b>), bấm nút dưới đây để nạp vào chơi ngay:</i>
             </div>
         </section>
 
         <!-- Nút tương tác chính -->
         <footer class="action-container">
-            <button class="btn btn-primary" id="btn-import-local">
+            <button class="btn btn-primary btn-large" id="btn-import-local">
                 <span class="btn-icon">📁</span>
-                <span class="btn-text">Nạp File app.asar & Tự Động Vá</span>
+                <span class="btn-text">CHỌN FILE app.asar & VÀO GAME NGAY</span>
             </button>
-            <button class="btn btn-secondary" id="btn-action" style="display:none;">
+            <button class="btn btn-secondary btn-large" id="btn-action" style="display:none;">
                 <span class="btn-icon">🎮</span>
-                <span class="btn-text">Vào Game Ngay</span>
+                <span class="btn-text">VÀO GAME NGAY</span>
             </button>
             <input type="file" id="input-local-file" accept=".asar,.zip" style="display:none;">
         </footer>
     </main>
 
     <!-- Thư viện giải nén Zip & ASAR -->
-    <script src="jszip.min.js?v=3.0"></script>
-    <script src="asar_extractor.js?v=3.0"></script>
-    <script src="launcher.js?v=3.0"></script>
+    <script src="jszip.min.js?v=4.0"></script>
+    <script src="asar_extractor.js?v=4.0"></script>
+    <script src="launcher.js?v=4.0"></script>
 </body>
 </html>
