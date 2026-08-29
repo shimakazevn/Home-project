@@ -21,8 +21,7 @@ html, body {
     padding-right: env(safe-area-inset-right);
 }
 
-#tyrano_base {
-    position: absolute !important;
+#tyrano_base, .tyrano_base {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
 }
 

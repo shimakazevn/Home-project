@@ -353,10 +353,10 @@
         setupMobileAutoFit();
     }
 
-    // Tự động căn chỉnh và kích hoạt Fullscreen trên Mobile / Safari iPhone
+    // Tự động căn giữa tuyệt đối và co giãn màn hình hoàn hảo trên mọi thiết bị
     function setupMobileAutoFit() {
         function autoFitScreen() {
-            const base = document.getElementById('tyrano_base');
+            const base = document.querySelector('.tyrano_base') || document.getElementById('tyrano_base');
             if (!base) return;
 
             const winW = window.innerWidth || document.documentElement.clientWidth;
@@ -365,13 +365,29 @@
             const gameH = 720;
 
             const scale = Math.min(winW / gameW, winH / gameH);
-            const offsetX = (winW - gameW * scale) / 2;
-            const offsetY = (winH - gameH * scale) / 2;
+            if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.tmp) {
+                window.TYRANO.kag.tmp.base_scale = scale;
+            }
 
+            const scaledW = gameW * scale;
+            const scaledH = gameH * scale;
+            const offsetX = Math.max(0, (winW - scaledW) / 2);
+            const offsetY = Math.max(0, (winH - scaledH) / 2);
+
+            base.style.position = 'absolute';
             base.style.transformOrigin = '0 0';
             base.style.transform = `scale(${scale})`;
-            base.style.left = `${Math.max(0, offsetX)}px`;
-            base.style.top = `${Math.max(0, offsetY)}px`;
+            base.style.left = `${offsetX}px`;
+            base.style.top = `${offsetY}px`;
+            base.style.marginLeft = '0px';
+            base.style.marginTop = '0px';
+            base.style.margin = '0px';
+        }
+
+        // Ghi đè bộ điều chỉnh kích thước mặc định của TyranoScript để không bị lệch mép
+        if (window.tyrano && window.tyrano.base) {
+            window.tyrano.base.fitBaseSize = function() { autoFitScreen(); };
+            window.tyrano.base._fitBaseSize = function() { autoFitScreen(); };
         }
 
         window.addEventListener('resize', autoFitScreen);
@@ -392,6 +408,7 @@
         autoFitScreen();
         setTimeout(autoFitScreen, 100);
         setTimeout(autoFitScreen, 500);
+        setTimeout(autoFitScreen, 1000);
     }
 
     // Khởi động
