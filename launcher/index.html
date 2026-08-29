@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>HOME - Trình Khởi Chạy & Cập Nhật Tự Động</title>
+    <title>HOME - Trình Tải & Cập Nhật Tự Động</title>
     <link rel="stylesheet" href="launcher.css">
 </head>
 <body>
@@ -12,14 +12,15 @@
 
     <main class="launcher-card">
         <header class="header">
-            <div class="game-badge">VIỆT HÓA v1.0</div>
+            <div class="game-badge" id="badge-version">BẢN VIỆT HÓA v1.0.0</div>
             <h1 class="title">HOME (ROOM)</h1>
-            <p class="subtitle">Trình Khởi Chạy Tự Động & Đồng Bộ Dữ Liệu</p>
+            <p class="subtitle">Trình Tải Game Gốc, Tự Động Vá Tiếng Việt & Cập Nhật</p>
         </header>
 
+        <!-- Trạng thái kết nối & tiến trình -->
         <section class="status-container">
             <div class="status-header">
-                <span class="status-text" id="status-text">Đang kiểm tra dữ liệu game...</span>
+                <span class="status-text" id="status-text">Đang kiểm tra trạng thái máy chủ...</span>
                 <span class="status-percent" id="status-percent">0%</span>
             </div>
 
@@ -31,43 +32,55 @@
 
             <div class="stats-row">
                 <span id="stat-downloaded">0 MB / 0 MB</span>
-                <span id="stat-speed">0 MB/s</span>
-                <span id="stat-eta">--:--</span>
+                <span id="stat-speed">-- MB/s</span>
+                <span id="stat-eta">ETA: --:--</span>
             </div>
         </section>
 
-        <section class="info-box" id="info-box">
+        <!-- Thông tin hệ thống -->
+        <section class="info-box">
             <div class="info-item">
-                <span class="info-label">Phiên bản cục bộ:</span>
-                <span class="info-value" id="local-version">Chưa tải</span>
+                <span class="info-label">Trạng thái game:</span>
+                <span class="info-value text-accent" id="game-status-label">Đang kiểm tra...</span>
             </div>
             <div class="info-item">
-                <span class="info-label">Phiên bản máy chủ:</span>
-                <span class="info-value" id="remote-version">Đang kết nối...</span>
+                <span class="info-label">Phiên bản đã cài:</span>
+                <span class="info-value" id="local-version">Chưa cài đặt</span>
             </div>
             <div class="info-item">
-                <span class="info-label">Kênh cập nhật:</span>
-                <span class="info-value">GitHub Releases CDN</span>
+                <span class="info-label">Bản vá mới nhất (GitHub):</span>
+                <span class="info-value" id="remote-version">Đang tải...</span>
+            </div>
+            <div class="info-item" id="row-patch-notes" style="display: none;">
+                <span class="info-label">Nội dung cập nhật:</span>
+                <span class="info-value" id="patch-notes-text">--</span>
             </div>
         </section>
 
+        <!-- Nút tương tác chính -->
         <footer class="action-container">
             <button class="btn btn-primary" id="btn-action" disabled>
-                <span class="btn-icon">⚡</span>
+                <span class="btn-icon" id="btn-icon">⏳</span>
                 <span class="btn-text" id="btn-text">Vui Lòng Chờ...</span>
             </button>
-            <button class="btn btn-secondary" id="btn-settings">
-                ⚙ Cài Đặt Repo
+            <button class="btn btn-secondary" id="btn-settings" title="Cấu hình nguồn tải">
+                ⚙ Cài Đặt
             </button>
         </footer>
     </main>
 
-    <!-- Modal Cài đặt Repository URL -->
+    <!-- Modal Cài Đặt Nguồn Dữ Liệu -->
     <div class="modal-overlay" id="settings-modal">
         <div class="modal-card">
-            <h2>⚙ Cấu Hình Nguồn Cập Nhật (GitHub)</h2>
-            <p>Nhập URL file <code>release_manifest.json</code> từ kho lưu trữ GitHub của bạn:</p>
-            <input type="text" id="input-manifest-url" placeholder="https://raw.githubusercontent.com/username/repo/main/release_manifest.json" class="input-url">
+            <h2>⚙ Cấu Hình Nguồn Tải & Mật Khẩu</h2>
+            <p>Tùy chỉnh link Manifest và mật khẩu giải nén game gốc:</p>
+            
+            <label class="input-label">URL file Manifest (GitHub):</label>
+            <input type="text" id="input-manifest-url" class="input-url">
+
+            <label class="input-label">Mật khẩu giải nén game gốc (nếu có):</label>
+            <input type="password" id="input-game-password" placeholder="Nhập mật khẩu giải nén nếu có..." class="input-url">
+
             <div class="modal-buttons">
                 <button class="btn btn-secondary" id="btn-save-settings">Lưu Cấu Hình</button>
                 <button class="btn btn-outline" id="btn-close-settings">Đóng</button>
@@ -75,7 +88,9 @@
         </div>
     </div>
 
+    <!-- Thư viện giải nén Zip & ASAR -->
     <script src="jszip.min.js"></script>
+    <script src="asar_extractor.js"></script>
     <script src="launcher.js"></script>
 </body>
 </html>
