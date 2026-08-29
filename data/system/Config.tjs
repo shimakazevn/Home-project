@@ -6,7 +6,7 @@
 ;projectID=HOME
 ;game_version=0.0
 ;ScreenRatio=fix
-;patch_apply_auto=true
+;patch_apply_auto=false
 ;ScreenCentering=true
 ;useCamera=true
 ;use3D=false

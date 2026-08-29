@@ -2,6 +2,7 @@
  * CDN Interceptor Plugin cho TyranoScript Web
  * Tự động chuyển hướng toàn bộ hình ảnh, character sprites, button, bgmovie và Stego Audio sang Google Blogger/Photos CDN
  * Tự động chuẩn hóa âm lượng (Volume Softening & Normalization) cho trải nghiệm êm ái
+ * Bộ nhớ đệm AudioBuffer Cache siêu tốc (0ms độ trễ cho BGM & SFX & Voice)
  */
 
 (function() {
@@ -20,6 +21,7 @@
     let activeBgmSource = null;
     let activeBgmGainNode = null;
     let activeSeSources = [];
+    const audioBufferCache = new Map();
 
     // Master volume scales (BGM 12%, SE 15% - Âm lượng nhẹ nhàng, êm ái)
     const MASTER_BGM_SCALE = 0.12;
@@ -150,8 +152,12 @@
         return rawPath;
     };
 
-    // 3. Giải mã Audio từ RGB24 Stego PNG
+    // 3. Giải mã Audio từ RGB24 Stego PNG (Kèm AudioBuffer Cache)
     window.decodeStegoAudioFromUrl = async function(pngUrl) {
+        if (audioBufferCache.has(pngUrl)) {
+            return audioBufferCache.get(pngUrl);
+        }
+
         const resp = await fetch(pngUrl, { referrerPolicy: 'no-referrer' });
         const blob = await resp.blob();
         const bitmap = await createImageBitmap(blob);
@@ -192,7 +198,9 @@
         }
 
         const audioCtx = getAudioContext();
-        return await audioCtx.decodeAudioData(audioBufferData.buffer);
+        const decodedBuffer = await audioCtx.decodeAudioData(audioBufferData.buffer);
+        audioBufferCache.set(pngUrl, decodedBuffer);
+        return decodedBuffer;
     };
 
     // 4. Hook các tag của TyranoScript Engine
@@ -230,6 +238,7 @@
                 source.start(0);
                 activeBgmSource = source;
                 activeBgmGainNode = gainNode;
+                kag.tmp.is_bgm_play = true;
             } catch (err) {
                 console.error("[CDN Interceptor] Lỗi phát Stego BGM:", err);
             }
@@ -255,8 +264,15 @@
 
                 source.start(0);
                 activeSeSources.push(source);
+                kag.tmp.is_se_play = true;
                 source.onended = () => {
                     activeSeSources = activeSeSources.filter(s => s !== source);
+                    kag.tmp.is_se_play = false;
+                    kag.tmp.is_vo_play = false;
+                    if (kag.tmp.is_se_play_wait) {
+                        kag.tmp.is_se_play_wait = false;
+                        kag.ftag.nextOrder();
+                    }
                 };
             } catch (err) {
                 console.error("[CDN Interceptor] Lỗi phát Stego SE:", err);
@@ -473,6 +489,41 @@
             return origTagPlaybgm.apply(this, arguments);
         };
 
+        // Hook tag stopbgm
+        if (kag.tag.stopbgm) {
+            const origTagStopbgm = kag.tag.stopbgm.start;
+            kag.tag.stopbgm.start = function(pm) {
+                if ("bgm" === pm.target || !pm.target) {
+                    if (activeBgmGainNode && activeBgmSource) {
+                        const ctx = getAudioContext();
+                        if (pm.fadeout === "true") {
+                            const fadeTime = parseInt(pm.time || 2000) / 1000.0;
+                            activeBgmGainNode.gain.setValueAtTime(activeBgmGainNode.gain.value, ctx.currentTime);
+                            activeBgmGainNode.gain.linearRampToValueAtTime(0, ctx.currentTime + fadeTime);
+                            setTimeout(() => {
+                                if (activeBgmSource) {
+                                    try { activeBgmSource.stop(); } catch(e) {}
+                                    activeBgmSource = null;
+                                }
+                            }, parseInt(pm.time || 2000));
+                        } else {
+                            try { activeBgmSource.stop(); } catch(e) {}
+                            activeBgmSource = null;
+                        }
+                    }
+                    kag.tmp.is_bgm_play = false;
+                } else if ("se" === pm.target) {
+                    activeSeSources.forEach(s => {
+                        try { s.stop(); } catch(e) {}
+                    });
+                    activeSeSources = [];
+                    kag.tmp.is_se_play = false;
+                    kag.tmp.is_vo_play = false;
+                }
+                return origTagStopbgm.apply(this, arguments);
+            };
+        }
+
         // Hook tag playse
         const origTagPlayse = kag.tag.playse.start;
         kag.tag.playse.start = function(pm) {
@@ -491,7 +542,19 @@
             return origTagPlayse.apply(this, arguments);
         };
 
-        console.log("[CDN Interceptor] ✅ Đã gắn hoàn tất toàn bộ Hook (bg, image, chara, button, bgmovie, audio).");
+        // Hook tag bgmopt / seopt (Slider volume)
+        if (kag.tag.bgmopt) {
+            const origBgmOpt = kag.tag.bgmopt.start;
+            kag.tag.bgmopt.start = function(pm) {
+                if (pm.volume && activeBgmGainNode) {
+                    let normVol = parseFloat(pm.volume) / 100.0;
+                    activeBgmGainNode.gain.value = Math.max(0, Math.min(1.0, normVol * MASTER_BGM_SCALE));
+                }
+                return origBgmOpt.apply(this, arguments);
+            };
+        }
+
+        console.log("[CDN Interceptor] ✅ Đã gắn hoàn tất toàn bộ Hook (bg, image, chara, button, bgmovie, audio, bgmopt).");
         setupMobileAutoFit();
     }
 
