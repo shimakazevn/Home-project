@@ -1,0 +1,16 @@
+{
+  "name": "HOME (ROOM) - Việt Hóa",
+  "short_name": "HOME VN",
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "../Game/resources/app/icon.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png"
+    }
+  ]
+}
