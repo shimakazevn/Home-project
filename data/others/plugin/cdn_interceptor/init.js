@@ -576,8 +576,17 @@
                 background: rgba(255, 69, 58, 0.15);
                 color: #FF453A;
             }
-            .hmc-pill-btn.pill-danger:hover {
-                background: rgba(255, 69, 58, 0.25);
+            .hmc-pill-btn.pill-disabled {
+                opacity: 0.35 !important;
+                cursor: not-allowed !important;
+                pointer-events: none !important;
+            }
+            .hmc-segmented.segmented-disabled {
+                opacity: 0.35 !important;
+                pointer-events: none !important;
+            }
+            .hmc-row-disabled {
+                opacity: 0.45;
             }
 
             /* Apple Text-Only Segmented Control */
@@ -758,7 +767,19 @@
         document.getElementById('hmc-close-btn').onclick = closeModal;
         overlay.onclick = (e) => { if (e.target === overlay) closeModal(); };
 
+        function isGameActive() {
+            if (!window.TYRANO || !window.TYRANO.kag || !window.TYRANO.kag.stat) return false;
+            const stat = window.TYRANO.kag.stat;
+            const scenario = (stat.current_scenario || '').toLowerCase();
+            if (!scenario) return false;
+            if (scenario === 'first.ks' || scenario.startsWith('title_') || scenario.startsWith('_title_')) {
+                return false;
+            }
+            return true;
+        }
+
         async function renderModal() {
+            const inGame = isGameActive();
             const status = await OfflineCacheManager.getStatus();
             const cached = status.imgCached + status.audioCached;
             const total = totalAssets;
@@ -775,8 +796,8 @@
             const body = document.getElementById('hmc-dynamic-body');
             if (!body) return;
 
-            const isSkip = !!(window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.stat && window.TYRANO.kag.stat.is_skip);
-            const isAuto = !!(window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.stat && window.TYRANO.kag.stat.is_auto);
+            const isSkip = inGame && !!(window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.stat && window.TYRANO.kag.stat.is_skip);
+            const isAuto = inGame && !!(window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.stat && window.TYRANO.kag.stat.is_auto);
 
             const offlineStatusText = isComplete
                 ? 'Đã lưu toàn bộ dữ liệu vào thiết bị (Chơi Offline).'
@@ -792,13 +813,13 @@
                     <div class="hmc-group-header">Dữ liệu Lưu trữ</div>
                     <div class="hmc-inset-group">
                         <!-- Row 1: Q.Save -->
-                        <div class="hmc-row">
+                        <div class="hmc-row ${inGame ? '' : 'hmc-row-disabled'}">
                             <div class="hmc-row-left">
                                 <div class="hmc-row-label">Lưu nhanh (Q.Save)</div>
-                                <div class="hmc-row-sublabel">Ghi đè ô lưu tạm</div>
+                                <div class="hmc-row-sublabel">${inGame ? 'Ghi đè ô lưu tạm' : 'Khả dụng khi đang chơi'}</div>
                             </div>
                             <div class="hmc-row-actions">
-                                <button class="hmc-pill-btn" id="btn_modal_qsave">Lưu</button>
+                                <button class="hmc-pill-btn ${inGame ? '' : 'pill-disabled'}" id="btn_modal_qsave">Lưu</button>
                             </div>
                         </div>
 
@@ -860,10 +881,10 @@
 
                 <!-- SECTION 3: ĐIỀU KHIỂN ĐỌC TRUYỆN -->
                 <div>
-                    <div class="hmc-group-header">Điều khiển Đọc truyện</div>
+                    <div class="hmc-group-header">Điều khiển Đọc truyện ${inGame ? '' : '• Khi chơi game'}</div>
                     <div class="hmc-inset-group">
                         <!-- Pure Text iOS Segmented Control -->
-                        <div class="hmc-segmented">
+                        <div class="hmc-segmented ${inGame ? '' : 'segmented-disabled'}">
                             <button class="hmc-segment-item ${isSkip ? 'active-warn' : ''}" id="btn_modal_skip">
                                 ${isSkip ? 'Dừng tua' : 'Tua nhanh'}
                             </button>
@@ -889,12 +910,13 @@
                         </div>
 
                         <!-- Row: Back to Title -->
-                        <div class="hmc-row">
+                        <div class="hmc-row ${inGame ? '' : 'hmc-row-disabled'}">
                             <div class="hmc-row-left">
                                 <div class="hmc-row-label">Màn hình chính (Title)</div>
+                                <div class="hmc-row-sublabel">${inGame ? 'Thoát về trang bắt đầu' : 'Đang ở màn hình chính'}</div>
                             </div>
                             <div class="hmc-row-actions">
-                                <button class="hmc-pill-btn" id="btn_modal_title">Về Title</button>
+                                <button class="hmc-pill-btn ${inGame ? '' : 'pill-disabled'}" id="btn_modal_title">Về Title</button>
                             </div>
                         </div>
                     </div>
