@@ -306,83 +306,78 @@
 
         const style = document.createElement('style');
         style.textContent = `
-            /* 1. NÚT BÁNH RĂNG CƯA DUY NHẤT (PC & MOBILE) */
+            /* 1. APPLE CONTROL CENTER FLOATING GEAR ORB */
             #home-gear-btn {
                 position: fixed;
-                bottom: 12px;
-                left: 12px;
+                bottom: 14px;
+                left: 14px;
                 z-index: 999999;
-                width: 42px;
-                height: 42px;
+                width: 44px;
+                height: 44px;
                 border-radius: 50%;
-                background: rgba(15, 23, 42, 0.75);
-                backdrop-filter: blur(16px);
-                -webkit-backdrop-filter: blur(16px);
-                border: 1px solid rgba(255, 255, 255, 0.18);
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+                background: rgba(30, 30, 32, 0.75);
+                backdrop-filter: blur(25px) saturate(180%);
+                -webkit-backdrop-filter: blur(25px) saturate(180%);
+                border: 0.5px solid rgba(255, 255, 255, 0.18);
+                box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
                 outline: none;
-                transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s, opacity 0.2s;
-                opacity: 0.65;
+                transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.2s, background 0.2s;
+                opacity: 0.75;
                 user-select: none;
                 -webkit-tap-highlight-color: transparent;
             }
             #home-gear-btn:hover {
                 opacity: 1;
-                transform: scale(1.1) rotate(30deg);
-                background: rgba(30, 41, 59, 0.92);
-                border-color: rgba(255, 255, 255, 0.35);
-                box-shadow: 0 6px 24px rgba(99, 102, 241, 0.4);
+                transform: scale(1.06);
+                background: rgba(45, 45, 48, 0.9);
+                border-color: rgba(255, 255, 255, 0.3);
             }
             #home-gear-btn:active {
-                transform: scale(0.95);
+                transform: scale(0.94);
+                opacity: 0.9;
             }
             #home-gear-btn svg {
-                width: 22px;
-                height: 22px;
+                width: 20px;
+                height: 20px;
                 fill: none;
-                stroke: #e2e8f0;
-                stroke-width: 2;
+                stroke: rgba(255, 255, 255, 0.9);
+                stroke-width: 1.8;
                 stroke-linecap: round;
                 stroke-linejoin: round;
-                transition: stroke 0.2s;
-            }
-            #home-gear-btn:hover svg {
-                stroke: #818cf8;
             }
             #home-gear-badge {
                 position: absolute;
-                top: 2px;
-                right: 2px;
+                top: 3px;
+                right: 3px;
                 width: 8px;
                 height: 8px;
                 border-radius: 50%;
-                background: #38bdf8;
-                border: 1.5px solid #0f172a;
-                box-shadow: 0 0 6px #38bdf8;
+                background: #0A84FF;
+                border: 1.5px solid #1C1C1E;
             }
-            #home-gear-badge.cached { background: #10b981; box-shadow: 0 0 6px #10b981; }
-            #home-gear-badge.downloading { background: #f59e0b; box-shadow: 0 0 6px #f59e0b; animation: hgb-pulse 1s infinite; }
-            @keyframes hgb-pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.4);opacity:0.5} }
+            #home-gear-badge.cached { background: #30D158; }
+            #home-gear-badge.downloading { background: #FF9F0A; animation: hgb-pulse 1s infinite; }
+            @keyframes hgb-pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.3);opacity:0.6} }
 
-            /* 2. MODAL OVERLAY & CARD */
+            /* 2. APPLE LIQUID MATERIAL MODAL */
             #home-modal-overlay {
                 position: fixed;
                 inset: 0;
                 z-index: 1000000;
-                background: rgba(0, 0, 0, 0.72);
-                backdrop-filter: blur(12px);
-                -webkit-backdrop-filter: blur(12px);
+                background: rgba(0, 0, 0, 0.48);
+                backdrop-filter: blur(24px);
+                -webkit-backdrop-filter: blur(24px);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 padding: 16px;
                 opacity: 0;
                 pointer-events: none;
-                transition: opacity 0.25s ease;
+                transition: opacity 0.22s cubic-bezier(0.25, 1, 0.5, 1);
                 box-sizing: border-box;
             }
             #home-modal-overlay.open {
@@ -391,87 +386,82 @@
             }
             #home-modal-card {
                 width: 100%;
-                max-width: 480px;
+                max-width: 440px;
                 max-height: 88vh;
-                background: rgba(14, 18, 32, 0.96);
-                backdrop-filter: blur(24px);
-                -webkit-backdrop-filter: blur(24px);
-                border: 1px solid rgba(255, 255, 255, 0.15);
-                border-radius: 22px;
-                box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85), 0 0 1px 1px rgba(255,255,255,0.08);
+                background: rgba(28, 28, 30, 0.88);
+                backdrop-filter: blur(40px) saturate(190%);
+                -webkit-backdrop-filter: blur(40px) saturate(190%);
+                border: 0.5px solid rgba(255, 255, 255, 0.14);
+                border-radius: 20px;
+                box-shadow: 0 24px 64px rgba(0, 0, 0, 0.56);
                 display: flex;
                 flex-direction: column;
                 overflow: hidden;
-                transform: scale(0.92) translateY(12px);
-                transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-                color: #e2e8f0;
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+                transform: scale(0.94);
+                transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+                color: #FFFFFF;
+                font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
                 user-select: none;
                 box-sizing: border-box;
             }
             #home-modal-overlay.open #home-modal-card {
-                transform: scale(1) translateY(0);
+                transform: scale(1);
             }
 
             .hmc-header {
-                padding: 16px 20px 12px;
+                padding: 16px 18px 12px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+                border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
                 flex-shrink: 0;
             }
             .hmc-title-group {
                 display: flex;
-                align-items: center;
-                gap: 10px;
-            }
-            .hmc-title-icon {
-                font-size: 20px;
-                width: 34px;
-                height: 34px;
-                border-radius: 10px;
-                background: rgba(99, 102, 241, 0.18);
-                border: 1px solid rgba(99, 102, 241, 0.3);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-shrink: 0;
+                flex-direction: column;
+                gap: 1px;
             }
             .hmc-title {
-                font-size: 15px;
-                font-weight: 700;
-                color: #f8fafc;
+                font-size: 16px;
+                font-weight: 600;
+                color: #FFFFFF;
+                letter-spacing: -0.02em;
                 margin: 0;
             }
             .hmc-subtitle {
                 font-size: 11px;
-                color: #94a3b8;
-                margin: 2px 0 0;
+                font-weight: 400;
+                color: rgba(235, 235, 245, 0.55);
+                letter-spacing: -0.01em;
+                margin: 0;
             }
             .hmc-close {
-                background: rgba(255, 255, 255, 0.07);
-                border: 1px solid rgba(255, 255, 255, 0.1);
+                background: rgba(120, 120, 128, 0.2);
+                border: none;
                 border-radius: 50%;
-                width: 32px;
-                height: 32px;
+                width: 28px;
+                height: 28px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                color: #94a3b8;
+                color: rgba(235, 235, 245, 0.6);
                 cursor: pointer;
-                font-size: 15px;
-                transition: all 0.15s;
+                font-size: 12px;
+                font-weight: 600;
+                transition: all 0.15s ease;
                 flex-shrink: 0;
+                outline: none;
             }
             .hmc-close:hover {
-                background: rgba(239, 68, 68, 0.2);
-                color: #f87171;
-                border-color: rgba(239, 68, 68, 0.3);
+                background: rgba(120, 120, 128, 0.35);
+                color: #FFFFFF;
+            }
+            .hmc-close:active {
+                transform: scale(0.92);
             }
 
             .hmc-body {
-                padding: 16px 20px 20px;
+                padding: 14px 16px 18px;
                 flex: 1 1 auto;
                 min-height: 0;
                 overflow-y: auto;
@@ -480,42 +470,40 @@
                 touch-action: pan-y;
                 display: flex;
                 flex-direction: column;
-                gap: 14px;
+                gap: 12px;
                 scrollbar-width: thin;
-                scrollbar-color: rgba(99, 102, 241, 0.5) rgba(255, 255, 255, 0.05);
+                scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
             }
             .hmc-body::-webkit-scrollbar {
-                width: 6px;
+                width: 4px;
             }
             .hmc-body::-webkit-scrollbar-track {
-                background: rgba(255, 255, 255, 0.04);
-                border-radius: 8px;
-                margin: 6px 0;
+                background: transparent;
             }
             .hmc-body::-webkit-scrollbar-thumb {
-                background: linear-gradient(180deg, rgba(99, 102, 241, 0.6), rgba(16, 185, 129, 0.6));
-                border-radius: 8px;
+                background: rgba(255, 255, 255, 0.22);
+                border-radius: 4px;
             }
             .hmc-body::-webkit-scrollbar-thumb:hover {
-                background: linear-gradient(180deg, rgba(99, 102, 241, 0.9), rgba(16, 185, 129, 0.9));
+                background: rgba(255, 255, 255, 0.4);
             }
 
+            /* iOS Inset Grouped Section */
             .hmc-section {
-                background: rgba(255, 255, 255, 0.03);
-                border: 1px solid rgba(255, 255, 255, 0.07);
+                background: rgba(120, 120, 128, 0.12);
+                border: 0.5px solid rgba(255, 255, 255, 0.06);
                 border-radius: 14px;
-                padding: 12px 14px;
+                padding: 12px;
                 flex-shrink: 0;
             }
             .hmc-section-title {
-                font-size: 12px;
+                font-size: 11px;
                 font-weight: 600;
-                color: #cbd5e1;
-                margin-bottom: 10px;
-                display: flex;
-                align-items: center;
-                gap: 6px;
-                letter-spacing: 0.2px;
+                text-transform: uppercase;
+                letter-spacing: 0.04em;
+                color: rgba(235, 235, 245, 0.5);
+                margin-bottom: 8px;
+                margin-left: 2px;
             }
 
             .hmc-grid-2 {
@@ -530,79 +518,83 @@
             }
 
             .hmc-btn {
-                background: rgba(255, 255, 255, 0.06);
-                border: 1px solid rgba(255, 255, 255, 0.1);
+                background: rgba(255, 255, 255, 0.08);
+                border: 0.5px solid rgba(255, 255, 255, 0.06);
                 border-radius: 10px;
-                color: #e2e8f0;
-                padding: 8px 10px;
-                font-size: 11.5px;
+                color: #FFFFFF;
+                padding: 9px 8px;
+                font-size: 12px;
                 font-weight: 500;
+                letter-spacing: -0.01em;
                 cursor: pointer;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 gap: 6px;
-                transition: all 0.15s ease;
+                transition: all 0.12s cubic-bezier(0.25, 1, 0.5, 1);
                 outline: none;
                 text-align: center;
                 -webkit-tap-highlight-color: transparent;
-                min-height: 36px;
+                min-height: 38px;
                 box-sizing: border-box;
             }
             .hmc-btn:hover {
                 background: rgba(255, 255, 255, 0.14);
-                color: #ffffff;
-                transform: translateY(-1px);
-                border-color: rgba(255, 255, 255, 0.25);
             }
             .hmc-btn:active {
-                transform: translateY(0);
+                transform: scale(0.97);
+                opacity: 0.85;
+            }
+            .hmc-btn svg {
+                flex-shrink: 0;
+                stroke: currentColor;
+                opacity: 0.85;
             }
             .hmc-btn-primary {
-                background: linear-gradient(135deg, #6366f1, #4f46e5);
-                border-color: rgba(255, 255, 255, 0.2);
-                color: #ffffff;
+                background: #0A84FF;
+                border: none;
+                color: #FFFFFF;
                 font-weight: 600;
             }
             .hmc-btn-primary:hover {
-                background: linear-gradient(135deg, #4f46e5, #4338ca);
-                box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+                background: #0071E3;
             }
             .hmc-btn-danger {
-                background: rgba(239, 68, 68, 0.15);
-                color: #fca5a5;
-                border-color: rgba(239, 68, 68, 0.3);
+                background: rgba(255, 69, 58, 0.14);
+                border: 0.5px solid rgba(255, 69, 58, 0.2);
+                color: #FF453A;
             }
             .hmc-btn-danger:hover {
-                background: rgba(239, 68, 68, 0.25);
-                color: #fee2e2;
-                border-color: rgba(239, 68, 68, 0.5);
+                background: rgba(255, 69, 58, 0.22);
+            }
+            .hmc-btn.active-state {
+                background: rgba(10, 132, 255, 0.2);
+                border: 0.5px solid rgba(10, 132, 255, 0.4);
+                color: #0A84FF;
             }
 
             .hmc-bar-bg {
-                background: rgba(255, 255, 255, 0.08);
-                border-radius: 8px;
-                height: 7px;
+                background: rgba(120, 120, 128, 0.24);
+                border-radius: 999px;
+                height: 5px;
                 margin: 8px 0;
                 overflow: hidden;
             }
             .hmc-bar-fill {
                 height: 100%;
-                border-radius: 8px;
-                background: linear-gradient(90deg, #6366f1, #10b981);
+                border-radius: 999px;
+                background: #0A84FF;
                 transition: width 0.3s ease;
             }
-            .hmc-info-text {
-                font-size: 11px;
-                color: #94a3b8;
-                margin-bottom: 10px;
-                line-height: 1.45;
+            .hmc-bar-fill.complete {
+                background: #30D158;
             }
-
-            .hmc-btn.active-state {
-                background: rgba(245, 158, 11, 0.25);
-                border-color: #f59e0b;
-                color: #fde68a;
+            .hmc-info-text {
+                font-size: 11.5px;
+                color: rgba(235, 235, 245, 0.65);
+                margin-bottom: 10px;
+                line-height: 1.4;
+                font-weight: 400;
             }
 
             /* Responsive: Mobile Portrait (< 480px width) */
@@ -625,16 +617,16 @@
                     font-size: 10px;
                 }
                 .hmc-body {
-                    padding: 12px 14px 16px;
+                    padding: 10px 12px 14px;
                     gap: 10px;
                 }
                 .hmc-section {
-                    padding: 10px 12px;
+                    padding: 10px;
                     border-radius: 12px;
                 }
                 .hmc-section-title {
-                    font-size: 11.5px;
-                    margin-bottom: 8px;
+                    font-size: 10.5px;
+                    margin-bottom: 6px;
                 }
                 .hmc-grid-2 {
                     gap: 6px;
@@ -643,11 +635,11 @@
                     gap: 5px;
                 }
                 .hmc-btn {
-                    padding: 8px 6px;
-                    font-size: 10.5px;
+                    padding: 7px 6px;
+                    font-size: 11px;
                     gap: 4px;
                     border-radius: 8px;
-                    min-height: 38px;
+                    min-height: 36px;
                 }
             }
 
@@ -659,15 +651,10 @@
                 #home-modal-card {
                     max-height: 96vh;
                     border-radius: 14px;
-                    max-width: 520px;
+                    max-width: 500px;
                 }
                 .hmc-header {
                     padding: 6px 14px 6px;
-                }
-                .hmc-title-icon {
-                    width: 26px;
-                    height: 26px;
-                    font-size: 15px;
                 }
                 .hmc-title {
                     font-size: 13px;
@@ -676,21 +663,21 @@
                     display: none;
                 }
                 .hmc-close {
-                    width: 26px;
-                    height: 26px;
-                    font-size: 13px;
+                    width: 24px;
+                    height: 24px;
+                    font-size: 11px;
                 }
                 .hmc-body {
-                    padding: 8px 12px 12px;
-                    gap: 8px;
+                    padding: 6px 10px 10px;
+                    gap: 6px;
                 }
                 .hmc-section {
-                    padding: 8px 10px;
+                    padding: 6px 8px;
                     border-radius: 10px;
                 }
                 .hmc-section-title {
-                    font-size: 11px;
-                    margin-bottom: 6px;
+                    font-size: 10px;
+                    margin-bottom: 4px;
                 }
                 .hmc-btn {
                     padding: 4px 6px;
@@ -721,11 +708,8 @@
             <div id="home-modal-card">
                 <div class="hmc-header">
                     <div class="hmc-title-group">
-                        <div class="hmc-title-icon">⚙️</div>
-                        <div>
-                            <div class="hmc-title">Trung tâm Tiện ích & Cài đặt</div>
-                            <div class="hmc-subtitle">HOME Visual Novel • Web Controller</div>
-                        </div>
+                        <div class="hmc-title">Cài đặt & Tiện ích</div>
+                        <div class="hmc-subtitle">HOME Visual Novel • Web Edition</div>
                     </div>
                     <button class="hmc-close" id="hmc-close-btn" title="Đóng">✕</button>
                 </div>
@@ -763,49 +747,53 @@
             const isAuto = !!(window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.stat && window.TYRANO.kag.stat.is_auto);
 
             const offlineStatusText = isComplete
-                ? '✅ Đã lưu toàn bộ asset vào máy. Bạn có thể chơi hoàn toàn offline không cần mạng.'
+                ? 'Đã tải toàn bộ dữ liệu vào thiết bị (Sẵn sàng chơi Offline).'
                 : isDownloading
-                    ? `⏳ Đang tải asset về máy... (${cached.toLocaleString()} / ${total.toLocaleString()})`
+                    ? `Đang tải tài nguyên về máy... (${cached.toLocaleString()} / ${total.toLocaleString()})`
                     : cached > 0
-                        ? `💾 Đã nạp ${pct}% tài nguyên (${cached.toLocaleString()} / ${total.toLocaleString()}).`
-                        : '🌐 Đang chơi trực tuyến từ CDN. Bạn có thể tải toàn bộ về máy để đạt độ trễ 0ms.';
+                        ? `Đã lưu ${pct}% tài nguyên (${cached.toLocaleString()} / ${total.toLocaleString()}).`
+                        : 'Đang chơi trực tuyến qua CDN (Tải tài nguyên khi cần).';
 
             body.innerHTML = `
                 <!-- 1. QUẢN LÝ LƯU TRỮ (SAVE / LOAD) -->
                 <div class="hmc-section">
-                    <div class="hmc-section-title">💾 Quản lý Dữ liệu Save</div>
+                    <div class="hmc-section-title">Dữ liệu Lưu trữ</div>
                     <div class="hmc-grid-2">
                         <button class="hmc-btn" id="btn_modal_export">
-                            <span>📥</span> <span>Tải Save về máy (.sav)</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            <span>Tải Save (.sav)</span>
                         </button>
                         <button class="hmc-btn" id="btn_modal_import">
-                            <span>📤</span> <span>Nạp Save từ máy (.sav)</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                            <span>Nạp Save (.sav)</span>
                         </button>
                         <button class="hmc-btn" id="btn_modal_qsave">
-                            <span>💾</span> <span>Lưu nhanh (Q.Save)</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                            <span>Lưu nhanh</span>
                         </button>
                         <button class="hmc-btn" id="btn_modal_qload">
-                            <span>📂</span> <span>Nạp nhanh (Q.Load)</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                            <span>Nạp nhanh</span>
                         </button>
                     </div>
                 </div>
 
                 <!-- 2. OFFLINE CACHE & TẢI ASSET -->
                 <div class="hmc-section">
-                    <div class="hmc-section-title">🚀 Bộ nhớ Đệm & Chơi Offline (0ms)</div>
+                    <div class="hmc-section-title">Bộ nhớ Đệm & Offline</div>
                     <div class="hmc-bar-bg">
-                        <div class="hmc-bar-fill" style="width: ${pct}%"></div>
+                        <div class="hmc-bar-fill ${isComplete ? 'complete' : ''}" style="width: ${pct}%"></div>
                     </div>
                     <div class="hmc-info-text">${offlineStatusText}</div>
                     <div class="hmc-grid-2">
                         ${isDownloading
-                            ? `<button class="hmc-btn hmc-btn-danger" id="btn_modal_stop_dl">⏹ Dừng tải</button>`
+                            ? `<button class="hmc-btn hmc-btn-danger" id="btn_modal_stop_dl"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="6" width="12" height="12" rx="2"/></svg> <span>Dừng tải</span></button>`
                             : isComplete
-                                ? `<button class="hmc-btn hmc-btn-danger" id="btn_modal_del_cache">🗑 Xóa dữ liệu Cache</button>`
-                                : `<button class="hmc-btn hmc-btn-primary" id="btn_modal_start_dl">📥 Tải về máy để chơi Offline</button>`
+                                ? `<button class="hmc-btn hmc-btn-danger" id="btn_modal_del_cache"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> <span>Xóa Cache</span></button>`
+                                : `<button class="hmc-btn hmc-btn-primary" id="btn_modal_start_dl"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> <span>Tải chơi Offline</span></button>`
                         }
                         ${cached > 0 && !isComplete && !isDownloading
-                            ? `<button class="hmc-btn hmc-btn-danger" id="btn_modal_del_cache">🗑 Xóa bộ nhớ đệm</button>`
+                            ? `<button class="hmc-btn hmc-btn-danger" id="btn_modal_del_cache"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> <span>Xóa Cache</span></button>`
                             : ''
                         }
                     </div>
@@ -813,25 +801,31 @@
 
                 <!-- 3. ĐIỀU KHIỂN ĐỌC TRUYỆN (GAMEPLAY) -->
                 <div class="hmc-section">
-                    <div class="hmc-section-title">🎮 Điều khiển Đọc truyện</div>
+                    <div class="hmc-section-title">Điều khiển Đọc truyện</div>
                     <div class="hmc-grid-3">
                         <button class="hmc-btn ${isSkip ? 'active-state' : ''}" id="btn_modal_skip">
-                            <span>⏩</span> <span>${isSkip ? 'Dừng tua' : 'Tua nhanh'}</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 19 22 12 13 5 13 19"/><polygon points="2 19 11 12 2 5 2 19"/></svg>
+                            <span>${isSkip ? 'Dừng tua' : 'Tua nhanh'}</span>
                         </button>
                         <button class="hmc-btn ${isAuto ? 'active-state' : ''}" id="btn_modal_auto">
-                            <span>▶️</span> <span>${isAuto ? 'Dừng đọc' : 'Tự đọc'}</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            <span>${isAuto ? 'Dừng đọc' : 'Tự đọc'}</span>
                         </button>
                         <button class="hmc-btn" id="btn_modal_log">
-                            <span>📜</span> <span>Nhật ký</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                            <span>Nhật ký</span>
                         </button>
                         <button class="hmc-btn" id="btn_modal_hide">
-                            <span>👁️</span> <span>Ẩn chữ</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            <span>Ẩn chữ</span>
                         </button>
                         <button class="hmc-btn" id="btn_modal_fullscreen">
-                            <span>⛶</span> <span>Toàn màn hình</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+                            <span>Toàn màn</span>
                         </button>
                         <button class="hmc-btn" id="btn_modal_title">
-                            <span>🏠</span> <span>Về Title</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                            <span>Về Title</span>
                         </button>
                     </div>
                 </div>
