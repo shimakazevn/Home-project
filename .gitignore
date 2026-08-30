@@ -29,4 +29,6 @@ upload_cache.db
 __pycache__/
 *.pyc
 *.sav
+.env
+tools/debug_img/
 

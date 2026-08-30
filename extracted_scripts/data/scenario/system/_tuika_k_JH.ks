@@ -1,9 +1,0 @@
-n][preload  storage="./data/bgimage/K20_00_01_00.gif"  ]
-[preload  storage="./data/bgimage/black.jpg"  ]
-[preload  storage="./data/bgimage/K20_01_01_00.gif"  ]
-[preload  storage="./data/fgimage/default/HUI_pistopad_.png"  ]
-[preload  storage="./data/fgimage/default/HUI_pistonhagesiku_off.png"  ]
-[preload  storage="./data/fgimage/default/HUI_pistonyukkuri_off.png"  ]
-[preload  storage="./data/fgimage/default/HUI_otokzetcho2_off.png"  ]
-[preload  storage="./data/bgimage/K20_01_02_00.gif"  ]
-[retur

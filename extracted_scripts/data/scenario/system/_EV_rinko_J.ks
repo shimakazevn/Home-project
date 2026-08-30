@@ -1,5 +1,0 @@
-n][preload  storage="./data/bgimage/back_massajiten_yoru.png"  ]
-[preload  storage="./data/bgimage/back_massajiten3.png"  ]
-[preload  storage="./data/bgimage/black.jpg"  ]
-[preload  storage="./data/bgimage/back_massajiten2.png"  ]
-[retur

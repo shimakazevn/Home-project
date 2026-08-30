@@ -1,5 +1,0 @@
-n][preload  storage="./data/fgimage/default/HUI_yes.png"  ]
-[preload  storage="./data/fgimage/default/HUI_no.png"  ]
-[preload  storage="./data/fgimage/default/HUI_pisto_R_yes.png"  ]
-[preload  storage="./data/fgimage/default/HUI_pisto_L_yes.png"  ]
-[retur
