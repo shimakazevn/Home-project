@@ -104,48 +104,69 @@
         return assetManifest || {};
     }
 
-    // Tải trước tài nguyên UI và âm thanh cốt lõi vào bộ nhớ đệm (Browser Cache)
+    // Tải trước toàn bộ tài nguyên Vòng tròn Action và Lịch trình hàng ngày (Daily Action Wheel)
     function preloadCoreAssets() {
         if (!assetManifest) return;
-        const priorityPatterns = [
-            'workring_', 'frame_', 'label_', 'button_', 'icon_',
-            'back_room1', 'back_byouin', 'back_massajiten', 'back_rihure', 'manual',
-            'job_daiseikou', 'job_seikou', 'job_sippai', 'money.mp3', 'click'
+
+        // Tier 1: Toàn bộ Scene Vòng tròn Action và Công việc hàng ngày (Nạp tức thì)
+        const tier1Patterns = [
+            'workring_', 'frame_', 'icon_up', 'd_ev', 'r_up', 'r_down', 'shinnyu_',
+            'job_kintore', 'job_massage', 'job_seisou', 'job_jim', 'job_neru', 'job_fx',
+            'back_room', 'back_byouin', 'back_massajiten', 'back_rihure', 'manual',
+            'jisitu.mp3', 'job_daiseikou', 'job_seikou', 'job_sippai', 'money.mp3',
+            'btn_', 'button_', 'base.png', 'gauge_', 'month_', 'week_', 'tension_'
         ];
 
-        const toPreload = [];
+        const tier1List = [];
+        const tier2List = [];
+
         for (const [key, url] of Object.entries(assetManifest)) {
-            for (const pat of priorityPatterns) {
+            let isTier1 = false;
+            for (const pat of tier1Patterns) {
                 if (key.includes(pat)) {
-                    toPreload.push({ key, url });
+                    tier1List.push({ key, url });
+                    isTier1 = true;
                     break;
                 }
             }
+            if (!isTier1 && (key.includes('/fgimage/') || key.includes('/bgimage/'))) {
+                tier2List.push({ key, url });
+            }
         }
 
+        console.log(`[CDN Preloader] Bắt đầu nạp trước ${tier1List.length} tài nguyên Action Wheel & Daily Scenes...`);
+
+        // Nạp song song Tier 1 (Action Wheel UI & Audio)
+        tier1List.forEach(item => {
+            if (item.url.includes('.png') || item.url.includes('.jpg') || item.url.includes('.gif') || item.url.includes('.webp') || item.key.includes('/fgimage/') || item.key.includes('/bgimage/')) {
+                const img = new Image();
+                img.crossOrigin = 'anonymous';
+                img.src = item.url;
+            } else if (item.url.endsWith('.mp3') || item.key.includes('/sound/') || item.key.includes('/bgm/')) {
+                fetchAudioBuffer(item.key).catch(() => {});
+            }
+        });
+
+        // Nạp nền Tier 2 trong thời gian rảnh rỗi (Idle Callback)
         let idx = 0;
-        const loadNextBatch = () => {
-            const batch = toPreload.slice(idx, idx + 8);
-            idx += 8;
+        const loadTier2Batch = () => {
+            const batch = tier2List.slice(idx, idx + 10);
+            idx += 10;
             batch.forEach(item => {
-                if (item.url.includes('.png') || item.url.includes('.jpg') || item.url.includes('.gif') || item.url.includes('.webp') || item.key.includes('/fgimage/') || item.key.includes('/bgimage/')) {
-                    const img = new Image();
-                    img.crossOrigin = 'anonymous';
-                    img.src = item.url;
-                } else if (item.url.endsWith('.mp3') || item.key.includes('/sound/') || item.key.includes('/bgm/')) {
-                    fetchAudioBuffer(item.key).catch(() => {});
-                }
+                const img = new Image();
+                img.crossOrigin = 'anonymous';
+                img.src = item.url;
             });
-            if (idx < toPreload.length) {
+            if (idx < tier2List.length) {
                 if ('requestIdleCallback' in window) {
-                    window.requestIdleCallback(loadNextBatch, { timeout: 1000 });
+                    window.requestIdleCallback(loadTier2Batch, { timeout: 1000 });
                 } else {
-                    setTimeout(loadNextBatch, 150);
+                    setTimeout(loadTier2Batch, 150);
                 }
             }
         };
 
-        setTimeout(loadNextBatch, 600);
+        setTimeout(loadTier2Batch, 1200);
     }
 
     // 2. Chuyển đổi đường dẫn cục bộ -> URL Blogger CDN (Hỗ trợ query strings / timestamps)
