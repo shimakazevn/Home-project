@@ -1,7 +1,0 @@
-[preload  storage="./data/bgimage/sora.jpg"  ]
-[preload  storage="./data/bgimage/back_massajiten3.png"  ]
-[preload  storage="./data/bgimage/black.jpg"  ]
-[preload  storage="./data/bgimage/back_massajiten2.png"  ]
-[preload  storage="./data/bgimage/sin_rin_pauda.png"  ]
-[preload  storage="./data/fgimage/chara/180/ADV_rinko_00_00c.gif"  ]
-[return]

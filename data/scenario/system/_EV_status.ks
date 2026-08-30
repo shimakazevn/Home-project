@@ -1,8 +1,0 @@
-[preload  storage="./data/bgimage/back_rihure_hikaesitu.png"  ]
-[preload  storage="./data/bgimage/back_rihure_sekkyaku.png"  ]
-[preload  storage="./data/bgimage/back_massajiten.png"  ]
-[preload  storage="./data/bgimage/back_massajiten2.png"  ]
-[preload  storage="./data/bgimage/back_byouin2.png"  ]
-[preload  storage="./data/bgimage/black.jpg"  ]
-[preload  storage="./data/bgimage/back_hankagai_yoru.png"  ]
-[return]

@@ -1,36 +1,23 @@
 @echo off
 chcp 65001 >nul
-title CÀI ĐẶT PATCH VIỆT HÓA - HOME (ROOM)
-cls
-echo ============================================================
-echo   CÀI ĐẶT PATCH VIỆT HÓA - TỰA GAME: HOME (ROOM) [RJ01556529]
-echo ============================================================
-echo.
+title CÀI ĐẶT PATCH VIỆT HÓA - HOME (ROOM) [PC]
+cd /d "%~dp0"
 
-if not exist "Game\Game.exe" (
-    echo [LỖI] Không tìm thấy file Game\Game.exe!
-    echo Vui lòng đặt thư mục patch này cùng vị trí với thư mục Game.
-    echo.
-    pause
-    exit /b 1
+if exist "dist_pc\CAI_DAT_PATCH_VIET_HOA.exe" (
+    start "" "dist_pc\CAI_DAT_PATCH_VIET_HOA.exe"
+    exit /b 0
 )
 
-echo [1/3] Đang kiểm tra thư mục tài nguyên...
-if not exist "Game\resources\app" mkdir "Game\resources\app"
+if exist "dist\CAI_DAT_PATCH_VIET_HOA.exe" (
+    start "" "dist\CAI_DAT_PATCH_VIET_HOA.exe"
+    exit /b 0
+)
 
-echo [2/3] Đang cập nhật dữ liệu Việt Hóa & Font Noto Sans...
 where python >nul 2>nul
 if %ERRORLEVEL% equ 0 (
-    python tools\build_vietnamese_game.py
-) else (
-    echo Đang sao chép các tệp Việt hóa từ patch/ vào Game/resources/app/...
-    xcopy /E /Y /I "patch\*" "Game\resources\app\"
+    python tools\unified_patch_installer.py
+    exit /b 0
 )
 
-echo.
-echo ============================================================
-echo [3/3] CÀI ĐẶT HOÀN TẤT 100%!
-echo Bạn có thể khởi động Game\Game.exe để thưởng thức game tiếng Việt.
-echo ============================================================
-echo.
+echo [LỖI] Không tìm thấy file CAI_DAT_PATCH_VIET_HOA.exe!
 pause

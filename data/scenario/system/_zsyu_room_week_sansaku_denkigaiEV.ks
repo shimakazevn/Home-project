@@ -1,7 +1,0 @@
-[preload  storage="./data/fgimage/chara/121/adv_yume_kanasii.gif"  ]
-[preload  storage="./data/fgimage/chara/121/adv_yume_egao.gif"  ]
-[preload  storage="./data/fgimage/chara/122/adv_konno_kanasii.gif"  ]
-[preload  storage="./data/bgimage/event_R_1.jpg"  ]
-[preload  storage="./data/bgimage/back_denkigai.jpg"  ]
-[preload  storage="./data/bgimage/event_J_3.jpg"  ]
-[return]

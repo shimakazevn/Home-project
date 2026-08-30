@@ -1,6 +1,0 @@
-[preload  storage="./data/bgimage/room_Bathroom.png"  ]
-[preload  storage="./data/fgimage/default/setti_raito.png"  ]
-[preload  storage="./data/fgimage/default/kakunin_f_raito.png"  ]
-[preload  storage="./data/fgimage/default/kakunin_f_ryuwakasi.png"  ]
-[preload  storage="./data/bgimage/room_Living.png"  ]
-[return]

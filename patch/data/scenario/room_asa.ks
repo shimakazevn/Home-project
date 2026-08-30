@@ -21,31 +21,31 @@
 [_tb_end_tyrano_code]
 
 [tb_start_tyrano_code]
-[ptext current layer=message0 name="fx_select,select_text" text="【自宅で働く】<br>自室でチャートとにらめっこ。<br>テンションの影響は受けないけど、収益は不安定。勇気が上がる。" x=140 y=580 size=19 time=0]
+[ptext current layer=message0 name="fx_select,select_text" text="【Làm việc tại nhà】<br>Ở trong phòng dán mắt vào biểu đồ giao dịch.<br>Không bị ảnh hưởng bởi Hưng phấn nhưng thu nhập bấp bênh. Tăng Dũng khí." x=140 y=580 size=19 time=0]
 [anim name="fx_select" opacity=0 time=0]
 
-[ptext current layer=message0 name="hospital_select,select_text" text="【病院清掃】<br>病院で清掃のバイトができる。<br>報酬がもらえて、気配りが上がる。凪とも少し仲良くなれる。" x=140 y=580 size=19 time=0]
+[ptext current layer=message0 name="hospital_select,select_text" text="【Dọn dẹp bệnh viện】<br>Làm thêm công việc dọn dẹp tại bệnh viện.<br>Nhận thù lao và tăng Chu đáo. Thân thiết hơn một chút với Nagi." x=140 y=580 size=19 time=0]
 [anim name="hospital_select" opacity=0 time=0]
 
-[ptext current layer=message0 name="kintore_select,select_text" text="【筋トレ】<br>トレーニングで心身を鍛える。<br>筋力が上がる。" x=140 y=580 size=19 time=0]
+[ptext current layer=message0 name="kintore_select,select_text" text="【Tập thể hình】<br>Rèn luyện thể chất và tinh thần.<br>Tăng Thể lực/Sức mạnh." x=140 y=580 size=19 time=0]
 [anim name="kintore_select" opacity=0 time=0]
 
-[ptext current layer=message0 name="soto_select,select_text" text="【外出】<br>街を散策する。" x=140 y=580 size=19 time=0]
+[ptext current layer=message0 name="soto_select,select_text" text="【Ra ngoài】<br>Đi dạo quanh thị trấn." x=140 y=580 size=19 time=0]
 [anim name="soto_select" opacity=0 time=0]
 
-[ptext current layer=message0 name="massa_select,select_text" text="【マッサージ店】<br>凛子のマッサージ店でバイトができる。<br>報酬がもらえて、コミュ力が上がる。凛子とも少し仲良くなれる。" x=140 y=580 size=19 time=0]
+[ptext current layer=message0 name="massa_select,select_text" text="【Tiệm massage】<br>Làm thêm tại tiệm massage của Rinko.<br>Nhận thù lao và tăng Giao tiếp. Thân thiết hơn một chút với Rinko." x=140 y=580 size=19 time=0]
 [anim name="massa_select" opacity=0 time=0]
 
-[ptext current layer=message0 name="drug_select,select_text" text="【事務作業】<br>メイドリフレで事務作業のバイトができる。<br>報酬がもらえて、賢さが上がる。蕾とも少し仲良くなれる。" x=140 y=580 size=19 time=0]
+[ptext current layer=message0 name="drug_select,select_text" text="【Công việc văn phòng】<br>Làm thêm công việc bàn giấy tại tiệm Maid Refle.<br>Nhận thù lao và tăng Thông thái. Thân thiết hơn một chút với Tsubomi." x=140 y=580 size=19 time=0]
 [anim name="drug_select" opacity=0 time=0]
 
-[ptext current layer=message0 name="neru_select,select_text" text="【寝る】<br>しっかり休んで体力とストレスを大きく回復させる。<br>" x=140 y=580 size=19 time=0]
+[ptext current layer=message0 name="neru_select,select_text" text="【Đi ngủ】<br>Nghỉ ngơi thật tốt để hồi phục Thể lực và giảm mạnh Căng thẳng.<br>" x=140 y=580 size=19 time=0]
 [anim name="neru_select" opacity=0 time=0]
 
-[ptext current layer=message0 name="sinnyu_select,select_text" text="【侵入】<br>凪の部屋やバイト先のバックヤードへ侵入する。<br>盗撮をしたり、物色で凪と隼人の関係を壊す工作活動が出来る。勇気が上がる。<br>" x=140 y=580 size=19 time=0]
+[ptext current layer=message0 name="sinnyu_select,select_text" text="【Đột nhập】<br>Đột nhập vào phòng của Nagi hoặc hậu trường nơi làm thêm.<br>Có thể quay lén hoặc lục lọi phá hoại quan hệ của Nagi và Hayato. Tăng Dũng khí.<br>" x=140 y=580 size=19 time=0]
 [anim name="sinnyu_select" opacity=0 time=0]
 
-[ptext current layer=message0 name="syusyu_select,select_text" text="【情報収集】<br>外出して情報を集める。<br>" x=140 y=580 size=19 time=0]
+[ptext current layer=message0 name="syusyu_select,select_text" text="【Thu thập thông tin】<br>Ra ngoài nắm bắt tình hình và nghe ngóng thông tin.<br>" x=140 y=580 size=19 time=0]
 [anim name="syusyu_select" opacity=0 time=0]
 
 

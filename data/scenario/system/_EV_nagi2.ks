@@ -1,5 +1,0 @@
-[preload  storage="./data/bgimage/sin_nagi_nagiroom.png"  ]
-[preload  storage="./data/bgimage/sora.jpg"  ]
-[preload  storage="./data/bgimage/event/nagi2.png"  ]
-[preload  storage="./data/bgimage/black.jpg"  ]
-[return]

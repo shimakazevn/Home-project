@@ -1,5 +1,0 @@
-[preload  storage="./data/bgimage/back_rihure_sekkyaku.png"  ]
-[preload  storage="./data/bgimage/back_famiresu2.png"  ]
-[preload  storage="./data/bgimage/black.jpg"  ]
-[preload  storage="./data/bgimage/event/tubomi3.png"  ]
-[return]

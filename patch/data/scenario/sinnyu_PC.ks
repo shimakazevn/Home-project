@@ -25,11 +25,11 @@
 
 [tb_hide_message_window  ]
 [mask_off  time="1500"  effect="fadeOut"  ]
-[tb_ptext_show  x="1008"  y="6"  size="20"  color="0xffffff"  time="1000"  text="Cuộn con lăn chuột"  anim="false"  face="sans-serif,'メイリオ'"  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="1008"  y="6"  size="20"  color="0xffffff"  time="1000"  text="Cuộn con lăn chuột"  anim="false"  face="NotoSansVN, sans-serif"  edge="undefined"  shadow="undefined"  ]
 [iscript]
 // ====== 救済用「終了」ボタン ======
 $("#slide_exit_btn").remove();
-var exitBtn = $('<div id="slide_exit_btn">終了</div>');
+var exitBtn = $('<div id="slide_exit_btn">Thoát</div>');
 exitBtn.css({
 position: "absolute",
 right: "30px",
@@ -171,11 +171,11 @@ window._tySlideWheelHandler = null;
 
 [tb_hide_message_window  ]
 [mask_off  time="1500"  effect="fadeOut"  ]
-[tb_ptext_show  x="1008"  y="6"  size="20"  color="0xffffff"  time="1000"  text="Cuộn con lăn chuột"  anim="false"  face="sans-serif,'メイリオ'"  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="1008"  y="6"  size="20"  color="0xffffff"  time="1000"  text="Cuộn con lăn chuột"  anim="false"  face="NotoSansVN, sans-serif"  edge="undefined"  shadow="undefined"  ]
 [iscript]
 // ====== 救済用「終了」ボタン ======
 $("#slide_exit_btn").remove();
-var exitBtn = $('<div id="slide_exit_btn">終了</div>');
+var exitBtn = $('<div id="slide_exit_btn">Thoát</div>');
 exitBtn.css({
 position: "absolute",
 right: "30px",
@@ -297,11 +297,11 @@ base.addEventListener('DOMMouseScroll', window._tySlideWheelHandler, {passive:fa
 
 [tb_hide_message_window  ]
 [mask_off  time="1500"  effect="fadeOut"  ]
-[tb_ptext_show  x="1008"  y="6"  size="20"  color="0xffffff"  time="1000"  text="Cuộn con lăn chuột"  anim="false"  face="sans-serif,'メイリオ'"  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="1008"  y="6"  size="20"  color="0xffffff"  time="1000"  text="Cuộn con lăn chuột"  anim="false"  face="NotoSansVN, sans-serif"  edge="undefined"  shadow="undefined"  ]
 [iscript]
 // ====== 救済用「終了」ボタン ======
 $("#slide_exit_btn").remove();
-var exitBtn = $('<div id="slide_exit_btn">終了</div>');
+var exitBtn = $('<div id="slide_exit_btn">Thoát</div>');
 exitBtn.css({
 position: "absolute",
 right: "30px",

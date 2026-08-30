@@ -1,7 +1,0 @@
-[preload  storage="./data/bgimage/back_room0.png"  ]
-[preload  storage="./data/bgimage/back_tera.png"  ]
-[preload  storage="./data/bgimage/event/rinko5.png"  ]
-[preload  storage="./data/bgimage/black.jpg"  ]
-[preload  storage="./data/bgimage/back_kaerimiti_yuu.png"  ]
-[preload  storage="./data/bgimage/back_room_genkan.png"  ]
-[return]

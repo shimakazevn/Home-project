@@ -1,6 +1,0 @@
-[preload  storage="./data/bgimage/back_dantimae_yoru.png"  ]
-[preload  storage="./data/bgimage/black.jpg"  ]
-[preload  storage="./data/bgimage/kaeri_nagi.png"  ]
-[preload  storage="./data/bgimage/kaeri_nagi2.png"  ]
-[preload  storage="./data/fgimage/chara/153/adv_nagi_job_tere.gif"  ]
-[return]

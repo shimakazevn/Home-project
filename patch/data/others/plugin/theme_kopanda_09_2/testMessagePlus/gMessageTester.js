@@ -1,8 +1,6 @@
-//n]// 注：デフォルトで読み込んでいるのは min 版です。
+// gMessageTester.js - Trình hiển thị Text Preview cho mục Config
+// Hỗ trợ tiếng Việt 100%, không bị phụ thuộc vào AJAX nội bộ
 
-// =================================
-// gMessageTester オブジェクトの簡単な定義
-// =================================
 window.gMessageTester = {
 	 power: false
 	,currentCharNumber: 0
@@ -18,8 +16,22 @@ window.gMessageTester = {
 	,timer: null
 	,isAutoMode: true
 	,shouldHarryUp: false
-	,sampleTexts: [""]
-	,style: {}
+	,sampleTexts: [
+		"Bầu trời xanh ngắt trải rộng trên đầu. Mùi cỏ non ngai ngái.[r]Cảm giác như chỉ cần sải bước là có thể đi tới bất cứ đâu.",
+		"Hơi thở không dồn dập, cơ thể cũng thật nhẹ nhõm.[r]Đã bao lâu rồi mình mới được chạy một cách sảng khoái thế này nhỉ."
+	]
+	,style: {
+		"position": "absolute",
+		"top": "540px",
+		"left": "80px",
+		"width": "530px",
+		"height": "110px",
+		"font-size": "19px",
+		"font-family": "'NotoSansVN', 'Segoe UI', sans-serif",
+		"color": "#e0e0e0",
+		"line-height": "1.5",
+		"z-index": "9999"
+	}
 	,toggle: function() {}
 	,getKidokuColor: function() {}
 	,checkEndText: function() {}
@@ -33,284 +45,206 @@ window.gMessageTester = {
 	,next: function() {}
 };
 
-// =================================
-// gMessageTester オブジェクトの詳細な定義
-// =================================
-
-// TM が gMessageTester を指す名前空間で作業（長いので）
 (function(TM) {
 
-	//
-	// スタイルの取得
-	//
+	// Nạp style CSS tùy biến nếu có
+	if (window.$ && $.get) {
+		$.get(TM.cssUrl, function(data){
+			try {
+				var style = gMessageTester.style;
+				data = data.replace(/\/\*[\s\S]*?\*\//g, "");
+				data = data.replace(/[\r\n\t]/g, "");
+				var parts = data.split("{")[1].split("}")[0].split(";");
+				for (var i = 0; i < parts.length; i++) {
+					var arr = parts[i].split(":");
+					if (arr[0] && arr[0].trim() !== "") {
+						style[arr[0].trim()] = arr[1].trim();
+					}
+				}
+			} catch (e) {}
+		});
+	}
 
-	$.get(TM.cssUrl, function(data){
-		var style = gMessageTester.style;
-		// コメントの削除（/*～*/）
-		data = data.replace(/\/\*[\s\S]*?\*\//g, "");
-		// 改行、空白、タブの削除
-		data = data.replace(/[\r\n\t]/g, "");
-		// { ～ } の間を取り出して更に ; で区切って配列にする
-		data = data.split("{")[ 1 ]
-		           .split("}")[ 0 ]
-		           .split(";");
-		for (var i = 0; i < data.length; i++) {
-			var arr = data[ i ].split(":");
-			if (arr[ 0 ] != "") {
-				style[ arr[ 0 ] ] = arr[ 1 ];
-			}
-		};
-	});
-
-	//
-	// サンプル文章の取得
-	//
-
-	$.get(TM.sampleUrl, function(data){
-		// コメント行の削除
-		data = data.replace(/;.*/g, "\n");
-		// 改行、空白、タブの削除
-		data = data.replace(/[\r\n\t]/g, "");
-		// [p] で区切る
-		var arr = data.split("[p]");
-		// 最後に何もなかったらポップ
-		if (arr[ arr.length - 1 ] == "") {
-			arr.pop();
-		}
-		// 代入
-		gMessageTester.sampleTexts = arr;
-	});
-
-	//
-	// 既読色の取得
-	//
-
+	// Lấy màu chữ đã đọc
 	TM.getKidokuColor = function() {
-		var cfg = tyrano.plugin.kag.config;
+		var cfg = (tyrano && tyrano.plugin && tyrano.plugin.kag && tyrano.plugin.kag.config) || {};
 		var flg = cfg.autoRecordLabel;
 		var col = cfg.alreadyReadTextColor;
 		if (flg == "true" && col != "default" && typeof col == "string") {
-			// $.convertColor(col) は libs.js で定義されているメソッド
-			// col に対して String プロトタイプオブジェクトのメソッドを使うので
-			// String 型じゃない col を引数にするとバグる
-			// （「未定義の関数を実行している」、と出る）
-			return $.convertColor(col);
+			return (window.$ && $.convertColor) ? $.convertColor(col) : col;
 		}
 		return "";
 	};
 
-	//
-	// 現在の情報取得
-	//
-
+	// Lấy ký tự tiếp theo
 	TM.getCurrentState = function() {
-		// 現在の文章と文字を取得
+		if (!this.sampleTexts || this.sampleTexts.length === 0) {
+			this.sampleTexts = ["Bầu trời xanh ngắt trải rộng trên đầu..."];
+		}
+		if (this.currentTextNumber >= this.sampleTexts.length) {
+			this.currentTextNumber = 0;
+		}
+		var str = this.sampleTexts[this.currentTextNumber] || "";
 		var idx = this.currentCharNumber;
-		var str = this.sampleTexts[ this.currentTextNumber ];
 		var chr = str.charAt(idx);
-		if (chr == "[") {
+		if (chr === "[") {
 			var idx2 = str.indexOf("]", idx);
-			var len  = idx2 - idx + 1;
-			var chr  = str.substr(idx, len);
-			this.currentCharNumber += len;
-			this.getCurrentState();
+			if (idx2 !== -1) {
+				var len = idx2 - idx + 1;
+				chr = str.substr(idx, len);
+				this.currentCharNumber += len;
+				this.getCurrentState();
+				return;
+			}
 		}
 		this.currentText = str;
-		this.currentChar = chr + this.currentChar;
+		this.currentChar = (chr || "") + (this.currentChar || "");
 	};
-
-	//
-	// 文末に達しているかどうかを返す
-	//
 
 	TM.checkEndText = function() {
-		if (this.currentCharNumber == 0) {
-			return true;
-		}
-		else {
-			return false;
-		};
+		return (this.currentCharNumber === 0);
 	};
-
-	//
-	// 文末に達しているならメッセージエリアをクリアする
-	//
 
 	TM.clearMessageArea = function() {
-		if (this.checkEndText()) {
+		if (this.checkEndText() && this.messageArea && this.messageArea.empty) {
 			this.messageArea.empty();
 			this.currentHtml = "";
-		};
+		}
 	};
 
-	//
-	// メッセージエリアに文字をひとつ足す
-	//
-
 	TM.appendChar = function() {
-		var chr = this.currentChar;
+		var chr = this.currentChar || "";
 		chr = chr.replace(/\[r\]/g, "<br />");
 		chr = chr.replace(/\[kidoku\]/g, "<span style='color:" + this.getKidokuColor() + "'>");
 		chr = chr.replace(/\[endkidoku\]/g, "</span>");
-		this.currentHtml += chr;
-		this.messageArea.html(this.currentHtml);
+		this.currentHtml = (this.currentHtml || "") + chr;
+		if (this.messageArea && this.messageArea.html) {
+			this.messageArea.html(this.currentHtml);
+		}
 		this.currentChar = "";
 	};
 
-	//
-	// メッセージエリアにクリックグリフを足す
-	//
-
 	TM.appendGlyph = function() {
-		var height = this.style["font-size"] || tyrano.plugin.kag.stat.default_font.size;
-		var color  = this.style["color"]     || tyrano.plugin.kag.stat.default_font.color;
-		//this.messageArea.append("<img src='" + this.glyphUrl + "' />");
-		this.messageArea.append('<span style="display: inline-block; width: 10px; height: 4px; background-color: ' + color + '; transform: translateY(3px);" class="img_next_test">　</span>')
+		var color = this.style["color"] || "#EEEEEE";
+		if (this.messageArea && this.messageArea.append) {
+			this.messageArea.append('<span style="display: inline-block; width: 10px; height: 4px; background-color: ' + color + '; transform: translateY(3px); margin-left: 4px;" class="img_next_test"> </span>');
+		}
 	};
-
-	//
-	// 文字番号の増加処理
-	//
 
 	TM.increaseCharNumber = function() {
-		// 文字番号増加
 		this.currentCharNumber++;
-		// 文章の長さを超えたら
-		if (this.currentCharNumber >= this.currentText.length) {
-			// ０にして
+		if (this.currentCharNumber >= (this.currentText ? this.currentText.length : 0)) {
 			this.currentCharNumber = 0;
-			// 文章番号を増加
 			this.increaseTextNumber();
-			// ハリーアップ義務をなくす
 			this.shouldHarryUp = false;
-		};
+		}
 	};
-
-	//
-	// 文章番号の増加処理
-	//
 
 	TM.increaseTextNumber = function() {
-		// 文章番号を増加
 		this.currentTextNumber++;
-		// 文章番号が文章の数を超えたら
 		if (this.currentTextNumber >= this.sampleTexts.length) {
-			// ０にする
 			this.currentTextNumber = 0;
-		};
+		}
 	};
-
-	//
-	// アップデート処理
-	//
 
 	TM.update = function() {
-		//console.log("update.")
-		// 参照
-		var CO = tyrano.plugin.kag.config;
-		// 現在の文章と文字を取得
+		var kag = (window.TYRANO && TYRANO.kag) || (window.tyrano && tyrano.plugin && tyrano.plugin.kag) || {};
+		var CO = kag.config || {};
+		
 		TM.getCurrentState();
-		// メッセージエリアの消去チェック
 		TM.clearMessageArea();
-		// 文字を足す
 		TM.appendChar();
-		// 文字番号の増加処理
 		TM.increaseCharNumber();
-		// 文末でなければ
+		
 		if (!TM.checkEndText()) {
-			// ディレイを計算
-			var delay = parseInt(CO.chSpeed);
+			var chSpeed = parseInt(kag.stat ? kag.stat.ch_speed : "") || parseInt(CO.chSpeed) || 50;
+			var delay = chSpeed;
 			if (TM.shouldHarryUp) {
 				delay = 2;
-			};
-			// ディレイ≦１ならば即座にアップデート
+			}
 			if (delay <= 1) {
 				TM.update();
+			} else {
+				clearTimeout(TM.timer);
+				TM.timer = setTimeout(TM.update, delay);
 			}
-			// ディレイ＞０ならばアップデートの予約
-			else {
-				clearTimeout(TM.timer);
-				TM.timer = setTimeout(TM.update, delay);
-			};
-		}
-		// 文末ならば
-		else {
-			// デストロイチェック
-			if ($("." + TM.className).size() < 1) return TM.destroy();
-			// クリック待ちグリフを追加
+		} else {
+			if ($("." + TM.className).length < 1) return TM.destroy();
 			TM.appendGlyph();
-			// オートモードならば
 			if (TM.isAutoMode) {
-				// ディレイを計算して
-				var delay = parseInt(CO.autoSpeed)
-				          + parseInt(CO.autoSpeedWithText)
-				          * TM.currentText.length;
-				// アップデートの予約
+				var autoSpeed = parseInt(CO.autoSpeed) || 2500;
+				var autoSpeedWithText = parseInt(CO.autoSpeedWithText) || 0;
+				var delay = autoSpeed + (autoSpeedWithText * (TM.currentText ? TM.currentText.length : 0));
 				clearTimeout(TM.timer);
 				TM.timer = setTimeout(TM.update, delay);
-				// アニメーション
-				$(".img_next_test").css("width", 10 * delay / 1000).animate({
+				$(".img_next_test").css("width", Math.max(2, 10 * delay / 1000)).animate({
 					"width": "0"
-				}, delay, "linear")
-			};
-		};
+				}, delay, "linear");
+			}
+		}
 	};
 
-	TM.next = function() {
-		// 文末に達していて待機中ならば次の文章の読み込み
+	TM.next = function(forceRestart) {
+		if (forceRestart) {
+			clearTimeout(TM.timer);
+			TM.currentCharNumber = 0;
+			TM.currentChar = "";
+			TM.currentHtml = "";
+			if (TM.messageArea && TM.messageArea.empty) TM.messageArea.empty();
+			TM.update();
+			return;
+		}
 		if (TM.checkEndText()) {
 			clearTimeout(TM.timer);
 			TM.update();
-		}
-		// 文末に達していなければ表示を急がせる
-		else {
+		} else {
 			TM.shouldHarryUp = true;
-		};
+		}
 	};
 
-	//
-	// 駆動状態のＯＮ／ＯＦＦを行う
-	//
-
 	TM.create = function () {
-		//console.log("create.");
 		TM.destroy();
-		var that = this;
-		// フリーレイヤーの表示
 		$(".layer_free").show();
-		// 現在のデフォルトフォント設定の取得
-		var font = (tyrano && tyrano.plugin && tyrano.plugin.kag && tyrano.plugin.kag.stat && tyrano.plugin.kag.stat.default_font) || {};
-		// スクロールイベント名
-		var scroll = "onwheel"      in document ? "wheel" :
-		             "onmousewheel" in document ? "mousewheel" :
-		                                          "DOMMouseScroll";
-		// メッセージエリアの作成
+		
+		var scroll = "onwheel" in document ? "wheel" :
+		             "onmousewheel" in document ? "mousewheel" : "DOMMouseScroll";
+		
 		var area = $("<div class='" + this.className + "'></div>")
-		// 挿入
-		.appendTo(".layer_free")
-		// エリアクリック/スクロール時の処理
-		.click(this.next)
-		.on(scroll, this.next);
-		// スタイルのセット
-		if (!this.style["font-weight"]) area.css("font-weight", font.bold || "normal");
-		if (!this.style["font-size"  ]) area.css("font-size"  , (font.size || 21) + "px");
-		if (!this.style["font-family"]) area.css("font-family", font.face || "sans-serif");
-		if (!this.style["color"      ]) area.css("color"      , font.color || "#CCCCCC");
-		// 代入
+			.appendTo(".layer_free")
+			.click(function() { TM.next(); })
+			.on(scroll, function() { TM.next(); });
+		
+		area.css({
+			"position": "absolute",
+			"top": "542px",
+			"left": "80px",
+			"width": "530px",
+			"height": "110px",
+			"font-size": "19px",
+			"font-weight": "normal",
+			"font-family": "'NotoSansVN', 'Segoe UI', sans-serif",
+			"color": "#eeeeee",
+			"line-height": "1.5",
+			"pointer-events": "auto",
+			"cursor": "pointer",
+			"z-index": "9999"
+		});
+		
 		this.messageArea = area;
-		// 起動する
+		this.currentCharNumber = 0;
+		this.currentHtml = "";
+		this.currentChar = "";
+		
 		clearTimeout(this.timer);
-		this.timer = setTimeout(this.update, 500);
+		this.timer = setTimeout(this.update, 100);
 	};
 
 	TM.destroy = function () {
-		//console.log("destroy.");
-		// タイマーを切る
 		clearTimeout(this.timer);
-		// 初期化
 		this.currentCharNumber = 0;
 		this.currentTextNumber = 0;
-		// DOM 要素の削除
+		this.currentHtml = "";
+		this.currentChar = "";
 		if (this.messageArea && this.messageArea.remove) {
 			this.messageArea.remove();
 		}

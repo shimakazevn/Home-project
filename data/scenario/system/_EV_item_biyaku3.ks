@@ -1,5 +1,0 @@
-[preload  storage="./data/bgimage/back_room_yoru.png"  ]
-[preload  storage="./data/bgimage/event/item_biyaku3.png"  ]
-[preload  storage="./data/bgimage/black.jpg"  ]
-[preload  storage="./data/bgimage/back_dantimae_yoru.png"  ]
-[return]

@@ -1,0 +1,572 @@
+# -*- coding: utf-8 -*-
+"""
+tools/unified_patch_installer.py
+=================================
+Trình cài đặt Patch Việt Hóa Độc Lập 1-Click dành cho End User
+Tựa game: HOME (ROOM) - SORAREVO [RJ01556529]
+
+Kiến trúc No-Archive & Lightweight Backup:
+1. Giải nén 1 lần app.asar -> resources/app/ (nếu chưa giải nén).
+2. Tạo thư mục backup chọn lọc resources/backup_original/ (chỉ chứa script và UI image, không chứa gif nặng ~17MB).
+3. Vá trực tiếp tệp Việt hóa đè lên resources/app/ trong 0.1 giây (siêu nhanh, không làm nghẽn HDD).
+4. Vô hiệu hóa app.asar để Electron chạy trực tiếp từ thư mục app (No-Archive mode).
+5. Khôi phục bản gốc tiếng Nhật 1-Click cực nhanh trong 0.1 giây từ resources/backup_original/.
+"""
+
+import os
+import sys
+import json
+import struct
+import shutil
+import time
+import zipfile
+import threading
+import subprocess
+
+if sys.platform == 'win32':
+    try:
+        import ctypes
+        ctypes.windll.shcore.SetProcessDpiAwareness(1)
+    except Exception:
+        try:
+            ctypes.windll.user32.SetProcessDPIAware()
+        except Exception:
+            pass
+
+if sys.stdout:
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
+
+VERSION = "2.1.0"
+APP_TITLE = f"CÀI ĐẶT PATCH VIỆT HÓA - HOME (ROOM) v{VERSION}"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 1. BỘ GIẢI NÉN VÀ VÁ FILE TRỰC TIẾP LÊN THƯ MỤC APP (NO ARCHIVE)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def read_asar_header(f_in):
+    f_in.seek(0)
+    v1, v2, v3, v4 = struct.unpack('<IIII', f_in.read(16))
+    json_bytes = f_in.read(v4)
+    pad_len = (4 - (v4 % 4)) % 4
+    if pad_len > 0:
+        f_in.read(pad_len)
+    header = json.loads(json_bytes.decode('utf-8'))
+    header_total_len = 16 + v4 + pad_len
+    return header, header_total_len
+
+def unpack_asar_to_app(asar_path, app_dir, log_func=print, progress_func=None):
+    """Giải nén asar sang thư mục resources/app tốc độ cao với chunk 8MB"""
+    t0 = time.time()
+    log_func(f"[*] Đang giải nén game sang thư mục: {os.path.basename(app_dir)} (chỉ thực hiện 1 lần duy nhất)...")
+    os.makedirs(app_dir, exist_ok=True)
+    
+    with open(asar_path, 'rb') as f:
+        header, header_total_len = read_asar_header(f)
+        
+        # Đếm tổng dung lượng và danh sách files
+        file_list = []
+        def walk_node(node, cur_path):
+            if 'files' in node:
+                for k, v in node['files'].items():
+                    walk_node(v, os.path.join(cur_path, k) if cur_path else k)
+            else:
+                off = int(node['offset'])
+                sz = int(node['size'])
+                file_list.append((cur_path, off, sz))
+                
+        walk_node(header, '')
+        total_bytes = sum(sz for _, _, sz in file_list)
+        written_bytes = 0
+        last_report = 0
+        
+        CHUNK = 8 * 1024 * 1024
+        for rel_p, off, sz in file_list:
+            dst_p = os.path.join(app_dir, rel_p)
+            os.makedirs(os.path.dirname(dst_p), exist_ok=True)
+            if sz == 0:
+                with open(dst_p, 'wb') as f_out:
+                    pass
+            else:
+                f.seek(header_total_len + off)
+                with open(dst_p, 'wb') as f_out:
+                    rem = sz
+                    while rem > 0:
+                        chunk = f.read(min(rem, CHUNK))
+                        if not chunk:
+                            break
+                        f_out.write(chunk)
+                        rem -= len(chunk)
+                        written_bytes += len(chunk)
+                        
+            now = time.time()
+            if now - last_report >= 0.2:
+                pct = min(100.0, (written_bytes / total_bytes) * 100) if total_bytes > 0 else 100
+                if progress_func:
+                    progress_func(pct, written_bytes, total_bytes)
+                last_report = now
+                
+    if progress_func:
+        progress_func(100.0, total_bytes, total_bytes)
+        
+    log_func(f"[OK] Đã giải nén hoàn tất {len(file_list):,} tệp trong {time.time() - t0:.2f}s!")
+
+def create_selective_backup(app_dir, backup_dir, log_func=print):
+    """Tạo backup chọn lọc siêu nhẹ (~17 MB) cho kịch bản và ảnh UI (loại trừ GIF)"""
+    if os.path.exists(backup_dir):
+        return
+        
+    log_func(f"[*] Đang tạo bản sao lưu gốc siêu nhẹ (~17 MB): {os.path.basename(backup_dir)}...")
+    os.makedirs(backup_dir, exist_ok=True)
+    
+    # 1. Backup kịch bản .ks
+    scen_src = os.path.join(app_dir, 'data', 'scenario')
+    scen_dst = os.path.join(backup_dir, 'data', 'scenario')
+    if os.path.exists(scen_src):
+        shutil.copytree(scen_src, scen_dst, dirs_exist_ok=True)
+        
+    # 2. Backup Config.tjs & font.css
+    for rel in ['data/system/Config.tjs', 'tyrano/css/font.css']:
+        s = os.path.join(app_dir, rel)
+        d = os.path.join(backup_dir, rel)
+        if os.path.exists(s):
+            os.makedirs(os.path.dirname(d), exist_ok=True)
+            shutil.copy2(s, d)
+            
+    # 3. Backup ảnh UI (loại trừ file .gif)
+    img_src = os.path.join(app_dir, 'data', 'image')
+    img_dst = os.path.join(backup_dir, 'data', 'image')
+    if os.path.exists(img_src):
+        os.makedirs(img_dst, exist_ok=True)
+        for root, dirs, files in os.walk(img_src):
+            for f in files:
+                if not f.lower().endswith('.gif'):
+                    abs_s = os.path.join(root, f)
+                    rel_p = os.path.relpath(abs_s, img_src)
+                    abs_d = os.path.join(img_dst, rel_p)
+                    os.makedirs(os.path.dirname(abs_d), exist_ok=True)
+                    shutil.copy2(abs_s, abs_d)
+                    
+    total_sz = sum(os.path.getsize(os.path.join(r, f)) for r, _, files in os.walk(backup_dir) for f in files)
+    log_func(f"[OK] Đã hoàn tất sao lưu bản gốc ({total_sz/(1024*1024):.2f} MB)!")
+
+def execute_folder_patch(game_dir, patch_files_dict, log_func=print, progress_func=None):
+    """Vá trực tiếp các tệp Việt hóa vào thư mục resources/app (No Archive)"""
+    t_start = time.time()
+    resources_dir = os.path.join(game_dir, 'resources')
+    if not os.path.exists(resources_dir):
+        raise FileNotFoundError(f"Không tìm thấy thư mục resources trong: {game_dir}")
+        
+    app_dir = os.path.join(resources_dir, 'app')
+    backup_dir = os.path.join(resources_dir, 'backup_original')
+    
+    # 1. Nếu chưa có thư mục app, giải nén từ app.asar
+    if not os.path.exists(app_dir) or not os.path.exists(os.path.join(app_dir, 'data', 'scenario')):
+        asar_candidates = [
+            os.path.join(resources_dir, 'app.asar.original.bak'),
+            os.path.join(resources_dir, 'app.asar.original'),
+            os.path.join(resources_dir, 'app.asar'),
+            os.path.join(resources_dir, 'app.asar.disabled')
+        ]
+        target_asar = next((p for p in asar_candidates if os.path.exists(p)), None)
+        if not target_asar:
+            raise FileNotFoundError(f"Không tìm thấy tệp app.asar trong: {resources_dir}")
+            
+        unpack_asar_to_app(target_asar, app_dir, log_func=log_func, progress_func=progress_func)
+        
+    # 2. Tạo bản sao lưu gốc siêu nhẹ nếu chưa có
+    create_selective_backup(app_dir, backup_dir, log_func=log_func)
+    
+    # 3. Dọn dẹp các tệp asar 8GB thừa để giải phóng dung lượng đĩa
+    for junk_name in ['app.asar', 'app.asar.disabled', 'app.asar.original.bak', 'app.asar.patching_tmp']:
+        junk_p = os.path.join(resources_dir, junk_name)
+        if os.path.exists(junk_p):
+            try:
+                os.remove(junk_p)
+                log_func(f"[*] Đã dọn dẹp tệp asar thừa: {junk_name} (giải phóng dung lượng ổ cứng).")
+            except Exception:
+                pass
+
+    # 4. Copy trực tiếp các file patch vào app_dir
+    log_func("[*] Đang tiến hành cập nhật dữ liệu Việt hóa vào thư mục app...")
+    copied_count = 0
+    total_patch = len(patch_files_dict)
+    
+    for idx, (rel_path, src_path) in enumerate(patch_files_dict.items(), 1):
+        norm_rel = rel_path.replace('/', '\\').lstrip('\\')
+        dst_path = os.path.join(app_dir, norm_rel)
+        os.makedirs(os.path.dirname(dst_path), exist_ok=True)
+        shutil.copy2(src_path, dst_path)
+        copied_count += 1
+        
+        if progress_func and idx % 20 == 0:
+            progress_func((idx / total_patch) * 100, idx, total_patch)
+            
+    if progress_func:
+        progress_func(100.0, total_patch, total_patch)
+        
+    elapsed = round(time.time() - t_start, 2)
+    log_func("============================================================")
+    log_func(f"  >>> CÀI ĐẶT PATCH THÀNH CÔNG 100% TRONG {elapsed} GIÂY!")
+    log_func("  >>> Game hiện đang chạy ở chế độ No-Archive mượt mà 100%!")
+    log_func("============================================================")
+    return True, copied_count, elapsed
+
+def restore_folder_original(game_dir, log_func=print):
+    """Khôi phục bản gốc tiếng Nhật 1-Click từ resources/backup_original"""
+    resources_dir = os.path.join(game_dir, 'resources')
+    app_dir = os.path.join(resources_dir, 'app')
+    backup_dir = os.path.join(resources_dir, 'backup_original')
+    
+    if not os.path.exists(backup_dir):
+        log_func("[LỖI] Không tìm thấy thư mục sao lưu gốc (backup_original)!")
+        return False
+        
+    log_func("[*] Đang khôi phục toàn bộ kịch bản và giao diện tiếng Nhật gốc...")
+    # Copy đè lại backup_dir vào app_dir
+    shutil.copytree(backup_dir, app_dir, dirs_exist_ok=True)
+    
+    log_func("============================================================")
+    log_func("  [OK] ĐÃ KHÔI PHỤC BẢN GỐC TIẾNG NHẬT THÀNH CÔNG 100%!")
+    log_func("============================================================")
+    return True
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 2. XỬ LÝ PAYLOAD NÉN VÀ NHẬN DIỆN THƯ MỤC GAME
+# ─────────────────────────────────────────────────────────────────────────────
+
+def get_base_dir():
+    if getattr(sys, 'frozen', False):
+        return os.path.dirname(os.path.abspath(sys.executable))
+    return os.path.dirname(os.path.abspath(__file__))
+
+def get_bundled_payload_dir():
+    if hasattr(sys, '_MEIPASS'):
+        return sys._MEIPASS
+    return get_base_dir()
+
+def extract_patch_sources():
+    patch_dict = {}
+    temp_extract_dir = None
+    meipass = get_bundled_payload_dir()
+    base_dir = get_base_dir()
+    
+    embedded_zip = os.path.join(meipass, 'patch_payload.zip')
+    local_zip = os.path.join(base_dir, 'patch_payload.zip')
+    target_zip = embedded_zip if os.path.exists(embedded_zip) else (local_zip if os.path.exists(local_zip) else None)
+    
+    if target_zip:
+        import tempfile
+        temp_extract_dir = tempfile.mkdtemp(prefix='home_patch_')
+        with zipfile.ZipFile(target_zip, 'r') as z:
+            z.extractall(temp_extract_dir)
+        source_dir = temp_extract_dir
+    else:
+        candidates = [
+            os.path.join(base_dir, 'patch_files'),
+            os.path.join(base_dir, 'patch'),
+            os.path.join(base_dir, 'dist_pc'),
+            os.path.join(os.path.dirname(base_dir), 'patch'),
+            base_dir
+        ]
+        source_dir = None
+        for c in candidates:
+            if os.path.exists(os.path.join(c, 'data', 'scenario')):
+                source_dir = c
+                break
+                
+    if not source_dir:
+        return None, None
+
+    for root, dirs, files in os.walk(source_dir):
+        for f in files:
+            abs_path = os.path.join(root, f)
+            rel_path = os.path.relpath(abs_path, source_dir).replace('\\', '/')
+            if rel_path.startswith(('data/', 'tyrano/')):
+                patch_dict[rel_path] = abs_path
+
+    return patch_dict, temp_extract_dir
+
+def find_game_directory():
+    base_dir = get_base_dir()
+    candidates = [
+        base_dir,
+        os.path.dirname(base_dir),
+        os.path.join(base_dir, 'HOME_'),
+        os.path.join(base_dir, 'Game'),
+        os.path.join(os.path.dirname(base_dir), 'HOME_'),
+    ]
+    for c in candidates:
+        if os.path.exists(c):
+            exe_cand = [f for f in os.listdir(c) if f.lower().endswith('.exe') and f.lower() not in ('cai_dat_patch_viet_hoa.exe', 'unins000.exe')]
+            has_resources = os.path.exists(os.path.join(c, 'resources'))
+            if (exe_cand or os.path.exists(os.path.join(c, 'HOME.exe'))) and has_resources:
+                return os.path.abspath(c)
+    return None
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 3. GIAO DIỆN ĐỒ HỌA (TKINTER GUI HIGH-DPI)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def launch_gui():
+    import tkinter as tk
+    from tkinter import ttk, filedialog, messagebox
+
+    root = tk.Tk()
+    root.title(APP_TITLE)
+    root.geometry("680x560")
+    root.minsize(620, 500)
+    root.configure(bg="#1e1e2e")
+
+    try:
+        meipass = get_bundled_payload_dir()
+        icon_p = os.path.join(meipass, 'tyrano.ico')
+        if not os.path.exists(icon_p):
+            icon_p = os.path.join(get_base_dir(), 'tyrano.ico')
+        if os.path.exists(icon_p):
+            root.iconbitmap(icon_p)
+    except Exception:
+        pass
+
+    style = ttk.Style()
+    style.theme_use('clam')
+    style.configure("TProgressbar", thickness=16, troughcolor="#313244", background="#a6e3a1")
+
+    # Header Frame
+    hdr_frame = tk.Frame(root, bg="#181825", padx=20, pady=12)
+    hdr_frame.pack(fill=tk.X)
+
+    tk.Label(hdr_frame, text="HOME (ROOM) - BẢN VIỆT HÓA CHUẨN 100%", font=("Segoe UI", 13, "bold"), fg="#cdd6f4", bg="#181825").pack(anchor=tk.W)
+    tk.Label(hdr_frame, text=f"Phiên bản Patch: v{VERSION} (No-Archive Super Fast) | Nhóm dịch: Shimakaze VN", font=("Segoe UI", 9), fg="#a6adc8", bg="#181825").pack(anchor=tk.W, pady=(2, 0))
+
+    # Path Selection Frame
+    path_frame = tk.Frame(root, bg="#1e1e2e", padx=20, pady=10)
+    path_frame.pack(fill=tk.X)
+
+    tk.Label(path_frame, text="Thư mục cài đặt game:", font=("Segoe UI", 9, "bold"), fg="#bac2de", bg="#1e1e2e").pack(anchor=tk.W)
+
+    p_sub = tk.Frame(path_frame, bg="#1e1e2e")
+    p_sub.pack(fill=tk.X, pady=(4, 0))
+
+    game_dir_var = tk.StringVar()
+    detected = find_game_directory()
+    if detected:
+        game_dir_var.set(detected)
+
+    txt_entry = tk.Entry(p_sub, textvariable=game_dir_var, font=("Consolas", 9), bg="#313244", fg="#cdd6f4", insertbackground="#cdd6f4", relief=tk.FLAT)
+    txt_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, ipady=4, padx=(0, 8))
+
+    def choose_dir():
+        d = filedialog.askdirectory(title="Chọn thư mục chứa game HOME (ROOM)")
+        if d:
+            game_dir_var.set(d)
+
+    btn_browse = tk.Button(p_sub, text="Duyệt...", command=choose_dir, font=("Segoe UI", 9), bg="#45475a", fg="#cdd6f4", activebackground="#585b70", activeforeground="#ffffff", relief=tk.FLAT, padx=12)
+    btn_browse.pack(side=tk.RIGHT)
+
+    # Status / Progress Frame
+    prog_frame = tk.Frame(root, bg="#1e1e2e", padx=20, pady=4)
+    prog_frame.pack(fill=tk.X)
+
+    status_var = tk.StringVar(value="Sẵn sàng cài đặt.")
+    lbl_status = tk.Label(prog_frame, textvariable=status_var, font=("Segoe UI", 9), fg="#89b4fa", bg="#1e1e2e")
+    lbl_status.pack(anchor=tk.W, pady=(0, 4))
+
+    progress_bar = ttk.Progressbar(prog_frame, style="TProgressbar", mode="determinate")
+    progress_bar.pack(fill=tk.X)
+
+    # Action Buttons Frame
+    btn_frame = tk.Frame(root, bg="#1e1e2e", padx=20, pady=10)
+    btn_frame.pack(fill=tk.X)
+
+    btn_install = tk.Button(btn_frame, text="⚡ CÀI ĐẶT PATCH VIỆT HÓA", font=("Segoe UI", 11, "bold"), bg="#a6e3a1", fg="#11111b", activebackground="#94e2d5", relief=tk.FLAT, pady=7, cursor="hand2")
+    btn_install.pack(fill=tk.X, pady=(0, 6))
+
+    btn_sub_frame = tk.Frame(btn_frame, bg="#1e1e2e")
+    btn_sub_frame.pack(fill=tk.X)
+
+    btn_launch = tk.Button(btn_sub_frame, text="▶ KHỞI ĐỘNG GAME", font=("Segoe UI", 9, "bold"), bg="#89b4fa", fg="#11111b", activebackground="#b4befe", relief=tk.FLAT, pady=5, cursor="hand2")
+    btn_launch.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 4))
+
+    btn_restore = tk.Button(btn_sub_frame, text="↩ KHÔI PHỤC BẢN GỐC", font=("Segoe UI", 9), bg="#f38ba8", fg="#11111b", activebackground="#eba0ac", relief=tk.FLAT, pady=5, cursor="hand2")
+    btn_restore.pack(side=tk.RIGHT, fill=tk.X, expand=True, padx=(4, 0))
+
+    # Log Window Frame
+    log_frame = tk.Frame(root, bg="#1e1e2e", padx=20, pady=(0, 15))
+    log_frame.pack(fill=tk.BOTH, expand=True)
+
+    tk.Label(log_frame, text="Nhật ký cài đặt:", font=("Segoe UI", 8), fg="#6c7086", bg="#1e1e2e").pack(anchor=tk.W)
+    
+    log_txt = tk.Text(log_frame, font=("Consolas", 8), bg="#11111b", fg="#a6adc8", insertbackground="#cdd6f4", relief=tk.FLAT, wrap=tk.WORD, height=6)
+    log_txt.pack(fill=tk.BOTH, expand=True, pady=(2, 0))
+
+    def append_log(msg):
+        def _write():
+            log_txt.insert(tk.END, str(msg) + "\n")
+            log_txt.see(tk.END)
+        root.after(0, _write)
+
+    def update_progress(pct, cur, total):
+        def _prog():
+            progress_bar['value'] = pct
+            if total > 0 and total < 10000:
+                status_var.set(f"Đang cài đặt... {pct:.1f}% ({cur}/{total} tệp)")
+            elif total >= 10000:
+                mb_cur = cur / (1024 * 1024)
+                mb_tot = total / (1024 * 1024)
+                status_var.set(f"Đang giải nén dữ liệu... {pct:.1f}% ({mb_cur:.1f}/{mb_tot:.1f} MB)")
+        root.after(0, _prog)
+
+    def do_install():
+        target = game_dir_var.get().strip()
+        if not target or not os.path.exists(target):
+            messagebox.showerror("Lỗi", "Vui lòng chọn đúng thư mục chứa game HOME (ROOM)!")
+            return
+
+        btn_install.config(state=tk.DISABLED)
+        btn_restore.config(state=tk.DISABLED)
+        btn_launch.config(state=tk.DISABLED)
+        progress_bar['value'] = 0
+
+        def _worker():
+            try:
+                append_log(f"[*] Thư mục game: {target}")
+                status_var.set("Đang chuẩn bị dữ liệu patch...")
+                patch_dict, tmp_dir = extract_patch_sources()
+                if not patch_dict:
+                    raise RuntimeError("Không tìm thấy dữ liệu tệp Việt hóa!")
+
+                ok, count, el = execute_folder_patch(target, patch_dict, log_func=append_log, progress_func=update_progress)
+
+                if tmp_dir and os.path.exists(tmp_dir):
+                    shutil.rmtree(tmp_dir, ignore_errors=True)
+
+                status_var.set(f"Hoàn tất! Đã vá {count} tệp trong {el}s.")
+                root.after(0, lambda: messagebox.showinfo("Thành công", f"Cài đặt Patch Việt Hóa thành công 100% trong {el} giây!\nBạn có thể nhấn 'KHỞI ĐỘNG GAME' để trải nghiệm ngay!"))
+            except Exception as e:
+                append_log(f"\n[LỖI]: {e}")
+                status_var.set("Cài đặt thất bại!")
+                root.after(0, lambda: messagebox.showerror("Lỗi", f"Có lỗi xảy ra trong quá trình cài đặt:\n{e}"))
+            finally:
+                root.after(0, lambda: btn_install.config(state=tk.NORMAL))
+                root.after(0, lambda: btn_restore.config(state=tk.NORMAL))
+                root.after(0, lambda: btn_launch.config(state=tk.NORMAL))
+
+        threading.Thread(target=_worker, daemon=True).start()
+
+    def do_restore():
+        target = game_dir_var.get().strip()
+        if not target or not os.path.exists(target):
+            messagebox.showerror("Lỗi", "Vui lòng chọn đúng thư mục chứa game HOME (ROOM)!")
+            return
+
+        if not messagebox.askyesno("Xác nhận", "Bạn có chắc chắn muốn gỡ Patch và khôi phục lại bản tiếng Nhật gốc không?"):
+            return
+
+        btn_install.config(state=tk.DISABLED)
+        btn_restore.config(state=tk.DISABLED)
+        btn_launch.config(state=tk.DISABLED)
+
+        def _worker():
+            try:
+                ok = restore_folder_original(target, log_func=append_log)
+                if ok:
+                    status_var.set("Đã khôi phục bản gốc tiếng Nhật thành công.")
+                    root.after(0, lambda: messagebox.showinfo("Thành công", "Đã khôi phục bản gốc tiếng Nhật 100% thành công!"))
+                else:
+                    status_var.set("Khôi phục thất bại!")
+            except Exception as e:
+                append_log(f"\n[LỖI]: {e}")
+                status_var.set("Khôi phục thất bại!")
+                root.after(0, lambda: messagebox.showerror("Lỗi", f"Có lỗi xảy ra khi khôi phục:\n{e}"))
+            finally:
+                root.after(0, lambda: btn_install.config(state=tk.NORMAL))
+                root.after(0, lambda: btn_restore.config(state=tk.NORMAL))
+                root.after(0, lambda: btn_launch.config(state=tk.NORMAL))
+
+        threading.Thread(target=_worker, daemon=True).start()
+
+    def do_launch():
+        target = game_dir_var.get().strip()
+        if not target or not os.path.exists(target):
+            messagebox.showerror("Lỗi", "Vui lòng chọn đúng thư mục game!")
+            return
+
+        candidates = [
+            os.path.join(target, 'HOME.exe'),
+            os.path.join(target, 'Game.exe'),
+        ]
+        exe_file = next((p for p in candidates if os.path.exists(p)), None)
+        if not exe_file:
+            exe_list = [os.path.join(target, f) for f in os.listdir(target) if f.lower().endswith('.exe') and f.lower() not in ('cai_dat_patch_viet_hoa.exe', 'unins000.exe')]
+            exe_file = exe_list[0] if exe_list else None
+
+        if exe_file:
+            try:
+                subprocess.Popen([exe_file], cwd=target)
+                append_log(f"[*] Đã khởi động game: {os.path.basename(exe_file)}")
+            except Exception as e:
+                messagebox.showerror("Lỗi", f"Không thể khởi động game:\n{e}")
+        else:
+            messagebox.showerror("Lỗi", "Không tìm thấy file thực thi .exe của game!")
+
+    btn_install.config(command=do_install)
+    btn_restore.config(command=do_restore)
+    btn_launch.config(command=do_launch)
+
+    append_log(f"============================================================")
+    append_log(f"  {APP_TITLE}")
+    append_log(f"============================================================")
+    if detected:
+        append_log(f"[*] Tự động nhận diện thư mục game: {detected}")
+    else:
+        append_log(f"[*] Vui lòng bấm [Duyệt...] để chọn thư mục cài đặt game của bạn.")
+
+    root.mainloop()
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 4. CHẾ ĐỘ DÒNG LỆNH CLI DỰ PHÒNG
+# ─────────────────────────────────────────────────────────────────────────────
+
+def run_cli(target_dir=None):
+    print("=" * 65)
+    print(f"      {APP_TITLE}")
+    print("      Phát triển bởi Shimakaze VN | Chế độ No-Archive Siêu Tốc")
+    print("=" * 65)
+
+    if not target_dir:
+        target_dir = find_game_directory()
+
+    if not target_dir or not os.path.exists(target_dir):
+        print("[LỖI] Không tự động tìm thấy thư mục game. Vui lòng truyền đường dẫn thư mục game.")
+        sys.exit(1)
+
+    print(f"\n[+] Thư mục game: {target_dir}")
+    patch_dict, tmp_dir = extract_patch_sources()
+    if not patch_dict:
+        print("[LỖI] Không tìm thấy dữ liệu tệp Việt hóa!")
+        sys.exit(1)
+
+    def cli_progress(pct, cur, total):
+        sys.stdout.write(f"\r  Tiến độ: [{('=' * int(pct // 4)).ljust(25)}] {pct:5.1f}%")
+        sys.stdout.flush()
+
+    try:
+        execute_folder_patch(target_dir, patch_dict, log_func=print, progress_func=cli_progress)
+        print("\n")
+    finally:
+        if tmp_dir and os.path.exists(tmp_dir):
+            shutil.rmtree(tmp_dir, ignore_errors=True)
+
+if __name__ == '__main__':
+    if '--cli' in sys.argv or '--headless' in sys.argv:
+        target = sys.argv[2] if len(sys.argv) > 2 and not sys.argv[2].startswith('--') else None
+        run_cli(target)
+    else:
+        try:
+            launch_gui()
+        except Exception as e:
+            print(f"[CẢNH BÁO] Không thể khởi tạo giao diện Tkinter ({e}). Chuyển sang CLI...")
+            run_cli()

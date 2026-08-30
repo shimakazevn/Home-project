@@ -1,40 +1,40 @@
 ﻿row_id,file,line_number,entry_type,original_jp,vietnamese,notes
-87,EV_OP.ks,161,glink_choice,はい,Có / Đồng ý,Lựa chọn / Giao diện hệ thống
+87,EV_OP.ks,161,glink_choice,はい,Đồng ý,Lựa chọn / Giao diện hệ thống
 88,EV_OP.ks,162,glink_choice,いいえ,Không,Lựa chọn / Giao diện hệ thống
-257,name.ks,37,glink_choice,はい,Có / Đồng ý,Lựa chọn / Giao diện hệ thống
+257,name.ks,37,glink_choice,はい,Đồng ý,Lựa chọn / Giao diện hệ thống
 258,name.ks,38,glink_choice,いいえ,Không,Lựa chọn / Giao diện hệ thống
-260,name.ks,81,glink_choice,オープニングを見る,Xem đoạn mở đầu (Opening),Lựa chọn / Giao diện hệ thống
-261,name.ks,82,glink_choice,スキップする,Bỏ qua Opening,Lựa chọn / Giao diện hệ thống
-267,EV_honmei.ks,21,glink_choice,本命にする,Chọn làm người yêu duy nhất,Lựa chọn / Giao diện hệ thống
-268,EV_honmei.ks,22,glink_choice,しない,Không chọn,Lựa chọn / Giao diện hệ thống
-271,EV_honmei.ks,51,glink_choice,本命にする,Chọn làm người yêu duy nhất,Lựa chọn / Giao diện hệ thống
-272,EV_honmei.ks,52,glink_choice,しない,Không chọn,Lựa chọn / Giao diện hệ thống
-275,EV_honmei.ks,81,glink_choice,本命にする,Chọn làm người yêu duy nhất,Lựa chọn / Giao diện hệ thống
-276,EV_honmei.ks,82,glink_choice,しない,Không chọn,Lựa chọn / Giao diện hệ thống
+260,name.ks,81,glink_choice,オープニングを見る,Xem đoạn mở đầu,Lựa chọn / Giao diện hệ thống
+261,name.ks,82,glink_choice,スキップする,Bỏ qua mở đầu,Lựa chọn / Giao diện hệ thống
+267,EV_honmei.ks,21,glink_choice,本命にする,Chọn làm người yêu,Lựa chọn / Giao diện hệ thống
+268,EV_honmei.ks,22,glink_choice,しない,Không,Lựa chọn / Giao diện hệ thống
+271,EV_honmei.ks,51,glink_choice,本命にする,Chọn làm người yêu,Lựa chọn / Giao diện hệ thống
+272,EV_honmei.ks,52,glink_choice,しない,Không,Lựa chọn / Giao diện hệ thống
+275,EV_honmei.ks,81,glink_choice,本命にする,Chọn làm người yêu,Lựa chọn / Giao diện hệ thống
+276,EV_honmei.ks,82,glink_choice,しない,Không,Lựa chọn / Giao diện hệ thống
 1217,room_Sunday.ks,40,glink_choice,買い物に行く,Đi mua sắm,Lựa chọn / Giao diện hệ thống
-1218,room_Sunday.ks,41,glink_choice,寝て過ごす,Nghỉ ngơi / Ngủ nướng,Lựa chọn / Giao diện hệ thống
-1243,komyu_H.ks,26,glink_choice,凪の部屋でしたい,Muốn làm ở phòng Nagi,Lựa chọn / Giao diện hệ thống
+1218,room_Sunday.ks,41,glink_choice,寝て過ごす,Nghỉ ngơi,Lựa chọn / Giao diện hệ thống
+1243,komyu_H.ks,26,glink_choice,凪の部屋でしたい,Làm ở phòng Nagi,Lựa chọn / Giao diện hệ thống
 1244,komyu_H.ks,27,glink_choice,戻る,Quay lại,Lựa chọn / Giao diện hệ thống
-1245,komyu_H.ks,44,glink_choice,病院でしたい,Muốn làm ở bệnh viện,Lựa chọn / Giao diện hệ thống
-1246,komyu_H.ks,48,glink_choice,ローションで遊びたい,Muốn chơi cùng gel bôi trơn,Lựa chọn / Giao diện hệ thống
-1258,komyu_H.ks,84,glink_choice,凪の部屋でしたい,Muốn làm ở phòng Nagi,Lựa chọn / Giao diện hệ thống
+1245,komyu_H.ks,44,glink_choice,病院でしたい,Làm ở bệnh viện,Lựa chọn / Giao diện hệ thống
+1246,komyu_H.ks,48,glink_choice,ローションで遊びたい,Dùng gel bôi trơn,Lựa chọn / Giao diện hệ thống
+1258,komyu_H.ks,84,glink_choice,凪の部屋でしたい,Làm ở phòng Nagi,Lựa chọn / Giao diện hệ thống
 1259,komyu_H.ks,85,glink_choice,戻る,Quay lại,Lựa chọn / Giao diện hệ thống
-1260,komyu_H.ks,104,glink_choice,ベランダでしたい,Muốn làm ở ngoài ban công,Lựa chọn / Giao diện hệ thống
-1261,komyu_H.ks,108,glink_choice,俺の部屋でしたい,Muốn làm ở phòng riêng của mình,Lựa chọn / Giao diện hệ thống
-1272,komyu_H.ks,155,glink_choice,マッサージ店でしたい,Muốn làm ở tiệm Massage,Lựa chọn / Giao diện hệ thống
+1260,komyu_H.ks,104,glink_choice,ベランダでしたい,Làm ở ngoài ban công,Lựa chọn / Giao diện hệ thống
+1261,komyu_H.ks,108,glink_choice,俺の部屋でしたい,Làm ở phòng riêng,Lựa chọn / Giao diện hệ thống
+1272,komyu_H.ks,155,glink_choice,マッサージ店でしたい,Làm ở tiệm massage,Lựa chọn / Giao diện hệ thống
 1273,komyu_H.ks,156,glink_choice,戻る,Quay lại,Lựa chọn / Giao diện hệ thống
-1274,komyu_H.ks,168,glink_choice,シャワールームでしたい,Muốn làm ở phòng tắm sen,Lựa chọn / Giao diện hệ thống
-1279,komyu_H.ks,190,glink_choice,マッサージ店でしたい,Muốn làm ở tiệm Massage,Lựa chọn / Giao diện hệ thống
+1274,komyu_H.ks,168,glink_choice,シャワールームでしたい,Làm ở phòng tắm,Lựa chọn / Giao diện hệ thống
+1279,komyu_H.ks,190,glink_choice,マッサージ店でしたい,Làm ở tiệm massage,Lựa chọn / Giao diện hệ thống
 1280,komyu_H.ks,191,glink_choice,戻る,Quay lại,Lựa chọn / Giao diện hệ thống
-1281,komyu_H.ks,208,glink_choice,ローションで遊びたい,Muốn chơi cùng gel bôi trơn,Lựa chọn / Giao diện hệ thống
-1282,komyu_H.ks,212,glink_choice,3人でしたい,Muốn làm 3P cùng cả hai người,Lựa chọn / Giao diện hệ thống
+1281,komyu_H.ks,208,glink_choice,ローションで遊びたい,Dùng gel bôi trơn,Lựa chọn / Giao diện hệ thống
+1282,komyu_H.ks,212,glink_choice,3人でしたい,Làm 3P cùng cả hai,Lựa chọn / Giao diện hệ thống
 1291,komyu_H.ks,256,glink_choice,リフレでしたい,Muốn làm ở tiệm Maid Reflex,Lựa chọn / Giao diện hệ thống
 1292,komyu_H.ks,257,glink_choice,戻る,Quay lại,Lựa chọn / Giao diện hệ thống
-1293,komyu_H.ks,269,glink_choice,ローションで遊びたい,Muốn chơi cùng gel bôi trơn,Lựa chọn / Giao diện hệ thống
+1293,komyu_H.ks,269,glink_choice,ローションで遊びたい,Dùng gel bôi trơn,Lựa chọn / Giao diện hệ thống
 1299,komyu_H.ks,292,glink_choice,リフレでしたい,Muốn làm ở tiệm Maid Reflex,Lựa chọn / Giao diện hệ thống
 1300,komyu_H.ks,293,glink_choice,戻る,Quay lại,Lựa chọn / Giao diện hệ thống
-1301,komyu_H.ks,311,glink_choice,自分の部屋でしたい,Muốn làm ở phòng riêng của mình,Lựa chọn / Giao diện hệ thống
-1302,komyu_H.ks,315,glink_choice,3人でしたい,Muốn làm 3P cùng cả hai người,Lựa chọn / Giao diện hệ thống
+1301,komyu_H.ks,311,glink_choice,自分の部屋でしたい,Làm ở phòng riêng,Lựa chọn / Giao diện hệ thống
+1302,komyu_H.ks,315,glink_choice,3人でしたい,Làm 3P cùng cả hai,Lựa chọn / Giao diện hệ thống
 1310,komyu_hayato.ks,29,glink_choice,雑談,Trò chuyện phiếm,Lựa chọn / Giao diện hệ thống
 1311,komyu_hayato.ks,30,glink_choice,プレゼント,Tặng quà,Lựa chọn / Giao diện hệ thống
 1312,komyu_hayato.ks,31,glink_choice,お金かして,Mượn tiền,Lựa chọn / Giao diện hệ thống
@@ -58,7 +58,7 @@
 1532,komyu_nagi_kaeru.ks,253,glink_choice,デートに誘う,Rủ đi hẹn hò,Lựa chọn / Giao diện hệ thống
 1533,komyu_nagi_kaeru.ks,263,glink_choice,えっちしたい,Muốn làm tình,Lựa chọn / Giao diện hệ thống
 1536,komyu_nagi_kaeru.ks,300,glink_choice,告白する,Tỏ tình,Lựa chọn / Giao diện hệ thống
-1537,komyu_nagi_kaeru.ks,301,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
+1537,komyu_nagi_kaeru.ks,301,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
 1611,komyu_nagi_kaeru_humikonda.ks,62,ptext_ui,コミュP,Điểm Komyu Point,Lựa chọn / Giao diện hệ thống
 1612,komyu_nagi_kaeru_humikonda.ks,113,ptext_ui,コミュP,Điểm Komyu Point,Lựa chọn / Giao diện hệ thống
 1613,komyu_nagi_kaeru_humikonda.ks,163,ptext_ui,コミュP,Điểm Komyu Point,Lựa chọn / Giao diện hệ thống
@@ -109,114 +109,114 @@
 2382,sinnyu_PC.ks,28,ptext_ui,マウスホイールでスクロール,Cuộn con lăn chuột,Lựa chọn / Giao diện hệ thống
 2386,sinnyu_PC.ks,174,ptext_ui,マウスホイールでスクロール,Cuộn con lăn chuột,Lựa chọn / Giao diện hệ thống
 2390,sinnyu_PC.ks,300,ptext_ui,マウスホイールでスクロール,Cuộn con lăn chuột,Lựa chọn / Giao diện hệ thống
-2619,sinnyu_comhaiti.ks,69,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2620,sinnyu_comhaiti.ks,70,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2621,sinnyu_comhaiti.ks,85,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2622,sinnyu_comhaiti.ks,86,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2623,sinnyu_comhaiti.ks,102,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2624,sinnyu_comhaiti.ks,103,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2625,sinnyu_comhaiti.ks,118,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2626,sinnyu_comhaiti.ks,119,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2627,sinnyu_comhaiti.ks,134,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2628,sinnyu_comhaiti.ks,135,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2629,sinnyu_comhaiti.ks,151,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2630,sinnyu_comhaiti.ks,152,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2631,sinnyu_comhaiti.ks,167,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2632,sinnyu_comhaiti.ks,168,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2633,sinnyu_comhaiti.ks,183,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2634,sinnyu_comhaiti.ks,184,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2635,sinnyu_comhaiti.ks,199,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2636,sinnyu_comhaiti.ks,200,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2637,sinnyu_comhaiti.ks,215,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2638,sinnyu_comhaiti.ks,216,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2639,sinnyu_comhaiti.ks,231,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2640,sinnyu_comhaiti.ks,232,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2641,sinnyu_comhaiti.ks,247,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2642,sinnyu_comhaiti.ks,248,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2643,sinnyu_comhaiti.ks,263,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2644,sinnyu_comhaiti.ks,264,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2645,sinnyu_comhaiti.ks,279,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2646,sinnyu_comhaiti.ks,280,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2647,sinnyu_comhaiti.ks,295,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2648,sinnyu_comhaiti.ks,296,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2649,sinnyu_comhaiti.ks,311,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2650,sinnyu_comhaiti.ks,312,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2651,sinnyu_comhaiti.ks,327,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2652,sinnyu_comhaiti.ks,328,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2653,sinnyu_comhaiti.ks,343,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2654,sinnyu_comhaiti.ks,344,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2655,sinnyu_comhaiti.ks,359,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2656,sinnyu_comhaiti.ks,360,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2657,sinnyu_comhaiti.ks,375,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2658,sinnyu_comhaiti.ks,376,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2659,sinnyu_comhaiti.ks,391,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2660,sinnyu_comhaiti.ks,392,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2661,sinnyu_comhaiti.ks,407,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2662,sinnyu_comhaiti.ks,408,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2663,sinnyu_comhaiti.ks,423,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2664,sinnyu_comhaiti.ks,424,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2665,sinnyu_comhaiti.ks,439,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2666,sinnyu_comhaiti.ks,440,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2667,sinnyu_comhaiti.ks,455,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2668,sinnyu_comhaiti.ks,456,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2669,sinnyu_comhaiti.ks,471,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2670,sinnyu_comhaiti.ks,472,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2671,sinnyu_comhaiti.ks,487,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2672,sinnyu_comhaiti.ks,488,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2673,sinnyu_comhaiti.ks,503,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2674,sinnyu_comhaiti.ks,504,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2675,sinnyu_comhaiti.ks,519,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2676,sinnyu_comhaiti.ks,520,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2677,sinnyu_comhaiti.ks,535,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2678,sinnyu_comhaiti.ks,536,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2679,sinnyu_comhaiti.ks,551,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2680,sinnyu_comhaiti.ks,552,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2681,sinnyu_comhaiti.ks,567,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2682,sinnyu_comhaiti.ks,568,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2683,sinnyu_comhaiti.ks,583,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2684,sinnyu_comhaiti.ks,584,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2685,sinnyu_comhaiti.ks,599,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2686,sinnyu_comhaiti.ks,600,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2687,sinnyu_comhaiti.ks,615,glink_choice,設置する,Lắp đặt / Đặt bẫy,Lựa chọn / Giao diện hệ thống
-2688,sinnyu_comhaiti.ks,616,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
-2690,sinnyu_item.ks,581,glink_choice,使用する,Sử dụng (Viên Spirytus),Lựa chọn / Giao diện hệ thống
+2619,sinnyu_comhaiti.ks,69,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2620,sinnyu_comhaiti.ks,70,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2621,sinnyu_comhaiti.ks,85,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2622,sinnyu_comhaiti.ks,86,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2623,sinnyu_comhaiti.ks,102,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2624,sinnyu_comhaiti.ks,103,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2625,sinnyu_comhaiti.ks,118,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2626,sinnyu_comhaiti.ks,119,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2627,sinnyu_comhaiti.ks,134,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2628,sinnyu_comhaiti.ks,135,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2629,sinnyu_comhaiti.ks,151,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2630,sinnyu_comhaiti.ks,152,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2631,sinnyu_comhaiti.ks,167,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2632,sinnyu_comhaiti.ks,168,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2633,sinnyu_comhaiti.ks,183,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2634,sinnyu_comhaiti.ks,184,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2635,sinnyu_comhaiti.ks,199,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2636,sinnyu_comhaiti.ks,200,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2637,sinnyu_comhaiti.ks,215,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2638,sinnyu_comhaiti.ks,216,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2639,sinnyu_comhaiti.ks,231,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2640,sinnyu_comhaiti.ks,232,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2641,sinnyu_comhaiti.ks,247,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2642,sinnyu_comhaiti.ks,248,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2643,sinnyu_comhaiti.ks,263,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2644,sinnyu_comhaiti.ks,264,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2645,sinnyu_comhaiti.ks,279,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2646,sinnyu_comhaiti.ks,280,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2647,sinnyu_comhaiti.ks,295,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2648,sinnyu_comhaiti.ks,296,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2649,sinnyu_comhaiti.ks,311,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2650,sinnyu_comhaiti.ks,312,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2651,sinnyu_comhaiti.ks,327,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2652,sinnyu_comhaiti.ks,328,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2653,sinnyu_comhaiti.ks,343,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2654,sinnyu_comhaiti.ks,344,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2655,sinnyu_comhaiti.ks,359,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2656,sinnyu_comhaiti.ks,360,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2657,sinnyu_comhaiti.ks,375,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2658,sinnyu_comhaiti.ks,376,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2659,sinnyu_comhaiti.ks,391,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2660,sinnyu_comhaiti.ks,392,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2661,sinnyu_comhaiti.ks,407,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2662,sinnyu_comhaiti.ks,408,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2663,sinnyu_comhaiti.ks,423,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2664,sinnyu_comhaiti.ks,424,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2665,sinnyu_comhaiti.ks,439,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2666,sinnyu_comhaiti.ks,440,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2667,sinnyu_comhaiti.ks,455,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2668,sinnyu_comhaiti.ks,456,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2669,sinnyu_comhaiti.ks,471,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2670,sinnyu_comhaiti.ks,472,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2671,sinnyu_comhaiti.ks,487,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2672,sinnyu_comhaiti.ks,488,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2673,sinnyu_comhaiti.ks,503,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2674,sinnyu_comhaiti.ks,504,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2675,sinnyu_comhaiti.ks,519,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2676,sinnyu_comhaiti.ks,520,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2677,sinnyu_comhaiti.ks,535,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2678,sinnyu_comhaiti.ks,536,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2679,sinnyu_comhaiti.ks,551,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2680,sinnyu_comhaiti.ks,552,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2681,sinnyu_comhaiti.ks,567,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2682,sinnyu_comhaiti.ks,568,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2683,sinnyu_comhaiti.ks,583,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2684,sinnyu_comhaiti.ks,584,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2685,sinnyu_comhaiti.ks,599,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2686,sinnyu_comhaiti.ks,600,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2687,sinnyu_comhaiti.ks,615,glink_choice,設置する,Lắp đặt,Lựa chọn / Giao diện hệ thống
+2688,sinnyu_comhaiti.ks,616,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
+2690,sinnyu_item.ks,581,glink_choice,使用する,Sử dụng,Lựa chọn / Giao diện hệ thống
 2691,sinnyu_item.ks,582,glink_choice,使用しない,Không sử dụng,Lựa chọn / Giao diện hệ thống
-2698,sinnyu_item.ks,622,glink_choice,使用する,Sử dụng (Viên Spirytus),Lựa chọn / Giao diện hệ thống
+2698,sinnyu_item.ks,622,glink_choice,使用する,Sử dụng,Lựa chọn / Giao diện hệ thống
 2699,sinnyu_item.ks,623,glink_choice,使用しない,Không sử dụng,Lựa chọn / Giao diện hệ thống
-2706,sinnyu_item.ks,663,glink_choice,使用する,Sử dụng (Viên Spirytus),Lựa chọn / Giao diện hệ thống
+2706,sinnyu_item.ks,663,glink_choice,使用する,Sử dụng,Lựa chọn / Giao diện hệ thống
 2707,sinnyu_item.ks,664,glink_choice,使用しない,Không sử dụng,Lựa chọn / Giao diện hệ thống
-2713,sinnyu_item.ks,703,glink_choice,使用する,Sử dụng (Viên Spirytus),Lựa chọn / Giao diện hệ thống
+2713,sinnyu_item.ks,703,glink_choice,使用する,Sử dụng,Lựa chọn / Giao diện hệ thống
 2714,sinnyu_item.ks,704,glink_choice,使用しない,Không sử dụng,Lựa chọn / Giao diện hệ thống
 2971,job_moneyget_mesi.ks,22,glink_choice,外出する,Ra ngoài,Lựa chọn / Giao diện hệ thống
 2972,job_moneyget_mesi.ks,23,glink_choice,家でのんびりする（体力▲ストレス▼テンション▲）,Nghỉ ngơi thư giãn ở nhà,Lựa chọn / Giao diện hệ thống
-2996,sansaku_byouinEV.ks,32,glink_choice,診察を受ける（体力▲￥5000▼）,"Khám bệnh (Hồi Thể lực / -5,000 Yên)",Lựa chọn / Giao diện hệ thống
+2996,sansaku_byouinEV.ks,32,glink_choice,診察を受ける（体力▲￥5000▼）,Khám bệnh (Hồi Thể lực,Lựa chọn / Giao diện hệ thống
 2997,sansaku_byouinEV.ks,33,glink_choice,帰る,Quay về nhà,Lựa chọn / Giao diện hệ thống
 3006,sansaku_byouinEV_nagi.ks,33,glink_choice,凪に話しかける,Bắt chuyện với Nagi,Lựa chọn / Giao diện hệ thống
-3007,sansaku_byouinEV_nagi.ks,34,glink_choice,診察を受ける（体力▲￥5000▼）,"Khám bệnh (Hồi Thể lực / -5,000 Yên)",Lựa chọn / Giao diện hệ thống
+3007,sansaku_byouinEV_nagi.ks,34,glink_choice,診察を受ける（体力▲￥5000▼）,Khám bệnh (Hồi Thể lực,Lựa chọn / Giao diện hệ thống
 3023,sansaku_byouinEV_nagihayato.ks,33,glink_choice,二人に話しかける,Bắt chuyện với cả hai người,Lựa chọn / Giao diện hệ thống
-3024,sansaku_byouinEV_nagihayato.ks,34,glink_choice,診察を受ける（体力▲￥5000▼）,"Khám bệnh (Hồi Thể lực / -5,000 Yên)",Lựa chọn / Giao diện hệ thống
+3024,sansaku_byouinEV_nagihayato.ks,34,glink_choice,診察を受ける（体力▲￥5000▼）,Khám bệnh (Hồi Thể lực,Lựa chọn / Giao diện hệ thống
 3049,sansaku_famiresuEV.ks,32,glink_choice,食べて帰る,Ăn xong rồi về,Lựa chọn / Giao diện hệ thống
-3050,sansaku_famiresuEV.ks,33,glink_choice,夜間のバイトをする（▲￥4000　▼体力）,"Làm thêm ca đêm (+4,000 Yên / Giảm Thể lực)",Lựa chọn / Giao diện hệ thống
+3050,sansaku_famiresuEV.ks,33,glink_choice,夜間のバイトをする（▲￥4000　▼体力）,"Làm thêm ca đêm (+4,000 Yên",Lựa chọn / Giao diện hệ thống
 3051,sansaku_famiresuEV.ks,34,glink_choice,帰る,Quay về nhà,Lựa chọn / Giao diện hệ thống
-3055,sansaku_famiresuEV.ks,68,glink_choice,生ビール（テンション▲￥3000▼）,"Uống bia tươi (Tăng Hưng phấn / -3,000 Yên)",Lựa chọn / Giao diện hệ thống
-3056,sansaku_famiresuEV.ks,69,glink_choice,ハンバーガーセット（勇気▲テンション▲￥5000▼）,"Set Hamburger (Tăng Dũng cảm / -5,000 Yên)",Lựa chọn / Giao diện hệ thống
-3057,sansaku_famiresuEV.ks,70,glink_choice,３ポンドステーキ（筋力▲テンション▲▲￥10000▼）,"Set Bít tết bò (Tăng Cơ bắp & Hưng phấn / -10,000 Yên)",Lựa chọn / Giao diện hệ thống
+3055,sansaku_famiresuEV.ks,68,glink_choice,生ビール（テンション▲￥3000▼）,Uống bia tươi (Tăng Hưng phấn,Lựa chọn / Giao diện hệ thống
+3056,sansaku_famiresuEV.ks,69,glink_choice,ハンバーガーセット（勇気▲テンション▲￥5000▼）,Set Hamburger (Tăng Dũng cảm,Lựa chọn / Giao diện hệ thống
+3057,sansaku_famiresuEV.ks,70,glink_choice,３ポンドステーキ（筋力▲テンション▲▲￥10000▼）,Set Bít tết bò (Tăng Cơ bắp & Hưng phấn,Lựa chọn / Giao diện hệ thống
 3058,sansaku_famiresuEV.ks,71,glink_choice,やっぱり帰る,Quay về nhà,Lựa chọn / Giao diện hệ thống
 3073,sansaku_famiresuEV_hayato.ks,26,glink_choice,隼人に話しかける,Bắt chuyện với Hayato,Lựa chọn / Giao diện hệ thống
 3074,sansaku_famiresuEV_hayato.ks,27,glink_choice,構わず店内に入る,Cứ thế bước vào quán,Lựa chọn / Giao diện hệ thống
-3075,sansaku_famiresuEV_hayato.ks,28,glink_choice,夜間のバイトをする（▲￥4000　▼体力）,"Làm thêm ca đêm (+4,000 Yên / Giảm Thể lực)",Lựa chọn / Giao diện hệ thống
+3075,sansaku_famiresuEV_hayato.ks,28,glink_choice,夜間のバイトをする（▲￥4000　▼体力）,"Làm thêm ca đêm (+4,000 Yên",Lựa chọn / Giao diện hệ thống
 3076,sansaku_famiresuEV_hayato.ks,29,glink_choice,帰る,Quay về nhà,Lựa chọn / Giao diện hệ thống
-3090,sansaku_famiresuEV_hayato.ks,395,glink_choice,はい,Có / Đồng ý,Lựa chọn / Giao diện hệ thống
+3090,sansaku_famiresuEV_hayato.ks,395,glink_choice,はい,Đồng ý,Lựa chọn / Giao diện hệ thống
 3091,sansaku_famiresuEV_hayato.ks,396,glink_choice,いいえ,Không,Lựa chọn / Giao diện hệ thống
 3104,sansaku_famiresuEV_tubomi.ks,26,glink_choice,蕾に話しかける,Bắt chuyện với Tsubomi,Lựa chọn / Giao diện hệ thống
 3105,sansaku_famiresuEV_tubomi.ks,27,glink_choice,構わず店内に入る,Cứ thế bước vào quán,Lựa chọn / Giao diện hệ thống
-3106,sansaku_famiresuEV_tubomi.ks,28,glink_choice,夜間のバイトをする（▲￥4000　▼体力）,"Làm thêm ca đêm (+4,000 Yên / Giảm Thể lực)",Lựa chọn / Giao diện hệ thống
+3106,sansaku_famiresuEV_tubomi.ks,28,glink_choice,夜間のバイトをする（▲￥4000　▼体力）,"Làm thêm ca đêm (+4,000 Yên",Lựa chọn / Giao diện hệ thống
 3107,sansaku_famiresuEV_tubomi.ks,29,glink_choice,帰る,Quay về nhà,Lựa chọn / Giao diện hệ thống
 3124,sansaku_hankagaiEV.ks,36,glink_choice,宝くじ売り場に行く,Đến quầy bán vé số,Lựa chọn / Giao diện hệ thống
-3125,sansaku_hankagaiEV.ks,37,glink_choice,スポーツジムに行く（筋力▲￥5000▼）,"Đến phòng Gym (Tăng Cơ bắp / -5,000 Yên)",Lựa chọn / Giao diện hệ thống
+3125,sansaku_hankagaiEV.ks,37,glink_choice,スポーツジムに行く（筋力▲￥5000▼）,Đến phòng Gym (Tăng Cơ bắp,Lựa chọn / Giao diện hệ thống
 3126,sansaku_hankagaiEV.ks,38,glink_choice,帰る,Quay về nhà,Lựa chọn / Giao diện hệ thống
 3131,sansaku_hankagaiEV.ks,92,glink_choice,宝くじを買う（￥10000▼）,"Mua vé số (-10,000 Yên)",Lựa chọn / Giao diện hệ thống
-3132,sansaku_hankagaiEV.ks,93,glink_choice,やめる,"Thôi, dừng lại",Lựa chọn / Giao diện hệ thống
+3132,sansaku_hankagaiEV.ks,93,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
 3142,sansaku_hankagaiEV_game.ks,7,ptext_ui,━,━,Lựa chọn / Giao diện hệ thống
 3143,sansaku_hankagaiEV_game.ks,10,glink_choice,押す,Nhấn nút,Lựa chọn / Giao diện hệ thống
 3148,sansaku_hankagaiEV_hayato.ks,36,glink_choice,隼人に話しかける,Bắt chuyện với Hayato,Lựa chọn / Giao diện hệ thống
@@ -229,19 +229,19 @@
 3197,sansaku_hankagaiEV_tubomi.ks,27,glink_choice,街を散策する,Đi dạo quanh phố,Lựa chọn / Giao diện hệ thống
 3202,sansaku_hankagaiEV_tubomihayato.ks,26,glink_choice,二人に話しかける,Bắt chuyện với cả hai người,Lựa chọn / Giao diện hệ thống
 3203,sansaku_hankagaiEV_tubomihayato.ks,27,glink_choice,街を散策する,Đi dạo quanh phố,Lựa chọn / Giao diện hệ thống
-3275,sansaku_massajiEV.ks,31,glink_choice,マッサージを受ける（ストレス▼￥5000▼）,"Massage thư giãn (Giảm Stress / -5,000 Yên)",Lựa chọn / Giao diện hệ thống
+3275,sansaku_massajiEV.ks,31,glink_choice,マッサージを受ける（ストレス▼￥5000▼）,Massage thư giãn (Giảm Stress,Lựa chọn / Giao diện hệ thống
 3276,sansaku_massajiEV.ks,32,glink_choice,帰る,Quay về nhà,Lựa chọn / Giao diện hệ thống
 3284,sansaku_massajiEV_rinko.ks,26,glink_choice,凛子に話しかける,Bắt chuyện với Rinko,Lựa chọn / Giao diện hệ thống
-3285,sansaku_massajiEV_rinko.ks,27,glink_choice,マッサージを受ける（ストレス▼￥5000▼）,"Massage thư giãn (Giảm Stress / -5,000 Yên)",Lựa chọn / Giao diện hệ thống
+3285,sansaku_massajiEV_rinko.ks,27,glink_choice,マッサージを受ける（ストレス▼￥5000▼）,Massage thư giãn (Giảm Stress,Lựa chọn / Giao diện hệ thống
 3286,sansaku_massajiEV_rinko.ks,28,glink_choice,帰る,Quay về nhà,Lựa chọn / Giao diện hệ thống
 3303,sansaku_massajiEV_rinkohayato.ks,26,glink_choice,二人に話しかける,Bắt chuyện với cả hai người,Lựa chọn / Giao diện hệ thống
-3304,sansaku_massajiEV_rinkohayato.ks,27,glink_choice,マッサージを受ける（体力▲￥5000▼）,"Massage trị liệu (Hồi Thể lực / -5,000 Yên)",Lựa chọn / Giao diện hệ thống
+3304,sansaku_massajiEV_rinkohayato.ks,27,glink_choice,マッサージを受ける（体力▲￥5000▼）,Massage trị liệu (Hồi Thể lực,Lựa chọn / Giao diện hệ thống
 3328,sansaku_massajiEV_rinkotubomi.ks,26,glink_choice,二人に話しかける,Bắt chuyện với cả hai người,Lựa chọn / Giao diện hệ thống
-3329,sansaku_massajiEV_rinkotubomi.ks,27,glink_choice,マッサージを受ける（体力▲￥5000▼）,"Massage trị liệu (Hồi Thể lực / -5,000 Yên)",Lựa chọn / Giao diện hệ thống
-3355,sansaku_rihureEV.ks,31,glink_choice,メイドリフレに入る（勇気▲￥5000▼）,"Vào quán Maid (Tăng Dũng cảm / -5,000 Yên)",Lựa chọn / Giao diện hệ thống
+3329,sansaku_massajiEV_rinkotubomi.ks,27,glink_choice,マッサージを受ける（体力▲￥5000▼）,Massage trị liệu (Hồi Thể lực,Lựa chọn / Giao diện hệ thống
+3355,sansaku_rihureEV.ks,31,glink_choice,メイドリフレに入る（勇気▲￥5000▼）,Vào quán Maid (Tăng Dũng cảm,Lựa chọn / Giao diện hệ thống
 3356,sansaku_rihureEV.ks,32,glink_choice,帰る,Quay về nhà,Lựa chọn / Giao diện hệ thống
 3363,sansaku_rihureEV_tubomi.ks,31,glink_choice,蕾と話す,Bắt chuyện với Tsubomi,Lựa chọn / Giao diện hệ thống
-3364,sansaku_rihureEV_tubomi.ks,32,glink_choice,メイドリフレに入る（勇気▲￥5000▼）,"Vào quán Maid (Tăng Dũng cảm / -5,000 Yên)",Lựa chọn / Giao diện hệ thống
+3364,sansaku_rihureEV_tubomi.ks,32,glink_choice,メイドリフレに入る（勇気▲￥5000▼）,Vào quán Maid (Tăng Dũng cảm,Lựa chọn / Giao diện hệ thống
 3365,sansaku_rihureEV_tubomi.ks,33,glink_choice,帰る,Quay về nhà,Lựa chọn / Giao diện hệ thống
 3375,EV_date.ks,35,glink_choice,奢る(▼￥5000),"Bao ăn (-5,000 Yên)",Lựa chọn / Giao diện hệ thống
 3376,EV_date.ks,36,glink_choice,奢ってもらう,Để đối phương bao,Lựa chọn / Giao diện hệ thống
@@ -253,30 +253,30 @@
 3428,EV_date.ks,234,glink_choice,奢ってもらう,Để đối phương bao,Lựa chọn / Giao diện hệ thống
 3429,EV_date.ks,235,glink_choice,割り勘(▼￥2500),"Chia đôi tiền (-2,500 Yên)",Lựa chọn / Giao diện hệ thống
 3448,EV_date.ks,327,glink_choice,ケーキセット(▼￥5000),"Set bánh kem (-5,000 Yên)",Lựa chọn / Giao diện hệ thống
-3449,EV_date.ks,328,glink_choice,駄菓子(▼￥1000),"Bánh kẹo bình dân (-1,000 Yên)",Lựa chọn / Giao diện hệ thống
-3450,EV_date.ks,329,glink_choice,手ぶら,Đi tay không (Không mang quà),Lựa chọn / Giao diện hệ thống
-3584,EV_hukusyu_hayato.ks,42,glink_choice,復讐する,Trả thù Hayato,Lựa chọn / Giao diện hệ thống
-3585,EV_hukusyu_hayato.ks,43,glink_choice,忘れる,Bỏ qua / Quên đi,Lựa chọn / Giao diện hệ thống
-3698,EV_kokuhaku_nagi.ks,121,glink_choice,受け入れる,Đồng ý nhận lời,Lựa chọn / Giao diện hệ thống
+3449,EV_date.ks,328,glink_choice,駄菓子(▼￥1000),Bánh kẹo (-1.000¥),Lựa chọn / Giao diện hệ thống
+3450,EV_date.ks,329,glink_choice,手ぶら,Đi tay không,Lựa chọn / Giao diện hệ thống
+3584,EV_hukusyu_hayato.ks,42,glink_choice,復讐する,Trả thù,Lựa chọn / Giao diện hệ thống
+3585,EV_hukusyu_hayato.ks,43,glink_choice,忘れる,Bỏ qua,Lựa chọn / Giao diện hệ thống
+3698,EV_kokuhaku_nagi.ks,121,glink_choice,受け入れる,Đồng ý,Lựa chọn / Giao diện hệ thống
 3699,EV_kokuhaku_nagi.ks,122,glink_choice,断る,Từ chối,Lựa chọn / Giao diện hệ thống
-3820,EV_kokuhaku_rinko.ks,137,glink_choice,受け入れる,Đồng ý nhận lời,Lựa chọn / Giao diện hệ thống
+3820,EV_kokuhaku_rinko.ks,137,glink_choice,受け入れる,Đồng ý,Lựa chọn / Giao diện hệ thống
 3821,EV_kokuhaku_rinko.ks,138,glink_choice,断る,Từ chối,Lựa chọn / Giao diện hệ thống
-3893,EV_kokuhaku_tubomi.ks,126,glink_choice,受け入れる,Đồng ý nhận lời,Lựa chọn / Giao diện hệ thống
+3893,EV_kokuhaku_tubomi.ks,126,glink_choice,受け入れる,Đồng ý,Lựa chọn / Giao diện hệ thống
 3894,EV_kokuhaku_tubomi.ks,127,glink_choice,断る,Từ chối,Lựa chọn / Giao diện hệ thống
 9460,CG_tou_complete.ks,18,ptext_ui,盗撮CG回収率,Tỷ lệ thu thập:,Lựa chọn / Giao diện hệ thống
-9583,EV_item_Spirytus_nagi.ks,28,glink_choice,使用する,Sử dụng (Viên Spirytus),Lựa chọn / Giao diện hệ thống
+9583,EV_item_Spirytus_nagi.ks,28,glink_choice,使用する,Sử dụng,Lựa chọn / Giao diện hệ thống
 9584,EV_item_Spirytus_nagi.ks,29,glink_choice,使用しない,Không sử dụng,Lựa chọn / Giao diện hệ thống
-9686,EV_item_Spirytus_rinko.ks,28,glink_choice,使用する,Sử dụng (Viên Spirytus),Lựa chọn / Giao diện hệ thống
+9686,EV_item_Spirytus_rinko.ks,28,glink_choice,使用する,Sử dụng,Lựa chọn / Giao diện hệ thống
 9687,EV_item_Spirytus_rinko.ks,29,glink_choice,使用しない,Không sử dụng,Lựa chọn / Giao diện hệ thống
-9745,EV_item_Spirytus_tubomi.ks,28,glink_choice,使用する,Sử dụng (Viên Spirytus),Lựa chọn / Giao diện hệ thống
+9745,EV_item_Spirytus_tubomi.ks,28,glink_choice,使用する,Sử dụng,Lựa chọn / Giao diện hệ thống
 9746,EV_item_Spirytus_tubomi.ks,29,glink_choice,使用しない,Không sử dụng,Lựa chọn / Giao diện hệ thống
 10012,EV_status.ks,45,glink_choice,応対する,Tiếp chuyện,Lựa chọn / Giao diện hệ thống
-10013,EV_status.ks,46,glink_choice,何もしない,Không làm gì cả,Lựa chọn / Giao diện hệ thống
+10013,EV_status.ks,46,glink_choice,何もしない,Không làm gì,Lựa chọn / Giao diện hệ thống
 10046,EV_status.ks,206,glink_choice,応対する,Tiếp chuyện,Lựa chọn / Giao diện hệ thống
-10047,EV_status.ks,207,glink_choice,何もしない,Không làm gì cả,Lựa chọn / Giao diện hệ thống
+10047,EV_status.ks,207,glink_choice,何もしない,Không làm gì,Lựa chọn / Giao diện hệ thống
 10068,EV_status.ks,335,glink_choice,応対する,Tiếp chuyện,Lựa chọn / Giao diện hệ thống
-10069,EV_status.ks,336,glink_choice,何もしない,Không làm gì cả,Lựa chọn / Giao diện hệ thống
-10090,EV_status.ks,454,glink_choice,参加する（▼￥10000）,"Tham gia (-10,000 Yên)",Lựa chọn / Giao diện hệ thống
+10069,EV_status.ks,336,glink_choice,何もしない,Không làm gì,Lựa chọn / Giao diện hệ thống
+10090,EV_status.ks,454,glink_choice,参加する（▼￥10000）,Tham gia (-10.000¥),Lựa chọn / Giao diện hệ thống
 10091,EV_status.ks,455,glink_choice,参加しない,Không tham gia,Lựa chọn / Giao diện hệ thống
 10197,a_Debugroom.ks,29,glink_choice,2週目にする,Chuyển sang Tuần thứ 2,Lựa chọn / Giao diện hệ thống
 10198,a_Debugroom.ks,30,glink_choice,３週目にする,Chuyển sang Tuần thứ ３,Lựa chọn / Giao diện hệ thống
@@ -308,17 +308,45 @@
 10224,a_Debugroom.ks,56,glink_choice,好き+4（隼人）,Độ Cảm Tình Lv4 (Hayato),Lựa chọn / Giao diện hệ thống
 10225,a_Debugroom.ks,57,glink_choice,本命（蕾）,Đặt làm Người Yêu Chính (Tsubomi),Lựa chọn / Giao diện hệ thống
 10226,a_Debugroom.ks,58,glink_choice,体験版仕様にする,Chuyển sang bản Demo,Lựa chọn / Giao diện hệ thống
-10227,a_Debugroom.ks,59,glink_choice,テンション＋5,Chỉ số Hưng phấn (Tension),Lựa chọn / Giao diện hệ thống
+10227,a_Debugroom.ks,59,glink_choice,テンション＋5,Tăng Hưng phấn +5,Lựa chọn / Giao diện hệ thống
 10228,a_Debugroom.ks,60,glink_choice,全員恋人状態にする,Đặt tất cả nhân vật thành Người yêu,Lựa chọn / Giao diện hệ thống
 10229,a_Debugroom.ks,61,glink_choice,侵入病院開放,Mở khóa đột nhập Bệnh viện,Lựa chọn / Giao diện hệ thống
 10230,a_Debugroom.ks,62,glink_choice,侵入リフレ開放,Mở khóa đột nhập quán Maid,Lựa chọn / Giao diện hệ thống
 10231,a_Debugroom.ks,63,glink_choice,侵入マッサージ店開放,Mở khóa đột nhập tiệm Massage,Lựa chọn / Giao diện hệ thống
 10232,a_Debugroom.ks,64,glink_choice,侵入する(マップ),Đột nhập (Bản đồ),Lựa chọn / Giao diện hệ thống
 10233,a_Debugroom.ks,65,glink_choice,侵入する(凪),Đột nhập (Nagi),Lựa chọn / Giao diện hệ thống
-10234,a_Debugroom.ks,66,glink_choice,買い物する,Đi mua sắm,Lựa chọn / Giao diện hệ thống
+10234,a_Debugroom.ks,66,glink_choice,買い物する,Mua sắm,Lựa chọn / Giao diện hệ thống
 10235,a_Debugroom.ks,67,glink_choice,自室（朝）,Phòng riêng (Buổi Sáng),Lựa chọn / Giao diện hệ thống
 10236,a_Debugroom.ks,68,glink_choice,自室（夜）,Phòng riêng (Buổi Tối),Lựa chọn / Giao diện hệ thống
-10237,a_Debugroom.ks,69,glink_choice,散策,散策,Lựa chọn / Giao diện hệ thống
+10237,a_Debugroom.ks,69,glink_choice,散策,Dạo phố,Lựa chọn / Giao diện hệ thống
 10238,a_Debugroom.ks,70,glink_choice,最終日にジャンプ,Nhảy đến Ngày cuối cùng,Lựa chọn / Giao diện hệ thống
-10243,title_screen.ks,211,glink_choice,全開放する,Mở khóa toàn bộ,Lựa chọn / Giao diện hệ thống
+10243,title_screen.ks,211,glink_choice,全開放する,Mở khóa tất cả,Lựa chọn / Giao diện hệ thống
 10244,title_screen.ks,212,glink_choice,もどる,Quay lại,Lựa chọn / Giao diện hệ thống
+5323,room_asa.ks,24,ptext_ui,【自宅で働く】<br>自室でチャートとにらめっこ。<br>テンションの影響は受けないけど、収益は不安定。勇気が上がる。,【Làm việc tại nhà】<br>Ở trong phòng dán mắt vào biểu đồ giao dịch.<br>Không bị ảnh hưởng bởi Hưng phấn nhưng thu nhập bấp bênh. Tăng Dũng khí.,Mô tả hoạt động buổi sáng
+5325,room_asa.ks,27,ptext_ui,【病院清掃】<br>病院で清掃のバイトができる。<br>報酬がもらえて、気配りが上がる。凪とも少し仲良くなれる。,【Dọn dẹp bệnh viện】<br>Làm thêm công việc dọn dẹp tại bệnh viện.<br>Nhận thù lao và tăng Chu đáo. Thân thiết hơn một chút với Nagi.,Mô tả hoạt động buổi sáng
+5327,room_asa.ks,30,ptext_ui,【筋トレ】<br>トレーニングで心身を鍛える。<br>筋力が上がる。,【Tập thể hình】<br>Rèn luyện thể chất và tinh thần.<br>Tăng Thể lực/Sức mạnh.,Mô tả hoạt động buổi sáng
+5329,room_asa.ks,33,ptext_ui,【外出】<br>街を散策する。,【Ra ngoài】<br>Đi dạo quanh thị trấn.,Mô tả hoạt động buổi sáng
+5331,room_asa.ks,36,ptext_ui,【マッサージ店】<br>凛子のマッサージ店でバイトができる。<br>報酬がもらえて、コミュ力が上がる。凛子とも少し仲良くなれる。,【Tiệm massage】<br>Làm thêm tại tiệm massage của Rinko.<br>Nhận thù lao và tăng Giao tiếp. Thân thiết hơn một chút với Rinko.,Mô tả hoạt động buổi sáng
+5333,room_asa.ks,39,ptext_ui,【事務作業】<br>メイドリフレで事務作業のバイトができる。<br>報酬がもらえて、賢さが上がる。蕾とも少し仲良くなれる。,【Công việc văn phòng】<br>Làm thêm công việc bàn giấy tại tiệm Maid Refle.<br>Nhận thù lao và tăng Thông thái. Thân thiết hơn một chút với Tsubomi.,Mô tả hoạt động buổi sáng
+5335,room_asa.ks,42,ptext_ui,【寝る】<br>しっかり休んで体力とストレスを大きく回復させる。<br>,【Đi ngủ】<br>Nghỉ ngơi thật tốt để hồi phục Thể lực và giảm mạnh Căng thẳng.<br>,Mô tả hoạt động buổi sáng
+5337,room_asa.ks,45,ptext_ui,【侵入】<br>凪の部屋やバイト先のバックヤードへ侵入する。<br>盗撮をしたり、物色で凪と隼人の関係を壊す工作活動が出来る。勇気が上がる。<br>,【Đột nhập】<br>Đột nhập vào phòng của Nagi hoặc hậu trường nơi làm thêm.<br>Có thể quay lén hoặc lục lọi phá hoại quan hệ của Nagi và Hayato. Tăng Dũng khí.<br>,Mô tả hoạt động buổi sáng
+5339,room_asa.ks,48,ptext_ui,【情報収集】<br>外出して情報を集める。<br>,【Thu thập thông tin】<br>Ra ngoài nắm bắt tình hình và nghe ngóng thông tin.<br>,Mô tả hoạt động buổi sáng
+5341,sansaku_kaimono1.ks,56,ptext_ui,所持数：,Đang có: ,Số lượng vật phẩm cửa hàng
+5343,sansaku_kaimono1.ks,60,ptext_ui,所持数：,Đang có: ,Số lượng vật phẩm cửa hàng
+5345,sansaku_kaimono1.ks,64,ptext_ui,所持数：,Đang có: ,Số lượng vật phẩm cửa hàng
+5347,sansaku_kaimono1.ks,133,ptext_ui,所持数：,Đang có: ,Số lượng vật phẩm cửa hàng
+5349,sansaku_kaimono1.ks,138,ptext_ui,所持数：,Đang có: ,Số lượng vật phẩm cửa hàng
+5351,sansaku_kaimono1.ks,142,ptext_ui,所持数：,Đang có: ,Số lượng vật phẩm cửa hàng
+5353,sansaku_kaimono1.ks,220,ptext_ui,所持数：,Đang có: ,Số lượng vật phẩm cửa hàng
+5355,sansaku_kaimono1.ks,224,ptext_ui,所持数：,Đang có: ,Số lượng vật phẩm cửa hàng
+5357,sansaku_kaimono1.ks,228,ptext_ui,所持数：,Đang có: ,Số lượng vật phẩm cửa hàng
+5359,sansaku_kaimono1.ks,232,ptext_ui,所持数：,Đang có: ,Số lượng vật phẩm cửa hàng
+5361,sansaku_kaimono1.ks,236,ptext_ui,所持数：,Đang có: ,Số lượng vật phẩm cửa hàng
+5363,sansaku_kaimono1.ks,326,ptext_ui,所持数：,Đang có: ,Số lượng vật phẩm cửa hàng
+5365,sansaku_kaimono1.ks,330,ptext_ui,所持数：,Đang có: ,Số lượng vật phẩm cửa hàng
+5367,sansaku_kaimono1.ks,334,ptext_ui,所持数：,Đang có: ,Số lượng vật phẩm cửa hàng
+5369,sansaku_kaimono1.ks,338,ptext_ui,所持数：,Đang có: ,Số lượng vật phẩm cửa hàng
+5371,sansaku_kaimono1.ks,342,ptext_ui,所持数：,Đang có: ,Số lượng vật phẩm cửa hàng
+5373,sansaku_kaimono1.ks,346,ptext_ui,所持数：,Đang có: ,Số lượng vật phẩm cửa hàng
+5375,sansaku_kaimono1.ks,429,ptext_ui,所持数：,Đang có: ,Số lượng vật phẩm cửa hàng
+5377,sansaku_kaimono1.ks,433,ptext_ui,所持数：,Đang có: ,Số lượng vật phẩm cửa hàng

@@ -1,5 +1,0 @@
-[preload  storage="./data/bgimage/H00_20_01_01a.gif"  ]
-[preload  storage="./data/bgimage/H01_20_02_01a_moza_se.gif"  ]
-[preload  storage="./data/bgimage/H00_20_01_01b.gif"  ]
-[preload  storage="./data/bgimage/H01_20_02_01b_moza_se.gif"  ]
-[return]

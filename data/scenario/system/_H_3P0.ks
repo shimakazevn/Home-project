@@ -1,5 +1,0 @@
-[preload  storage="./data/bgimage/H/H3P_02_03_00.gif"  ]
-[preload  storage="./data/bgimage/black.jpg"  ]
-[preload  storage="./data/bgimage/H/H3P_G_rinko.png"  ]
-[preload  storage="./data/bgimage/H/H3P_G2_tubomi.png"  ]
-[return]

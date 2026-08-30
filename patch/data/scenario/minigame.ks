@@ -20,20 +20,20 @@
   @eval exp="f.hit = false"
   @image storage=swing.png x=300 y=400 layer=1 visible=false
   @cm
-  @eval exp="\"ヒット！スコア: \" + f.score"
+  @eval exp="\"Trúng đích! Điểm số: \" + f.score"
 [else]
   @image storage=swing.png x=300 y=400 layer=1 visible=false
   @cm
-  @eval exp="\"ミス！スコア: \" + f.score"
+  @eval exp="\"Trượt rồi! Điểm số: \" + f.score"
 [endif]
 @wait time=500
 @jump target=main_loop
 
 *game_end
 @cm
-@eval exp="\"ゲーム終了！最終スコア: \" + f.score"
+@eval exp="\"Kết thúc trò chơi! Điểm chung cuộc: \" + f.score"
 [button]
-text = "リトライ"
+text = "Thử lại"
 target = "game_start"
 position = center
 [/button]
@@ -52,7 +52,7 @@ document.addEventListener('keydown', function(event) {
         });
     }
 });
-[/iscript]
+[endscript]
 
 @jump target=main_loop
 

@@ -11,7 +11,6 @@
 .gemini/
 .agents/
 .system_generated/
-GEMINI_WORKSPACE_PROMPT.md
 GAME_RESEARCH_DOC.md
 VN_Patch_Pipeline/
 UI_TRANSLATION_PACKAGE/
@@ -19,6 +18,8 @@ UI_Graphics_For_Editor.zip
 
 # Heavy original game binaries & media assets (>8GB)
 Game/
+HOME_/
+ALL_GAME_IMAGES/
 [Ryuugames]*.rar
 *.rar
 *.zip
@@ -31,61 +32,21 @@ mobile_optimized_assets/
 build-releases/
 build-android-project/
 
-# Unpacked / extracted temporary assets
+# Unpacked / extracted temporary assets & builds
 unpacked_game_app/
 extracted_scripts/
 dist/
+dist_pc/
 dist_web/
+build/
 test_web_cdn/
 upload_cache.db
 tools/debug_img/
+tools/fonts/
 
 # Python cache & local saves
 __pycache__/
 *.pyc
 *.sav
-
-# Internal developer translation scripts (Keep only clean build tools)
-tools/auto_translate*
-tools/translate_*
-tools/fill_*
-tools/audit_*
-tools/fix_*
-tools/p1_*
-tools/p2_*
-tools/generate_*
-tools/test_*
-tools/chrome_workspace_bot.py
-tools/split_and_upload*
-tools/google_sheets*
-tools/package_*
-tools/clean*
-tools/finish_*
-tools/find_*
-tools/apply_*
-tools/asar_*
-tools/audio_stego_*
-tools/blogger_*
-tools/craft_*
-tools/create_*
-tools/deploy_exact_*
-tools/export_*
-tools/import_*
-tools/master_*
-tools/optimize_*
-tools/patch_*
-tools/r2_*
-tools/reimport_*
-tools/repack_*
-tools/retry_*
-tools/scan_*
-tools/setup_*
-tools/validate_*
-tools/build_all_*
-tools/build_chunk1_*
-tools/build_complete_*
-tools/build_full_*
-tools/build_ipa_*
-tools/build_launcher_*
-tools/build_multiplatform*
-
+*.spec
+patch_payload.zip

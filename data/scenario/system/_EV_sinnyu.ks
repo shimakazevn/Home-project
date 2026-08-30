@@ -1,5 +1,0 @@
-[preload  storage="./data/bgimage/back_room0.png"  ]
-[preload  storage="./data/bgimage/back_nagi_genkan.png"  ]
-[preload  storage="./data/bgimage/sin_nagi_DK.png"  ]
-[preload  storage="./data/bgimage/manual_sinnyu.png"  ]
-[return]
