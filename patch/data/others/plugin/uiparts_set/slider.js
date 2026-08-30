@@ -290,9 +290,10 @@
                     if (that.kag.stat.is_strong_stop == true) {
                         _auto_next = "stop"
                     }
+                    var _storage = _pm.storage || "../others/plugin/theme_kopanda_09_2/config.ks";
                     try {
                         that.kag.ftag.startTag("call", {
-                            storage: _pm.storage,
+                            storage: _storage,
                             target: _pm.target,
                             auto_next: _auto_next,
                         })
