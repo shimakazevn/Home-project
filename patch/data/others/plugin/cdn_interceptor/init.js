@@ -294,10 +294,10 @@
     };
 
     // ============================================================
-    // Offline Cache UI Widget
+    // Unified Web Game Toolbar (Save Export/Import + Offline Cache)
     // ============================================================
     function injectOfflineCacheWidget(manifest) {
-        if (document.getElementById('home-cache-widget')) return;
+        if (document.getElementById('home-web-toolbar')) return;
 
         const totalAssets = Object.keys(manifest).filter(k =>
             /\.(png|jpg|gif|webp|mp3)$/i.test(k) || k.includes('/sound/') || k.includes('/bgm/')
@@ -306,81 +306,182 @@
 
         const style = document.createElement('style');
         style.textContent = `
-            #home-cache-widget {
-                position: fixed; bottom: 10px; left: 10px; z-index: 99999;
-                font-family: 'Segoe UI', sans-serif; font-size: 12px;
-                user-select: none; pointer-events: auto;
-                transition: all 0.3s ease;
+            #home-web-toolbar {
+                position: fixed;
+                bottom: 8px;
+                left: 8px;
+                z-index: 999999;
+                display: inline-flex;
+                align-items: center;
+                gap: 4px;
+                background: rgba(12, 16, 28, 0.72);
+                backdrop-filter: blur(14px);
+                -webkit-backdrop-filter: blur(14px);
+                border: 1px solid rgba(255, 255, 255, 0.14);
+                border-radius: 20px;
+                padding: 3px 8px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                font-size: 11px;
+                color: #cbd5e1;
+                user-select: none;
+                pointer-events: auto;
+                opacity: 0.65;
+                transition: opacity 0.2s ease, transform 0.2s ease;
             }
-            #home-cache-widget .hcw-bubble {
-                background: rgba(15,15,25,0.82);
-                backdrop-filter: blur(12px);
-                border: 1px solid rgba(255,255,255,0.13);
+            #home-web-toolbar:hover, #home-web-toolbar.active {
+                opacity: 1;
+            }
+            .hwt-btn {
+                background: transparent;
+                border: none;
+                color: #e2e8f0;
+                padding: 4px 7px;
                 border-radius: 12px;
-                padding: 10px 14px;
-                color: #e8e8ff;
-                min-width: 220px;
-                box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+                font-size: 11px;
+                font-weight: 500;
+                cursor: pointer;
+                display: inline-flex;
+                align-items: center;
+                gap: 4px;
+                outline: none;
+                transition: all 0.15s ease;
+                white-space: nowrap;
             }
-            #home-cache-widget .hcw-icon-btn {
-                background: rgba(15,15,25,0.82);
-                backdrop-filter: blur(12px);
-                border: 1px solid rgba(255,255,255,0.13);
+            .hwt-btn:hover {
+                background: rgba(255, 255, 255, 0.15);
+                color: #ffffff;
+                transform: translateY(-1px);
+            }
+            .hwt-btn:active {
+                transform: translateY(0);
+            }
+            .hwt-sep {
+                width: 1px;
+                height: 12px;
+                background: rgba(255, 255, 255, 0.15);
+                margin: 0 2px;
+            }
+            .hwt-dot {
+                width: 6px;
+                height: 6px;
                 border-radius: 50%;
-                width: 36px; height: 36px;
-                display: flex; align-items: center; justify-content: center;
-                cursor: pointer; font-size: 18px;
-                box-shadow: 0 2px 12px rgba(0,0,0,0.4);
-                transition: transform 0.2s;
+                display: inline-block;
             }
-            #home-cache-widget .hcw-icon-btn:hover { transform: scale(1.1); }
-            #home-cache-widget .hcw-title {
-                font-weight: 600; font-size: 13px; margin-bottom: 6px;
-                display: flex; align-items: center; gap: 6px;
+            .hwt-dot.online { background: #38bdf8; box-shadow: 0 0 6px #38bdf8; }
+            .hwt-dot.cached { background: #34d399; box-shadow: 0 0 6px #34d399; }
+            .hwt-dot.downloading { background: #fbbf24; box-shadow: 0 0 6px #fbbf24; animation: hwt-pulse 1.2s infinite ease-in-out; }
+            @keyframes hwt-pulse {
+                0%, 100% { opacity: 1; transform: scale(1); }
+                50% { opacity: 0.4; transform: scale(1.3); }
             }
-            #home-cache-widget .hcw-bar-bg {
-                background: rgba(255,255,255,0.1); border-radius: 6px;
-                height: 7px; margin: 6px 0; overflow: hidden;
+
+            /* Floating Panel Popup */
+            #home-cache-panel {
+                position: fixed;
+                bottom: 46px;
+                left: 8px;
+                z-index: 1000000;
+                width: 270px;
+                background: rgba(12, 16, 28, 0.92);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border: 1px solid rgba(255, 255, 255, 0.16);
+                border-radius: 14px;
+                padding: 12px 14px;
+                box-shadow: 0 12px 32px rgba(0, 0, 0, 0.65);
+                color: #e2e8f0;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                font-size: 12px;
+                user-select: none;
+                pointer-events: auto;
+                display: none;
+                animation: hwt-fade-in 0.2s cubic-bezier(0.16, 1, 0.3, 1);
             }
-            #home-cache-widget .hcw-bar-fill {
-                height: 100%; border-radius: 6px;
-                background: linear-gradient(90deg, #6c63ff, #48cfad);
-                transition: width 0.4s ease;
+            @keyframes hwt-fade-in {
+                from { opacity: 0; transform: translateY(6px); }
+                to { opacity: 1; transform: translateY(0); }
             }
-            #home-cache-widget .hcw-info {
-                color: rgba(220,220,255,0.7); font-size: 11px; margin-bottom: 8px;
+            .hcp-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-weight: 600;
+                font-size: 13px;
+                margin-bottom: 8px;
+                color: #f1f5f9;
             }
-            #home-cache-widget .hcw-btns { display: flex; gap: 6px; margin-top: 4px; }
-            #home-cache-widget .hcw-btn {
-                flex: 1; padding: 5px 8px; border: none; border-radius: 7px;
-                cursor: pointer; font-size: 11px; font-weight: 600;
-                transition: opacity 0.2s, transform 0.1s;
+            .hcp-close {
+                cursor: pointer;
+                color: rgba(255,255,255,0.4);
+                font-size: 15px;
+                line-height: 1;
+                padding: 2px 6px;
+                border-radius: 4px;
             }
-            #home-cache-widget .hcw-btn:hover { opacity: 0.85; transform: scale(1.03); }
-            #home-cache-widget .hcw-btn-dl {
-                background: linear-gradient(135deg, #6c63ff, #48cfad); color: #fff;
+            .hcp-close:hover { color: #ffffff; background: rgba(255,255,255,0.1); }
+            .hcp-bar-bg {
+                background: rgba(255, 255, 255, 0.08);
+                border-radius: 6px;
+                height: 6px;
+                margin: 8px 0;
+                overflow: hidden;
             }
-            #home-cache-widget .hcw-btn-stop {
-                background: rgba(255,100,100,0.3); color: #ff9999;
-                border: 1px solid rgba(255,100,100,0.3);
+            .hcp-bar-fill {
+                height: 100%;
+                border-radius: 6px;
+                background: linear-gradient(90deg, #6366f1, #34d399);
+                transition: width 0.3s ease;
             }
-            #home-cache-widget .hcw-btn-del {
-                background: rgba(255,255,255,0.07); color: rgba(220,220,255,0.6);
-                border: 1px solid rgba(255,255,255,0.1);
+            .hcp-info {
+                color: #94a3b8;
+                font-size: 11px;
+                margin-bottom: 10px;
+                line-height: 1.4;
             }
-            #home-cache-widget .hcw-close {
-                position: absolute; top: 6px; right: 10px;
-                cursor: pointer; color: rgba(255,255,255,0.3); font-size: 14px;
+            .hcp-btns {
+                display: flex;
+                gap: 6px;
             }
-            #home-cache-widget .hcw-close:hover { color: rgba(255,255,255,0.8); }
+            .hcp-btn {
+                flex: 1;
+                padding: 6px 10px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 11px;
+                font-weight: 600;
+                transition: all 0.15s ease;
+                outline: none;
+                text-align: center;
+            }
+            .hcp-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+            .hcp-btn-dl {
+                background: linear-gradient(135deg, #6366f1, #3b82f6);
+                color: #ffffff;
+            }
+            .hcp-btn-stop {
+                background: rgba(239, 68, 68, 0.2);
+                color: #f87171;
+                border: 1px solid rgba(239, 68, 68, 0.35);
+            }
+            .hcp-btn-del {
+                background: rgba(255, 255, 255, 0.07);
+                color: #cbd5e1;
+                border: 1px solid rgba(255, 255, 255, 0.12);
+            }
         `;
         document.head.appendChild(style);
 
-        const widget = document.createElement('div');
-        widget.id = 'home-cache-widget';
-        document.body.appendChild(widget);
+        const toolbar = document.createElement('div');
+        toolbar.id = 'home-web-toolbar';
+        document.body.appendChild(toolbar);
 
-        let expanded = false;
+        const panel = document.createElement('div');
+        panel.id = 'home-cache-panel';
+        document.body.appendChild(panel);
+
+        let panelOpen = false;
 
         async function render() {
             const status = await OfflineCacheManager.getStatus();
@@ -390,64 +491,97 @@
             const isComplete = pct >= 100;
             const isDownloading = OfflineCacheManager._downloading;
 
-            if (!expanded) {
-                widget.innerHTML = `
-                    <div class="hcw-icon-btn" id="hcw-toggle" title="Offline Cache">
-                        ${isComplete ? '✅' : isDownloading ? '⏳' : '💾'}
-                    </div>`;
-                document.getElementById('hcw-toggle').onclick = () => { expanded = true; render(); };
-                return;
-            }
+            const dotClass = isDownloading ? 'downloading' : isComplete ? 'cached' : cached > 0 ? 'cached' : 'online';
+            const cacheLabel = isDownloading ? `⏳ ${pct}%` : isComplete ? `✅ Offline sẵn sàng` : cached > 0 ? `💾 ${pct}%` : `💾 Chơi offline`;
+
+            toolbar.className = panelOpen ? 'active' : '';
+            toolbar.innerHTML = `
+                <button class="hwt-btn" id="hwt-cache-btn" title="Cài đặt Cache Offline">
+                    <span class="hwt-dot ${dotClass}"></span>
+                    <span>${cacheLabel}</span>
+                </button>
+                <div class="hwt-sep"></div>
+                <button class="hwt-btn" onclick="if(window.exportCurrentSaveToFile) window.exportCurrentSaveToFile();" title="Tải file tiến trình save về máy (.sav)">
+                    📥 Tải save
+                </button>
+                <button class="hwt-btn" onclick="if(window.importSaveFromFile) window.importSaveFromFile();" title="Nạp file tiến trình save từ máy (.sav)">
+                    📤 Nạp save
+                </button>
+            `;
+
+            document.getElementById('hwt-cache-btn').onclick = () => {
+                panelOpen = !panelOpen;
+                panel.style.display = panelOpen ? 'block' : 'none';
+                render();
+            };
 
             const statusText = isComplete
-                ? '✅ Đã cache đầy đủ — có thể chơi offline'
+                ? 'Đã tải toàn bộ asset vào bộ nhớ máy. Bạn có thể chơi hoàn toàn offline mà không cần kết nối mạng.'
                 : isDownloading
-                    ? `⏳ Đang tải... ${pct}% (${cached.toLocaleString()}/${total.toLocaleString()})`
+                    ? `Đang tải tài nguyên vào bộ nhớ máy... (${cached.toLocaleString()} / ${total.toLocaleString()})`
                     : cached > 0
-                        ? `💾 ${pct}% đã cache (${cached.toLocaleString()}/${total.toLocaleString()})`
-                        : '🌐 Đang chơi online';
+                        ? `Đã tải ${pct}% tài nguyên (${cached.toLocaleString()} / ${total.toLocaleString()}). Bấm tiếp tục để tải đủ toàn bộ game.`
+                        : 'Game đang chạy trực tuyến từ CDN. Bạn có thể tải toàn bộ tài nguyên về máy để chơi mượt mà với 0ms độ trễ.';
 
-            widget.innerHTML = `
-                <div class="hcw-bubble" style="position:relative">
-                    <span class="hcw-close" id="hcw-close">✕</span>
-                    <div class="hcw-title">💾 Cache Offline</div>
-                    <div class="hcw-bar-bg"><div class="hcw-bar-fill" style="width:${pct}%"></div></div>
-                    <div class="hcw-info">${statusText}</div>
-                    <div class="hcw-btns">
-                        ${isDownloading
-                            ? `<button class="hcw-btn hcw-btn-stop" id="hcw-stop">⏹ Dừng tải</button>`
-                            : isComplete
-                                ? `<button class="hcw-btn hcw-btn-del" id="hcw-del">🗑 Xóa cache</button>`
-                                : `<button class="hcw-btn hcw-btn-dl" id="hcw-dl">📥 Tải về máy</button>`
-                        }
-                        ${cached > 0 && !isComplete ? `<button class="hcw-btn hcw-btn-del" id="hcw-del">🗑 Xóa</button>` : ''}
-                    </div>
-                </div>`;
+            panel.innerHTML = `
+                <div class="hcp-header">
+                    <span>💾 Quản lý Cache Offline</span>
+                    <span class="hcp-close" id="hcp-close-btn">✕</span>
+                </div>
+                <div class="hcp-bar-bg">
+                    <div class="hcp-bar-fill" style="width: ${pct}%"></div>
+                </div>
+                <div class="hcp-info">${statusText}</div>
+                <div class="hcp-btns">
+                    ${isDownloading
+                        ? `<button class="hcp-btn hcp-btn-stop" id="hcp-stop-btn">⏹ Dừng tải</button>`
+                        : isComplete
+                            ? `<button class="hcp-btn hcp-btn-del" id="hcp-del-btn">🗑 Xóa cache</button>`
+                            : `<button class="hcp-btn hcp-btn-dl" id="hcp-dl-btn">📥 Tải về máy</button>`
+                    }
+                    ${cached > 0 && !isComplete && !isDownloading ? `<button class="hcp-btn hcp-btn-del" id="hcp-del-btn">🗑 Xóa</button>` : ''}
+                </div>
+            `;
 
-            document.getElementById('hcw-close').onclick = () => { expanded = false; render(); };
-
-            const dlBtn = document.getElementById('hcw-dl');
-            if (dlBtn) dlBtn.onclick = () => {
-                OfflineCacheManager.startDownload(manifest, (done, total) => {
-                    const p = Math.round((done / total) * 100);
-                    const fill = widget.querySelector('.hcw-bar-fill');
-                    const info = widget.querySelector('.hcw-info');
-                    if (fill) fill.style.width = p + '%';
-                    if (info) info.textContent = `⏳ Đang tải... ${p}% (${done.toLocaleString()}/${total.toLocaleString()})`;
-                    if (done >= total) setTimeout(render, 500);
-                }).then(render);
+            document.getElementById('hcp-close-btn').onclick = () => {
+                panelOpen = false;
+                panel.style.display = 'none';
                 render();
             };
 
-            const stopBtn = document.getElementById('hcw-stop');
-            if (stopBtn) stopBtn.onclick = () => { OfflineCacheManager.stopDownload(); render(); };
+            const dlBtn = document.getElementById('hcp-dl-btn');
+            if (dlBtn) {
+                dlBtn.onclick = () => {
+                    OfflineCacheManager.startDownload(manifest, (done, total) => {
+                        const p = Math.round((done / total) * 100);
+                        const fill = panel.querySelector('.hcp-bar-fill');
+                        const info = panel.querySelector('.hcp-info');
+                        const cacheBtnSpan = toolbar.querySelector('#hwt-cache-btn span:last-child');
+                        if (fill) fill.style.width = p + '%';
+                        if (info) info.textContent = `Đang tải tài nguyên vào bộ nhớ máy... ${p}% (${done.toLocaleString()} / ${total.toLocaleString()})`;
+                        if (cacheBtnSpan) cacheBtnSpan.textContent = `⏳ ${p}%`;
+                        if (done >= total) setTimeout(render, 500);
+                    }).then(render);
+                    render();
+                };
+            }
 
-            const delBtn = document.getElementById('hcw-del');
-            if (delBtn) delBtn.onclick = async () => {
-                if (!confirm('Đã xóa toàn bộ offline cache. Game sẽ chơi online lại từ CDN.')) return;
-                await OfflineCacheManager.clearCache();
-                render();
-            };
+            const stopBtn = document.getElementById('hcp-stop-btn');
+            if (stopBtn) {
+                stopBtn.onclick = () => {
+                    OfflineCacheManager.stopDownload();
+                    render();
+                };
+            }
+
+            const delBtn = document.getElementById('hcp-del-btn');
+            if (delBtn) {
+                delBtn.onclick = async () => {
+                    if (!confirm('Bạn có chắc chắn muốn xóa toàn bộ dữ liệu offline đã cache? Game sẽ chuyển về chế độ tải từ CDN.')) return;
+                    await OfflineCacheManager.clearCache();
+                    render();
+                };
+            }
         }
 
         render();

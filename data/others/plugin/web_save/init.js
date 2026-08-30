@@ -242,62 +242,6 @@
         input.click();
     };
 
-    // ─── 6. UI Nút Tải / Nạp Save ───────────────────────────────────────────
-    function injectSaveExportUI() {
-        if (document.getElementById("webSaveToolbox")) return;
-
-        const btnContainer = document.createElement("div");
-        btnContainer.id = "webSaveToolbox";
-        btnContainer.style.cssText = `
-            position: fixed;
-            bottom: 6px;
-            left: 6px;
-            z-index: 999999;
-            display: flex;
-            gap: 6px;
-            font-family: sans-serif;
-            opacity: 0.45;
-            transition: opacity 0.2s ease;
-        `;
-
-        btnContainer.onmouseenter = () => { btnContainer.style.opacity = "1"; };
-        btnContainer.onmouseleave = () => { btnContainer.style.opacity = "0.45"; };
-
-        btnContainer.innerHTML = `
-            <button onclick="window.exportCurrentSaveToFile()" style="
-                background: rgba(15, 23, 42, 0.75);
-                color: #e2e8f0;
-                border: 1px solid rgba(255, 255, 255, 0.25);
-                padding: 4px 8px;
-                border-radius: 4px;
-                font-size: 11px;
-                font-weight: 500;
-                cursor: pointer;
-                outline: none;
-                backdrop-filter: blur(4px);
-                box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-            " title="Tải file tiến trình save về máy (.sav)">📥 Tải save</button>
-            <button onclick="window.importSaveFromFile()" style="
-                background: rgba(15, 23, 42, 0.75);
-                color: #e2e8f0;
-                border: 1px solid rgba(255, 255, 255, 0.25);
-                padding: 4px 8px;
-                border-radius: 4px;
-                font-size: 11px;
-                font-weight: 500;
-                cursor: pointer;
-                outline: none;
-                backdrop-filter: blur(4px);
-                box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-            " title="Nạp file tiến trình save từ máy (.sav)">📤 Nạp save</button>
-        `;
-
-        document.body.appendChild(btnContainer);
-    }
-
-    if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", injectSaveExportUI);
-    } else {
-        injectSaveExportUI();
-    }
+    // ─── 6. UI Nút Tải / Nạp Save (Tích hợp vào Unified Web Toolbar) ────────
+    // Các hàm window.exportCurrentSaveToFile và window.importSaveFromFile đã được expose toàn cục.
 })();
