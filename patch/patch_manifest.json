@@ -1,6 +1,6 @@
 {
   "version": "3.1.0",
-  "generated_at": "2026-08-31 01:48:11",
+  "generated_at": "2026-08-31 01:58:08",
   "total_files": 289,
   "files": {
     "data/asset_manifest.json": {
@@ -1156,8 +1156,8 @@
       "size": 1827
     },
     "tyrano/css/font.css": {
-      "sha256": "6fcf4fa5f6303049a39cc41765fd5aa605d9090ea785aba644c73f2e2afee187",
-      "size": 1859
+      "sha256": "8433247c2f3ec0cc6b5e038955e97bbe2d431a14f052e32dc3b1c7aa7b454531",
+      "size": 1852
     }
   }
 }
