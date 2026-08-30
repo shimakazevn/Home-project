@@ -554,10 +554,13 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
     if os.path.exists(tag_ext_path):
         with open(tag_ext_path, 'r', encoding='utf-8', errors='ignore') as f:
             ext_code = f.read()
-        ext_code = ext_code.replace('video=document.createElement("video")', 'video=document.createElement("video");video.muted=true;video.defaultMuted=true')
-        ext_code = ext_code.replace('video2=document.createElement("video")', 'video2=document.createElement("video");video2.muted=true;video2.defaultMuted=true')
-        ext_code = ext_code.replace('video.play()', 'try{var _pr=video.play();if(_pr&&_pr.catch)_pr.catch(function(){});}catch(e){}')
-        ext_code = ext_code.replace('video2.play()', 'try{var _pr2=video2.play();if(_pr2&&_pr2.catch)_pr2.catch(function(){});}catch(e){}')
+        if 'video.defaultMuted' not in ext_code:
+            ext_code = ext_code.replace('video=document.createElement("video")', 'video=document.createElement("video");video.muted=true;video.defaultMuted=true')
+            ext_code = ext_code.replace('video2=document.createElement("video")', 'video2=document.createElement("video");video2.muted=true;video2.defaultMuted=true')
+        if 'video2.play();' in ext_code:
+            ext_code = ext_code.replace('video2.play();', 'try{var _pr2=video2.play();if(_pr2&&_pr2.catch)_pr2.catch(function(){});}catch(e){};')
+        if 'video.style.display="";video.play()' in ext_code:
+            ext_code = ext_code.replace('video.style.display="";video.play()', 'video.style.display="";try{var _pr=video.play();if(_pr&&_pr.catch)_pr.catch(function(){});}catch(e){}')
         with open(tag_ext_path, 'w', encoding='utf-8') as f:
             f.write(ext_code)
 
