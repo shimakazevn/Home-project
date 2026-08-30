@@ -192,7 +192,7 @@
         const kag = window.TYRANO.kag;
 
         // Hook Background Music Player
-        kag.ft_play_stego_bgm = async function(cdnUrl, loop, rawVol) {
+        kag.ft_play_stego_bgm = async function(cdnUrl, loop, rawVol, buf) {
             try {
                 const ctx = getAudioContext();
                 if (ctx.state === 'suspended') {
@@ -210,8 +210,21 @@
                 source.buffer = audioBuffer;
                 source.loop = loop;
                 
-                let normVol = (rawVol > 1.0 ? rawVol / 100.0 : rawVol);
-                gainNode.gain.value = Math.max(0, Math.min(1.0, normVol * MASTER_BGM_SCALE));
+                let vol = 1.0;
+                if (rawVol !== "" && rawVol !== undefined && !isNaN(parseFloat(rawVol))) {
+                    vol = parseFloat(rawVol) > 1.0 ? parseFloat(rawVol) / 100.0 : parseFloat(rawVol);
+                }
+                
+                let bufRatio = 1.0;
+                let bufIdx = buf !== undefined ? buf : "0";
+                if (kag.stat && kag.stat.map_bgm_volume && kag.stat.map_bgm_volume[bufIdx] !== undefined) {
+                    bufRatio = parseFloat(kag.stat.map_bgm_volume[bufIdx]) / 100.0;
+                } else if (kag.config && kag.config.defaultBgmVolume !== undefined) {
+                    bufRatio = parseFloat(kag.config.defaultBgmVolume) / 100.0;
+                }
+                
+                let finalVol = Math.max(0, Math.min(1.0, vol * bufRatio * MASTER_BGM_SCALE));
+                gainNode.gain.value = finalVol;
 
                 source.connect(gainNode);
                 gainNode.connect(ctx.destination);
@@ -226,7 +239,7 @@
         };
 
         // Hook Sound Effect Player
-        kag.ft_play_stego_se = async function(cdnUrl, rawVol) {
+        kag.ft_play_stego_se = async function(cdnUrl, rawVol, buf) {
             try {
                 const ctx = getAudioContext();
                 if (ctx.state === 'suspended') {
@@ -239,8 +252,21 @@
                 source.buffer = audioBuffer;
                 source.loop = false;
                 
-                let normVol = (rawVol > 1.0 ? rawVol / 100.0 : rawVol);
-                gainNode.gain.value = Math.max(0, Math.min(1.0, normVol * MASTER_SE_SCALE));
+                let vol = 1.0;
+                if (rawVol !== "" && rawVol !== undefined && !isNaN(parseFloat(rawVol))) {
+                    vol = parseFloat(rawVol) > 1.0 ? parseFloat(rawVol) / 100.0 : parseFloat(rawVol);
+                }
+                
+                let bufRatio = 1.0;
+                let bufIdx = buf !== undefined ? buf : "0";
+                if (kag.stat && kag.stat.map_se_volume && kag.stat.map_se_volume[bufIdx] !== undefined) {
+                    bufRatio = parseFloat(kag.stat.map_se_volume[bufIdx]) / 100.0;
+                } else if (kag.config && kag.config.defaultSeVolume !== undefined) {
+                    bufRatio = parseFloat(kag.config.defaultSeVolume) / 100.0;
+                }
+                
+                let finalVol = Math.max(0, Math.min(1.0, vol * bufRatio * MASTER_SE_SCALE));
+                gainNode.gain.value = finalVol;
 
                 source.connect(gainNode);
                 gainNode.connect(ctx.destination);
@@ -463,7 +489,7 @@
                 let cdnUrl = window.resolveCDNUrl(fullPath);
                 
                 if (cdnUrl !== fullPath && cdnUrl.startsWith("http")) {
-                    targetKag.ft_play_stego_bgm(cdnUrl, pm.loop !== "false", parseFloat(pm.volume || 100));
+                    targetKag.ft_play_stego_bgm(cdnUrl, pm.loop !== "false", pm.volume, pm.buf);
                     if (targetKag.layer) targetKag.layer.showEventLayer();
                     if (targetKag.ftag) targetKag.ftag.nextOrder();
                     return;
@@ -516,7 +542,7 @@
                 let cdnUrl = window.resolveCDNUrl(fullPath);
                 
                 if (cdnUrl !== fullPath && cdnUrl.startsWith("http")) {
-                    targetKag.ft_play_stego_se(cdnUrl, parseFloat(pm.volume || 100));
+                    targetKag.ft_play_stego_se(cdnUrl, pm.volume, pm.buf);
                     if (targetKag.layer) targetKag.layer.showEventLayer();
                     if (targetKag.ftag) targetKag.ftag.nextOrder();
                     return;
@@ -534,6 +560,17 @@
                     activeBgmGainNode.gain.value = Math.max(0, Math.min(1.0, normVol * MASTER_BGM_SCALE));
                 }
                 return origBgmOpt.apply(this, arguments);
+            };
+        }
+
+        if (kag.tag.seopt) {
+            const origSeOpt = kag.tag.seopt.start;
+            kag.tag.seopt.start = function(pm) {
+                if (pm.volume && kag.stat && kag.stat.map_se_volume) {
+                    let buf = pm.buf || "0";
+                    kag.stat.map_se_volume[buf] = parseInt(pm.volume);
+                }
+                return origSeOpt.apply(this, arguments);
             };
         }
 
