@@ -1,8 +1,6 @@
 ; 2018/09/29 @ko10panda edit
 ;=========================================
-
 ; コンフィグ モード　画面作成
-
 ;=========================================
 	[layopt layer="message0" visible="false"]
 	[clearfix]
@@ -20,177 +18,76 @@
 
 	[iscript]
 
-// TG.config.autoRecordLabel = "true";
-
 	tf.current_bgm_vol = parseInt(sf._system_config_bgm_volume !== undefined ? sf._system_config_bgm_volume : (TG.config.defaultBgmVolume || 80));
 	tf.current_se_vol = parseInt(sf._system_config_se_volume !== undefined ? sf._system_config_se_volume : (TG.config.defaultSeVolume || 80));
 	tf.current_voice_1_vol = parseInt((sf._skskpnt_volume && sf._skskpnt_volume[1] !== undefined) ? sf._skskpnt_volume[1] : ((TYRANO.kag.stat.map_se_volume && TYRANO.kag.stat.map_se_volume[1]) || 80));
 	tf.current_voice_2_vol = parseInt((sf._skskpnt_volume && sf._skskpnt_volume[2] !== undefined) ? sf._skskpnt_volume[2] : ((TYRANO.kag.stat.map_se_volume && TYRANO.kag.stat.map_se_volume[2]) || 80));
 	tf.current_voice_3_vol = parseInt((sf._skskpnt_volume && sf._skskpnt_volume[3] !== undefined) ? sf._skskpnt_volume[3] : ((TYRANO.kag.stat.map_se_volume && TYRANO.kag.stat.map_se_volume[3]) || 80));
 
-    if (isNaN(tf.current_bgm_vol)) tf.current_bgm_vol = 80;
-    if (isNaN(tf.current_se_vol)) tf.current_se_vol = 80;
-    if (isNaN(tf.current_voice_1_vol)) tf.current_voice_1_vol = 80;
-    if (isNaN(tf.current_voice_2_vol)) tf.current_voice_2_vol = 80;
-    if (isNaN(tf.current_voice_3_vol)) tf.current_voice_3_vol = 80;
+	if (isNaN(tf.current_bgm_vol)) tf.current_bgm_vol = 80;
+	if (isNaN(tf.current_se_vol)) tf.current_se_vol = 80;
+	if (isNaN(tf.current_voice_1_vol)) tf.current_voice_1_vol = 80;
+	if (isNaN(tf.current_voice_2_vol)) tf.current_voice_2_vol = 80;
+	if (isNaN(tf.current_voice_3_vol)) tf.current_voice_3_vol = 80;
 
 	tf.current_ch_speed = parseInt(sf._system_config_ch_speed !== undefined ? sf._system_config_ch_speed : (TG.config.chSpeed || 50));
 	tf.current_auto_speed = parseInt(sf._system_config_auto_speed !== undefined ? sf._system_config_auto_speed : (TG.config.autoSpeed || 2500));
 
-if (sf.config_default_set !== true) {
-    tf.current_bgm_vol = 80;
-    tf.current_se_vol = 80;
-    tf.current_voice_1_vol = 80;
-    tf.current_voice_2_vol = 80;
-    tf.current_voice_3_vol = 80;
-    tf.current_ch_speed = 50;
-    tf.current_auto_speed = 2500;
+	if (sf.config_default_set !== true) {
+		tf.current_bgm_vol = 80;
+		tf.current_se_vol = 80;
+		tf.current_voice_1_vol = 80;
+		tf.current_voice_2_vol = 80;
+		tf.current_voice_3_vol = 80;
+		tf.current_ch_speed = 50;
+		tf.current_auto_speed = 2500;
 
-    TG.config.defaultBgmVolume = 80;
-    TG.config.defaultSeVolume = 80;
-    TG.config.chSpeed = 50;
-    TG.config.autoSpeed = 2500;
+		TG.config.defaultBgmVolume = 80;
+		TG.config.defaultSeVolume = 80;
+		TG.config.chSpeed = 50;
+		TG.config.autoSpeed = 2500;
 
-    sf._system_config_bgm_volume = 80;
-    sf._system_config_se_volume = 80;
-    sf._skskpnt_volume = [80, 80, 80, 80];
-    sf._system_config_ch_speed = 50;
-    sf._system_config_auto_speed = 2500;
+		sf._system_config_bgm_volume = 80;
+		sf._system_config_se_volume = 80;
+		sf._skskpnt_volume = [80, 80, 80, 80];
+		sf._system_config_ch_speed = 50;
+		sf._system_config_auto_speed = 2500;
 
-    if (!TYRANO.kag.stat.map_bgm_volume || typeof TYRANO.kag.stat.map_bgm_volume !== 'object') TYRANO.kag.stat.map_bgm_volume = {};
-    TYRANO.kag.stat.map_bgm_volume[0] = 80;
+		if (!TYRANO.kag.stat.map_bgm_volume || typeof TYRANO.kag.stat.map_bgm_volume !== 'object') TYRANO.kag.stat.map_bgm_volume = {};
+		TYRANO.kag.stat.map_bgm_volume[0] = 80;
 
-    if (!TYRANO.kag.stat.map_se_volume || typeof TYRANO.kag.stat.map_se_volume !== 'object') TYRANO.kag.stat.map_se_volume = {};
-    TYRANO.kag.stat.map_se_volume[0] = 80;
-    TYRANO.kag.stat.map_se_volume[1] = 80;
-    TYRANO.kag.stat.map_se_volume[2] = 80;
-    TYRANO.kag.stat.map_se_volume[3] = 80;
+		if (!TYRANO.kag.stat.map_se_volume || typeof TYRANO.kag.stat.map_se_volume !== 'object') TYRANO.kag.stat.map_se_volume = {};
+		TYRANO.kag.stat.map_se_volume[0] = 80;
+		TYRANO.kag.stat.map_se_volume[1] = 80;
+		TYRANO.kag.stat.map_se_volume[2] = 80;
+		TYRANO.kag.stat.map_se_volume[3] = 80;
 
-    sf.config_default_set = true;
-    TYRANO.kag.saveSystemVariable();
-}
+		sf.config_default_set = true;
+		TYRANO.kag.saveSystemVariable();
+	}
 
-	tf.text_skip ="ON";
-        	tf.slider_ch_speed = 101 - tf.current_ch_speed;
+	tf.text_skip = "ON";
+	tf.slider_ch_speed = 101 - tf.current_ch_speed;
 	tf.slider_auto_speed = 5001 - tf.current_auto_speed;
 
-	if(TG.config.unReadTextSkip != "true"){
-		tf.text_skip ="OFF";
+	if (TG.config.unReadTextSkip != "true") {
+		tf.text_skip = "OFF";
 	}
 
-	if(f.workanime === undefined){
-		f.workanime = 1
+	if (f.workanime === undefined) {
+		f.workanime = 1;
 	}
-	tf.current_workanime = f.workanime
+	tf.current_workanime = f.workanime;
 
-	tf._old_setting_value = {
-    current_bgm_vol: 50,
-    current_se_vol: 50,
-    current_voice_1_vol: 70,
-    current_voice_2_vol: 70,
-    current_voice_3_vol: 70,
-    current_ch_speed: 50,
-    current_auto_speed: 2500,
-    current_workanime: 1,
-}
-
-	[endscript]
-
-	[iscript]
-
+	// Image paths
 	tf.img_path = '../others/plugin/theme_kopanda_09_2/image/config/';
 	tf.btn_path_off = tf.img_path + 'off.gif';
 	tf.btn_path_on  = tf.img_path + 'on.png';
 	tf.img_check    = tf.img_path + 'check.png';
-	tf.config_x = [1074, 375, 425, 475, 525, 575, 625, 675, 725, 775, 825];
-	tf.config_num_bgm;
-	tf.config_num_se;
-	tf.config_num_voice;
-	tf.config_num_ch;
-	tf.config_num_auto;
 
-	switch(tf.current_bgm_vol){
-		case   0: tf.config_num_bgm =  0; break;
-		case  10: tf.config_num_bgm =  1; break;
-		case  20: tf.config_num_bgm =  2; break;
-		case  30: tf.config_num_bgm =  3; break;
-		case  40: tf.config_num_bgm =  4; break;
-		case  50: tf.config_num_bgm =  5; break;
-		case  60: tf.config_num_bgm =  6; break;
-		case  70: tf.config_num_bgm =  7; break;
-		case  80: tf.config_num_bgm =  8; break;
-		case  90: tf.config_num_bgm =  9; break;
-		case 100: tf.config_num_bgm = 10; break;
-
-		default: break;
-	};
-
-	switch(tf.current_se_vol){
-		case   0: tf.config_num_se =  0; break;
-		case  10: tf.config_num_se =  1; break;
-		case  20: tf.config_num_se =  2; break;
-		case  30: tf.config_num_se =  3; break;
-		case  40: tf.config_num_se =  4; break;
-		case  50: tf.config_num_se =  5; break;
-		case  60: tf.config_num_se =  6; break;
-		case  70: tf.config_num_se =  7; break;
-		case  80: tf.config_num_se =  8; break;
-		case  90: tf.config_num_se =  9; break;
-		case 100: tf.config_num_se = 10; break;
-
-		default: break;
-	};
-
-	switch(tf.current_voice_vol){
-		case   0: tf.config_num_voice =  0; break;
-		case  10: tf.config_num_voice =  1; break;
-		case  20: tf.config_num_voice =  2; break;
-		case  30: tf.config_num_voice =  3; break;
-		case  40: tf.config_num_voice =  4; break;
-		case  50: tf.config_num_voice =  5; break;
-		case  60: tf.config_num_voice =  6; break;
-		case  70: tf.config_num_voice =  7; break;
-		case  80: tf.config_num_voice =  8; break;
-		case  90: tf.config_num_voice =  9; break;
-		case 100: tf.config_num_voice = 10; break;
-
-		default: break;
-	};
-
-	switch(tf.current_ch_speed){
-		case 100: tf.config_num_ch =  0; break;
-		case  80: tf.config_num_ch =  1; break;
-		case  50: tf.config_num_ch =  2; break;
-		case  40: tf.config_num_ch =  3; break;
-		case  30: tf.config_num_ch =  4; break;
-		case  25: tf.config_num_ch =  5; break;
-		case  20: tf.config_num_ch =  6; break;
-		case  11: tf.config_num_ch =  7; break;
-		case   8: tf.config_num_ch =  8; break;
-		case   5: tf.config_num_ch =  9; break;
-		case   1: tf.config_num_ch = 10; break;
-
-		default: break;
-	};
-
-	switch(tf.current_auto_speed){
-		case 5000: tf.config_num_auto =  0; break;
-		case 4500: tf.config_num_auto =  1; break;
-		case 4000: tf.config_num_auto =  2; break;
-		case 3500: tf.config_num_auto =  3; break;
-		case 3000: tf.config_num_auto =  4; break;
-		case 2500: tf.config_num_auto =  5; break;
-		case 2000: tf.config_num_auto =  6; break;
-		case 1300: tf.config_num_auto =  7; break;
-		case  800: tf.config_num_auto =  8; break;
-		case  500: tf.config_num_auto =  9; break;
-
-		default: break;
-	};
-
-	// ミュート用のBGM、SE音量管理
-	if( typeof f.prev_vol_list === 'undefined'){
-		f.prev_vol_list = {//[tf.current_bgm_vol, tf.config_num_bgm, tf.current_se_vol, tf.config_num_se, tf.current_voice_vol, tf.config_num_voice, tf.current_ch_speed, tf.config_num_ch];
+	// Mute memory storage
+	if (typeof f.prev_vol_list === 'undefined') {
+		f.prev_vol_list = {
 			bgm: tf.current_bgm_vol,
 			se: tf.current_se_vol,
 			voice: [
@@ -200,10 +97,13 @@ if (sf.config_default_set !== true) {
 			],
 			text: tf.current_ch_speed,
 			auto: tf.current_auto_speed,
-		}
+		};
 	}
 
-	tf.change_bgm = function(val){
+	// ----------------------------------------------------
+	// Functions for dynamic audio and slider manipulation
+	// ----------------------------------------------------
+	tf.change_bgm = function(val) {
 		var kag = TYRANO.kag;
 		var tf = kag.variable.tf;
 		let vol = val !== undefined ? parseInt(val) : parseInt(tf.current_bgm_vol);
@@ -216,14 +116,13 @@ if (sf.config_default_set !== true) {
 		if (val !== undefined && window.__update_slider_dom) {
 			window.__update_slider_dom("bgm", vol);
 		}
-		// Cập nhật icon Mute BGM
 		var btn = $(".fixlayer.bgm_mute");
 		if (btn.length > 0) {
 			btn.find("img").attr("src", tf.img_path + (vol > 0 ? "off.gif" : "on.png"));
 		}
 	};
 
-	tf.change_se = function(val, playSample){
+	tf.change_se = function(val, playSample) {
 		var kag = TYRANO.kag;
 		var tf = kag.variable.tf;
 		let vol = val !== undefined ? parseInt(val) : parseInt(tf.current_se_vol);
@@ -236,7 +135,6 @@ if (sf.config_default_set !== true) {
 		if (val !== undefined && window.__update_slider_dom) {
 			window.__update_slider_dom("se", vol);
 		}
-		// Cập nhật icon Mute SE
 		var btn = $(".fixlayer.se_mute");
 		if (btn.length > 0) {
 			btn.find("img").attr("src", tf.img_path + (vol > 0 ? "off.gif" : "on.png"));
@@ -246,7 +144,7 @@ if (sf.config_default_set !== true) {
 		}
 	};
 
-	tf.update_voice_mute_ui = function(){
+	tf.update_voice_mute_ui = function() {
 		var tf = TYRANO.kag.variable.tf;
 		var voice_mute_btns = $(".fixlayer.voice_mute");
 		if (voice_mute_btns.length >= 3) {
@@ -256,7 +154,7 @@ if (sf.config_default_set !== true) {
 		}
 	};
 
-	tf.change_voice_1 = function(val, playSample){
+	tf.change_voice_1 = function(val, playSample) {
 		var kag = TYRANO.kag;
 		var tf = kag.variable.tf;
 		let vol = val !== undefined ? parseInt(val) : parseInt(tf.current_voice_1_vol);
@@ -275,7 +173,7 @@ if (sf.config_default_set !== true) {
 		}
 	};
 
-	tf.change_voice_2 = function(val, playSample){
+	tf.change_voice_2 = function(val, playSample) {
 		var kag = TYRANO.kag;
 		var tf = kag.variable.tf;
 		let vol = val !== undefined ? parseInt(val) : parseInt(tf.current_voice_2_vol);
@@ -294,7 +192,7 @@ if (sf.config_default_set !== true) {
 		}
 	};
 
-	tf.change_voice_3 = function(val, playSample){
+	tf.change_voice_3 = function(val, playSample) {
 		var kag = TYRANO.kag;
 		var tf = kag.variable.tf;
 		let vol = val !== undefined ? parseInt(val) : parseInt(tf.current_voice_3_vol);
@@ -313,7 +211,7 @@ if (sf.config_default_set !== true) {
 		}
 	};
 
-	tf.change_ch_speed = function(val){
+	tf.change_ch_speed = function(val) {
 		var kag = TYRANO.kag;
 		var sf = kag.variable.sf;
 		var tf = kag.variable.tf;
@@ -339,7 +237,7 @@ if (sf.config_default_set !== true) {
 		}
 	};
 
-	tf.change_auto_speed = function(val){
+	tf.change_auto_speed = function(val) {
 		var kag = TYRANO.kag;
 		var sf = kag.variable.sf;
 		var tf = kag.variable.tf;
@@ -368,13 +266,21 @@ if (sf.config_default_set !== true) {
 [cm]
 
 	[bg storage="&tf.img_path +'bg_config.jpg'" time="286"]
-	[button fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" graphic="&tf.img_path + 'c_btn_back.png'" enterimg="&tf.img_path + 'c_btn_back2.png'" target="*backtitle" x="1200" y="15" name="c_btn_back"]
-	[button fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" graphic="&tf.img_path + 'config_reset_off.png'" enterimg="&tf.img_path + 'config_reset_on.png'" target="*reset" x="1064" y="680" name="config_reset"]
+	[clearfix name="c_btn_back"]
+	[button fix="true" name="c_btn_back" storage="../others/plugin/theme_kopanda_09_2/config.ks" graphic="&tf.img_path + 'c_btn_back.png'" enterimg="&tf.img_path + 'c_btn_back2.png'" target="*backtitle" x="1200" y="15"]
+	[clearfix name="config_reset"]
+	[button fix="true" name="config_reset" storage="../others/plugin/theme_kopanda_09_2/config.ks" graphic="&tf.img_path + 'config_reset_off.png'" enterimg="&tf.img_path + 'config_reset_on.png'" target="*reset" x="1064" y="680"]
 [jump storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*config_page"]
 
 
 *config_page
 [clearstack]
+
+[iscript]
+// Ensure any old slider elements are removed before creating new ones
+$(".range.fixlayer").remove();
+[endscript]
+
 ;------------------------------------------------------------------------------------------------------
 ; BGM音量
 ;------------------------------------------------------------------------------------------------------
@@ -415,7 +321,6 @@ if (sf.config_default_set !== true) {
 ;------------------------------------------------------------------------------------------------------
 ; コンフィグ起動時の画面更新
 ;------------------------------------------------------------------------------------------------------
-
 [layopt layer="0" visible="true"]
 [test_message_start]
 [s]
@@ -429,7 +334,7 @@ if (sf.config_default_set !== true) {
 if (window.gMessageTester && window.gMessageTester.destroy) {
 	window.gMessageTester.destroy();
 }
-$(".range").remove();
+$(".range.fixlayer").remove();
 TYRANO.kag.saveSystemVariable();
 [endscript]
 
@@ -443,13 +348,14 @@ TYRANO.kag.saveSystemVariable();
 
 
 ;--------------------------------------------------------------------------------
-; 初期値に戻す
+; 初期値に戻す (Reset)
 ;--------------------------------------------------------------------------------
 *reset
 [iscript]
 
 f.workanime = 1;
 tf.current_workanime = 1;
+sf._system_config_workanime = 1;
 
 tf.change_bgm(80);
 tf.change_se(80);
@@ -459,35 +365,28 @@ tf.change_voice_3(80);
 tf.change_ch_speed(50);
 tf.change_auto_speed(2500);
 
-var anime_btn = $(".fixlayer.anime_on");
-if (anime_btn.length > 0) {
-	anime_btn.find("img").attr("src", tf.img_path + "anime.png");
-}
-
 TYRANO.kag.saveSystemVariable();
 
 [endscript]
 
+[call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*anime_button" ]
 [configdelay speed="50"]
 [autoconfig speed="2500"]
 
 [return]
 
 ;================================================================================
-
 ; ボタンクリック時の処理
-
 ;================================================================================
+
 ;--------------------------------------------------------------------------------
 ; BGM音量
 ;--------------------------------------------------------------------------------
 *vol_bgm_mute
 [iscript]
-	// ミュート
-	if( tf.isMute_bgm ){
+	if (tf.isMute_bgm) {
 		f.prev_vol_list.bgm = tf.current_bgm_vol || 80;
 		tf.change_bgm(0);
-	// 解除
 	} else {
 		tf.change_bgm(f.prev_vol_list.bgm || 80);
 	}
@@ -496,9 +395,9 @@ TYRANO.kag.saveSystemVariable();
 [return]
 
 *vol_bgm_change
-	[iscript]
-	tf.change_bgm();
-	[endscript]
+[iscript]
+tf.change_bgm();
+[endscript]
 [call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*mute_bgm_button" ]
 [return]
 
@@ -506,13 +405,10 @@ TYRANO.kag.saveSystemVariable();
 ; SE音量
 ;--------------------------------------------------------------------------------
 *vol_se_mute
-
 [iscript]
-	// ミュート
-	if( tf.isMute_se ){
+	if (tf.isMute_se) {
 		f.prev_vol_list.se = tf.current_se_vol || 80;
 		tf.change_se(0);
-	// 解除
 	} else {
 		tf.change_se(f.prev_vol_list.se || 80);
 	}
@@ -521,9 +417,9 @@ TYRANO.kag.saveSystemVariable();
 [return]
 
 *vol_se_change
-	[iscript ]
-		tf.change_se();
-	[endscript ]
+[iscript]
+tf.change_se();
+[endscript]
 [call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*mute_se_button" ]
 [return]
 
@@ -531,7 +427,6 @@ TYRANO.kag.saveSystemVariable();
 ; ボイス音量
 ;--------------------------------------------------------------------------------
 *vol_voice_mute
-
 [iscript]
 	if (!f.prev_vol_list.voice) f.prev_vol_list.voice = [80, 80, 80];
 	var targetVol = 0;
@@ -549,11 +444,11 @@ TYRANO.kag.saveSystemVariable();
 [return]
 
 *vol_voice_change
-[iscript ]
-	tf.change_voice_1();
-	tf.change_voice_2();
-	tf.change_voice_3();
-[endscript ]
+[iscript]
+tf.change_voice_1();
+tf.change_voice_2();
+tf.change_voice_3();
+[endscript]
 [call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*mute_voice_button" ]
 [return]
 
@@ -561,10 +456,9 @@ TYRANO.kag.saveSystemVariable();
 ;---------------------------------------------------------------------------------
 ; テキスト速度
 ;--------------------------------------------------------------------------------
-
 *vol_text_mute
 [iscript]
-	if( tf.isMute_text ){
+	if (tf.isMute_text) {
 		f.prev_vol_list.text = tf.current_ch_speed || 50;
 		tf.change_ch_speed(1);
 	} else {
@@ -573,6 +467,7 @@ TYRANO.kag.saveSystemVariable();
 [endscript]
 [call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*mute_text_button"]
 [return]
+
 *ch_speed_skip
 *ch_speed_change
 [iscript]
@@ -582,12 +477,13 @@ tf.change_ch_speed();
 [test_message_reset]
 [call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*mute_text_button"]
 [return]
+
 ;--------------------------------------------------------------------------------
 ; オート速度
 ;--------------------------------------------------------------------------------
 *vol_auto_mute
 [iscript]
-	if( tf.isMute_auto ){
+	if (tf.isMute_auto) {
 		f.prev_vol_list.auto = tf.current_auto_speed || 2500;
 		tf.change_auto_speed(1);
 	} else {
@@ -610,7 +506,6 @@ tf.change_auto_speed();
 ; スキップ処理
 ;--------------------------------------------------------------------------------
 *skip_on
-
 	[if exp="tf.text_skip == 'ON'"]
 	[free layer="0" name="skip" time="0" wait="true"]
 	[eval exp="tf.text_skip = 'OFF'"]
@@ -620,22 +515,19 @@ tf.change_auto_speed();
 	[eval exp="tf.text_skip = 'ON'"]
 	[config_record_label skip="true"]
 	[endif]
-
 [return]
 
 ;--------------------------------------------------------------------------------
 ; アニメON/OFF処理
 ;--------------------------------------------------------------------------------
 *anime_on
-[iscript ]
+[iscript]
 f.workanime = tf.current_workanime;
 sf._system_config_workanime = f.workanime;
 TYRANO.kag.saveSystemVariable();
-[endscript ]
+[endscript]
 [call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*anime_button" ]
 [return]
-
-
 
 
 ;--------------------------------------------------------------------------------
@@ -643,45 +535,45 @@ TYRANO.kag.saveSystemVariable();
 ;--------------------------------------------------------------------------------
 *mute_bgm_button
 [clearfix name="bgm_mute" ]
-[button name="bgm_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="544" y="152" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_bgm_mute"  exp="tf.isMute_bgm = true"  cond="tf.current_bgm_vol > 0"   ]
-[button name="bgm_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="544" y="152" graphic="&tf.img_path + 'on.png'"  width="24" height="24" target="*vol_bgm_mute"  exp="tf.isMute_bgm = false" cond="tf.current_bgm_vol == 0"   ]
-[return ]
+[button name="bgm_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="544" y="152" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_bgm_mute" exp="tf.isMute_bgm = true" cond="tf.current_bgm_vol > 0"]
+[button name="bgm_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="544" y="152" graphic="&tf.img_path + 'on.png'" width="24" height="24" target="*vol_bgm_mute" exp="tf.isMute_bgm = false" cond="tf.current_bgm_vol == 0"]
+[return]
 
 
 *mute_se_button
 [clearfix name="se_mute" ]
-[button name="se_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="544" y="224" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_se_mute"  exp="tf.isMute_se = true"  cond="tf.current_se_vol > 0"    ]
-[button name="se_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="544" y="224" graphic="&tf.img_path + 'on.png'"  width="24" height="24" target="*vol_se_mute"  exp="tf.isMute_se = false" cond="tf.current_se_vol == 0"   ]
-[return ]
+[button name="se_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="544" y="224" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_se_mute" exp="tf.isMute_se = true" cond="tf.current_se_vol > 0"]
+[button name="se_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="544" y="224" graphic="&tf.img_path + 'on.png'" width="24" height="24" target="*vol_se_mute" exp="tf.isMute_se = false" cond="tf.current_se_vol == 0"]
+[return]
 
 
 *mute_voice_button
 [clearfix name="voice_mute" ]
-[button name="voice_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="1168" y="152" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = true;  tf.isMuteNum = 0"  cond="tf.current_voice_1_vol > 0"    ]
-[button name="voice_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="1168" y="152" graphic="&tf.img_path + 'on.png'"  width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = false; tf.isMuteNum = 0"  cond="tf.current_voice_1_vol == 0"   ]
-[button name="voice_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="1168" y="224" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = true;  tf.isMuteNum = 1"  cond="tf.current_voice_2_vol > 0"    ]
-[button name="voice_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="1168" y="224" graphic="&tf.img_path + 'on.png'"  width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = false; tf.isMuteNum = 1"  cond="tf.current_voice_2_vol == 0"   ]
-[button name="voice_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="1168" y="296" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = true;  tf.isMuteNum = 2"  cond="tf.current_voice_3_vol > 0"    ]
-[button name="voice_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="1168" y="296" graphic="&tf.img_path + 'on.png'"  width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = false; tf.isMuteNum = 2"  cond="tf.current_voice_3_vol == 0"   ]
-[return ]
+[button name="voice_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="1168" y="152" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = true; tf.isMuteNum = 0" cond="tf.current_voice_1_vol > 0"]
+[button name="voice_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="1168" y="152" graphic="&tf.img_path + 'on.png'" width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = false; tf.isMuteNum = 0" cond="tf.current_voice_1_vol == 0"]
+[button name="voice_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="1168" y="224" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = true; tf.isMuteNum = 1" cond="tf.current_voice_2_vol > 0"]
+[button name="voice_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="1168" y="224" graphic="&tf.img_path + 'on.png'" width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = false; tf.isMuteNum = 1" cond="tf.current_voice_2_vol == 0"]
+[button name="voice_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="1168" y="296" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = true; tf.isMuteNum = 2" cond="tf.current_voice_3_vol > 0"]
+[button name="voice_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="1168" y="296" graphic="&tf.img_path + 'on.png'" width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = false; tf.isMuteNum = 2" cond="tf.current_voice_3_vol == 0"]
+[return]
 
 
 *mute_text_button
 [clearfix name="text_mute" ]
-[button name="text_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="544" y="368" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_text_mute"  exp="tf.isMute_text = true"  cond="tf.current_ch_speed > 1"    ]
-[button name="text_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="544" y="368" graphic="&tf.img_path + 'on.png'"  width="24" height="24" target="*vol_text_mute"  exp="tf.isMute_text = false" cond="tf.current_ch_speed < 2"   ]
-[return ]
+[button name="text_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="544" y="368" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_text_mute" exp="tf.isMute_text = true" cond="tf.current_ch_speed > 1"]
+[button name="text_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="544" y="368" graphic="&tf.img_path + 'on.png'" width="24" height="24" target="*vol_text_mute" exp="tf.isMute_text = false" cond="tf.current_ch_speed < 2"]
+[return]
 
 
 *mute_auto_button
 [clearfix name="auto_mute" ]
-[button name="auto_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="544" y="440" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_auto_mute"  exp="tf.isMute_auto = true"  cond="tf.current_auto_speed > 1"    ]
-[button name="auto_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="544" y="440" graphic="&tf.img_path + 'on.png'"  width="24" height="24" target="*vol_auto_mute"  exp="tf.isMute_auto = false" cond="tf.current_auto_speed < 2"   ]
-[return ]
+[button name="auto_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="544" y="440" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_auto_mute" exp="tf.isMute_auto = true" cond="tf.current_auto_speed > 1"]
+[button name="auto_mute" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" x="544" y="440" graphic="&tf.img_path + 'on.png'" width="24" height="24" target="*vol_auto_mute" exp="tf.isMute_auto = false" cond="tf.current_auto_speed < 2"]
+[return]
+
 
 *anime_button
 [clearfix name="anime_on" ]
-[button name="anime_on" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*anime_on"  graphic="&tf.img_path + 'anime2.png'" x="920" y="440" exp="tf.current_workanime = 1" cond="tf.current_workanime == 0" ]
-[button name="anime_on" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*anime_on"  graphic="&tf.img_path + 'anime.png'"  x="920" y="440" exp="tf.current_workanime = 0" cond="tf.current_workanime == 1" ]
-[return ]
-
+[button name="anime_on" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*anime_on" graphic="&tf.img_path + 'anime2.png'" x="920" y="440" exp="tf.current_workanime = 1" cond="tf.current_workanime == 0"]
+[button name="anime_on" fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*anime_on" graphic="&tf.img_path + 'anime.png'" x="920" y="440" exp="tf.current_workanime = 0" cond="tf.current_workanime == 1"]
+[return]
