@@ -79,7 +79,7 @@ def step3_sync_engine_and_scenarios():
     if os.path.exists(os.path.join(APP_SRC_DIR, 'tyrano')):
         shutil.copytree(os.path.join(APP_SRC_DIR, 'tyrano'), os.path.join(WEB_SRC_DIR, 'tyrano'), dirs_exist_ok=True)
     
-    # 2. Đồng bộ TOÀN BỘ Plugins và scripts từ extracted_scripts và patch (awakegame_ex, tb_save_img, waapi, save_thumbnail, etc.)
+    # 2. Đồng bộ TOÀN BỘ Plugins và scripts từ extracted_scripts và patch
     others_dst = os.path.join(WEB_SRC_DIR, 'data', 'others')
     plugin_dst = os.path.join(others_dst, 'plugin')
     os.makedirs(plugin_dst, exist_ok=True)
@@ -91,6 +91,121 @@ def step3_sync_engine_and_scenarios():
     patch_plugin_dir = os.path.join(ROOT_DIR, 'patch', 'data', 'others', 'plugin')
     if os.path.exists(patch_plugin_dir):
         shutil.copytree(patch_plugin_dir, plugin_dst, dirs_exist_ok=True)
+
+    # Khắc phục triệt để lỗi corrupt của các plugin gốc (awakegame_ex, tb_save_img, waapi, uiparts_set)
+    awakegame_init = '[loadjs storage="plugin/awakegame_ex/main.js"]\n\n[return]\n'
+    awakegame_main = '''// awakegame_ex main.js
+;(function(){
+const _setLayerHtml = TYRANO.kag.layer.setLayerHtml;
+TYRANO.kag.layer.setLayerHtml = function(layer){
+    let clone = $("#tyrano_base").clone();
+    clone.attr("id", "tyrano_base_old");
+    clone.attr("class", "tyrano_base_old");
+
+    _setLayerHtml.apply(TYRANO.kag.layer, arguments);
+
+    $("#tyrano_base").css({
+        position: "absolute",
+    });
+    $("#tyrano_base").after(clone);
+    clone.fadeOut(TYRANO.kag.variable.tf._awakegame_ex || 300, function(){
+        clone.remove();
+        $("#tyrano_base").css({
+            position: "",
+        });
+    });
+};
+
+TYRANO.kag.tag.awakegame_ex = {
+    pm: {
+        variable_over: "true",
+        bgm_over: "true",
+        mask: "false",
+        time: "500",
+        graphic: "",
+        color: "black",
+    },
+    start: function(pm){
+        if (null == this.kag.tmp.sleep_game) this.kag.ftag.nextOrder();
+        else {
+            if(pm.mask == "true"){
+                TYRANO.kag.variable.tf._awakegame_ex = 0;
+            }else{
+                TYRANO.kag.variable.tf._awakegame_ex = parseInt(pm.time);
+            }
+            var sleep_game = this.kag.tmp.sleep_game;
+            "true" == pm.variable_over && (sleep_game.stat.f = this.kag.stat.f);
+            var _pm = {
+                bgm_over: pm.bgm_over
+            };
+            1 == this.kag.tmp.sleep_game_next && (_pm.auto_next = "yes");
+
+            var a = {
+                time: pm.time,
+                effect: "fadeIn",
+                color: pm.color,
+                graphic: pm.graphic,
+                folder: "",
+            };
+            if(pm.mask == "true"){
+                var e = $("<div class='layer layer_mask' data-effect='" + a.effect + "' style='z-index:1000000000000;position:absolute;'>");
+                e.css("animation-duration", parseInt(a.time) + "ms");
+                var r = parseInt(TYRANO.kag.config.scWidth),
+                    n = parseInt(TYRANO.kag.config.scHeight);
+                if (e.css({
+                    width: r,
+                    height: n
+                }), "none" == a.color ? e.css("background-color", "") : e.css("background-color", $.convertColor(a.color)), "" != a.graphic) {
+                    "" != a.folder ? folder = a.folder : folder = "image";
+                    var i = "";
+                    "" != a.graphic && (i = "./data/" + folder + "/" + a.graphic, e.css("background-image", "url(" + i + ")"));
+                }
+                $(".tyrano_base").append(e);
+            
+                e.addClass("animated " + a.effect).one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function () {
+                    TYRANO.kag.menu.loadGameData($.extend(!0, {}, sleep_game), _pm);
+                    var r = e.attr("data-effect");
+                    e.removeClass("animated " + r);
+                    e.css("animation-duration", parseInt(a.time) + "ms");
+                    e.addClass("animated " + "fadeOut").one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function () {
+                        e.remove();
+                    });
+                    TYRANO.kag.tmp.sleep_game = null;
+                });
+            }else{
+                TYRANO.kag.menu.loadGameData($.extend(!0, {}, sleep_game), _pm);
+                TYRANO.kag.tmp.sleep_game = null;
+            }
+        }
+    }
+};
+TYRANO.kag.ftag.master_tag.awakegame_ex = TYRANO.kag.tag.awakegame_ex;
+TYRANO.kag.ftag.master_tag.awakegame_ex.kag = TYRANO.kag;
+
+})();
+'''
+    tb_save_img_init = '[macro name="tb_save_img"]\n[save_img  * ]\n[endmacro]\n\n[macro name="tb_save_img_reset"]\n[save_img  storage="default" ]\n[endmacro]\n\n[return]\n'
+    uiparts_init = '[loadjs storage="plugin/uiparts_set/select.js" ]\n[loadjs storage="plugin/uiparts_set/slider.js" ]\n[loadcss file="./data/others/plugin/uiparts_set/select.css" ]\n[loadcss file="./data/others/plugin/uiparts_set/slider.css" ]\n\n[return]\n'
+    waapi_init = '[loadjs storage="plugin/waapi/audio-metadata.min.js"]\n[loadjs storage="plugin/waapi/audio-context.builder.js"]\n\n[return]\n'
+
+    for base_p in [plugin_dst, patch_plugin_dir]:
+        os.makedirs(os.path.join(base_p, 'awakegame_ex'), exist_ok=True)
+        with open(os.path.join(base_p, 'awakegame_ex', 'init.ks'), 'w', encoding='utf-8') as f:
+            f.write(awakegame_init)
+        with open(os.path.join(base_p, 'awakegame_ex', 'main.js'), 'w', encoding='utf-8') as f:
+            f.write(awakegame_main)
+
+        os.makedirs(os.path.join(base_p, 'tb_save_img'), exist_ok=True)
+        with open(os.path.join(base_p, 'tb_save_img', 'init.ks'), 'w', encoding='utf-8') as f:
+            f.write(tb_save_img_init)
+
+        os.makedirs(os.path.join(base_p, 'uiparts_set'), exist_ok=True)
+        with open(os.path.join(base_p, 'uiparts_set', 'init.ks'), 'w', encoding='utf-8') as f:
+            f.write(uiparts_init)
+
+        os.makedirs(os.path.join(base_p, 'waapi'), exist_ok=True)
+        with open(os.path.join(base_p, 'waapi', 'init.ks'), 'w', encoding='utf-8') as f:
+            f.write(waapi_init)
     
     save_thumb_src = os.path.join(ROOT_DIR, 'patch', 'data', 'others', 'save_thumbnail.js')
     if os.path.exists(save_thumb_src):

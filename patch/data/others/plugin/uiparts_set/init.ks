@@ -3,4 +3,4 @@
 [loadcss file="./data/others/plugin/uiparts_set/select.css" ]
 [loadcss file="./data/others/plugin/uiparts_set/slider.css" ]
 
-[return ]
+[return]

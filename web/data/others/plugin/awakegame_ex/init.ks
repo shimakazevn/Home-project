@@ -1,3 +1,3 @@
-`‚[loadjs storage="plugin/awakegame_ex/main.js"]
+[loadjs storage="plugin/awakegame_ex/main.js"]
 
-[retur
+[return]
