@@ -1,8 +1,0 @@
-n][preload  storage="./data/bgimage/rp_base_r1.png"  ]
-[preload  storage="./data/bgimage/black.jpg"  ]
-[preload  storage="./data/bgimage/rp_base_r2.png"  ]
-[preload  storage="./data/bgimage/rp_base_r3.png"  ]
-[preload  storage="./data/bgimage/rp_base_j1.png"  ]
-[preload  storage="./data/bgimage/rp_base_j2.png"  ]
-[preload  storage="./data/bgimage/rp_base_sonota.png"  ]
-[retur

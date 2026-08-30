@@ -1,6 +1,0 @@
-n][preload  storage="./data/bgimage/rogo.png"  ]
-[preload  storage="./data/fgimage/default/title_logo.png"  ]
-[preload  storage="./data/bgimage/title2_bg.png"  ]
-[preload  storage="./data/bgimage/event/Congratulations!.png"  ]
-[preload  storage="./data/bgimage/black.jpg"  ]
-[retur

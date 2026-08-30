@@ -1,5 +1,0 @@
-n][preload  storage="./data/bgimage/back_hankagai.png"  ]
-[preload  storage="./data/bgimage/sin_nagi_DK.png"  ]
-[preload  storage="./data/bgimage/event/nagi1.png"  ]
-[preload  storage="./data/bgimage/black.jpg"  ]
-[retur

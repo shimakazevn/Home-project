@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">HOME VN</string>
-    <string name="title_activity_main">HOME VN</string>
-    <string name="package_name">com.sorarevo.home.vn</string>
-    <string name="custom_url_scheme">com.sorarevo.home.vn</string>
-</resources>

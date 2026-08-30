@@ -1,34 +1,91 @@
-# Ignore heavy media assets & original game binaries (>8GB)
+# ═════════════════════════════════════════════════════════════════
+# HOME - Project Git Ignore Configuration
+# ═════════════════════════════════════════════════════════════════
+
+# Environment variables & secrets
+.env
+.env.*
+*.log
+
+# AI agent, editor & workspace metadata
+.gemini/
+.agents/
+.system_generated/
+GEMINI_WORKSPACE_PROMPT.md
+GAME_RESEARCH_DOC.md
+VN_Patch_Pipeline/
+UI_TRANSLATION_PACKAGE/
+UI_Graphics_For_Editor.zip
+
+# Heavy original game binaries & media assets (>8GB)
 Game/
 [Ryuugames]*.rar
 *.rar
+*.zip
+*.7z
+*.tar.gz
+*.apk
+*.ipa
 full_web_assets/
 mobile_optimized_assets/
 build-releases/
-build-android-project/android/app/build/
-build-android-project/android/.gradle/
-build-android-project/node_modules/
-build-android-project/android/app/src/main/assets/public/data/bgimage/
-build-android-project/android/app/src/main/assets/public/data/sound/
-build-android-project/android/app/src/main/assets/public/data/bgm/
+build-android-project/
 
-# Heavy game extraction dirs (>8GB, never commit)
+# Unpacked / extracted temporary assets
 unpacked_game_app/
 extracted_scripts/
 dist/
 dist_web/
 test_web_cdn/
 upload_cache.db
+tools/debug_img/
 
-# Archive builds
-*.zip
-*.apk
-*.ipa
-
-# Python cache & save files
+# Python cache & local saves
 __pycache__/
 *.pyc
 *.sav
-.env
-tools/debug_img/
+
+# Internal developer translation scripts (Keep only clean build tools)
+tools/auto_translate*
+tools/translate_*
+tools/fill_*
+tools/audit_*
+tools/fix_*
+tools/p1_*
+tools/p2_*
+tools/generate_*
+tools/test_*
+tools/chrome_workspace_bot.py
+tools/split_and_upload*
+tools/google_sheets*
+tools/package_*
+tools/clean*
+tools/finish_*
+tools/find_*
+tools/apply_*
+tools/asar_*
+tools/audio_stego_*
+tools/blogger_*
+tools/craft_*
+tools/create_*
+tools/deploy_exact_*
+tools/export_*
+tools/import_*
+tools/master_*
+tools/optimize_*
+tools/patch_*
+tools/r2_*
+tools/reimport_*
+tools/repack_*
+tools/retry_*
+tools/scan_*
+tools/setup_*
+tools/validate_*
+tools/build_all_*
+tools/build_chunk1_*
+tools/build_complete_*
+tools/build_full_*
+tools/build_ipa_*
+tools/build_launcher_*
+tools/build_multiplatform*
 
