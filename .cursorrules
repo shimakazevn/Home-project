@@ -5,8 +5,10 @@
 - Protagonist Name Guard (`name.ks`): Must always initialize default name inputs to `Hidaka` and `Shun` with `initial="Hidaka"` and `initial="Shun"`. Zero Japanese Kanji allowed in text inputs.
 - Never modify engine control tags: `[if]`, `[endif]`, `[jump]`, `[macro]`, `[endmacro]`, `[iscript]`, `[endscript]`, `[commit]`, `[playse]`.
 - Always use `[r]` for dialog line breaks. Do not use `\n`.
-- Online Auto-Patcher & Sync: Always run `git push origin main` after building releases so GitHub online installer remains in sync.
+- Scenario Updates vs EXE Rebuild:
+  - When ONLY updating scenarios, text, or UI: Re-export `.ks` -> QA check (`verify_patch_integrity.py`) -> `git push origin main`. DO NOT rebuild the EXE.
+  - ONLY rebuild the EXE (`build_pc_patch.py`) when `tools/unified_patch_installer.py` GUI or downloader engine code is modified.
+- Online Auto-Patcher & Sync: Always run `git push origin main` after modifying scenarios/UI so end-users get live online updates instantly.
 - SHA256 Integrity: Verify all 360+ patch files against SHA256 manifest.
 - Keep `tools/` clean: Only use the 5 core pipeline tools (`build_pc_patch.py`, `verify_patch_integrity.py`, `reimport_scenario.py`, `setup_fonts.py`, `unified_patch_installer.py`).
-- Always run `python tools/verify_patch_integrity.py` to ensure 0 errors before release.
-- Master Build command: `python tools/build_pc_patch.py`.
+- Always run `python tools/verify_patch_integrity.py` to ensure 0 errors before push/release.

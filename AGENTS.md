@@ -27,14 +27,21 @@ All autonomous AI agents working in this workspace MUST follow the rules defined
 
 ## 5. Online Auto-Patcher & Mandatory Git Push Sync
 - The installer is a pure Online Auto-Patcher (`tools/unified_patch_installer.py`) utilizing Windows native `curl.exe -L`.
-- Whenever scenario or UI files are modified, AI MUST run `git push origin main` after building so GitHub remote repository is immediately synchronized with local changes.
+- Whenever scenario or UI files are modified, AI MUST run `git push origin main` so the GitHub remote repository is immediately updated. The online installer on end-users' PCs will automatically fetch new changes without requiring a new EXE.
 
-## 6. Automated Integrity & SHA256 Verification
-- MUST run `python tools/verify_patch_integrity.py` before building or releasing patches.
+## 6. Strict Separation: Scenario Updates vs. Installer EXE Rebuild
+- **When ONLY modifying scenarios (`.ks`), translations, UI, or text:**
+  - DO NOT rebuild the EXE installer with PyInstaller (`tools/build_pc_patch.py`).
+  - Required workflow: Re-export/sync `.ks` $\rightarrow$ QA test (`python tools/verify_patch_integrity.py`) $\rightarrow$ `git push origin main`.
+- **When to Rebuild EXE (`build_pc_patch.py`):**
+  - ONLY when modifying the installer application itself (`tools/unified_patch_installer.py`), GUI layout, `curl` downloader logic, or bundled assets (`installer_bg.png`, `tyrano.ico`).
+
+## 7. Automated Integrity & SHA256 Verification
+- MUST run `python tools/verify_patch_integrity.py` before releasing scenario updates or rebuilding installers.
 - Must ensure 0 tag mismatch errors, 0 untranslated lines, 0 missing assets, and 100% SHA256 checksum match across all 360+ files.
 
-## 7. Pipeline & Build Commands
-- Master Build: `python tools/build_pc_patch.py` (or `BUILD_PATCH_PC.bat`)
+## 8. Pipeline & Build Commands
+- Master Build (EXE only): `python tools/build_pc_patch.py` (or `BUILD_PATCH_PC.bat`)
 - Direct Installer: `dist_pc/CAI_DAT_PATCH_VIET_HOA.exe` (or `CAI_DAT_PATCH_VIET_HOA.bat`)
 
 For full details, refer to `GEMINI.md` and `GEMINI_WORKSPACE_PROMPT.md`.

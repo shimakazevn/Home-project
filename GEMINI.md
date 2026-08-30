@@ -4,7 +4,7 @@
 
 ---
 
-## 🛑 12 ĐIỀU RĂN TỐI THƯỢNG (THE 12 IRON COMMANDMENTS)
+## 🛑 13 ĐIỀU RĂN TỐI THƯỢNG (THE 13 IRON COMMANDMENTS)
 
 ### 1. SINGLE SOURCE OF TRUTH (SSOT) DUY NHẤT TẠI `translation/`
 * **Cơ sở dữ liệu kịch bản chính:** [`translation/text_export.xlsx`](file:///e:/HOME_/translation/text_export.xlsx) / [`.csv`](file:///e:/HOME_/translation/text_export.csv).
@@ -57,11 +57,11 @@
 ---
 
 ### 6. BẮT BUỘC CHẠY KIỂM THỬ TỰ ĐỘNG & XÁC THỰC MÃ BĂM SHA256
-* Trước khi cho phép biên dịch Installer hoặc tạo bản phân phối, AI **bắt buộc** phải chạy lệnh:
+* Trước khi cho phép cập nhật kịch bản hoặc đóng gói phân phối, AI **bắt buộc** phải chạy lệnh:
   ```bash
   python tools/verify_patch_integrity.py
   ```
-* Bản build chỉ được phép tạo ra khi đạt chuẩn tuyệt đối:
+* Bản patch chỉ được phép phát hành khi đạt chuẩn tuyệt đối:
   - ❌ Lỗi cú pháp / lệch thẻ Tag: **`0 lỗi`**
   - ⚠️ Lỗi tiếng Nhật chưa dịch: **`0 dòng`**
   - ❌ Lỗi thiếu Assets / Font / CSS: **`0 lỗi`**
@@ -71,11 +71,20 @@
 
 ### 7. KIẾN TRÚC ONLINE AUTO-PATCHER & BẮT BUỘC `git push` ĐỒNG BỘ
 * Hệ thống phân phối sử dụng kiến trúc **Trình Cài Đặt Trực Tuyến (Online Auto-Patcher & Updater)** tải qua `curl.exe` của Windows.
-* **QUY TẮC BẮT BUỘC:** Mọi thay đổi kịch bản, sửa lỗi mã nguồn sau khi build và test xong **BẮT BUỘC PHẢI CHẠY `git push origin main`** để tệp nén trên GitHub remote luôn đồng bộ với mã nguồn cục bộ, tránh tình trạng Installer Online tải bản cũ bị dính lỗi.
+* **QUY TẮC BẮT BUỘC:** Mọi thay đổi kịch bản, sửa lỗi bản dịch sau khi test xong **BẮT BUỘC PHẢI CHẠY `git push origin main`** để tệp nén trên GitHub remote luôn đồng bộ với mã nguồn cục bộ. Người dùng chỉ cần bấm nút Cập nhật trên Launcher hiện có là có ngay bản mới mà không cần tải lại file EXE.
 
 ---
 
-### 8. KIẾN TRÚC NO-ARCHIVE & BACKUP CHỌN LỌC SIÊU NHẸ (17MB)
+### 8. NGUYÊN TẮC: CẬP NHẬT KỊCH BẢN KHÔNG CẦN BUILD LẠI FILE EXE
+* **Khi CHỈ sửa kịch bản (`.ks`), bản dịch, lời thoại, lựa chọn UI:**
+  - **TUYỆT ĐỐI KHÔNG CHẠY LẠI PyInstaller** (`tools/build_pc_patch.py`) vì gây lãng phí thời gian và không cần thiết.
+  - **Quy trình chuẩn:** Sửa/Re-export kịch bản $\rightarrow$ Chạy `verify_patch_integrity.py` $\rightarrow$ `git push origin main`.
+* **KHI NÀO MỚI CẦN BUILD LẠI FILE EXE:**
+  - **CHỈ DUY NHẤT KHI** có sự thay đổi trực tiếp trong mã nguồn của Trình cài đặt (`tools/unified_patch_installer.py`), ví dụ: cập nhật logic GUI Tkinter, nâng cấp động cơ tải `curl.exe`, thay đổi layout nút bấm Launcher hoặc đổi ảnh nền `installer_bg.png`.
+
+---
+
+### 9. KIẾN TRÚC NO-ARCHIVE & BACKUP CHỌN LỌC SIÊU NHẸ (17MB)
 * Thay vì sao lưu tệp `app.asar` 8.04 GB gây nghẽn ổ cứng HDD, hệ thống sử dụng cơ chế **No-Archive Folder Patcher**:
   - Giải nén 1 lần `app.asar` $\rightarrow$ `resources/app/` (nếu chưa giải nén).
   - Tạo thư mục sao lưu chọn lọc `resources/backup_original/` chỉ chứa kịch bản `.ks` và ảnh UI (loại trừ file `.gif` nặng), dung lượng chỉ **~17 MB** (tạo trong 0.05s).
@@ -85,7 +94,7 @@
 
 ---
 
-### 9. GIAO DIỆN LAUNCHER HUD VISUAL NOVEL
+### 10. GIAO DIỆN LAUNCHER HUD VISUAL NOVEL
 * Giao diện Trình cài đặt được thiết kế phong cách Game Launcher HUD:
   - Hiển thị hình nền Visual Novel chất lượng cao tràn màn hình (`tools/installer_bg.png`).
   - Thanh điều khiển Dock phẳng (Flat UI, High-contrast, Minimalist).
@@ -94,13 +103,13 @@
 
 ---
 
-### 10. NHÚNG SẴN ASSETS & SỬA LỖI CONFIG TEXT PREVIEW
+### 11. NHÚNG SẴN ASSETS & SỬA LỖI CONFIG TEXT PREVIEW
 * Luôn đồng bộ đầy đủ font chữ tiếng Việt `NotoSansJP-Medium.ttf`, `NotoSansJP-Bold.ttf`, plugin `auto_wrap` và `tyrano/css/font.css`.
 * Bản sửa lỗi xem trước văn bản trong menu Cài đặt (CONFIG) phải được nhúng trực tiếp vào `gMessageTester.js` để tránh lỗi AJAX bị Electron chặn.
 
 ---
 
-### 11. GIỮ GÌN THƯ MỤC LÀM VIỆC SẠCH SẼ (CLEAN WORKSPACE)
+### 12. GIỮ GÌN THƯ MỤC LÀM VIỆC SẠCH SẼ (CLEAN WORKSPACE)
 * Không tạo các script one-off bừa bãi trong thư mục `tools/`.
 * Chỉ duy trì và phát triển trên 5 công cụ chuẩn:
   1. `tools/build_pc_patch.py` (Master build)
@@ -112,7 +121,7 @@
 
 ---
 
-### 12. TIÊU CHUẨN VĂN PHONG DỊCH THUẬT (ANTI-MTL)
+### 13. TIÊU CHUẨN VĂN PHONG DỊCH THUẬT (ANTI-MTL)
 * Thoát ý tự nhiên thuần Việt theo hướng dẫn tại [`GEMINI_WORKSPACE_PROMPT.md`](file:///e:/HOME_/GEMINI_WORKSPACE_PROMPT.md).
 * Loại bỏ 100% ký tự ngắt âm tiếng Nhật `っ` / `ッ`, chuyển hóa thành cảm xúc tiếng Việt (`...`, `!`, `──`, hoặc từ đệm).
 * Tuân thủ đúng ma trận xưng hô giữa các nhân vật (Shun, Nagi, Rinko, Tsubomi, Hayato).
