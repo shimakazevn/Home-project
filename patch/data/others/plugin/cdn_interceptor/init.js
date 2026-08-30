@@ -249,8 +249,27 @@
         return decodePromise;
     };
 
-    // 4. Hook các tag của TyranoScript Engine
+    // 4. Hook jQuery và các tag của TyranoScript Engine
+    function hookJQuery() {
+        if (window.jQuery && window.jQuery.fn && window.jQuery.fn.attr) {
+            if (!window.jQuery.fn.__cdn_hooked) {
+                window.jQuery.fn.__cdn_hooked = true;
+                const origJqAttr = window.jQuery.fn.attr;
+                window.jQuery.fn.attr = function(name, value) {
+                    if (name === 'src' && typeof value === 'string' && !value.startsWith('data:') && !value.startsWith('blob:')) {
+                        let cdnUrl = window.resolveCDNUrl(value);
+                        if (cdnUrl && cdnUrl !== value && cdnUrl.startsWith('http')) {
+                            value = cdnUrl;
+                        }
+                    }
+                    return origJqAttr.apply(this, arguments);
+                };
+            }
+        }
+    }
+
     function installTyranoHooks() {
+        hookJQuery();
         if (!window.TYRANO || !window.TYRANO.kag) {
             setTimeout(installTyranoHooks, 50);
             return;
