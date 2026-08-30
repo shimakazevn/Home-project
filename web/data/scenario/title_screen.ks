@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_title_screen.ks]
 
 [tb_start_tyrano_code]
@@ -204,11 +205,11 @@
 [tb_show_message_window  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=4 ]
-[font color="yellow"]すべてのCG、Hシーン、エンディングを開放します。よろしいですか？[r]※盗撮CGは全て解放されますが開放率は100%になりませんのでご注意ください[r]※事前にセーブデータのバックアップを取ることを推奨します。[resetfont]
+[font color="yellow"]Mở khóa toàn bộ CG, H-Scene và các Ending. Bạn có chắc chắn không?[r]※Toàn bộ Voyeur CG sẽ được mở nhưng tỷ lệ sẽ không tự nhảy lên 100%[r]※Khuyến nghị sao lưu lại dữ liệu Save trước khi thực hiện.[resetfont]
 [_tb_end_text]
 
-[glink  color="btn_05_black"  storage="title_screen.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="全開放する"  _clickable_img=""  target="*zenkaihou_yes"  ]
-[glink  color="btn_05_black"  storage="title_screen.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="もどる"  _clickable_img=""  target="*zenkaihou_no"  ]
+[glink  color="btn_05_black"  storage="title_screen.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Mở khóa toàn bộ"  _clickable_img=""  target="*zenkaihou_yes"  ]
+[glink  color="btn_05_black"  storage="title_screen.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Quay lại"  _clickable_img=""  target="*zenkaihou_no"  ]
 [s  ]
 *zenkaihou_yes
 
@@ -216,7 +217,7 @@
 [playse  volume="100"  time="1000"  buf="0"  storage="sistem_up.mp3"  ]
 [wait  time="1000"  ]
 [tb_start_text mode=1 ]
-すべてのデータが開放されました。[p]
+Hẹn gặp lại trong những tác phẩm tiếp theo![p]
 [_tb_end_text]
 
 [call  storage="title_zenkaihou.ks"  target="*top"  ]

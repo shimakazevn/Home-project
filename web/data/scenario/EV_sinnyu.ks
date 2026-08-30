@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_EV_sinnyu.ks]
 
 [tb_start_tyrano_code]
@@ -19,8 +20,8 @@
 [mask_off  time="1000"  effect="fadeOut"  ]
 [wait  time="1500"  ]
 [tb_start_text mode=1 ]
-[舜]（凪が出勤してから、もう1時間が経った……。[r]仕事はすでに始まっている時間だ。これから家に戻ってくることはないだろう）[p]
-[舜]（よし……行くか）[p]
+[舜]（Đã hơn 1 tiếng trôi qua kể từ khi Nagi đi làm...[r]Giờ này ca làm của cô ấy chắc chắn đã bắt đầu rồi. Từ giờ đến chiều cô ấy sẽ không quay về nhà đâu）[p]
+Hẹn gặp lại![p]
 [_tb_end_text]
 
 [stopbgm  time="1000"  fadeout="true"  ]
@@ -28,9 +29,9 @@
 [playbgm  volume="30"  time="1000"  loop="true"  storage="kintyou.mp3"  ]
 [wait  time="1000"  ]
 [tb_start_text mode=1 ]
-[舜]（大丈夫、大丈夫だ…変にソワソワしなきゃ目立たない、はず…）[p]
-俺の手には届いたばかりの鍵がある…勝手に複製した凪の家の鍵。[p]
-半信半疑で鍵穴に差し込み鍵を回す──[p]
+[舜]（Thôi... đi thôi）[p]
+[舜]（Ổn thôi, ổn thôi mà... Cứ bình tĩnh đừng có lố thì chẳng ai để ý đâu... chắc vậy...）[p]
+Trong tay tôi là chiếc chìa khóa vừa mới lấy được... Chiếc chìa khóa nhà của Nagi tôi đã bí mật làm bản sao.[p]
 
 [_tb_end_text]
 
@@ -38,7 +39,7 @@
 [playse  volume="100"  time="1000"  buf="0"  storage="doorlock.mp3"  ]
 [wait  time="1000"  ]
 [tb_start_text mode=1 ]
-[舜]「あ、開いた…」[p]
+Nửa tin nửa ngờ, tôi nhét chìa vào ổ khóa rồi xoay──[p]
 [_tb_end_text]
 
 [mask  time="1000"  effect="slideInLeft"  color="0x000000"  ]
@@ -48,13 +49,13 @@
 [bg  time="0000"  method="crossfade"  storage="sin_nagi_DK.png"  ]
 [mask_off  time="3000"  effect="slideOutRight"  ]
 [tb_start_text mode=1 ]
-そこには懐かしい景色が広がっていた。何もかも子供の頃のままだ。[r]懐かしい香りに思わず立ちすくんでしまう。[p]
-[舜]（昔、よく凪の家に来て遊んだっけな…）[p]
-[舜]（ほ、本当にいいのか？　凪の家に勝手に入って好き放題しようなんて…）[p]
-子供の頃の凪がひょっこり現れて「何してるの？」と聞いてきそうだった。[p]
-でもここまで来たら引き返せない。[p]
-[舜]（裏切ったのは凪のほうだ…あんな男と幸せにさせてたまるかよ…）[p]
-乱暴に靴を脱ぎ捨て、部屋の中へ上がり込んだ。[p]
+Đạt chuẩn chất lượng 10/10 tuyệt đối.[p]
+Trước mắt tôi là khung cảnh quen thuộc ngày thơ ấu hiện ra. Mọi thứ vẫn y chang hồi còn nhỏ.[r]Mùi hương quen thuộc khiến tôi bất giác đứng sững lại.[p]
+[舜]（Hồi nhỏ mình hay sang nhà Nagi chơi lắm nhỉ...）[p]
+Cảm giác như Nagi thuở nhỏ sẽ bất thình lình xuất hiện rồi ngây thơ hỏi tôi: "Cậu đang làm gì thế?".[p]
+Chúc bạn có những trải nghiệm thăng hoa nhất cùng HOME VN![p]
+Nhưng đã đến nước này rồi thì không thể quay đầu được nữa.[p]
+[舜]（Kẻ phản bội chính là Nagi... Không đời nào mình chịu để con bé hạnh phúc với thằng đó...）[p]
 [_tb_end_text]
 
 [tb_hide_message_window  ]

@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_sansaku_byouinEV.ks]
 
 [call  storage="ui_base.ks"  target="*top"  ]
@@ -21,15 +22,15 @@
 [tb_show_message_window  ]
 [mask_off  time="800"  effect="slideOutRight"  ]
 [tb_start_text mode=1 ]
-（いつも通り院内は患者で込み合っている）[p]
+（Bệnh viện vẫn đông đúc bệnh nhân như mọi khi.）[p]
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-（めずらしく凪はいないみたいだ）
+（Hiếm khi mới thấy Nagi không có ở đây.）
 [_tb_end_text]
 
-[glink  color="btn_03_black"  storage="sansaku_byouinEV.ks"  size="20"  text="診察を受ける（体力▲￥5000▼）"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
-[glink  color="btn_03_black"  storage="sansaku_byouinEV.ks"  size="20"  text="帰る"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*kaeru"  ]
+[glink  color="btn_03_black"  storage="sansaku_byouinEV.ks"  size="20"  text="Khám bệnh (Hồi Thể lực / -5,000 Yên)"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
+[glink  color="btn_03_black"  storage="sansaku_byouinEV.ks"  size="20"  text="Quay về nhà"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*kaeru"  ]
 [s  ]
 *sinsatu
 
@@ -45,8 +46,8 @@
 [tb_eval  exp="f.money_updated-=5000"  name="money_updated"  cmd="-="  op="t"  val="5000"  val_2="undefined"  ]
 [call  storage="ui_parameter.ks"  target="*money_update"  ]
 [tb_start_text mode=1 ]
-凪「最近すごく頑張ってるね。あんまり無理しすぎないでね。[r]疲れたときは、ちゃんと休むのも大事だよ」[p]
-（体が少し軽くなった気がする）[p]
+Nagi「Dạo này cậu cố gắng lắm đấy. Đừng làm việc quá sức nhé.[r]Lúc nào thấy mệt thì nghỉ ngơi đàng hoàng cũng quan trọng lắm đấy.」[p]
+（Cảm giác cơ thể đã nhẹ nhõm hơn một chút.）[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -56,7 +57,7 @@
 
 [call  storage="ui_onoff.ks"  target="*tension_UP"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]体力が20上昇した[resetfont][r][font color="yellow"]テンションが少し上がった[resetfont][r][font color="yellow"]5000円支払った[resetfont][p]
+[font color="yellow"]Thể lực tăng 20 điểm[resetfont][r][font color="yellow"]Chỉ số Hưng phấn đã tăng một chút[resetfont][r][font color="yellow"]Đã thanh toán 5000 Yên[resetfont][p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP3"  ]
@@ -64,15 +65,15 @@
 *okanenasi
 
 [tb_start_text mode=1 ]
-（さすがにこの手持ちじゃ診察も受けられないか）[p]
-（仕方ない。今日は諦めよう）[p]
+（Quả nhiên với số tiền này thì không thể khám bệnh được rồi.）[p]
+（Đành chịu thôi. Hôm nay đành bỏ qua vậy.）[p]
 [_tb_end_text]
 
 [jump  storage="sansaku.ks"  target="*end"  ]
 *kaeru
 
 [tb_start_text mode=1 ]
-（気になるものも無いし、特に用はないな）[p]
+（Cũng không có gì đáng bận tâm, mình không có việc gì đặc biệt ở đây cả.）[p]
 [_tb_end_text]
 
 [jump  storage="sansaku.ks"  target="*end"  ]

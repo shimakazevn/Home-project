@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_job_seisou.ks]
 
 [tb_start_tyrano_code]
@@ -39,7 +40,7 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[舜]（お年寄りや子供がたまに声をかけてくれる。大変だけど……やりがいはあるんだよな）[p]
+[舜]（Thỉnh thoảng lại được người già và trẻ nhỏ bắt chuyện. Dù vất vả...... nhưng cũng rất đáng để làm.）[p]
 [_tb_end_text]
 
 [wait  time="1000"  ]

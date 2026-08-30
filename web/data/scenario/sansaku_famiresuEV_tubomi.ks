@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_sansaku_famiresuEV_tubomi.ks]
 
 [call  storage="ui_base.ks"  target="*top"  ]
@@ -15,17 +16,17 @@
 [tb_show_message_window  ]
 [mask_off  time="800"  effect="slideOutRight"  ]
 [tb_start_text mode=1 ]
-店内は少し賑わっているが、どこか心地よい静けさが漂っている。[p]
+[舜]「Yo.」[p]
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-（蕾がいる。話しかけてみようかな？）
+Tsubomi「Tên tôi không phải là 'Yo' đâu nhé? Không có việc gì thì tôi đi đây.」[p]
 [_tb_end_text]
 
-[glink  color="btn_03_black"  storage="sansaku_famiresuEV_tubomi.ks"  size="20"  text="蕾に話しかける"  x="415"  y="160"  width="497"  height="57"  _clickable_img=""  target="*hanasu"  ]
-[glink  color="btn_03_black"  storage="sansaku_famiresuEV.ks"  size="20"  text="構わず店内に入る"  x="415"  y="240"  width="497"  height="57"  _clickable_img=""  target="*taberu"  ]
-[glink  color="btn_03_black"  storage="sansaku_famiresuEV.ks"  size="20"  text="夜間のバイトをする（▲￥4000　▼体力）"  x="410"  y="320"  width="497"  height="57"  _clickable_img=""  target="*baito"  ]
-[glink  color="btn_03_black"  storage="sansaku_hankagaiEV.ks"  size="20"  text="帰る"  x="410"  y="400"  width="497"  height="57"  _clickable_img=""  target="*kaeru"  ]
+[glink  color="btn_03_black"  storage="sansaku_famiresuEV_tubomi.ks"  size="20"  text="Bắt chuyện với Tsubomi"  x="415"  y="160"  width="497"  height="57"  _clickable_img=""  target="*hanasu"  ]
+[glink  color="btn_03_black"  storage="sansaku_famiresuEV.ks"  size="20"  text="Cứ thế bước vào quán"  x="415"  y="240"  width="497"  height="57"  _clickable_img=""  target="*taberu"  ]
+[glink  color="btn_03_black"  storage="sansaku_famiresuEV.ks"  size="20"  text="Làm thêm ca đêm (+4,000 Yên / Giảm Thể lực)"  x="410"  y="320"  width="497"  height="57"  _clickable_img=""  target="*baito"  ]
+[glink  color="btn_03_black"  storage="sansaku_hankagaiEV.ks"  size="20"  text="Quay về nhà"  x="410"  y="400"  width="497"  height="57"  _clickable_img=""  target="*kaeru"  ]
 [s  ]
 *hanasu
 
@@ -68,9 +69,9 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[舜]「よぉ」[p]
+Tsubomi「A, anh à... Sao thế? [r]Cứ ngó nghiêng lung tung là bị coi như kẻ khả nghi đấy nhé?」[p]
 #蕾
-蕾「私は『よぉ』なんて名前じゃないんだけど？　用事がないならもう行くから」[p]
+Tsubomi「Anh ơi, đi hẹn hò với em không? Khc, đương nhiên là em đùa rồi.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -143,7 +144,7 @@
 
 [tb_start_text mode=1 ]
 #蕾
-蕾「あぁ、あんたか…どうしたの？　[r]キョロキョロしてると、怪しい人だと思われるわよ？」[p]
+Tsubomi「A! Khc, tình cờ thật đấy. Anh đang định đi đâu à? Em đi cùng cho nhé?」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -217,7 +218,7 @@
 
 [tb_start_text mode=1 ]
 #蕾
-蕾「お兄さん、デートコースはどう？　ふふっ、冗談に決まってるでしょ」[p]
+[舜]「Ủa? Tình cờ thật.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -292,7 +293,7 @@
 
 [tb_start_text mode=1 ]
 #蕾
-蕾「あ！　ふふ、偶然ね。どこか行くところだったの？　一緒に行ってあげよっか？」[p]
+Tsubomi「A... Hôm nay em có linh cảm là sẽ gặp được anh. Trúng phóc luôn.[r]Có vẻ hôm nay sẽ có chuyện vui đây.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -366,9 +367,9 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[舜]「あれ？　偶然」[p]
+Tsubomi「Ủa? Sao giọng anh khàn thế? Này, cho anh kẹo ngậm ho này.」[p]
 #蕾
-蕾「あ…今日なんとなく会えるかなって思っての。的中だね。[r]なんか今日はいいことありそう」[p]
+Tsubomi「Bảo vệ giọng nói cũng rất quan trọng trong ngành dịch vụ đấy nhé.[r]Vị này là em đặc biệt giới thiệu đấy. Ngậm xong nhớ cho em biết cảm nhận nhé.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -439,10 +440,10 @@
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-蕾「あれ？　なんだか声ガサガサしてない？　はい、のど飴どうぞ」[p]
-蕾「声のケアだって接客業では大事なんだから。[r]味は私のおすすめ。舐めたら感想聞かせてよ」[p]
-のど飴をもらった[p]
-[font color="yellow"]テンションが少し上がった[resetfont][p]
+Đã nhận được kẹo ngậm ho[p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng một chút[resetfont][p]
+Tsubomi「Cái này... cho anh này... Bánh quy em tự làm đấy. Em nhờ mẹ dạy cách làm rồi tự tay làm đó.」[p]
+Tsubomi「Dù biết là mua ngoài tiệm thì vừa rẻ vừa ngon hơn.[r]Nhưng em muốn anh ăn thử...」[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
@@ -452,10 +453,10 @@
 *sasiire2
 
 [tb_start_text mode=1 ]
-蕾「あの…これ。あげる…私が作ったクッキー。ママに作り方を教えてもらいながら作ったの」[p]
-蕾「買ったほうがコスパいいし美味しいのもわかってるんだけど。[r]食べてほしかったの、あんたに」[p]
-手作りクッキーをもらった[p]
-[font color="yellow"]テンションが少し上がった[resetfont][p]
+Đã nhận được bánh quy tự làm[p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng một chút[resetfont][p]
+[舜]（Vẫn đông người như mọi khi, mệt thật đấy.）[p]
+Tsubomi「Chỗ này, ngay gốc ngón tay... là vùng phản xạ của hệ thần kinh thực vật. Nếu hệ thần kinh bị rối loạn thì ấn vào sẽ khá đau đấy.」[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]

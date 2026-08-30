@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_ui_base.ks]
 
 [tb_start_tyrano_code]
@@ -15,13 +16,13 @@
 [endif]
 
 [if exp="f.tension >= 11"]
-[jump target="*ten_takai"]
+[jump target="*ten_takai3"]
 
 [elsif exp="f.tension >= 0 && f.tension <= 5"]
-[jump target="*ten_hikui"]
+[jump target="*ten_hikui1"]
 
 [elsif exp="f.tension >= 6 && f.tension <= 10"]
-[jump target="*ten_hutuu"]
+[jump target="*ten_hutuu1"]
 
 [endif]
 

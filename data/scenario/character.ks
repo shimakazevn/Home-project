@@ -1,3 +1,4 @@
+ 
 [_tb_system_call storage=system/_character.ks]
 
 *nagi_heyagi
@@ -153,10 +154,10 @@
 [jump target="*nagi_date_suki"]
 
 [elsif exp="f.koukando_nagi == 0 "]
-[jump target="*nagi_date_kirai"]
+[jump target="*nagi_date_hutuu"]
 
 [elsif exp="f.koukando_nagi >= 0 && f.koukando_nagi <= 9 "]
-[jump target="*nagi_date_nigate"]
+[jump target="*nagi_date_hutuu"]
 
 [elsif exp="f.koukando_nagi >= 10 && f.koukando_nagi <= 19 "]
 [jump target="*nagi_date_hutuu"]

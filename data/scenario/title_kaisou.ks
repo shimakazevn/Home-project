@@ -1,3 +1,5 @@
+
+
 [_tb_system_call storage=system/_title_kaisou.ks]
 
 *end

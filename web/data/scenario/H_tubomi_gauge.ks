@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_H_tubomi_gauge.ks]
 
 *voice_J_1
@@ -100,29 +101,29 @@ $('.zettyou_active').css({
 [jump target="*zettyou6"]
 
 [elsif exp="f.H_zettyou_kaisuu == 6"]
-[jump target="*zettyou7"]
+[jump target="*zettyou6"]
 
 [elsif exp="f.H_zettyou_kaisuu == 7"]
-[jump target="*zettyou8"]
+[jump target="*zettyou6"]
 
 [elsif exp="f.H_zettyou_kaisuu == 8"]
-[jump target="*zettyou9"]
+[jump target="*zettyou6"]
 
 [elsif exp="f.H_zettyou_kaisuu == 9"]
-[jump target="*zettyou10"]
+[jump target="*zettyou6"]
 
 [endif]
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_j_tubomi_zettyou1_1.mp3" buf="2"]蕾「やっ…やだ…気持ちいいの、きちゃう…変になっちゃうっ！　あぁぁぁっ！」[p]
+[playse storage="tubomi/voice_j_tubomi_zettyou1_1.mp3" buf="2"]Tsubomi「Đừng mà... Không chịu đâu... Khoái cảm đang dâng trào lên rồi... Em sắp phát điên mất thôi! A... a... a...!」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[舜]「気持ちよさそうにイケたんだ」[p]
-[playse storage="tubomi/voice_j_tubomi_zettyou1_2.mp3" buf="2"]蕾「はぁっ、はぁ…私、今絶対ビジュよくないから…髪とか、グチャグチャだしっ…」[p]
+[舜]「Trông em lên đỉnh có vẻ sướng lắm nhỉ」[p]
+[playse storage="tubomi/voice_j_tubomi_zettyou1_2.mp3" buf="2"]Tsubomi「Hà, hà... Bộ dạng em lúc này trông xấu xí lắm... Tóc tai rối bời cả ra rồi này...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_tubomi+=1"  name="Hresult_ikaseta_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -153,14 +154,14 @@ $('.zettyou_active').css({
 *zettyou2
 
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_j_tubomi_zettyou2_1.mp3" buf="2"]蕾「あっ…またなんか…お腹のそこから…熱いのきちゃうの…あっ、あぁぁっ♡」[p]
+[playse storage="tubomi/voice_j_tubomi_zettyou2_1.mp3" buf="2"] [舜]「Đâu có, trông em gợi cảm và đáng yêu lắm mà」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_j_tubomi_zettyou2_2.mp3" buf="2"]蕾「はっ、はぁ、はぁ…恥ずかしい…やだ、そんなにじっと見ないでよ…」[p]
-[playse storage="tubomi/voice_j_tubomi_zettyou2_3.mp3" buf="2"]蕾「気持ちよくて…可愛い顔なんかできないんだからぁっ…♡」[p]
+[playse storage="tubomi/voice_j_tubomi_zettyou2_2.mp3" buf="2"] Tsubomi「A... a... lại tới nữa rồi! Không dừng lại được đâu! Lên đỉnh mất thôi!」[p]
+[playse storage="tubomi/voice_j_tubomi_zettyou2_3.mp3" buf="2"] [舜]「Cứ việc lên đỉnh thỏa thích đi, Tsubomi」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_tubomi+=1"  name="Hresult_ikaseta_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -191,14 +192,14 @@ $('.zettyou_active').css({
 *zettyou3
 
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_j_tubomi_zettyou3_1.mp3" buf="2"]蕾「あっ…イク…またっ…イッちゃうの…イク、イクイクっ♡　あぁぁぁぁっ♡」[p]
+[playse storage="tubomi/voice_j_tubomi_zettyou3_1.mp3" buf="2"] Tsubomi「Hức... sướng quá đi mất... Toàn thân em run rẩy hết cả lên rồi này...♡」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_j_tubomi_zettyou3_2.mp3" buf="2"]蕾「はーっ、はーっ…やだぁ…イクの止まんないの…」[p]
-[playse storage="tubomi/voice_j_tubomi_zettyou3_3.mp3" buf="2"]蕾「頭の中…ふわふわして…おかしくなっちゃいそう…」[p]
+[playse storage="tubomi/voice_j_tubomi_zettyou3_2.mp3" buf="2"] [舜]「Thế mới là Tsubomi của anh chứ」[p]
+[playse storage="tubomi/voice_j_tubomi_zettyou3_3.mp3" buf="2"] Tsubomi「Á... chỗ đó... đừng chọc ngoáy vào mà... Em ra mất thôi!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_tubomi+=1"  name="Hresult_ikaseta_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -229,14 +230,14 @@ $('.zettyou_active').css({
 *zettyou4
 
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_j_tubomi_zettyou4_1.mp3" buf="2"]蕾「だめ…まだイッちゃうぅぅっ♡　おかしくなっちゃうっ！　イクぅぅぅっ♡」[p]
+[playse storage="tubomi/voice_j_tubomi_zettyou4_1.mp3" buf="2"] [舜]「Chỗ này nhạy cảm lắm đúng không?」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[舜]「イッてる顔、可愛いよ」[p]
-[playse storage="tubomi/voice_j_tubomi_zettyou4_2.mp3" buf="2"]蕾「は～っ、は～っ…ホント？　可愛いなら…いっかぁ♡　あぁ、もう…わかんない…」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou1_2.mp3" buf="2"]Tsubomi「Vâng ạ... Nhột lắm... Nhưng mà sướng vô cùng luôn á...♡」[p]
+[playse storage="tubomi/voice_j_tubomi_zettyou4_2.mp3" buf="2"] [舜]「Ngoan lắm, để anh làm cho em sướng hơn nữa nhé」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_tubomi+=1"  name="Hresult_ikaseta_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -267,14 +268,14 @@ $('.zettyou_active').css({
 *zettyou5
 
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_j_tubomi_zettyou5_1.mp3" buf="2"]蕾「あっ…♡　またイク…イッちゃう♡　あっ♡　んあぁぁぁっ♡」[p]
+[playse storage="tubomi/voice_j_tubomi_zettyou5_1.mp3" buf="2"] Tsubomi「A... a... a... không chịu nổi nữa rồi! Ra rồi, em bắn nước ra mất rồi!」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_j_tubomi_zettyou5_2.mp3" buf="2"]蕾「はぁっ♡　はぁっ♡　はぁっ♡　もうイケないってばぁ…♡」[p]
-[playse storage="tubomi/voice_j_tubomi_zettyou5_3.mp3" buf="2"]蕾「ふ～っ♡　ふ～っ♡　こんなに気持ちいいの…知っちゃったら戻れなくなっちゃう♡」[p]
+[playse storage="tubomi/voice_j_tubomi_zettyou5_2.mp3" buf="2"] [舜]「Phun ra nhiều nước thế này cơ à? Tuyệt thật đấy」[p]
+[playse storage="tubomi/voice_j_tubomi_zettyou5_3.mp3" buf="2"] Tsubomi「Xấu hổ chết đi được... Anh [舜] biến em thành đứa dâm đãng mất rồi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_tubomi+=1"  name="Hresult_ikaseta_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -305,14 +306,14 @@ $('.zettyou_active').css({
 *zettyou6
 
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_j_tubomi_zettyou6_1.mp3" buf="2"]蕾「あっ♡　やっ…もうっ、顔絶対変になってるっ♡　イクイクイクぅぅぅ♡」[p]
+[playse storage="tubomi/voice_j_tubomi_zettyou6_1.mp3" buf="2"] [舜]「Nhưng em thích thế đúng không?」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_j_tubomi_zettyou5_2.mp3" buf="2"]蕾「あっ…あぁ…イキっぱなしになってる…♡　ずっと気持ちいいままなの♡」[p]
-[playse storage="tubomi/voice_j_tubomi_zettyou5_3.mp3" buf="2"]蕾「体…熱くなったまま…全然収まらない…エッチの気持ちよさ、教えられちゃった」[p]
+[playse storage="tubomi/voice_j_tubomi_zettyou5_2.mp3" buf="2"] Tsubomi「Vâng... Em thích lắm... Em nghiện anh mất rồi...♡」[p]
+[playse storage="tubomi/voice_j_tubomi_zettyou5_3.mp3" buf="2"] Tsubomi「Ưm... anh chạm vào chỗ đó làm tim em đập nhanh quá...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_tubomi+=1"  name="Hresult_ikaseta_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -361,29 +362,29 @@ $('.zettyou_active').css({
 [jump target="*zettyou6_nikubenki"]
 
 [elsif exp="f.H_zettyou_kaisuu == 6"]
-[jump target="*zettyou7_nikubenki"]
+[jump target="*zettyou6_nikubenki"]
 
 [elsif exp="f.H_zettyou_kaisuu == 7"]
-[jump target="*zettyou8_nikubenki"]
+[jump target="*zettyou6_nikubenki"]
 
 [elsif exp="f.H_zettyou_kaisuu == 8"]
-[jump target="*zettyou9_nikubenki"]
+[jump target="*zettyou6_nikubenki"]
 
 [elsif exp="f.H_zettyou_kaisuu == 9"]
-[jump target="*zettyou10_nikubenki"]
+[jump target="*zettyou6_nikubenki"]
 
 [endif]
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_r_tubomi_zettyou1_1.mp3" buf="2"]蕾「あっ…んんっ…イクっ…あっ♡　イクイクイクっ…気持ちいいのきちゃうぅ♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou1_1.mp3" buf="2"] Tsubomi「A... nhột quá à... Đừng trêu em nữa mà...♡」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_r_tubomi_zettyou1_2.mp3" buf="2"]蕾「んっ♡　ふっ…はぁ…はぁ…あぁ…中、ビクビクしてる…♡」[p]
-[playse storage="tubomi/voice_r_tubomi_zettyou1_3.mp3" buf="2"]蕾「中で跳ねてるの伝わってくるっ…はぁ、はっ、一緒に気持ちよくなっちゃった？」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou1_2.mp3" buf="2"] Tsubomi「Hà... hà... Người em nóng ran lên rồi này...」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou1_3.mp3" buf="2"] Tsubomi「Chỗ đó... ướt nhẹp hết cả rồi... Tại anh hết đấy...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_tubomi+=1"  name="Hresult_ikaseta_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -414,14 +415,14 @@ $('.zettyou_active').css({
 *zettyou2_nikubenki
 
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_r_tubomi_zettyou2_1.mp3" buf="2"]蕾「あぁぁっ…まだイッちゃう…すごいっ…すごいの…あ、イクイクっ♡　あぁぁ♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou2_1.mp3" buf="2"] Tsubomi「Nhanh lên đi anh... Em muốn anh chạm vào sâu hơn nữa cơ...」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_r_tubomi_zettyou2_2.mp3" buf="2"]蕾「はっ、はぁ…はぁ…♡　こんなに気持ちよくして…どうするつもり…？」[p]
-[playse storage="tubomi/voice_r_tubomi_zettyou2_3.mp3" buf="2"]蕾「離れられなくなったら責任取ってもらわなくちゃ…♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou2_2.mp3" buf="2"] Tsubomi「A... ưm... sướng quá đi mất... Em không chịu nổi nữa đâu...♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou2_3.mp3" buf="2"] Tsubomi「Đút vào đi anh! Em thèm con cu của anh lắm rồi!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_tubomi+=1"  name="Hresult_ikaseta_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -452,14 +453,14 @@ $('.zettyou_active').css({
 *zettyou3_nikubenki
 
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_r_tubomi_zettyou3_1.mp3" buf="2"]蕾「やっ…だめっ♡　イッちゃう…イック、イクイクイクぅぅぅ♡　あぁぁぁぁ♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou3_1.mp3" buf="2"] Tsubomi「A... a... chạm tới tận cùng rồi... Sướng điên lên mất thôi!」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[舜]「くっ…中すっごい締まってる…！」[p]
-[playse storage="tubomi/voice_r_tubomi_zettyou3_2.mp3" buf="2"]蕾「あっ♡　あうぅぅっ♡　んっ…ふっ、ふぅ…♡　おっきいの…ビクビクいってるっ♡」[p]
+[playse storage="tubomi/voice_h_tubomi_gauge9.mp3" buf="2"]Tsubomi「Mạnh nữa lên anh! Đâm nát cô bé của em đi!」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou3_2.mp3" buf="2"] Tsubomi「Ra mất... Em sắp lên đỉnh rồi... Cùng ra nhé anh!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_tubomi+=1"  name="Hresult_ikaseta_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -490,14 +491,14 @@ $('.zettyou_active').css({
 *zettyou4_nikubenki
 
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_r_tubomi_zettyou4_1.mp3" buf="2"]蕾「はぁんっ♡　あっ…あぁぁ♡　またイク…あっ♡　あっ♡　あっ♡　あぁぁぁ♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou4_1.mp3" buf="2"] Tsubomi「Hức... a... ngập tràn tinh dịch bên trong rồi... Tuyệt vời quá...♡」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_r_tubomi_zettyou4_2.mp3" buf="2"]蕾「んぅぅぅ♡　おおっ♡　はっ、はぁ♡　わかんなくっ、なっちゃうのぉぉ♡」[p]
-[playse storage="tubomi/voice_r_tubomi_zettyou4_3.mp3" buf="2"]蕾「おぉぉっ♡　んおぉ、気持ちいいの収まんない…ずっとっ、ジンジンしてるっ♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou4_2.mp3" buf="2"] Tsubomi「Em yêu anh [舜] nhiều lắm... Mãi mãi là của anh thôi...♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou4_3.mp3" buf="2"] Tsubomi「Lần sau lại làm cho em sướng thế này nữa nhé anh...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_tubomi+=1"  name="Hresult_ikaseta_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -528,14 +529,14 @@ $('.zettyou_active').css({
 *zettyou5_nikubenki
 
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_r_tubomi_zettyou5_1.mp3" buf="2"]蕾「んぉっ♡　ら、らめ…しゅごいの…きちゃうっ…おっ♡　おおっ♡　イクぅぅぅ♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou5_1.mp3" buf="2"] Tsubomi「Ưm... nằm nghỉ với em một lát đã nào...」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[舜]「どこが気持ちいいのか教えてくれないの？」[p]
-[playse storage="tubomi/voice_r_tubomi_zettyou5_2.mp3" buf="2"]蕾「はぁっ♡　はっ♡　も、やだぁぁっ♡　おまんこっ、気持ちいいのぉ♡」[p]
+[playse storage="tubomi/voice_h_tubomi_gauge15.mp3" buf="2"]Tsubomi「Ôm em chặt vào đi anh... Em thích mùi của anh lắm♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou5_2.mp3" buf="2"] Tsubomi「Hì hì, hôm nay em ngoan đúng không nè? Thưởng cho em đi chứ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_tubomi+=1"  name="Hresult_ikaseta_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -566,14 +567,14 @@ $('.zettyou_active').css({
 *zettyou6_nikubenki
 
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_r_tubomi_zettyou6_1.mp3" buf="2"]蕾「んほっ♡　おっ、おおおっ♡　も、もうらめぇぇぇ♡　イグゥゥゥっ♡　おっほぉぉ♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou6_1.mp3" buf="2"] Tsubomi「Hôn em một cái nữa đi mà... Chụt♡」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_r_tubomi_zettyou6_2.mp3" buf="2"]蕾「くぅぅぅっ♡　あぁぁっ♡　ぎもぢぃぃ♡　おまんこ、馬鹿になっちゃうよぉぉ♡」[p]
-[playse storage="tubomi/voice_r_tubomi_zettyou6_3.mp3" buf="2"]蕾「おっ♡　おっ♡　あぅぅぅっ♡　壊れちゃうぅぅぅ♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou6_2.mp3" buf="2"] Tsubomi「A... anh lại cương lên rồi kìa... Thích thế không biết♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou6_3.mp3" buf="2"] Tsubomi「Lại muốn làm hiệp nữa sao? Em chiều anh hết luôn đấy♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_tubomi+=1"  name="Hresult_ikaseta_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -601,17 +602,17 @@ $('.zettyou_active').css({
 [_tb_end_tyrano_code]
 
 [return  ]
-*zettyou7_nikubenki
+*zettyou6_nikubenki
 
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_r_tubomi_zettyou7_1.mp3" buf="2"]蕾「あ゛っ♡　あ゛っ♡　またイグっ♡　ひぐぅぅぅぅっ♡　おおおおおっ♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou7_1.mp3" buf="2"] Tsubomi「Nào, đút vào trong em đi anh... Em sẵn sàng rồi!」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_r_tubomi_zettyou7_2.mp3" buf="2"]蕾「おまんこキュンキュンとまんないぃ♡　あ゛あ゛っ♡　ん゛っ♡　お゛お゛っ♡」[p]
-[playse storage="tubomi/voice_r_tubomi_zettyou7_3.mp3" buf="2"]蕾「はっ♡　はぁ♡　はぁ♡　あうぅぅ♡　も、しゃべれない、から…無理ぃ♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou7_2.mp3" buf="2"] Tsubomi「A... a... lại vào trong rồi... Ấm áp quá đi...♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou7_3.mp3" buf="2"] Tsubomi「Hiệp hai này cảm giác còn mãnh liệt hơn hiệp một nữa á!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_tubomi+=1"  name="Hresult_ikaseta_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -639,17 +640,17 @@ $('.zettyou_active').css({
 [_tb_end_tyrano_code]
 
 [return  ]
-*zettyou8_nikubenki
+*zettyou6_nikubenki
 
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_r_tubomi_zettyou8_1.mp3" buf="2"]蕾「も゛お゛っ♡　無理だってばぁぁぁっ♡　だめぇぇぇ♡　イッグぅぅぅ♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou8_1.mp3" buf="2"] Tsubomi「Thúc mạnh vào đi anh! Đừng thương tiếc gì em cả!」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_r_tubomi_zettyou8_2.mp3" buf="2"]蕾「お゛っ♡　お゛っ♡　お゛っ♡　おまんこ気持ちいいの止まんない…♡」[p]
-[playse storage="tubomi/voice_r_tubomi_zettyou8_3.mp3" buf="2"]蕾「こんなの、知らない…♡　すごいのっ♡　」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou8_2.mp3" buf="2"] Tsubomi「A... a... sướng quá... Em sắp không thở nổi rồi nè...♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou8_3.mp3" buf="2"] Tsubomi「Bắn vào đi! Bắn đầy bụng em đi anh [舜] ơi!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_tubomi+=1"  name="Hresult_ikaseta_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -677,17 +678,17 @@ $('.zettyou_active').css({
 [_tb_end_tyrano_code]
 
 [return  ]
-*zettyou9_nikubenki
+*zettyou6_nikubenki
 
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_r_tubomi_zettyou9_1.mp3" buf="2"]蕾「あ゛あ゛あ゛あ゛っ♡　もぉ壊れる…♡　体もたな…お゛お゛お゛～っ♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou9_1.mp3" buf="2"] Tsubomi「Hức... tinh dịch lại trào ra nữa rồi... Sướng mê ly luôn...♡」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_r_tubomi_zettyou9_2.mp3" buf="2"]蕾「おっほぉ♡　また中でおっきくなってる……またイッちゃうからっ♡　お゛お゛っ♡」[p]
-[playse storage="tubomi/voice_r_tubomi_zettyou9_3.mp3" buf="2"]蕾「ぎもぢぃぃ♡　んはぁ♡　おぉぉっ♡　わかんないわかんないわかんないぃ♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou9_2.mp3" buf="2"] Tsubomi「Hà... hà... em kiệt sức mất rồi... Nhưng mà hạnh phúc lắm...♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou9_3.mp3" buf="2"] Tsubomi「Cảm ơn anh vì đã yêu thương em nhiều đến thế này nhé♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_tubomi+=1"  name="Hresult_ikaseta_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -715,17 +716,17 @@ $('.zettyou_active').css({
 [_tb_end_tyrano_code]
 
 [return  ]
-*zettyou10_nikubenki
+*zettyou6_nikubenki
 
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_r_tubomi_zettyou10_1.mp3" buf="2"]蕾「お゛っ♡　お゛っ♡　お゛っ♡　お゛お゛お゛んっ♡　おまんこだめぇぇぇぇ♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou10_1.mp3" buf="2"] Tsubomi「Ngủ thôi anh... Mai chúng ta lại tiếp tục nhé♡」[p]
 [_tb_end_text]
 
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_r_tubomi_zettyou10_2.mp3" buf="2"]蕾「あ゛あ゛っ♡　はっ♡　はっ♡　はっ♡　はっ♡　子宮降りてきてる♡」[p]
-[playse storage="tubomi/voice_r_tubomi_zettyou10_3.mp3" buf="2"]蕾「射精待ちしちゃってるぅ♡　あはぁ♡　おっ♡　おおおおっ♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou10_2.mp3" buf="2"] Tsubomi「Chúc anh ngủ ngon... Anh [舜] của em♡」[p]
+[playse storage="tubomi/voice_r_tubomi_zettyou10_3.mp3" buf="2"] Tsubomi「Yêu anh nhất trên đời luôn đó nha... Chụt♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_ikaseta_tubomi+=1"  name="Hresult_ikaseta_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]

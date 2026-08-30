@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_H_3P.ks]
 
 [tb_start_tyrano_code]
@@ -32,7 +33,7 @@
 
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「私とママ、どっちがいいのか…今セックスで決めてよ」[p]
+Tsubomi「Giữa em và mẹ, anh thích ai hơn... Hãy dùng tình dục để quyết định ngay bây giờ đi.」[p]
 [_tb_end_text]
 
 *top2
@@ -247,7 +248,7 @@
 ;手マン_ループパターン
 
 [if exp="f.H_hit == 5 && f.H_high5 == 1 "]
-[call storage=H_serihu_trinkotubomi.ks target="*3P_teman_hit"]
+[call storage=H_serihu_rinkotubomi.ks target="*3P_teman_hit"]
 
 [elsif exp="f.H_teman == 0 "]
 [call storage=H_serihu_rinkotubomi.ks target="*3P_teman1"]
@@ -323,11 +324,11 @@
 [jump  storage="H_3P.ks"  target="*sounyu_skip"  cond="f.H_sounyu==1"  ]
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
-凛子「はぁ♡　はぁ♡　もう準備できちゃったよ、[舜]くん♡　見て、奥までトロトロ♡」[p]
-凛子「[舜]くんのおちんちん、奥までずっぽり挿れて、思いっきり腰振ってほしいな♡」[p]
-[舜]「やっぱりおねだりの仕方、上手だなぁ♡　ほぐれてとろけた熱々おまんこ、挿れるか…」[p]
-蕾「私にもあとでちゃんと挿れてよねっ♡　同じくらい激しくしてほしいんだから♡」[p]
-[舜]「わかってる…！　順番だけど平等にしてやるから…」[p]
+Rinko「Hà♡ Hà♡ Em đã chuẩn bị sẵn sàng rồi đây, anh Shun♡ Nhìn này, bên trong ướt sũng rồi đấy♡」[p]
+Rinko「Em muốn anh cắm ngập con cu của anh Shun vào tận sâu bên trong, rồi dập thật mạnh bạo cơ♡」[p]
+[舜]「Cách em vòi vĩnh đúng là điêu luyện thật đấy♡ Vậy anh sẽ đâm vào cái khe dâm nóng rực đang mềm nhũn ra này nhé...」[p]
+Tsubomi「Lát nữa anh cũng phải đâm vào em đàng hoàng đấy nhé♡ Em cũng muốn được làm tình mãnh liệt như thế cơ♡」[p]
+[舜]「Anh biết rồi...! Cứ theo thứ tự đi, anh sẽ chiều chuộng cả hai công bằng mà...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sounyu=1"  name="H_sounyu"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -447,7 +448,7 @@
 ;セリフをコール（挿入＿蕾）
 
 [if exp="f.H_hit == 5 && f.H_high1 == 1"]
-[call storage=H_rinkotubomi.ks target="*3P_pisuton_yukkuri_tubomi_hit"]
+[call storage=H_serihu_rinkotubomi.ks target="*3P_pisuton_yukkuri_tubomi_hit"]
 
 [elsif exp="f.H_supiritasu_pisuton_yukkuri == 0"]
 [call storage=H_serihu_rinkotubomi.ks target="*3P_pisuton_yukkuri_tubomi1"]
@@ -559,10 +560,10 @@
 
 [cm  ]
 [tb_start_text mode=1 ]
-凛子「あっ♡　あぁぁぁっ♡　[舜]くんのおちんちん、もう限界なんだね♡　いいの、出して…♡」[p]
-[舜]「中でいいんだ？　ってことは…蕾に弟か妹、できちゃうかもなぁ♡」[p]
-凛子「はぁっ♡　はぁっ♡　それでいいの…♡　中に出して…赤ちゃん作ろ…♡」[p]
-[舜]「じゃあ望み通り出してやる…！　あぁ、出るっ！　イク、イクイクイクイクっ！　んんんっ！」[p]
+Rinko「A♡ Aaaa♡ Con cu của anh Shun, đến giới hạn rồi nhỉ♡ Không sao đâu, cứ bắn ra đi...♡」[p]
+[舜]「Bắn vào trong luôn sao? Vậy là... Tsubomi có thể sắp có thêm em trai hoặc em gái rồi đấy♡」[p]
+Rinko「Hà♡ Hà♡ Thế cũng được mà...♡ Cứ bắn vào trong đi... sinh em bé cho em nhé...♡」[p]
+[舜]「Vậy anh sẽ bắn ra theo đúng ý em...! A, ra rồi! Bắn, bắn bắn bắn bắn ra mất! Ưm!」[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="3"  ]
@@ -577,9 +578,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁぁ♡　あっ♡　あぁ♡　脈打ってるっ…すごい、いつもより激し…興奮してるの？」[p]
-[舜]「蕾の前で子作りなんて興奮するだろ…！　ほら、ママ種付けされちゃったよって言うんだよ」[p]
-凛子「蕾…♡　ママ、種付けされちゃったぁ♡　はぁ、あんっ♡　今、受精中なの♡」[p]
+Rinko「Aaaa♡ A♡ A♡ Đang giật từng cơn này... tuyệt quá, mãnh liệt hơn mọi khi... anh đang hưng phấn lắm sao?」[p]
+[舜]「Làm tình tạo em bé ngay trước mặt Tsubomi thế này thì chả hưng phấn...! Kìa, mau bảo với con bé là mẹ bị phối giống rồi đi.」[p]
+Rinko「Tsubomi...♡ Mẹ bị phối giống mất rồi♡ Hà, a♡ Đang thụ tinh rồi này♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Hresult_bukkake_tubomi+=1"  name="Hresult_bukkake_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -594,9 +595,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「お゛お゛お゛っ♡　あっ♡　あぁ♡　ビュルビュル…いっぱい出て…溢れる、溢れちゃう♡」[p]
-蕾「やだ、すごい…わ、私も…こんなふうにいっぱい中に出してほしいのにぃ♡」[p]
-凛子「はひ♡　こ、こんなに出されたら…絶対デキちゃった♡　またママにされちゃったよ♡」[p]
+Rinko「Ooo♡ A♡ A♡ Tinh dịch... bắn ra nhiều quá... trào ra, trào ra ngoài mất thôi♡」[p]
+Tsubomi「Trời ơi, kinh khủng quá... E-Em cũng... muốn được bắn ngập vào trong nhiều như thế này cơ♡」[p]
+Rinko「Hí♡ B-Bị bắn nhiều thế này... chắc chắn là dính bầu rồi♡ Em lại bị anh biến thành một người mẹ mất rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Hresult_bukkake_tubomi+=1"  name="Hresult_bukkake_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -606,12 +607,12 @@
 
 [cm  ]
 [tb_start_text mode=1 ]
-蕾「あぁぁぁっ♡　もう、出して…中にほしいのっ♡　ねぇ、早くっ…♡」[p]
-[舜]「はぁ、あっ、あぁ、もう出すぞ…！　ほら、凛子さんに中に出してもらうって宣言しろ！」[p]
-蕾「はぁ♡　あぁ♡　ママっ♡　私、[舜]のできたて精子、中に注いでもらうねっ♡」[p]
-凛子「とろけた顔になっちゃってるものね…たっぷり注いでもらいなさい」[p]
-蕾「んっ♡　あぁぁ、わかったぁっ♡　全部、出してもらうねっ♡　おっ♡　おっ、おおおっ♡」[p]
-[舜]「出るっ…！　イクイクイクイクっ！　あっ、あぁぁぁぁっ！」[p]
+Tsubomi「Aaaa♡ Nhanh lên, bắn ra đi... em muốn anh bắn vào trong cơ♡ Này, nhanh lên đi...♡」[p]
+[舜]「Hà, a, a, anh bắn đây...! Này, mau tuyên bố với Rinko là em sắp được bắn vào trong đi!」[p]
+Tsubomi「Hà♡ A♡ Mẹ ơi♡ Con sắp được anh Shun rót đầy tinh dịch nóng hổi vào trong rồi này♡」[p]
+Rinko「Mặt con đê mê nhũn ra hết rồi kìa... Cứ để cậu ấy rót đầy vào đi.」[p]
+Tsubomi「Ưm♡ Aaa, con biết rồi♡ Con sẽ để anh ấy bắn hết vào trong nhé♡ O♡ O, ooo♡」[p]
+[舜]「Ra rồi...! Bắn bắn bắn bắn đây! A, aaaa!」[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="3"  ]
@@ -637,9 +638,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「お゛っ♡　しゅっごぉ♡　な、中っ♡　ビクビクってして…いっぱい出てるっ♡」[p]
-凛子「蕾、出してもらったら[舜]くんにお礼を言わなくっちゃ♡　ほら、顔を見せてあげて」[p]
-蕾「んんっ♡　くぅっ♡　はぁ、はっ♡　だ、出してくれてありがと♡　気持ちよかったの…♡」[p]
+Tsubomi「O♡ Tuyệt quá♡ B-Bên trong♡ Đang giật giật... bắn ra nhiều quá đi♡」[p]
+Rinko「Tsubomi, được bắn vào trong rồi thì phải cảm ơn anh Shun chứ♡ Kìa, ngẩng mặt lên cho cậu ấy xem đi.」[p]
+Tsubomi「Ưm♡ Kư♡ Hà, hà♡ C-Cảm ơn anh vì đã bắn vào trong em nhé♡ Sướng quá đi mất...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Hresult_nakadasi_tubomi+=1"  name="Hresult_nakadasi_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -653,9 +654,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あ゛あ゛っ♡　ん゛あ゛っ♡　そんなにいっぱい受け止めきれないぃ♡　溢れちゃうぅぅっ♡」[p]
-[舜]「こぼれないように、チンポさしっぱなしにしといてやるから大丈夫だって、ほらっ」[p]
-蕾「おっほぉ♡　ビュッビュって出しながらっ、動くのダメっ♡　気持ちよくなっちゃうぅぅっ♡」[p]
+Tsubomi「Aa♡ Aa♡ Nhiều thế này em không chứa hết được đâu♡ Trào ra ngoài mất thôi♡」[p]
+[舜]「Anh sẽ cắm nguyên con cu bên trong để tinh dịch không trào ra ngoài, không sao đâu, đây này.」[p]
+Tsubomi「Oho♡ Vừa phọt tinh ra vừa nhấp như thế là không được đâu♡ Sướng quá đi mất thôi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.Hresult_nakadasi_tubomi+=1"  name="Hresult_nakadasi_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]

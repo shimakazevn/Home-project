@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_sinnyu_PC.ks]
 
 [tb_start_tyrano_code]
@@ -13,7 +14,7 @@
 *1
 
 [tb_start_text mode=1 ]
-[舜]（それじゃ、中のデータを確認させてもらおうかな）[p]
+[舜]（Vậy thì, để xem dữ liệu bên trong có gì nào.）[p]
 [_tb_end_text]
 
 [mask  time="500"  effect="fadeIn"  color="0x000000"  ]
@@ -24,11 +25,11 @@
 
 [tb_hide_message_window  ]
 [mask_off  time="1500"  effect="fadeOut"  ]
-[tb_ptext_show  x="1008"  y="6"  size="20"  color="0xffffff"  time="1000"  text="マウスホイールでスクロール"  anim="false"  face="sans-serif,'メイリオ'"  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="1008"  y="6"  size="20"  color="0xffffff"  time="1000"  text="Cuộn con lăn chuột"  anim="false"  face="NotoSansVN, sans-serif"  edge="undefined"  shadow="undefined"  ]
 [iscript]
 // ====== 救済用「終了」ボタン ======
 $("#slide_exit_btn").remove();
-var exitBtn = $('<div id="slide_exit_btn">終了</div>');
+var exitBtn = $('<div id="slide_exit_btn">Thoát</div>');
 exitBtn.css({
 position: "absolute",
 right: "30px",
@@ -130,8 +131,8 @@ base.addEventListener('DOMMouseScroll', window._tySlideWheelHandler, {passive:fa
 
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]「…ふーん、仲良いじゃん。まぁ、俺には関係ないけどな」[p]
-[舜]「せいぜい楽しんでくれよ、その調子で。[r]この先どうなるか…ちょっと離れたところから見物させてもらうよ」[p]
+[舜]「...Hừm, tình cảm gớm nhỉ. Mà, cũng chẳng liên quan gì đến mình.」[p]
+[舜]「Cứ vui vẻ tận hưởng đi nhé, với cái đà đó.[r]Sau này sẽ ra sao đây... Để tôi đứng từ xa xem kịch hay vậy.」[p]
 [_tb_end_text]
 
 *end
@@ -159,7 +160,7 @@ window._tySlideWheelHandler = null;
 *2
 
 [tb_start_text mode=1 ]
-[舜]（それじゃ、中のデータを確認させてもらおうかな）[p]
+[舜]（Vậy thì, để xem dữ liệu bên trong có gì nào.）[p]
 [_tb_end_text]
 
 [mask  time="500"  effect="fadeIn"  color="0x000000"  ]
@@ -170,11 +171,11 @@ window._tySlideWheelHandler = null;
 
 [tb_hide_message_window  ]
 [mask_off  time="1500"  effect="fadeOut"  ]
-[tb_ptext_show  x="1008"  y="6"  size="20"  color="0xffffff"  time="1000"  text="マウスホイールでスクロール"  anim="false"  face="sans-serif,'メイリオ'"  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="1008"  y="6"  size="20"  color="0xffffff"  time="1000"  text="Cuộn con lăn chuột"  anim="false"  face="NotoSansVN, sans-serif"  edge="undefined"  shadow="undefined"  ]
 [iscript]
 // ====== 救済用「終了」ボタン ======
 $("#slide_exit_btn").remove();
-var exitBtn = $('<div id="slide_exit_btn">終了</div>');
+var exitBtn = $('<div id="slide_exit_btn">Thoát</div>');
 exitBtn.css({
 position: "absolute",
 right: "30px",
@@ -276,8 +277,8 @@ base.addEventListener('DOMMouseScroll', window._tySlideWheelHandler, {passive:fa
 
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]「お土産にロールケーキ？ふーーん…隼人の奴、ずいぶん前のめりだな」[p]
-[舜]「その勢いがいつまで続くのか…少し離れて見物させてもらうよ」[p]
+[舜]「Quà lưu niệm là bánh cuộn sao? Hừm... Tên Hayato đó cũng nhiệt tình gớm nhỉ.」[p]
+[舜]「Cái khí thế đó không biết kéo dài được bao lâu... Để tôi đứng từ xa xem kịch hay vậy.」[p]
 
 [_tb_end_text]
 
@@ -285,7 +286,7 @@ base.addEventListener('DOMMouseScroll', window._tySlideWheelHandler, {passive:fa
 *3
 
 [tb_start_text mode=1 ]
-[舜]（それじゃ、中のデータを確認させてもらおうかな）[p]
+[舜]（Vậy thì, để xem dữ liệu bên trong có gì nào.）[p]
 [_tb_end_text]
 
 [mask  time="500"  effect="fadeIn"  color="0x000000"  ]
@@ -296,11 +297,11 @@ base.addEventListener('DOMMouseScroll', window._tySlideWheelHandler, {passive:fa
 
 [tb_hide_message_window  ]
 [mask_off  time="1500"  effect="fadeOut"  ]
-[tb_ptext_show  x="1008"  y="6"  size="20"  color="0xffffff"  time="1000"  text="マウスホイールでスクロール"  anim="false"  face="sans-serif,'メイリオ'"  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="1008"  y="6"  size="20"  color="0xffffff"  time="1000"  text="Cuộn con lăn chuột"  anim="false"  face="NotoSansVN, sans-serif"  edge="undefined"  shadow="undefined"  ]
 [iscript]
 // ====== 救済用「終了」ボタン ======
 $("#slide_exit_btn").remove();
-var exitBtn = $('<div id="slide_exit_btn">終了</div>');
+var exitBtn = $('<div id="slide_exit_btn">Thoát</div>');
 exitBtn.css({
 position: "absolute",
 right: "30px",
@@ -402,8 +403,8 @@ base.addEventListener('DOMMouseScroll', window._tySlideWheelHandler, {passive:fa
 
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]「あれ？　凪の反応、ちょっと薄くなってきてないか？…ふ、隼人の焦りが見えてきたな」[p]
-[舜]「俺だったら心が折れてるけどな…まぁ、もう少し見てみるか」[p]
+[舜]「Ủa? Phản ứng của Nagi có vẻ nhạt nhòa đi rồi nhỉ? ...Hừ, thấy được sự nóng vội của Hayato rồi đấy.」[p]
+[舜]「Phải mình thì nản lòng rồi đấy... Mà, cứ xem thêm chút nữa vậy.」[p]
 
 [_tb_end_text]
 
@@ -411,7 +412,7 @@ base.addEventListener('DOMMouseScroll', window._tySlideWheelHandler, {passive:fa
 *4
 
 [tb_start_text mode=1 ]
-[舜]（それじゃ、中のデータを確認させてもらおうかな）[p]
+[舜]（Vậy thì, để xem dữ liệu bên trong có gì nào.）[p]
 [_tb_end_text]
 
 [mask  time="500"  effect="fadeIn"  color="0x000000"  ]
@@ -492,8 +493,8 @@ base.addEventListener('DOMMouseScroll', _tySlideWheelHandler, {passive:false, ca
 
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]「随分一方的な会話になってきたな…ふふ、いよいよ面白くなってきた」[p]
-[舜]「必死に縋る隼人を見るのは…ちょっと哀れだけど悪くない光景だ」[p]
+[舜]「Cuộc trò chuyện ngày càng một chiều rồi đấy... Fufu, bắt đầu thú vị rồi đây.」[p]
+[舜]「Nhìn Hayato tuyệt vọng níu kéo... thấy cũng hơi thảm hại nhưng đúng là cảnh tượng không tồi.」[p]
 
 [_tb_end_text]
 
@@ -501,7 +502,7 @@ base.addEventListener('DOMMouseScroll', _tySlideWheelHandler, {passive:false, ca
 *5
 
 [tb_start_text mode=1 ]
-[舜]（それじゃ、中のデータを確認させてもらおうかな）[p]
+[舜]（Vậy thì, để xem dữ liệu bên trong có gì nào.）[p]
 [_tb_end_text]
 
 [mask  time="500"  effect="fadeIn"  color="0x000000"  ]
@@ -582,7 +583,7 @@ base.addEventListener('DOMMouseScroll', _tySlideWheelHandler, {passive:false, ca
 
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（凪………。俺を選んでくれてありがとう）[p]
+[舜]（Nagi......... Cảm ơn em đã chọn anh.）[p]
 [_tb_end_text]
 
 [jump  storage="sinnyu_PC.ks"  target="*end"  ]

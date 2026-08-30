@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_H_serihu_rinko.ks]
 
 *high
@@ -30,9 +31,9 @@
 *supiritasu_kaiwa1
 
 [tb_start_text mode=1 ]
-凛子「じっと見てどうしたの？　ふふ、緊張しちゃった？」[p]
-[舜]「あ、すみません…全部エッチで…」[p]
-凛子「上手ね…[舜]くんに見られてるだけで、なんか私も興奮しちゃうみたい…」[p]
+Rinko「Chị nhìn chằm chằm làm em sao thế? Khc, em căng thẳng à?」[p]
+[舜]「A, em xin lỗi... Chỗ nào của chị cũng dâm đãng quá...」[p]
+Rinko「Em giỏi thật đấy... Chỉ cần bị cậu Shun nhìn thôi, tự nhiên chị cũng thấy hưng phấn theo...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_sikan_rinko+=1"  name="H_supiritasu_sikan_rinko"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -40,9 +41,9 @@
 *supiritasu_kaiwa2
 
 [tb_start_text mode=1 ]
-凛子「そんなに見つめられたら恥ずかしい…じゃあ私も[舜]くんのことじっと見ちゃおうかな♡」[p]
-凛子「ふふ、見つめ合っちゃったね…♡　変な顔してないかな～」[p]
-[舜]（当然だけど…凛子さんかなり酔ってるな…）[p]
+Rinko「Bị nhìn chằm chằm thế này xấu hổ lắm... Vậy chị cũng nhìn chằm chằm cậu Shun nhé♡」[p]
+Rinko「Khc, hai chị em mình nhìn nhau rồi nhỉ...♡ Mặt chị có kỳ lạ lắm không~」[p]
+[舜]（Đương nhiên rồi... Chị Rinko say lắm rồi...）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_sikan_rinko+=1"  name="H_supiritasu_sikan_rinko"  cmd="+="  op="t"  val="1"  ]
@@ -50,9 +51,9 @@
 *supiritasu_kaiwa3
 
 [tb_start_text mode=1 ]
-凛子「そんなに見つめられたら恥ずかしい…じゃあ私も[舜]くんのことじっと見ちゃおうかな♡」[p]
-凛子「ふふ、見つめ合っちゃったね…♡　変な顔してないかな～」[p]
-[舜]（当然だけど…凛子さんかなり酔ってるな…）[p]
+Rinko「Bị nhìn chằm chằm thế này xấu hổ lắm... Vậy chị cũng nhìn chằm chằm cậu Shun nhé♡」[p]
+Rinko「Khc, hai chị em mình nhìn nhau rồi nhỉ...♡ Mặt chị có kỳ lạ lắm không~」[p]
+[舜]（Đương nhiên rồi... Chị Rinko say lắm rồi...）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_sikan_rinko=0"  name="H_supiritasu_sikan_rinko"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -60,9 +61,9 @@
 *supiritasu_kiss1
 
 [tb_start_text mode=1 ]
-凛子「んっ…ちゅ、ちゅぷ、ちゅ…んんっ…はぁ、そんなに激しくキスされたら…」[p]
-[舜]「凛子さんの唇、プルプルで柔らか…」[p]
-凛子「ちゅぷ、ちゅ、ちゅ、んんっ♡　気持ちよくなっちゃう…♡　はぁ、はふっ♡」[p]
+Rinko「Ưm... chu, chụt, chu... ưm... haa, bị hôn mãnh liệt thế này thì...」[p]
+[舜]「Môi chị Rinko, căng mọng và mềm mại quá...」[p]
+Rinko「Chụt, chu, chu, ưm♡ Sướng quá đi mất...♡ Haa, hafu♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low3==1"  ]
@@ -72,9 +73,9 @@
 *supiritasu_kiss2
 
 [tb_start_text mode=1 ]
-凛子「んむっ…んっ♡　ちゅぷ、ちゅく、んん、[舜]くんの舌入ってきちゃったぁ…んんっ♡」[p]
-[舜]「ふーっ、ふーっ、んんっ、口の中あっつ…とまんない…」[p]
-凛子「はふ、ちゅくちゅくちゅく、じゅるるる♡　んんっ、キス気持ちいい♡」[p]
+Rinko「Ưm... ưm♡ Chụt, chụt, ưm, lưỡi của cậu Shun chui vào mất rồi... ưm♡」[p]
+[舜]「Phù, phù, ưm, bên trong miệng nóng quá... không dừng lại được...」[p]
+Rinko「Hafu, chụt chụt chụt, chụt chụt♡ Ưm, hôn sướng quá♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_kiss_rinko+=1"  name="H_supiritasu_kiss_rinko"  cmd="+="  op="t"  val="1"  ]
@@ -84,9 +85,9 @@
 *supiritasu_kiss3
 
 [tb_start_text mode=1 ]
-凛子「じゅぷ、じゅぷちゅっちゅ♡　はぁ、はっ♡　激し…食べられちゃうみたい♡」[p]
-凛子「はぁ、はっ…舌絡ませるの…気持ちいいね…♡　んんっ、ちゅぷ、ちゅっちゅ♡」[p]
-[舜]（あ～、ねっとりキス最高すぎ…）[p]
+Rinko「Chụt, chụt chụt chụt♡ Haa, ha♡ Mãnh liệt quá... cứ như sắp bị ăn thịt vậy♡」[p]
+Rinko「Haa, ha... Quấn lưỡi thế này... sướng thật đấy...♡ Ưm, chụt, chụt chụt♡」[p]
+[舜]（A~, nụ hôn ướt át này tuyệt quá...）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_kiss_rinko=0"  name="H_supiritasu_kiss_rinko"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -98,9 +99,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ちゅぷ、ちゅ…んんっ♡　はっ、はぁ♡　すごい…今の…」[p]
-凛子「キスだけで…お腹の辺りきゅんとしちゃった…♡　体が悦んでるみたい…♡」[p]
-[舜]（とろんとした顔…めちゃくちゃエロいぞ…）[p]
+Rinko「Chụt, chu... ưm♡ Ha, haa♡ Tuyệt quá... vừa nãy...」[p]
+Rinko「Chỉ hôn thôi mà... quanh bụng chị đã thắt lại rồi...♡ Cơ thể chị như đang thích thú vậy...♡」[p]
+[舜]（Khuôn mặt đê mê kia... dâm đãng vô cùng...）[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond="f.H_high3==1"  ]
@@ -109,9 +110,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「んっ…♡　おっぱい好きなの？　遠慮しなくていいよ、いっぱい触って♡」[p]
-[舜]（すごいボリュームだ…手から溢れてる…！）[p]
-凛子「んっ♡　鷲掴みされちゃった…揉みしだいていいからね。好きにして♡」[p]
+Rinko「Ưm...♡ Em thích vú à? Không cần ngại đâu, cứ sờ nhiều vào nhé♡」[p]
+[舜]（To quá... tràn cả ra khỏi tay mình rồi...!）[p]
+Rinko「Ưm♡ Bị bóp trọn rồi... Em cứ nhào nặn đi nhé. Cứ làm gì tùy thích♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_munemomi_rinko+=1"  name="H_supiritasu_munemomi_rinko"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -121,9 +122,9 @@
 *supiritasu_munemomi2
 
 [tb_start_text mode=1 ]
-凛子「あっ♡　あぁっ♡　はっ…んんっ、おっぱい気に入ったのね？　ふふ、赤ちゃんみたいね」[p]
-凛子「満足いくまで触って…あっ♡　はぁ、んんっ♡　その触り方…すっごく好き…♡」[p]
-凛子「[舜]くん、オスの顔になってる♡　もっと触って…♡」[p]
+Rinko「A♡ Aa♡ Ha... ưm, em thích vú thế à? Khc, cứ như em bé vậy nhỉ.」[p]
+Rinko「Cứ sờ cho đến khi thỏa mãn đi... a♡ Haa, ưm♡ Cách sờ đó... chị thích lắm...♡」[p]
+Rinko「Cậu Shun, mặt em trông đàn ông lắm đấy♡ Sờ nữa đi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_munemomi_rinko+=1"  name="H_supiritasu_munemomi_rinko"  cmd="+="  op="t"  val="1"  ]
@@ -134,9 +135,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-[舜]（あぁ…柔らか…！　しっとりふわふわだ。手から離れない…！）[p]
-凛子「んっ…はぁ、はっ♡　あんっ…♡　もみくちゃになってる…♡　んあっ♡」[p]
-凛子「そんなにおっぱい揉まれたら…ムズムズしちゃう。我慢できなくなっちゃう…♡」[p]
+[舜]（Aa... mềm quá...! Vừa ẩm ướt vừa mềm mại. Tay mình không muốn rời ra luôn...!）[p]
+Rinko「Ưm... haa, ha♡ An...♡ Bị nhào nặn tung tóe rồi...♡ Ưm a♡」[p]
+Rinko「Bị nhào nặn vú mạnh thế này... ngứa ngáy quá. Chị không kìm lại được nữa rồi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_munemomi_rinko=0"  name="H_supiritasu_munemomi_rinko"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -149,9 +150,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ああんっ♡　はっ…はぁ…♡　おっぱいだけでイッちゃうかと思った…♡」[p]
-凛子「揉みしだくの…慣れてるの…？　はぁ♡　はぁ♡　気持ちよくされちゃったぁ♡」[p]
-凛子「お腹の奥…きゅ～んってしちゃったみたい…♡」[p]
+Rinko「Aan♡ Ha... haa...♡ Chị tưởng chỉ sờ vú thôi mà đã lên đỉnh rồi chứ...♡」[p]
+Rinko「Em... quen nhào nặn rồi à...? Haa♡ Haa♡ Làm chị sướng quá đi mất♡」[p]
+Rinko「Sâu trong bụng... cứ như bị thắt lại vậy...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond="f.H_high4==1"  ]
@@ -160,9 +161,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「んっ…あぁっ♡　はぁ、はっ♡　そこ、すっごく敏感だからっ…だめぇ♡」[p]
-[舜]「ほんとだ…もっと濡れてきましたよ…エロ」[p]
-凛子「やっ…♡　言わないで…はぁ、あっ♡　あんっ♡　気持ちよくなっちゃうぅぅっ♡」[p]
+Rinko「Ưm... aa♡ Haa, ha♡ Chỗ đó, nhạy cảm lắm... không được đâu♡」[p]
+[舜]「Thật này... càng ướt hơn rồi đấy... Dâm quá đi.」[p]
+Rinko「Đừng...♡ Đừng nói mà... haa, a♡ An♡ Sướng quá đi mất thôi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_tikubi_rinko+=1"  name="H_supiritasu_tikubi_rinko"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -172,9 +173,9 @@
 *supiritasu_tikubiijiri2
 
 [tb_start_text mode=1 ]
-[舜]「背中のけ反っちゃうほど気持ちいいんですか？」[p]
-凛子「ひぁっ♡　そう…気持ちいいの…♡　あぁぁっ♡　舌先でコリコリされるのもっ、好き♡」[p]
-凛子「んんっ♡　はぁ♡　あっ♡　あんっ…♡　舌だけでこんなに気持ちよくなっちゃうなんて…♡」[p]
+[舜]「Sướng đến mức lưng chị cong cớn lên luôn sao?」[p]
+Rinko「Hia♡ Đúng vậy... sướng lắm...♡ Aaaa♡ Bị đầu lưỡi mân mê thế này, chị cũng thích♡」[p]
+Rinko「Ưm♡ Haa♡ A♡ An...♡ Chỉ dùng lưỡi thôi mà đã sướng đến mức này...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_tikubi_rinko+=1"  name="H_supiritasu_tikubi_rinko"  cmd="+="  op="t"  val="1"  ]
@@ -185,9 +186,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「んぅぅぅっ♡　ダメ、ダメ、これ以上されたら…イッちゃうから…♡」[p]
-[舜]（すごい乱れようだな…凛子さんがこんな声出すなんて…エロ過ぎる！）[p]
-凛子「あっ♡　あっ♡　あぁっ♡　んぅぅっ♡　ヌルヌルが絡みついてきてるっ♡　あぁぁぁっ♡」[p]
+Rinko「Ưn ưưư♡ Không được, không được đâu, thêm nữa là... chị lên đỉnh mất...♡」[p]
+[舜]（Lăng loàn quá đi... Chị Rinko mà cũng rên ra mấy tiếng này sao... Dâm đãng vô cùng!）[p]
+Rinko「A♡ A♡ Aa♡ Ưn ưư♡ Nước nhờn nhầy nhụa quấn lấy nhau rồi♡ Aaaa♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_tikubi_rinko=0"  name="H_supiritasu_tikubi_rinko"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -200,9 +201,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁっ♡　はぁ、あっ…今の…すごい…♡　乳首…弱いみたい♡」[p]
-凛子「触るの上手なのね…♡　乳首触られてイキそうになったの初めて…♡」[p]
-凛子「…もう、下はびしょ濡れになってると思う…♡」[p]
+Rinko「Aaaa♡ Haa, a... Vừa nãy... tuyệt quá...♡ Đầu vú... yếu ớt mất rồi♡」[p]
+Rinko「Em sờ giỏi thật đấy...♡ Đây là lần đầu tiên chị sắp lên đỉnh chỉ vì bị sờ đầu vú đấy...♡」[p]
+Rinko「...Chắc bây giờ, bên dưới đã ướt sũng rồi...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond="f.H_high5==1"  ]
@@ -210,9 +211,9 @@
 *supiritasu_matazuri1
 
 [tb_start_text mode=1 ]
-凛子「きゃんっ…もう♡　びっくりするけど、なんかクセになりそう♡」[p]
-凛子「ひゃっ…ふふ♡　もう一回してほしいって顔に出ちゃってる？」[p]
-凛子「んっ…そこ、もうちょっと構ってほしいかも♡」[p]
+Rinko「Kyan... ồ♡ Bất ngờ thật đấy, nhưng mà chắc chị nghiện mất thôi♡」[p]
+Rinko「Hya... khc♡ Mặt chị đang hiện rõ vẻ muốn em làm thêm lần nữa à?」[p]
+Rinko「Ưm... chỗ đó, chị muốn em quan tâm thêm chút nữa♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_matazuri_rinko+=1"  name="H_supiritasu_matazuri_rinko"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -222,8 +223,8 @@
 *supiritasu_matazuri2
 
 [tb_start_text mode=1 ]
-凛子「きゃっ…あは♡　酔ってるせいかな、なんか楽しくなってきちゃった♡」[p]
-凛子「ひゃんっ…もう♡　そんなに私の反応見るの好きなの？」[p]
+Rinko「Kya... aha♡ Tại say nên chị thấy vui quá đi mất♡」[p]
+Rinko「Hyan... ồ♡ Em thích nhìn phản ứng của chị đến thế sao?」[p]
 
 [_tb_end_text]
 
@@ -234,8 +235,8 @@
 *supiritasu_matazuri3
 
 [tb_start_text mode=1 ]
-凛子「きゃんっ…ふふ♡　今のちょっと好きだったかも♡」[p]
-凛子「んっ…そんな嬉しそうにされたら、私まで期待しちゃうじゃない♡」[p]
+Rinko「Kyan... khc♡ Chắc chị thích cảm giác vừa nãy rồi♡」[p]
+Rinko「Ưm... Thấy em vui như thế, làm chị cũng mong đợi theo mất thôi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_matazuri_rinko=0"  name="H_supiritasu_matazuri_rinko"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -248,9 +249,9 @@
 [mask_off  time="1000"  effect="fadeOut"  ]
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「んあぁぁぁっ♡　あんっ…♡　あぁぁっ…だめ…弱いトコ、当たってるっ♡」[p]
-凛子「あんっ♡　あっ…♡　あぁぁぁっ♡　擦られてるだけなのに…イッちゃいそう…♡」[p]
-凛子「こんなに気持ちいいなんて…相性がいいのかも…♡」[p]
+Rinko「Ưn aaaa♡ An...♡ Aaa... không được... đâm trúng điểm yếu rồi♡」[p]
+Rinko「An♡ A...♡ Aaaa♡ Mới chỉ cọ xát thôi mà... chị sắp lên đỉnh mất...♡」[p]
+Rinko「Sướng đến mức này... có lẽ cơ thể hai chị em mình hợp nhau đấy...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond="f.H_high6==1"  ]
@@ -258,9 +259,9 @@
 *supiritasu_hutomomo1
 
 [tb_start_text mode=1 ]
-凛子「んっ…♡　だめ…感触確かめるみたいに触らないで…♡」[p]
-[舜]「柔らかくてスベスベですよ。触り心地最高です…」[p]
-凛子「あんっ♡　はぁ褒め上手なんだから…んっ…大きい手…あったかい…♡」[p]
+Rinko「Ưm...♡ Đừng... đừng sờ như thể đang kiểm tra cảm giác thế chứ...♡」[p]
+[舜]「Vừa mềm mại vừa mịn màng. Cảm giác lúc sờ vào tuyệt lắm chị ạ...」[p]
+Rinko「An♡ Haa, em khéo nịnh thật đấy... ưm... bàn tay to lớn... ấm áp quá...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_hutomomo_rinko+=1"  name="H_supiritasu_hutomomo_rinko"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -271,9 +272,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「あんっ…はぁ…♡　撫で方、エッチね…♡　はぁ…はぁ…♡」[p]
-凛子「ダメ、腰動いちゃう…から…♡　あっ♡　やだ…もっと触られるの期待しちゃってる♡」[p]
-[舜]（凛子さん、エロ過ぎる…！）[p]
+Rinko「An... haa...♡ Cách vuốt ve của em, dâm đãng thật đấy...♡ Haa... haa...♡」[p]
+Rinko「Không được, hông chị sẽ tự động di chuyển... mất...♡ A♡ Ồ... chị lại mong đợi được sờ nhiều hơn nữa mất rồi♡」[p]
+[舜]（Chị Rinko, dâm đãng vô cùng...!）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_hutomomo_rinko+=1"  name="H_supiritasu_hutomomo_rinko"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -283,9 +284,9 @@
 *supiritasu_hutomomo3
 
 [tb_start_text mode=1 ]
-凛子「んんっ♡　ふ～っ♡　[r]ふ～っ…あんまり撫でるから…おへその下キュンってしちゃったじゃない♡」[p]
-凛子「意味は…わかってるでしょ…？　ほしくなっちゃったってこと…♡」[p]
-凛子「自分がこんなこと言っちゃうなんて…信じられない♡　頭がふわふわしてるから…♡」[p]
+Rinko「Ưm♡ Phù~♡ [r]Phù~... Tại em vuốt ve nhiều quá... nên dưới rốn chị thắt lại rồi đây này♡」[p]
+Rinko「Ý nghĩa là gì... em biết đúng không...? Là chị muốn rồi đấy...♡」[p]
+Rinko「Không ngờ chị lại nói ra mấy lời này... thật khó tin♡ Chắc tại đầu óc đang lâng lâng...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_hutomomo_rinko=0"  name="H_supiritasu_hutomomo_rinko"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -298,9 +299,9 @@
 [mask_off  time="1000"  effect="fadeOut"  ]
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁぁんっ♡　そこ、撫でるのだめぇぇっ♡　腰、動いちゃう…♡」[p]
-[舜]「イイトコ当たっちゃいましたか？」[p]
-凛子「はぁっ♡　はぁ♡　狙ったんでしょ？　もう…されるがままになっちゃいそう…♡」[p]
+Rinko「Aaaan♡ Chỗ đó, đừng vuốt ve mà♡ Hông chị, tự động di chuyển mất...♡」[p]
+[舜]「Em đâm trúng chỗ sướng rồi à?」[p]
+Rinko「Haa♡ Haa♡ Em cố tình đúng không? Thiệt tình... chắc chị cứ để mặc cho em làm mất...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond="f.H_high2==1"  ]
@@ -308,8 +309,8 @@
 *supiritasu_kuriijiri1
 
 [tb_start_text mode=1 ]
-凛子「んぅ…なにこれぇ♡　酔ってるからかな、いつもより変になっちゃう♡」[p]
-凛子「やぁ…そんなにされたら、もっと欲しくなっちゃうよぉ♡」[p]
+Rinko「Ưm... thế này là sao♡ Tại say nên chị thấy kỳ lạ hơn bình thường thì phải♡」[p]
+Rinko「Aa... bị làm thế này, chị lại muốn thêm nữa mất thôi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_tekoki_rinko+=1"  name="H_supiritasu_tekoki_rinko"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -319,8 +320,8 @@
 *supiritasu_kuriijiri2
 
 [tb_start_text mode=1 ]
-凛子「はぁ…なんか身体までぽかぽかして、すっごく敏感になってる♡」[p]
-凛子「んっ…そんな意地悪されたら、酔ってなくても我慢できないってばぁ♡」[p]
+Rinko「Haa... cả cơ thể cứ nóng ran lên, nhạy cảm vô cùng♡」[p]
+Rinko「Ưm... bị trêu chọc thế này, dù không say chị cũng chẳng nhịn nổi đâu♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_tekoki_rinko+=1"  name="H_supiritasu_tekoki_rinko"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -330,8 +331,8 @@
 *supiritasu_kuriijiri3
 
 [tb_start_text mode=1 ]
-凛子「んぅ…もう酔ってるから、恥ずかしいこといっぱい言っちゃいそう♡」[p]
-凛子「ねぇ…もっと構ってよぉ♡　今すっごく甘えたい気分なの♡」[p]
+Rinko「Ưm... tại say rồi nên chắc chị sẽ nói ra nhiều điều xấu hổ lắm đây♡」[p]
+Rinko「Này... quan tâm chị nhiều hơn đi♡ Bây giờ chị đang muốn làm nũng lắm đấy♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_tekoki_rinko=0"  name="H_supiritasu_tekoki_rinko"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -341,9 +342,9 @@
 *supiritasu_pisuton_yukkuri1
 
 [tb_start_text mode=1 ]
-凛子「あっ♡　あっ♡　あっ♡　はぁ、あんっ…♡　[舜]くん…おへその下まで届いてるよ…」[p]
-凛子「[舜]くんと１つになっちゃった…♡　嬉しい…」[p]
-[舜]（あ～…凛子さんの中うねってる…腰止まんなくなりそ…）[p]
+Rinko「A♡ A♡ A♡ Haa, an...♡ Cậu Shun... đâm tới tận dưới rốn rồi kìa...」[p]
+Rinko「Chị hòa làm một với cậu Shun mất rồi...♡ Chị vui lắm...」[p]
+[舜]（A~... Bên trong chị Rinko đang uốn lượn... hông mình sắp không dừng lại được rồi...）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -353,9 +354,9 @@
 *supiritasu_pisuton_yukkuri2
 
 [tb_start_text mode=1 ]
-凛子「んっ♡　はぁっ♡　あうっ♡　あっ、あっ♡　[舜]くんの形…中ではっきりわかる…♡」[p]
-[舜]「凛子さんの中も…伝わってきますよ…あ～溶けそうです…」[p]
-凛子「んぅぅっ♡　あっ…♡　中ゾリゾリって擦るの…それすっごくいいの…♡　ひうっ♡」[p]
+Rinko「Ưm♡ Haa♡ Au♡ A, a♡ Hình dáng của cậu Shun... bên trong cảm nhận rõ lắm...♡」[p]
+[舜]「Bên trong chị Rinko... em cũng cảm nhận được rõ lắm... a~ em sắp tan chảy rồi...」[p]
+Rinko「Ưn ưư♡ A...♡ Cọ xát sột soạt bên trong... sướng vô cùng luôn...♡ Hiư♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -365,8 +366,8 @@
 *supiritasu_pisuton_yukkuri3
 
 [tb_start_text mode=1 ]
-凛子「あっ…♡　はぁんっ♡　お、奥…奥届いちゃってる…♡」[p]
-凛子「プチュって…♡　一番奥にキスしちゃってるの…♡　はぁ、あっ、[舜]くんの先っぽ当たるっ♡」[p]
+Rinko「A...♡ Haan♡ B-Bên trong... đâm tới tận cùng rồi...♡」[p]
+Rinko「Puchu...♡ Hôn vào tận sâu nhất rồi kìa...♡ Haa, a, đầu quy đầu của cậu Shun đâm trúng rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri=0"  name="H_supiritasu_pisuton_yukkuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -378,9 +379,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「んあぁぁっ♡　ま、待ってっ…すごいとこ…擦れて…ひぅぅっ♡」[p]
-凛子「あっ♡　あっ♡　あっ♡　そこはだめ…だめだからぁっ♡」[p]
-[舜]（すごい乱れようだな…）[p]
+Rinko「Ưn aaaa♡ T-Từ từ đã... chỗ đó... cọ xát... hiưư♡」[p]
+Rinko「A♡ A♡ A♡ Chỗ đó không được đâu... không được mà♡」[p]
+[舜]（Lăng loàn quá đi...）[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond="f.H_high1==1"  ]
@@ -388,8 +389,8 @@
 *supiritasu_pisuton_hagesiku1
 
 [tb_start_text mode=1 ]
-凛子「あ゛っ♡　あ゛っ♡　あっ♡　ん゛あ゛あ゛っ♡　激しっ…そんなに揺さぶらないでっ♡」[p]
-凛子「はぁっ♡　うぁあ♡　んんっっ♡　あ゛ぁ゛ぁ゛っ♡　だめ、わかんなくなっちゃうぅ♡」[p]
+Rinko「A♡ A♡ A♡ Ưn aaaa♡ Mãnh liệt quá... đừng có lắc mạnh như thế chứ♡」[p]
+Rinko「Haa♡ Uaa♡ Ưm ưm♡ Aaaa♡ Không được, chị chẳng biết gì nữa đâu♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -399,9 +400,9 @@
 *supiritasu_pisuton_hagesiku2
 
 [tb_start_text mode=1 ]
-凛子「しゅごいの…[舜]くんにかき回されてる…♡」[p]
-凛子「あ゛う゛っ…♡　あ゛っ♡　あ゛っ♡　あ゛んっ♡　奥まで来てるっ♡　壊れちゃうぅっ♡」[p]
-凛子「あ゛あ゛あ゛あ゛っ♡　こんなの、初めて…♡　若い子のおちんちん、気持ちいぃぃっ♡」[p]
+Rinko「Tuyệt quá... Bị cậu Shun ngoáy đảo hết cả lên rồi...♡」[p]
+Rinko「Au...♡ A♡ A♡ An♡ Đâm tới tận cùng rồi♡ Hỏng mất thôi♡」[p]
+Rinko「Aaaaa♡ Cảm giác này, là lần đầu tiên...♡ Con cu của trai trẻ, sướng quá đi mất♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -411,9 +412,9 @@
 *supiritasu_pisuton_hagesiku3
 
 [tb_start_text mode=1 ]
-凛子「ひぐぅぅっ♡　あ゛っ♡　あ゛っ♡　あ゛っ♡　んぅぅっ♡　ぐちゃぐちゃなのっ…♡」[p]
-凛子「こんなに乱れて…恥ずかしいのに…♡　こ、腰動いちゃうっ♡　見ないで、見ないでぇっ♡」[p]
-凛子「だめ…子宮降りて来ちゃう♡　本気出しちゃう…♡」[p]
+Rinko「Higuuu♡ A♡ A♡ A♡ Ưn ưư♡ Nát bét hết rồi...♡」[p]
+Rinko「Lăng loàn thế này... rõ ràng là xấu hổ lắm...♡ M-Mà hông cứ tự ưỡn ẹo♡ Đừng nhìn, đừng nhìn chị mà♡」[p]
+Rinko「Không được... tử cung tụt xuống mất♡ Chị làm thật đấy nhé...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku=0"  name="H_supiritasu_pisuton_hagesiku"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -425,9 +426,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「おぉぉっ♡　あっ、そこすごぃぃっ♡　あぁぁっ♡　当たってるっ♡」[p]
-凛子「はっ♡　はっ♡　はっ♡　おかしく、なっちゃう…だめ、だめぇぇっ♡」[p]
-凛子「気持ちいいの…そこ、擦れて…んぅぅぅぅっ♡」[p]
+Rinko「Ooo♡ A, chỗ đó sướng lắm♡ Aaaa♡ Đâm trúng rồi♡」[p]
+Rinko「Ha♡ Ha♡ Ha♡ Trở nên, kỳ lạ mất thôi... không được, không được đâu♡」[p]
+Rinko「Sướng lắm... chỗ đó, bị cọ xát... ưn ưưưư♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond="f.H_high1==1"  ]
@@ -435,9 +436,9 @@
 *H1_kaiwa1
 
 [tb_start_text mode=1 ]
-凛子「やだ…私、緊張してるみたい…リードしなくちゃいけないのに…恥ずかしいな」[p]
-[舜]「俺も緊張してます…」[p]
-凛子「ほんと？　ふふっ…じゃあ同じね…よろしくお願いします♡」[p]
+Rinko「Ồ... hình như chị đang căng thẳng... Rõ ràng là người dẫn dắt mà... xấu hổ quá đi.」[p]
+[舜]「Em cũng đang căng thẳng lắm...」[p]
+Rinko「Thật à? Khc... vậy là giống nhau rồi... Mong em giúp đỡ nhé♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -445,9 +446,9 @@
 *H1_kaiwa2
 
 [tb_start_text mode=1 ]
-凛子「なんだか、体を見られるのって変な感じ…あんまり見ないで。恥ずかしいから」[p]
-[舜]「すごく綺麗です」[p]
-凛子「お世辞、上手なんだから…でもそう言ってもらえると安心する」[p]
+Rinko「Tự nhiên bị nhìn cơ thể thế này thấy kỳ lạ quá... Đừng nhìn nhiều quá. Chị xấu hổ lắm.」[p]
+[舜]「Chị đẹp lắm.」[p]
+Rinko「Em khéo nịnh thật đấy... Nhưng nghe em nói thế chị cũng yên tâm.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -455,9 +456,9 @@
 *H1_kaiwa3
 
 [tb_start_text mode=1 ]
-凛子「そんな真剣な顔されると、ドキドキしちゃう…」[p]
-凛子「学生に戻ったみたいな気持ち。ふふ、こんなこと大人が言うのは変かな…」[p]
-凛子「新鮮な気持ちで恋ができて、とっても嬉しいの…抱いてくれる？」[p]
+Rinko「Bị em nhìn với khuôn mặt nghiêm túc thế kia, chị hồi hộp lắm...」[p]
+Rinko「Cảm giác như được quay lại thời học sinh vậy. Khc, người lớn mà nói mấy câu này chắc kỳ lạ lắm nhỉ...」[p]
+Rinko「Được yêu với một cảm giác tươi mới thế này, chị vui lắm... Ôm chị nhé?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa=0"  name="H_kaiwa"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -465,9 +466,9 @@
 *H1_kiss1
 
 [tb_start_text mode=1 ]
-凛子「ちゅ…ちゅっ♡　んっ…ふふ、キスしちゃったね…」[p]
-凛子「[舜]くんの唇、とっても柔らかい…もっとキスしてほしくなっちゃう」[p]
-凛子「なんて、おねだりだったんだけど…気づいてくれた？　ふふっ」[p]
+Rinko「Chu... chụt♡ Ưm... khc, chị em mình hôn nhau rồi nhỉ...」[p]
+Rinko「Môi cậu Shun, mềm mại lắm... làm chị muốn được hôn nhiều hơn nữa.」[p]
+Rinko「Chị đang làm nũng đòi hỏi đấy... em có nhận ra không? Khc」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low1==1"  ]
@@ -477,9 +478,9 @@
 *H1_kiss2
 
 [tb_start_text mode=1 ]
-凛子「ちゅくちゅく、ちゅ、んんっ♡　はぁ…[舜]くん、キス上手ね…どこで覚えたの？」[p]
-[舜]「こ、これは…したいまましてるだけで…」[p]
-凛子「そう？　じゃあ[舜]くんオリジナルのキスなんだね…すごくいいよ♡」[p]
+Rinko「Chụt chụt, chu, ưm♡ Haa... cậu Shun, hôn giỏi thật đấy... em học ở đâu vậy?」[p]
+[舜]「C-Cái này... em chỉ làm theo bản năng thôi...」[p]
+Rinko「Thế à? Vậy là nụ hôn nguyên bản của cậu Shun nhỉ... tuyệt lắm♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss+=1"  name="H_kiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -489,9 +490,9 @@
 *H1_kiss3
 
 [tb_start_text mode=1 ]
-凛子「ちゅ、ちゅぷ、ちゅ、んんっ。はぁ、はふ…唇離すの…惜しくなっちゃうね…」[p]
-凛子「ちゅぷちゅくちゅく、んんっ…はぁ、あぁ、キスだけで…体熱くなってきちゃった♡」[p]
-凛子「ちゅるるるるるっ、ちゅっちゅっ♡　はぁ、んっ、もっともっとって思っちゃう♡」[p]
+Rinko「Chu, chụt, chu, ưm. Haa, hafu... Rời môi nhau... tiếc nuối quá nhỉ...」[p]
+Rinko「Chụt chụt chụt, ưm... haa, aa, chỉ hôn thôi mà... cơ thể chị đã nóng ran lên rồi♡」[p]
+Rinko「Chụt chụt chụt, chụt chụt♡ Haa, ưm, cứ muốn hôn mãi thôi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss=0"  name="H_kiss"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -503,9 +504,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ちゅく、ちゅ、んうぅぅっっ♡　キスだけなのに…こんなに気持ちいいなんてっ…♡」[p]
-凛子「ふ～っ、ふ～っ、ふ～っ…♡　やだ…お腹の奥…キュンってときめいてるみたい♡」[p]
-凛子「こんなエッチな気分になっちゃったら…もっとほしくなっちゃうよ？」[p]
+Rinko「Chụt, chu, ưn ưư♡ Chỉ là hôn thôi mà... lại sung sướng đến mức này...♡」[p]
+Rinko「Phù~, phù~, phù~...♡ Ồ... sâu trong bụng... cứ như đang xao xuyến rung động vậy♡」[p]
+Rinko「Mang tâm trạng dâm đãng thế này rồi... chị lại muốn nhiều hơn nữa đấy?」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -515,9 +516,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「はぁ、あっ、んっ…♡　舌、温かい…んんっ、ヌルヌルした感触、気持ちいい…」[p]
-[舜]「凛子さん…」[p]
-凛子「んんっ♡　声、出されるとっ…♡　頭の中に響いちゃうから…♡」[p]
+Rinko「Haa, a, ưm...♡ Lưỡi, ấm quá... ưm, cảm giác nhầy nhụa, sướng quá...」[p]
+[舜]「Chị Rinko...」[p]
+Rinko「Ưm♡ Em cất tiếng...♡ Là vang vọng cả trong đầu chị...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low2==1"  ]
@@ -527,9 +528,9 @@
 *H1_miminame2
 
 [tb_start_text mode=1 ]
-凛子「んんっ…♡　はぁ、あっ♡　舌、中に入ってきちゃったぁ…♡」[p]
-凛子「はぁ、ヌルヌルになっちゃう…耳と、別のところも♡」[p]
-凛子「んっ…ふぅ、ふっ…[舜]くんがエッチに舐めるから、気持ちよくなっちゃった…」[p]
+Rinko「Ưm...♡ Haa, a♡ Lưỡi, chui vào trong mất rồi...♡」[p]
+Rinko「Haa, nhầy nhụa hết cả lên rồi... cả tai, lẫn chỗ khác nữa♡」[p]
+Rinko「Ưm... phù, phu... Tại cậu Shun liếm dâm đãng quá, làm chị sướng mất rồi...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_miminame+=1"  name="H_miminame"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -539,9 +540,9 @@
 *H1_miminame3
 
 [tb_start_text mode=1 ]
-凛子「あっ…♡　はぁんっ…♡　こんなふうに…エッチに耳舐められたの…初めて♡」[p]
-凛子「[舜]くんに私の初めて、奪われちゃった…♡　あんっ、あぁ、それっ、気持ちいい…♡」[p]
-凛子「ふーっ、ふーっ、とろけちゃう…♡　あぁ、エッチな音だけ聞こえてる…♡」[p]
+Rinko「A...♡ Haan...♡ Bị liếm tai dâm đãng thế này... là lần đầu tiên đấy♡」[p]
+Rinko「Lần đầu tiên của chị, bị cậu Shun cướp mất rồi...♡ An, aa, cái đó, sướng quá...♡」[p]
+Rinko「Phù, phù, tan chảy mất thôi...♡ Aa, chỉ nghe thấy toàn âm thanh dâm đãng thôi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_miminame=0"  name="H_miminame"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -554,9 +555,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ひぅぅぅっ♡　あっ♡　あはぁっ♡　耳奥っ、あっつくなってる…♡」[p]
-凛子「耳舐められただけで…イッちゃいそうだった…♡　すごいの…」[p]
-凛子「まだ体がジンジン痺れたみたいになってる…♡　気持ちいい♡」[p]
+Rinko「Hiưưư♡ A♡ Ahaa♡ Sâu trong tai, nóng rực lên rồi...♡」[p]
+Rinko「Chỉ bị liếm tai thôi mà... chị sắp lên đỉnh mất rồi...♡ Tuyệt quá...」[p]
+Rinko「Cơ thể vẫn cứ như đang tê rần...♡ Sướng lắm♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -564,9 +565,9 @@
 *H1_munemomi1
 
 [tb_start_text mode=1 ]
-凛子「んっ…♡　はぁ、遠慮しなくていいから…おっぱい触っていいよ♡」[p]
-凛子「[舜]くんのしたいように触っていいから…少しなら強く乱暴にしても大丈夫だよ」[p]
-凛子「ほら…もっといっぱい触って…？」[p]
+Rinko「Ưm...♡ Haa, không cần ngại đâu... em cứ sờ vú đi♡」[p]
+Rinko「Cậu Shun cứ sờ theo ý thích đi... có thô bạo mạnh bạo một chút cũng không sao đâu.」[p]
+Rinko「Nào... sờ nhiều hơn nữa đi...?」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low3==1"  ]
@@ -577,9 +578,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「あっ♡　あんっ♡　はぁ、おっぱい触るの上手…おっぱい好きなの？」[p]
-[舜]「はい…めちゃくちゃ柔らかくて…気持ちいいです」[p]
-凛子「んっ♡　喜んでもらえて嬉しい…♡　もっと乱暴に揉みしだいて♡」[p]
+Rinko「A♡ An♡ Haa, em sờ vú giỏi thật đấy... em thích vú à?」[p]
+[舜]「Vâng... mềm mại vô cùng... sướng lắm chị ạ.」[p]
+Rinko「Ưm♡ Em thích chị vui lắm...♡ Hãy nhào nặn thô bạo hơn nữa đi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -589,9 +590,9 @@
 *H1_munemomi3
 
 [tb_start_text mode=1 ]
-凛子「あんっ♡　あぁっ♡　もみくちゃにされちゃってる…♡　おっぱい気持ちいい♡」[p]
-凛子「はぁ、はっ、あんっ♡　すっごい興奮してるの？　息荒くなってるから…」[p]
-凛子「おっぱいで興奮してくれて嬉しい…めちゃくちゃにしていいから♡」[p]
+Rinko「An♡ Aa♡ Bị nhào nặn tung tóe hết rồi...♡ Vú chị sướng quá♡」[p]
+Rinko「Haa, ha, an♡ Em đang hưng phấn lắm à? Thở dốc thế cơ mà...」[p]
+Rinko「Chị vui vì em hưng phấn với vú chị... cứ làm nó nát bét cũng được♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi=0"  name="H_munemomi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -603,9 +604,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ああぁぁっ♡　そこっ、気持ちいいの…♡　今ので…子宮までキュンってしちゃった♡」[p]
-凛子「ふーっ♡　ふーっ♡　はしたないって思われちゃうかもしれないけど…止められないの♡」[p]
-凛子「こんなに興奮しちゃったの初めて…」[p]
+Rinko「Aaaa♡ Chỗ đó, sướng lắm...♡ Vừa nãy... đến cả tử cung cũng thắt lại rồi♡」[p]
+Rinko「Phù♡ Phù♡ Có thể em sẽ nghĩ chị lăng loàn... nhưng chị không dừng lại được♡」[p]
+Rinko「Đây là lần đầu tiên chị hưng phấn đến thế này...」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -614,9 +615,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「あっ…♡　やだ…撫でられちゃって…私、お尻小さいわけじゃないから恥ずかしいな」[p]
-[舜]「やわらかくて最高です…」[p]
-凛子「ほんと…？　そんなこと言われたら、調子に乗っちゃうからね？」[p]
+Rinko「A...♡ Ồ... bị vuốt ve mất rồi... Mông chị đâu có nhỏ nhắn gì, xấu hổ lắm.」[p]
+[舜]「Vừa mềm mại lại vừa tuyệt vời...」[p]
+Rinko「Thật à...? Nghe em nói thế, chị đâm ra đắc ý đấy nhé?」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low4==1"  ]
@@ -626,9 +627,9 @@
 *H1_sirinade2
 
 [tb_start_text mode=1 ]
-凛子「んっ…ふぅ、ふっ…優しい手つきだね…マッサージの才能もあるかも…♡」[p]
-凛子「あっ…はぁ、いきなりエッチな撫で方するなんて…慣れてるの？」[p]
-凛子「あ、目そらした？　ちゃんと私のことだけ見てて…」[p]
+Rinko「Ưm... phù, phu... Đôi tay dịu dàng thật đấy... có khi em có năng khiếu xoa bóp cũng nên...♡」[p]
+Rinko「A... haa, tự nhiên lại vuốt ve dâm đãng thế này... em quen tay rồi à?」[p]
+Rinko「A, em ngoảnh mặt đi à? Phải nhìn mỗi mình chị thôi chứ...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_naderu+=1"  name="H_naderu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -638,9 +639,9 @@
 *H1_sirinade3
 
 [tb_start_text mode=1 ]
-凛子「はぁ、んんっ♡　あんっ…お尻だけじゃ…満足できなくなってきちゃったぁ…」[p]
-凛子「もっと…足の間も撫でてほしいって思っちゃってる…んっ、私ったら…こんな恥ずかしいこと…」[p]
-[舜]（おねだり、可愛すぎる…！）[p]
+Rinko「Haa, ưm♡ An... chỉ mông thôi thì... chị không thỏa mãn nổi nữa rồi...」[p]
+Rinko「Chị lại muốn... em vuốt ve cả giữa hai chân nữa cơ... Ưm, chị thật là... nói ra mấy lời xấu hổ thế này...」[p]
+[舜]（Làm nũng, đáng yêu quá đi...!）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_naderu=0"  name="H_naderu"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -652,9 +653,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁぁぁっ♡　あんっ♡　はっ♡　はっ♡　今触られたところ、弱いみたい…♡」[p]
-凛子「ふ～っ…お腹の奥、きゅ～んってときめいて…溢れてきちゃったかも♡」[p]
-凛子「ふ～っ…ふ～っ…確かめてもいいからね♡」[p]
+Rinko「Aaaaa♡ Á♡ Haa♡ Haa♡ Chỗ anh vừa chạm vào, nhạy cảm lắm...♡」[p]
+Rinko「Phù~... Sâu trong bụng, cứ xốn xang... hình như trào ra mất rồi♡」[p]
+Rinko「Phù~... Phù~... Anh cứ kiểm tra cũng được mà♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -663,9 +664,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「あっ…そこは…待って。いきなり舐められちゃうのは…恥ずかし…んんんっ♡」[p]
-凛子「はぁっ、はぁ無理にそんなとこ舐めなくていいから…[舜]くんってば…」[p]
-凛子「あっ♡　あぁぁぁっ♡　舌、そんなに激しく動かさないでっ♡」[p]
+Rinko「A... Chỗ đó... Khoan đã. Đột nhiên liếm như vậy... xấu hổ lắm... Ưm♡」[p]
+Rinko「Haa, haa, anh không cần cố liếm chỗ đó đâu... Shun-kun này...」[p]
+Rinko「A♡ Aaaaa♡ Lưỡi anh, đừng cử động mãnh liệt thế chứ♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low5==1"  ]
@@ -675,9 +676,9 @@
 *H1_kunni2
 
 [tb_start_text mode=1 ]
-凛子「あうぅっ♡　[舜]くんに食べられちゃってるみたい…♡」[p]
-凛子「そんなに夢中になってしゃぶらなくてもいいのに…んっ、あぁぁんっ♡」[p]
-凛子「クリばっかり舐められたらっ…我慢できなくなっちゃう♡」[p]
+Rinko「A ư♡ Giống như sắp bị Shun-kun ăn thịt mất thôi...♡」[p]
+Rinko「Anh không cần phải say sưa mút như thế đâu mà... Ưm, aaaa♡」[p]
+Rinko「Cứ bị liếm hạt đậu mãi... em không chịu nổi mất♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kunni+=1"  name="H_kunni"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -687,9 +688,9 @@
 *H1_kunni3
 
 [tb_start_text mode=1 ]
-凛子「はぁ、あんっ…♡　舌、あっつい…♡　ホントに…イッちゃうの…♡」[p]
-凛子「中、ヌルヌルになってるの、わかる？　挿れる準備始めちゃってるんだよ…」[p]
-凛子「ん、ふぅっ♡　ふぅっ…♡　ごめんなさ…腰勝手に動いちゃって…」[p]
+Rinko「Haa, á...♡ Lưỡi anh, nóng quá...♡ Em... ra mất thôi...♡」[p]
+Rinko「Bên trong, ướt nhẹp hết rồi, anh thấy không? Đang chuẩn bị sẵn sàng để đút vào rồi đấy...」[p]
+Rinko「Ưm, phù♡ Phù...♡ Xin lỗi anh... hông em tự động nảy lên...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kunni=0"  name="H_kunni"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -702,9 +703,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ひゃぁぁぁんっ♡　今のっ、何っ…とろけちゃうかと、思った…♡」[p]
-凛子「はぁっ♡　奥まで…感じちゃったみたい♡　はぁっ、ふっ…ほしい、の…♡」[p]
-凛子「中もっ、触ってほしくて切なくなっちゃった…♡」[p]
+Rinko「Hyaaan♡ Vừa rồi, là sao vậy... Cứ ngỡ như sắp tan chảy ra...♡」[p]
+Rinko「Haa♡ Tận bên trong... cảm nhận được rồi♡ Haa, hức... Em muốn, quá...♡」[p]
+Rinko「Bên trong, cũng muốn được chạm vào đến quặn thắt cả lại...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -713,9 +714,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「あんっ…あぁ…やだ…私、こんな格好のまま…やらしいことされちゃってる…♡」[p]
-凛子「だめ、なのに…気持ちよくて…やめないでほしいって思っちゃうっ♡」[p]
-凛子「あっ♡　あっ♡　あっ♡　もっとかき回して…奥までっ…頂戴♡」[p]
+Rinko「Á... a... không chịu đâu... Em, với bộ dạng thế này... lại bị làm những chuyện dâm đãng...♡」[p]
+Rinko「Rõ ràng là không được... nhưng sướng quá... em lại muốn anh đừng dừng lại♡」[p]
+Rinko「A♡ A♡ A♡ Hãy ngoáy mạnh hơn đi... tận sâu bên trong... cho em đi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low6==1"  ]
@@ -725,9 +726,9 @@
 *H1_teman2
 
 [tb_start_text mode=1 ]
-凛子「ひぅっ、んっ、あっ、あぁ♡　そんなっ、じっと見ないで…」[p]
-凛子「私、すっごく変な顔してるでしょ？　だめなの…もう余裕も全然なくって…♡」[p]
-凛子「あはぁ♡　あっ♡　気持ちいいしか考えられなくなっちゃったぁ♡」[p]
+Rinko「Hiư, ưm, á, a♡ Đừng, nhìn chằm chằm như thế...」[p]
+Rinko「Mặt em, trông kỳ cục lắm đúng không? Không được đâu... Em chẳng còn chút tỉnh táo nào nữa rồi...♡」[p]
+Rinko「A haa♡ A♡ Em chẳng thể nghĩ được gì ngoài việc sướng quá đi mất♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman+=1"  name="H_teman"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -737,9 +738,9 @@
 *H1_teman3
 
 [tb_start_text mode=1 ]
-凛子「あうぅぅっ♡　奥までっ、指届いちゃってる…♡　あんっ、あぁぁぁっ♡」[p]
-凛子「私の全部っ…触られちゃってるの…♡　おおっ♡　すごいのっ…気持ちいいっ♡」[p]
-凛子「は～っ♡　は～っ♡　んんっ、グチャグチャになってるっ…♡」[p]
+Rinko「A ư ư♡ Tận sâu bên trong... ngón tay anh chạm tới rồi...♡ Á, aaaa♡」[p]
+Rinko「Tất cả của em... đều bị chạm vào hết rồi...♡ Ồ♡ Tuyệt quá... sướng quá đi♡」[p]
+Rinko「Haa~♡ Haa~♡ Ưm, nhóp nhép hết cả rồi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman=0"  name="H_teman"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -752,9 +753,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁっ♡　変に、なっちゃう…あ、あぁぁぁっ♡　だめぇぇっ♡」　[p]
-凛子「はぁっ♡　はぁっ♡　はぁっ♡　イッちゃうかと思った…弱いトコ、当たっちゃって…」[p]
-凛子「どうして私の気持ちいい場所、全部わかっちゃうの…？」[p]
+Rinko「Aaaa♡ Em trở nên kỳ lạ mất... a, aaaa♡ Không được đâu♡」[p]
+Rinko「Haa♡ Haa♡ Haa♡ Em tưởng mình sắp ra mất rồi... Anh chạm trúng chỗ nhạy cảm quá...」[p]
+Rinko「Sao anh lại biết hết những chỗ sướng của em vậy...?」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -762,9 +763,9 @@
 *H1_pisuton_yukkuri1
 
 [tb_start_text mode=1 ]
-凛子「んっ…ああっ…おちんちんがドキドキしてるの、伝わってくる…♡」[p]
-凛子「あっ…♡　すごい…じっくり、味わってくれてるの…？」[p]
-凛子「いいよ、ゆっくり動かして…私の中楽しんで…？」[p]
+Rinko「Ưm... aa... Cảm nhận được dương vật anh đang đập thình thịch luôn...♡」[p]
+Rinko「A...♡ Tuyệt quá... anh đang thong thả, thưởng thức sao...?」[p]
+Rinko「Được thôi, cứ cử động chầm chậm đi... hãy tận hưởng bên trong em nhé...?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -774,9 +775,9 @@
 *H1_pisuton_yukkuri2
 
 [tb_start_text mode=1 ]
-[舜]「凛子さんの中…ぬるぬるっ…全部気持ちいい…！」[p]
-凛子「あんっ♡　あっ♡　あぁっ♡　おちんちん、中でビクビクってしてる…♡」[p]
-凛子「すっごくたくましい…♡　あぁ、私の中、[舜]くんの形になっちゃう…♡」[p]
+[舜]「Bên trong Rinko-san... trơn tuột... chỗ nào cũng sướng cả...!」[p]
+Rinko「Á♡ A♡ A♡ Dương vật anh, đang giật giật bên trong kìa...♡」[p]
+Rinko「Thật mạnh mẽ quá...♡ A, bên trong em, sắp biến thành hình dạng của Shun-kun mất rồi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -786,9 +787,9 @@
 *H1_pisuton_yukkuri3
 
 [tb_start_text mode=1 ]
-凛子「んおおおっ♡　しゅごいっ…♡　また中でっ、おっきくなってる♡」[p]
-凛子「あぁぁっ♡　繋がってるとこ見て、興奮しちゃったの？」[p]
-凛子「はぁ、あっ…私も…気持ちいいよ…はぁ、あっ♡　あんっ♡　中、全部擦れてるっ…♡」[p]
+Rinko「Ư ooo♡ Tuyệt quá...♡ Lại to lên bên trong rồi♡」[p]
+Rinko「Aaaa♡ Thấy chỗ hai đứa mình nối với nhau, anh hưng phấn sao?」[p]
+Rinko「Haa, á... Em cũng... sướng lắm... haa, á♡ Á♡ Bên trong, cọ xát hết cả rồi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri=0"  name="H_supiritasu_pisuton_yukkuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -800,9 +801,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「おぉぉっ♡　すごいっ…いいトコ、擦れて…んっ♡　ああぁぁっ♡」[p]
-凛子「私、はしたない声出て…んんっ♡　ふぅっ、ふっ♡　腰振るの…すっごく上手ね…」[p]
-凛子「いきなりイッちゃうかと思った…♡　それ、好き♡　好きぃ♡」[p]
+Rinko「Ooo♡ Tuyệt quá... Cọ đúng chỗ sướng rồi... ưm♡ Aaaa♡」[p]
+Rinko「Em, phát ra tiếng dâm đãng quá... ưm♡ Phù, hức♡ Anh nhấp hông... giỏi quá...」[p]
+Rinko「Em tưởng mình đột nhiên ra luôn rồi...♡ Em thích thế♡ Thích lắm♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond="f.H_high1==1"  ]
@@ -811,9 +812,9 @@
 *H1_pisuton_hagesiku1
 
 [tb_start_text mode=1 ]
-凛子「あっ♡　あっ♡　あっ♡　激しっ…そんなに夢中に腰振っちゃって…」[p]
-凛子「必死な顔も可愛い…いいよ、全部ぶつけて♡　」[p]
-凛子「はっ♡　はぁっ♡　はっ♡　頑張れ頑張れっ…♡　もっと激しくしていいよ♡」[p]
+Rinko「A♡ A♡ A♡ Mãnh liệt quá... Anh say sưa nhấp hông như thế...」[p]
+Rinko「Khuôn mặt tuyệt vọng của anh cũng đáng yêu quá... Được thôi, cứ đâm hết vào đi♡」[p]
+Rinko「Hức♡ Haa♡ Hức♡ Cố lên cố lên...♡ Anh làm mãnh liệt hơn nữa cũng được mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -823,9 +824,9 @@
 *H1_pisuton_hagesiku2
 
 [tb_start_text mode=1 ]
-凛子「んっ…すごい…揺さぶられちゃってる…♡　あっ♡　あぁぁっ♡」[p]
-凛子「やっぱり[舜]くんも男の子なんだね…力、すっごく強い♡　中も…おっきい♡」[p]
-凛子「私の中で暴れてる…んんっ♡　ふっ、はぁ♡　はぁんっ♡　奥までトントンって当たってるのっ♡」[p]
+Rinko「Ưm... tuyệt quá... Bị rung lắc dữ dội luôn...♡ A♡ Aaaa♡」[p]
+Rinko「Quả nhiên Shun-kun cũng là con trai nhỉ... Lực, mạnh quá♡ Bên trong cũng... to quá♡」[p]
+Rinko「Đang quậy phá bên trong em... ưm♡ Hức, haa♡ Haa♡ Đang đâm bình bịch vào tận sâu bên trong kìa♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -835,9 +836,9 @@
 *H1_pisuton_hagesiku3
 
 [tb_start_text mode=1 ]
-凛子「あっ♡　あぁぁんっ♡　それっ、だめぇっ♡　弱いからぁっ♡」[p]
-[舜]「凛子さん、余裕なくなってきましたね…」[p]
-凛子「はっ♡　はっ♡　あぁぁんっ…♡　言わないで…年下の男の子に揺さぶられるのも悪くないかも♡」[p]
+Rinko「A♡ Aaaa♡ Chỗ đó, không được đâu♡ Em nhạy cảm lắm♡」[p]
+[舜]「Rinko-san, chị hết chịu nổi rồi nhỉ...」[p]
+Rinko「Hức♡ Hức♡ Aaaa...♡ Đừng nói mà... Bị một chàng trai trẻ tuổi làm cho rung lắc thế này cũng không tệ đâu♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku=0"  name="H_supiritasu_pisuton_hagesiku"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -849,9 +850,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁぁっ♡　そこっ♡　だめぇぇぇっ♡　あうぅっ、気持ちいいトコ、当たってるっ♡」[p]
-凛子「はぁっ♡　だめ、だめ、そこばっかり狙わないでっ♡　イッちゃうからぁ♡」[p]
-凛子「あぁぁんっ♡　や…今の顔見ちゃダメ…変な顔に…なってるからっ…」[p]
+Rinko「Aaaa♡ Chỗ đó♡ Không được đâu♡ A ư, đâm trúng chỗ sướng rồi♡」[p]
+Rinko「Haa♡ Không được, không được, đừng nhắm mãi vào một chỗ đó♡ Em ra mất thôi♡」[p]
+Rinko「Aaaa♡ Đừng... đừng nhìn khuôn mặt hiện giờ của em... Nó trở nên... kỳ cục lắm rồi...」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond="f.H_high1==1"  ]
@@ -860,9 +861,9 @@
 *J1_kaiwa1
 
 [tb_start_text mode=1 ]
-凛子「ふふ、[舜]くん、いつの間にマッサージの勉強してたの？」[p]
-[舜]「凛子さんの施術をそばで見て学んだんですよ。見て盗んだってやつです」[p]
-凛子「それじゃ期待してもいいのかな？　どんなふうに気持ちよくしてくれるんだろ」[p]
+Rinko「Khc, Shun-kun, anh học massage từ lúc nào thế?」[p]
+[舜]「Em học bằng cách nhìn Rinko-san làm việc đấy. Gọi là học lỏm đó.」[p]
+Rinko「Thế thì em có thể kỳ vọng được không nhỉ? Không biết anh sẽ làm em sướng đến mức nào đây.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -870,9 +871,9 @@
 *J1_kaiwa2
 
 [tb_start_text mode=1 ]
-凛子「マッサージはうつぶせでするんだけど、仰向けでいいの？」[p]
-[舜]「どんな顔するのか、確認しながら触りたいんで…」[p]
-凛子「ん、そうだね。お客さんの反応を見ながら揉みほぐすのが１番だもんね…」[p]
+Rinko「Massage thì phải nằm sấp, nhưng nằm ngửa có được không?」[p]
+[舜]「Em muốn vừa chạm vào vừa kiểm tra xem chị sẽ làm vẻ mặt như thế nào...」[p]
+Rinko「Ưm, đúng nhỉ. Vừa nhìn phản ứng của khách vừa xoa bóp là tuyệt nhất mà...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -880,9 +881,9 @@
 *J1_kaiwa3
 
 [tb_start_text mode=1 ]
-凛子「そろそろ始めるのかな…？　いいよ、[舜]くんの思った通りに触ってくれたら…」[p]
-凛子「トロトロにとろけちゃうくらい気持ちよくなれちゃうのかな…♡」[p]
-凛子「[舜]くんの施術を見て、私が勉強するね。どうぞよろしくお願いします♡」[p]
+Rinko「Sắp bắt đầu rồi sao...? Được thôi, nếu Shun-kun chạm vào đúng như anh nghĩ...」[p]
+Rinko「Liệu em có sướng đến mức tan chảy ra không nhỉ...♡」[p]
+Rinko「Em sẽ học hỏi bằng cách xem Shun-kun làm. Mong anh giúp đỡ nhé♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa=0"  name="H_kaiwa"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -890,9 +891,9 @@
 *J1_kiss1
 
 [tb_start_text mode=1 ]
-凛子「んっ…ちゅ、ちゅっ♡　ふぅっ♡　唇、触れ合ってる…これもマッサージなの？」[p]
-[舜]「これは…唇のマッサージだから…」[p]
-凛子「ふふっ、そうですか♡　じゃあ続きをお願いします♡」[p]
+Rinko「Ưm... chụt, chụt♡ Phù♡ Môi, chạm nhau rồi... Đây cũng là massage sao?」[p]
+[舜]「Đây là... massage môi mà...」[p]
+Rinko「Khc, vậy sao♡ Thế thì xin anh hãy tiếp tục đi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low1==1"  ]
@@ -902,9 +903,9 @@
 *J1_kiss2
 
 [tb_start_text mode=1 ]
-凛子「ちゅっちゅ、ちゅく♡　ちゅ、んんっ、じゅぷ♡　はふ、はぁっ、はぁ…激し…」[p]
-凛子「いきなり激しくしちゃうんだね…私のマッサージとはちょっと違うね」[p]
-凛子「でも…メリハリがあっていいかも。体の奥、熱くなってきちゃった…♡」[p]
+Rinko「Chụt chụt, chụt♡ Chụt, ưm, chụt♡ Haa, haa, haa... mãnh liệt quá...」[p]
+Rinko「Đột nhiên lại làm mãnh liệt thế... Khác một chút với cách massage của em nhỉ.」[p]
+Rinko「Nhưng... có lúc mạnh lúc nhẹ cũng tốt. Sâu bên trong cơ thể, nóng lên mất rồi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss+=1"  name="H_kiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -914,9 +915,9 @@
 *J1_kiss3
 
 [tb_start_text mode=1 ]
-凛子「ちゅ、ちゅっちゅ…んっ…♡　えっちなマッサージってどんな感じなのかなって思ったけど…」[p]
-凛子「気持ちいいね♡　体もあったかくなってきちゃった…♡　続き、お願いしてもいい？」[p]
-凛子「今日は私が[舜]くんに教えてもらう側だから…[舜]くんが先生だね♡」[p]
+Rinko「Chụt, chụt chụt... ưm...♡ Em cứ nghĩ massage dâm đãng thì sẽ như thế nào...」[p]
+Rinko「Sướng quá♡ Cơ thể cũng ấm lên rồi...♡ Em có thể nhờ anh làm tiếp được không?」[p]
+Rinko「Hôm nay em là người được Shun-kun dạy cho nên... Shun-kun là thầy giáo nhỉ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss=0"  name="H_kiss"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -928,9 +929,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ちゅっ…んぅぅぅっ♡　ふーっ…ふー…♡　今の…すごかった…♡」[p]
-凛子「お腹の奥、まだジンジン痺れてるみたい…[舜]くんのマッサージってすごいかも」[p]
-凛子「もっといろんなマッサージ教えてもらっちゃおうかなぁ♡」[p]
+Rinko「Chụt... ưm♡ Phù... phù...♡ Vừa rồi... tuyệt quá...♡」[p]
+Rinko「Sâu trong bụng, vẫn còn râm ran tê dại... Cách massage của Shun-kun tuyệt thật đấy.」[p]
+Rinko「Chắc em phải nhờ anh dạy thêm nhiều cách massage khác nữa thôi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -938,9 +939,9 @@
 *J1_paizuri1
 
 [tb_start_text mode=1 ]
-[舜]「凛子さん、おっぱいで挟んで…しごいてマッサージしてください」[p]
-凛子「んっ…♡　こんな感じ？　おちんちん、すっごくおっきくなってる…♡」[p]
-凛子「ふーっ…ふーっ…♡　手を使わないで体を使うマッサージって新鮮でいいかも…」[p]
+[舜]「Rinko-san, hãy kẹp bằng ngực... rồi vuốt ve massage cho em đi.」[p]
+Rinko「Ưm...♡ Như thế này sao? Dương vật anh, to lên nhiều quá...♡」[p]
+Rinko「Phù... phù...♡ Massage dùng cơ thể thay vì dùng tay cũng mới mẻ và thú vị nhỉ...」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low2==1"  ]
@@ -950,9 +951,9 @@
 *J1_paizuri2
 
 [tb_start_text mode=1 ]
-凛子「んっ…♡　あぁ♡　おちんちん、ビクビクってしてる♡　気持ちいいですか～♡」[p]
-凛子「ふふ、どんな顔をしてるのか、ちゃんと反応見てるからね？　[舜]くん、気持ちよさそう…」[p]
-凛子「このやり方で正解なんだね♡　よかったぁ。このままマッサージ続けますね～♡」[p]
+Rinko「Ưm...♡ A♡ Dương vật anh, đang giật giật kìa♡ Anh có sướng không~♡」[p]
+Rinko「Khc, em đang nhìn rõ xem anh làm vẻ mặt gì đấy nhé? Shun-kun, trông có vẻ sướng quá...」[p]
+Rinko「Cách này là đúng rồi nhỉ♡ May quá. Em sẽ tiếp tục massage như thế này nhé~♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_paizuri+=1"  name="H_paizuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -962,9 +963,9 @@
 *J1_paizuri3
 
 [tb_start_text mode=1 ]
-凛子「あっ…おちんちんの先っぽからとろんって透明な液溢れてきちゃった♡」[p]
-凛子「これならマッサージオイルも必要ないですね…♡　んっ、ふぅ、ん♡」[p]
-凛子「あぁ…おっぱいで揉みくちゃになってるね…んんっ、固いの、擦れて…気持ちいい♡」[p]
+Rinko「A... Từ đầu dương vật rỉ ra chất lỏng trong suốt sền sệt rồi♡」[p]
+Rinko「Thế này thì không cần dùng dầu massage nữa rồi nhỉ...♡ Ưm, phù, ưm♡」[p]
+Rinko「A... Bị vú vò nát hết rồi nhỉ... Ưm, chỗ cứng cứng, cọ xát... sướng quá♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_paizuri=0"  name="H_paizuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -976,9 +977,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ひゃううぅ♡　んんっ♡　おっぱいヌルヌルになっちゃった♡」[p]
-凛子「ゾリゾリって擦れて…弱いトコ、当たっちゃう♡　んっ…ああんっ♡」[p]
-凛子「マッサージ教わってるのに、何も考えられなくなっちゃいそう♡」[p]
+Rinko「Hya ư♡ Ưm♡ Ngực ướt nhẹp hết rồi♡」[p]
+Rinko「Cọ xát sột soạt... trúng chỗ nhạy cảm rồi♡ Ưm... aa♡」[p]
+Rinko「Đang được dạy massage mà, chắc em chẳng thể nghĩ được gì nữa mất♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -987,9 +988,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-[舜]「おっぱいのマッサージを始めますね…しっかりほぐしていきますから」[p]
-凛子「んっ…♡　あぁ♡　[舜]くんの手つき、すっごく上手…よくほぐれそうです♡」[p]
-凛子「おっぱい凝ってるので…たくさん揉んでやわらかくしてくださいね♡」[p]
+[舜]「Em bắt đầu massage ngực nhé... Sẽ xoa bóp thật kỹ đấy.」[p]
+Rinko「Ưm...♡ A♡ Cách tay Shun-kun di chuyển, điêu luyện quá... Có vẻ sẽ mềm ra lắm đây♡」[p]
+Rinko「Ngực em đang căng cứng nên... anh hãy xoa bóp nhiều cho nó mềm ra nhé♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -999,9 +1000,9 @@
 *J1_munemomi2
 
 [tb_start_text mode=1 ]
-凛子「あっ…んんっ♡　それ…気持ちいい…[舜]くんマッサージ上手ね」[p]
-[舜]「そうでしょ？　でも指の間からおっぱい、こぼれ落ちそうだな…手に収まりきらないぞ」[p]
-凛子「んっ♡　あぁ♡　マッサージしづらくてごめんね？　ゆっくりでいいから…♡」[p]
+Rinko「A... ưm♡ Chỗ đó... sướng quá... Shun-kun massage giỏi thật đấy.」[p]
+[舜]「Đúng không? Nhưng ngực chị như sắp tràn ra khỏi kẽ tay rồi... Tay em không ôm trọn được đâu.」[p]
+Rinko「Ưm♡ A♡ Xin lỗi vì khó massage nhé? Cứ từ từ thôi cũng được...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1011,9 +1012,9 @@
 *J1_munemomi3
 
 [tb_start_text mode=1 ]
-凛子「あっ♡　あんっ…♡　んっ…変な声、出ちゃってごめんなさい…♡」[p]
-[舜]「いいんですよ、声出してください。力が抜けてリラックス効果もありますから」[p]
-凛子「はぁ、あっ…♡　あぁ♡　[舜]くん、本当にマッサージの施術できちゃいそうね♡」[p]
+Rinko「A♡ Á...♡ Ưm... Lỡ phát ra tiếng kỳ cục rồi, xin lỗi anh nhé...♡」[p]
+[舜]「Không sao đâu, chị cứ phát ra tiếng đi. Thả lỏng lực ra cũng có tác dụng thư giãn mà.」[p]
+Rinko「Haa, á...♡ A♡ Shun-kun, có khi anh làm được kỹ thuật massage thật luôn đấy♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi=0"  name="H_munemomi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1026,9 +1027,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁぁっ♡　ん…そこっ…敏感なトコ、手で擦れて…んっ、あ、あぁぁっ♡」[p]
-[舜]「乳首、ぷっくり立ち上がっちゃってますね…」[p]
-凛子「やだ、恥ずかし…んんっ♡　乳首も一緒にマッサージされちゃってる…♡」[p]
+Rinko「Aaaa♡ Ưm... chỗ đó... chỗ nhạy cảm, bị tay cọ xát... ưm, a, aaaa♡」[p]
+[舜]「Đầu vú, sưng tấy đứng lên hết rồi này...」[p]
+Rinko「Không chịu đâu, xấu hổ quá... ưm♡ Đầu vú cũng bị massage cùng luôn rồi...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -1036,9 +1037,9 @@
 *J1_munename1
 
 [tb_start_text mode=1 ]
-凛子「んっ…あんっ♡　今度は舐めるマッサージ？　いろんな方法でほぐしてくれるのね…♡」[p]
-[舜]「乳首もコリコリになってますよ？　ここ、凝ってるみたいですね…」[p]
-凛子「んんっ、凝ってるわけじゃ…んぅっ♡　あっ…んんっ♡　ねっとり舐めるの、だめっ…♡」[p]
+Rinko「Ưm... á♡ Lần này là massage bằng cách liếm sao? Anh xoa bóp cho em bằng nhiều cách thật đấy...♡」[p]
+[舜]「Đầu vú cũng cứng ngắc rồi này? Chỗ này, có vẻ căng cứng nhỉ...」[p]
+Rinko「Ưm, không phải căng cứng đâu... ưm♡ A... ưm♡ Liếm ướt át thế, không được đâu...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low4==1"  ]
@@ -1049,9 +1050,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「あんっ…あぁ…♡　乳首ばっかりペロペロされたら…変になっちゃう♡」[p]
-[舜]「でも全然ほぐれないんですよ。余計固くなってるみたいで…」[p]
-凛子「んんっ♡　あっ、それは凝ってるわけじゃないからっ…♡　あぁぁぁっ♡」[p]
+Rinko「Á... a...♡ Cứ bị liếm đầu vú mãi thế này... em trở nên kỳ lạ mất♡」[p]
+[舜]「Nhưng hoàn toàn không mềm ra được này. Có vẻ càng lúc càng cứng hơn...」[p]
+Rinko「Ưm♡ A, đó không phải là căng cứng đâu...♡ Aaaa♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munename+=1"  name="H_munename"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1061,9 +1062,9 @@
 *J1_munename3
 
 [tb_start_text mode=1 ]
-凛子「ひぅ♡　んんっ…おっぱい、どんどん敏感になっちゃってる…♡　これもマッサージの効果？」[p]
-凛子「それに…違うトコまでキュンってしちゃって…触ってほしくなっちゃう♡」[p]
-凛子「[舜]くんのマッサージ、効果すごいね…教えてもらってよかったぁ♡」[p]
+Rinko「Hiư♡ Ưm... Ngực em, càng lúc càng nhạy cảm hơn rồi...♡ Đây cũng là tác dụng của massage sao?」[p]
+Rinko「Hơn nữa... đến tận những chỗ khác cũng nhói lên... muốn được chạm vào quá♡」[p]
+Rinko「Tác dụng massage của Shun-kun tuyệt thật đấy... May mà em được anh dạy cho♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munename=0"  name="H_munename"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1075,9 +1076,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁぁっ♡　それっ、すごいのっ…乳首だけでッ、イッちゃうぅ♡」[p]
-凛子「[舜]くんの舌、ねっとりあったかくて…もっと欲しくなっちゃう…」[p]
-凛子「あぁぁぁ♡　チュッチュって吸うの…赤ちゃんみたいね…んんっ♡」[p]
+Rinko「Aaaa♡ Chỗ đó, tuyệt quá... Chỉ bằng đầu vú thôi mà, em ra mất♡」[p]
+Rinko「Lưỡi của Shun-kun, ướt át và ấm nóng quá... Em muốn nữa cơ...」[p]
+Rinko「Aaaa♡ Mút chụt chụt thế này... giống em bé quá... ưm♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -1086,9 +1087,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「あぁっ…だ、だめっ、汚いからぁっ♡　舐めるのだめだってば…♡」[p]
-[舜]「汚くないですよ？　トロトロ熱々になってます。マッサージオイルいらずですね」[p]
-凛子「んっ…そんな恥ずかしいこと言わないでっ…♡　あっ、あぁぁぁっ♡」[p]
+Rinko「A... kh-không được, bẩn lắm♡ Em đã bảo liếm là không được mà...♡」[p]
+[舜]「Đâu có bẩn? Trơn tuột và nóng hổi rồi này. Không cần dùng dầu massage luôn.」[p]
+Rinko「Ưm... đừng nói những lời đáng xấu hổ thế chứ...♡ A, aaaa♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low5==1"  ]
@@ -1098,9 +1099,9 @@
 *J1_kunni2
 
 [tb_start_text mode=1 ]
-凛子「んんっ…ふっ、舌でそんなとこまでマッサージしちゃうの…？」[p]
-凛子「体あったまってきちゃった…♡　マッサージの即効性すごいね♡」[p]
-[舜]「中も熱々になってきてますよ？　マッサージであっつくなっちゃいました？」[p]
+Rinko「Ưm... hức, anh dùng lưỡi massage đến tận chỗ đó luôn sao...?」[p]
+Rinko「Cơ thể ấm lên rồi...♡ Tác dụng tức thời của massage tuyệt thật đấy♡」[p]
+[舜]「Bên trong cũng đang nóng hổi lên rồi này? Bị massage nên nóng lên rồi sao?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kunni+=1"  name="H_kunni"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1110,9 +1111,9 @@
 *J1_kunni3
 
 [tb_start_text mode=1 ]
-凛子「んうっ♡　あっ、ごめんなさい、腰動いちゃって…♡　ひゃうっ♡　あっ♡　あんっ♡」[p]
-凛子「ひゃんっ♡　クリしゃぶられるのすごいの…♡　気持ちいいの湧き上がってきちゃう♡」[p]
-凛子「あぅぅっ♡　[舜]くん、いつの間にこんなに気持ちいいマッサージ覚えたのっ…？」[p]
+Rinko「Ưm♡ A, xin lỗi anh, hông em tự động nảy lên...♡ Hya ư♡ A♡ Á♡」[p]
+Rinko「Hyan♡ Bị mút hạt đậu tuyệt quá...♡ Cảm giác sướng cứ trào dâng lên♡」[p]
+Rinko「A ư♡ Shun-kun, anh học được cách massage sướng thế này từ lúc nào vậy...?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kunni=0"  name="H_kunni"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1125,9 +1126,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁぁっ♡　それ、だめ…ジュルジュル吸わないでぇっ♡　何か出ちゃう、からぁっ♡」[p]
-凛子「ひぅぅっ♡　あぁ、腰止まらない…♡　ビクビクってして…気持ちよくなっちゃうの♡」[p]
-凛子「舌でマッサージなんて知らなかった…[舜]くんに教わっちゃったね♡」[p]
+Rinko「Aaaa♡ Chỗ đó, không được... Đừng mút sột soạt thế chứ♡ Có thứ gì đó sắp trào ra rồi♡」[p]
+Rinko「Hiư♡ A, hông không dừng lại được...♡ Bị giật giật thế này... sướng quá đi mất♡」[p]
+Rinko「Em không biết massage bằng lưỡi đấy... Được Shun-kun dạy cho mất rồi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -1135,9 +1136,9 @@
 *J1_teman1
 
 [tb_start_text mode=1 ]
-[舜]「中もしっかりマッサージでほぐしてあげなくちゃ…奥まで揉みほぐしますよ…♡」[p]
-凛子「んっ♡　あぁ♡　はぁ、あんっ♡　んんっ、深いトコまで届いて…変になっちゃう♡」[p]
-凛子「ひぅっ、あっ、あっ、あっ♡　弱いトコ探さないでぇっ…♡」[p]
+[舜]「Em cũng phải massage xoa bóp cẩn thận bên trong nữa... Em sẽ xoa bóp tận sâu bên trong nhé...♡」[p]
+Rinko「Ưm♡ A♡ Haa, á♡ Ưm, chạm đến tận chỗ sâu rồi... kỳ lạ mất thôi♡」[p]
+Rinko「Hiư, a, a, a♡ Đừng tìm chỗ nhạy cảm chứ...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman+=1"  name="H_teman"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1148,9 +1149,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「んうぅぅっ♡　そこっ…だめ…も、もうほぐれてるから…これ以上されたら…」[p]
-凛子「本当に何か出ちゃう…♡　だめ、だめだめだめっ…一旦止めて…だめぇっ♡」[p]
-凛子「あっ♡　あっ♡　あっ♡　奥まで届いちゃってる…ほぐされてるぅっ♡」[p]
+Rinko「Ư ư♡ Chỗ đó... không được... Đ-Đã mềm ra rồi mà... Nếu bị làm thêm nữa...」[p]
+Rinko「Thực sự có thứ gì đó sắp trào ra mất...♡ Không được, không được không được không được... Dừng lại một lát đi... Không được đâu♡」[p]
+Rinko「A♡ A♡ A♡ Chạm đến tận sâu bên trong rồi... Đang được xoa bóp kìa♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman+=1"  name="H_teman"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1160,9 +1161,9 @@
 *J1_teman3
 
 [tb_start_text mode=1 ]
-凛子「あっ…んんっ…体の内側マッサージでどんどん火照っちゃうみたい…」[p]
-凛子「気持ちいいのがお腹のそこから湧き上がって…変なのきちゃうのっ♡」[p]
-凛子「自分じゃ制御しきれなくなっちゃう感じ…私、どうにかなっちゃいそう…♡」[p]
+Rinko「A... ưm... Hình như bên trong cơ thể bị massage làm cho nóng ran lên rồi...」[p]
+Rinko「Cảm giác sướng từ sâu trong bụng trào dâng lên... sắp có thứ gì đó kỳ lạ ập đến rồi♡」[p]
+Rinko「Cảm giác như em không thể tự kiềm chế được nữa... Em, sắp trở nên kỳ lạ mất thôi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman=0"  name="H_teman"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1175,9 +1176,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「んあぁぁっ♡　目の前っ、チカチカってして…もう、だめ…おかしくなっちゃうぅっ♡」[p]
-[舜]「いいじゃないですか、おかしくなれば…！　自分を解放してあげてくださいよ…！」[p]
-凛子「あっ♡　あうぅっ♡　ダメなところ、当たってるの…♡　壊れちゃうぅぅっ♡」[p]
+Rinko「Aa♡ Trước mắt, chớp nháy liên tục... Thôi, không được... em trở nên kỳ lạ mất♡」[p]
+[舜]「Kỳ lạ thì có sao đâu...! Chị hãy giải phóng bản thân đi...!」[p]
+Rinko「A♡ A ư♡ Đâm trúng chỗ không được rồi...♡ Hỏng mất thôi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -1185,9 +1186,9 @@
 *J1_pisuton_yukkuri1
 
 [tb_start_text mode=1 ]
-凛子「あっ♡　あっ♡　あっ♡　んんっ、内側…擦れて…当たってるっ♡」[p]
-[舜]「そんなに締め付けたらマッサージできないじゃないですか…ほら力抜いてください」[p]
-凛子「そんなこと言われてもっ…んぅっ♡　体が勝手に…動いちゃうんだものっ♡」[p]
+Rinko「A♡ A♡ A♡ Ưm, bên trong... cọ xát... trúng rồi♡」[p]
+[舜]「Chị siết chặt thế thì em massage thế nào được... Nào, thả lỏng lực ra đi.」[p]
+Rinko「Dù anh có nói thế... ưm♡ Cơ thể cứ tự động... nảy lên mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1197,9 +1198,9 @@
 *J1_pisuton_yukkuri2
 
 [tb_start_text mode=1 ]
-凛子「[舜]くんの…すっごくおっきくなってる…♡　深いところまで届いてる♡」[p]
-凛子「内側全部擦れてっ…刺激されちゃってるの…あっという間にほぐれちゃう♡」[p]
-[舜]「中はどんどんほぐれてトロトロになってきてますよ…！　この調子ですね…！」[p]
+Rinko「Của Shun-kun... to lên nhiều quá...♡ Chạm đến tận sâu bên trong rồi♡」[p]
+Rinko「Bên trong cọ xát hết cả... bị kích thích rồi... Chẳng mấy chốc sẽ mềm ra thôi♡」[p]
+[舜]「Bên trong càng lúc càng mềm và trơn tuột rồi này...! Cứ đà này nhé...!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1209,9 +1210,9 @@
 *J1_pisuton_yukkuri3
 
 [tb_start_text mode=1 ]
-凛子「ひぅぅっ♡　あっ♡　あぁ♡　それっ…奥トントンってされるのだめ…♡」[p]
-[舜]「ん、もっと強くしたほうがいいですか？　強さは変えられますよ…マッサージですから…！」[p]
-凛子「違っ…そういうことじゃないの…んっ♡　あぁ♡　[舜]くんのまたおっきくなって…あぁっ♡」[p]
+Rinko「Hiư♡ A♡ A♡ Chỗ đó... bị đâm bình bịch vào sâu bên trong, không được đâu...♡」[p]
+[舜]「Ưm, em làm mạnh hơn nhé? Có thể thay đổi lực được mà... Vì đây là massage mà...!」[p]
+Rinko「Không... không phải ý đó đâu... ưm♡ A♡ Dương vật Shun-kun lại to lên... aaaa♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri=0"  name="H_supiritasu_pisuton_yukkuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1223,9 +1224,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[舜]「この奥のコリっとしたトコ、凝ってるんですかね？　集中狙いしてあげますよ」[p]
-凛子「あっ♡　あぁっ、そこ、違…ひぅぅぅっ♡　凝ってるんじゃないのっ…♡」[p]
-凛子「そこ、ダメなトコ…弱いところだからっ♡　ほぐれちゃったら…イキっぱなしになっちゃう♡」[p]
+[舜]「Chỗ cứng cứng sâu bên trong này, đang bị căng cứng đúng không? Em sẽ tập trung nhắm vào đó cho chị nhé.」[p]
+Rinko「A♡ A, chỗ đó, không ph... hiư♡ Không phải căng cứng đâu...♡」[p]
+Rinko「Chỗ đó, là chỗ không được... vì nhạy cảm lắm♡ Nếu mềm ra... em sẽ ra liên tục mất♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]
@@ -1233,9 +1234,9 @@
 *J1_pisuton_hagesiku1
 
 [tb_start_text mode=1 ]
-凛子「あっ♡　あぁっ…激し…んんっ♡　こんな激しいマッサージ初めて…♡」[p]
-[舜]「表面だけじゃなくて深いところまでしっかりほぐすべきって凛子さんよく言ってますもんね」[p]
-凛子「それは普通のマッサージの話で…これは違っ…あんっ♡　あぁぁぁっ♡」[p]
+Rinko「A♡ Á... mãnh liệt... ưm♡ Massage mãnh liệt thế này, lần đầu tiên...♡」[p]
+[舜]「Chẳng phải Rinko-san hay nói là không chỉ bề mặt mà còn phải xoa bóp cẩn thận tận sâu bên trong sao.」[p]
+Rinko「Đó là nói về massage bình thường... Còn cái này khác m... á♡ Aaaa♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1245,9 +1246,9 @@
 *J1_pisuton_hagesiku2
 
 [tb_start_text mode=1 ]
-凛子「あっ♡　あうっ♡　ああぁっ♡　お、奥…届いてるっ…ダメなトコ…先っぽ当たってる♡」[p]
-[舜]「子宮の入り口もよくマッサージしますからね…！　中が柔らかくなるように…！」[p]
-凛子「ひぅぅっ♡　あっ♡　あっ♡　開いちゃう♡　全部とろけて受け入れちゃう…♡」[p]
+Rinko「A♡ A ư♡ Aaaa♡ B-Bên trong... chạm tới rồi... Chỗ không được... đầu dương vật đâm trúng rồi♡」[p]
+[舜]「Cửa tử cung cũng hay được massage lắm đấy...! Để bên trong trở nên mềm mại hơn...!」[p]
+Rinko「Hiư♡ A♡ A♡ Mở ra mất♡ Tan chảy hết ra và tiếp nhận toàn bộ...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1257,9 +1258,9 @@
 *J1_pisuton_hagesiku3
 
 [tb_start_text mode=1 ]
-凛子「んっ、くうぅぅっ♡　お腹の奥から…気持ちいいのぐつぐつ湧き上がってきちゃってる…♡」[p]
-凛子「気持ちよくて切なくて…変になっちゃいそう♡　[舜]くん、気持ちいいトコわかっちゃうの？」[p]
-凛子「マッサージの才能あるのかも…私より上手になったらどうしよう…♡」[p]
+Rinko「Ưm, kư♡ Từ sâu trong bụng... cảm giác sướng cứ sôi sùng sục trào dâng lên...♡」[p]
+Rinko「Sướng quá, quặn thắt lại... sắp trở nên kỳ lạ mất♡ Shun-kun, anh biết chỗ nào sướng sao?」[p]
+Rinko「Có khi anh có tài năng massage đấy... Lỡ anh giỏi hơn em thì phải làm sao...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku=0"  name="H_supiritasu_pisuton_hagesiku"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1271,9 +1272,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ひゃうぅぅっ♡　あっ♡　あっ♡　あっ♡　奥までトントンされちゃうのっ、だめ…♡」[p]
-凛子「こんなに気持ちいいの知っちゃったら…もう戻れなくなっちゃうってばぁ…♡」[p]
-凛子「余計なこと、考えられなくなっちゃう…♡　あぁ、最高の施術だよ[舜]くん♡」[p]
+Rinko「Hya ư♡ A♡ A♡ A♡ Bị đâm bình bịch tận sâu bên trong, không được đâu...♡」[p]
+Rinko「Nếu biết sướng thế này rồi... em không thể quay lại như trước được nữa đâu...♡」[p]
+Rinko「Em chẳng thể nghĩ được chuyện gì thừa thãi nữa...♡ A, kỹ thuật tuyệt vời nhất đấy Shun-kun♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]
@@ -1281,9 +1282,9 @@
 *J1_2_kaiwa1
 
 [tb_start_text mode=1 ]
-凛子「どんなマッサージされちゃうんだろう？　ドキドキしてる…」[p]
-[舜]「すっごく気持ちよくなりますよ。それにもっと欲しくなるかも…」[p]
-凛子「止められなくなっちゃったらどうしよう…♡　延長もしてくれる？」[p]
+Rinko「Không biết em sẽ được massage như thế nào đây? Hồi hộp quá...」[p]
+[舜]「Sẽ sướng lắm đấy. Có khi chị còn muốn thêm nữa cơ...」[p]
+Rinko「Lỡ em không dừng lại được thì phải làm sao...♡ Anh có gia hạn thêm cho em không?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1291,9 +1292,9 @@
 *J1_2_kaiwa2
 
 [tb_start_text mode=1 ]
-凛子「私もいろんなマッサージを学んできたつもりだけど…まだ知らないマッサージがあるのかな」[p]
-凛子「仰向けで押さえ込まれて…もう揉みほぐしてもらう準備はできちゃったみたい♡」[p]
-凛子「思いっきり気持ちよくしてくれるんでしょう？　[舜]くんの好きにしていいからね」[p]
+Rinko「Em cứ tưởng mình đã học nhiều cách massage rồi... nhưng chắc vẫn còn cách massage em chưa biết.」[p]
+Rinko「Nằm ngửa bị đè xuống... có vẻ em đã sẵn sàng để được xoa bóp rồi♡」[p]
+Rinko「Anh sẽ làm em sướng thỏa thích đúng không? Shun-kun cứ làm gì anh thích nhé.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1301,9 +1302,9 @@
 *J1_2_kaiwa3
 
 [tb_start_text mode=1 ]
-[舜]「どうやってマッサージするのか覚えてくださいね？」[p]
-凛子「覚えるつもりだけど、このえっちなマッサージする相手は[舜]くんだけでしょう？」[p]
-凛子「他の人にはしないから…[舜]くん仕様で教えてくれると嬉しいの…♡」[p]
+[舜]「Chị nhớ xem em massage thế nào nhé?」[p]
+Rinko「Em định nhớ đấy, nhưng massage dâm đãng thế này thì đối tượng chỉ có mình Shun-kun thôi đúng không?」[p]
+Rinko「Em sẽ không làm cho người khác đâu... Nên nếu anh dạy theo kiểu dành riêng cho Shun-kun thì em vui lắm...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa=0"  name="H_kaiwa"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1311,9 +1312,9 @@
 *J1_2_Dkiss1
 
 [tb_start_text mode=1 ]
-凛子「ん、ちゅ、ちゅぷ、ちゅっちゅ…これもマッサージ？　唇でマッサージするのね」[p]
-[舜]「口の中も舌でマッサージできるんですよ？　ほら、実際にされてますよ、今…」[p]
-凛子「ほんとだ…んっ、ちゅくちゅくちゅく♡　はぁ♡　トロトロになっちゃう♡」[p]
+Rinko「Ưm, chụt, chụt, ưm, phù♡ Haa, haa... Đây cũng là massage sao? Massage bằng môi nhỉ.」[p]
+[舜]「Bên trong miệng cũng có thể massage bằng lưỡi được đấy? Chị xem, thực tế đang bị làm này, ngay bây giờ...」[p]
+Rinko「Thật này... ưm, chụt chụt chụt♡ Haa♡ Tan chảy ra mất thôi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low1==1"  ]
@@ -1323,9 +1324,9 @@
 *J1_2_Dkiss2
 
 [tb_start_text mode=1 ]
-凛子「ちゅくじゅぷ、じゅるるるっ♡　はぁ、はぁ、キスマッサージって気持ちいいんだね♡」[p]
-凛子「知らなかった…実際にお客さんの施術で試しちゃいたいくらい…♡」[p]
-凛子「ふふ、冗談だよ♡　これは[舜]くんだけがしてくれるマッサージだもんね？」[p]
+Rinko「Chụt chụt, sột soạt♡ Haa, haa, massage nụ hôn sướng thật đấy♡」[p]
+Rinko「Em không biết đấy... Em muốn thử áp dụng vào việc trị liệu cho khách hàng luôn...♡」[p]
+Rinko「Khc, đùa thôi♡ Đây là massage chỉ Shun-kun mới làm cho em thôi đúng không?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss+=1"  name="H_kiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1335,9 +1336,9 @@
 *J1_2_Dkiss3
 
 [tb_start_text mode=1 ]
-凛子「ちゅく、ちゅっちゅ♡　ふぅ、ふっ…♡　お口のマッサージ、すっごく好き…♡」[p]
-凛子「これからマッサージの施術してもらうたびにお願いしちゃうかも♡」[p]
-凛子「不思議なの…触れてないのに、勝手にお腹の奥がキュンって反応しちゃったみたい…」[p]
+Rinko「Chụt, chụt chụt♡ Phù, hức...♡ Massage miệng, em thích lắm...♡」[p]
+Rinko「Từ giờ mỗi lần được anh massage chắc em sẽ xin anh làm cho mất♡」[p]
+Rinko「Kỳ lạ thật... Dù không chạm vào, nhưng sâu trong bụng em cứ tự động quặn lên phản ứng lại...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss=0"  name="H_kiss"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1349,9 +1350,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「んっ♡　んぅっ♡　ちゅぷっ、じゅぷ、ちゅくちゅく♡　はぁ、はっ…♡　ヤダ、私ったら…」[p]
-凛子「夢中でむさぼっちゃってた…なんにも考えられなくなっちゃって…♡」[p]
-凛子「[舜]くんのマッサージの効果かも…頭の中ぼんやりして…気持ちよくなっちゃった♡」[p]
+Rinko「Ưm♡ Ưm♡ Chụt, chụt, chụt chụt♡ Haa, hức...♡ Không chịu đâu, em thật là...」[p]
+Rinko「Say sưa ngấu nghiến mất rồi... Chẳng thể nghĩ được gì nữa...♡」[p]
+Rinko「Chắc là tác dụng massage của Shun-kun... Trong đầu mơ màng... sướng quá đi mất♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -1359,9 +1360,9 @@
 *J1_2_fera1
 
 [tb_start_text mode=1 ]
-[舜]「口の中、今度はチンポでほぐしますね…しっかり咥えてくださいね？」[p]
-凛子「んんっ♡　ちゅぷ、ちゅっちゅ♡　体のいろんなとこ使うのね…ちゅぷ、ちゅっちゅ♡」[p]
-凛子「[舜]くんのおちんちん、すっごく固くなってる…口の中、トロトロにされちゃいそう…♡」[p]
+[舜]「Bên trong miệng, lần này em sẽ xoa bóp bằng dương vật nhé... Chị hãy ngậm thật chặt nhé?」[p]
+Rinko「Ưm♡ Chụt, chụt chụt♡ Dùng nhiều bộ phận trên cơ thể nhỉ... chụt, chụt chụt♡」[p]
+Rinko「Dương vật Shun-kun, to lên nhiều quá... Bên trong miệng, sắp bị làm cho trơn tuột mất...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low2==1"  ]
@@ -1371,9 +1372,9 @@
 *J1_2_fera2
 
 [tb_start_text mode=1 ]
-凛子「はーっ♡　はーっ♡　私も[舜]くんをお口でほぐしてあげるからね…」[p]
-凛子「すっごく凝ってるみたいで固くなってるから…じゅぷじゅぽじゅぽじゅぽ、じゅるるるっ♡」[p]
-凛子「はぁ、はふっ…♡　お互い気持ちよくなれるマッサージってすっごくいいね…♡」[p]
+Rinko「Haa♡ Haa♡ Em cũng sẽ xoa bóp cho Shun-kun bằng miệng nhé...」[p]
+Rinko「Có vẻ căng cứng lắm rồi nên... chụt chụt chụt, sột soạt♡」[p]
+Rinko「Haa, ha♡ Massage mà cả hai cùng sướng thì tuyệt thật đấy...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_fera+=1"  name="H_fera"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1383,9 +1384,9 @@
 *J1_2_fera3
 
 [tb_start_text mode=1 ]
-凛子「じゅぷ、じゅぽじゅぽじゅぽじゅぽっ…んんっ♡　口の奥まで届いてる…♡」[p]
-[舜]「喉の入り口もしっかりほぐしてあげようかと思いまして…どうですか？」[p]
-凛子「んぐっ…んんっ♡　ダメ、奥まで入ると…お口だけじゃなくて…お腹の奥まで反応しちゃう♡」[p]
+Rinko「Chụt, chụt chụt chụt... ưm♡ Chạm đến tận sâu trong miệng rồi...♡」[p]
+[舜]「Em định xoa bóp cẩn thận cả lối vào cổ họng nữa... Chị thấy sao?」[p]
+Rinko「Ưc... ưm♡ Không được, đâm vào sâu thì... không chỉ miệng... mà sâu trong bụng cũng phản ứng lại mất♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_fera=0"  name="H_fera"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1397,9 +1398,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「んぅぅぅっ♡　ふっ、ふっ…♡　ふーっ…すっごいオスの匂いしてる…♡」[p]
-凛子「頭の中…おちんちんのことしか考えられなくなってきちゃった♡」[p]
-凛子「口の中と頭の中、両方ほぐされちゃったのかも…♡　もうユルユルになっちゃったぁ…♡」[p]
+Rinko「Ưm♡ Hức, hức...♡ Phù... mùi đàn ông nồng nặc quá...♡」[p]
+Rinko「Trong đầu... chẳng thể nghĩ được gì ngoài dương vật nữa rồi♡」[p]
+Rinko「Cả trong miệng lẫn trong đầu, đều bị xoa bóp hết rồi...♡ Trở nên lỏng lẻo hết rồi...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -1408,9 +1409,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「ひゃうぅっ♡　鷲掴みにされちゃってるっ…♡　おっぱい揉みほぐされちゃう…」[p]
-凛子「んんっ、くっ…[舜]くんの手、おっきい…もみくちゃになっちゃうのっ」[p]
-[舜]「あー、おっぱいやわらか…このままほぐしていきますからね？」[p]
+Rinko「Hya ư♡ Bị vồ lấy rồi...♡ Ngực bị xoa bóp kìa...」[p]
+Rinko「Ưm, kư... Bàn tay Shun-kun, to quá... bị vò nát mất thôi.」[p]
+[舜]「A, mềm quá... Em sẽ cứ thế này xoa bóp tiếp nhé?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1420,9 +1421,9 @@
 *J1_2_munemomi2
 
 [tb_start_text mode=1 ]
-凛子「んんっ！　はぁ、あっ、あぁ♡　ど、どう？　ほぐれてきちゃった…？　んっ、あぁ♡」[p]
-[舜]「先っぽは固くなってますね。凝ってるんですかねぇ…よくほぐさないと」[p]
-凛子「あぁぁぁっ♡　手のひらでスリスリっ…刺激強くてっ…♡　気持ちよくなっちゃう♡」[p]
+Rinko「Ưm! Haa, á, a♡ S-Sao rồi? Đã mềm ra chưa...? Ưm, a♡」[p]
+[舜]「Đầu vú thì đang cứng lại rồi này. Căng cứng rồi sao nhỉ... Phải xoa bóp kỹ mới được.」[p]
+Rinko「Aaaa♡ Lòng bàn tay cọ xát... kích thích mạnh quá...♡ Sướng quá đi mất♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1432,9 +1433,9 @@
 *J1_2_munemomi3
 
 [tb_start_text mode=1 ]
-凛子「んぅっ、ふっ…もみくちゃにされちゃってる…♡　おっぱい、とろけちゃいそう♡」[p]
-[舜]「凝ってるところをほぐしてるだけですからね？」[p]
-凛子「んっ♡　はぁ、ああ…よく揉みほぐしてくれるんだね…♡　お願いします♡」[p]
+Rinko「Ưm, hức... Bị vò nát mất thôi...♡ Ngực, sắp tan chảy ra rồi♡」[p]
+[舜]「Em chỉ đang xoa bóp chỗ căng cứng thôi nhé?」[p]
+Rinko「Ưm♡ Haa, aa... Xoa bóp kỹ cho em nhé...♡ Xin anh đấy♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi=0"  name="H_munemomi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1447,9 +1448,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「んっ…あぁぁぁっ♡　おっぱいと乳首一緒にコリコリしないでっ…♡」[p]
-凛子「んっく♡　あぅぅっ♡　おっぱいしか触られてないのに…体全部ビクビクしてるってばぁ♡」[p]
-凛子「[舜]くんに触られたところから…ビリビリって痺れたみたいに気持ちよくなっちゃってる…♡」[p]
+Rinko「Ưm... aaaa♡ Đừng có nắn đầu vú cùng với ngực chứ...♡」[p]
+Rinko「Ưm♡ A ư♡ Rõ ràng chỉ bị chạm vào ngực thôi mà... cả cơ thể cứ giật giật kìa♡」[p]
+Rinko「Từ chỗ bị Shun-kun chạm vào... tê rần lên như bị điện giật, sướng quá đi mất...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -1457,9 +1458,9 @@
 *J1_2_munename1
 
 [tb_start_text mode=1 ]
-凛子「んんっ…そんな、しゃぶるみたいに吸い付かれると…変になっちゃう♡」[p]
-凛子「んぅぅぅっ♡　はぁっ、はぁ…♡　おっぱいなめられてるだけなのに…体全部熱いの♡」[p]
-凛子「これもマッサージの効果？　[舜]くん、本当にマッサージのプロになってもいいかもね…♡」[p]
+Rinko「Ưm... Bị mút chùn chụt như thế... em trở nên kỳ lạ mất♡」[p]
+Rinko「Ưm♡ Haa, haa...♡ Rõ ràng chỉ bị liếm ngực thôi mà... cả cơ thể nóng ran lên♡」[p]
+Rinko「Đây cũng là tác dụng của massage sao? Shun-kun, có khi anh làm chuyên gia massage thật luôn cũng được đấy...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low4==1"  ]
@@ -1470,9 +1471,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-[舜]「他の女性のお客さんにも乳首舐めマッサージしてもいいんですか？」[p]
-凛子「んっ…♡　それは、だめ…♡　えっちなマッサージは私にだけしてほしい、からっ…♡」[p]
-凛子「あっ…ああぁっ♡　きっとこんな気持ちいいマッサージ癖になっちゃうもの…私だけにして♡」[p]
+[舜]「Em massage liếm đầu vú cho những khách hàng nữ khác cũng được sao?」[p]
+Rinko「Ưm...♡ Thế thì, không được...♡ Massage dâm đãng thì em chỉ muốn anh làm cho em thôi...♡」[p]
+Rinko「A... aaaa♡ Chắc chắn massage sướng thế này sẽ thành thói quen mất... Chỉ làm cho em thôi nhé♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munename+=1"  name="H_munename"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1482,9 +1483,9 @@
 *J1_2_munename3
 
 [tb_start_text mode=1 ]
-凛子「んん、ふぅ、ふぅっ♡　だめ、だめなのっ…♡　あんまり舐めたら…乳首ふやけちゃう…♡」[p]
-凛子「乳首コリコリトロトロになったら…もう戻れなくなっちゃうからぁっ♡」[p]
-凛子「あんんっ♡　や、だめ…腰動いちゃうっ♡　恥ずかしいの…あんまり見ないでぇっ♡」[p]
+Rinko「Ưm, phù, phù♡ Không được, không được đâu...♡ Liếm nhiều quá... đầu vú nhũn ra mất...♡」[p]
+Rinko「Đầu vú mà cứng ngắc trơn tuột thế này thì... em không thể quay lại như trước được nữa đâu♡」[p]
+Rinko「Á♡ Không, đừng... hông em tự động nảy lên kìa♡ Xấu hổ lắm... đừng nhìn chằm chằm thế chứ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munename=0"  name="H_munename"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1497,9 +1498,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ひぅぅぅっ♡　あぁっ、激し…そんなに吸ってもミルク出ないってば♡」[p]
-凛子「もー、[舜]くんってば…♡　マッサージしたら出ちゃうって思ってるの？」[p]
-凛子「赤ちゃんできたら…またおっぱいミルクが出るようになっちゃうかも…♡」[p]
+Rinko「Hiư♡ Á, mãnh liệt... Dù anh có mút thế cũng không có sữa chảy ra đâu♡」[p]
+Rinko「Thiệt tình, Shun-kun...♡ Anh nghĩ massage là sẽ chảy ra sao?」[p]
+Rinko「Nếu có em bé... chắc ngực lại tiết ra sữa mất...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -1508,9 +1509,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「ひゃぅぅっ♡　奥まで舌入ってるっ、だめ、そんなとこまで舐めないでぇっ…♡」[p]
-[舜]「でも中ヒクヒクして嬉しそうにしてますよ？　ほら、ほら…」[p]
-凛子「ひゃうぅっ♡　あっ♡　あんっ♡　そんな意地悪言わないでぇっ♡」[p]
+Rinko「Hya ư♡ Lưỡi vào tận sâu bên trong rồi, không được, đừng liếm đến tận chỗ đó chứ...♡」[p]
+[舜]「Nhưng bên trong đang giật giật có vẻ sung sướng lắm này? Chị xem, chị xem...」[p]
+Rinko「Hya ư♡ A♡ Á♡ Đừng nói những lời trêu chọc thế chứ♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low5==1"  ]
@@ -1520,9 +1521,9 @@
 *J1_2_tituname2
 
 [tb_start_text mode=1 ]
-[舜]「あー、奥までトロトロじゃないですか…マッサージでほぐれた証拠ですね？」[p]
-凛子「そうなの…♡　[舜]くんが深いところまで舐めてほぐしてくれたからっ…とろけちゃった♡」[p]
-凛子「ヒクヒク止まらないの…♡　気持ちよすぎて…何も考えられなくなっちゃう…」[p]
+[舜]「A, tận sâu bên trong trơn tuột rồi này... Bằng chứng là đã được massage mềm ra rồi nhỉ?」[p]
+Rinko「Đúng vậy...♡ Vì Shun-kun đã liếm sâu vào tận bên trong xoa bóp cho em... nên em tan chảy ra rồi♡」[p]
+Rinko「Giật giật không dừng lại được...♡ Sướng quá... chẳng thể nghĩ được gì nữa...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kunni+=1"  name="H_kunni"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1532,9 +1533,9 @@
 *J1_2_tituname3
 
 [tb_start_text mode=1 ]
-凛子「あぁぁっ！　んぅぅっ、奥まで舌入っちゃってる…そんなに出し入れされたら腰動いちゃう♡」[p]
-凛子「んっ…んぅ、[舜]くんのマッサージ上手すぎて…骨抜きにされちゃう…♡」[p]
-凛子「[舜]くん、他の人にはこのマッサージしちゃダメよ？　人気のお店になっちゃうからっ♡」[p]
+Rinko「Aaaa! Ưm, lưỡi vào tận sâu bên trong rồi... Bị ra vào như thế hông em tự nảy lên mất♡」[p]
+Rinko「Ưm... ưm, Shun-kun massage giỏi quá... Em bị rút hết gân cốt rồi...♡」[p]
+Rinko「Shun-kun, anh không được làm massage này cho người khác đâu nhé? Quán sẽ đông khách lắm đấy♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kunni=0"  name="H_kunni"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1547,9 +1548,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁぁっ♡　んっ♡　はぅぅっ♡　気持ちいいっ…こんなの知らないぃ♡」[p]
-凛子「今まで生きてきて…こんなに気持ちいいマッサージ受けたの初めてなの…♡」[p]
-凛子「ん、くぅっ♡　体の奥まで…ビリビリ痺れたみたいになっちゃってる…すごいのっ♡」[p]
+Rinko「Aaaa♡ Ưm♡ Haa♡ Sướng quá... Em chưa từng biết cảm giác này♡」[p]
+Rinko「Sống đến từng tuổi này... đây là lần đầu tiên em được massage sướng đến thế...♡」[p]
+Rinko「Ưm, kư♡ Tận sâu trong cơ thể... như bị tê rần lên... tuyệt quá♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -1558,9 +1559,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t3.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「ひあぁぁっ♡　あっ♡　あっ♡　や、だぁっ…体が勝手に…何か出しちゃって…」[p]
-凛子「やだ…お漏らしだなんて…こんな年になって恥ずかしいっ…！」[p]
-[舜]「違いますよ、潮吹きしてるんです…そんなに気持ちよくなってくれて嬉しいですよ…！」[p]
+Rinko「Hiaa♡ A♡ A♡ Không, không chịu đâu... Cơ thể tự động... tiết ra thứ gì đó...」[p]
+Rinko「Không chịu đâu... Lại đi tiểu dầm... Đến tuổi này rồi, xấu hổ quá...!」[p]
+[舜]「Không phải đâu, chị đang phun nước đấy... Chị sướng đến thế em vui lắm...!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman+=1"  name="H_teman"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1570,9 +1571,9 @@
 *J1_2_siohuki2
 
 [tb_start_text mode=1 ]
-凛子「あうぅぅっ♡　お、奥っ…そんなに撫でられたら…また出ちゃう♡　あぁぁぁっ♡」[p]
-凛子「体のフタがおかしくなっちゃってるみたい…ピュルピュルっていっぱい出てるの…」[p]
-凛子「[舜]くんのマッサージが気持ちいいからだよ…♡　私の体ユルユルになっちゃった♡」[p]
+Rinko「A ư♡ B-Bên trong... Bị vuốt ve như thế... lại ra mất♡ Aaaa♡」[p]
+Rinko「Cái nắp cơ thể bị hỏng mất rồi... Cứ xịt xịt trào ra nhiều lắm...」[p]
+Rinko「Là vì massage của Shun-kun sướng quá đấy...♡ Cơ thể em trở nên lỏng lẻo hết rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman+=1"  name="H_teman"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1583,9 +1584,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「んっ♡　あっ、あぁぁっ♡　止まらない…こんなの初めて…♡」[p]
-[舜]「リラックスしてる証拠じゃないですか…！　この調子で体をほぐしましょうね？」[p]
-凛子「これ以上ほぐれたら…もう戻れなくなっちゃうってばぁ…♡　あっ、あぁ、あぁっ♡」[p]
+Rinko「Ưm♡ Aaaa♡ Không dừng lại được... Cảm giác này lần đầu tiên...♡」[p]
+[舜]「Bằng chứng là chị đang thư giãn mà...! Cứ đà này xoa bóp cơ thể nhé?」[p]
+Rinko「Nếu mềm ra thêm nữa... em không thể quay lại như trước được nữa đâu...♡ A, a, aaaa♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman=0"  name="H_teman"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1597,9 +1598,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぅぅぅっ♡　だめ、だめだめだめっ♡　また溢れちゃうぅ♡　止まらなくなっちゃうっ♡」[p]
-[舜]「いいじゃないですか、老廃物は全部出しちゃいましょうよ…！　ほらほらほら！」[p]
-凛子「いやぁぁぁっ♡　あっ♡　あっ♡　止まんないっ…♡　出ちゃうぅぅっ♡」[p]
+Rinko「A ư♡ Không được, không được không được không được♡ Lại trào ra rồi♡ Không dừng lại được mất♡」[p]
+[舜]「Có sao đâu, chất thải thì cứ tống hết ra ngoài đi...! Chị xem chị xem chị xem!」[p]
+Rinko「Không chịu đâuuu♡ A♡ A♡ Không dừng lại được...♡ Ra mất♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -1607,9 +1608,9 @@
 *J1_2_pisuton_yukkuri1
 
 [tb_start_text mode=1 ]
-凛子「んっ…ふぅっ♡　あぁっ♡　奥まで押し上げられちゃってる…♡　弱いトコ当たってるの♡」[p]
-[舜]「しっかり圧を加えながらマッサージしなくちゃいけないですからね…」[p]
-凛子「あぁぁっ♡　すっごく上手…欲しいところ、すぐ見つけちゃうなんてマッサージの才能あるのかも♡」[p]
+Rinko「Ưm... phù♡ A♡ Bị đẩy lên tận sâu bên trong rồi...♡ Trúng chỗ nhạy cảm rồi♡」[p]
+[舜]「Vì phải vừa ấn mạnh vừa massage mà...」[p]
+Rinko「Aaaa♡ Giỏi quá... Tìm thấy ngay chỗ em muốn, có khi anh có tài năng massage đấy♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1619,9 +1620,9 @@
 *J1_2_pisuton_yukkuri2
 
 [tb_start_text mode=1 ]
-凛子「[舜]くんのほうが凝ってるんじゃない？　ここ、ガチガチになってるでしょ…♡」[p]
-[舜]「凛子さんが締め付けてくれたら、柔らかくなるかも…マッサージしてくれますか？」[p]
-凛子「んんっ、もちろん♡　気持ちよくなって♡　締めつけてほぐしてあげるからねっ…♡」[p]
+Rinko「Chẳng phải Shun-kun mới là người đang căng cứng sao? Chỗ này, cứng ngắc rồi này...♡」[p]
+[舜]「Nếu Rinko-san siết chặt lại thì có khi sẽ mềm ra đấy... Chị massage cho em nhé?」[p]
+Rinko「Ưm, tất nhiên rồi♡ Hãy sướng đi♡ Em sẽ siết chặt xoa bóp cho anh...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1631,9 +1632,9 @@
 *J1_2_pisuton_yukkuri3
 
 [tb_start_text mode=1 ]
-凛子「んっ♡　ふぅ、ふっ♡　あっ♡　ダメ、[舜]くんのどんどん固くなっちゃう♡」[p]
-凛子「私のマッサージじゃほぐせないみたい♡　思いっきり出したら柔らかくなるはずだから♡」[p]
-凛子「私の中にたっぷり出して…♡　[舜]くんに気持ちよくなってくれたらそれでいいから♡」[p]
+Rinko「Ưm♡ Phù, hức♡ A♡ Không được, của Shun-kun càng lúc càng cứng hơn rồi♡」[p]
+Rinko「Hình như massage của em không làm mềm ra được♡ Chắc phải bắn ra hết cỡ thì mới mềm được♡」[p]
+Rinko「Bắn đầy vào trong em đi...♡ Chỉ cần Shun-kun sướng là em vui rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri=0"  name="H_supiritasu_pisuton_yukkuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1645,9 +1646,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「おっ♡　おおおっ♡　私が[舜]くんのガチガチのおちんちんほぐさなきゃいけないのにっ♡」[p]
-凛子「私のほうが気持ちよくなっちゃったみたい…♡　ごめんなさい[舜]くん…♡」[p]
-凛子「だってっ…んっ♡　はぁ、んっ…さっきから弱いところにばっかり当たるからぁっ…♡」[p]
+Rinko「O♡ Ooo♡ Đáng lẽ em phải làm mềm dương vật cứng ngắc của Shun-kun mới đúng chứ♡」[p]
+Rinko「Hình như em lại là người sướng mất rồi...♡ Xin lỗi Shun-kun nhé...♡」[p]
+Rinko「Bởi vì... ưm♡ Haa, ưm... Nãy giờ toàn đâm trúng chỗ nhạy cảm thôi...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]
@@ -1655,9 +1656,9 @@
 *J1_2_pisuton_hagesiku1
 
 [tb_start_text mode=1 ]
-凛子「あ゛っ♡　あ゛っ♡　お、奥までっ…届いて…体の奥まで持ち上がっちゃってる…♡　」[p]
-凛子「痺れたみたいになって…もうこれ以上なんにも考えられなくなっちゃう…♡」[p]
-凛子「[舜]くんのマッサージ、習おうって思ってたのに…！　流されちゃう…♡」[p]
+Rinko「A♡ A♡ B-Bên trong... Chạm tới rồi... Tận sâu trong cơ thể bị nâng lên...♡」[p]
+Rinko「Giống như bị tê rần lên... chẳng thể nghĩ được chuyện gì nữa rồi...♡」[p]
+Rinko「Rõ ràng là định học massage của Shun-kun cơ mà...! Bị cuốn theo mất rồi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1667,9 +1668,9 @@
 *J1_2_pisuton_hagesiku2
 
 [tb_start_text mode=1 ]
-凛子「あ゛あ゛っ♡　すごいっ…[舜]くんのセックス…気持ちいいのっ…♡　もっと欲しくなるっ♡」[p]
-[舜]「違いますよ…セックスじゃなくてマッサージでしょ凛子さん♡」[p]
-凛子「ああっ♡　マッサージだった…♡　奥までかき回されて気持ちよくなっちゃうの…♡」[p]
+Rinko「Aa♡ Tuyệt quá... Tình dục của Shun-kun... sướng quá...♡ Em muốn nữa cơ♡」[p]
+[舜]「Không phải đâu... Đâu phải tình dục, là massage mà Rinko-san♡」[p]
+Rinko「Aa♡ Là massage nhỉ...♡ Bị ngoáy tận sâu bên trong, sướng quá đi mất...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1679,9 +1680,9 @@
 *J1_2_pisuton_hagesiku3
 
 [tb_start_text mode=1 ]
-凛子「んっ♡　ただ気持ちよくなっちゃうだけでいいの…？　私ばっかりしてもらっちゃって…♡」[p]
-凛子「おっ、おおおっ♡　すごいっ…体、ほぐれちゃう…♡　気持ちいい波が来ちゃう…♡」[p]
-凛子「こんなに気持ちいいの知らない…♡　[舜]くんっ…すごいのっ…♡　癖になっちゃう♡」[p]
+Rinko「Ưm♡ Chỉ sướng thôi là được sao...? Toàn là em được anh làm cho thôi...♡」[p]
+Rinko「O, ooo♡ Tuyệt quá... Cơ thể, mềm nhũn ra...♡ Làn sóng sung sướng đang ập đến...♡」[p]
+Rinko「Sướng thế này em chưa từng biết...♡ Shun-kun... tuyệt quá...♡ Thành thói quen mất♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku=0"  name="H_supiritasu_pisuton_hagesiku"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1693,9 +1694,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「お゛お゛っ♡　やだ…はしたない声、出ちゃうぅぅっ♡　こんなの恥ずかしいっ♡」[p]
-凛子「あ゛っ♡　あ゛あ゛っ♡　気持ちよすぎて…なんにもできなくなっちゃうってばぁ♡」[p]
-[舜]「なんにもしなくていいんですよ…！　ただ気持ちよくなればいいんです…！」[p]
+Rinko「Ooo♡ Không chịu đâu... Lại phát ra tiếng kỳ cục mất rồi♡ Xấu hổ quá♡」[p]
+Rinko「A♡ Aa♡ Sướng quá... Chẳng thể làm được gì nữa rồi♡」[p]
+[舜]「Chị không cần làm gì cả đâu...! Chỉ cần sướng là được rồi...!」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]
@@ -1703,9 +1704,9 @@
 *J2_kaiwa1
 
 [tb_start_text mode=1 ]
-凛子「綺麗に洗ってあげるから、じっとしていて？　いつも頑張ってくれてるからサービス♡」[p]
-[舜]「俺も凛子さんのこと洗いたいです。凛子さんこそいっつも頑張ってるでしょ？」[p]
-凛子「そう…？　[舜]くんに褒めてもらえるの嬉しいな…じゃあお願いしちゃおうかなぁ♡」[p]
+Rinko「Em sẽ tắm rửa sạch sẽ cho anh, anh ngồi yên nhé? Vì anh luôn cố gắng nên đây là dịch vụ đặc biệt♡」[p]
+[舜]「Em cũng muốn tắm cho Rinko-san. Rinko-san mới là người luôn cố gắng mà?」[p]
+Rinko「Vậy sao...? Được Shun-kun khen em vui lắm... Thế thì em nhờ anh nhé♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1713,9 +1714,9 @@
 *J2_kaiwa2
 
 [tb_start_text mode=1 ]
-[舜]「ボディソープ、凛子さんの匂いがしますね…」[p]
-凛子「私が普段使ってるものだからね…お肌にもいいし、すっごくいい香りなの」[p]
-凛子「今日は[舜]くんも私と同じ匂いになっちゃうね？　ふふ、匂いもお揃いって素敵でしょ」[p]
+[舜]「Sữa tắm, có mùi của Rinko-san này...」[p]
+Rinko「Vì đó là loại em hay dùng mà... Rất tốt cho da, mùi cũng thơm lắm.」[p]
+Rinko「Hôm nay Shun-kun cũng sẽ có mùi giống em nhỉ? Khc, mùi giống nhau tuyệt quá đúng không.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1723,9 +1724,9 @@
 *J2_kaiwa3
 
 [tb_start_text mode=1 ]
-凛子「も～、あんまり見ないで？　明るい中でじっと見られると恥ずかしいから…」[p]
-[舜]「すみません。綺麗でエッチだなと思って…でも凛子さんだってじっと見てるじゃないですか…」[p]
-凛子「あっ…ごめんなさいね？　[舜]くん、男の子の体だなって思って…つい見ちゃった…」[p]
+Rinko「Thiệt tình~, đừng nhìn chằm chằm thế chứ? Bị nhìn chằm chằm ở chỗ sáng thế này xấu hổ lắm...」[p]
+[舜]「Em xin lỗi. Tại chị đẹp và gợi cảm quá nên... Nhưng Rinko-san cũng đang nhìn chằm chằm mà...」[p]
+Rinko「A... xin lỗi anh nhé? Tại em nghĩ cơ thể Shun-kun đúng là của con trai thật... nên lỡ nhìn chằm chằm...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa=0"  name="H_kaiwa"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1734,9 +1735,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「んっ…♡　くっ、んんっ…♡　耳、綺麗にしてくれてるの…？　はぁ、あんっ♡」[p]
-凛子「舌を使って丁寧に洗ってくれるんだね…おかげで気持ちよくなっちゃった」[p]
-凛子「上手…♡　[舜]くんの息遣いまで耳の奥に届いちゃってる…夢中なのも伝わってくるよ♡」[p]
+Rinko「Ưm...♡ Kư, ưm...♡ Anh đang làm sạch tai cho em sao...? Haa, á♡」[p]
+Rinko「Anh dùng lưỡi rửa cẩn thận thật đấy... Nhờ vậy mà em thấy sướng quá.」[p]
+Rinko「Giỏi quá...♡ Tiếng thở của Shun-kun truyền đến tận sâu trong tai em... Cảm nhận được sự say sưa của anh luôn♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low1==1"  ]
@@ -1746,9 +1747,9 @@
 *J2_miminame2
 
 [tb_start_text mode=1 ]
-凛子「あうぅっ♡　あんっ、はぁ♡　ねっとり舐められると…ムズムズしちゃう…♡」[p]
-凛子「[舜]くんの舌…熱々トロトロで…深いところまで入ってるのわかるの…♡」[p]
-凛子「やだ…耳だけでこんなに気持ちよくなっちゃうなんて…私変になってるみたい♡」[p]
+Rinko「A ư♡ Á, haa♡ Bị liếm ướt át thế này... ngứa ngáy quá...♡」[p]
+Rinko「Lưỡi của Shun-kun... nóng hổi ướt át... Em biết là nó vào tận sâu bên trong luôn...♡」[p]
+Rinko「Không chịu đâu... Chỉ ở tai thôi mà đã sướng thế này rồi... Hình như em trở nên kỳ lạ mất♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_miminame+=1"  name="H_miminame"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1758,9 +1759,9 @@
 *J2_miminame3
 
 [tb_start_text mode=1 ]
-凛子「ダメ、頭の奥まで痺れたみたいになってる…んぅっ、ジュポジュポ出し入れされると…♡」[p]
-[舜]「耳舐めてるだけなのに、腰も動いちゃってるんですか？　やらしいですね凛子さん」[p]
-凛子「やっ…言わないでぇっ♡　はぁ、エッチなこと言われると、余計に反応しちゃうから…♡」[p]
+Rinko「Không được, sâu trong đầu tê rần lên rồi... Ưm, bị đưa ra đưa vào sột soạt thế này...♡」[p]
+[舜]「Chỉ đang liếm tai thôi mà hông chị cũng tự động nảy lên sao? Rinko-san dâm đãng quá nhỉ.」[p]
+Rinko「Á... đừng nói mà♡ Haa, bị nói những lời dâm đãng, em lại càng phản ứng mạnh hơn...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_miminame=0"  name="H_miminame"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1773,9 +1774,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぅぅぅっ♡　舐める音しか聞こえないの…♡　ジュポジュポってエッチな音…」[p]
-凛子「耳の奥までそんなに磨かなくてもいい、ってば…♡　お腹の奥キュンってしちゃうよ…」[p]
-凛子「頭の中…エッチなことでいっぱいになっちゃってるの…大人なのに…どうしちゃったんだろう」[p]
+Rinko「A ư♡ Chỉ nghe thấy tiếng liếm thôi...♡ Tiếng sột soạt dâm đãng quá...」[p]
+Rinko「Đừng có lau chùi sâu trong tai kỹ thế chứ...♡ Sâu trong bụng em quặn lên rồi này...」[p]
+Rinko「Trong đầu... tràn ngập những chuyện dâm đãng rồi... Rõ ràng là người lớn rồi mà... Sao lại thế này nhỉ.」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -1783,9 +1784,9 @@
 *J2_sirinade1
 
 [tb_start_text mode=1 ]
-凛子「んっ…お尻ばかり撫で洗いされると恥ずかしいな…小さなお尻じゃないし…」[p]
-[舜]「いや、めちゃくちゃ綺麗ですよ。それにエロいです…ずっと触っていたいくらい」[p]
-凛子「もう…それは褒めすぎだってば…でもありがとう。すっごく嬉しい♡」[p]
+Rinko「Ưm... Cứ vuốt ve rửa mông mãi thế này xấu hổ lắm... Mông em đâu có nhỏ...」[p]
+[舜]「Đâu có, đẹp lắm đấy. Hơn nữa còn gợi cảm nữa... Em muốn chạm vào mãi thôi.」[p]
+Rinko「Thiệt tình... Anh khen quá lời rồi... Nhưng cảm ơn anh. Em vui lắm♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low2==1"  ]
@@ -1796,9 +1797,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「はぁっ♡　あぁ♡　綺麗になった？　さっきからずーっと撫でてるでしょう？」[p]
-凛子「んっ…お尻の間もこっそり撫でてるのわかってるんだからね？　そこは自分で洗えるから…」[p]
-凛子「そんなに一生懸命洗わなくてもいいんだよ？　んっ…はぁ、あっ♡　もう…聞いてるの？」[p]
+Rinko「Haa♡ A♡ Đã sạch chưa? Nãy giờ anh cứ vuốt ve suốt thôi?」[p]
+Rinko「Ưm... Anh đang lén lút vuốt ve cả khe mông em biết đấy nhé? Chỗ đó em tự rửa được mà...」[p]
+Rinko「Anh không cần phải rửa nhiệt tình thế đâu? Ưm... haa, á♡ Này... anh có nghe không đấy?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sirinade+=1"  name="H_sirinade"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1808,9 +1809,9 @@
 *J2_sirinade3
 
 [tb_start_text mode=1 ]
-[舜]「お尻を洗ってるだけなのに、どうしてそんなに腰動いちゃってるんですか？」[p]
-凛子「それは…だって…あんまり丁寧に洗ってくれるから…♡　気持ちよくなっちゃって…」[p]
-凛子「お尻じゃなくて…お腹の奥がキュンって切ない気持ちになっちゃうの…♡」[p]
+[舜]「Chỉ đang rửa mông thôi mà sao hông chị nảy lên dữ vậy?」[p]
+Rinko「Đó là... tại vì... anh rửa cẩn thận quá...♡ Sướng quá nên...」[p]
+Rinko「Không phải mông mà... sâu trong bụng em xốn xang khó chịu lắm...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sirinade=0"  name="H_sirinade"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1823,9 +1824,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁぁっ♡　撫で洗いされ過ぎて…足の間、熱くなってきちゃったの…♡」[p]
-凛子「せっかく洗ってもらってるのに…また汚しちゃったらごめんなさい♡」[p]
-[舜]「その時は手と、チンポブラシで綺麗に中まで洗ってあげますから安心してくださいね？」[p]
+Rinko「Aaaa♡ Bị vuốt ve rửa nhiều quá... giữa hai chân, nóng ran lên rồi...♡」[p]
+Rinko「Khó khăn lắm mới được rửa cho... Nếu lỡ làm bẩn lại thì xin lỗi anh nhé♡」[p]
+[舜]「Lúc đó em sẽ dùng tay và bàn chải dương vật rửa sạch tận bên trong cho chị nên cứ yên tâm nhé?」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -1834,9 +1835,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-[舜]「おっぱいも綺麗にしましょうね…あーあー、おっきすぎて手からこぼれちゃいますよ」[p]
-凛子「んんっ♡　手煩わせてごめんなさいっ♡　でもそんなに熱心に洗わなくても大丈夫だから…」[p]
-凛子「体洗ってるだけなのに…気持ちよくなっちゃうなんてはしたないよね…ごめんなさいっ♡」[p]
+[舜]「Cũng phải làm sạch ngực nữa nhỉ... A a, to quá sắp tràn ra khỏi tay em rồi.」[p]
+Rinko「Ưm♡ Xin lỗi vì làm phiền anh nhé♡ Nhưng anh không cần phải rửa nhiệt tình thế đâu...」[p]
+Rinko「Chỉ đang tắm thôi mà... sướng thế này thì thật là thiếu đứng đắn nhỉ... Xin lỗi anh nhé♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1846,9 +1847,9 @@
 *J2_munemomi2
 
 [tb_start_text mode=1 ]
-[舜]「凛子さん、たくさん働いて汗かいたでしょう？　洗ってあげないと…」[p]
-凛子「ひゃぅっ♡　お、おっぱい持ち上げておっぱいの裏まで洗わなくっても…んっ…あぁっ♡」[p]
-凛子「恥ずかしいところは私が自分で洗う、から…♡　もう充分だってばぁ♡」[p]
+[舜]「Rinko-san, chị làm việc nhiều đổ mồ hôi rồi đúng không? Phải rửa cho chị chứ...」[p]
+Rinko「Hya ư♡ K-Không cần phải nâng ngực lên rửa mặt dưới ngực đâu... ưm... a♡」[p]
+Rinko「Những chỗ đáng xấu hổ em sẽ tự rửa, nên...♡ Đủ rồi mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1858,9 +1859,9 @@
 *J2_munemomi3
 
 [tb_start_text mode=1 ]
-[舜]「あー、やわらか…おっぱいとろけそうですねぇ？」[p]
-凜子「んっ、ふぅっ…♡　洗ってるだけなんじゃないのっ？　[舜]くんの触り方…エッチだよ♡」[p]
-凛子「あっ…掴んじゃうの？　もう…いつまで経っても洗い終わらないんじゃない？」[p]
+[舜]「A, mềm quá... Ngực như sắp tan chảy ra nhỉ?」[p]
+Rinko「Ưm, phù...♡ Chỉ là rửa thôi đúng không? Cách chạm của Shun-kun... dâm đãng quá♡」[p]
+Rinko「A... Bóp sao? Thiệt tình... Cứ thế này thì đến bao giờ mới rửa xong đây?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi=0"  name="H_munemomi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1872,9 +1873,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ひゃぅぅぅっ♡　あぁぁっ♡　ち、乳首触れちゃってる…♡　あぅっ、そこ気持ちいいっ♡」[p]
-凜子「おっぱいもみくちゃになってる…♡　ふーっ…ふーっ…気持ちよすぎてぼーっとしてきた♡」[p]
-凛子「やだ…アソコまで疼いてきちゃうなんて…体欲しがってるみたいで恥ずかしい…♡」[p]
+Rinko「Hya ư♡ Aaaa♡ Đ-Đầu vú bị chạm vào rồi...♡ A ư, chỗ đó sướng quá♡」[p]
+Rinko「Ngực bị vò nát hết rồi...♡ Phù... phù... sướng quá đâm ra mơ màng luôn rồi♡」[p]
+Rinko「Không chịu đâu... Chỗ đó cũng nhói lên rồi... Cứ như cơ thể đang đòi hỏi vậy, xấu hổ quá...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -1883,9 +1884,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「んっ…あぁっ♡　そこっ、敏感なのに…♡　集中狙いするなんて意地悪だよ…♡」[p]
-[舜]「でも嬉しそうに腰動いてますよ？　ほら、ヘコヘコって…」[p]
-凛子「あっ♡　んぅっ♡　だって…摘まんでこねるからぁっ…♡　刺激強すぎちゃうっ…」[p]
+Rinko「Ưm... a♡ Chỗ đó, nhạy cảm lắm...♡ Nhắm tập trung vào đó thật là xấu tính mà...♡」[p]
+[舜]「Nhưng hông chị đang vui vẻ nảy lên kìa? Chị xem, bình bịch này...」[p]
+Rinko「A♡ Ưm♡ Tại vì... anh bóp rồi nặn mà...♡ Kích thích mạnh quá...」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low4==1"  ]
@@ -1895,9 +1896,9 @@
 *J2_kuriijiri2
 
 [tb_start_text mode=1 ]
-凛子「ひぅぅっ♡　あぁっ♡　クリばっかり…擦らないで…もう充分綺麗になったから…♡」[p]
-[舜]「エッロ、クリ洗ってるだけなのに…つま先ピンって伸びちゃってますよ？」[p]
-凛子「刺激強すぎて…気持ちいいのこみ上げてきちゃうの…♡　腰、動いちゃう…♡」[p]
+Rinko「Hiư♡ A♡ Đừng cứ cọ hạt đậu mãi thế... Đã đủ sạch rồi mà...♡」[p]
+[舜]「Dâm quá, chỉ rửa hạt đậu thôi mà... đầu ngón chân chị duỗi thẳng tắp rồi kìa?」[p]
+Rinko「Kích thích mạnh quá... cảm giác sướng cứ trào dâng lên...♡ Hông, tự động nảy lên...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kuriijiri+=1"  name="H_kuriijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1907,9 +1908,9 @@
 *J2_kuriijiri3
 
 [tb_start_text mode=1 ]
-凛子「ん…ふっ♡　やっ、摘まんで集中的に触らなくっても…！」[p]
-[舜]「しっかり皮も剥いて洗わないと、綺麗にならないですよ？　ほら…」[p]
-凛子「んあぁぁっ♡　あっ♡　剥き出しになると余計敏感だから…！　だめ、だめぇっ♡」[p]
+Rinko「Ưm... hức♡ Không, không cần phải bóp rồi chạm tập trung thế đâu...!」[p]
+[舜]「Phải lột hẳn bao quy đầu ra rửa cẩn thận mới sạch được chứ? Chị xem...」[p]
+Rinko「Aaaa♡ A♡ Bị lột trần ra lại càng nhạy cảm hơn...! Không được, không được đâu♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kuriijiri=0"  name="H_kuriijiri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1922,9 +1923,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ああぁぁっ♡　ダメ、クリだけで気持ちよくなっちゃうから…♡」[p]
-凛子「ごめんなさい、年上なのにこんなに情けない姿見せちゃって…♡　でも気持ちよくって♡」[p]
-凛子「腰も勝手に動いちゃうの…♡　あぁ、止まらない…♡　はしたない動きしちゃうぅ♡」[p]
+Rinko「Aaaa♡ Không được, chỉ với hạt đậu thôi em đã sướng thế này rồi...♡」[p]
+Rinko「Xin lỗi anh, lớn tuổi hơn mà lại để lộ bộ dạng thảm hại thế này...♡ Nhưng sướng quá♡」[p]
+Rinko「Hông cũng tự động nảy lên...♡ A, không dừng lại được...♡ Cử động dâm đãng quá♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -1933,9 +1934,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「今度は[舜]くんを綺麗に洗ってあげる♡　せっかくおちんちんおっきくなったんでしょ？」[p]
-凛子「まずはおちんちんから擦って綺麗にしようね…♡　トロトロにしてくれたおまんこを使うよ♡」[p]
-凛子「しっかり割れ目に挟んで…シコ、シコシコって…♡　綺麗になるかな？」[p]
+Rinko「Lần này em sẽ rửa sạch sẽ cho Shun-kun♡ Dương vật anh to lên rồi mà đúng không?」[p]
+Rinko「Trước tiên phải cọ rửa dương vật cho sạch sẽ đã nhé...♡ Em sẽ dùng cô bé ướt nhẹp này nhé♡」[p]
+Rinko「Kẹp chặt vào khe hở... sục, sục sục...♡ Có sạch không nhỉ?」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low5==1"  ]
@@ -1945,9 +1946,9 @@
 *J2_sumata2
 
 [tb_start_text mode=1 ]
-[舜]「あ～、腰使いヤバ…めちゃくちゃ気持ちいいです、凛子さん…♡」[p]
-凛子「ほんと？　よかった…♡　カリ首のところも…擦らなくちゃ…♡　あんっ、はぁ、あんっ♡」[p]
-凛子「擦れてる…♡　ん、くぅぅっ、先っぽからとろんって何か溢れてきちゃったよ？」[p]
+[舜]「A~, cách nhấp hông tuyệt quá... sướng lắm, Rinko-san...♡」[p]
+Rinko「Thật sao? May quá...♡ Phải cọ cả phần rãnh quy đầu nữa...♡ Á, haa, á♡」[p]
+Rinko「Đang cọ xát kìa...♡ Ưm, kư, từ đầu dương vật rỉ ra chất lỏng trong suốt sền sệt rồi này?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata+=1"  name="H_sumata"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1957,9 +1958,9 @@
 *J2_sumata3
 
 [tb_start_text mode=1 ]
-凛子「はーっ♡　はーっ♡　[舜]くんを綺麗にしながら…私も気持ちよくなってきちゃったぁ♡」[p]
-凛子「あんっ♡　あぁ♡　おちんちん、ビクビクってしてる…先っぽも膨らんでるね♡」[p]
-凛子「[舜]くんにはいっつも気持ちよくしてもらってるから…私だって気持ちよくしたいの♡」[p]
+Rinko「Haa♡ Haa♡ Vừa rửa cho Shun-kun... em cũng thấy sướng lên rồi♡」[p]
+Rinko「Á♡ A♡ Dương vật anh, đang giật giật kìa... Đầu dương vật cũng phồng lên rồi nhỉ♡」[p]
+Rinko「Lúc nào em cũng được Shun-kun làm cho sướng rồi... nên em cũng muốn làm anh sướng♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata=0"  name="H_sumata"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1972,9 +1973,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁぁっ♡　も、もうっ…私が[舜]くんにしてあげたいって思ってたのに…♡」[p]
-凛子「んっ…あはぁっ♡　[舜]くんのおちんちん…敏感なトコに擦れて引っかかってる…♡」[p]
-凛子「結局私が気持ちよくされちゃってる♡　[舜]くんには敵わないね…♡」[p]
+Rinko「Aaaa♡ M-Mồ... Rõ ràng là em định làm cho Shun-kun cơ mà...♡」[p]
+Rinko「Ưm... a haa♡ Dương vật của Shun-kun... cọ xát và vướng vào chỗ nhạy cảm rồi...♡」[p]
+Rinko「Rốt cuộc em lại là người bị làm cho sướng♡ Không đọ lại được Shun-kun nhỉ...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -1982,9 +1983,9 @@
 *J2_teman1
 
 [tb_start_text mode=1 ]
-凛子「あっ♡　んぅっ♡　奥…ぐちゃぐちゃになっちゃう♡　内側まで洗われちゃうなんて♡」[p]
-[舜]「でも綺麗にしてほしいから腰突き出してるんですよね？　期待に応えないと…」[p]
-凛子「はーっ♡　んっ、あぁっ♡　[舜]くん、洗うのすっごく上手なんだもの…♡」[p]
+Rinko「A♡ Ưm♡ Sâu bên trong... nhóp nhép hết cả rồi♡ Bị rửa đến tận bên trong thế này♡」[p]
+[舜]「Nhưng chị đang đẩy hông ra vì muốn được rửa sạch mà đúng không? Phải đáp ứng kỳ vọng chứ...」[p]
+Rinko「Haa♡ Ưm, a♡ Shun-kun, rửa giỏi quá đi mất...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman+=1"  name="H_teman"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1995,9 +1996,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t3.mp3"  ]
 [tb_start_text mode=1 ]
-[舜]「洗っても洗ってもヌルヌルが取れないですねぇ。これボディソープじゃないですよね？」[p]
-凛子「もうっ、[舜]くんの意地悪…♡　わかってるくせに…んっ♡　あっ、あぁぁぁっ♡」[p]
-凛子「かき回すほど…溢れてきちゃうんだってばぁ♡　んっ♡　あっ、あぁぁっ♡」[p]
+[舜]「Rửa mãi mà vẫn trơn tuột thế này. Đây không phải là sữa tắm đúng không?」[p]
+Rinko「Thiệt tình, Shun-kun xấu tính quá...♡ Biết rồi mà còn... ưm♡ A, aaaa♡」[p]
+Rinko「Càng ngoáy... càng trào ra nhiều mà♡ Ưm♡ A, aaaa♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman+=1"  name="H_teman"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2007,9 +2008,9 @@
 *J2_teman3
 
 [tb_start_text mode=1 ]
-凛子「ひあぁぁっ♡　あ゛っ♡　あ゛あ゛っ♡　も、もう立っていられないの…♡」[p]
-[舜]「ダメじゃないですか、しっかり踏ん張らないと…奥まで洗えませんよ？」[p]
-凛子「あうぅっ♡　[舜]くんのほうが…年上みたいね♡　私がお世話されちゃってる…♡」[p]
+Rinko「Hiaa♡ Á♡ A♡ Kh-Không đứng vững được nữa rồi...♡」[p]
+[舜]「Không được đâu, phải trụ vững chứ... Nếu không thì không rửa đến tận bên trong được đâu?」[p]
+Rinko「A ư♡ Shun-kun... giống người lớn tuổi hơn nhỉ♡ Em đang được chăm sóc này...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman=0"  name="H_teman"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2022,9 +2023,9 @@
 [mask_off  time="1000"  effect="fadeOut"  ]
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「あっ♡　んあぁぁぁっ♡　弱いとこ…当たってるっ♡　んっ、くぅぅっ♡」[p]
-凛子「足…ガクガクしてる…んんっ♡　力抜けちゃうの…立ってられない…♡」[p]
-凛子「洗い合いっこしようって言ったのに…ごめんなさい、私だけ気持ちよくなっちゃって♡」[p]
+Rinko「A♡ Aaaa♡ Chỗ nhạy cảm... đâm trúng rồi♡ Ưm, kư♡」[p]
+Rinko「Chân... run rẩy hết cả rồi... ưm♡ Hết sức lực rồi... không đứng nổi nữa...♡」[p]
+Rinko「Rõ ràng bảo là tắm cho nhau cơ mà... Xin lỗi anh, chỉ có mình em sướng thôi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -2032,9 +2033,9 @@
 *J2_pisuton_yukkuri1
 
 [tb_start_text mode=1 ]
-凛子「あっ♡　あっ♡　あっ♡　んんっ♡　奥まで…洗ってくれるのっ？」[p]
-[舜]「当たり前でしょう？　体全部擦らないと、洗ったことにならないんだから…！」[p]
-凛子「あうぅっ♡　あっ♡　あぁっ♡　感触確かめるみたいに擦られると…変になっちゃう♡」[p]
+Rinko「A♡ A♡ A♡ Ưm♡ Anh rửa đến tận sâu bên trong sao?」[p]
+[舜]「Đương nhiên rồi? Phải cọ toàn bộ cơ thể thì mới gọi là tắm chứ...!」[p]
+Rinko「A ư♡ A♡ A♡ Bị cọ xát như để kiểm tra cảm giác thế này... kỳ lạ mất thôi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2044,9 +2045,9 @@
 *J2_pisuton_yukkuri2
 
 [tb_start_text mode=1 ]
-[舜]「あぁ、ヤバ…のぼせちゃいそ…凛子さんは大丈夫ですか？　そんなの気にする余裕ないか…」[p]
-凛子「んっ♡　あっ、あぁぁっ♡　大丈夫っ…♡　でも…私も体の奥ジリジリ熱くて…」[p]
-凛子「体の奥まで洗い終わる前に火照っちゃう…♡　とろけちゃいそうなの♡」[p]
+[舜]「A, nguy rồi... Sắp bốc hỏa mất... Rinko-san có sao không? Chắc chị không còn tâm trí để ý chuyện đó đâu nhỉ...」[p]
+Rinko「Ưm♡ A, aaaa♡ Không sao...♡ Nhưng... sâu trong cơ thể em cũng nóng ran lên rồi...」[p]
+Rinko「Trước khi rửa xong bên trong thì đã bốc hỏa mất rồi...♡ Sắp tan chảy ra rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2056,9 +2057,9 @@
 *J2_pisuton_yukkuri3
 
 [tb_start_text mode=1 ]
-[舜]「逃げちゃダメですよ、凛子さん…！　奥までブラシでごしごし擦ってるんですから…」[p]
-凛子「ひぐっ♡　あっ♡　あぁっ♡　も、もう充分綺麗だから…♡　あぁんっ♡」[p]
-凛子「これ以上擦ったら…ま、またトロトロってして洗わなきゃいけなくなっちゃう♡」[p]
+[舜]「Không được trốn đâu nhé, Rinko-san...! Đang dùng bàn chải cọ rửa tận sâu bên trong mà...」[p]
+Rinko「Hức♡ A♡ A♡ Đ-Đã đủ sạch rồi mà...♡ Aaaa♡」[p]
+Rinko「Nếu cọ thêm nữa... l-lại trơn tuột ra mất, lại phải rửa lại thôi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri=0"  name="H_supiritasu_pisuton_yukkuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2070,9 +2071,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぅぅぅっ♡　こ、腰抜けちゃう…♡　はっ♡　はっ♡　はっ♡　足ガクガクしてる♡」[p]
-凛子「んんっ…奥、引っかかってるの…♡　体の中、全部掻き出されちゃう♡」[p]
-凛子「はぁっ♡　あぁっ♡　も…立ってるのやっとなの…腰抜けちゃうからぁっ♡」[p]
+Rinko「A ư♡ H-Hông nhũn ra mất...♡ Haa♡ Haa♡ Haa♡ Chân run rẩy hết cả rồi♡」[p]
+Rinko「Ưm... Sâu bên trong, vướng vào rồi...♡ Bên trong cơ thể, bị cạo sạch hết rồi♡」[p]
+Rinko「Haa♡ A♡ M-Mới đứng thôi mà đã khó nhọc rồi... Hông nhũn ra mất♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]
@@ -2080,9 +2081,9 @@
 *J2_pisuton_hagesiku1
 
 [tb_start_text mode=1 ]
-凛子「ん、ふぅっ♡　あっ♡　先っぽ…１番奥まで…届いてる♡　当たってるっ…♡」[p]
-凜子「くぅっ♡　ひっうぅっ♡　揺さぶられちゃう♡　んんっ、ぐちゃぐちゃになっちゃう♡」[p]
-[舜]「すごいですよ、中からどんどんヌルヌル溢れてくる…やらし…」[p]
+Rinko「Ưm, phù♡ A♡ Đầu dương vật... chạm đến tận chỗ sâu nhất rồi...♡ Trúng rồi...♡」[p]
+Rinko「Kư♡ Hiư♡ Bị rung lắc dữ dội♡ Ưm, nhóp nhép hết cả rồi♡」[p]
+[舜]「Tuyệt quá, bên trong cứ trơn tuột trào ra liên tục... dâm quá...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2092,9 +2093,9 @@
 *J2_pisuton_hagesiku2
 
 [tb_start_text mode=1 ]
-[舜]「大丈夫ですか？　しっかり踏ん張ってくださいね？　奥までよく洗いますから…♡」[p]
-凛子「ん、あぁっ♡　わかったっ♡　体中洗ってもらって…子供になっちゃったみたい♡」[p]
-凛子「はぁっ♡　あっ♡　あんっ…♡　大人だけど…♡　お世話してもらうのも悪くないかもっ…♡」[p]
+[舜]「Chị có sao không? Phải trụ vững đấy nhé? Em sẽ rửa kỹ tận sâu bên trong mà...♡」[p]
+Rinko「Ưm, a♡ Em biết rồi♡ Được tắm rửa khắp cơ thể... giống như biến thành trẻ con vậy♡」[p]
+Rinko「Haa♡ A♡ Á...♡ Đã là người lớn rồi mà...♡ Bị chăm sóc thế này cũng không tệ đâu...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2104,9 +2105,9 @@
 *J2_pisuton_hagesiku3
 
 [tb_start_text mode=1 ]
-[舜]「よーく洗いましょうね♡　腰引いちゃダメですよ？　ピカピカにするんですから…！」[p]
-凛子「んあぁ♡　奥も入り口も…おちんちんで擦られちゃってる…おっ、んおっ♡　激しっ…♡」[p]
-凛子「ひぅっ♡　あっ♡　あうぅっ♡　逃げられない…深いところまで磨かれてるの♡」[p]
+[舜]「Cùng tắm rửa thật kỹ nhé♡ Đừng lùi hông lại đấy? Sẽ làm sạch bóng luôn mà...!」[p]
+Rinko「A♡ Cả sâu bên trong lẫn lối vào... đều bị dương vật cọ xát... Ồ, ồ♡ Mãnh liệt quá...♡」[p]
+Rinko「Hiư♡ A♡ A ư♡ Không trốn được... Bị cọ rửa đến tận sâu bên trong rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku=0"  name="H_supiritasu_pisuton_hagesiku"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2118,9 +2119,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あ゛う゛ぅぅっ♡　お゛っ♡　お゛ぉ゛っ♡　弱いところっ…擦っちゃダメっ…♡」[p]
-凛子「ひぐぅぅっ♡　はっ、はっ…♡　もう、立ってるのやっとで…力抜けちゃうぅっ♡」[p]
-凛子「はーっ…♡　充分磨かれたからっ…最後の仕上げ、してっ…♡」[p]
+Rinko「A ư♡ Á♡ Á♡ Chỗ nhạy cảm... không được cọ vào đâu...♡」[p]
+Rinko「Hức♡ Haa, haa...♡ Mới đứng thôi mà đã khó nhọc rồi... hết sức lực mất thôi♡」[p]
+Rinko「Haa...♡ Đã được cọ rửa đủ rồi...♡ Hãy làm bước hoàn thiện cuối cùng đi...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]
@@ -2128,9 +2129,9 @@
 *J2_2_kaiwa1
 
 [tb_start_text mode=1 ]
-凛子「[舜]くんの体、丁寧に洗ってあげる…♡　ふふ、お世話されるの嫌じゃない？」[p]
-[舜]「嬉しいです…でも俺も凛子さんのお世話焼きたいなって思ってますよ？」[p]
-凛子「ふふ、嬉しいな…ずっと誰かの面倒を見るばっかりだったから…すっごく新鮮♡」[p]
+Rinko「Em sẽ tắm rửa cơ thể Shun-kun cẩn thận...♡ Khc, được chăm sóc anh không ghét chứ?」[p]
+[舜]「Em vui lắm... Nhưng em cũng muốn chăm sóc Rinko-san nữa cơ?」[p]
+Rinko「Khc, vui quá... Nãy giờ toàn là em chăm sóc người khác thôi... nên thấy mới mẻ lắm♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2138,9 +2139,9 @@
 *J2_2_kaiwa2
 
 [tb_start_text mode=1 ]
-凛子「どんなふうに可愛がってくれるの？　気持ちいいことされちゃうのかな～？」[p]
-凛子「ふふっ、煽りすぎちゃった？　えっ…[舜]くん目本気になっちゃってる…そんな目されたら…」[p]
-凛子「やだ…めちゃくちゃにされちゃうのかな。ドキドキしてお腹キュンってときめいてきちゃった」[p]
+Rinko「Anh sẽ yêu chiều em như thế nào đây? Chắc sẽ làm em sướng lắm nhỉ~?」[p]
+Rinko「Khc, em kích động quá rồi sao? Ơ... Mắt Shun-kun nghiêm túc quá... Bị nhìn bằng ánh mắt đó...」[p]
+Rinko「Không chịu đâu... Sắp bị làm cho rối tung lên sao. Hồi hộp quá, bụng em xốn xang hết cả lên rồi.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2148,9 +2149,9 @@
 *J2_2_kaiwa3
 
 [tb_start_text mode=1 ]
-凛子「体、洗ってもらうだけだもんね…私ばっかり期待しちゃって、なんだか恥ずかしいな…」[p]
-[舜]「ええ、体の隅から隅まで洗いますよ？　体の内側まで綺麗にしてあげますから」[p]
-凛子「体の隅から隅、まで…♡　普段は自分じゃ洗えないところまで綺麗にしてほしいの…♡」[p]
+Rinko「Chỉ là tắm thôi mà nhỉ... Em cứ kỳ vọng mãi, thấy xấu hổ quá...」[p]
+[舜]「Vâng, em sẽ tắm từ đầu đến chân luôn nhé? Sẽ làm sạch đến tận bên trong cơ thể chị mà.」[p]
+Rinko「Từ đầu đến chân, sao...♡ Những chỗ bình thường em không tự rửa được, mong anh làm sạch giúp em...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa=0"  name="H_kaiwa"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2159,9 +2160,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「んっ…はぁ、あっ…♡　ねっとり舐められるの、大好き♡　もっと綺麗にして？」[p]
-[舜]「おねだりしてくれるんですね…凛子さんも興奮してるんだ…エロい匂いしてる」[p]
-凛子「んっ♡　ふっ…あぁ♡　やっ、言わないで…恥ずかしいから…♡　すっごく気持ちいいんだもの」[p]
+Rinko「Ưm... haa, á...♡ Em thích bị liếm ướt át lắm♡ Làm sạch thêm nữa đi?」[p]
+[舜]「Chị vòi vĩnh em sao... Rinko-san cũng hưng phấn rồi nhỉ... Có mùi dâm đãng quá.」[p]
+Rinko「Ưm♡ Hức... a♡ Không, đừng nói mà... xấu hổ lắm...♡ Sướng quá đi mất mà.」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low1==1"  ]
@@ -2171,9 +2172,9 @@
 *J2_2_miminame2
 
 [tb_start_text mode=1 ]
-凛子「ふぅ、んんっ♡　奥まで届いてる…はぁ、あんっ♡　[舜]くんって、舌遣い上手なのね…」[p]
-凛子「どこで練習したのか気になっちゃう…年上なのにヤキモチなんてみっともないかな？」[p]
-[舜]「凛子さんだけですから…凛子さんを気持ちよくしたくて頑張っちゃってるんです」[p]
+Rinko「Phù, ưm♡ Chạm đến tận sâu bên trong rồi... haa, á♡ Shun-kun dùng lưỡi điêu luyện thật đấy...」[p]
+Rinko「Em tò mò không biết anh luyện tập ở đâu đấy... Lớn tuổi rồi mà còn ghen tuông thế này thì khó coi quá nhỉ?」[p]
+[舜]「Chỉ có Rinko-san thôi mà... Vì muốn làm Rinko-san sướng nên em mới cố gắng đấy.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_miminame+=1"  name="H_miminame"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2184,9 +2185,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「あっ、んんっ♡　はぁ、あっ…♡　荒い息もよく聞こえてるよ…ゾワゾワってしちゃうの♡」[p]
-凛子「んっ…あぁ♡　お腹の奥…きゅ～んって切なくなっちゃったぁ…[舜]くんのせいだよ？」[p]
-凛子「責任とって、もっと気持ちよくしてもらわなくっちゃ…満足できないからね？」[p]
+Rinko「A, ưm♡ Haa, á...♡ Tiếng thở gấp gáp em nghe rõ lắm... Rùng mình hết cả lên rồi♡」[p]
+Rinko「Ưm... a♡ Sâu trong bụng... xốn xang khó chịu quá... Tại Shun-kun cả đấy?」[p]
+Rinko「Chịu trách nhiệm đi, làm em sướng thêm nữa đi chứ... Thế này em chưa thỏa mãn đâu nhé?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_miminame=0"  name="H_miminame"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2198,9 +2199,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ひぅぅぅっ♡　あっ♡　あんっ♡　やっ…頭の中まで舐め回されちゃってるみたい…」[p]
-凛子「どんどん敏感になってくの♡　エッチな気持ちになっちゃう…おしまいなんて言わないでね？」[p]
-凛子「私…体の奥まで準備ができちゃったから♡　全部洗って確かめてね？」[p]
+Rinko「Hiư♡ A♡ Á♡ Không... Trong đầu như bị liếm láp hết cả rồi...」[p]
+Rinko「Càng lúc càng nhạy cảm hơn♡ Cảm giác dâm đãng trào dâng... Đừng nói là kết thúc nhé?」[p]
+Rinko「Em... tận sâu trong cơ thể đã chuẩn bị sẵn sàng rồi♡ Anh hãy rửa hết và kiểm tra nhé?」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -2208,9 +2209,9 @@
 *J2_2_sirinade1
 
 [tb_start_text mode=1 ]
-凛子「んっ♡　お尻洗ってくれてるの？　んっ…そんなエッチな触り方するなんて、だめっ…♡」[p]
-[舜]「だって触り心地最高なんですもん…ぷりぷりでめっちゃエロいお尻です」[p]
-凛子「んっ…恥ずかしいな。でも[舜]くんが興奮してくれてすっごく嬉しい…もっと触って♡」[p]
+Rinko「Ưm♡ Anh đang rửa mông cho em sao? Ưm... Đừng chạm dâm đãng thế chứ...♡」[p]
+[舜]「Bởi vì cảm giác sờ sướng nhất mà... Cái mông căng tròn và cực kỳ dâm đãng đấy.」[p]
+Rinko「Ưm... xấu hổ quá. Nhưng Shun-kun hưng phấn thế em vui lắm... Chạm thêm nữa đi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low2==1"  ]
@@ -2221,9 +2222,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「んっ…ふぅ、やだぁ、お尻広げないで…お尻の間なんて見てもしょうがないんだからぁ♡」[p]
-[舜]「凛子さんのお尻の穴、すっごい可愛くてエロいですよ？　ヒクヒクしちゃってますし…」[p]
-凛子「あんっ♡　はぁ、恥ずかしい…自分じゃ見えないところだからどうなってるのかわからないもの」[p]
+Rinko「Ưm... phù, không chịu đâu, đừng banh mông em ra... Nhìn vào giữa mông cũng đâu có gì đâu♡」[p]
+[舜]「Lỗ đít của Rinko-san, đáng yêu và dâm đãng lắm đấy? Đang giật giật kìa...」[p]
+Rinko「Á♡ Haa, xấu hổ quá... Chỗ đó tự mình không nhìn thấy được nên chẳng biết nó thế nào nữa.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sirinade+=1"  name="H_sirinade"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2233,9 +2234,9 @@
 *J2_2_sirinade3
 
 [tb_start_text mode=1 ]
-凛子「どう？　お尻綺麗になってきた？　ん、はぁ、あんっ♡　そこばっかり丁寧にあらうのね♡」[p]
-[舜]「もうとっくに綺麗なんですけど、触り心地がよくって…手を離すのが惜しくなっちゃって…」[p]
-凛子「んっ♡　それなら今度は[舜]くんの体をお尻で洗ってあげなくっちゃね…♡　楽しみにしてて♡」[p]
+Rinko「Sao rồi? Mông đã sạch chưa? Ưm, haa, á♡ Anh cứ rửa cẩn thận chỗ đó mãi thôi♡」[p]
+[舜]「Đã sạch từ lâu rồi, nhưng cảm giác sờ sướng quá... Tiếc không muốn buông tay ra...」[p]
+Rinko「Ưm♡ Thế thì lần này em phải dùng mông rửa cơ thể Shun-kun mới được...♡ Mong chờ nhé♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sirinade=0"  name="H_sirinade"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2248,9 +2249,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ひうぅっ♡　はっ♡　はぁ♡　そんなお尻広げて…中擦らないでぇ…あんっ…♡　あぁっ♡」[p]
-[舜]「あれ？　おまんこトロトロになってるじゃないですか…洗われて興奮したんですか？」[p]
-凛子「だって…[舜]くんの洗い方がエッチだから…♡　んっ、はぁ、あん♡　恥ずかしい…♡」[p]
+Rinko「Hiư♡ Haa♡ Haa♡ Đừng banh mông em ra... rồi cọ xát bên trong thế chứ... á...♡ Aaaa♡」[p]
+[舜]「Ủa? Cô bé trơn tuột hết rồi này... Được rửa nên hưng phấn sao?」[p]
+Rinko「Tại vì... cách rửa của Shun-kun dâm đãng quá mà...♡ Ưm, haa, á♡ Xấu hổ quá...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -2259,9 +2260,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「あんっ…あぁ…乳首も綺麗に洗ってくれるの？　んっ…ふぅ♡　ふふ、丁寧すぎだよ」[p]
-凛子「[舜]くん、おっぱい好きだなんて赤ちゃんみたいで可愛い♡　いっぱい触りたいんでしょう？」[p]
-凛子「綺麗に洗って、あとで好きなだけ触って舐めてくれていいから…ね？」[p]
+Rinko「Á... a... Anh rửa sạch cả đầu vú cho em sao? Ưm... phù♡ Khc, cẩn thận quá rồi đấy.」[p]
+Rinko「Shun-kun, thích ngực đến thế giống hệt trẻ con đáng yêu quá♡ Anh muốn chạm nhiều lắm đúng không?」[p]
+Rinko「Rửa sạch sẽ rồi, lát nữa anh cứ chạm và liếm thỏa thích nhé... Nhé?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiijiri+=1"  name="H_tikubiijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2271,9 +2272,9 @@
 *J2_2_tikubiijiri2
 
 [tb_start_text mode=1 ]
-凛子「ち、乳首はもう充分綺麗になってるから…♡　そんな重点的に擦らなくてもいいってばぁ♡」[p]
-[舜]「じゃあ乳輪も綺麗にしましょうか？　せっかくぷっくり膨らんできてるんですから…」[p]
-凛子「ひうぅっ♡　んっ♡　あっ♡　あぁぁっ♡　カリカリ洗われると…切なくなっちゃう…♡」[p]
+Rinko「Đ-Đầu vú đã đủ sạch rồi mà...♡ Đừng cọ xát tập trung thế chứ♡」[p]
+[舜]「Thế thì rửa sạch cả quầng vú luôn nhé? Khó khăn lắm mới sưng tấy lên thế này mà...」[p]
+Rinko「Hiư♡ Ưm♡ A♡ Aaaa♡ Rửa sột soạt thế này... khó chịu quá...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiijiri+=1"  name="H_tikubiijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2283,9 +2284,9 @@
 *J2_2_tikubiijiri3
 
 [tb_start_text mode=1 ]
-凛子「ひぅぅっ♡　あっ、先っぽばっかり…あんっ♡　コリコリ摘まんで洗わないでぇ♡」[p]
-凛子「あっ♡　あっ♡　んあ♡　　ふーっ…ふーっ…乳首、敏感なの…先っぽ弱いからっ♡」[p]
-凛子「[舜]くんの触り方、エッチすぎ…♡　私、どんどん敏感になってきちゃってる…」[p]
+Rinko「Hiư♡ A, cứ nhắm vào đầu vú... á♡ Đừng bóp cọ xát thế chứ♡」[p]
+Rinko「A♡ A♡ Ưm♡ Phù... phù... Đầu vú, nhạy cảm lắm... Đầu vú yếu lắm♡」[p]
+Rinko「Cách chạm của Shun-kun, dâm đãng quá...♡ Em, càng lúc càng nhạy cảm hơn rồi...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiijiri=0"  name="H_tikubiijiri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2298,9 +2299,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あっ♡　んぁぁっ♡　乳首だけでっ…イッちゃう…♡　ジンジンしちゃってる…」[p]
-凛子「気持ちいいの、お腹の奥まで響いてるの♡　気持ちいいのがおっぱいから全身に届いてる♡」[p]
-[舜]「凛子さん、足ガクガク震えてますよ。気持ちよくなっちゃったんですね？」[p]
+Rinko「A♡ Aaaa♡ Chỉ bằng đầu vú thôi mà... ra mất...♡ Râm ran hết cả rồi...」[p]
+Rinko「Cảm giác sướng vang vọng đến tận sâu trong bụng♡ Cảm giác sướng từ ngực lan truyền khắp cơ thể♡」[p]
+[舜]「Rinko-san, chân run rẩy hết cả rồi kìa. Sướng quá rồi đúng không?」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -2309,9 +2310,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「やっ、だめ…お尻の穴は…恥ずかしいっ…そんなとこ、なぞらないでぇっ♡　だめ、だめっ♡」[p]
-[舜]「でもヒクヒクしてますよ？　中まで指入れてほしいんじゃないんですか？　ほら…」[p]
-凛子「あっ♡　んんっ…やっ、そんなところ、入らないからっ…♡　指でも無理だよ…♡」[p]
+Rinko「Không, không được... Lỗ đít thì... xấu hổ lắm... Đừng vuốt ve chỗ đó chứ♡ Không được, không được đâu♡」[p]
+[舜]「Nhưng đang giật giật kìa? Muốn em cho ngón tay vào tận bên trong đúng không? Chị xem...」[p]
+Rinko「A♡ Ưm... Không, chỗ đó, không vào được đâu...♡ Ngón tay cũng không được đâu...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low4==1"  ]
@@ -2321,9 +2322,9 @@
 *J2_2_anaruijiri2
 
 [tb_start_text mode=1 ]
-凛子「汚い、からっ…お尻の穴ばっかり触らなくってもいいの…変な感じ、しちゃうから♡」[p]
-[舜]「汚くないですよ？　でも綺麗にするために洗うんですから、これで正解なんですって」[p]
-凛子「あっ♡　んあぁぁっ♡　だからって指…中に入れちゃうのはダメなんだってばぁ…♡」[p]
+Rinko「Bẩn lắm, nên... không cần chạm vào lỗ đít mãi đâu... Cảm giác kỳ lạ lắm♡」[p]
+[舜]「Đâu có bẩn? Nhưng vì muốn làm sạch nên mới rửa mà, thế này là đúng rồi.」[p]
+Rinko「A♡ Aaaa♡ Dù vậy thì ngón tay... cho vào bên trong là không được đâu...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruijiri+=1"  name="H_anaruijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2333,9 +2334,9 @@
 *J2_2_anaruijiri3
 
 [tb_start_text mode=1 ]
-凛子「ひぅぅぅっ♡　あっ、あぁぁっ♡　指、中まで入っちゃってる…圧迫感、すごいのっ♡」[p]
-凛子「あっ、動かさないで…♡　お尻の中まで洗われちゃうの？　[舜]くんに全部触られちゃう♡」[p]
-凛子「はぁ、あんっ♡　恥ずかしいとこまで全部見られてるのに…気持ちよくなっちゃってるの♡」[p]
+Rinko「Hiư♡ A, aaaa♡ Ngón tay, vào tận bên trong rồi... Cảm giác bị ép chặt, tuyệt quá♡」[p]
+Rinko「A, đừng cử động...♡ Anh rửa đến tận bên trong lỗ đít sao? Bị Shun-kun chạm vào hết rồi♡」[p]
+Rinko「Haa, á♡ Rõ ràng những chỗ đáng xấu hổ đều bị nhìn thấy hết rồi... mà lại sướng thế này♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruijiri=0"  name="H_anaruijiri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2348,9 +2349,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「んあぁぁっ♡　だ、だめっ…奥入ってる…♡　弱いトコ…擦れて…♡」[p]
-凛子「んっ、くぅぅっ♡　も、もう綺麗になったでしょう？　これ以上はだめだってばぁ…」[p]
-[舜]「ホントだ。凛子さん足、ガクガク震えちゃってますもんね」[p]
+Rinko「Aaaa♡ Đ-Đừng... Vào sâu rồi...♡ Chỗ nhạy cảm... cọ xát...♡」[p]
+Rinko「Ưm, kư♡ Đ-Đã đủ sạch rồi đúng không? Hơn thế này nữa thì không được đâu...」[p]
+[舜]「Thật này. Chân Rinko-san, run rẩy hết cả rồi này.」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -2358,9 +2359,9 @@
 *J2_2_sumata1
 
 [tb_start_text mode=1 ]
-凛子「んっ♡　敏感なところまで洗ってくれるの？　しかも手じゃなくておちんちんで洗うなんて♡」[p]
-[舜]「オチンポブラシですよ？　こっちのほうが綺麗に擦って洗えるかなって思いまして…ほら…」[p]
-凛子「あっ…んんっ♡　ほんとだ…ごしごしって擦られてる…♡　はぁ、んっ…綺麗になっちゃう♡」[p]
+Rinko「Ưm♡ Anh rửa đến tận chỗ nhạy cảm sao? Hơn nữa không phải bằng tay mà rửa bằng dương vật sao♡」[p]
+[舜]「Bàn chải dương vật đấy? Em nghĩ cách này cọ rửa sạch sẽ hơn... Chị xem...」[p]
+Rinko「A... ưm♡ Thật này... Đang bị cọ xát sột soạt...♡ Haa, ưm... Sạch sẽ mất thôi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low5==1"  ]
@@ -2370,9 +2371,9 @@
 *J2_2_sumata2
 
 [tb_start_text mode=1 ]
-凛子「はぁ、あんっ、あぁ…[舜]くんのおちんちんも綺麗になるかな？　私も洗ってあげる♡」[p]
-[舜]「他のお客さんにはしてないんですよね？　凛子さんの特別サービス受けられて嬉しいです…」[p]
-凛子「ほんと？　よかったぁ…全体的に綺麗にしなくちゃね…♡　しっかり擦って…んんっ♡」[p]
+Rinko「Haa, á, a... Dương vật của Shun-kun cũng sạch sẽ chứ? Em cũng sẽ rửa cho anh♡」[p]
+[舜]「Chị không làm cho những khách hàng khác đúng không? Được nhận dịch vụ đặc biệt của Rinko-san em vui lắm...」[p]
+Rinko「Thật sao? May quá... Phải làm sạch toàn bộ mới được...♡ Cọ xát cẩn thận... ưm♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata+=1"  name="H_sumata"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2382,9 +2383,9 @@
 *J2_2_sumata3
 
 [tb_start_text mode=1 ]
-凛子「ひゃうっ♡　クリと擦れて…腰、勝手に動いちゃうの…♡　自分の体じゃないみたい」[p]
-[舜]「もっと擦り洗いしてほしいんですか？　それならおねだりしないとだめじゃないですか…」[p]
-凛子「んっ♡　あぁっ♡　トロットロになっちゃったから…もっと、綺麗に洗ってください…♡」[p]
+Rinko「Hya ư♡ Cọ xát với hạt đậu... Hông, tự động nảy lên...♡ Chẳng giống cơ thể mình nữa.」[p]
+[舜]「Chị muốn em cọ rửa thêm nữa sao? Nếu vậy thì chị phải vòi vĩnh đi chứ...」[p]
+Rinko「Ưm♡ Aaaa♡ Trơn tuột hết rồi... Hãy rửa, sạch sẽ hơn nữa đi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata=0"  name="H_sumata"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2396,9 +2397,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「んっ♡　んぅぅぅっ♡　クリに、当たっちゃってる…♡　はぁ、あんっ、あぁぁっ♡」[p]
-凛子「ん、あっ、あぁ…♡　ごめんなさい、トロトロになっちゃって…余計汚れちゃったかも」[p]
-凛子「溢れてきちゃうのは止められなくって…[舜]くんのおちんちんもヌルっとしちゃった…♡」[p]
+Rinko「Ưm♡ Ưm♡ Chạm vào hạt đậu rồi...♡ Haa, á, aaaa♡」[p]
+Rinko「Ưm, a, a...♡ Xin lỗi anh, trơn tuột hết rồi... Có khi lại bẩn thêm mất.」[p]
+Rinko「Không kìm được nó cứ trào ra... Dương vật của Shun-kun cũng nhầy nhụa mất rồi...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -2407,9 +2408,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「ひゃぅぅぅっ♡　あぁっ♡　出ちゃってる…♡　潮吹き止まらないのっ♡」[p]
-[舜]「自分で洗い流してくれるんですか？　凛子さんは綺麗好きですねぇ」[p]
-凛子「そういうわけじゃ…あうぅっ♡　あっ♡　あっ♡　腰、抜けちゃうぅぅっ♡」[p]
+Rinko「Hiaa♡ Aaaa♡ Ra mất rồi...♡ Phun nước không dừng lại được♡」[p]
+[舜]「Chị tự rửa sạch cho mình sao? Rinko-san ưa sạch sẽ nhỉ.」[p]
+Rinko「Không phải thế đâu... A ư♡ A♡ A♡ Hông, nhũn ra mất thôi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_siohuki+=1"  name="H_siohuki"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2419,9 +2420,9 @@
 *J2_2_siohuki2
 
 [tb_start_text mode=1 ]
-[舜]「すっご…超潮吹きしてるじゃないですか…水分なくなってカラカラになっちゃいそうですね」[p]
-凛子「んっ♡　あぁっ…だって潮吹き止まらないの♡　はぁ、あっ、頭ぼんやりしてきちゃう♡」[p]
-凛子「はぁっ♡　んっ♡　奥もトロトロになってるの…まだ溢れちゃう…♡」[p]
+[舜]「Tuyệt quá... Chị phun nước dữ dội quá này... Hết nước khô cong luôn mất.」[p]
+Rinko「Ưm♡ A... Tại phun nước không dừng lại được mà♡ Haa, á, trong đầu mơ màng hết rồi♡」[p]
+Rinko「Haa♡ Ưm♡ Bên trong cũng trơn tuột rồi... Vẫn còn trào ra nữa...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_siohuki+=1"  name="H_siohuki"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2432,9 +2433,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_j_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「んっ♡　あ゛あ゛っ♡　もっと奥まで洗って…♡　[舜]くんの指でかき回してほしいの♡」[p]
-[舜]「奥突き上げるたび潮吹きしてますよ…？　凛子さん、エロ過ぎです…！」[p]
-凛子「んっ…くぅぅっ、あっ、あぁっ♡　あ、足ガクガクして…立っていられないっ♡」[p]
+Rinko「Ưm♡ Aaaa♡ Rửa sâu hơn nữa đi...♡ Em muốn ngón tay Shun-kun ngoáy vào trong♡」[p]
+[舜]「Mỗi lần đâm sâu vào là chị lại phun nước kìa...? Rinko-san, dâm quá đi mất...!」[p]
+Rinko「Ưm... kư, á, a♡ Ch-Chân run rẩy... Không đứng vững được nữa rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_siohuki=0"  name="H_siohuki"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2447,9 +2448,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ひゃぁぁっ♡　んっ…エッチな蜜っ、とまらないの…♡　お漏らしみたいで恥ずかしいよ♡」[p]
-[舜]「凛子さん、いい大人なのにお漏らししちゃうなんてエッチですね。よく洗ってあげなくちゃ」[p]
-凛子「あっ♡　あっ♡　あぁっ♡　こ、これはおしっこなわけじゃなくってぇっ♡　あぁぁぁっ♡」[p]
+Rinko「Hyaaaa♡ Ưm... Mật dâm, không dừng lại được...♡ Giống như đi tiểu dầm vậy, xấu hổ quá♡」[p]
+[舜]「Rinko-san, lớn thế này rồi mà còn đi tiểu dầm thì dâm đãng quá nhỉ. Phải rửa thật kỹ mới được.」[p]
+Rinko「A♡ A♡ A♡ Đ-Đây không phải là nước tiểu đâu...♡ Aaaa♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -2457,9 +2458,9 @@
 *J2_2_pisuton_yukkuri1
 
 [tb_start_text mode=1 ]
-凛子「んっ♡　ふっ、はぁ、あっ、あぁ♡　[舜]くんのおっきい…奥まで貫かれてる♡」[p]
-凛子「あうっ♡　あっ、おおっ♡　お腹側…先っぽ当たってるの…♡　ん、くぅぅっ♡」[p]
-凛子「中を綺麗に磨いてくれてるなら頑張らなくちゃ…♡　ほら、もっと深いトコまで頂戴♡」[p]
+Rinko「Ưm♡ Hức, haa, á, a♡ Của Shun-kun to quá... đâm xuyên đến tận sâu bên trong rồi♡」[p]
+Rinko「A ư♡ A, ồ♡ Phía bụng... đầu dương vật chạm tới rồi...♡ Ưm, kư♡」[p]
+Rinko「Nếu anh cọ rửa sạch sẽ bên trong thì em phải cố gắng thôi...♡ Nào, cho em sâu hơn nữa đi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2469,9 +2470,9 @@
 *J2_2_pisuton_yukkuri2
 
 [tb_start_text mode=1 ]
-[舜]「そんなに締め付けて……俺のチンポも綺麗にしてくれるんですか？」[p]
-凛子「んんっ♡　あぁっ、もちろん♡　[舜]ちゃんのおちんちんも綺麗に洗ってあげるからね♡」[p]
-凛子「ん、くぅっ、ふっ…♡　根元から先っぽまでしっかり擦って…綺麗にしなくちゃね？」[p]
+[舜]「Siết chặt thế này... Chị định làm sạch cả dương vật của em sao?」[p]
+Rinko「Ưm♡ A, tất nhiên rồi♡ Em cũng sẽ rửa sạch dương vật của Shun-chan mà♡」[p]
+Rinko「Ưm, kư, hức...♡ Từ gốc đến ngọn phải cọ thật kỹ... mới sạch được chứ nhỉ?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2481,9 +2482,9 @@
 *J2_2_pisuton_yukkuri3
 
 [tb_start_text mode=1 ]
-凛子「んっ♡　あっ♡　はぁ、あぁっ♡　おちんちん反応してるの？　すっごいビクビクしてるよ♡」[p]
-[舜]「くっ…綺麗になって喜んでるんですよ…ピカピカに磨いてもらったので…」[p]
-凛子「んっ…はぁ♡　あんっ…♡　ふふ、お互い洗い合いっこしようって言ったでしょ♡」[p]
+Rinko「Ưm♡ A♡ Haa, aaaa♡ Dương vật phản ứng rồi sao? Đang giật giật dữ dội lắm kìa♡」[p]
+[舜]「Kư... Nó vui vì được làm sạch đấy... Vì được đánh bóng loáng mà...」[p]
+Rinko「Ưm... haa♡ Á...♡ Khc, hai đứa mình đã bảo là tắm cho nhau mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri=0"  name="H_supiritasu_pisuton_yukkuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2495,9 +2496,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁぁっ♡　だめ、敏感なところっ、擦れてる…んっ、くぅぅっ…何か出ちゃうぅ♡」[p]
-[舜]「いいですよ、出しても…そしたらまた丁寧に洗い流してあげますから…」[p]
-凛子「んぅっ♡　あ゛あ゛っ♡　これ以上ぐちゃぐちゃにされたら…おかしくなっちゃうからぁ♡」[p]
+Rinko「Aaaa♡ Không được, chỗ nhạy cảm, cọ xát rồi... ưm, kư... Có thứ gì đó sắp trào ra♡」[p]
+[舜]「Không sao đâu, cứ ra đi... Rồi em lại rửa sạch sẽ cho chị mà...」[p]
+Rinko「Ưm♡ Aaaa♡ Nếu bị làm cho nhóp nhép thêm nữa thì... em trở nên kỳ lạ mất♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]
@@ -2505,9 +2506,9 @@
 *J2_2_pisuton_hagesiku1
 
 [tb_start_text mode=1 ]
-凛子「あぁっ♡　あんっ、んんっ…♡　激し…そんな揺さぶったら…足、浮いちゃう、から…♡」[p]
-凛子「夢中で腰振ってくれてるの？　はぁ、あっ♡　[舜]くんも男の子なんだなって実感するね♡」[p]
-凛子「おちんちん、私の中で洗ってるんでしょ？　せっかくだから気持ちよくなって…♡」[p]
+Rinko「A♡ Á, ưm...♡ Mãnh liệt... Bị rung lắc thế này... chân, lơ lửng mất, nên...♡」[p]
+Rinko「Anh say sưa nhấp hông sao? Haa, á♡ Em cảm nhận được Shun-kun cũng là con trai thật đấy♡」[p]
+Rinko「Anh đang rửa dương vật bên trong em đúng không? Nhân tiện thì anh cứ sướng đi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2517,9 +2518,9 @@
 *J2_2_pisuton_hagesiku2
 
 [tb_start_text mode=1 ]
-[舜]「んんっ！　締め付けヤバ…まだ洗い足りないですか？　激しくしてほしいのかな…！」[p]
-凛子「やっ、違うってばぁ♡　あぁぁぁっ♡　お゛っ♡　お゛お゛っ♡　や、変な声出ちゃうよっ♡」[p]
-凛子「ん、くぅっ…♡　はっ♡　はっ♡　奥まで届いていっぱいになっちゃってるの♡」[p]
+[舜]「Ưm! Siết chặt quá... Chị vẫn chưa rửa đủ sao? Muốn em làm mãnh liệt hơn à...!」[p]
+Rinko「Không, không phải đâu♡ Aaaa♡ Ồ♡ Ồ♡ Không, phát ra tiếng kỳ cục mất♡」[p]
+Rinko「Ưm, kư...♡ Hức♡ Hức♡ Chạm đến tận sâu bên trong, đầy ắp rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2529,9 +2530,9 @@
 *J2_2_pisuton_hagesiku3
 
 [tb_start_text mode=1 ]
-[舜]「すっご、足開いちゃってるじゃないですか…もっと奥まで洗ってほしいんですね」[p]
-凛子「んぅぅっ♡　おっ、おおっ♡　違うの…♡　でもっ…奥まで洗ってもらえるの…気持ちいい♡」[p]
-凛子「あ゛っ♡　あ゛っ♡　あ゛っ♡　はーっ…どうしよう、頭ボンヤリしてきちゃったぁ♡」[p]
+[舜]「Tuyệt quá, chân mở toang ra rồi này... Chị muốn được rửa đến tận sâu bên trong hơn nữa đúng không.」[p]
+Rinko「Ưm♡ Ồ, ồ♡ Không phải đâu...♡ Nhưng... được rửa đến tận sâu bên trong... sướng quá♡」[p]
+Rinko「A♡ A♡ A♡ Haa... Làm sao đây, trong đầu mơ màng hết rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku=0"  name="H_supiritasu_pisuton_hagesiku"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2543,9 +2544,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「んっぐぅぅっ♡　あぁっ♡　すごいっ…壊れちゃうぅっ♡　こんなの、初めて…♡」[p]
-[舜]「中、洗ってるのに気持ちよくなってるんですか…？　凛子さんエロすぎじゃないですか」[p]
-凛子「んっ♡　あぁっ♡　あぁぁっ、ごめんなさい♡　こんなにはしたなくて…♡」[p]
+Rinko「Ưm gư♡ A♡ Tuyệt quá... Hỏng mất thôi♡ Cảm giác này, lần đầu tiên...♡」[p]
+[舜]「Đang rửa bên trong mà lại sướng thế này sao...? Rinko-san dâm quá rồi đấy.」[p]
+Rinko「Ưm♡ A♡ Aaaa, xin lỗi anh♡ Em lại thiếu đứng đắn thế này...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]
@@ -2553,9 +2554,9 @@
 *R1_kaiwa1
 
 [tb_start_text mode=1 ]
-凛子「んんっ…そんなにじっくり見ないで？　それに働いてたから…汗もかいてるし…」[p]
-[舜]「そうですか？　めちゃくちゃいい匂いしてますよ？　それに足の間もウルウルじゃないですか」[p]
-凛子「んんっ、やだ…[舜]くんにエッチなポーズさせられちゃってるからだよ…♡」[p]
+Rinko「Ưm... Đừng nhìn chằm chằm thế chứ? Hơn nữa nãy giờ em làm việc... nên cũng đổ mồ hôi rồi...」[p]
+[舜]「Vậy sao? Mùi thơm lắm đấy? Hơn nữa giữa hai chân cũng ướt sũng rồi này.」[p]
+Rinko「Ưm, không chịu đâu... Tại Shun-kun bắt em làm tư thế dâm đãng mà...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2563,9 +2564,9 @@
 *R1_kaiwa2
 
 [tb_start_text mode=1 ]
-凛子「やだ、[舜]くん…こんな格好、恥ずかしいよ…もういいでしょう？」[p]
-[舜]「だめですよ。これから新しいマッサージの研究するんですから。手伝ってくださいね？」[p]
-凛子「[舜]くんのマッサージの練習ならいくらでも付き合うけど…さすがにこのままはダメだよ」[p]
+Rinko「Không chịu đâu, Shun-kun... Tư thế này, xấu hổ lắm... Đủ rồi mà đúng không?」[p]
+[舜]「Không được đâu. Từ giờ em sẽ nghiên cứu cách massage mới mà. Chị giúp em nhé?」[p]
+Rinko「Nếu là luyện tập massage cho Shun-kun thì bao nhiêu em cũng theo... nhưng cứ thế này thì không được đâu.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2573,9 +2574,9 @@
 *R1_kaiwa3
 
 [tb_start_text mode=1 ]
-[舜]「凛子さん、今日も予約いっぱいで施術したんで疲れてますよね？　マッサージしますね」[p]
-凛子「ん…気持ちは嬉しいんだけど…こんな格好でいいの？　ローションでヌルヌルだし…」[p]
-凛子「[舜]くんに全部任せちゃっていいの…？　どんなマッサージなのか期待しちゃうよ？」[p]
+[舜]「Rinko-san, hôm nay chị cũng trị liệu kín lịch nên mệt rồi đúng không? Em massage cho nhé.」[p]
+Rinko「Ưm... Em rất vui vì tấm lòng của anh... nhưng bộ dạng thế này có ổn không? Đang trơn tuột vì lotion mà...」[p]
+Rinko「Giao phó hết cho Shun-kun có được không...? Em đang kỳ vọng không biết là massage kiểu gì đây?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa=0"  name="H_kaiwa"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2583,9 +2584,9 @@
 *R1_kiss1
 
 [tb_start_text mode=1 ]
-凛子「ちゅ、ちゅぷ、ん、ふぅっ…♡　はぁ、はぁ…これもマッサージの一環なの？」[p]
-凛子「体の力を抜いてリラックスさせるには丁度いいかもしれないね…」[p]
-凛子「おかげで力抜けちゃったよ♡　でも…その分体の中は熱くなっちゃったけど」[p]
+Rinko「Chụt, chụt, ưm, phù♡ Haa, haa... Đây cũng là một phần của massage sao?」[p]
+Rinko「Để thả lỏng lực cơ thể và thư giãn thì chắc là vừa vặn nhỉ...」[p]
+Rinko「Nhờ vậy mà em hết sức lực rồi♡ Nhưng... bù lại bên trong cơ thể lại nóng ran lên rồi.」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low1==1"  ]
@@ -2595,9 +2596,9 @@
 *R1_kiss2
 
 [tb_start_text mode=1 ]
-凛子「ちゅ、ちゅっ…んんっ♡　ちゅ、ちゅ。んんっ、キスするたび、体触れ合ってる…♡」[p]
-凛子「ヌルヌルの肌、擦れ合うとこんなに気持ちいいんだね…知らなかったよ」[p]
-凛子「こんな触れ合い方、したことなかったから。[舜]くんには教わってばかりかも」[p]
+Rinko「Chụt, chụt... ưm♡ Chụt, chụt. Ưm, mỗi lần hôn, cơ thể lại chạm nhau...♡」[p]
+Rinko「Làn da trơn tuột, cọ xát vào nhau sướng thế này cơ à... Em không biết đấy.」[p]
+Rinko「Chưa từng chạm nhau thế này bao giờ. Toàn là được Shun-kun dạy cho thôi.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss+=1"  name="H_kiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2607,9 +2608,9 @@
 *R1_kiss3
 
 [tb_start_text mode=1 ]
-凛子「ちゅ、ちゅちゅ、ちゅく、んっ…ふぅ、はふ…唇触れ合うだけなのに…気持ちよくなっちゃう」[p]
-凛子「私、どんどんエッチになってるのかもしれない…大きな子供がいるのに…恥ずかしいな」[p]
-凛子「[舜]くんといると、欲求がどんどん大きくなっちゃって…自分じゃどうしようもないの♡」[p]
+Rinko「Chụt, chụt chụt, chụt, ưm... phù, haa... Chỉ là môi chạm nhau thôi mà... sướng quá đi mất.」[p]
+Rinko「Có khi em càng lúc càng dâm đãng hơn rồi... Có đứa con lớn tướng rồi mà... Xấu hổ quá.」[p]
+Rinko「Ở bên Shun-kun, dục vọng cứ lớn dần lên... Bản thân em chẳng thể làm gì được nữa♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss=0"  name="H_kiss"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2621,9 +2622,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「んんっ♡　ふぅっ、ふっ…ちゅっちゅ♡　ちゅぷ、ちゅくちゅく♡　んん、唇離せない…」[p]
-凛子「やだ…自分がこんなに欲張りだなんて知らなかった…キスだけで体ビクビクしてる♡」[p]
-凛子「[舜]くんに、こんなにエッチにされちゃったんだよ？　責任取ってもらわなくちゃ♡」[p]
+Rinko「Ưm♡ Phù, hức... chụt chụt♡ Chụt, chụt♡ Ưm, không rời môi ra được...」[p]
+Rinko「Không chịu đâu... Em không biết mình lại tham lam đến thế này... Chỉ hôn thôi mà cơ thể đã giật giật rồi♡」[p]
+Rinko「Bị Shun-kun làm cho dâm đãng đến mức này rồi đấy? Anh phải chịu trách nhiệm đi nhé♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -2631,9 +2632,9 @@
 *R1_paizuri1
 
 [tb_start_text mode=1 ]
-凛子「んっ…すっごくおっきくなってる…私で興奮してくれたの？　ふふ、嬉しいな♡」[p]
-[舜]「凛子さんで興奮するに決まってるじゃないですか。めちゃくちゃエロいのに…」[p]
-凛子「褒め上手ね？　そんなに褒めてくれると、たくさんお礼したくなっちゃうな…♡」[p]
+Rinko「Ưm... To lên nhiều quá... Anh hưng phấn vì em sao? Khc, em vui lắm♡」[p]
+[舜]「Đương nhiên là hưng phấn vì Rinko-san rồi. Dâm đãng thế này cơ mà...」[p]
+Rinko「Khen giỏi thế? Được khen nhiều thế này, em lại muốn cảm tạ anh nhiều hơn nữa...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low2==1"  ]
@@ -2643,9 +2644,9 @@
 *R1_paizuri2
 
 [tb_start_text mode=1 ]
-凛子「あぁ…おちんちんビクビクって反応してくれてる…挟んでしごかれるのそんなにいいの？」[p]
-凛子「[舜]くんが気持ちよくなってるの見ると、私まで嬉しくなっちゃう…♡」[p]
-凛子「んっ…はぁ、おっぱいで挟んでもみくちゃにしてあげるからね…んんっ、はぁ、はっ♡」[p]
+Rinko「A... Dương vật giật giật phản ứng lại rồi... Bị kẹp rồi vuốt ve sướng đến thế sao?」[p]
+Rinko「Thấy Shun-kun sướng, em cũng thấy vui lây...♡」[p]
+Rinko「Ưm... haa, em sẽ kẹp bằng ngực vò nát cho anh nhé... ưm, haa, hức♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_paizuri+=1"  name="H_paizuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2655,9 +2656,9 @@
 *R1_paizuri3
 
 [tb_start_text mode=1 ]
-凛子「んっ…はぁ、あんっ…どんどん熱くなってきてる…あ、だめっ…乳首に擦れて…んんっ♡」[p]
-凛子「私が[舜]くんを気持ちよくしてあげなくちゃって思ってたのに…」[p]
-凛子「結局私の方が、えっちなマッサージで[舜]くんに気持ちよくしてもらっちゃってるね♡」[p]
+Rinko「Ưm... haa, á... Càng lúc càng nóng hơn rồi... a, không được... Cọ vào đầu vú... ưm♡」[p]
+Rinko「Rõ ràng là em định làm cho Shun-kun sướng cơ mà...」[p]
+Rinko「Rốt cuộc em lại được anh Shun dùng bài massage dâm đãng làm cho sung sướng mất rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_paizuri=0"  name="H_paizuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2669,9 +2670,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ひぅぅぅっ♡　あんっ、あぁっ♡　乳首コリコリって当たってるのっ…♡」[p]
-凛子「んんっ…はぁ、はっ…おちんちん使うの、上手だね…おっぱい気持ちよくなっちゃった♡」[p]
-凛子「お礼に[舜]くんのことも気持ちよくしてあげなくちゃ…ローションおっぱいでシコシコするよ」[p]
+Rinko「Hiưưư♡ A, a a♡ Đầu vú cứ cọ xát sồn sột ấy...♡」[p]
+Rinko「Ưm... Hà, hà... Anh dùng dương vật điêu luyện thật đấy... Vú em sướng quá đi mất♡」[p]
+Rinko「Để trả ơn thì em cũng phải làm cho anh Shun sướng mới được... Em sẽ dùng vú thoa lotion để sục cu cho anh nhé.」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -2680,9 +2681,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「ん、はぁ♡　おっぱい、ローションでヌルヌルになっちゃったね…これで揉みほぐすの？」[p]
-[舜]「そうですよ…しっかりローション伸ばして…滑りをよくしなくちゃいけませんから…」[p]
-凛子「ひぅっ♡　あっ、あんっ♡　とろけちゃう…そんなにおっぱい揺らさないで…♡」[p]
+Rinko「Ưm, hà♡ Vú em dính đầy lotion nhóp nháp hết rồi này... Anh định dùng nó để xoa bóp sao?」[p]
+[舜]「Đúng vậy đấy... Phải thoa đều lotion... để trơn tru hơn mới được chứ...」[p]
+Rinko「Hiư♡ A, á♡ Em tan chảy mất... Đừng lắc vú em mạnh thế chứ...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2692,9 +2693,9 @@
 *R1_munemomi2
 
 [tb_start_text mode=1 ]
-[舜]「あぁ、ヌルヌルすぎて手からおっぱい逃げちゃいますよ…」[p]
-凛子「んっ♡　はぁ、んんっ♡　鷲掴み、だめっ…♡　今敏感になってるからぁ♡」[p]
-凛子「ひゃっ♡　手のひらに…ヌルヌル乳首擦れて…気持ちよくなっちゃう…んっ♡　あぁっ♡」[p]
+[舜]「A, trơn quá làm vú cứ tuột khỏi tay anh này...」[p]
+Rinko「Ưm♡ Hà, ưm♡ Đừng bóp mạnh thế mà...♡ Bây giờ em đang nhạy cảm lắm♡」[p]
+Rinko「Hya♡ Đầu vú trơn trượt... cọ vào lòng bàn tay anh... sướng quá đi mất... Ưm♡ A a♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2705,9 +2706,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「あんっ…♡　[舜]くんの手の中で揉みくちゃになってる…♡　おっぱい、形変えられちゃう♡」[p]
-凛子「あ～、とろけちゃいそうなの…♡　[舜]くんの手、温かくておっきいから…♡」[p]
-凛子「おっぱい気持ちよくなっちゃう♡　どうしよう…こんなの、初めて…気持ちいのきちゃう♡」[p]
+Rinko「Á...♡ Bị nhào nặn trong tay anh Shun mất rồi...♡ Vú em bị biến dạng hết rồi này♡」[p]
+Rinko「A~, em sắp tan chảy rồi...♡ Tay anh Shun vừa to vừa ấm quá...♡」[p]
+Rinko「Vú em sướng quá đi mất♡ Phải làm sao đây... Cảm giác này, là lần đầu tiên... Sướng quá đi mất♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi=0"  name="H_munemomi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2720,9 +2721,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁっ♡　ビクビクって…反応しちゃってるの♡　おっぱいで気持ちよくなっちゃうなんて」[p]
-凛子「はーっ…はーっ…お腹の奥もジンジン響いてるみたい…体もあったまってるよ」[p]
-凛子「[舜]くんのマッサージの効果、すごいね。私にもやり方教えてほしいくらい♡」[p]
+Rinko「A a♡ Nó cứ giật giật... phản ứng lại kìa♡ Không ngờ chỉ làm vú thôi mà cũng sướng đến thế này.」[p]
+Rinko「Hà... Hà... Sâu trong bụng em cũng râm ran hết cả lên... Cơ thể cũng nóng ran rồi đây này.」[p]
+Rinko「Bài massage của anh Shun hiệu quả thật đấy. Em còn muốn nhờ anh dạy lại cách làm cơ♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -2731,9 +2732,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「んっ…あぁっ、そこはマッサージしなくて大丈夫だってば…[舜]くん、恥ずかしいからっ」[p]
-[舜]「でもここ、固くなってますよ？　ほら、割れ目の間でコリって固くなってる」[p]
-凛子「違うの、クリトリスはそういうものだから…あっ♡　だめ、ローション塗り込まないでぇっ♡」[p]
+Rinko「Ưm... A a, chỗ đó không cần massage đâu mà... Anh Shun, em xấu hổ lắm.」[p]
+[舜]「Nhưng chỗ này cứng lại rồi đây này? Nhìn xem, ở giữa khe dâm đang cứng ngắc lại rồi.」[p]
+Rinko「Không phải đâu, hột le vốn dĩ là như thế mà... A♡ Đừng mà, đừng thoa lotion vào đó mà♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low4==1"  ]
@@ -2743,9 +2744,9 @@
 *R1_kuriijiri2
 
 [tb_start_text mode=1 ]
-凛子「んっ♡　あっ♡　あぁ♡　も、もう大丈夫だよ[舜]くん…♡　充分ほぐれたから…」[p]
-凛子「これ以上されちゃうと…私、変になっちゃう…変な声も出ちゃう、からぁっ♡」[p]
-[舜]「いいじゃないですか、２人きりなんだから変な声出して気持ちよくなっていいんですよ」[p]
+Rinko「Ưm♡ A♡ A a♡ Đ-Được rồi đấy anh Shun...♡ Đã mềm ra đủ rồi mà...」[p]
+Rinko「Cứ tiếp tục thế này... em sẽ trở nên kỳ lạ mất... sẽ phát ra những âm thanh kỳ lạ mất thôi♡」[p]
+[舜]「Có sao đâu chứ, chỉ có hai chúng ta thôi nên em cứ phát ra âm thanh kỳ lạ rồi tận hưởng sự sung sướng đi.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kuriijiri+=1"  name="H_kuriijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2756,9 +2757,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「ん゛っ♡　ああぁぁっ♡　摘まんでシコシコ、だめぇぇっ♡　腰浮くっ、浮いちゃう♡」[p]
-凛子「あっ♡　あっ♡　あっ♡　クリおかしくなっちゃう…壊れちゃうぅぅっ♡」[p]
-[舜]「ローションじゃないヌルヌルも溢れてきましたね。もっとマッサージしてほしいのかな？」[p]
+Rinko「Ưm♡ A a a♡ Véo rồi sục như thế, đừng mà♡ Hông em nảy lên, nảy lên mất rồi♡」[p]
+Rinko「A♡ A♡ A♡ Hột le của em hỏng mất... hỏng mất thôi♡」[p]
+[舜]「Thứ dâm thủy nhóp nháp không phải lotion cũng trào ra rồi này. Em muốn được massage thêm nữa sao?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kuriijiri=0"  name="H_kuriijiri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2771,9 +2772,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あ゛あ゛っ♡　んっくぅぅっ♡　クリだけでイク…気持ちよくなってイッちゃうぅ♡」[p]
-凛子「リラックスなんかできないよ…ずっと気持ちいい波きてるんだもの…壊れちゃうっ」[p]
-[舜]「腰動きっぱなしじゃないですか…あー、めっちゃエロい…クリマッサージ癖になってください」[p]
+Rinko「A a♡ Ưm kưưư♡ Chỉ làm hột le thôi cũng ra mất... Sướng quá em ra mất thôi♡」[p]
+Rinko「Em không thể thư giãn nổi đâu... Những cơn sóng sung sướng cứ ập đến liên tục thế này... Em hỏng mất.」[p]
+[舜]「Hông em nảy lên liên tục luôn kìa... A, dâm đãng quá... Hãy nghiện bài massage hột le này đi nhé.」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -2781,9 +2782,9 @@
 *R1_sumata1
 
 [tb_start_text mode=1 ]
-[舜]「チンポを使って割れ目もマッサージしますからね…？　よーくほぐしましょうね」[p]
-凛子「はぁ、あっ、はぁ…♡　[舜]くんのすっごく固くなってる…んっ♡　あぁっ♡　擦れるっ♡」　[p]
-凛子「この格好…ゾリゾリって擦れてるとこもよく見えちゃう♡　恥ずかしいの♡」[p]
+[舜]「Anh sẽ dùng dương vật để massage cả khe dâm của em nữa nhé...? Cùng làm cho nó mềm ra nào.」[p]
+Rinko「Hà, a, hà...♡ Của anh Shun cứng quá rồi này... Ưm♡ A a♡ Cọ xát rồi♡」[p]
+Rinko「Tư thế này... có thể nhìn rõ cả chỗ đang cọ xát sồn sột nữa♡ Em xấu hổ lắm♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low5==1"  ]
@@ -2793,9 +2794,9 @@
 *R1_sumata2
 
 [tb_start_text mode=1 ]
-凛子「ん、くぅっ♡　あぁっ♡　すっごくよく滑ってる…これもローションのおかげなの？」[p]
-[舜]「凛子さんの体から出てるエッチな蜜かもしれませんよ？　ほら、トロトロになってるでしょ？」[p]
-凛子「んんっ…あぁっ、言わないで…恥ずかしい♡　[舜]くんが気持ちよくしてくれるからだよ…」[p]
+Rinko「Ưm, kưư♡ A a♡ Trơn tuột luôn rồi này... Đây cũng là nhờ lotion sao?」[p]
+[舜]「Có khi là mật dâm đãng chảy ra từ cơ thể em đấy? Nhìn xem, nó ướt sũng rồi này.」[p]
+Rinko「Ưm... A a, đừng nói mà... Xấu hổ lắm♡ Là tại anh Shun làm em sướng đấy chứ...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata+=1"  name="H_sumata"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2805,9 +2806,9 @@
 *R1_sumata3
 
 [tb_start_text mode=1 ]
-凛子「はぁっ♡　はぁっ♡　あんっ♡　ヌルヌルなのに…カリに引っかかっちゃってるの…♡」[p]
-凛子「ひぅぅっ、あぁっ♡　入り口ばっかり擦られたら…ほぐれちゃう♡」[p]
-凛子「受け入れる準備、始めちゃうよ…んんっ、ほら、入り口も開いちゃってるでしょ♡」[p]
+Rinko「Hà♡ Hà♡ Á♡ Trơn thế này mà... vẫn bị mắc vào khấc quy đầu mất rồi...♡」[p]
+Rinko「Hiưư, a a♡ Cứ bị cọ xát mãi ở cửa vào thế này... nó mềm nhũn ra mất♡」[p]
+Rinko「Em bắt đầu chuẩn bị tiếp nhận anh đây... Ưm, nhìn xem, cửa vào cũng mở sẵn ra rồi kìa♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata=0"  name="H_sumata"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2819,9 +2820,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ん゛っ♡　あ゛あ゛っ♡　は、入っちゃうっ…♡　んんっ♡　先っぽ入り口に当たってる♡」[p]
-凛子「あうぅっ♡　はっ♡　はっ♡　[舜]くんのおかげで…おまんこほぐれちゃったぁ♡」[p]
-凛子「ふーっ…ふーっ…ヒクヒク収まらない…♡　マッサージの効果、すごいのね」[p]
+Rinko「Ưm♡ A a♡ V-Vào mất...♡ Ưm♡ Phần đầu đang chạm vào cửa vào rồi♡」[p]
+Rinko「A ưư♡ Hà♡ Hà♡ Nhờ có anh Shun... mà cô bé của em mềm nhũn ra rồi này♡」[p]
+Rinko「Phù... Phù... Nó cứ giật giật không ngừng...♡ Hiệu quả massage tuyệt vời thật đấy.」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -2830,9 +2831,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「あっ♡　あっ♡　あっ♡　んっ、くぅぅっ♡　体の奥までマッサージ…してるのっ…？」[p]
-凛子「ヌルヌル過ぎて…いつもより深いところまで指届いちゃってる…♡　変になっちゃうぅっ♡」[p]
-[舜]「もうマッサージいらないくらいほぐれてるじゃないですか。ほら、とろけてますよ」[p]
+Rinko「A♡ A♡ A♡ Ưm, kưưư♡ Anh đang... massage tận sâu bên trong cơ thể em sao...?」[p]
+Rinko「Trơn quá đi mất... Ngón tay anh vào sâu hơn mọi khi rồi...♡ Em sẽ trở nên kỳ lạ mất thôi♡」[p]
+[舜]「Nó đã mềm nhũn ra đến mức không cần massage nữa rồi đây này. Nhìn xem, em đang tan chảy rồi kìa.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman+=1"  name="H_teman"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2842,9 +2843,9 @@
 *R1_teman2
 
 [tb_start_text mode=1 ]
-凛子「はぁ、ひぅっ…あっ、あぁぁっ♡　そんな、激しく指動かさないでっ♡　壊れちゃう♡」[p]
-[舜]「でも嬉しそうにヒクついてますよ。奥も思いっきりマッサージしてほしいんでしょ？」[p]
-凛子「ひぅぅぅっ♡　あ゛あ゛っ♡　トントンされるの…ダメ、お腹の奥まで反応しちゃうから♡」[p]
+Rinko「Hà, hiư... A, a a a♡ Đừng cử động ngón tay kịch liệt như thế mà♡ Hỏng mất thôi♡」[p]
+[舜]「Nhưng nó đang giật giật có vẻ sung sướng lắm đấy. Em cũng muốn được massage thật mạnh ở bên trong đúng không?」[p]
+Rinko「Hiưưư♡ A a♡ Cứ bị thúc mạnh vào... Đừng mà, tận sâu trong bụng em cũng phản ứng lại mất♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman+=1"  name="H_teman"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2854,9 +2855,9 @@
 *R1_teman3
 
 [tb_start_text mode=1 ]
-凛子「んっ♡　くっ♡　んんっ♡　き、気持ちいいの♡　はぁ、あっ♡　体、熱くなってきた♡」[p]
-[舜]「つま先までピンと伸びてきちゃいましたね？　エロいですよ凛子さん…」[p]
-凛子「やっ…恥ずかしいこと言わないでっ…♡　余計に熱くなっちゃうからっ♡」[p]
+Rinko「Ưm♡ Kư♡ Ưm♡ S-Sướng quá đi mất♡ Hà, a♡ Cơ thể em nóng ran lên rồi♡」[p]
+[舜]「Ngón chân em cũng duỗi thẳng tắp ra rồi kìa? Dâm đãng quá đấy Rinko...」[p]
+Rinko「Đừng... Đừng nói mấy lời đáng xấu hổ thế mà...♡ Em lại càng nóng hơn mất♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman=0"  name="H_teman"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2868,9 +2869,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ん゛っ♡　あっはぁっ♡　ダメなトコっ、当たって…んんんっ♡　も、だめぇっ♡」[p]
-[舜]「すっごい反応ですね？　そんなに気持ちよくなってくれるならもっとしてあげなくちゃ」[p]
-凛子「やっ…あ゛あ゛っ♡　それ…トントンノックされるの…奥まで響いてるの♡」[p]
+Rinko「Ưm♡ A hà♡ Chạm vào... chỗ không được rồi... Ưm ưm♡ Đ-Đừng mà♡」[p]
+[舜]「Phản ứng tuyệt thật đấy? Nếu em sướng đến vậy thì anh phải làm thêm nữa mới được.」[p]
+Rinko「Đừng... A a♡ Cứ bị... thúc mạnh như thế... vang vọng đến tận sâu bên trong luôn♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -2878,9 +2879,9 @@
 *R1_pisuton_yukkuri1
 
 [tb_start_text mode=1 ]
-凛子「ひぐぅぅっ♡　体重かけてジュポジュポ出し入れされるの、だめ…♡」[p]
-凛子「すべって奥まで入っちゃう…♡　いつもより深いトコに届いちゃってる…♡」[p]
-凛子「先っぽで…奥までこねまわされてる…んんっ、くっ♡　あっ　だめぇぇっ♡」[p]
+Rinko「Hi gưưư♡ Anh dồn cả trọng lượng cơ thể vào rồi đút ra rút vào sồn sột thế này, đừng mà...♡」[p]
+Rinko「Nó trơn tuột rồi vào tận sâu bên trong mất...♡ Chạm đến nơi sâu hơn mọi khi rồi...♡」[p]
+Rinko「Phần đầu... đang khuấy đảo tận sâu bên trong... Ưm, kư♡ A, đừng mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2890,9 +2891,9 @@
 *R1_pisuton_yukkuri2
 
 [tb_start_text mode=1 ]
-凛子「ひあぁぁっ♡　腰掴んで奥まで挿れられたらっ…逃げられないっ♡　だめ、だめぇ♡」[p]
-凜子「気持ちいいのも逃がせないのっ…♡　こんなの、すぐイッちゃうってば…♡」[p]
-凛子「年上、なのに…♡　[舜]くんより大人なのにっ♡　だらしなくてごめんなさい♡」[p]
+Rinko「Hi a a a♡ Bị anh giữ chặt hông rồi đút vào sâu thế này... em không thoát được mất♡ Đừng, đừng mà♡」[p]
+Rinko「Cảm giác sung sướng này em cũng không thể thoát được...♡ Thế này thì, em ra ngay mất thôi...♡」[p]
+Rinko「Rõ ràng em lớn tuổi hơn...♡ Lớn hơn anh Shun cơ mà♡ Xin lỗi vì em hư hỏng quá♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2902,9 +2903,9 @@
 *R1_pisuton_yukkuri3
 
 [tb_start_text mode=1 ]
-[舜]「可愛いですよ…ヌルヌルになって気持ちよくなっちゃってる凛子さん、すっごくいい」[p]
-凛子「あぁぁっ♡　そんなこと言われたら…余計に意識しちゃうってば…♡　んっ、くぅぅっ♡」[p]
-凛子「あっ♡　あぁぁっ♡　奥…深いところまで届いてるよ♡　[舜]くんの、おっきいっ♡」[p]
+[舜]「Đáng yêu lắm... Rinko ướt sũng và đang sung sướng thế này, tuyệt vời lắm.」[p]
+Rinko「A a a♡ Anh nói thế... em lại càng để ý hơn đấy...♡ Ưm, kưưư♡」[p]
+Rinko「A♡ A a a♡ Chạm đến... tận sâu bên trong rồi kìa♡ Của anh Shun, to quá đi mất♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri=0"  name="H_supiritasu_pisuton_yukkuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2916,9 +2917,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぅぅぅっ♡　おっ♡　おおおっ♡　深いところ…ゴリュって当たってる♡」[p]
-凛子「目の前…チカチカしちゃってる…♡　[舜]くんのマッサージ、すごいからぁ♡」[p]
-凛子「あっ♡　あっ♡　あっ♡　もうわかんないっ♡　わかんなくなっちゃうぅ♡」[p]
+Rinko「A ưưư♡ Ơ♡ Ơ ơ ơ♡ Chỗ sâu nhất... đang bị cọ xát kịch liệt kìa♡」[p]
+Rinko「Trước mắt em... đang chớp giật liên hồi rồi...♡ Bài massage của anh Shun, tuyệt vời quá mà♡」[p]
+Rinko「A♡ A♡ A♡ Em không biết nữa đâu♡ Em không biết gì nữa đâu♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]
@@ -2926,9 +2927,9 @@
 *R1_pisuton_hagesiku1
 
 [tb_start_text mode=1 ]
-凛子「あっ♡　あぁっ♡　激し…んんっ、くぅぅっ♡　奥まで揉みほぐしてくれるの？」[p]
-[舜]「そうですよ…この奥のコリコリっとしたトコ、凝ってるんですよね？　よくほぐさなきゃ」[p]
-凛子「んあぁっ♡　押さえ込まれてっ、逃げられない♡　強制的に気持ちよくされちゃう♡」[p]
+Rinko「A♡ A a♡ Kịch liệt quá... Ưm, kưưư♡ Anh sẽ xoa bóp đến tận sâu bên trong sao?」[p]
+[舜]「Đúng vậy... Chỗ sâu bên trong này đang cứng lại đúng không? Phải làm cho nó mềm ra mới được.」[p]
+Rinko「Ưm a a♡ Bị đè chặt thế này, em không thoát được đâu♡ Bị cưỡng chế làm cho sung sướng mất rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2938,9 +2939,9 @@
 *R1_pisuton_hagesiku2
 
 [tb_start_text mode=1 ]
-[舜]「今日も凛子さん、仕事たくさん頑張ってたんで…いい子いい子ってほぐしてあげなくちゃ」[p]
-凛子「あぁっ♡　私だけじゃなくてっ♡　[舜]くんだって今日はたくさん頑張ったんでしょっ♡」[p]
-凛子「私も[舜]くんのことっ♡　気持ちよくしてあげたい♡　んっ♡　あぁっ♡　あぁぁぁっ♡」[p]
+[舜]「Hôm nay Rinko cũng đã cố gắng làm việc rất nhiều rồi... Anh phải xoa bóp ngoan ngoãn cho em mới được.」[p]
+Rinko「A a♡ Đâu chỉ có mình em♡ Hôm nay anh Shun cũng đã cố gắng rất nhiều rồi mà♡」[p]
+Rinko「Em cũng muốn♡ làm cho anh Shun sung sướng nữa♡ Ưm♡ A a♡ A a a♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2950,9 +2951,9 @@
 *R1_pisuton_hagesiku3
 
 [tb_start_text mode=1 ]
-[舜]「くっ…ふぅっ、あぁ、すっごい締め付け…あぁ、緩めてくれなきゃ出ちゃいますって…」[p]
-凛子「んっ♡　あっ、ひぅぅっ♡　無理、だってばぁっ♡　体が勝手に反応してるんだもの」[p]
-凛子「はぁっ♡　あぁっ♡　出していいから…♡　[舜]くんの好きにしちゃって…♡」[p]
+[舜]「Kư... Phù, a, siết chặt quá... A, nếu em không thả lỏng ra là anh bắn mất đấy...」[p]
+Rinko「Ưm♡ A, hiưưư♡ Không được, đâu mà♡ Cơ thể em tự động phản ứng lại đấy chứ.」[p]
+Rinko「Hà♡ A a♡ Cứ bắn ra đi...♡ Anh Shun cứ làm theo ý mình đi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku=0"  name="H_supiritasu_pisuton_hagesiku"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2964,9 +2965,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ん゛っ♡　あ゛う゛っ♡　あ゛あ゛っ♡　気持ちいいっ…１番奥…擦れて当たってるっ♡」[p]
-凛子「弱いところに…ズンズンって…♡　[舜]くんのおちんちん当たってるの…♡」[p]
-凛子「気持ちいいの広がって…イッちゃうっ♡　マッサージなのに…イッちゃうのっ♡」[p]
+Rinko「Ưm♡ A ư♡ A a♡ Sướng quá... Chỗ sâu nhất... đang bị cọ xát kìa♡」[p]
+Rinko「Cứ đâm thình thịch... vào chỗ nhạy cảm...♡ Dương vật của anh Shun đang chạm vào đó...♡」[p]
+Rinko「Cảm giác sung sướng lan tỏa... Em ra mất♡ Chỉ là massage thôi mà... em ra mất thôi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]
@@ -2974,9 +2975,9 @@
 *R1_2_kaiwa1
 
 [tb_start_text mode=1 ]
-凛子「本気でこのままの格好でマッサージしちゃうの？　ローションまで準備してるなんて…」[p]
-[舜]「凛子さんの疲れを癒そうと思って、用意してたんです。すごいでしょ？」[p]
-凛子「もう…こんな状態、普通のマッサージじゃないってすぐわかっちゃうよ？」[p]
+Rinko「Anh định massage với tư thế này thật luôn sao? Lại còn chuẩn bị cả lotion nữa chứ...」[p]
+[舜]「Anh chuẩn bị sẵn để xoa dịu sự mệt mỏi cho em đấy. Tuyệt vời không?」[p]
+Rinko「Thiệt tình... Nhìn tình trạng này là biết ngay không phải massage bình thường rồi còn gì?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2984,9 +2985,9 @@
 *R1_2_kaiwa2
 
 [tb_start_text mode=1 ]
-凛子「んっ…♡　体中ヌルヌルになっちゃった…[舜]くん、どんな施術してくれるの？」[p]
-[舜]「凛子さんがすっごく気持ちよくなれるマッサージですよ？　今まで体験したことないような」[p]
-凛子「やだ…体が期待してるみたい…♡　ヒクヒクって反応してるの、バレちゃったでしょう？」[p]
+Rinko「Ưm...♡ Cả cơ thể ướt nhẹp hết rồi này... Anh Shun, anh định làm thủ thuật gì cho em đây?」[p]
+[舜]「Bài massage làm em sướng đến tột đỉnh đấy? Đảm bảo là em chưa từng trải nghiệm bao giờ đâu.」[p]
+Rinko「Không chịu đâu... Cơ thể em đang mong đợi rồi này...♡ Nó đang giật giật phản ứng lại, anh thấy hết rồi đúng không?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2994,9 +2995,9 @@
 *R1_2_kaiwa3
 
 [tb_start_text mode=1 ]
-凛子「体全部[舜]くんにゆだねちゃうからね…？　[舜]くんオリジナルのマッサージ、してみて♡」[p]
-凛子「その代わり…すっごく気持ちよかったら、またお願いしちゃうかもしれないよ」[p]
-[舜]「もちろんですよ…凛子さんも余計なこと考えずに気持ちよくなってくださいね？」[p]
+Rinko「Em giao phó toàn bộ cơ thể này cho anh Shun đấy nhé...? Hãy thử bài massage độc quyền của anh đi♡」[p]
+Rinko「Đổi lại... nếu sướng quá, có khi em sẽ lại nhờ anh làm tiếp đấy nhé.」[p]
+[舜]「Tất nhiên rồi... Em cũng đừng nghĩ ngợi gì lung tung, cứ tận hưởng sự sung sướng đi nhé?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa=0"  name="H_kaiwa"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3004,9 +3005,9 @@
 *R1_2_Dkiss1
 
 [tb_start_text mode=1 ]
-凛子「ちゅぷ、ちゅくちゅくちゅく、じゅるるるる♡　んんっ…口の中もトロトロであったかい…♡」[p]
-凛子「ローションついてないのに…口の中も体と同じくらいヌルヌルになっちゃったね♡」[p]
-凛子「はぁ、はふ…もっとほしくなっちゃう…ちゅく、ちゅっちゅ、ちゅぷ、じゅるるるるっ♡」[p]
+Rinko「Chụt, chụt chụt chụt, sột soạt♡ Ưm... Bên trong miệng cũng ướt át và ấm nóng quá...♡」[p]
+Rinko「Rõ ràng là không có lotion... mà bên trong miệng cũng ướt nhẹp giống như cơ thể em rồi này♡」[p]
+Rinko「Hà, ha... Em lại muốn thêm nữa rồi... Chụt, chụt chụt, chụt, sột soạt♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low1==1"  ]
@@ -3016,9 +3017,9 @@
 *R1_2_Dkiss2
 
 [tb_start_text mode=1 ]
-[舜]「んんっ、凛子さん激し…キス大好きになっちゃったんですね？」[p]
-凛子「ちゅぷ、ちゅっ♡　ちゅく、にちゅ、ちゅぷ、じゅるるる♡　んん、そうなの♡　キス大好き」[p]
-凛子「でも好きな人とするキスだから気持ちいいのよ？　他の人じゃダメなの…♡」[p]
+[舜]「Ưm, Rinko mãnh liệt quá... Em trở nên cực kỳ thích hôn rồi đúng không?」[p]
+Rinko「Chụt, chụt♡ Chụt, chụt, chụt, sột soạt♡ Ưm, đúng vậy đấy♡ Em thích hôn lắm.」[p]
+Rinko「Nhưng vì là hôn người mình thích nên mới sướng thế này đấy? Người khác thì không được đâu...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_Dkiss+=1"  name="H_Dkiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3028,9 +3029,9 @@
 *R1_2_Dkiss3
 
 [tb_start_text mode=1 ]
-凛子「ちゅっちゅ、じゅぷ、じゅるるるる♡　んん、もっとキスしたい…舌絡ませてほしいの♡」[p]
-[舜]「凛子さん、欲しがるのめちゃくちゃエロいです…舌出してください…」[p]
-凛子「んっ♡　ちゅっちゅ、じゅぷ、じゅるるるるっ♡　はぁ、あんっ♡　もっと、もっと…♡」[p]
+Rinko「Chụt chụt, chụt, sột soạt♡ Ưm, em muốn hôn thêm nữa... Em muốn anh quấn lấy lưỡi em cơ♡」[p]
+[舜]「Rinko, dáng vẻ đòi hỏi của em dâm đãng lắm đấy... Đưa lưỡi ra đây nào...」[p]
+Rinko「Ưm♡ Chụt chụt, chụt, sột soạt♡ Hà, a♡ Thêm nữa, thêm nữa đi anh...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_Dkiss=0"  name="H_Dkiss"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3042,9 +3043,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「んんんっ♡　ちゅぷ、ちゅっちゅ♡　はっ、はぁ、キスだけでイッちゃうかと思った…」[p]
-凛子「じゅぷ、ちゅくちゅくちゅく…食べられちゃうみたいなキス…すごいの♡」[p]
-凛子「こんなエッチなキスどこで覚えたのって、ヤキモチ妬きそうになっちゃった」[p]
+Rinko「Ưm ưm♡ Chụt, chụt chụt♡ Hà, hà, em cứ tưởng chỉ hôn thôi mà cũng ra mất rồi chứ...」[p]
+Rinko「Chụt, chụt chụt chụt... Nụ hôn như muốn ăn tươi nuốt sống người ta vậy... Tuyệt vời quá♡」[p]
+Rinko「Nụ hôn dâm đãng thế này anh học ở đâu ra vậy, làm em sắp ghen lên rồi đây này.」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -3052,9 +3053,9 @@
 *R1_2_paizuri1
 
 [tb_start_text mode=1 ]
-凛子「んんっ…はぁ、あっ♡　手だけじゃなくておちんちんでもマッサージしてくれるの？」[p]
-凛子「あんっ♡　あぁ…ヌルヌルになってる…♡　これ、ローションだけのぬめりじゃなさそう」[p]
-凛子「[舜]くん、もう我慢してるの？　[舜]くんのあったかい体液、溢れちゃってるみたいだよ♡」[p]
+Rinko「Ưm... Hà, a♡ Không chỉ dùng tay mà anh còn dùng cả dương vật để massage cho em nữa sao?」[p]
+Rinko「A♡ A... Ướt nhẹp hết rồi này...♡ Cái này, có vẻ không chỉ là độ trơn của lotion đâu.」[p]
+Rinko「Anh Shun, anh đang nhịn đấy à? Thể dịch ấm nóng của anh Shun, có vẻ trào hết ra ngoài rồi kìa♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low2==1"  ]
@@ -3064,9 +3065,9 @@
 *R1_2_paizuri2
 
 [tb_start_text mode=1 ]
-凛子「あんっ…んんっ♡　私のことマッサージしながら[舜]くんも気持ちよくなってるんでしょう？」[p]
-[舜]「バレちゃいましたか…だって凛子さんのおっぱい、とろふわで気持ちいいんですもん」[p]
-凛子「わかるよ…♡　んんっ、でもマッサージでお互い気持ちよくなれるのはいいことだよ♡」[p]
+Rinko「A... Ưm♡ Vừa massage cho em, anh Shun cũng đang thấy sướng đúng không?」[p]
+[舜]「Bị lộ mất rồi sao... Tại vú của Rinko vừa mềm vừa mượt, sướng lắm mà.」[p]
+Rinko「Em hiểu mà...♡ Ưm, nhưng nhờ massage mà cả hai cùng sướng thì cũng tốt chứ sao♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_paizuri+=1"  name="H_paizuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3076,9 +3077,9 @@
 *R1_2_paizuri3
 
 [tb_start_text mode=1 ]
-凛子「もっと揉みほぐして…♡　はぁ、はっ…おっぱいの先っぽ、凝ってるみたいなの…」[p]
-[舜]「ホントだ、コリコリに固くなってるじゃないですか…ここ集中狙いしなくちゃ」[p]
-凛子「ひぅっ♡　あっ♡　あぁぁっ♡　そこっ、気持ちいいの…はぁ、ああっ♡　お願いしますっ♡」[p]
+Rinko「Xoa bóp thêm nữa đi anh...♡ Hà, hà... Đầu vú của em, có vẻ đang cứng lại rồi...」[p]
+[舜]「Thật này, nó đang cứng ngắc lại rồi đây này... Phải tập trung vào chỗ này mới được.」[p]
+Rinko「Hiư♡ A♡ A a a♡ Chỗ đó, sướng quá... Hà, a a♡ Nhờ anh đấy♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_paizuri=0"  name="H_paizuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3090,9 +3091,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ひっぐぅぅっ♡　あぁぁっ♡　乳首ばっかり…ほぐされちゃう…♡　だめ、イッツちゃう♡」[p]
-凛子「んんっ、おちんちんの先っぽとキスしてる…何度も何度も擦れて…ちゅっちゅって♡」[p]
-凛子「ダメ、余計に固くなっちゃう♡　[舜]くんのおちんちんみたいに…カチカチになっちゃうの♡」[p]
+Rinko「Hi gưưư♡ A a a♡ Cứ xoa bóp... mỗi đầu vú thôi...♡ Đừng mà, em ra mất♡」[p]
+Rinko「Ưm, đang hôn phần đầu dương vật kìa... Cọ đi cọ lại bao nhiêu lần... chụt chụt♡」[p]
+Rinko「Đừng mà, nó lại càng cứng hơn mất♡ Cứng ngắc... giống như dương vật của anh Shun vậy♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -3101,9 +3102,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「んっ…はぁ、ああっ♡　おっぱいの先までローションまみれにしちゃうの…？」[p]
-凛子「あっ♡　あっ♡　んんっ…そんなに揉みほぐさないで…凝ってるわけじゃないんだってばぁ♡」[p]
-[舜]「そうなんですか？　でもコリコリに固くなってるからよくほぐさないと」[p]
+Rinko「Ưm... Hà, a a♡ Anh định bôi lotion đầy đến tận đầu vú luôn sao...?」[p]
+Rinko「A♡ A♡ Ưm... Đừng xoa bóp mạnh thế mà... Đâu phải là nó đang căng cứng đâu♡」[p]
+[舜]「Vậy sao? Nhưng nó đang cứng ngắc lại rồi nên phải xoa bóp kỹ mới được.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiijiri+=1"  name="H_tikubiijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3113,9 +3114,9 @@
 *R1_2_tikubiijiri2
 
 [tb_start_text mode=1 ]
-凛子「ひぅっ♡　あっ♡　あぁぁっ♡　ダメ、そこ敏感だからっ♡　んんっ…ぷっくりしちゃうの♡」[p]
-[舜]「凛子さんのおっぱいテラテラ光っててめちゃくちゃエロいですよ…乳首も固くなってるし」[p]
-凛子「んんっ♡　[舜]くんが丁寧にマッサージしてくれるから…ツンって立ち上がっちゃったの♡」[p]
+Rinko「Hiư♡ A♡ A a a♡ Đừng mà, chỗ đó nhạy cảm lắm♡ Ưm... Nó sưng phồng lên mất♡」[p]
+[舜]「Vú của Rinko bóng loáng lên dâm đãng lắm đấy... Đầu vú cũng cứng ngắc lại rồi này.」[p]
+Rinko「Ưm♡ Tại anh Shun massage cẩn thận quá... nên nó mới vểnh đứng lên thế này đấy♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiijiri+=1"  name="H_tikubiijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3126,9 +3127,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「はーっ…はーっ…♡　乳首気持ちいいの…♡　体の奥までジンジン響いてる…♡」[p]
-凛子「あっ♡　んっ♡　それ、すごい…♡　ローション塗り込みながらマッサージされちゃうの？」[p]
-凛子「あぁぁっ♡　先っぽだけカリカリってするの…気持ちいい♡　おかしくなる…♡」[p]
+Rinko「Hà... Hà...♡ Đầu vú sướng quá đi mất...♡ Râm ran đến tận sâu bên trong cơ thể luôn...♡」[p]
+Rinko「A♡ Ưm♡ Tuyệt quá...♡ Anh vừa thoa lotion vừa massage luôn sao?」[p]
+Rinko「A a a♡ Chỉ gãi gãi ở phần đầu thôi... sướng quá♡ Em sẽ trở nên kỳ lạ mất...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiijiri=0"  name="H_tikubiijiri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3141,9 +3142,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「んあぁぁっ♡　好き、好きっ…♡　んんっ♡　乳首マッサージ、気持ちいいの…♡」[p]
-[舜]「足ガクガク震えちゃってますよ？　そんなに効いてるんですか？　すごいな」[p]
-凛子「効いちゃってる…♡　マッサージで…お腹の奥っ…ずっとキュンキュン疼いてるっ♡」[p]
+Rinko「Ưm a a a♡ Thích, thích quá...♡ Ưm♡ Massage đầu vú, sướng quá đi mất...♡」[p]
+[舜]「Chân em run lẩy bẩy luôn kìa? Hiệu quả đến thế cơ à? Tuyệt thật đấy.」[p]
+Rinko「Hiệu quả lắm...♡ Nhờ massage... mà tận sâu trong bụng em... cứ nhức nhối mãi không thôi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -3152,9 +3153,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「えっ…お尻までマッサージしちゃうの？　あっ、んんっ、ローション塗り込まれてる…♡」[p]
-[舜]「だってさっきからヒクヒクしてるでしょ？　触ってほしいのかと思って」[p]
-凛子「違うんだってば…体が勝手に反応しちゃってるだけ、だからっ…♡　んんっ♡」[p]
+Rinko「Hả... Anh định massage cả mông luôn sao? A, ưm, bị thoa lotion vào rồi...♡」[p]
+[舜]「Tại nãy giờ nó cứ giật giật suốt mà? Anh tưởng em muốn được chạm vào chứ.」[p]
+Rinko「Không phải đâu... Chỉ là cơ thể tự động phản ứng lại thôi mà...♡ Ưm♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low4==1"  ]
@@ -3164,9 +3165,9 @@
 *R1_2_anaruijiri2
 
 [tb_start_text mode=1 ]
-凛子「こんな格好で…恥ずかしい…[舜]くんに全部見られちゃってるのね。あんまり見ないで…」[p]
-[舜]「凛子さんのお尻、可愛いですよ。きゅっと閉じてるのに、ずっとヒクついてる」[p]
-凛子「んんっ♡　あっ、撫でないでぇっ♡　ほぐして中に指入れようとしてるの？　だめだってば♡」[p]
+Rinko「Với tư thế này... xấu hổ quá... Anh Shun nhìn thấy hết rồi đúng không. Đừng nhìn nhiều quá mà...」[p]
+[舜]「Mông của Rinko đáng yêu lắm. Đang khép chặt lại mà cứ giật giật mãi này.」[p]
+Rinko「Ưm♡ A, đừng vuốt ve mà♡ Anh định xoa bóp rồi đút ngón tay vào trong sao? Không được đâu♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruijiri+=1"  name="H_anaruijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3177,9 +3178,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-[舜]「お尻ほぐれてきちゃいましたよ？　ほら、入り口に簡単に指入っちゃった…」[p]
-凛子「ひゃぅ♡　あぁっ♡　お尻、広げないで…♡　やっ…奥まで見えちゃうっ♡」[p]
-凛子「あっ♡　こんな恥ずかしい格好でお尻まで触られちゃったら…もう[舜]くんの顔見られないよ」[p]
+[舜]「Mông em mềm ra rồi này? Nhìn xem, ngón tay anh dễ dàng đút vào cửa rồi...」[p]
+Rinko「Hya♡ A a♡ Đừng banh mông em ra mà...♡ Đừng... nhìn thấy tận sâu bên trong mất♡」[p]
+Rinko「A♡ Bị sờ mông trong tư thế đáng xấu hổ thế này... em không còn mặt mũi nào nhìn anh Shun nữa đâu.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruijiri=0"  name="H_anaruijiri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3192,9 +3193,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「くぅぅっ♡　ああぁぁっ♡　お尻っ…変なの…熱くなってる♡　腰、動いちゃうぅ♡」[p]
-[舜]「凛子さん、腰ヘコヘコしっぱなしですよ？　お尻で気持ちよくなればいいじゃないですか」[p]
-凛子「んっ♡　ふぅっ、ふっ♡　もう気持ちよくなっちゃってるよ。[舜]くんのせいだからね？」[p]
+Rinko「Kưưư♡ A a a♡ Mông em... kỳ lạ quá... đang nóng ran lên rồi♡ Hông cứ tự động di chuyển thôi♡」[p]
+[舜]「Rinko, hông em nảy lên liên tục luôn kìa? Sướng bằng mông thì cũng tốt chứ sao.」[p]
+Rinko「Ưm♡ Phù, phù♡ Đã sướng quá mất rồi đây này. Là tại anh Shun đấy nhé?」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -3202,9 +3203,9 @@
 *R1_2_sumata1
 
 [tb_start_text mode=1 ]
-[舜]「凛子さん、割れ目トロっと開いちゃってるじゃないですか…奥まで擦れちゃいそうですよ」[p]
-凛子「あんっ♡　んんっ♡　深いところまでおちんちんでマッサージされちゃうのね♡」[p]
-凛子「はぁっ♡　あぅっ♡　あぁっ♡　んんっ♡　[舜]くんも気持ちよくなっていいからね♡」[p]
+[舜]「Rinko, khe dâm của em mở toang ướt sũng ra rồi kìa... Sắp cọ xát đến tận sâu bên trong luôn rồi đấy.」[p]
+Rinko「A♡ Ưm♡ Anh sẽ dùng dương vật để massage đến tận nơi sâu nhất sao♡」[p]
+Rinko「Hà♡ A ư♡ A a♡ Ưm♡ Anh Shun cũng hãy tận hưởng sự sung sướng đi nhé♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low5==1"  ]
@@ -3214,9 +3215,9 @@
 *R1_2_sumata2
 
 [tb_start_text mode=1 ]
-凛子「ふーっ…ふーっ…んんっ♡　あぁ♡　ヌルヌルなのはローション？　[舜]くんの我慢汁かな？」[p]
-[舜]「凛子さんのエッチな蜜なんじゃないですか？　全部が混ざり合ってるんですよ…ほら」[p]
-凛子「あんっ♡　あぁぁぁっ♡　すごいの…ヌルヌル擦れて…すっごく気持ちいいっ♡」[p]
+Rinko「Phù... Phù... Ưm♡ A♡ Chỗ nhóp nháp này là lotion sao? Hay là dâm dịch đầu cu của anh Shun vậy?」[p]
+[舜]「Có khi là mật dâm đãng của Rinko đấy? Tất cả đang hòa quyện vào nhau rồi... Nhìn xem.」[p]
+Rinko「A♡ A a a♡ Tuyệt quá... cọ xát nhóp nháp... sướng quá đi mất♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata+=1"  name="H_sumata"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3226,9 +3227,9 @@
 *R1_2_sumata3
 
 [tb_start_text mode=1 ]
-凛子「だめ、こんなのイッちゃう…♡　もう入り口までぐちゃぐちゃになってる…♡」[p]
-[舜]「まだですよ…もっとほぐさないと。よーくチンポで擦ってローションマッサージしますから」[p]
-凛子「んっ♡　あ゛あ゛っ♡　一旦ストップしてぇっ…♡　おかしくなっちゃうからっ…♡」[p]
+Rinko「Đừng, thế này em ra mất...♡ Đến cả cửa vào cũng ướt nhẹp nát bét hết rồi...♡」[p]
+[舜]「Vẫn chưa đâu... Phải xoa bóp thêm nữa. Anh sẽ dùng dương vật cọ xát thật kỹ để massage lotion cho em nhé.」[p]
+Rinko「Ưm♡ A a♡ Dừng lại một chút đi anh...♡ Em sẽ trở nên kỳ lạ mất...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata=0"  name="H_sumata"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3240,9 +3241,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「んあぁぁぁっ♡　クリとおちんちん擦れ合って…刺激ビリビリって響いてるっ♡」[p]
-凛子「はぁっ♡　はぁっ♡　こんなに気持ちいいマッサージしてもらえるなんて…♡」[p]
-凛子「[舜]くんのマッサージ、リピーターになっちゃうよ…♡　すっごく気持ちいいんだもの♡」[p]
+Rinko「Ưm a a a♡ Hột le và dương vật cọ xát vào nhau... kích thích râm ran vang dội khắp người♡」[p]
+Rinko「Hà♡ Hà♡ Không ngờ lại được massage sướng đến thế này...♡」[p]
+Rinko「Chắc em thành khách quen bài massage của anh Shun mất thôi...♡ Tại nó sướng quá mà♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -3251,9 +3252,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t3.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「ひぅぅっ♡　あぁっ♡　熱いの湧き上がって…収まらないのっ♡　キュンキュンしてるっ♡」[p]
-[舜]「すっごい反応ですね…興奮しすぎですよ凛子さん…」[p]
-凛子「あっ♡　あんっ…そんなこと言ったって…敏感なトコ、直接擦れちゃってるからっ…♡」[p]
+Rinko「Hiưư♡ A a♡ Hơi nóng cứ tuôn trào... không thể nào dừng lại được♡ Nhức nhối quá đi mất♡」[p]
+[舜]「Phản ứng tuyệt thật đấy... Rinko hưng phấn quá rồi đấy...」[p]
+Rinko「A♡ A... Anh nói thế chứ... Chỗ nhạy cảm đang bị cọ xát trực tiếp mà...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_siohuki+=1"  name="H_siohuki"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3263,9 +3264,9 @@
 *R1_2_siohuki2
 
 [tb_start_text mode=1 ]
-凛子「あぁぁっ、また出ちゃうぅっ♡　んはぁっ♡　[舜]くんに恥ずかしい姿見せてるっ♡」[p]
-[舜]「潮吹き止まんないですねぇ？　あーあー、お漏らしてるみたいになってる…」[p]
-凛子「んっくぅぅっ♡　やっ…だって…刺激強いからっ♡　止まらなくなっちゃうのっ…♡」[p]
+Rinko「A a a, lại trào ra mất thôi♡ Ưm hà♡ Đang cho anh Shun thấy dáng vẻ đáng xấu hổ mất rồi♡」[p]
+[舜]「Phun nước không ngừng luôn nhỉ? A a, cứ như đang tiểu tiện ra quần vậy...」[p]
+Rinko「Ưm kưưư♡ Đừng... Tại... kích thích mạnh quá mà♡ Em không thể nào dừng lại được...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_siohuki+=1"  name="H_siohuki"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3276,9 +3277,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「あっ♡　あぅぅっ♡　おちんちんでゾリゾリって擦られるの、気持ちいいのっ…♡」[p]
-凛子「腰動く…♡　変になっちゃう♡　擦れてるところから頭の先までビリビリってきてる♡」[p]
-凛子「あぁぁぁっ♡　敏感なところばっかり擦らないで…ホントに…わかんなくなっちゃうぅ♡」[p]
+Rinko「A♡ A ưư♡ Bị dương vật cọ xát sồn sột thế này, sướng quá đi mất...♡」[p]
+Rinko「Hông cứ tự động di chuyển...♡ Em sẽ trở nên kỳ lạ mất♡ Từ chỗ cọ xát lan râm ran đến tận đỉnh đầu luôn rồi♡」[p]
+Rinko「A a a♡ Đừng cứ cọ mãi vào chỗ nhạy cảm thế mà... Thật sự... em không biết gì nữa đâu♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_siohuki=0"  name="H_siohuki"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3291,9 +3292,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あ゛あ゛っ♡　すごい量っ…出ちゃってる♡　体の水分全部出ちゃうぅぅ♡」[p]
-凛子「ひぐぅぅっ♡　おっ♡　おおっ♡　奥…キュンキュンしっぱなしで止まらないのっ♡」[p]
-凛子「ふーっ…んんっ♡　待ってっ♡　休憩っ♡　これ以上されたら壊れる…壊れちゃうからぁっ♡」[p]
+Rinko「A a♡ Lượng lớn quá... trào ra rồi♡ Toàn bộ nước trong cơ thể em sắp trào hết ra ngoài rồi♡」[p]
+Rinko「Hi gưưư♡ Ơ♡ Ơ ơ♡ Bên trong... cứ nhức nhối liên hồi không dừng lại được♡」[p]
+Rinko「Phù... Ưm♡ Đợi đã♡ Nghỉ một chút đi anh♡ Cứ tiếp tục thế này em hỏng mất... hỏng mất thôi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -3301,9 +3302,9 @@
 *R1_2_pisuton_yukkuri1
 
 [tb_start_text mode=1 ]
-[舜]「凛子さん、足開いてるから…チンポが出たり入ったりしてるところよく見えますよ…」[p]
-凛子「ひゃぅぅっ♡　恥ずかしいっ…♡　んっ、あぁっ♡　嫌、見ないでぇっ…♡」[p]
-凛子「んっ♡　あぁっ、感触確かめるみたいにゆっくり出し入れするの…だめぇぇっ♡」[p]
+[舜]「Rinko đang banh chân ra... nên anh có thể nhìn rõ dương vật đang đút ra rút vào này...」[p]
+Rinko「Hya ưư♡ Xấu hổ quá...♡ Ưm, a a♡ Đừng, đừng nhìn mà...♡」[p]
+Rinko「Ưm♡ A a, cứ từ từ đút ra rút vào như đang xác nhận cảm giác thế này... đừng mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3313,9 +3314,9 @@
 *R1_2_pisuton_yukkuri2
 
 [tb_start_text mode=1 ]
-凛子「フーッ…フーッ♡　すごい…[舜]くんのおっきいのが…ヌルヌルって入り口擦れて…♡」[p]
-凛子「深いところにも…一気に入ってきちゃう♡　おおおっ♡　いっぱいになっちゃうぅっ♡」[p]
-[舜]「凛子さんも出し入れしてるとこ見てるじゃないですか…興奮してるんですね…」[p]
+Rinko「Phù... Phù♡ Tuyệt quá... Thứ to lớn của anh Shun... đang cọ xát nhóp nháp ở cửa vào...♡」[p]
+Rinko「Vào một mạch... đến tận nơi sâu nhất luôn♡ Ơ ơ ơ♡ Lấp đầy mất rồi♡」[p]
+[舜]「Rinko cũng đang nhìn cảnh đút ra rút vào mà... Em đang hưng phấn lắm đúng không...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3325,9 +3326,9 @@
 *R1_2_pisuton_yukkuri3
 
 [tb_start_text mode=1 ]
-凛子「んっ♡　あっ♡　あぁぁっ♡　[舜]くんの…ビクビク跳ねてる…先っぽも膨らんじゃってる♡」[p]
-凛子「[舜]くんも私で興奮してくれてるんだね…顔もオスって感じでエッチになってる♡」[p]
-凛子「そんな顔見せられたら…私まで興奮しちゃう…♡　んっ、気持ちよくなっちゃうぅ♡」[p]
+Rinko「Ưm♡ A♡ A a a♡ Của anh Shun... đang giật nảy lên kìa... Phần đầu cũng sưng phồng lên rồi♡」[p]
+Rinko「Anh Shun cũng đang hưng phấn vì em nhỉ... Khuôn mặt cũng đầy nam tính dâm đãng quá đi♡」[p]
+Rinko「Nhìn thấy khuôn mặt đó... đến em cũng hưng phấn theo mất...♡ Ưm, sướng quá đi mất♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri=0"  name="H_supiritasu_pisuton_yukkuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3339,9 +3340,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ひぅぅぅっ♡　あっ…お、奥…弱いトコ当たってる♡　ん、くぅぅぅっ♡」[p]
-凛子「ドチュって、おちんちんの先っぽで押しつぶされちゃったぁ♡　あうっ♡　あっ、あぁぁっ♡」[p]
-凛子「だめ…すごいのきちゃう…♡　恥ずかしい格好のまま、頭の中真っ白になってイッちゃうよ♡」[p]
+Rinko「Hiưưư♡ A... B-Bên trong... Chạm vào chỗ nhạy cảm rồi♡ Ưm, kưưư♡」[p]
+Rinko「Bị phần đầu dương vật đâm phập vào đè bẹp mất rồi♡ A ư♡ A, a a a♡」[p]
+Rinko「Đừng... Cơn sung sướng tột độ đang ập đến...♡ Trong tư thế đáng xấu hổ này, đầu óc em trắng xóa rồi ra mất thôi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]
@@ -3349,9 +3350,9 @@
 *R1_2_pisuton_hagesiku1
 
 [tb_start_text mode=1 ]
-凛子「あ゛あ゛っ♡　ん゛っ♡　そんなにっ、体重かけて押しつぶさないでぇっ♡」[p]
-凛子「子宮の入り口まで届いちゃうっ♡　先っぽ当たってこねられちゃうの…だめぇっ♡」[p]
-凛子「ん゛っ♡　ぐぅぅっ♡　はっ♡　はっ♡　激しくてっ…息できなくなっちゃう♡」[p]
+Rinko「A a♡ Ưm♡ Đừng dồn cả trọng lượng cơ thể vào đè bẹp em như thế mà♡」[p]
+Rinko「Chạm đến tận cửa tử cung luôn rồi♡ Bị phần đầu chạm vào rồi khuấy đảo... Đừng mà♡」[p]
+Rinko「Ưm♡ Gưư♡ Hà♡ Hà♡ Kịch liệt quá... em không thở nổi nữa♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3361,9 +3362,9 @@
 *R1_2_pisuton_hagesiku2
 
 [tb_start_text mode=1 ]
-凛子「んぅぅっ♡　お゛お゛っ♡　深いところまで…入ってる♡　これもマッサージなのっ？」[p]
-[舜]「そうですよ…いつも仕事忙しくてお疲れでしょ？　しっかりほぐしますからね…！」[p]
-凛子「あ゛あ゛っ♡　もう充分ほぐれてる、からっ♡　トロトロになって…溢れちゃう♡」[p]
+Rinko「Ưm ưư♡ Ơ ơ♡ Đang đâm vào... tận sâu bên trong luôn♡ Đây cũng là massage sao?」[p]
+[舜]「Đúng vậy đấy... Lúc nào em cũng bận rộn công việc mệt mỏi đúng không? Anh sẽ xoa bóp thật kỹ cho em nhé...!」[p]
+Rinko「A a♡ Đã mềm ra đủ rồi mà♡ Ướt sũng hết rồi... sắp trào ra mất♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3373,9 +3374,9 @@
 *R1_2_pisuton_hagesiku3
 
 [tb_start_text mode=1 ]
-凛子「ひっぐぅっ♡　お゛っ♡　お゛っ♡　深いトコまで…えぐられちゃってるみたいっ♡」[p]
-凛子「あ゛っ♡　[舜]くんの…根元までズッポリ入ってる♡　ん、くぅぅ♡　先っぽ奥届いてるの♡」[p]
-凛子「んくぅぅっ♡　はっ♡　はぁ♡　これが体の内側のマッサージなの？　すっごく気持ちいい♡」[p]
+Rinko「Hi gư♡ Ơ♡ Ơ♡ Cứ như đang bị... khoét sâu đến tận bên trong vậy♡」[p]
+Rinko「A♡ Của anh Shun... đâm ngập đến tận gốc rồi♡ Ưm, kưư♡ Phần đầu chạm đến tận sâu bên trong luôn♡」[p]
+Rinko「Ưm kưưư♡ Hà♡ Hà♡ Đây là bài massage bên trong cơ thể sao? Sướng quá đi mất♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku=0"  name="H_supiritasu_pisuton_hagesiku"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3387,9 +3388,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「お゛お゛っ♡　んくぅぅっ♡　このマッサージっ、お客さんにはしちゃだめだよっ♡」[p]
-[舜]「わかってますよ…凛子さんだけですって。凛子さんも俺だけにしてくださいよ…！」[p]
-凛子「わかってる、からっ…♡　あぁぁっ♡　[舜]くんとしか…えっちなマッサージはしないのっ♡」[p]
+Rinko「Ơ ơ♡ Ưm kưưư♡ Bài massage này, tuyệt đối không được làm cho khách đâu đấy♡」[p]
+[舜]「Anh biết rồi... Chỉ làm cho Rinko thôi. Rinko cũng chỉ được làm với mình anh thôi đấy...!」[p]
+Rinko「Em biết rồi mà...♡ A a a♡ Em sẽ không làm... bài massage dâm đãng này với ai khác ngoài anh Shun đâu♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]
@@ -3397,9 +3398,9 @@
 *R2_kaiwa1
 
 [tb_start_text mode=1 ]
-[舜]「ほら、凛子さん期待でいっぱいの顔になってる…めちゃくちゃエロいよ」[p]
-凛子「もう…生意気なこと言って…[舜]くん、エッチな意地悪しようとしてるでしょ？」[p]
-凛子「あんまりやりすぎるのはダメだからね？　こんな鏡の前で…すっごく恥ずかしいんだからね？」[p]
+[舜]「Nhìn xem, khuôn mặt Rinko đang tràn trề kỳ vọng kìa... Dâm đãng quá đi.」[p]
+Rinko「Thiệt tình... Cứ nói mấy lời hỗn xược... Anh Shun, anh lại định giở trò dâm đãng trêu chọc em đúng không?」[p]
+Rinko「Không được làm quá đà đâu đấy nhé? Ở trước gương thế này... xấu hổ lắm đấy biết không?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3407,9 +3408,9 @@
 *R2_kaiwa2
 
 [tb_start_text mode=1 ]
-[舜]「凛子さん、セックスしてる時自分がどんな顔してるのか見たことある？」[p]
-凛子「そ、そんなの…見たことあるわけないでしょう？　恥ずかしくて見られないよ…」[p]
-凛子「自分がどんな顔してるかなんて、考える余裕もないんだから…」[p]
+[舜]「Rinko, em đã bao giờ nhìn thấy khuôn mặt của mình lúc làm tình chưa?」[p]
+Rinko「Ch-Chuyện đó... làm sao mà em từng thấy được chứ? Xấu hổ lắm không dám nhìn đâu...」[p]
+Rinko「Em còn chẳng có tâm trí đâu mà nghĩ xem mình đang làm bộ mặt gì nữa cơ...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3417,9 +3418,9 @@
 *R2_kaiwa3
 
 [tb_start_text mode=1 ]
-[舜]「今日は、自分がどれだけエロい顔してるのか最後まで見てもらおうかな」[p]
-凜子「今日の[舜]くん、やっぱりいつもより強引だね…私に恥ずかしい思いさせたいの？」[p]
-凛子「あんまり意地悪されたら悲しくなっちゃうかもしれないよ…？」[p]
+[舜]「Hôm nay, anh sẽ cho em nhìn thấy khuôn mặt dâm đãng của mình cho đến tận phút cuối cùng nhé.」[p]
+Rinko「Hôm nay anh Shun, quả nhiên là bạo dạn hơn mọi khi nhỉ... Anh muốn làm em xấu hổ sao?」[p]
+Rinko「Nếu bị trêu chọc quá đà có khi em sẽ buồn đấy nhé...?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa=0"  name="H_kaiwa"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3428,9 +3429,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「ひゃうぅっ！　いきなり叩いたらびっくりするでしょう…あっ！　も、だめっ…」[p]
-凛子「んんっ！　もうだめだってば…あとが残っちゃうから…んっ！　[舜]くん…！」[p]
-[舜]「すっご…セックスしてる時も同じような音出てるよね？　めっちゃエロい肌ぶつかる音」[p]
+Rinko「Hya ưư! Đột nhiên đánh thế làm em giật mình đấy... A! Đ-Đừng mà...」[p]
+Rinko「Ưm! Đã bảo là đừng mà... Để lại dấu vết mất... Ưm! Anh Shun...!」[p]
+[舜]「Tuyệt thật... Lúc làm tình cũng phát ra âm thanh giống thế này nhỉ? Tiếng da thịt va chạm dâm đãng cực kỳ.」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low1==1"  ]
@@ -3440,9 +3441,9 @@
 *R2_supankingu2
 
 [tb_start_text mode=1 ]
-凛子「あっ…痛いってば…もうやめてっ…！　んっ、あっ、あぁぁっ！」[p]
-[舜]「あれ？　でも叩かれるたびに腰クネクネ動いてるみたいだけど？　気持ちいいんじゃないの？」[p]
-凛子「そんなことあるわけ…んっ…あぁっ♡　あんっ…♡　やっ、もうやめてっ♡」[p]
+Rinko「A... Đau mà... Dừng lại đi...! Ưm, a, a a a!」[p]
+[舜]「Ủa? Nhưng mỗi lần bị đánh hông em lại uốn éo kìa? Không phải là sướng sao?」[p]
+Rinko「Làm gì có chuyện... Ưm... A a♡ A...♡ Đừng, dừng lại đi mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supankingu+=1"  name="H_supankingu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3453,9 +3454,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t3.mp3"  ]
 [tb_start_text mode=1 ]
-[舜]「子供がちっちゃい頃は、こうやってお尻叩いてお仕置きしたことあるの？」[p]
-凛子「んっ♡　あぁっ♡　叩いたことなんかないよっ…♡　話せばわかる子たちだったもの…！」[p]
-凛子「あっ、私も言ってくれたらわかる、からっ…もう叩くのはやめてっ♡」[p]
+[舜]「Lúc bọn trẻ còn nhỏ, em có từng đánh mông trừng phạt chúng thế này không?」[p]
+Rinko「Ưm♡ A a♡ Em chưa từng đánh bao giờ đâu...♡ Chỉ cần nói là chúng hiểu mà...!」[p]
+Rinko「A, em cũng chỉ cần nói là hiểu mà... nên đừng đánh nữa đi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supankingu=0"  name="H_supankingu"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3468,9 +3469,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ひゃぅぅぅっ♡　あっ…体、熱くなってきちゃった…痛いのに…ジンジンして…」[p]
-凛子「お腹の奥、響いちゃってるの…なんで…体、変になってるっ…♡」[p]
-凛子「はぁ♡　あっ、あぁぁっ♡　痛いのが気持ちいいなんて…私どうなっちゃったんだろう」[p]
+Rinko「Hya ưưư♡ A... Cơ thể em, nóng ran lên rồi... Rõ ràng là đau... mà cứ râm ran...」[p]
+Rinko「Sâu trong bụng em, vang dội cả lên rồi... Sao thế này... cơ thể em, trở nên kỳ lạ mất rồi...♡」[p]
+Rinko「Hà♡ A, a a a♡ Đau mà lại thấy sướng... Rốt cuộc em bị làm sao thế này」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -3478,9 +3479,9 @@
 *R2_tikubiijiri1
 
 [tb_start_text mode=1 ]
-[舜]「凛子さん、顔緩みすぎ…鏡で見てよ。乳首気持ちよくなって、体の力抜けちゃったんだ？」[p]
-凛子「んんっ♡　はぁ、やっ…そんなこと言わないで…自分の顔見るの恥ずかしいんだってば…」[p]
-凛子「あっ♡　んんっ…あぁ♡　乳首の刺激だけで…体あっついの収まらないの♡」[p]
+[舜]「Rinko, mặt em giãn hết ra rồi kìa... Nhìn vào gương đi. Đầu vú sướng quá nên cả người mất hết sức lực rồi sao?」[p]
+Rinko「Ưm♡ Hà, đừng... Đừng nói thế mà... Tự nhìn mặt mình xấu hổ lắm...」[p]
+Rinko「A♡ Ưm... A♡ Chỉ kích thích đầu vú thôi... mà cơ thể nóng ran không dịu xuống được♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low2==1"  ]
@@ -3491,9 +3492,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「あっ♡　あうぅっ♡　んんっ♡　乳首の先っぽカリカリされるの…弱いみたい♡」[p]
-[舜]「俺はずっと知ってたけどなぁ？　乳首撫でられるのも好きでしょ？」[p]
-凛子「んんっ♡　はぁ、あっ♡　[舜]くんには全部バレちゃってるんだね…♡　恥ずかしいよっ♡」[p]
+Rinko「A♡ A ưư♡ Ưm♡ Bị gãi gãi ở đầu vú thế này... em không chịu nổi mất♡」[p]
+[舜]「Anh thì biết tòng tọc từ lâu rồi cơ? Em cũng thích được vuốt ve đầu vú đúng không?」[p]
+Rinko「Ưm♡ Hà, a♡ Bị anh Shun nhìn thấu hết cả rồi...♡ Xấu hổ quá đi mất♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiijiri+=1"  name="H_tikubiijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3503,9 +3504,9 @@
 *R2_tikubiijiri3
 
 [tb_start_text mode=1 ]
-[舜]「見て凛子さん、乳首カリカリされてどんな顔してるのか…自分で確かめてよ」[p]
-凛子「やだ…こんな顔してたなんて。恥ずかしいよ[舜]くん。これ以上見られない…」[p]
-凛子「んっ…どんなふうに触られてるのかも見えるから…余計にエッチな気分になっちゃうの♡」[p]
+[舜]「Nhìn đi Rinko, lúc bị gãi đầu vú em đang làm bộ mặt thế nào kìa... Tự mình kiểm chứng đi.」[p]
+Rinko「Không chịu đâu... Không ngờ em lại làm bộ mặt thế này. Xấu hổ lắm anh Shun. Em không dám nhìn nữa đâu...」[p]
+Rinko「Ưm... Vì có thể nhìn thấy mình đang bị sờ soạng thế nào... nên lại càng thấy dâm đãng hơn mất♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiijiri=0"  name="H_tikubiijiri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3518,9 +3519,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ひゃぅぅうっ♡　乳首ばっかり…だめ…♡　すっごくエッチな触り方するんだもの」[p]
-凛子「んっ♡　はぁ♡　あっ、あぅっ♡　体、どんどん敏感になってる…」[p]
-凛子「あぁ…あ、足…震えて立っていられなくなっちゃう…」[p]
+Rinko「Hya ưư ư♡ Cứ sờ mỗi đầu vú... đừng mà...♡ Tại anh sờ dâm đãng quá mà.」[p]
+Rinko「Ưm♡ Hà♡ A, a ư♡ Cơ thể em, ngày càng trở nên nhạy cảm hơn rồi...」[p]
+Rinko「A... Ch-Chân em... run rẩy không đứng vững nổi nữa rồi...」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -3528,9 +3529,9 @@
 *R2_munemomi1
 
 [tb_start_text mode=1 ]
-凛子「はぁっ♡　あっ♡　あぁっ…♡　おっぱいばっかり、だめ…[舜]くんもうやめて」[p]
-[舜]「でもエッチな声出てるよね？　凛子さん、激しくされて興奮してるんじゃないの？」[p]
-凛子「んんっ♡　あぁっ♡　だっていつもより[舜]くんが強引だから…新鮮で…」[p]
+Rinko「Hà♡ A♡ A a...♡ Cứ làm vú mãi, đừng mà... Anh Shun, dừng lại đi.」[p]
+[舜]「Nhưng em đang rên rỉ dâm đãng lắm đấy? Rinko, chẳng phải em đang hưng phấn vì bị làm mạnh bạo sao?」[p]
+Rinko「Ưm♡ A a♡ Tại hôm nay anh Shun bạo dạn hơn mọi khi mà... Cảm giác mới mẻ quá...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3541,9 +3542,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「はーっ…はーっ…はーっ…♡　んんっ♡　感触確かめるみたいに触らないで…♡」[p]
-[舜]「触り心地最高だもん。ほら、凛子さんのエロいおっぱいに指沈み込んじゃう…」[p]
-凛子「んんっ♡　ふぅ、はっ…[舜]くんの触り方、いつもより激しくて…気持ちよくなっちゃうよ♡」[p]
+Rinko「Hà... Hà... Hà...♡ Ưm♡ Đừng có sờ soạng như đang xác nhận cảm giác thế mà...♡」[p]
+[舜]「Tại cảm giác sờ sướng quá mà. Nhìn xem, ngón tay anh chìm hẳn vào bầu vú dâm đãng của Rinko luôn này...」[p]
+Rinko「Ưm♡ Phù, hà... Cách anh Shun sờ, mãnh liệt hơn mọi khi... làm em sướng quá đi mất♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3553,9 +3554,9 @@
 *R2_munemomi3
 
 [tb_start_text mode=1 ]
-[舜]「今日は凛子さんのことたくさん可愛がってあげようって思ってたんだよ？　嬉しいでしょ」[p]
-凛子「あっ♡　可愛がってもらうって…こうやっておっぱい揉みしだかれちゃうってこと？」[p]
-凛子「鏡の前で見せつけてくるなんて…[舜]くん意地悪だよ…恥ずかしくて前向けないもの…」[p]
+[舜]「Hôm nay anh định sẽ yêu chiều Rinko thật nhiều đấy? Vui lắm đúng không.」[p]
+Rinko「A♡ Yêu chiều là... bị nhào nặn vú thế này sao?」[p]
+Rinko「Bắt em phô bày ra trước gương thế này... Anh Shun trêu chọc em quá... Xấu hổ đến mức không dám nhìn thẳng luôn này...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi=0"  name="H_munemomi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3568,9 +3569,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あっ、あぁぁぁっ♡　んんっ♡　手のひらで…乳首擦れてる…♡　はっ、あぁっ♡」[p]
-[舜]「乳首めっちゃ立ってるよ。興奮してる証拠でしょ」[p]
-凛子「んんっ♡　はぅぅっ、、そういうわけじゃ…んんっ♡　あっ、擦れちゃう、だめぇっ♡」[p]
+Rinko「A, a a a♡ Ưm♡ Lòng bàn tay... đang cọ xát vào đầu vú...♡ Hà, a a♡」[p]
+[舜]「Đầu vú vểnh đứng lên rồi kìa. Bằng chứng là em đang hưng phấn đúng không.」[p]
+Rinko「Ưm♡ Ha ưư,, Đâu phải thế đâu... Ưm♡ A, cọ xát mất, đừng mà♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -3579,9 +3580,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-[舜]「凛子さん、そういえば掃除する予定だったんだよね？　いいの？　こんなとこでエッチしてて」[p]
-凛子「あっ♡　んんっ♡　だって[舜]くんが触り始めたから…私は掃除するつもりだったのに…」[p]
-凛子「あぁぁっ♡　やっ…クリこねるの…刺激強いっ♡　腰、跳ねちゃうよ…♡」[p]
+[舜]「Rinko, nhắc mới nhớ em định dọn dẹp mà nhỉ? Có sao không? Làm tình ở chỗ thế này.」[p]
+Rinko「A♡ Ưm♡ Tại anh Shun bắt đầu sờ soạng trước đấy chứ... Rõ ràng em định dọn dẹp cơ mà...」[p]
+Rinko「A a a♡ Đừng... Khuấy đảo hột le... kích thích mạnh quá♡ Hông em, nảy lên mất thôi...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low4==1"  ]
@@ -3591,9 +3592,9 @@
 *R2_kuriijiri2
 
 [tb_start_text mode=1 ]
-凛子「あぅぅっ♡　クリばっかりコリコリされたら…イクっ♡　イッちゃうぅぅ♡」[p]
-[舜]「ん～？　どこにイッちゃうの？　わかんないな、天国？」[p]
-凛子「ひぐぅぅっ♡　んっ、あぁっ♡　意地悪っ♡　おかしくなっちゃうってことだからぁっ♡」[p]
+Rinko「A ưư♡ Cứ bị cọ xát mỗi hột le thế này... em ra mất♡ Ra mất thôi♡」[p]
+[舜]「Hửm~? Ra đi đâu cơ? Anh không biết đâu, lên thiên đàng à?」[p]
+Rinko「Hi gưưư♡ Ưm, a a♡ Anh trêu em♡ Là em sắp trở nên kỳ lạ mất thôi ấy♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kuriijiri+=1"  name="H_kuriijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3604,9 +3605,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-[舜]「ここも掃除して綺麗にしないと…まさかここ、お客さんに使用してないよねぇ？」[p]
-凛子「つ、使ってるわけないでしょ…♡　あっ、だめ…クリ撫でないで…♡　そこ敏感だから…！」[p]
-凛子「腰動いちゃう…あっ♡　あっ♡　あっ♡　これ以上こねないでぇっ…♡」[p]
+[舜]「Chỗ này cũng phải dọn dẹp cho sạch sẽ mới được... Không lẽ chỗ này, em cũng dùng cho khách đấy chứ?」[p]
+Rinko「L-Làm gì có chuyện dùng chứ...♡ A, đừng... đừng vuốt ve hột le mà...♡ Chỗ đó nhạy cảm lắm...!」[p]
+Rinko「Hông cứ tự động di chuyển... A♡ A♡ A♡ Đừng khuấy đảo thêm nữa mà...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kuriijiri=0"  name="H_kuriijiri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3619,9 +3620,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ひぅっ♡　あっ、んっ♡　クリ摘まんだら…何か出ちゃうっ…立っていられなくなっちゃう♡」[p]
-[舜]「潮吹きして倒れ込んじゃうってこと？　エロすぎじゃない？」[p]
-凛子「んんっ♡　はっ♡　はっ♡　[舜]くんが…私の体こんなに敏感にしたんだからね…？」[p]
+Rinko「Hiư♡ A, ưm♡ Bóp hột le thế này... có thứ gì đó trào ra mất... em không đứng vững nổi nữa đâu♡」[p]
+[舜]「Ý em là phun nước rồi ngã gục xuống luôn à? Dâm đãng quá rồi đấy?」[p]
+Rinko「Ưm♡ Hà♡ Hà♡ Là tại anh Shun... làm cơ thể em trở nên nhạy cảm thế này đấy nhé...?」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -3629,9 +3630,9 @@
 *R2_sumata1
 
 [tb_start_text mode=1 ]
-[舜]「凛子さん、俺以外に、こうやってチンポで擦られたことある？」[p]
-凛子「んっ♡　ふぅ、はっ…なんでそんなこと聞くの…んんっ♡　恥ずかしい思いさせたいの？」[p]
-凛子「[舜]くんとセックスするまでずっとご無沙汰だったんだから…するわけないでしょうっ♡」[p]
+[舜]「Rinko, ngoài anh ra, em đã từng bị cọ xát bằng dương vật thế này bao giờ chưa?」[p]
+Rinko「Ưm♡ Phù, hà... Sao anh lại hỏi chuyện đó chứ... Ưm♡ Anh muốn làm em xấu hổ sao?」[p]
+Rinko「Trước khi làm tình với anh Shun em đã nhịn suốt một thời gian dài rồi mà... làm gì có chuyện đó chứ♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low5==1"  ]
@@ -3641,9 +3642,9 @@
 *R2_sumata2
 
 [tb_start_text mode=1 ]
-凛子「あっ…んんっ…はぁ、あっ…んんっ、待ってそんなに動かしたら中に入っちゃいそう…」[p]
-[舜]「これだけヌルヌルになってれば、滑って入っちゃうかもね？　凛子さん濡れすぎ」[p]
-凛子「あぁぁっ♡　違う…私だけじゃなくって…[舜]くんも先っぽから溢れてるんでしょ♡」[p]
+Rinko「A... Ưm... Hà, a... Ưm, đợi đã, cứ cử động thế này là nó đâm vào trong mất...」[p]
+[舜]「Ướt nhẹp thế này rồi, có khi trơn tuột đâm thẳng vào trong luôn đấy nhỉ? Rinko ướt sũng rồi này.」[p]
+Rinko「A a a♡ Không phải... Đâu chỉ có mình em... Phần đầu của anh Shun cũng đang trào ra đấy thôi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata+=1"  name="H_sumata"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3653,9 +3654,9 @@
 *R2_sumata3
 
 [tb_start_text mode=1 ]
-凛子「はぁっ♡　あっ♡　あぁぁっ♡　擦ってるだけ、なのに…気持ちよくって…力入らない♡」[p]
-[舜]「だめだよ、ちゃんと踏ん張らないと。上向きチンポで擦ってあげられないでしょ」[p]
-凛子「ひぅぅっ♡　あっ♡　い、入り口とクリばっかり…擦りつけないでっ♡」[p]
+Rinko「Hà♡ A♡ A a a♡ Chỉ mới cọ xát thôi... mà sướng quá... em mất hết cả sức lực rồi♡」[p]
+[舜]「Không được đâu, em phải đứng cho vững chứ. Không thì dương vật vểnh lên của anh sao cọ xát cho em được.」[p]
+Rinko「Hiưư♡ A♡ Đ-Đừng có cọ xát... mỗi cửa vào với hột le mãi thế mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata=0"  name="H_sumata"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3667,9 +3668,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁっ♡　はぁっ…はぁっ♡　弱いところばっかり当たるから…イッちゃうかと思った…♡」[p]
-凛子「んんっ…[舜]くんの体温伝わってきてる…♡　すごい、脈打ってるのまで伝わってくる♡」[p]
-凛子「私もお腹の奥…キュンってときめいてる…反応し合っちゃってるのかも…」[p]
+Rinko「A a a♡ Hà... Hà♡ Cứ chạm mãi vào chỗ nhạy cảm... làm em cứ tưởng mình ra mất rồi...♡」[p]
+Rinko「Ưm... Nhiệt độ cơ thể của anh Shun truyền sang rồi này...♡ Tuyệt quá, truyền đến cả nhịp đập luôn♡」[p]
+Rinko「Sâu trong bụng em... cũng đang rộn ràng xao xuyến... Chắc là chúng ta đang phản ứng lại với nhau rồi...」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -3678,9 +3679,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「あっ…♡　はぁっ♡　んんっ♡　指、出し入れ激し…こんなのすぐイッちゃう…♡」[p]
-[舜]「鏡見て。凛子さんめっちゃエロい顔になってる…こんな顔してるって知らないでしょ？」[p]
-凛子「んっ…くぅぅっ…♡　私、こんなエッチな顔しちゃってるなんて知らないの…」[p]
+Rinko「A...♡ Hà♡ Ưm♡ Đút ra rút vào bằng ngón tay kịch liệt quá... Thế này em ra ngay mất...♡」[p]
+[舜]「Nhìn vào gương đi. Khuôn mặt Rinko đang dâm đãng cực kỳ luôn... Em không biết mình đang làm bộ mặt này đúng không?」[p]
+Rinko「Ưm... Kưưư...♡ Em không biết là mình lại làm bộ mặt dâm đãng thế này đâu...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman+=1"  name="H_teman"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3690,9 +3691,9 @@
 *R2_teman2
 
 [tb_start_text mode=1 ]
-凛子「はーっ…はーっ…♡　だめ♡　だめ、だめ♡　あぁ…私、ママなのに…大人なのに…♡」[p]
-凛子「エッチに夢中になっちゃうなんて…顔緩んでトロトロになっちゃうなんてダメえ♡」[p]
-[舜]「自分の姿に興奮するなんて、エロすぎ…！　凛子さん、Ｍでスケベだったんだね」[p]
+Rinko「Hà... Hà...♡ Không được♡ Không được, không được♡ A... Rõ ràng em là mẹ rồi... là người lớn rồi cơ mà...♡」[p]
+Rinko「Say đắm trong nhục dục thế này... Khuôn mặt giãn ra ướt sũng thế này, không được đâu♡」[p]
+[舜]「Hưng phấn với chính dáng vẻ của mình, dâm đãng quá đấy...! Rinko, hóa ra em là kẻ khổ dâm biến thái nhỉ.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman+=1"  name="H_teman"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3703,9 +3704,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「んっ♡　あぁっ♡　あっ♡　あぅ♡　激し…ぐちゃぐちゃにかき回されちゃうっ♡」[p]
-[舜]「かき回されて喜んでるんでしょ。もう奥までトロトロだよ？　チンポ挿れる準備できてるね？」[p]
-凛子「はぁ♡　あっ…んんっ♡　[舜]くんがほぐしてくれたから…とろけちゃったみたい♡」[p]
+Rinko「Ưm♡ A a♡ A♡ A ư♡ Kịch liệt quá... bị khuấy đảo nát bét hết rồi♡」[p]
+[舜]「Bị khuấy đảo mà em sướng quá còn gì. Sâu bên trong ướt sũng hết rồi này? Em đã sẵn sàng để đút dương vật vào rồi đúng không?」[p]
+Rinko「Hà♡ A... Ưm♡ Nhờ anh Shun xoa bóp cho... mà em tan chảy mất rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman=0"  name="H_teman"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3718,9 +3719,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「んふううぅっ♡　あぁっ…先っぽ…引っかかって擦れて…あぁ、んんっ♡」[p]
-凛子「奥まで…入っちゃう♡　はぁ、あっ♡　[舜]くんの…ぬるんって中入っちゃうの…♡」[p]
-凛子「は～っ♡　は～っ♡　お腹の奥ヒクついて…受け入れ準備整っちゃったかも♡」[p]
+Rinko「Ưm phư ư ư♡ A... Phần đầu... mắc vào cọ xát... A, ưm♡」[p]
+Rinko「Vào đến tận... sâu bên trong rồi♡ Hà, a♡ Của anh Shun... trơn tuột đâm vào trong rồi...♡」[p]
+Rinko「Hà~♡ Hà~♡ Sâu trong bụng em cứ giật giật... Có vẻ em đã chuẩn bị sẵn sàng tiếp nhận anh rồi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -3728,9 +3729,9 @@
 *R2_pisuton_yukkuri1
 
 [tb_start_text mode=1 ]
-[舜]「ほらっ…！　腰掴んで突き上げられるたび中ビクビクしてる…！」[p]
-凛子「んっ♡　くぅっ、だってそれはっ♡　[舜]くんが弱いところばっかり狙って突き上げるから♡」[p]
-凛子「あぁっ♡　こんな荒々しいセックスされて、体がびっくりしてるの…♡」[p]
+[舜]「Nhìn xem...! Mỗi lần anh giữ chặt hông rồi thúc lên là bên trong em lại giật nảy lên này...!」[p]
+Rinko「Ưm♡ Kư, tại vì♡ anh Shun cứ nhắm mãi vào chỗ nhạy cảm mà thúc lên đấy chứ♡」[p]
+Rinko「A a♡ Bị làm tình thô bạo thế này, cơ thể em giật mình đấy...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3740,9 +3741,9 @@
 *R2_pisuton_yukkuri2
 
 [tb_start_text mode=1 ]
-[舜]「もう認めちゃえば？　強引にエロいことされると興奮しちゃうＭなんだって…」[p]
-凛子「あっ…あぁっ…んっ…！　そんなこと…ないってばぁ…♡　や、変なこと言わないで…♡」[p]
-凛子「意識すると余計に…中キュンキュン締まって…体言うこと聞かなくなっちゃう…♡」[p]
+[舜]「Thừa nhận luôn đi? Em là kẻ khổ dâm cứ bị làm chuyện dâm đãng mạnh bạo là hưng phấn chứ gì...」[p]
+Rinko「A... A a... Ưm...! Đâu có chuyện... đó đâu...♡ Đừng, đừng nói mấy lời kỳ lạ mà...♡」[p]
+Rinko「Càng để ý lại càng... bên trong siết chặt nhức nhối... cơ thể em không nghe lời nữa rồi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3752,9 +3753,9 @@
 *R2_pisuton_yukkuri3
 
 [tb_start_text mode=1 ]
-凛子「はぁ、あっ…あぁっ♡　やっ…気持ちよくなっちゃう…こんなの、初めてなのっ…♡」[p]
-[舜]「エッロい顔してるよ。鏡見て…ほら、チンポ気持ちよくてしょうがないんだろ」[p]
-凛子「あうぅぅっ♡　やっ、恥ずかし…私、こんなエッチな顔してたなんて…信じられないっ♡」[p]
+Rinko「Hà, a... A a♡ Đừng... sướng quá đi mất... Cảm giác này, là lần đầu tiên đấy...♡」[p]
+[舜]「Khuôn mặt dâm đãng lắm đấy. Nhìn vào gương đi... Nhìn xem, dương vật sướng quá không chịu nổi đúng không.」[p]
+Rinko「A ưưư♡ Đừng, xấu hổ quá... Em, không thể tin được là mình lại làm bộ mặt dâm đãng thế này♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri=0"  name="H_supiritasu_pisuton_yukkuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3766,9 +3767,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ひぅっ♡　ああっ♡　奥…トンって当たってるっ♡　んんっ、そこばっかり狙わないで♡」[p]
-[舜]「いつもより反応いいね？　強引にされちゃうの、やっぱり好きなんだ？」[p]
-凛子「んっ♡　あっ♡　はぁ、わからない…♡　こんなに気持ちよくなるの初めて、なのっ♡」[p]
+Rinko「Hiư♡ A a♡ Bên trong... bị đâm thình thịch rồi♡ Ưm, đừng cứ nhắm mãi vào chỗ đó mà♡」[p]
+[舜]「Phản ứng tốt hơn mọi khi nhỉ? Quả nhiên em thích bị làm mạnh bạo đúng không?」[p]
+Rinko「Ưm♡ A♡ Hà, em không biết nữa...♡ Sướng đến mức này là lần đầu tiên đấy♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]
@@ -3776,9 +3777,9 @@
 *R2_pisuton_hagesiku1
 
 [tb_start_text mode=1 ]
-[舜]「ほら、今自分がどんな顔してるのかちゃんと見て。目離すの禁止…！」[p]
-凛子「あうっ♡　あぁ、やだぁ…♡　こんな恥ずかしい顔…[舜]くんに見られちゃうのも…♡」[p]
-凛子「自分で見ちゃうのも嫌なのっ…あっ♡　あっ♡　あっ♡　でもっ、顔緩んじゃう…！」[p]
+[舜]「Này, hãy nhìn kỹ xem bây giờ mình đang làm bộ mặt gì đi. Cấm nhắm mắt lại đấy...!」[p]
+Rinko「A ư♡ A, không chịu đâu...♡ Khuôn mặt đáng xấu hổ này... bị anh Shun nhìn thấy...♡」[p]
+Rinko「Tự mình nhìn thấy cũng không muốn đâu... A♡ A♡ A♡ Nhưng mà, khuôn mặt em cứ giãn hết cả ra...!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3788,9 +3789,9 @@
 *R2_pisuton_hagesiku2
 
 [tb_start_text mode=1 ]
-凛子「ひぅっ♡　あっ♡　あっ♡　揺さぶられちゃう…だ、だめ…変な顔見ないで…」[p]
-[舜]「めちゃくちゃ可愛いよ。お客さんにも見せたいくらい…こんなにエロい顔するんだよって」[p]
-凛子「あぁぁっ♡　そんなの、だめっ…♡　こんな顔、お客様に見せられないってば…」[p]
+Rinko「Hiư♡ A♡ A♡ Bị lắc lư kịch liệt... Đ-Đừng... Đừng nhìn khuôn mặt kỳ lạ của em mà...」[p]
+[舜]「Đáng yêu cực kỳ luôn. Anh còn muốn cho khách xem nữa cơ... để họ biết em làm bộ mặt dâm đãng thế này đấy.」[p]
+Rinko「A a a♡ Chuyện đó, không được đâu...♡ Khuôn mặt thế này, làm sao mà cho khách xem được chứ...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3800,9 +3801,9 @@
 *R2_pisuton_hagesiku3
 
 [tb_start_text mode=1 ]
-凛子「んっ♡　ふっ♡　あぁっ♡　激し…もうだめ…足に力入らなくなっちゃう…」[p]
-凛子「あぁぁっ♡　腰掴んで突き上げるの、いやらしすぎだってばぁっ♡」[p]
-[舜]「だって強引にされちゃうの、好きなんでしょ？　凛子さん…すっごい締まってるし」[p]
+Rinko「Ưm♡ Phù♡ A a♡ Kịch liệt quá... Hết chịu nổi rồi... Chân em không còn chút sức lực nào nữa...」[p]
+Rinko「A a a♡ Giữ chặt hông rồi thúc lên thế này, dâm đãng quá đi mất♡」[p]
+[舜]「Tại em thích bị làm mạnh bạo mà đúng không? Rinko... siết chặt lắm đấy.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku=0"  name="H_supiritasu_pisuton_hagesiku"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3814,9 +3815,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ひぅぅぅっ♡　あ゛あ゛っ♡　気持ちいいっ♡　腰抜けちゃうっ、倒れちゃうぅ♡」[p]
-凛子「んぐぅっ♡　んぅぅぅっ♡　はーっ、はーっ…中っ、[舜]くんの形になってる…♡」[p]
-凛子「あっ♡　やだ…私年上なのに、しっかりしなきゃいけないのに…セックスに夢中になってる♡」[p]
+Rinko「Hiưưư♡ A a♡ Sướng quá♡ Hông em rã rời mất, em ngã gục xuống mất thôi♡」[p]
+Rinko「Ưm gư♡ Ưm ưưư♡ Hà, hà... Bên trong, biến thành hình dạng của anh Shun mất rồi...♡」[p]
+Rinko「A♡ Không chịu đâu... Rõ ràng em lớn tuổi hơn, đáng lẽ phải đứng đắn cơ mà... Lại đi say đắm trong nhục dục thế này♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]
@@ -3824,9 +3825,9 @@
 *R2_2_kaiwa1
 
 [tb_start_text mode=1 ]
-凛子「鏡の前で本当にしちゃうの？　私の変な顔見たら、そんな気分じゃなくなっちゃうかもよ？」[p]
-[舜]「エロい顔見たら余計興奮するに決まってるでしょ？　証明しようか？」[p]
-凛子「もう…わざと激しくするつもりでしょう？　ここでめちゃくちゃにされちゃうんだ…」[p]
+Rinko「Anh định làm thật ở trước gương luôn sao? Nhìn thấy khuôn mặt kỳ lạ của em, có khi anh lại mất hứng đấy?」[p]
+[舜]「Nhìn thấy khuôn mặt dâm đãng thì chắc chắn là phải hưng phấn hơn rồi chứ? Để anh chứng minh cho xem nhé?」[p]
+Rinko「Thiệt tình... Anh định cố tình làm kịch liệt chứ gì? Em sẽ bị làm cho tơi tả ở đây mất...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3834,9 +3835,9 @@
 *R2_2_kaiwa2
 
 [tb_start_text mode=1 ]
-[舜]「どんなことされちゃうんだろってワクワクしてる？　凛子さん、顔に出てるよ」[p]
-凛子「えっ！？　やだ、もう…[舜]くんだって、すっごくエッチな顔になってるよ？　鏡に映ってる」[p]
-凛子「オスの顔…セックスする前に見せてくれるよね？　でも…いつもより興奮してるみたい」[p]
+[舜]「Đang háo hức xem mình sẽ bị làm những gì đúng không? Rinko, hiện rõ hết lên mặt rồi kìa.」[p]
+Rinko「Hả!? Đừng, thiệt tình... Anh Shun cũng đang làm bộ mặt dâm đãng cực kỳ luôn đấy? Phản chiếu trong gương kìa.」[p]
+Rinko「Khuôn mặt nam tính... Anh luôn cho em xem trước khi làm tình nhỉ? Nhưng mà... có vẻ hưng phấn hơn mọi khi đấy.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3844,9 +3845,9 @@
 *R2_2_kaiwa3
 
 [tb_start_text mode=1 ]
-凛子「は、早く終わりにして掃除もしなくっちゃ…閉店作業も残ってるんだから…」[p]
-[舜]「ここもドロドロに汚れちゃうかもしれないもんねぇ？　俺たちの体液で」[p]
-凛子「んんっ…♡　やっぱり今日、[舜]くんいつもより意地悪だね…どんなセックスする気？」[p]
+Rinko「Ph-Phải nhanh chóng xong việc để còn dọn dẹp nữa chứ... Vẫn còn việc đóng cửa tiệm nữa mà...」[p]
+[舜]「Chỗ này có khi cũng sẽ vấy bẩn ướt nhẹp luôn đấy nhỉ? Bằng thể dịch của chúng ta ấy.」[p]
+Rinko「Ưm...♡ Quả nhiên hôm nay, anh Shun trêu chọc em hơn mọi khi nhỉ... Anh định làm tình thế nào đây?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa=0"  name="H_kaiwa"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3855,9 +3856,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「ひぅっ♡　あっ♡　も…わざと大きい音、立ててるでしょう？　んっ、あぁっ♡」[p]
-[舜]「バレちゃったか？　凛子さん、音立てて叩かれると興奮するかなと思って…」[p]
-凛子「私、別に叩かれて興奮するようなタイプじゃ…ひぅっ♡　あんっ♡　も、もうっ、だめ…」[p]
+Rinko「Hiư♡ A♡ Lại... cố tình tạo ra tiếng động lớn chứ gì? Ưm, a a♡」[p]
+[舜]「Bị lộ mất rồi sao? Anh nghĩ Rinko bị đánh phát ra tiếng động sẽ hưng phấn nên...」[p]
+Rinko「Em đâu phải kiểu người bị đánh là hưng phấn đâu... Hiư♡ A♡ Đ-Đừng, hết chịu nổi rồi...」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low1==1"  ]
@@ -3867,9 +3868,9 @@
 *R2_2_supankingu2
 
 [tb_start_text mode=1 ]
-[舜]「ほら、やっぱり叩かれて興奮してる。体、びくん、びくんって反応してるよ？」[p]
-凛子「そ、それはびっくりしてるのと痛いからで…んっ…はぁ、あっ♡　痛い、だけのはずなのに…」[p]
-凛子「おへその下…キュンってしてるの…[舜]くん、私おかしくなってるのかもっ♡」[p]
+[舜]「Nhìn xem, quả nhiên là bị đánh nên hưng phấn kìa. Cơ thể cứ giật nảy lên phản ứng lại đây này?」[p]
+Rinko「Đ-Đó là do em giật mình và thấy đau thôi... Ưm... Hà, a♡ Rõ ràng chỉ thấy đau thôi cơ mà...」[p]
+Rinko「Dưới rốn... đang râm ran này... Anh [舜], có lẽ em trở nên kỳ lạ mất rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supankingu+=1"  name="H_supankingu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3880,9 +3881,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「ひぅっ♡　あっ♡　あっ♡　だめ…手のあと、ついちゃう…♡　体が感触覚えちゃう♡」[p]
-[舜]「いいでしょ…またしてほしくなったら、思いっきり叩いてあげるよ…Ｍだもんね？」[p]
-凛子「ち、違…あぁぁっ♡　んっ♡　こんな感覚、初めてで…私変になってるっ♡」[p]
+Rinko「Hia...♡ A...♡ A...♡ Không được đâu... in hằn cả dấu tay rồi...♡ Cơ thể em sẽ ghi nhớ cảm giác này mất...♡」[p]
+[舜]「Tốt mà... Nếu lại muốn nữa, anh sẽ đánh thật mạnh cho em... Em là M (khổ dâm) mà nhỉ?」[p]
+Rinko「Kh-Không phải... A...♡ Ưm...♡ Cảm giác này, là lần đầu tiên... Em trở nên kỳ lạ mất rồi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supankingu=0"  name="H_supankingu"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3895,9 +3896,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ひゃっ♡　んんっ♡　熱くて…ジンって痺れたみたいになってる…どうして…」[p]
-[舜]「叩かれて気持ちよくなってるの、やっぱりＭっ気があるってことだよ」[p]
-凛子「今まで、痛くて気持ちよくなっちゃうことなんかなかったのに…んっ♡　はぁ、あんっ♡」[p]
+Rinko「Hya...♡ Ưm...♡ Nóng quá... tê rần cả lên rồi... Tại sao chứ...」[p]
+[舜]「Bị đánh mà lại thấy sướng, quả nhiên là em có máu M rồi đấy.」[p]
+Rinko「Từ trước đến nay, em chưa từng thấy sướng vì bị đau bao giờ mà... Ưm...♡ Haa, a...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -3906,9 +3907,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「んっ…あんっ…あぁ、あっ♡　乳首摘まんでこねるの…だめなの…そこ敏感だからっ♡」」[p]
-[舜]「へぇ…じゃあどんなふうに触られてるのか、鏡でよく見てよ。ほら…」[p]
-凛子「あっ♡　んんっ♡　やだ…なんで見せつけるの…恥ずかしいのに」[p]
+Rinko「Ưm... A... A, a...♡ Đừng nhéo và vân vê đầu ngực em... không được đâu... chỗ đó nhạy cảm lắm...♡」」[p]
+[舜]「Hê... Vậy thì em hãy nhìn vào gương xem mình đang bị sờ soạng thế nào đi. Nhìn này...」[p]
+Rinko「A...♡ Ưm...♡ Đừng mà... sao anh lại bắt em nhìn chứ... Xấu hổ lắm...」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low2==1"  ]
@@ -3918,9 +3919,9 @@
 *R2_2_tikubitumami2
 
 [tb_start_text mode=1 ]
-[舜]「今、凛子さんどんなふうに触られてる？　どんな顔してるのかも自分で見て教えてよ」[p]
-凛子「今…乳首摘まんでコリコリって…こねられちゃってる♡　[舜]くんにエッチに触られてる♡」[p]
-凛子「か、顔は…恥ずかしい顔になってる…私、こんな顔してたんだってびっくりしてるの…」[p]
+[舜]「Bây giờ Rinko đang bị sờ soạng thế nào? Em đang làm vẻ mặt ra sao, tự nhìn rồi nói cho anh nghe xem nào.」[p]
+Rinko「Bây giờ... đầu ngực đang bị nhéo và vân vê... bị mân mê mất rồi...♡ Đang bị anh [舜] sờ soạng thật dâm đãng...♡」[p]
+Rinko「V-Vẻ mặt thì... đang làm một vẻ mặt thật đáng xấu hổ... Em cũng bất ngờ khi thấy mình làm vẻ mặt như thế này...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubitumami+=1"  name="H_tikubitumami"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3931,9 +3932,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁぁっ♡　いきなり乳首きゅって摘まむのは、だめだってばぁ♡」[p]
-凛子「んっ♡　はぁっ♡　はぁっ♡　[舜]くんの触り方がエッチだから…体の奥まで熱くなってる♡」[p]
-凛子「腰、動いちゃうの止まらないの…乳首だけじゃ足りなくなってきちゃったみたい…」[p]
+Rinko「A...♡ Đã bảo là đừng có tự nhiên nhéo chặt đầu ngực em mà...♡」[p]
+Rinko「Ưm...♡ Haa...♡ Haa...♡ Vì cách sờ soạng của anh [舜] dâm quá... nên sâu bên trong cơ thể em đang nóng ran lên đây này...♡」[p]
+Rinko「Hông em... không ngừng vặn vẹo được... Hình như chỉ mỗi đầu ngực thôi thì không đủ nữa rồi...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubitumami=0"  name="H_tikubitumami"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3946,9 +3947,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あうぅっ♡　んんっ…乳首そんなにこねても…おっぱいなんて出ないのにっ♡」[p]
-[舜]「そうなの？　こんなにおっきくてパンパンに張ったおっぱい、ミルク出そうなのに」[p]
-凛子「んっ♡　はぁ、あんっ♡　出ないよ♡　赤ちゃんできてないんだからっ♡」[p]
+Rinko「A...♡ Ưm... Dù anh có vân vê đầu ngực em đến thế... thì cũng không ra sữa được đâu...♡」[p]
+[舜]「Vậy sao? Cặp vú to và căng tròn thế này, trông như sắp tiết ra sữa vậy.」[p]
+Rinko「Ưm...♡ Haa, a...♡ Không ra được đâu...♡ Đã có em bé đâu chứ...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -3956,9 +3957,9 @@
 *R2_2_munemomi1
 
 [tb_start_text mode=1 ]
-凛子「くぅっ…んんっ♡　おっぱい鷲掴みされちゃった♡　おっきい手で揉みくちゃにされちゃう♡」[p]
-[舜]「気持ちいいんでしょ？　あ、ダメだよ？　体よじっても逃げられないからね？」[p]
-凛子「んっ…くぅぅっ♡　[舜]くん…今日本当に強引だね…いつもと違う…」[p]
+Rinko「Ư... Ưm...♡ Vú em bị bóp chặt mất rồi...♡ Bị bàn tay to lớn của anh nhào nặn loạn xạ mất rồi...♡」[p]
+[舜]「Sướng lắm đúng không? A, không được đâu nhé? Dù có uốn éo cơ thể thì em cũng không thoát được đâu.」[p]
+Rinko「Ưm... Ư...♡ Anh [舜]... hôm nay anh thật bạo dạn... khác hẳn mọi ngày...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3969,9 +3970,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「あんっ♡　あぁっ♡　んんっ、くぅぅっ…♡　おっぱい揉みくちゃになってる…もう、だめ…」[p]
-[舜]「触られてる姿にも興奮してるんでしょ？　鏡に全部映っちゃってるもんね？」[p]
-凛子「んっ♡　はぁっ…あんっ♡　もう言わないで…恥ずかしくて、逃げたくなっちゃうから…」[p]
+Rinko「A...♡ A...♡ Ưm, ư...♡ Vú em bị nhào nặn loạn xạ hết cả lên rồi... Em không chịu nổi nữa...」[p]
+[舜]「Nhìn dáng vẻ mình bị sờ soạng em cũng thấy hưng phấn đúng không? Trong gương phản chiếu hết cả rồi kìa?」[p]
+Rinko「Ưm...♡ Haa... A...♡ Đừng nói nữa mà... Xấu hổ quá, em chỉ muốn chạy trốn thôi...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3981,9 +3982,9 @@
 *R2_2_munemomi3
 
 [tb_start_text mode=1 ]
-[舜]「凛子さんのおっぱい、柔らかすぎ。俺の手の中でどんどん形変わってくよ？」[p]
-凛子「んんっ♡　だって…[舜]くんがいっぱい揉みしだくから…おっぱいトロトロになっちゃった」[p]
-凛子「先っぽだけ、固くなってるの。今すっごく敏感になってるみたい…」[p]
+[舜]「Vú của Rinko mềm quá đi mất. Nằm trong tay anh, hình dáng của nó cứ liên tục thay đổi này?」[p]
+Rinko「Ưm...♡ Tại vì... anh [舜] bóp nắn nhiều quá... nên vú em nhũn cả ra rồi đây này.」[p]
+Rinko「Chỉ có phần đầu ngực là đang cứng lại thôi. Hình như bây giờ nó đang trở nên cực kỳ nhạy cảm...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi=0"  name="H_munemomi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3996,9 +3997,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あっ♡　んあぁぁぁっ♡　あんっ、おっぱい揺さぶっちゃうの？　も、恥ずかしいってば♡」[p]
-凛子「[舜]くんの手の中で…好き放題されちゃってる♡　やだ…私興奮してる…」[p]
-凛子「こんな緩んだ顔、[舜]くん以外に見せられないよ…お客さんにも、子供たちにも…」[p]
+Rinko「A...♡ A...♡ A, anh lắc vú em luôn sao? Đ-Đã bảo là xấu hổ lắm mà...♡」[p]
+Rinko「Nằm trong tay anh [舜]... bị mặc sức đùa bỡn...♡ Không được... em đang hưng phấn mất rồi...」[p]
+Rinko「Vẻ mặt dâm đãng thế này, ngoài anh [舜] ra em không thể cho ai xem được đâu... Dù là khách hàng, hay là các con...」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -4007,9 +4008,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「やっ…お、お尻はだめ…こんなところでっ…んんっ♡　汗もかいてるから…」[p]
-[舜]「あーまだほぐれてないなぁ。凛子さん、ここほぐれてくるとやわらかくなるんだよね？」[p]
-凛子「んんっ…そんなの知らない…お尻なんて自分じゃ触らないもの…」[p]
+Rinko「Đừng... m-mông thì không được đâu... ở chỗ như thế này... Ưm...♡ Hơn nữa còn đang đổ mồ hôi...」[p]
+[舜]「A, vẫn chưa giãn ra nhỉ. Rinko à, chỗ này mà giãn ra thì sẽ mềm lắm đúng không?」[p]
+Rinko「Ưm... Chuyện đó em không biết đâu... Mông thì tự mình đâu có sờ bao giờ...」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low4==1"  ]
@@ -4019,9 +4020,9 @@
 *R2_2_anaruijiri2
 
 [tb_start_text mode=1 ]
-[舜]「入り口優しく触ってるだけなのに、もうお尻ヒクついちゃってるの？　気持ちいいんだ？」[p]
-凛子「あっ…んんっ♡　自分の意志で動かしてるわけじゃない、のに…♡」[p]
-凛子「はぁっ♡　あっ、んっ…♡　そこばっかり揉みほぐすみたいにしないで…汚いからぁっ♡」[p]
+[舜]「Anh mới chỉ sờ nhẹ ở cửa vào thôi mà mông em đã giật giật rồi sao? Sướng lắm à?」[p]
+Rinko「A... Ưm...♡ Đâu phải do ý muốn của em tự cử động đâu...♡」[p]
+Rinko「Haa...♡ A, ưm...♡ Đừng có cứ xoa bóp mãi một chỗ đó... Bẩn lắm...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruijiri+=1"  name="H_anaruijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -4031,9 +4032,9 @@
 *R2_2_anaruijiri3
 
 [tb_start_text mode=1 ]
-凛子「はぁっ♡　はぁっ♡　あぁぁっ♡　やっ…ゆ、指…入ってるでしょう？　圧迫されてるっ」[p]
-[舜]「ほらね？　もうとろけて緩んでるんだよ…簡単に指も咥えこんじゃって…エッロ」」[p]
-凛子「ひうぅっ♡　あっ…んんっ♡　中で指、動かしたら…力抜けちゃう…もういいでしょう？」[p]
+Rinko「Haa...♡ Haa...♡ A...♡ Đừng... ng-ngón tay... đưa vào rồi đúng không? Bị chèn ép mất rồi...」[p]
+[舜]「Thấy chưa? Nó đã nhũn ra và lỏng lẻo rồi đấy... Ngậm lấy ngón tay anh dễ dàng như vậy... Dâm quá.」」[p]
+Rinko「Hia...♡ A... Ưm...♡ Nếu anh ngoáy ngón tay bên trong... em sẽ mất hết sức lực mất... Đủ rồi đúng không anh?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruijiri=0"  name="H_anaruijiri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -4046,9 +4047,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁぁっ♡　弱いトコ、探すみたいにしないでっ♡　ホントにそこはだめ…あぁぁぁっ♡」[p]
-[舜]「くっ…すっごい締め付け。凛子さんのここにチンポ挿れたらどうなっちゃうのかな～」[p]
-凛子「んんっ♡　想像させるようなこと言うから…余計に反応しちゃうんだってばぁ♡」[p]
+Rinko「A...♡ Đừng làm như đang tìm kiếm điểm yếu của em chứ...♡ Chỗ đó thực sự không được đâu... A...♡」[p]
+[舜]「Hự... thít chặt quá. Nếu đút con cu vào chỗ này của Rinko thì không biết sẽ thế nào đây ta~」[p]
+Rinko「Ưm...♡ Tại anh nói mấy lời khiến người ta liên tưởng... nên nó mới phản ứng mạnh hơn đó...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -4056,9 +4057,9 @@
 *R2_2_sumata1
 
 [tb_start_text mode=1 ]
-[舜]「凛子さん、しっかり足閉じて締め付けてくれなくちゃ…ほら、チンポしごいて」[p]
-凛子「くっ…んんっ♡　腰動かせばいいの？　もう[舜]くんだって充分動かしてる、のにっ♡」[p]
-凛子「あっ♡　はぁ、あっ♡　[舜]くんの熱い…すっごくおっきくなってるよ…♡」[p]
+[舜]「Rinko à, em phải khép chặt chân lại và thít chặt lấy chứ... Nào, sục cu cho anh đi.」[p]
+Rinko「Ư... Ưm...♡ Em vặn hông là được đúng không? Rõ ràng là anh [舜] cũng đang tự cử động đủ nhiều rồi mà...♡」[p]
+Rinko「A...♡ Haa, a...♡ Của anh [舜] nóng quá... nó đang trở nên cực kỳ to rồi này...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low5==1"  ]
@@ -4068,9 +4069,9 @@
 *R2_2_sumata2
 
 [tb_start_text mode=1 ]
-[舜]「凛子さんのエロい顔、鏡越しに見てたおかげでチンポもバッキバキになっちゃったよ」[p]
-凛子「んんっ♡　あっ♡　はぁ、んっ…全部見られちゃってたなんて恥ずかしい…♡」[p]
-凛子「でも、私がこんなに[舜]くんを興奮させられたって思うと…嬉しくなっちゃう♡」[p]
+[舜]「Nhờ được ngắm nhìn khuôn mặt dâm đãng của Rinko qua gương mà con cu của anh cũng cứng ngắc lên rồi đây này.」[p]
+Rinko「Ưm...♡ A...♡ Haa, ưm... Bị anh nhìn thấy hết thế này xấu hổ quá...♡」[p]
+Rinko「Nhưng mà, khi nghĩ đến việc mình có thể làm anh [舜] hưng phấn đến mức này... em lại thấy vui lắm...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata+=1"  name="H_sumata"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -4080,9 +4081,9 @@
 *R2_2_sumata3
 
 [tb_start_text mode=1 ]
-[舜]「上だけじゃなくって下も見て？　今凛子さんのおまんこの間からチンポ出てるでしょ？」[p]
-凛子「ああぁっ♡　んんっ♡　[舜]くんの…先っぽ見えちゃってる…♡　ふーっ…ふーっ…♡」[p]
-凛子「こんなにおっきくて長いなんて…♡　これが私の中に入るって思うと…キュンってしちゃう」[p]
+[舜]「Đừng chỉ nhìn bên trên, nhìn cả bên dưới nữa đi? Bây giờ con cu của anh đang ló ra từ giữa cô bé của Rinko đúng không?」[p]
+Rinko「A...♡ Ưm...♡ Phần đầu... của anh [舜]... đang lộ ra kìa...♡ Phù... phù...♡」[p]
+Rinko「To và dài đến thế này cơ mà...♡ Cứ nghĩ đến việc thứ này sẽ đút vào trong người mình... là em lại thấy râm ran.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata=0"  name="H_sumata"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -4094,9 +4095,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁぁっ♡　んんっ♡　ダメなトコ擦れて当たってるのっ♡　入ってないのにイッちゃう…」[p]
-[舜]「あーあー、凛子さんとろんとした顔になってるよ？　興奮しすぎでしょ」[p]
-凛子「はぁ、あっ、だって…♡　腰掴まれて…めちゃくちゃに擦られてるから…♡」[p]
+Rinko「A...♡ Ưm...♡ Nó đang cọ xát trúng chỗ không được rồi...♡ Dù chưa đút vào mà em sắp lên đỉnh mất...」[p]
+[舜]「Ây da, Rinko đang làm vẻ mặt đê mê rồi kìa? Em hưng phấn quá rồi đấy.」[p]
+Rinko「Haa, a, tại vì...♡ Bị anh giữ chặt eo... rồi cọ xát loạn xạ thế này mà...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -4105,9 +4106,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t2.mp3"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁぁっ♡　んっ…出ちゃう、止まらないのっ…♡　水分、全部溢れ出ちゃう♡」[p]
-[舜]「潮吹きエッグ…凛子さん、掃除するって言ってたのに自分が汚してるじゃん」[p]
-凛子「くぅっ♡　んんっ♡　だって…[舜]くんが激しくかきまわすからっ…出ちゃったの♡」[p]
+Rinko「A...♡ Ưm... Ra mất, không dừng lại được...♡ Nước nôi trào hết cả ra ngoài rồi...♡」[p]
+[舜]「Phun nước lênh láng thế này... Rinko à, em bảo là dọn dẹp mà chính em lại đang làm bẩn đấy thôi.」[p]
+Rinko「Ư...♡ Ưm...♡ Tại vì... anh [舜] cứ ngoáy mạnh bạo quá... nên em mới phun ra mà...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_siohuki+=1"  name="H_siohuki"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -4117,9 +4118,9 @@
 *R2_2_siohuki2
 
 [tb_start_text mode=1 ]
-凛子「あっ♡　あぁぁぁっ♡　奥まで響いてるっ♡　とろけすぎて…もう無理だよ…♡」[p]
-[舜]「全然潮吹き止まんないね？　水分足りなくなっちゃいそうなくらい出てない？」[p]
-凛子「んっ♡　はぁ、あっ♡　こんなに出ちゃうの初めて…♡　足震えちゃうの♡」[p]
+Rinko「A...♡ A...♡ Dội đến tận sâu bên trong rồi...♡ Nhũn hết cả người ra rồi... em hết chịu nổi rồi...♡」[p]
+[舜]「Em phun nước không ngừng luôn nhỉ? Ra nhiều đến mức sắp thiếu nước luôn rồi đấy?」[p]
+Rinko「Ưm...♡ Haa, a...♡ Đây là lần đầu tiên em phun ra nhiều thế này...♡ Chân em run rẩy hết cả lên rồi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_siohuki+=1"  name="H_siohuki"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -4130,9 +4131,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-[舜]「おもらししちゃうなんて、大人としてどうなの？　俺より年上なのに」[p]
-凛子「ご、ごめんなさ…でもお漏らしじゃないの…これは気持ちよくなると出ちゃうだけで…」[p]
-凛子「んんっ♡　あっ♡　あぁぁっ♡　奥トントンって突き上げられたらまた出ちゃうぅっ♡」[p]
+[舜]「Đái dầm ra thế này, người lớn gì kỳ vậy? Rõ ràng là lớn tuổi hơn anh cơ mà.」[p]
+Rinko「X-Xin lỗ... nhưng đây không phải là đái dầm đâu... chỉ là sướng quá nên nó mới chảy ra thôi...」[p]
+Rinko「Ưm...♡ A...♡ A...♡ Nếu anh cứ húc mạnh vào sâu bên trong thì em lại phun ra mất...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_siohuki=0"  name="H_siohuki"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -4145,9 +4146,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁっ♡　わかんなくなっちゃう…恥ずかしくて気持ちよくて頭の中ぐちゃぐちゃなの♡」[p]
-[舜]「ホントだ、顔もぐちゃぐちゃになってる。凛子さん、ホントエロい…」[p]
-凛子「ひぅぅぅっ♡　あっ、んんっ♡　や、見ないで…絶対ひどい顔してるからぁっ♡」[p]
+Rinko「A...♡ Em không biết gì nữa rồi... Vừa xấu hổ vừa sướng, trong đầu em đang rối tung hết cả lên...♡」[p]
+[舜]「Thật đấy, khuôn mặt em cũng rối tung hết cả lên rồi kìa. Rinko, em dâm thật đấy...」[p]
+Rinko「Hia...♡ A, ưm...♡ Đừng, đừng nhìn mà... Chắc chắn là em đang làm một vẻ mặt kinh khủng lắm...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
@@ -4155,9 +4156,9 @@
 *R2_2_pisuton_yukkuri1
 
 [tb_start_text mode=1 ]
-凛子「はっ♡　はぁ♡　あんっ♡　[舜]くんだっていつもよりおっきくなってるよっ？」[p]
-[舜]「凛子さんのエッロい反応いつもよりじっくり見られたから…興奮してるんだよ」[p]
-凛子「んぅっ♡　あうっ♡　いきなり１番奥トントン突き上げないでっ…♡　壊れちゃう♡」[p]
+Rinko「Ha...♡ Haa...♡ A...♡ Của anh [舜] cũng đang to hơn bình thường đó?」[p]
+[舜]「Tại anh được ngắm nhìn phản ứng dâm đãng của Rinko kỹ hơn mọi ngày... nên anh mới hưng phấn đó.」[p]
+Rinko「Ưm...♡ A...♡ Đừng có tự nhiên húc mạnh vào tận sâu bên trong chứ...♡ Hỏng mất thôi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -4167,9 +4168,9 @@
 *R2_2_pisuton_yukkuri2
 
 [tb_start_text mode=1 ]
-[舜]「自分がセックスしてる時の顔見なくていいの？　これがチンポ挿れてる時の顔だよ？」[p]
-凛子「や、だ…また意地悪言って…んんっ♡　恥ずかしくてエッチどころじゃなくなっちゃうよ」[p]
-[舜]「嘘つき。余計興奮してるでしょ？　中、すっごい締め付けになってる…！」[p]
+[舜]「Em không định nhìn khuôn mặt mình lúc đang làm tình sao? Đây là khuôn mặt lúc đang bị đút con cu vào đấy nhé?」[p]
+Rinko「Đừng, mà... Anh lại nói mấy lời xấu xa rồi... Ưm...♡ Xấu hổ quá, em không còn tâm trí đâu mà làm tình nữa đâu.」[p]
+[舜]「Đồ nói dối. Em đang hưng phấn hơn đúng không? Bên trong đang thít chặt lại rồi này...!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -4179,9 +4180,9 @@
 *R2_2_pisuton_yukkuri3
 
 [tb_start_text mode=1 ]
-凛子「ひぅぅっ♡　あっ♡　あんっ♡　感触確かめるみたいに…中かき回さないでぇっ♡」[p]
-凛子「はぁっ、はぁっ♡　あんっ…♡　鏡越しに目が合っちゃうのも…恥ずかしいのっ♡」[p]
-凛子「[舜]くん、いつもよりオスの顔してる…興奮してるの伝わってきちゃうよ…」[p]
+Rinko「Hia...♡ A...♡ A...♡ Đừng có ngoáy loạn bên trong... như đang kiểm tra cảm giác như thế chứ...♡」[p]
+Rinko「Haa, haa...♡ A...♡ Bắt gặp ánh mắt qua gương thế này... cũng xấu hổ lắm...♡」[p]
+Rinko「Anh [舜], khuôn mặt anh trông đàn ông hơn mọi ngày... Sự hưng phấn của anh truyền hết sang em rồi này...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri=0"  name="H_supiritasu_pisuton_yukkuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -4193,9 +4194,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あ゛あ゛ぁ゛っ♡　お腹の奥…キュンってしてるっ♡　ダメ、これ以上は…！」[p]
-[舜]「そんなエロい声出しといて、止められるわけないだろ…！　煽りすぎだって」[p]
-凛子「そういうつもりじゃ…あっ♡　んぉぉっ♡　ヤダ、変な声出ちゃうぅっ♡」[p]
+Rinko「A...♡ Sâu trong bụng... đang râm ran này...♡ Không được, hơn thế này nữa thì...!」[p]
+[舜]「Rên rỉ dâm đãng thế này thì làm sao mà dừng lại được chứ...! Em đang kích thích anh quá đấy.」[p]
+Rinko「Em không có ý đó... A...♡ Ưm...♡ Không chịu đâu, em lại phát ra âm thanh kỳ lạ mất rồi...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]
@@ -4203,9 +4204,9 @@
 *R2_2_pisuton_hagesiku1
 
 [tb_start_text mode=1 ]
-[舜]「あー、勃起収まんない…！　凛子さんエロ過ぎなんだもん…ずっと誘ってたでしょ？」[p]
-凛子「んんっ♡　あうっ♡　[舜]くんが…体を舐めるみたいに見るから…期待しちゃっただけだよ♡」[p]
-凛子「誘ってたわけじゃない、のにっ♡　んっ♡　あぁっ♡　こんな激しく揺さぶられるなんてぇ♡」[p]
+[舜]「A, nó không xìu xuống được...! Tại Rinko dâm quá mà... Từ nãy giờ em cứ mời gọi anh đúng không?」[p]
+Rinko「Ưm...♡ A...♡ Tại anh [舜]... cứ nhìn em như muốn liếm láp cơ thể em... nên em mới mong chờ thôi mà...♡」[p]
+Rinko「Em đâu có mời gọi đâu...♡ Ưm...♡ A...♡ Bị rung lắc dữ dội thế này cơ mà...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -4215,9 +4216,9 @@
 *R2_2_pisuton_hagesiku2
 
 [tb_start_text mode=1 ]
-[舜]「年下の男にめちゃくちゃに突き上げられてる気分はどう？　すっごい興奮してるみたいだけど」[p]
-凛子「んっ♡　あぁっ♡　わからないっ…♡　いつもより激しくて…何も考えられないの♡」[p]
-凛子「でも顔見られちゃうのは恥ずかしいよ♡　ん、あぁっ♡　だらしない顔になってるんだもの…」[p]
+[舜]「Cảm giác bị người đàn ông nhỏ tuổi hơn húc mạnh bạo thế nào? Trông em có vẻ cực kỳ hưng phấn đấy.」[p]
+Rinko「Ưm...♡ A...♡ Em không biết...♡ Hôm nay anh mãnh liệt hơn mọi ngày... em không suy nghĩ được gì nữa...♡」[p]
+Rinko「Nhưng mà bị nhìn thấy khuôn mặt thế này xấu hổ lắm...♡ Ưm, a...♡ Khuôn mặt em đang trở nên thật phóng đãng mà...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -4227,9 +4228,9 @@
 *R2_2_pisuton_hagesiku3
 
 [tb_start_text mode=1 ]
-[舜]「情けない顔が嫌なら、なんでもありませんって顔したら？　できるでしょ…！」[p]
-凛子「あ゛っ♡　あ゛っ♡　む、無理…♡　こんなに気持ちいいのに…何でもない顔なんて…」[p]
-凛子「あ゛あ゛あ゛っ♡　んっ、くっ…ドチュって、中つぶされちゃってるぅっ♡」[p]
+[舜]「Nếu ghét khuôn mặt thảm hại đó, sao em không thử làm ra vẻ mặt như không có chuyện gì đi? Em làm được mà đúng không...!」[p]
+Rinko「A...♡ A...♡ Kh-Không thể nào...♡ Đang sướng thế này cơ mà... làm sao có thể làm ra vẻ mặt như không có chuyện gì được chứ...」[p]
+Rinko「A...♡ Ưm, ư... Tiếng bạch bạch thế này, bên trong em sắp bị nghiền nát mất rồi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku=0"  name="H_supiritasu_pisuton_hagesiku"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -4241,9 +4242,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あ゛っ♡　あ゛っ♡　奥、来てる…♡　奥、奥ぅぅっ♡　[舜]くんのおっきすぎ♡」[p]
-[舜]「こんなエロい顔、家族にもお客さんにも見せられないねぇ？」[p]
-凛子「んぅぅっ♡　やっ…言わないで…あ゛あ゛っ♡　余計にっ、反応しちゃうから…♡」[p]
+Rinko「A...♡ A...♡ Vào tận sâu bên trong rồi...♡ Sâu quá, sâu quá...♡ Của anh [舜] to quá...♡」[p]
+[舜]「Khuôn mặt dâm đãng thế này, em đâu thể cho gia đình hay khách hàng nhìn thấy được nhỉ?」[p]
+Rinko「Ưm...♡ Đừng... đừng nói nữa... A...♡ Em lại càng phản ứng mạnh hơn mất...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]

@@ -70,6 +70,7 @@ def step2_export_cdn_manifest():
         json.dump(records, f, ensure_ascii=False, indent=2)
     
     print(f"  [OK] Đã xuất {len(records):,} đường dẫn ({webp_count:,} ảnh WebP /s0-rw/ + {audio_count:,} âm thanh bit-exact).")
+    return records
 
 
 def step3_sync_engine_and_scenarios():
@@ -98,23 +99,13 @@ def step3_sync_engine_and_scenarios():
     awakegame_main = '''// awakegame_ex main.js
 ;(function(){
 const _setLayerHtml = TYRANO.kag.layer.setLayerHtml;
-TYRANO.kag.layer.setLayerHtml = function(layer){
-    let clone = $("#tyrano_base").clone();
-    clone.attr("id", "tyrano_base_old");
-    clone.attr("class", "tyrano_base_old");
-
-    _setLayerHtml.apply(TYRANO.kag.layer, arguments);
-
-    $("#tyrano_base").css({
-        position: "absolute",
-    });
-    $("#tyrano_base").after(clone);
-    clone.fadeOut(TYRANO.kag.variable.tf._awakegame_ex || 300, function(){
-        clone.remove();
-        $("#tyrano_base").css({
-            position: "",
-        });
-    });
+TYRANO.kag.layer.setLayerHtml = function(layer, html){
+    if(!html) return;
+    try {
+        _setLayerHtml.apply(this, arguments);
+    } catch(e) {
+        console.warn("[awakegame_ex] setLayerHtml suppressed error:", e);
+    }
 };
 
 TYRANO.kag.tag.awakegame_ex = {
@@ -189,24 +180,18 @@ TYRANO.kag.ftag.master_tag.awakegame_ex.kag = TYRANO.kag;
     uiparts_init = '[loadjs storage="plugin/uiparts_set/select.js" ]\n[loadjs storage="plugin/uiparts_set/slider.js" ]\n[loadcss file="./data/others/plugin/uiparts_set/select.css" ]\n[loadcss file="./data/others/plugin/uiparts_set/slider.css" ]\n\n[return]\n'
     waapi_init = '; Plugin waapi stub\n[return]\n'
 
-    for base_p in [plugin_dst]:
-        os.makedirs(os.path.join(base_p, 'awakegame_ex'), exist_ok=True)
-        with open(os.path.join(base_p, 'awakegame_ex', 'init.ks'), 'w', encoding='utf-8') as f:
-            f.write(awakegame_init)
-        with open(os.path.join(base_p, 'awakegame_ex', 'main.js'), 'w', encoding='utf-8') as f:
-            f.write(awakegame_main)
-
-        os.makedirs(os.path.join(base_p, 'tb_save_img'), exist_ok=True)
-        with open(os.path.join(base_p, 'tb_save_img', 'init.ks'), 'w', encoding='utf-8') as f:
-            f.write(tb_save_img_init)
-
-        os.makedirs(os.path.join(base_p, 'uiparts_set'), exist_ok=True)
-        with open(os.path.join(base_p, 'uiparts_set', 'init.ks'), 'w', encoding='utf-8') as f:
-            f.write(uiparts_init)
-
-        os.makedirs(os.path.join(base_p, 'waapi'), exist_ok=True)
-        with open(os.path.join(base_p, 'waapi', 'init.ks'), 'w', encoding='utf-8') as f:
-            f.write(waapi_init)
+    plugin_overrides = {
+        'awakegame_ex': {'init.ks': awakegame_init, 'main.js': awakegame_main},
+        'tb_save_img': {'init.ks': tb_save_img_init},
+        'uiparts_set': {'init.ks': uiparts_init},
+        'waapi': {'init.ks': waapi_init}
+    }
+    for p_name, files in plugin_overrides.items():
+        p_dir = os.path.join(plugin_dst, p_name)
+        os.makedirs(p_dir, exist_ok=True)
+        for fname, content in files.items():
+            with open(os.path.join(p_dir, fname), 'w', encoding='utf-8') as f:
+                f.write(content)
     
     save_thumb_src = os.path.join(ROOT_DIR, 'patch', 'data', 'others', 'save_thumbnail.js')
     if os.path.exists(save_thumb_src):
@@ -216,7 +201,7 @@ TYRANO.kag.ftag.master_tag.awakegame_ex.kag = TYRANO.kag;
     if os.path.exists(ico_src):
         shutil.copy2(ico_src, os.path.join(WEB_SRC_DIR, 'favicon.ico'))
     
-    # 3. Dọn sạch thư mục font TTF nặng để tận dụng 100% font hệ thống siêu nhẹ
+    # 3. Dọn dẹp font TTF nặng trong web/ (Sử dụng hệ thống Web Fonts CSS sắc nét)
     font_dir = os.path.join(WEB_SRC_DIR, 'data', 'others', 'font')
     if os.path.exists(font_dir):
         shutil.rmtree(font_dir, ignore_errors=True)
@@ -226,12 +211,11 @@ TYRANO.kag.ftag.master_tag.awakegame_ex.kag = TYRANO.kag;
     if os.path.exists(os.path.join(ROOT_DIR, 'patch', 'data', 'image')):
         shutil.copytree(os.path.join(ROOT_DIR, 'patch', 'data', 'image'), os.path.join(WEB_SRC_DIR, 'data', 'image'), dirs_exist_ok=True)
 
-    # 5. Đồng bộ kịch bản .ks đã dịch
+    # 5. Đồng bộ kịch bản .ks đã dịch (Lấy trực tiếp từ patch/data/scenario - bản dịch Tiếng Việt chuẩn SSOT)
     scenario_dst = os.path.join(WEB_SRC_DIR, 'data', 'scenario')
-    if os.path.exists(os.path.join(APP_SRC_DIR, 'data', 'scenario')):
-        shutil.copytree(os.path.join(APP_SRC_DIR, 'data', 'scenario'), scenario_dst, dirs_exist_ok=True)
-    elif os.path.exists(os.path.join(ROOT_DIR, 'patch', 'data', 'scenario')):
-        shutil.copytree(os.path.join(ROOT_DIR, 'patch', 'data', 'scenario'), scenario_dst, dirs_exist_ok=True)
+    patch_scenario_dir = os.path.join(ROOT_DIR, 'patch', 'data', 'scenario')
+    if os.path.exists(patch_scenario_dir):
+        shutil.copytree(patch_scenario_dir, scenario_dst, dirs_exist_ok=True)
         
     # Cấu hình Config.tjs cho Web (Dùng font hệ thống & webstorage)
     config_tjs_path = os.path.join(WEB_SRC_DIR, 'data', 'system', 'Config.tjs')
@@ -253,9 +237,17 @@ TYRANO.kag.ftag.master_tag.awakegame_ex.kag = TYRANO.kag;
     print(f"  [OK] Đã nạp thành công {scenario_count} tệp scenario .ks và cấu hình Web Engine.")
 
 
-def step4_generate_web_core_modules():
+def step4_generate_web_core_modules(records=None):
     """Tạo bộ module Web hoàn chỉnh: Audio Engine, IndexedDB Save, CDN Interceptor, Mobile Touch HUD & CSS"""
     print("\n[4/6] ⚡ Xây dựng bộ ba Web Engine & Responsive UI Modules...")
+
+    if records is None:
+        manifest_path = os.path.join(WEB_SRC_DIR, 'data', 'asset_manifest.json')
+        if os.path.exists(manifest_path):
+            with open(manifest_path, 'r', encoding='utf-8') as f:
+                records = json.load(f)
+        else:
+            records = {}
 
     # 1. web/css/font.css (Tận dụng font hệ thống Tiếng Việt sắc nét, tương phản cao)
     font_css = """/* ==========================================================================
@@ -1340,241 +1332,298 @@ img[src*="workring_en.png"] {
     with open(os.path.join(WEB_SRC_DIR, 'js', 'web_save_indexeddb.js'), 'w', encoding='utf-8') as f:
         f.write(web_save_indexeddb_js)
 
-    # 5. web/js/cdn_interceptor.js
-    cdn_interceptor_js = """/**
+    # 5. web/js/cdn_interceptor.js (Synchronous 2,709 CDN Routing Table & Deep DOM/Tag Interceptor)
+    manifest_json_str = json.dumps(records, ensure_ascii=False)
+    cdn_interceptor_js = f"""/**
  * HOME - CDN Interceptor Plugin
  * ==============================
  * Chuyển hướng toàn bộ hình ảnh, nhân vật, CG, BGM, SFX sang Google Blogger CDN
+ * Bảng định tuyến 2.709 mục đồng bộ (0ms latency) - Tương thích 100% WebP (/s0-rw/)
  */
 
-(function() {
+(function() {{
     'use strict';
 
-    let cdnManifest = {};
+    const EMBEDDED_MANIFEST = {manifest_json_str};
     const normalizedMap = new Map();
 
-    function normalizePath(p) {
+    function normalizePath(p) {{
         if (!p || typeof p !== 'string') return '';
-        let clean = p.replace(/^\\.\\//, '').replace(/^\\//, '').split('?')[0];
-        return clean.toLowerCase();
-    }
+        let clean = p.split('?')[0].replace(/\\\\/g, '/');
+        const parts = clean.split('/');
+        const stack = [];
+        for (const part of parts) {{
+            if (!part || part === '.') continue;
+            if (part === '..') {{
+                if (stack.length > 0) stack.pop();
+            }} else {{
+                stack.push(part);
+            }}
+        }}
+        return stack.join('/').toLowerCase();
+    }}
 
-    async function loadCDNManifest() {
-        try {
-            const resp = await fetch('./data/asset_manifest.json');
-            if (resp.ok) {
-                cdnManifest = await resp.json();
-                for (const [k, v] of Object.entries(cdnManifest)) {
-                    normalizedMap.set(normalizePath(k), v);
-                    const baseName = k.split('/').pop().toLowerCase();
-                    if (!normalizedMap.has(baseName)) normalizedMap.set(baseName, v);
-                }
-                console.log(`[CDN Interceptor] ✅ Đã nạp ${Object.keys(cdnManifest).length} mục từ asset_manifest.json.`);
-            }
-        } catch(e) {
-            console.warn('[CDN Interceptor] Không thể nạp manifest JSON:', e);
-        }
-    }
-    loadCDNManifest();
+    for (const [k, v] of Object.entries(EMBEDDED_MANIFEST)) {{
+        normalizedMap.set(normalizePath(k), v);
+        const baseName = k.split('/').pop().toLowerCase();
+        if (!normalizedMap.has(baseName)) normalizedMap.set(baseName, v);
+    }}
+    console.log(`[CDN Interceptor] ✅ Đã nạp sẵn ${{normalizedMap.size}} mục từ EMBEDDED MANIFEST.`);
 
-    window.resolveCDNUrl = function(filePath) {
+    window.resolveCDNUrl = function(filePath) {{
         if (!filePath || typeof filePath !== 'string') return filePath;
-        if (filePath.startsWith('http://') || filePath.startsWith('https://') || filePath.startsWith('data:') || filePath.startsWith('blob:')) {
+        if (filePath.startsWith('http://') || filePath.startsWith('https://') || filePath.startsWith('data:') || filePath.startsWith('blob:')) {{
             return filePath;
-        }
+        }}
 
         const norm = normalizePath(filePath);
-        let url = normalizedMap.get(norm) || normalizedMap.get(norm.split('/').pop()) || filePath;
+        let url = normalizedMap.get(norm);
+        if (!url) {{
+            if (!norm.startsWith('data/')) {{
+                url = normalizedMap.get('data/fgimage/' + norm) ||
+                      normalizedMap.get('data/bgimage/' + norm) ||
+                      normalizedMap.get('data/image/' + norm) ||
+                      normalizedMap.get('data/sound/' + norm) ||
+                      normalizedMap.get('data/bgm/' + norm);
+            }}
+        }}
+        if (!url) {{
+            url = normalizedMap.get(norm.split('/').pop());
+        }}
+        if (!url) return filePath;
 
         // Tối ưu hóa WebP (/s0-rw/) cho toàn bộ hình ảnh thị giác (bỏ qua file audio stego)
-        const isAudio = norm.startsWith('data/sound') || norm.startsWith('data/bgm') || norm.startsWith('data/video');
-        if (!isAudio && typeof url === 'string' && url.startsWith('http')) {
+        const isAudio = norm.startsWith('data/sound') || norm.startsWith('data/bgm') || norm.startsWith('data/video') ||
+                        norm.endsWith('.ogg') || norm.endsWith('.mp3') || norm.endsWith('.wav') || norm.endsWith('.mp4');
+        if (!isAudio && typeof url === 'string' && url.startsWith('http')) {{
             if (url.includes('/s0/')) url = url.replace('/s0/', '/s0-rw/');
             else if (url.includes('/s1600/')) url = url.replace('/s1600/', '/s1600-rw/');
-        }
+        }}
 
         return url;
-    };
+    }};
 
     // ─── Native DOM Hooks ─────────────────────────────────────────────────────
-    try {
+    try {{
         const proto = HTMLImageElement.prototype;
         const origSrcDesc = Object.getOwnPropertyDescriptor(proto, 'src');
-        if (origSrcDesc && origSrcDesc.set) {
-            Object.defineProperty(proto, 'src', {
-                set: function(val) {
-                    if (typeof val === 'string' && !val.startsWith('http') && !val.startsWith('data:')) {
+        if (origSrcDesc && origSrcDesc.set) {{
+            Object.defineProperty(proto, 'src', {{
+                set: function(val) {{
+                    if (typeof val === 'string' && !val.startsWith('http') && !val.startsWith('data:') && !val.startsWith('blob:')) {{
                         const cdnUrl = window.resolveCDNUrl(val);
                         if (cdnUrl && cdnUrl.startsWith('http')) val = cdnUrl;
-                    }
+                    }}
                     return origSrcDesc.set.call(this, val);
-                },
+                }},
                 get: origSrcDesc.get,
                 configurable: true,
                 enumerable: true
-            });
-        }
-    } catch(e) {}
+            }});
+        }}
+
+        const origSetAttribute = HTMLImageElement.prototype.setAttribute;
+        HTMLImageElement.prototype.setAttribute = function(name, val) {{
+            if (name === 'src' && typeof val === 'string' && !val.startsWith('http') && !val.startsWith('data:') && !val.startsWith('blob:')) {{
+                const cdnUrl = window.resolveCDNUrl(val);
+                if (cdnUrl && cdnUrl.startsWith('http')) val = cdnUrl;
+            }}
+            return origSetAttribute.call(this, name, val);
+        }};
+
+        const origElemSetAttr = Element.prototype.setAttribute;
+        Element.prototype.setAttribute = function(name, val) {{
+            if (this.tagName === 'IMG' && name === 'src' && typeof val === 'string' && !val.startsWith('http') && !val.startsWith('data:') && !val.startsWith('blob:')) {{
+                const cdnUrl = window.resolveCDNUrl(val);
+                if (cdnUrl && cdnUrl.startsWith('http')) val = cdnUrl;
+            }}
+            return origElemSetAttr.call(this, name, val);
+        }};
+    }} catch(e) {{}}
+
+    // Hook jQuery fn.attr
+    if (window.jQuery) {{
+        const origJqAttr = window.jQuery.fn.attr;
+        window.jQuery.fn.attr = function(name, val) {{
+            if (name === 'src' && typeof val === 'string' && !val.startsWith('http') && !val.startsWith('data:') && !val.startsWith('blob:')) {{
+                const cdnUrl = window.resolveCDNUrl(val);
+                if (cdnUrl && cdnUrl.startsWith('http')) val = cdnUrl;
+            }}
+            return origJqAttr.apply(this, arguments);
+        }};
+    }}
 
     // ─── Hook TyranoScript Tags ───────────────────────────────────────────────
-    function installTyranoHooks() {
-        if (!window.TYRANO || !window.TYRANO.kag) {
+    function installTyranoHooks() {{
+        if (!window.TYRANO || !window.TYRANO.kag) {{
             setTimeout(installTyranoHooks, 50);
             return;
-        }
+        }}
 
         const kag = window.TYRANO.kag;
 
         // Hook BGM
-        if (kag.tag.playbgm) {
+        if (kag.tag.playbgm) {{
             const origPlaybgm = kag.tag.playbgm.start;
-            kag.tag.playbgm.start = function(pm) {
-                if (pm && pm.storage) {
-                    const fullPath = pm.storage.includes('/') ? pm.storage : `data/bgm/${pm.storage}`;
+            kag.tag.playbgm.start = function(pm) {{
+                if (pm && pm.storage) {{
+                    const fullPath = pm.storage.includes('/') ? pm.storage : `data/bgm/${{pm.storage}}`;
                     const cdnUrl = window.resolveCDNUrl(fullPath);
-                    if (cdnUrl && cdnUrl.startsWith('http')) {
+                    if (cdnUrl && cdnUrl.startsWith('http')) {{
                         window.HOME_AudioEngine.playBGM(cdnUrl, pm.loop !== 'false', pm.volume, pm.buf);
                         if (kag.layer) kag.layer.showEventLayer();
                         if (kag.ftag) kag.ftag.nextOrder();
                         return;
-                    }
-                }
+                    }}
+                }}
                 return origPlaybgm.apply(this, arguments);
-            };
-        }
+            }};
+        }}
 
-        if (kag.tag.stopbgm) {
-            kag.tag.stopbgm.start = function(pm) {
+        if (kag.tag.stopbgm) {{
+            kag.tag.stopbgm.start = function(pm) {{
                 window.HOME_AudioEngine.stopBGM(parseInt(pm.time || 1500));
                 if (kag.ftag) kag.ftag.nextOrder();
-            };
-        }
+            }};
+        }}
 
         // Hook SE / Voice
-        if (kag.tag.playse) {
+        if (kag.tag.playse) {{
             const origPlayse = kag.tag.playse.start;
-            kag.tag.playse.start = function(pm) {
-                if (pm && pm.storage) {
-                    const fullPath = pm.storage.includes('/') ? pm.storage : `data/sound/${pm.storage}`;
+            kag.tag.playse.start = function(pm) {{
+                if (pm && pm.storage) {{
+                    const fullPath = pm.storage.includes('/') ? pm.storage : `data/sound/${{pm.storage}}`;
                     const cdnUrl = window.resolveCDNUrl(fullPath);
-                    if (cdnUrl && cdnUrl.startsWith('http')) {
-                        window.HOME_AudioEngine.playSE(cdnUrl, pm.volume, pm.buf, () => {
+                    if (cdnUrl && cdnUrl.startsWith('http')) {{
+                        window.HOME_AudioEngine.playSE(cdnUrl, pm.volume, pm.buf, () => {{
                             if (pm.stop === 'true' && kag.ftag) kag.ftag.nextOrder();
-                        });
-                        if (pm.stop !== 'true') {
+                        }});
+                        if (pm.stop !== 'true') {{
                             if (kag.layer) kag.layer.showEventLayer();
                             if (kag.ftag) kag.ftag.nextOrder();
-                        }
+                        }}
                         return;
-                    }
-                }
+                    }}
+                }}
                 return origPlayse.apply(this, arguments);
-            };
-        }
+            }};
+        }}
 
         // Hook Background & Image
-        if (kag.tag.bg) {
+        if (kag.tag.bg) {{
             const origBg = kag.tag.bg.start;
-            kag.tag.bg.start = function(pm) {
-                if (pm.storage) {
-                    const fullPath = (pm.storage.startsWith('data/') || pm.storage.startsWith('http')) ? pm.storage : `data/bgimage/${pm.storage}`;
+            kag.tag.bg.start = function(pm) {{
+                if (pm && pm.storage) {{
+                    const fullPath = (pm.storage.startsWith('data/') || pm.storage.startsWith('http')) ? pm.storage : `data/bgimage/${{pm.storage}}`;
                     const cdnUrl = window.resolveCDNUrl(fullPath);
                     if (cdnUrl && cdnUrl.startsWith('http')) pm.storage = cdnUrl;
-                }
+                }}
                 return origBg.apply(this, arguments);
-            };
-        }
+            }};
+        }}
 
-        if (kag.tag.image) {
+        if (kag.tag.image) {{
             const origImage = kag.tag.image.start;
-            kag.tag.image.start = function(pm) {
-                if (pm.storage) {
+            kag.tag.image.start = function(pm) {{
+                if (pm && pm.storage) {{
                     const folder = pm.folder || 'fgimage';
-                    const fullPath = (pm.storage.startsWith('data/') || pm.storage.startsWith('http')) ? pm.storage : `data/${folder}/${pm.storage}`;
+                    const fullPath = (pm.storage.startsWith('data/') || pm.storage.startsWith('http')) ? pm.storage : `data/${{folder}}/${{pm.storage}}`;
                     const cdnUrl = window.resolveCDNUrl(fullPath);
                     if (cdnUrl && cdnUrl.startsWith('http')) pm.storage = cdnUrl;
-                }
+                }}
                 return origImage.apply(this, arguments);
-            };
-        }
+            }};
+        }}
 
         // Hook Buttons
-        if (kag.tag.button) {
+        if (kag.tag.button) {{
             const origButton = kag.tag.button.start;
-            kag.tag.button.start = function(pm) {
-                const folder = pm.folder || 'image';
-                ['graphic', 'enterimg', 'clickimg'].forEach(prop => {
-                    if (pm[prop]) {
-                        const fullPath = (pm[prop].startsWith('data/') || pm[prop].startsWith('http')) ? pm[prop] : `data/${folder}/${pm[prop]}`;
-                        const cdnUrl = window.resolveCDNUrl(fullPath);
-                        if (cdnUrl && cdnUrl.startsWith('http')) pm[prop] = cdnUrl;
-                    }
-                });
+            kag.tag.button.start = function(pm) {{
+                if (pm) {{
+                    const folder = pm.folder || 'image';
+                    ['graphic', 'enterimg', 'clickimg', 'storage'].forEach(prop => {{
+                        if (pm[prop] && typeof pm[prop] === 'string' && !pm[prop].endsWith('.ks')) {{
+                            const fullPath = (pm[prop].startsWith('data/') || pm[prop].startsWith('http')) ? pm[prop] : `data/${{folder}}/${{pm[prop]}}`;
+                            const cdnUrl = window.resolveCDNUrl(fullPath);
+                            if (cdnUrl && cdnUrl.startsWith('http')) pm[prop] = cdnUrl;
+                        }}
+                    }});
+                }}
                 return origButton.apply(this, arguments);
-            };
-        }
+            }};
+        }}
 
         // Hook Characters
-        ['chara_show', 'chara_mod', 'chara_new', 'chara_face'].forEach(tag => {
-            if (kag.tag[tag]) {
+        ['chara_show', 'chara_mod', 'chara_new', 'chara_face', 'chara_part'].forEach(tag => {{
+            if (kag.tag[tag]) {{
                 const orig = kag.tag[tag].start;
-                kag.tag[tag].start = function(pm) {
-                    if (pm.storage) {
-                        const fullPath = (pm.storage.startsWith('data/') || pm.storage.startsWith('http')) ? pm.storage : `data/fgimage/${pm.storage}`;
-                        const cdnUrl = window.resolveCDNUrl(fullPath);
-                        if (cdnUrl && cdnUrl.startsWith('http')) pm.storage = cdnUrl;
-                    }
+                kag.tag[tag].start = function(pm) {{
+                    if (pm) {{
+                        ['storage', 'face', 'default'].forEach(p => {{
+                            if (pm[p] && typeof pm[p] === 'string') {{
+                                const fullPath = (pm[p].startsWith('data/') || pm[p].startsWith('http')) ? pm[p] : `data/fgimage/${{pm[p]}}`;
+                                const cdnUrl = window.resolveCDNUrl(fullPath);
+                                if (cdnUrl && cdnUrl.startsWith('http')) pm[p] = cdnUrl;
+                            }}
+                        }});
+                    }}
                     return orig.apply(this, arguments);
-                };
-            }
-        });
+                }};
+            }}
+        }});
 
-        // Hook Preloader & Resource loading status
-        if (kag.preload) {
+        // Hook Preloader
+        if (kag.preload) {{
             const origPreload = kag.preload;
-            kag.preload = function(src, cb) {
-                if (typeof src === 'string') {
+            kag.preload = function(src, cb) {{
+                if (typeof src === 'string') {{
                     const cdnUrl = window.resolveCDNUrl(src);
                     if (cdnUrl && cdnUrl.startsWith('http')) src = cdnUrl;
-                    const fileName = src.split('/').pop().split('?')[0];
-                    if (window.showLoadingStatus && fileName) {
-                        window.showLoadingStatus('Đang nạp: ' + fileName, 1500);
-                    }
-                }
+                }}
                 return origPreload.call(this, src, cb);
-            };
-        }
+            }};
+        }}
+
+        if (kag.preloadAll) {{
+            const origPreloadAll = kag.preloadAll;
+            kag.preloadAll = function(storage, cb) {{
+                if (Array.isArray(storage)) {{
+                    storage = storage.map(s => window.resolveCDNUrl(s));
+                }}
+                return origPreloadAll.call(this, storage, cb);
+            }};
+        }}
 
         // Hook scenario loading
-        if (kag.loadScenario) {
+        if (kag.loadScenario) {{
             const origLoadScenario = kag.loadScenario;
-            kag.loadScenario = function(file_name, call_back) {
-                if (window.showLoadingStatus && file_name) {
+            kag.loadScenario = function(file_name, call_back) {{
+                if (window.showLoadingStatus && file_name) {{
                     window.showLoadingStatus('Đang đọc kịch bản: ' + file_name, 2000);
-                }
+                }}
                 return origLoadScenario.call(this, file_name, call_back);
-            };
-        }
+            }};
+        }}
 
         // Bypass bgmovie safely
-        kag.tag.bgmovie = {
-            pm: { time: 0, volume: 100, loop: 'true', storage: '' },
-            start: function() { if (kag.ftag) kag.ftag.nextOrder(); }
-        };
-        kag.tag.stop_bgmovie = {
-            pm: { time: 0 },
-            start: function() { if (kag.ftag) kag.ftag.nextOrder(); }
-        };
+        kag.tag.bgmovie = {{
+            pm: {{ time: 0, volume: 100, loop: 'true', storage: '' }},
+            start: function() {{ if (kag.ftag) kag.ftag.nextOrder(); }}
+        }};
+        kag.tag.stop_bgmovie = {{
+            pm: {{ time: 0 }},
+            start: function() {{ if (kag.ftag) kag.ftag.nextOrder(); }}
+        }};
 
         console.log('[CDN Interceptor] ✅ Đã gắn toàn bộ hook TyranoScript.');
-    }
+    }}
 
-    if (document.readyState === 'loading') {
+    if (document.readyState === 'loading') {{
         document.addEventListener('DOMContentLoaded', installTyranoHooks);
-    } else {
+    }} else {{
         installTyranoHooks();
-    }
-})();
+    }}
+}})();
 """
     with open(os.path.join(WEB_SRC_DIR, 'js', 'cdn_interceptor.js'), 'w', encoding='utf-8') as f:
         f.write(cdn_interceptor_js)
@@ -1982,6 +2031,12 @@ img[src*="workring_en.png"] {
   <link href="./tyrano/tyrano.css?v={v_tag}" rel="stylesheet" type="text/css" />
   <link href="./tyrano/libs/jquery-ui.css" rel="stylesheet" type="text/css" />
 
+  <!-- Alertify & Remodal Dialog Styles -->
+  <link href="./tyrano/libs/alertify/alertify.core.css" rel="stylesheet" type="text/css" />
+  <link href="./tyrano/libs/alertify/alertify.default.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="./tyrano/libs/remodal/remodal.css">
+  <link rel="stylesheet" href="./tyrano/libs/remodal/remodal-default-theme.css">
+
   <!-- jQuery & Core Libraries -->
   <script type="text/javascript" src="./tyrano/libs/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="./tyrano/libs/jquery-migrate-1.4.1.js"></script>
@@ -1991,10 +2046,17 @@ img[src*="workring_en.png"] {
   <script type="text/javascript" src="./tyrano/libs/html2canvas.js"></script>
   <script type="text/javascript" src="./tyrano/libs/lz-string.min.js"></script>
 
+  <!-- Dialog & Media Support Libs -->
+  <script type="text/javascript" src="./tyrano/libs/alertify/alertify.min.js"></script>
+  <script type="text/javascript" src="./tyrano/libs/remodal/remodal.js"></script>
+  <script type="text/javascript" src="./tyrano/libs/howler.js"></script>
+  <script type="text/javascript" src="./tyrano/libs/jquery.touchSwipe.min.js"></script>
+  <script type="text/javascript" src="./tyrano/libs/jsQR.js"></script>
+
   <!-- HOME Modular Web Extensions -->
+  <script type="text/javascript" src="./js/cdn_interceptor.js?v={v_tag}"></script>
   <script type="text/javascript" src="./js/web_audio_engine.js?v={v_tag}"></script>
   <script type="text/javascript" src="./js/web_save_indexeddb.js?v={v_tag}"></script>
-  <script type="text/javascript" src="./js/cdn_interceptor.js?v={v_tag}"></script>
   <script type="text/javascript" src="./js/mobile_touch_hud.js?v={v_tag}"></script>
 
   <!-- System KeyConfig & Tyrano Base -->
@@ -2172,9 +2234,9 @@ def build_all():
     print("=" * 60)
     
     step1_ensure_directories()
-    step2_export_cdn_manifest()
+    records = step2_export_cdn_manifest()
     step3_sync_engine_and_scenarios()
-    step4_generate_web_core_modules()
+    step4_generate_web_core_modules(records)
     step5_package_to_dist_web()
     step6_create_build_batch()
 

@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_job_kateikyousi.ks]
 
 [tb_start_tyrano_code]
@@ -37,7 +38,7 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[舜]（予約の管理に衣装の修繕…目が回るほど忙しいけどやるしかないよな）[p]
+[舜]（Quản lý đặt chỗ rồi sửa chữa trang phục... Bận tối tăm mặt mũi nhưng vẫn phải làm thôi.）[p]
 [_tb_end_text]
 
 [tb_keyconfig  flag="0"  ]

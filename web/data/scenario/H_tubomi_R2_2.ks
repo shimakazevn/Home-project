@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_H_tubomi_R2_2.ks]
 
 [tb_start_tyrano_code]
@@ -33,7 +34,7 @@
 
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_r_tubomi_kaisi2.mp3" buf="2"]蕾「おねだりの仕方なんてわからないもの…どうやっておねだりすればいいのか教えてよ♡」[p]
+[playse storage="tubomi/voice_r_tubomi_kaisi2.mp3" buf="2"]Tsubomi「Em làm sao biết cách làm nũng thế nào chứ... Dạy em cách làm nũng đi mà♡」[p]
 [_tb_end_text]
 
 *top2
@@ -336,12 +337,12 @@
 [jump  storage="H_tubomi_R2_2.ks"  target="*sounyu_skip"  cond="f.H_sounyu==1"  ]
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
-[舜]「ふーっ…はぁ、はっ…もうチンポ挿れていいんだろ？　ほら、おねだりは？」[p]
-[playse storage="tubomi/voice_r2_2_tubomi_sou1.mp3" buf="2"]蕾「はぁっ♡　はぁっ♡　はいっ♡　あぁ…すっごい♡　反り返りおちんちんほしいの♡」[p]
-[playse storage="tubomi/voice_r2_2_tubomi_sou2.mp3" buf="2"]蕾「頂戴…蕾のおまんこに…ずぽってして♡　奥までぴったりハメて…ズコズコしてほしいの♡」[p]
-[playse storage="tubomi/voice_r2_2_tubomi_sou3.mp3" buf="2"]蕾「はぁ♡　はぁ♡　早く…中でおちんちん膨らむ瞬間、味わいたい…中で熱いのびゅってして」[p]
-[舜]「エッロ、もう手加減できないわ…奥まで一気に挿れるからな…！　ほら、味わえよっ！」[p]
-[playse storage="tubomi/voice_r2_2_tubomi_sou4.mp3" buf="2"]蕾「ひああぁぁぁっ♡　おっ♡　おおおおっ♡　おっきぃ♡　おまんこ壊れちゃうぅ♡」[p]
+[舜]「Phù... Hà, hà... Giờ đút con cu vào được rồi đúng không? Nào, làm nũng đi xem nào?」[p]
+[playse storage="tubomi/voice_r2_2_tubomi_sou1.mp3" buf="2"]Tsubomi「Hà...♡ Hà...♡ Vâng ạ♡ A... Tuyệt quá♡ Em muốn con cu cong vút cương cứng này cơ♡」[p]
+[playse storage="tubomi/voice_r2_2_tubomi_sou2.mp3" buf="2"]Tsubomi「Cho em đi... Đút ngập vào cô bé của Tsubomi đi...♡ Cắm khít khao tới tận đáy sâu nhất... Rồi dập thụt liên tục cho em đi mà♡」[p]
+[playse storage="tubomi/voice_r2_2_tubomi_sou3.mp3" buf="2"]Tsubomi「Hà♡ Hà♡ Mau lên... Em muốn nếm trải khoảnh khắc con cu nở to bên trong... Hãy bắn dòng tinh dịch nóng hổi vào trong em đi」[p]
+[舜]「Dâm vãi, thế này thì anh không nương tay được nữa rồi... Anh sẽ đâm một mạch tới tận đáy sâu nhất luôn đấy...! Nào, thưởng thức đi!」[p]
+[playse storage="tubomi/voice_r2_2_tubomi_sou4.mp3" buf="2"]Tsubomi「A... a... a...♡ Ôi...♡ Ôi trời ơi♡ To quá♡ Cô bé của em sắp bị phá hỏng mất thôi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sounyu=1"  name="H_sounyu"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -578,11 +579,11 @@
 
 [cm  ]
 [tb_start_text mode=1 ]
-[舜]「あぁ、もう出る…！　蕾…体に全部まき散らしていいんだよなぁ！？」[p]
-蕾「いいよっ♡　[舜]の好きにして…私の全部、もう[舜]のものなんだからぁ♡」[p]
-[舜]「そう言うと思った…ほら！　全身で精子受け止める準備しろ…！　出すぞ…！」[p]
-蕾「きて…♡　好きなだけ出してドロドロにしてぇっ♡」[p]
-[舜]「くっ…出るっ！　あっ、あぁぁぁぁっ！」[p]
+[舜]「A, sắp ra mất rồi...! Tsubomi... Vẩy tung tóe khắp người em được đúng không hả!?」[p]
+Tsubomi「Được chứ ạ♡ Cứ làm theo ý anh [舜] thích đi... Toàn bộ cơ thể em đã là của anh [舜] từ lâu rồi mà♡」[p]
+[舜]「Anh biết em sẽ nói thế mà... Nào! Chuẩn bị đón nhận tinh trùng bằng cả cơ thể đi...! Xuất đây...!」[p]
+Tsubomi「Tới đi anh...♡ Cứ việc bắn thỏa thích cho nhầy nhụa khắp người em đi ạ♡」[p]
+[舜]「Khốn thật... Ra đây! A, a... a...!」[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="0"  fadeout="true"  ]
@@ -597,9 +598,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひあぁぁぁっ♡　おっ♡　おおおおっ♡　白いのかかっちゃったぁ♡　フーッ♡　やっときた♡」[p]
-[舜]「すっごい濃いの出た…蕾が、上手にチンポに媚びてくれたおかげだな…」[p]
-蕾「はぁっ♡　はぁっ♡　褒められたっ♡　嬉し…♡　もっと上手におねだりできるようになる♡」[p]
+Tsubomi「A... a... a...♡ Ôi...♡ Ôi trời ơi♡ Nước trắng đục bắn lên người em rồi kìa♡ Phù...♡ Cuối cùng cũng tới rồi♡」[p]
+[舜]「Bắn ra đặc quánh luôn này... Tất cả là nhờ Tsubomi biết nịnh nọt con cu của anh đấy nhé...」[p]
+Tsubomi「Hà...♡ Hà...♡ Được anh khen rồi kìa♡ Hạnh phúc quá...♡ Em sẽ học cách làm nũng giỏi hơn nữa cho anh xem♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_bukkake_tubomi+=1"  name="Hresult_bukkake_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -614,9 +615,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひっぐうぅっ♡　おおおっ♡　しゅっご…体中精液まみれになっちゃったの…♡」[p]
-蕾「はぁ♡　はぁ♡　頭くらくらするほど…すっごい匂い…オスが…孕ませようとしてる匂いなの♡」[p]
-蕾「精子も…プルップルで濃厚♡　こんなの…奥に出されたら、すぐにママになっちゃいそ♡」[p]
+Tsubomi「Hức... a...♡ Ôi trời ơi♡ Tuyệt quá... Toàn thân dính đầy tinh dịch hết cả rồi...♡」[p]
+Tsubomi「Hà♡ Hà♡ Mùi nồng đến mức choáng váng cả đầu... Mùi hương của con đực... Đang muốn làm em mang bầu đây mà♡」[p]
+Tsubomi「Tinh trùng cũng... Đặc quánh và sánh mịn ghê♡ Thế này mà... Bị bắn vào tận sâu bên trong thì chắc biến thành mẹ trẻ con ngay mất thôi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_bukkake_tubomi+=1"  name="Hresult_bukkake_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -626,10 +627,10 @@
 
 [cm  ]
 [tb_start_text mode=1 ]
-蕾「はぁ♡　あっ♡　あふぅ♡　中、中に出してぇ♡　熱々出来立て精子、奥に注いでほしいのっ♡」[p]
-[舜]「やっぱり、すっかり雌豚だなぁ！　おら、出してほしいならチン媚びしろよ！」[p]
-蕾「若くてプリップリのおまんこと子種袋、準備できてるからぁ♡　早くビュッビュってしてください♡」[p]
-[舜]「くっ…あぁ、最高…！　中いっぱいになるほど出してやる…！　しっかり受け取れよ…！」[p]
+Tsubomi「Hà♡ A...♡ Phù♡ Bắn vào bên trong đi anh♡ Em muốn anh rót tinh trùng nóng hổi mới ra vào tận sâu đáy cùng cơ♡」[p]
+[舜]「Quả nhiên là em đã hoàn toàn biến thành một ả đàn bà dâm đãng rồi đấy nhỉ! Nào, muốn anh bắn vào trong thì biết phải nịnh bợ thế nào rồi chứ!」[p]
+Tsubomi「Cô bé non tơ mơn mởn và túi chứa hạt giống đã chuẩn bị sẵn sàng hết rồi đây ạ♡ Mau bắn phì phì vào trong em đi ạ♡」[p]
+[舜]「Khốn thật... A, tuyệt đỉnh...! Anh sẽ bắn thật nhiều cho đến khi ngập tràn bên trong mới thôi...! Đón nhận cho cẩn thận đấy...!」[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="0"  fadeout="true"  ]
@@ -658,9 +659,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あぅぅっ♡　熱々なのっ、奥まで入って来てりゅ♡　おっほぉ、おねだりしてよかったぁ♡」[p]
-蕾「やっと受け取れたっ♡　いっぱいにしてもらってっ、ありがとうございましゅ♡」[p]
-蕾「はぁっ♡　はぁっ♡　あぁ、お腹の１番奥に精子届いちゃってるかもっ♡　着床しちゃった♡」[p]
+Tsubomi「A... hức♡ Dòng tinh dịch nóng hổi đang tràn vào tận sâu bên trong em rồi kìa♡ Ôi trời, may mà em đã làm nũng anh♡」[p]
+Tsubomi「Cuối cùng cũng đón nhận được rồi♡ Cảm ơn anh vì đã lấp đầy cơ thể em thế này ạ♡」[p]
+Tsubomi「Hà...♡ Hà...♡ A, có khi tinh trùng đã chạm tới nơi sâu nhất trong bụng em rồi cũng nên♡ Thụ thai mất rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_nakadasi_tubomi+=1"  name="Hresult_nakadasi_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -674,9 +675,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「おっ♡　おおおおおっ♡　すごいっ♡　ほ、ホントに中いっぱいになっちゃったぁ♡」[p]
-蕾「ひっぐぅぅ、溢れてりゅ♡　精液こぼれちゃう…もったいないのっ♡」[p]
-蕾「こぼれないようにおちんちんでフタしといて♡　いっぱいにしておいてほしいのっ♡」[p]
+Tsubomi「Ôi...♡ Ôi trời ơi...♡ Tuyệt quá♡ Th-Thực sự là ngập tràn bên trong rồi kìa♡」[p]
+Tsubomi「Hức... Trào ra ngoài rồi kìa♡ Tinh dịch chảy tràn ra uổng phí quá đi mất♡」[p]
+Tsubomi「Dùng con cu bịt kín lại để không bị tràn ra ngoài đi anh♡ Em muốn giữ cho nó luôn đầy ắp bên trong cơ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_nakadasi_tubomi+=1"  name="Hresult_nakadasi_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]

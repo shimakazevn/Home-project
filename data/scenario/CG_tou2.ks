@@ -1,3 +1,4 @@
+ 
 [tb_clear_images][mask time=200][bg  time="1"  storage="title_VoyeurCGGallery.png"  _tb_parts_type="bg"  ]
 [tb_cg_image_button  graphic="button/tou_hos6.png"  storage="system/master_cg.ks"  target=""  role="sleepgame"  no_graphic="&sf._tb_cg_noimage"  time="1"  width="170"  height="111"  x="93"  y="113"  _tb_parts_type="cg_image_button"  id="tou_hospitallocker_nagirocker"  ]
 [tb_cg_image_button  graphic="button/tou_hos7.png"  storage="system/master_cg.ks"  target=""  role="sleepgame"  no_graphic="&sf._tb_cg_noimage"  time="1"  width="170"  height="111"  x="277"  y="113"  _tb_parts_type="cg_image_button"  id="tou_hospitaltoilet_holder"  ]
@@ -24,4 +25,4 @@
 [tb_cg_image_button  graphic="button/tou_rif8.png"  storage="system/master_cg.ks"  target=""  role="sleepgame"  no_graphic="&sf._tb_cg_noimage"  time="1"  width="170"  height="111"  x="1013"  y="375"  _tb_parts_type="cg_image_button"  id="rifurereception_low2"  ]
 [tb_cg_image_button  graphic="button/tou_udedokei2.png"  storage="system/master_cg.ks"  target=""  role="sleepgame"  no_graphic="&sf._tb_cg_noimage"  time="1"  width="170"  height="111"  x="277"  y="506"  _tb_parts_type="cg_image_button"  id="pan_rinko"  ]
 [mask_off time=200] 
-[s] 
+[s]

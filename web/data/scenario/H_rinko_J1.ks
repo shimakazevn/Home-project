@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_H_rinko_J1.ks]
 
 [tb_start_tyrano_code]
@@ -40,7 +41,7 @@
 
 [mask_off  time="2000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="rinko/voice_j_rinko_kaisi2.mp3" buf="3"]凛子「オリジナルのマッサージを教えてもらえるの？　期待してもいいのかな♡」[p]
+[playse storage="rinko/voice_j_rinko_kaisi2.mp3" buf="3"]Rinko「Em sẽ dạy cho chị cách massage độc quyền sao? Chị mong chờ có được không nhỉ♡」[p]
 [_tb_end_text]
 
 *top2
@@ -341,11 +342,11 @@
 [jump  storage="H_rinko_J1.ks"  target="*sounyu_skip"  cond="f.H_sounyu==1"  ]
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
-[舜]「指じゃ届かないところは、チンポでマッサージしてあげなくちゃいけませんね？」[p]
-[playse storage="rinko/voice_j1_1_rinko_sou1.mp3" buf="3"]凛子「はぁっ…はぁっ…とってもサービスのいいマッサージだね…じゃあお願いしようかな♡」[p]
-[playse storage="rinko/voice_j1_1_rinko_sou2.mp3" buf="3"]凛子「[舜]くん…私の奥までマッサージしてくれる…？」[p]
-[舜]「もちろん…挿れますよ…くっ、んんんっ！」[p]
-[playse storage="rinko/voice_j1_1_rinko_sou3.mp3" buf="3"]凛子「あぁぁっ♡　奥まで入っちゃったぁ♡　すごいよ[舜]くん…中もいっぱいになってる…♡」[p]
+[舜]「Những chỗ ngón tay không chạm tới được, thì em phải dùng con cu để massage cho chị chứ nhỉ?」[p]
+[playse storage="rinko/voice_j1_1_rinko_sou1.mp3" buf="3"]Rinko「Hà... hà... Dịch vụ massage này chu đáo quá nhỉ... Vậy thì đành nhờ em vậy♡」[p]
+[playse storage="rinko/voice_j1_1_rinko_sou2.mp3" buf="3"]Rinko「Shun-kun... em sẽ massage tận sâu bên trong chị chứ...?」[p]
+[舜]「Tất nhiên rồi... em đút vào đây... khốn, ưmmm!」[p]
+[playse storage="rinko/voice_j1_1_rinko_sou3.mp3" buf="3"]Rinko「Aaaa♡ Vào tận sâu bên trong mất rồi♡ Tuyệt quá Shun-kun... bên trong đầy ứ lên rồi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sounyu=1"  name="H_sounyu"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -581,10 +582,10 @@
 
 [cm  ]
 [tb_start_text mode=1 ]
-凛子「はぁ、はっ…[舜]くんの、中でビクビクしてる…」[p]
-[舜]「仕上げの準備をしてるんですよ…！　特別なクリームで肌を保湿しましょうね…！」[p]
-凛子「きて…♡　[舜]くんのマッサージクリーム…体にかけてほしいの…♡」[p]
-[舜]「はぁ、はっ…じゃあ遠慮なく…！　ぶちまけますからね…！　あぁ、出る、出る出る出るっ！」[p]
+Rinko「Hà, hà... Của Shun-kun, đang giật giật bên trong kìa...」[p]
+[舜]「Em đang chuẩn bị cho bước hoàn thiện đấy...! Dùng loại kem đặc biệt để dưỡng ẩm cho da nhé...!」[p]
+Rinko「Nhanh lên...♡ Kem massage của Shun-kun... chị muốn em bắn lên người chị...♡」[p]
+[舜]「Hà, hà... Vậy thì em không khách sáo đâu nhé...! Em xả ra đây...! A, ra mất, ra, ra, ra mất!」[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="0"  fadeout="true"  ]
@@ -598,9 +599,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁぁっ♡　熱いっ…すっごい匂い…♡　[舜]くんのオスの匂い届いてる…♡」[p]
-[舜]「しっかり肌に塗り込んでくださいね？　俺の匂いになるように…」[p]
-凛子「んっ…はぁっ…はぁ♡　[舜]くんまみれになっちゃった…♡」[p]
+Rinko「Aaaa♡ Nóng quá... mùi nồng nặc quá...♡ Mùi đàn ông của Shun-kun đang xộc tới kìa...♡」[p]
+[舜]「Chị phải thoa thật kỹ lên da đấy nhé? Để cơ thể chị tràn ngập mùi của em...」[p]
+Rinko「Ưm... hà... hà♡ Chị dính đầy đồ của Shun-kun mất rồi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_bukkake_rinko+=1"  name="Hresult_bukkake_rinko"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -614,9 +615,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁぁっ♡　すっごい量…♡　やっぱり若さだね…ドロドロになっちゃった…♡」[p]
-凛子「匂いだけでくらくらしちゃいそう…♡　[舜]くん、いっぱい出たのね♡」[p]
-凛子「おかげで肌までぷるぷるになっちゃいそう…♡　マッサージ効果、すごいね」[p]
+Rinko「Aaaa♡ Lượng nhiều quá...♡ Quả nhiên là sức trẻ có khác... dính nhem nhuốc hết cả rồi...♡」[p]
+Rinko「Chỉ ngửi mùi thôi cũng đủ chóng mặt rồi...♡ Shun-kun, em bắn ra nhiều thật đấy♡」[p]
+Rinko「Nhờ thế mà làn da chị cứ như căng mọng lên rồi này...♡ Hiệu quả massage tuyệt thật đấy.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_bukkake_rinko+=1"  name="Hresult_bukkake_rinko"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -626,11 +627,11 @@
 
 [cm  ]
 [tb_start_text mode=1 ]
-[舜]「凜子さん…もう…！」[p]
-凛子「中に出していいよ…遠慮しないで♡　これはマッサージの仕上げなんでしょう？」[p]
-凛子「体の奥が熱々になっちゃうくらい…思いっきり注ぎ込んで…♡」[p]
-[舜]「いいんですか…！　じゃあ…中に出しますよ…！　くっ！　出るっ…」[p]
-凛子「来て…[舜]くんの全部っ…注ぎこんで…！」[p]
+[舜]「Chị Rinko... thật là...!」[p]
+Rinko「Em bắn vào trong đi... đừng khách sáo♡ Đây là bước hoàn thiện của bài massage mà đúng không?」[p]
+Rinko「Hãy rót vào thật mạnh đi em... đến mức sâu bên trong cơ thể chị nóng ran lên ấy...♡」[p]
+[舜]「Được sao...! Vậy thì... em bắn vào trong nhé...! Khốn! Ra đây...」[p]
+Rinko「Nhanh lên... rót tất cả... của Shun-kun vào đi...!」[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="0"  fadeout="true"  ]
@@ -658,9 +659,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁぁっ♡　奥まで[舜]くんでいっぱいになっちゃった…♡　溢れちゃいそうっ…」[p]
-凛子「[舜]くんのおちんちん、まだ中でビクビクいってるみたい…♡」[p]
-凛子「私の中で気持ちよくなってくれたって思うと、すっごく嬉しいの…♡」[p]
+Rinko「Aaaa♡ Tận sâu bên trong đầy ứ đồ của Shun-kun mất rồi...♡ Sắp trào ra mất...」[p]
+Rinko「Con cu của Shun-kun, dường như vẫn đang giật giật bên trong kìa...♡」[p]
+Rinko「Cứ nghĩ đến việc em được sướng ở bên trong chị, chị lại thấy vui lắm...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_nakadasi_rinko+=1"  name="Hresult_nakadasi_rinko"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -673,9 +674,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁぁっ…いっぱい出たね♡　もう入りきらなくてこぼれちゃったよ…♡」[p]
-凛子「仕上げまで全部[舜]くんにしてもらっちゃったね…♡　すっごく気持ちよかった♡」[p]
-凛子「気持ちいいマッサージの仕方、教わっちゃった…♡　今度は私が[舜]くんにしてあげるから♡」[p]
+Rinko「Aaaa... bắn ra nhiều thật đấy♡ Không chứa hết nổi nên trào cả ra ngoài rồi này...♡」[p]
+Rinko「Từ đầu đến bước hoàn thiện đều để Shun-kun làm hết rồi nhỉ...♡ Sướng lắm em ạ♡」[p]
+Rinko「Chị đã được dạy cho cách massage sướng thế này rồi...♡ Lần tới chị sẽ làm cho Shun-kun nhé♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_nakadasi_rinko+=1"  name="Hresult_nakadasi_rinko"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]

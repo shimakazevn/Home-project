@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_room_yoru.ks]
 
 [tb_start_tyrano_code]
@@ -390,8 +391,8 @@
 [cm  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]「そろそろ寝よう」[p]
-[font color="yellow"]テンションが少し下がった[resetfont][p]
+[舜]「Chuẩn bị đi ngủ thôi.」[p]
+[font color="yellow"]Chỉ số hưng phấn đã giảm nhẹ[resetfont][p]
 
 [_tb_end_text]
 
@@ -563,7 +564,7 @@
 [call  storage="system.ks"  target="*fade_out"  ]
 [stopbgm  time="1000"  fadeout="true"  ]
 [tb_start_text mode=1 ]
-[舜]「よし、よく寝たな」[p]
+[舜]「Tốt rồi, mình đã ngủ một giấc thật ngon.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -671,8 +672,8 @@
 *1month_left
 
 [tb_start_text mode=1 ]
-[舜]「そういえば、今日からもう8月か」[p]
-[舜]「[font color="yellow"]目標達成のためには、残り1カ月ってところか。[resetfont][r]悔いのないようにしないとな」[p]
+[舜]「Nhắc mới nhớ, hôm nay đã là tháng 8 rồi à.」[p]
+[舜]「[font color="yellow"]Để đạt được mục tiêu thì chỉ còn khoảng 1 tháng nữa thôi.[resetfont][r]Phải cố gắng để không phải hối tiếc mới được.」[p]
 [_tb_end_text]
 
 [return  ]
@@ -683,19 +684,19 @@
 [bg  time="0"  method="crossfade"  storage="sora.jpg"  ]
 [call  storage="system.ks"  target="*fade_out"  ]
 [tb_start_text mode=1 ]
-[舜]「……もう8月も今日で終わりか……」[p]
-網戸越しに、昼間の熱気をわずかに残したままの夜風が頬を撫でる。[p]
-思えば、この夏は色々なことがあった。[p]
-上手くいったこともあれば、投げ出したくなる日もあった。[r]自分の未熟さを思い知らされる瞬間も何度もあった。[p]
-それでも、前の自分よりほんの少しだけ前に進めた気がする。[r]そう思えるだけでもきっと無駄じゃなかった。[p]
-思いをはせつつ、ゆっくりと目を閉じた。[p]
+[舜]「......Vậy là hôm nay đã hết tháng 8 rồi sao......」[p]
+Qua lớp cửa lưới, cơn gió đêm vẫn còn vương chút hơi nóng của ban ngày khẽ mơn trớn đôi má tôi.[p]
+Nghĩ lại thì, mùa hè này đã xảy ra biết bao nhiêu chuyện.[p]
+Có những chuyện suôn sẻ, cũng có những ngày tôi chỉ muốn vứt bỏ tất cả.[r]Cũng không ít lần tôi nhận ra sự non nớt của bản thân.[p]
+Dù vậy, tôi cảm thấy mình đã tiến bộ hơn đôi chút so với bản thân trước đây.[r]Chỉ cần nghĩ được như vậy thì chắc chắn những gì tôi đã làm không hề vô ích.[p]
+Trong lúc miên man suy nghĩ, tôi từ từ nhắm mắt lại.[p]
 [_tb_end_text]
 
 [bg  time="2000"  method="crossfade"  storage="black.jpg"  ]
 [stopbgm  time="1000"  fadeout="true"  ]
 [wait  time="2000"  ]
 [tb_start_text mode=1 ]
-―――数カ月後[p]
+―――Vài tháng sau[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -802,4 +803,3 @@
 [jump storage="EV_BADEND_hayato.ks"  target="*top" ]
 
 [_tb_end_tyrano_code]
-

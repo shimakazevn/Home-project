@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_H_nagi_R2_2.ks]
 
 [tb_start_tyrano_code]
@@ -33,7 +34,7 @@
 
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_r_nagi_kaisi2.mp3" buf="1"]凪「ベランダで…？　こんなところじゃ、誰かに見られるかも…わ、わかりました…」[p]
+[playse storage="nagi/voice_r_nagi_kaisi2.mp3" buf="1"]Nagi「Ở ban công á...? Chỗ thế này, nhỡ có ai nhìn thấy thì... V-Vâng, em biết rồi...」[p]
 [_tb_end_text]
 
 *top2
@@ -340,11 +341,11 @@
 [jump  storage="H_nagi_R2_2.ks"  target="*sounyu_skip"  cond="f.H_sounyu==1"  ]
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
-[playse storage="nagi/voice_r2_2_nagi_sou1.mp3" buf="1"]凪「[舜]ちゃんのおちんちんもガチガチになってる♡　中に挿れてください…♡」[p]
-[舜]「ベランダで挿れてほしいなんて変態だな…」[p]
-[playse storage="nagi/voice_r2_2_nagi_sou2.mp3" buf="1"]凪「はひっ♡　変態なんですっ♡　ほしくてずっとウズウズしてました…♡」[p]
-[舜]「力抜け…挿れるぞ…くっ…んんんっ！」[p]
-[playse storage="nagi/voice_r2_2_nagi_sou3.mp3" buf="1"]凪「あぁぁぁっ♡　はぁ、ああっ…♡　おっきいの入ってきた…♡　ありがとうございますっ♡」[p]
+[playse storage="nagi/voice_r2_2_nagi_sou1.mp3" buf="1"]Nagi「Con cu của anh Shun cũng cứng ngắc rồi kìa♡ Đút vào trong em đi anh...♡」[p]
+[舜]「Muốn anh đút vào ở ngoài ban công, đúng là đồ biến thái mà...」[p]
+[playse storage="nagi/voice_r2_2_nagi_sou2.mp3" buf="1"]Nagi「Vâng♡ Em là đồ biến thái mà♡ Em muốn đến mức rạo rực nãy giờ rồi...♡」[p]
+[舜]「Thả lỏng ra... đút vào đây... khốn... ưmmm!」[p]
+[playse storage="nagi/voice_r2_2_nagi_sou3.mp3" buf="1"]Nagi「Aaaa♡ Hà, a...♡ Đồ to bự vào trong mất rồi...♡ Cảm ơn anh nhiều lắm♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sounyu=1"  name="H_sounyu"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -578,10 +579,10 @@
 
 [cm  ]
 [tb_start_text mode=1 ]
-[舜]「あーもう出そ…ぶっかけてやるからな…おねだり聞かせてもらわないとなぁ」[p]
-凪「はい…♡　背中に精子いっぱいかけてください♡　[舜]ちゃんの熱々の精子まみれにしてほしいです♡」[p]
-凪「誰かに見られててもいい、から…♡　最後まで気持ちよくなってください♡」[p]
-[舜]「エッロ…あ～もう出る…！　イク、イクイクイクっ！　あっ、あぁぁぁぁっ！」[p]
+[舜]「A, sắp ra rồi... Anh sẽ bắn lên người em đấy... phải cho anh nghe tiếng vòi vĩnh chứ nhỉ.」[p]
+Nagi「Vâng...♡ Hãy bắn thật nhiều tinh dịch lên lưng em đi anh♡ Em muốn bị dính đầy tinh dịch nóng hổi của anh Shun cơ♡」[p]
+Nagi「Dù có bị ai nhìn thấy cũng không sao đâu...♡ Anh cứ sướng cho đến phút cuối đi nhé♡」[p]
+[舜]「Dâm thật... A, ra mất...! Ra, ra, ra đây! A, aaaa!」[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="0"  fadeout="true"  ]
@@ -596,9 +597,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凪「んっくぅぅっ♡　はっ…はっ…♡　あぁぁ、熱々精子、ありがとうございます♡」[p]
-凪「[舜]ちゃんが気持ちよくなってくれて…嬉しいです♡」[p]
-凪「これからも私でたっぷり気持ちよくなってください…♡」[p]
+Nagi「Ưm♡ Hà... hà...♡ Aaa, cảm ơn anh vì tinh dịch nóng hổi nhé♡」[p]
+Nagi「Anh Shun sướng là... em vui rồi♡」[p]
+Nagi「Từ nay về sau anh cứ dùng em để sướng thật nhiều vào nhé...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_bukkake_nagi+=1"  name="Hresult_bukkake_nagi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -613,9 +614,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凪「ああぁぁっ♡　すっごい量…♡　全部ドロドロになっちゃった…♡」[p]
-[舜]「服脱いで正解だっただろ？　汚れずに済んでよかったな？」[p]
-凪「はい♡　脱がせてくれてありがとうございました♡」[p]
+Nagi「Aaaa♡ Lượng nhiều quá...♡ Dính nhem nhuốc hết cả rồi...♡」[p]
+[舜]「Cởi áo ra là đúng đắn quá rồi còn gì? Không bị bẩn là tốt rồi nhỉ?」[p]
+Nagi「Vâng♡ Cảm ơn anh đã cởi đồ cho em nhé♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_bukkake_nagi+=1"  name="Hresult_bukkake_nagi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -625,11 +626,11 @@
 
 [cm  ]
 [tb_start_text mode=1 ]
-[舜]「あー、もう出る…！　はぁ、はっ…濃厚な精子、思いっきり注ぎ込んでやる…！」[p]
-凪「あっ、はぁっ♡　んあぁぁっ♡　赤ちゃん、出ちゃう…♡」[p]
-[舜]「そしたら、ここから見える公園で遊ばせればいい…！　ここで育てるんだよ！」[p]
-凪「はいっ♡　はいっ♡　[舜]ちゃんの言う通りに…しますっ♡」[p]
-[舜]「出る…全部受け止めろっ…！」[p]
+[舜]「A, sắp ra rồi...! Hà, hà... Tinh dịch đặc sệt, anh sẽ rót hết vào trong em...!」[p]
+Nagi「A, hà♡ Aaaa♡ Em bé, ra mất...♡」[p]
+[舜]「Nếu vậy thì cứ cho con chơi ở cái công viên nhìn thấy từ đây là được...! Nuôi con ở đây luôn!」[p]
+Nagi「Vâng♡ Vâng♡ Em sẽ làm... đúng như lời anh Shun nói♡」[p]
+[舜]「Ra đây... nhận lấy tất cả đi...!」[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="0"  fadeout="true"  ]
@@ -658,9 +659,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凪「んぅぅぅっ♡　あぁぁっ♡　熱々なの…広がってく♡　精子飲んじゃってる♡」[p]
-凪「あぁぁっ♡　おまんこキュンキュンってして…喜んでますっ♡」[p]
-凪「ホントに赤ちゃんできちゃうかも…はぁ、あぁ、幸せです…♡」[p]
+Nagi「Ưm♡ Aaaa♡ Thứ nóng hổi... đang lan ra kìa♡ Cô bé đang uống tinh dịch mất rồi♡」[p]
+Nagi「Aaaa♡ Cô bé giật thót liên tục... đang vui sướng lắm đây♡」[p]
+Nagi「Có khi có em bé thật mất... hà, a, hạnh phúc quá đi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_nakadasi_nagi+=1"  name="Hresult_nakadasi_nagi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -674,9 +675,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[舜]「あぁ、止まんない…くっ…んんっ！　おまんこ、吸い付いて離さないなぁ？」[p]
-凪「はぁ、ああっ♡　ごめんなさい…♡　中に出されてるのが気持ちよくて…♡」[p]
-凪「体全部が悦んでるみたいで…体の奥までジリジリ熱くなっちゃってます♡」[p]
+[舜]「A, không dừng lại được... khốn... ưm! Cô bé cứ mút chặt lấy không chịu buông nhỉ?」[p]
+Nagi「Hà, a♡ Em xin lỗi...♡ Tại được bắn vào trong sướng quá mà...♡」[p]
+Nagi「Cứ như toàn bộ cơ thể đang reo vui vậy... tận sâu bên trong cơ thể cũng đang nóng ran lên rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_nakadasi_nagi+=1"  name="Hresult_nakadasi_nagi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]

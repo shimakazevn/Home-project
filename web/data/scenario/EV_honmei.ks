@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_EV_honmei.ks]
 
 *nagi
@@ -10,15 +11,15 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-彼女への暖かな感情がどんどん膨らんでいく。[p]
+Tình cảm ấm áp dành cho cô ấy đang ngày một lớn dần lên.[p]
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-[font color="yellow"]凪を本命にしますか？[resetfont]
+[font color="yellow"]Bạn có muốn chọn Nagi làm Honmei không?[resetfont]
 [_tb_end_text]
 
-[glink  color="btn_05_black"  storage="EV_honmei.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="本命にする"  _clickable_img=""  target="*yes_nagi"  ]
-[glink  color="btn_05_black"  storage="EV_honmei.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="しない"  _clickable_img=""  target="*no_nagi"  ]
+[glink  color="btn_05_black"  storage="EV_honmei.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Chọn làm người yêu duy nhất"  _clickable_img=""  target="*yes_nagi"  ]
+[glink  color="btn_05_black"  storage="EV_honmei.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Không chọn"  _clickable_img=""  target="*no_nagi"  ]
 [s  ]
 *yes_nagi
 
@@ -40,15 +41,15 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-彼女への暖かな感情がどんどん膨らんでいく。[p]
+Tình cảm ấm áp dành cho cô ấy đang ngày một lớn dần lên.[p]
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-[font color="yellow"]凛子を本命にしますか？[resetfont]
+[font color="yellow"]Bạn có muốn chọn Rinko làm Honmei không?[resetfont]
 [_tb_end_text]
 
-[glink  color="btn_05_black"  storage="EV_honmei.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="本命にする"  _clickable_img=""  target="*yes_rinko"  ]
-[glink  color="btn_05_black"  storage="EV_honmei.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="しない"  _clickable_img=""  target="*no_rinko"  ]
+[glink  color="btn_05_black"  storage="EV_honmei.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Chọn làm người yêu duy nhất"  _clickable_img=""  target="*yes_rinko"  ]
+[glink  color="btn_05_black"  storage="EV_honmei.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Không chọn"  _clickable_img=""  target="*no_rinko"  ]
 [s  ]
 *yes_rinko
 
@@ -70,15 +71,15 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-彼女への暖かな感情がどんどん膨らんでいく。[p]
+Tình cảm ấm áp dành cho cô ấy đang ngày một lớn dần lên.[p]
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-[font color="yellow"]蕾を本命にしますか？[resetfont]
+[font color="yellow"]Bạn có muốn chọn Tsubomi làm Honmei không?[resetfont]
 [_tb_end_text]
 
-[glink  color="btn_05_black"  storage="EV_honmei.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="本命にする"  _clickable_img=""  target="*yes_tubomi"  ]
-[glink  color="btn_05_black"  storage="EV_honmei.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="しない"  _clickable_img=""  target="*no_tubomi"  ]
+[glink  color="btn_05_black"  storage="EV_honmei.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Chọn làm người yêu duy nhất"  _clickable_img=""  target="*yes_tubomi"  ]
+[glink  color="btn_05_black"  storage="EV_honmei.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Không chọn"  _clickable_img=""  target="*no_tubomi"  ]
 [s  ]
 *yes_tubomi
 

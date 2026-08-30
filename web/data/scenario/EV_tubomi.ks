@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_EV_tubomi.ks]
 
 [tb_start_tyrano_code]
@@ -26,31 +27,31 @@
 
 [tb_start_text mode=1 ]
 #蕾
-蕾「おかえりなさいませご主人様。アメリアでございます」[p]
+Tsubomi「Kính chào Chủ nhân đã về. Em là Amelia ạ.」[p]
 [_tb_end_text]
 
 [call  storage="character.ks"  target="*tubomi_meido_hutuu"  ]
 [call  storage="BGM.ks"  target="*tubomi"  ]
 [tb_start_text mode=1 ]
-明るい声なのに、なぜだか怒気を含んでいるのがよーくわかる。[p]
-メイドにあるまじき態度だが、[r]そんなこと言おうもんならとんでもない反撃が来るのはわかりきっている。[p]
+Giọng điệu tuy tươi sáng, nhưng không hiểu sao tôi lại nghe ra được sự tức giận ẩn chứa trong đó.[p]
+Một thái độ không thể chấp nhận được đối với một hầu gái,[r]nhưng nếu tôi mà nói ra điều đó thì chắc chắn sẽ nhận lại sự phản đòn kinh khủng.[p]
 #蕾
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_07c.gif" wait="false"]蕾「はぁ……いいわよね、あんたは。いつも暇そうで羨ましいわ。[r]私は朝からずっとバタバタしてて、本当に忙しいのよ」[p]
-ドアを閉めた途端に愛想は消え失せ、しかめっ面になる。[r]俺が本物のご主人様なら、こんな怖いメイドは願い下げだ。[p]
-[舜]「デートしようよ。表のバイトでは同じ職場なんだし」[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_07c.gif" wait="false"]Tsubomi「Hà…… anh thì sướng rồi. Lúc nào trông cũng rảnh rỗi, ghen tị thật đấy.[r]Tôi đây từ sáng đã chạy ngược chạy xuôi, bận tối mắt tối mũi đây này.」[p]
+Vừa đóng cửa phòng lại, vẻ niềm nở của cô nàng liền biến mất, thay vào đó là cái nhăn mặt.[r]Nếu tôi mà là chủ nhân thật, tôi xin kiếu cô hầu gái đáng sợ này.[p]
+[舜]「Hẹn hò đi. Dù sao thì trên danh nghĩa chúng ta cũng làm cùng chỗ mà.」[p]
 #蕾
-蕾「表とか裏とか、変な言い方やめてよ！[r]　リフレは変なことする店じゃないの、来てくれた人を元気にする仕事なんだから！」[p]
-[舜]「そんな怒るなよ。わかったから…！」[p]
+Tsubomi「Cái gì mà danh nghĩa với chả bí mật, đừng có nói kiểu kỳ quặc thế![r]Tiệm Reflex đâu phải là chỗ làm mấy trò mờ ám, công việc của tôi là giúp khách hàng thấy khỏe khoắn hơn mà!」[p]
+[舜]「Đừng có giận thế chứ. Anh biết rồi mà...!」[p]
 #蕾
-蕾「デートしてほしいなら、オプション付けてよ。店外デートコースもあるから」[p]
-蕾が指さしたメニュー表には『店外デート』の文字が確かにある。[p]
-こんなものがある時点で、マッサージ店と言い張るには無理があるだろうと思ったが、ぐっとこらえた。[p]
-[舜]「いいよ、バイト代も入ったし。デートコースで」[p]
+Tsubomi「Nếu muốn hẹn hò thì mua thêm dịch vụ đi. Ở đây có cả gói hẹn hò ngoài tiệm đấy.」[p]
+Trên bảng thực đơn mà Tsubomi chỉ vào quả thực có dòng chữ 『Hẹn hò ngoài tiệm』.[p]
+Đã có cái dịch vụ này rồi mà còn khăng khăng đây là tiệm massage thì thật khiên cưỡng, nhưng tôi đành cố nhịn không nói ra.[p]
+[舜]「Được thôi, anh cũng vừa nhận lương làm thêm mà. Cho một gói hẹn hò đi.」[p]
 #蕾
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_02c.gif" wait="false"]蕾「はぁ？　ママからのバイト代、そうやって無駄使いするのなんかムカつく」[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_02c.gif" wait="false"]Tsubomi「Hả? Tiền lương mẹ trả mà anh lại đem phung phí thế này, nghĩ thôi đã thấy bực mình rồi.」[p]
 #蕾
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_00c.gif" wait="false"]蕾「まぁいいや。オプション分バイト代増えるしね。準備してくる。[r]５分したら迎えに来るから待ってて？」[p]
-相変わらず素っ気ないまま言い捨て、蕾は個室を出て行った。[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_00c.gif" wait="false"]Tsubomi「Mà thôi kệ đi. Nhờ anh mua thêm dịch vụ mà lương tôi cũng tăng lên. Tôi đi chuẩn bị đây.[r]5 phút nữa tôi quay lại đón, ngồi đợi đi nhé?」[p]
+Bỏ lại một câu lạnh lùng như mọi khi, Tsubomi bước ra khỏi phòng.[p]
 [_tb_end_text]
 
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
@@ -62,54 +63,54 @@
 [mask_off  time="1500"  effect="fadeOut"  ]
 [call  storage="BGM.ks"  target="*date"  ]
 [tb_start_text mode=1 ]
-[舜]（こ、これ本当にデートなのか）[p]
-ズンズンと先を歩く女の子のうしろをついていくのがデートなのだろうか。[r]俺なら『古き良きＲＰＧ体験コース』とでも名前を付けるところだ。[p]
-蕾はあちこちのショップ前で立ち止まり、洋服を手に取っていく。[p]
+[舜]（Đ-Đây thật sự là hẹn hò sao?）[p]
+Lẽo đẽo theo sau một cô gái cứ phăm phăm bước đi phía trước thế này gọi là hẹn hò sao.[r]Nếu là tôi, tôi sẽ đặt tên cho nó là 『Trải nghiệm game nhập vai cổ điển』.[p]
+Tsubomi dừng lại trước hết cửa hàng này đến cửa hàng khác, liên tục cầm quần áo lên xem.[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
 #蕾
-蕾「これ可愛い～！　買っちゃおうかなぁ」[p]
-[舜]「そんなに服必要か？　さっきから何着も買ってるだろ」[p]
+Tsubomi「Cái này dễ thương quá~! Hay là mua luôn nhỉ.」[p]
+[舜]「Cô cần nhiều quần áo thế cơ à? Nãy giờ mua mấy bộ rồi đấy.」[p]
 #蕾
-蕾「うわ…それ、女の子に言わないほうがい台詞トップ１０に入ると思うよ」[p]
-[舜]「いや、だって…」[p]
+Tsubomi「Eo ôi... Câu đó lọt top 10 những câu không nên nói với con gái đấy.」[p]
+[舜]「Không, tại vì...」[p]
 #蕾
-蕾「必要経費！　オーディションで着るんだから」[p]
-蕾はしまった、という顔をしたあとすぐにため息ついた。[p]
+Tsubomi「Chi phí cần thiết! Tôi mua để mặc đi thử vai mà.」[p]
+Tsubomi thoáng lộ vẻ mặt như thể lỡ lời, rồi lập tức thở dài.[p]
 #蕾
-蕾「言わないつもりだったのに…無駄使いって思われるよりいっか」[p]
+Tsubomi「Định không nói rồi cơ... nhưng thà nói ra còn hơn bị coi là phung phí.」[p]
 #蕾
-蕾「私、モデルになりたいの。小さい頃から芸能界に入りたくて…」[p]
+Tsubomi「Tôi muốn làm người mẫu. Từ nhỏ tôi đã muốn bước chân vào giới giải trí rồi...」[p]
 #蕾
-蕾「だから事務所に入るために、あちこちオーディション受けてるとこ」[p]
-[舜]「へぇ、初耳だな」[p]
+Tsubomi「Thế nên tôi đang đi thử vai khắp nơi để được vào công ty quản lý.」[p]
+[舜]「Chà, lần đầu tiên anh nghe đấy.」[p]
 #蕾
-蕾「当たり前でしょ？　誰にも言ったことないもの。まだ受かったこともないし…」[p]
+Tsubomi「Đương nhiên rồi? Tôi đã kể cho ai nghe bao giờ đâu. Với lại tôi cũng chưa trúng tuyển lần nào...」[p]
 #蕾
-蕾「第一歩も踏み出せてないのに、誰にも言えないわよ」[p]
-蕾は自嘲するような、切なそうな表情を見せる。[p]
-オーディションに合格しない自分に苛立ち、ふがいなさを感じているようだった。[p]
-[舜]「行動起こしてる時点で第一歩だろ」[p]
+Tsubomi「Còn chưa bước được bước đầu tiên thì sao dám nói với ai chứ.」[p]
+Tsubomi nở một nụ cười tự trào, xen lẫn nét buồn bã.[p]
+Có vẻ như cô ấy đang cảm thấy bực bội và bất lực với bản thân vì mãi không trúng tuyển.[p]
+[舜]「Việc cô bắt tay vào hành động đã là bước đầu tiên rồi còn gì.」[p]
 #蕾
-蕾「ありがと…でも受からなきゃ意味がないでしょ」[p]
+Tsubomi「Cảm ơn anh... nhưng không trúng tuyển thì cũng vô nghĩa thôi.」[p]
 #蕾
-蕾「私より可愛い子なんていっぱいいるってことはわかってるわよ。[r]だからこそ私らしさを見せなくちゃ」[p]
-[舜]「ん？　それならオーディションで着る服はもっとシンプルなほうがいいんじゃない？」[p]
+Tsubomi「Tôi thừa biết là có đầy người dễ thương hơn tôi.[r]Chính vì thế nên tôi mới phải thể hiện cá tính riêng của mình chứ.」[p]
+[舜]「Hửm? Nếu vậy thì trang phục đi thử vai nên đơn giản một chút thì tốt hơn chứ nhỉ?」[p]
 #蕾
-蕾「可愛いほうがいいんじゃないの？　個性も見てもらえるし」[p]
-[舜]「本人の魅力を見るんだから、あんまり華美じゃないほうがいいだろ」[p]
-蕾は「うーん」と唸るように考え込む。[p]
+Tsubomi「Đồ dễ thương thì tốt hơn chứ sao? Người ta còn thấy được cá tính của mình nữa.」[p]
+[舜]「Người ta muốn xem sức hút của bản thân cô mà, nên đừng mặc đồ quá lộng lẫy thì hơn.」[p]
+Tsubomi khẽ rên lên "Ưm..." ra chiều suy nghĩ.[p]
 #蕾
-蕾「まぁ、参考程度に聞いておくわ。帰ったら調べてみる」[p]
+Tsubomi「Mà thôi, tôi sẽ nghe để tham khảo. Về nhà tôi sẽ tìm hiểu thử xem.」[p]
 #蕾
-蕾「じゃあ次のお店に行くわよ！　ついてきてもいいからね」[p]
-[舜]「お前…！　これ店のオプションだろ！」[p]
-突っ込みつつも、えらそうなメイドのうしろをおとなしくついていった。[p]
+Tsubomi「Vậy thì sang cửa hàng tiếp theo thôi! Anh đi theo cũng được đấy.」[p]
+[舜]「Cô... ! Đây là dịch vụ của tiệm đấy nhé!」[p]
+Dù cự nự như vậy, nhưng tôi vẫn ngoan ngoãn đi theo sau cô hầu gái kiêu ngạo ấy.[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]テンションが上がった[resetfont][p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.tension+=2"  name="tension"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]

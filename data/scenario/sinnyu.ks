@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_sinnyu.ks]
 
 [tb_show_message_window  ]
@@ -59,7 +60,7 @@
 [tb_show_message_window  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[舜]「さてと、どこに行こうか」[p]
+[舜]「Được rồi, giờ đi đâu đây」[p]
 [_tb_end_text]
 
 [tb_hide_message_window  ]
@@ -142,7 +143,7 @@
 [cm  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]「急ぐ必要は無いな。一度家に戻ろう」[p]
+[舜]「Cũng không cần phải vội. Quay về nhà trước đã」[p]
 [_tb_end_text]
 
 [mask  time="500"  effect="fadeIn"  color="0x000000"  ]

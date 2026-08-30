@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_sansaku_massajiEV.ks]
 
 [call  storage="ui_base.ks"  target="*top"  ]
@@ -19,16 +20,16 @@
 [tb_show_message_window  ]
 [mask_off  time="800"  effect="slideOutRight"  ]
 [tb_start_text mode=1 ]
-繁華街の喧騒の中で、ひときわ落ち着いた空気が漂うマッサージ店が目にとまった。[p]
-まるで別世界のような静けさが感じられる。[p]
+Giữa sự ồn ào náo nhiệt của khu phố sầm uất, một tiệm massage toát lên bầu không khí đặc biệt tĩnh lặng thu hút ánh nhìn của tôi.[p]
+Cảm giác yên bình tựa như một thế giới khác biệt hoàn toàn.[p]
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-ちょっと入ってみようかな？
+Có nên ghé vào thử một chút không nhỉ?
 [_tb_end_text]
 
-[glink  color="btn_03_black"  storage="sansaku_massajiEV.ks"  size="20"  text="マッサージを受ける（ストレス▼￥5000▼）"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
-[glink  color="btn_03_black"  storage="sansaku_massajiEV.ks"  size="20"  text="帰る"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*kaeru"  ]
+[glink  color="btn_03_black"  storage="sansaku_massajiEV.ks"  size="20"  text="Massage thư giãn (Giảm Stress / -5,000 Yên)"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
+[glink  color="btn_03_black"  storage="sansaku.ks" target="*end"  ]
 [s  ]
 *sinsatu
 
@@ -61,13 +62,13 @@
 [tb_eval  exp="f.money_updated-=5000"  name="money_updated"  cmd="-="  op="t"  val="5000"  val_2="undefined"  ]
 [call  storage="ui_parameter.ks"  target="*money_update"  ]
 [tb_start_text mode=1 ]
-凛子「……ちょっとお疲れ気味かな？はいっ。うん、顔色少し良くなったみたい。よかった」[p]
-（少し心が軽くなった気がする）[p]
+Rinko「……Cháu có vẻ hơi mệt mỏi nhỉ? Xong rồi. Ừm, sắc mặt cháu trông có vẻ tốt hơn chút rồi đấy. May quá.」[p]
+（Cảm giác như tâm hồn cũng nhẹ nhõm hơn đôi chút.）[p]
 [_tb_end_text]
 
 [call  storage="ui_onoff.ks"  target="*tension_UP"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]ストレスが10減少した[resetfont][r][font color="yellow"]テンションが少し上がった[resetfont][r][font color="yellow"]5000円支払った[resetfont][p]
+[font color="yellow"]Mức độ Căng thẳng giảm 10 điểm[resetfont][r][font color="yellow"]Chỉ số Hưng phấn tăng nhẹ[resetfont][r][font color="yellow"]Đã thanh toán 5000 Yên[resetfont][p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -80,8 +81,8 @@
 *okanenasi
 
 [tb_start_text mode=1 ]
-（さすがにこの手持ちじゃ断られるか）[p]
-（仕方ない。今日は諦めよう）[p]
+（Với số tiền mang theo ngần này thì chắc chắn sẽ bị từ chối rồi.）[p]
+（Đành chịu vậy. Hôm nay đành từ bỏ thôi.）[p]
 [_tb_end_text]
 
 [jump  storage="sansaku.ks"  target="*end"  ]

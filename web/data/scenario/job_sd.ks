@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_job_sd.ks]
 
 [bg  time="0"  method="fadeIn"  storage="back_room.png"  cross="false"  ]
@@ -37,7 +38,7 @@ $('.effect1').attr('src', './data/fgimage/default/job_seisou1.gif' + '?' + times
 [wait  time="1400"  ]
 [playse  volume="100"  time="0"  buf="0"  storage="job_sippai.mp3"  ]
 [tb_start_text mode=4 ]
-調子が悪い。思うように仕事をこなせなかった。[r]
+Trạng thái không tốt. Không thể hoàn thành công việc như ý muốn.[r]
 [_tb_end_text]
 
 [wait  time="500"  ]
@@ -64,7 +65,7 @@ $('.effect1').attr('src', './data/fgimage/default/job_seisou2.gif' + '?' + times
 [wait  time="1400"  ]
 [playse  volume="100"  time="0"  buf="0"  storage="job_daiseikou.mp3"  ]
 [tb_start_text mode=4 ]
-大きなミスもなく、まずまず仕事をこなせた。[r]
+Không có sai sót gì lớn, công việc hoàn thành ở mức tạm ổn.[r]
 [_tb_end_text]
 
 [wait  time="500"  ]
@@ -91,7 +92,7 @@ $('.effect1').attr('src', './data/fgimage/default/job_seisou3.gif' + '?' + times
 [wait  time="1400"  ]
 [playse  volume="100"  time="0"  buf="0"  storage="job_daiseikou.mp3"  ]
 [tb_start_text mode=4 ]
-調子がいい。完璧に仕事をこなす事ができた。[r]
+Trạng thái rất tốt. Công việc được hoàn thành một cách hoàn hảo.[r]
 [_tb_end_text]
 
 [wait  time="500"  ]
@@ -118,7 +119,7 @@ $('.effect1').attr('src', './data/fgimage/default/job_kintore1.gif' + '?' + time
 [wait  time="1400"  ]
 [playse  volume="100"  time="0"  buf="0"  storage="job_sippai.mp3"  ]
 [tb_start_text mode=4 ]
-調子が悪い。思うようにトレーニングをこなせなかった。[r]
+Trạng thái không tốt. Không thể hoàn thành buổi tập như ý muốn.[r]
 [_tb_end_text]
 
 [wait  time="500"  ]
@@ -145,7 +146,7 @@ $('.effect1').attr('src', './data/fgimage/default/job_kintore2.gif' + '?' + time
 [wait  time="1400"  ]
 [playse  volume="100"  time="0"  buf="0"  storage="job_daiseikou.mp3"  ]
 [tb_start_text mode=4 ]
-可もなく不可もなく、予定通りにトレーニングをこなせた。[r]
+Không có gì đặc biệt, buổi tập được hoàn thành đúng như dự kiến.[r]
 [_tb_end_text]
 
 [wait  time="500"  ]
@@ -172,7 +173,7 @@ $('.effect1').attr('src', './data/fgimage/default/job_kintore3.gif' + '?' + time
 [wait  time="1400"  ]
 [playse  volume="100"  time="0"  buf="0"  storage="job_daiseikou.mp3"  ]
 [tb_start_text mode=4 ]
-集中力も切れずに、文句なしの内容だった！[r]
+Độ tập trung không hề giảm sút, một buổi tập hoàn hảo không có chỗ nào chê![r]
 [_tb_end_text]
 
 [wait  time="500"  ]
@@ -199,7 +200,7 @@ $('.effect1').attr('src', './data/fgimage/default/job_massage1.gif' + '?' + time
 [wait  time="1400"  ]
 [playse  volume="100"  time="0"  buf="0"  storage="job_sippai.mp3"  ]
 [tb_start_text mode=4 ]
-調子が悪い。思うように仕事をこなせなかった。[r]
+Trạng thái không tốt. Không thể hoàn thành công việc như ý muốn.[r]
 [_tb_end_text]
 
 [wait  time="500"  ]
@@ -226,7 +227,7 @@ $('.effect1').attr('src', './data/fgimage/default/job_massage2.gif' + '?' + time
 [wait  time="1400"  ]
 [playse  volume="100"  time="0"  buf="0"  storage="job_daiseikou.mp3"  ]
 [tb_start_text mode=4 ]
-大きなミスもなく、まずまず仕事をこなせた。[r]
+Không có sai sót gì lớn, công việc hoàn thành ở mức tạm ổn.[r]
 [_tb_end_text]
 
 [wait  time="500"  ]
@@ -253,7 +254,7 @@ $('.effect1').attr('src', './data/fgimage/default/job_massage3.gif' + '?' + time
 [wait  time="1400"  ]
 [playse  volume="100"  time="0"  buf="0"  storage="job_daiseikou.mp3"  ]
 [tb_start_text mode=4 ]
-調子がいい。完璧に仕事をこなす事ができた。[r]
+Trạng thái rất tốt. Công việc được hoàn thành một cách hoàn hảo.[r]
 [_tb_end_text]
 
 [wait  time="500"  ]
@@ -280,7 +281,7 @@ $('.effect1').attr('src', './data/fgimage/default/job_jim1.gif' + '?' + timestam
 [wait  time="1400"  ]
 [playse  volume="100"  time="0"  buf="0"  storage="job_sippai.mp3"  ]
 [tb_start_text mode=4 ]
-調子が悪い。思うように仕事をこなせなかった。[r]
+Trạng thái không tốt. Không thể hoàn thành công việc như ý muốn.[r]
 [_tb_end_text]
 
 [wait  time="500"  ]
@@ -307,7 +308,7 @@ $('.effect1').attr('src', './data/fgimage/default/job_jim2.gif' + '?' + timestam
 [wait  time="1400"  ]
 [playse  volume="100"  time="0"  buf="0"  storage="job_daiseikou.mp3"  ]
 [tb_start_text mode=4 ]
-大きなミスもなく、まずまず仕事をこなせた。[r]
+Không có sai sót gì lớn, công việc hoàn thành ở mức tạm ổn.[r]
 [_tb_end_text]
 
 [wait  time="500"  ]
@@ -334,7 +335,7 @@ $('.effect1').attr('src', './data/fgimage/default/job_jim3.gif' + '?' + timestam
 [wait  time="1400"  ]
 [playse  volume="100"  time="0"  buf="0"  storage="job_daiseikou.mp3"  ]
 [tb_start_text mode=4 ]
-調子がいい。完璧に仕事をこなす事ができた。[r]
+Trạng thái rất tốt. Công việc được hoàn thành một cách hoàn hảo.[r]
 [_tb_end_text]
 
 [wait  time="500"  ]
@@ -361,7 +362,7 @@ $('.effect1').attr('src', './data/fgimage/default/job_fx1.gif' + '?' + timestamp
 [wait  time="1400"  ]
 [playse  volume="100"  time="0"  buf="0"  storage="job_sippai.mp3"  ]
 [tb_start_text mode=4 ]
-調子が悪い。狙いは悪くなかったが、全然噛み合わなかった。[r]
+Trạng thái không tốt. Mục tiêu không tồi nhưng lại chẳng ăn nhập chút nào.[r]
 [_tb_end_text]
 
 [wait  time="500"  ]
@@ -388,7 +389,7 @@ $('.effect1').attr('src', './data/fgimage/default/job_fx2.gif' + '?' + timestamp
 [wait  time="1400"  ]
 [playse  volume="100"  time="0"  buf="0"  storage="job_daiseikou.mp3"  ]
 [tb_start_text mode=4 ]
-大きなミスもなく、可もなく不可もなくな一日だった。[r]
+Không có sai sót gì lớn, một ngày bình thường không có gì đặc biệt.[r]
 [_tb_end_text]
 
 [wait  time="500"  ]
@@ -415,7 +416,7 @@ $('.effect1').attr('src', './data/fgimage/default/job_fx3.gif' + '?' + timestamp
 [wait  time="1400"  ]
 [playse  volume="100"  time="0"  buf="0"  storage="job_daiseikou.mp3"  ]
 [tb_start_text mode=4 ]
-調子がいい。理想的なトレードができた。[r]
+Trạng thái rất tốt. Một phiên giao dịch lý tưởng.[r]
 [_tb_end_text]
 
 [wait  time="500"  ]

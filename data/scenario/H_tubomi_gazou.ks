@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_H_tubomi_gazou.ks]
 
 *supiritasu_yukkuri_cam1

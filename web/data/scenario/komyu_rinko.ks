@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_komyu_rinko.ks]
 
 [tb_show_message_window  ]
@@ -28,19 +29,19 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=4 ]
-（何を話そうかな？）
+（Nên nói chuyện gì đây nhỉ?）
 [_tb_end_text]
 
-[glink  color="btn_05_black"  storage="komyu_rinko.ks"  size="20"  width="280"  height="50"  text="雑談"  target="*hanasu_top"  x="990"  y="220"  _clickable_img=""  ]
-[glink  color="btn_05_black"  storage="komyu_rinko.ks"  size="20"  width="280"  height="50"  text="プレゼント"  target="*purezento_top"  x="990"  y="280"  _clickable_img=""  ]
-[glink  color="btn_05_black"  storage="komyu_rinko.ks"  size="20"  width="280"  height="50"  text="デートに誘う"  target="*deto_top"  x="990"  y="340"  _clickable_img=""  ]
-[glink  color="btn_05_black"  storage="komyu_rinko.ks"  size="20"  width="280"  height="50"  text="夕食に誘う"  target="*yuusyoku_top"  x="990"  y="400"  _clickable_img=""  ]
-[glink  color="btn_05_black"  storage="komyu_rinko.ks"  size="20"  width="280"  height="50"  text="適当に切り上げる"  target="*end_top"  x="990"  y="460"  _clickable_img=""  ]
+[glink  color="btn_05_black"  storage="komyu_rinko.ks"  size="20"  width="280"  height="50"  text="Trò chuyện phiếm"  target="*hanasu_top"  x="990"  y="220"  _clickable_img=""  ]
+[glink  color="btn_05_black"  storage="komyu_rinko.ks"  size="20"  width="280"  height="50"  text="Tặng quà"  target="*purezento_top"  x="990"  y="280"  _clickable_img=""  ]
+[glink  color="btn_05_black"  storage="komyu_rinko.ks"  size="20"  width="280"  height="50"  text="Rủ đi hẹn hò"  target="*deto_top"  x="990"  y="340"  _clickable_img=""  ]
+[glink  color="btn_05_black"  storage="komyu_rinko.ks"  size="20"  width="280"  height="50"  text="Rủ đi ăn tối"  target="*yuusyoku_top"  x="990"  y="400"  _clickable_img=""  ]
+[glink  color="btn_05_black"  storage="komyu_rinko.ks"  size="20"  width="280"  height="50"  text="Kết thúc trò chuyện"  target="*end_top"  x="990"  y="460"  _clickable_img=""  ]
 [call  storage="komyu_rinko.ks"  target="*koibito"  cond="f.koukando_rinko_koibito==1"  ]
 [s  ]
 *koibito
 
-[glink  color="btn_05_yellow"  storage="komyu_rinko.ks"  size="20"  width="280"  height="50"  text="えっちしたい"  target="*H"  x="990"  y="160"  _clickable_img=""  ]
+[glink  color="btn_05_yellow"  storage="komyu_rinko.ks"  size="20"  width="280"  height="50"  text="Muốn làm tình"  target="*H"  x="990"  y="160"  _clickable_img=""  ]
 [return  ]
 *hanasu_top
 
@@ -137,7 +138,7 @@
 *end_top
 
 [tb_start_text mode=1 ]
-（別に仲良くする必要も無いな）[p]
+（Cũng chẳng cần thiết phải tỏ ra thân thiết làm gì.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.pure_kettei_on=0"  name="pure_kettei_on"  cmd="="  op="t"  val="0"  ]
@@ -152,8 +153,8 @@
 *kaiwa_1nigate
 
 [tb_start_text mode=1 ]
-凛子は控えめに微笑みながら話題をふってくれた。[r]まだどこか距離は感じるものの、こちらに興味を持とうとしてくれているのが伝わってくる。[p]
-ほんの少しだけ心の距離が近づいた気がする。[p]
+Rinko nở nụ cười e dè và gợi chuyện với tôi.[r]Dù vẫn cảm thấy có chút khoảng cách, nhưng tôi có thể nhận ra cô đang cố gắng quan tâm đến mình.[p]
+Cảm giác như khoảng cách trong lòng đã thu hẹp lại một chút.[p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP3"  ]
@@ -166,8 +167,8 @@
 *kaiwa_2hutuu
 
 [tb_start_text mode=1 ]
-凛子は微笑みながら自然と話題をふってくれた。[r]その視線や仕草には、どこか以前よりも柔らかさが感じられる。[p]
-ほんの少しだけ心の距離が近づいた気がする。[p]
+Rinko mỉm cười và tự nhiên gợi chuyện với tôi.[r]Ánh mắt và cử chỉ của cô ấy mang lại cảm giác dịu dàng hơn trước.[p]
+Cảm giác như khoảng cách trong lòng đã thu hẹp lại một chút.[p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP3"  ]
@@ -180,8 +181,8 @@
 *kaiwa_3yuukou
 
 [tb_start_text mode=1 ]
-凛子は柔らかな笑みを浮かべながら話題をふってくれた。[r]まっすぐこちらを見つめていて、仕草にも親しみを感じることができた。[p]
-ほんの少しだけ心の距離が近づいた気がする。[p]
+Rinko nở nụ cười dịu dàng và gợi chuyện với tôi.[r]Cô ấy nhìn thẳng vào tôi, cử chỉ cũng toát lên sự thân thiện.[p]
+Cảm giác như khoảng cách trong lòng đã thu hẹp lại một chút.[p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP3"  ]
@@ -194,8 +195,8 @@
 *kaiwa_4suki
 
 [tb_start_text mode=1 ]
-凛子は微笑みながら楽しそうに話題をふってくれた。[r]その言葉のひとつひとつには、こちらへの優しさがにじんでいて自然と胸があたたかくなった。[p]
-ほんの少しだけ心の距離が近づいた気がする。[p]
+Rinko mỉm cười vui vẻ và gợi chuyện với tôi.[r]Từng lời nói của cô ấy đều chan chứa sự dịu dàng dành cho tôi, khiến lòng tôi tự nhiên cảm thấy ấm áp.[p]
+Cảm giác như khoảng cách trong lòng đã thu hẹp lại một chút.[p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP3"  ]
@@ -215,14 +216,14 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_01c.gif"]凛子「綺麗ね。ありがとう…こんなに素敵なもの、いただいちゃっていいの？」[p]
-凛子「でも、値段も高かったでしょう…？　なんだか申し訳ないな…」[p]
-凛子「もちろん気持ちは嬉しいよ。大切にするからね」[p]
-(まずまず喜んでくれたようだ)[p]
+[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_01c.gif"]Rinko「Đẹp quá. Cảm ơn cháu nhé... Món đồ tuyệt vời thế này, cô nhận có được không?」[p]
+Rinko「Nhưng mà, chắc món này cũng đắt tiền lắm đúng không...? Tự dưng cô thấy ngại quá...」[p]
+Rinko「Tất nhiên là cô rất vui vì tấm lòng của cháu. Cô sẽ trân trọng nó.」[p]
+(Có vẻ như cô ấy cũng khá vui.)[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]テンションが少し上がった[resetfont][p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng một chút[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.pure_akuse-=1"  name="pure_akuse"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
@@ -246,14 +247,14 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_01c.gif"]凛子「いい香り…あ、コーヒー豆…！　[r]しかも、私の好きな豆の種類ね。すごい、そこまで調べてくれたのね」[p]
-凛子「ありがとう。あとで美味しくいただくね」[p]
-凛子「ふふ、[舜]くんのおかげでこのコーヒー豆がもっと好きになっちゃった」[p]
-（すごく喜んでくれたようだ）[p]
+[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_01c.gif"]Rinko「Thơm quá... A, hạt cà phê này...! [r]Hơn nữa còn là loại hạt mà cô thích nữa. Giỏi thật đấy, cháu đã tìm hiểu đến mức đó cơ à.」[p]
+Rinko「Cảm ơn cháu nhé. Lát nữa cô sẽ thưởng thức thật ngon lành.」[p]
+Rinko「Khc..., nhờ có Shun-kun mà cô lại càng thích loại hạt cà phê này hơn rồi đấy.」[p]
+（Có vẻ cô ấy cực kỳ vui.）[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]テンションが少し上がった[resetfont][p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng một chút[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.pure_coffee-=1"  name="pure_coffee"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
@@ -277,13 +278,13 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_01c.gif"]凛子「ありがとう。[r]これ、[舜]くんが好きなゲームなの？　へぇ、私はゲームに詳しくないから…」[p]
-凛子「でも[舜]くんの好きなものを知れて嬉しいよ。ありがとう」[p]
-(まずまず喜んでくれたようだ)[p]
+[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_01c.gif"]Rinko「Cảm ơn cháu nhé.[r]Đây là tựa game mà [舜]-kun thích à? Ồ, cô thì không rành về game lắm...」[p]
+Rinko「Nhưng mà được biết về sở thích của [舜]-kun cô vui lắm. Cảm ơn cháu.」[p]
+(Có vẻ như cô ấy cũng khá vui.)[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]テンションが少し上がった[resetfont][p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng một chút[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.pure_game-=1"  name="pure_game"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
@@ -307,15 +308,15 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_04c.gif"]凛子「素敵…！　綺麗な花束ね。え、これを私に…？」[p]
-凛子「ふふ、嬉しい。[r]男の人から花束を貰うことなんてないから…なんだかお姫様にでもなった気分」[p]
-凛子「あ、やだ。お姫様だなんて。図々しいかな…ふふ、つい浮かれてしまって」[p]
-凛子「ありがとう。大切に飾らせてもらうわね」[p]
-（すごく喜んでくれたようだ）[p]
+[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_04c.gif"]Rinko「Tuyệt quá...! Bó hoa đẹp thật đấy. Ơ, cháu tặng cô bó hoa này sao...?」[p]
+Rinko「Khc..., cô vui lắm.[r]Cô chẳng mấy khi được đàn ông tặng hoa cả... tự dưng có cảm giác như mình hóa thành công chúa vậy.」[p]
+Rinko「A, chết thật. Công chúa gì chứ. Nghe trơ trẽn quá nhỉ... Khc..., tự dưng cô lại phấn khích quá đà.」[p]
+Rinko「Cảm ơn cháu nhé. Cô sẽ trang trí nó thật cẩn thận.」[p]
+（Có vẻ cô ấy cực kỳ vui.）[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]テンションが少し上がった[resetfont][p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng một chút[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.pure_hana-=1"  name="pure_hana"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
@@ -339,14 +340,14 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_01c.gif"]凛子「ありがとう、このコスメはちょっと若い子用のものかも…[r]あ、でもせっかくだから使ってみようかな」[p]
-凛子「案外、似合うかもしれないし…[r]自分じゃ選ばないものと出会えるのは、プレゼントの良さだし素敵なことよね」[p]
-凛子「試してみるね？　[舜]くん、ありがとう」[p]
-(まずまず喜んでくれたようだ)[p]
+[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_01c.gif"]Rinko「Cảm ơn cháu nhé, nhưng loại mỹ phẩm này có vẻ dành cho mấy cô gái trẻ...[r]A, nhưng mà cháu đã cất công tặng thì để cô dùng thử xem sao.」[p]
+Rinko「Biết đâu lại hợp không chừng...[r]Việc bắt gặp những món đồ mà tự bản thân mình không bao giờ chọn cũng là một điểm hay của việc nhận quà, tuyệt vời lắm đúng không.」[p]
+Rinko「Cô sẽ dùng thử nhé? Cảm ơn [舜]-kun.」[p]
+(Có vẻ như cô ấy cũng khá vui.)[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]テンションが少し上がった[resetfont][p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng một chút[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.pure_konpakuto-=1"  name="pure_konpakuto"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
@@ -370,16 +371,16 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_01c.gif"]凛子「わぁ、美味しそう…！　仕事中に小腹が空いちゃうことも多いから、ありがたいな」[p]
-凛子「でも甘くて良い匂いで…一気に全部食べちゃいそう」[p]
-[舜]「え？　いいじゃないですか。独り占めしてください」[p]
-凛子「だめよ。だって…大人は太っちゃったら、なかなか痩せないんだからね？」[p]
-凛子「ムチムチになったら、責任取ってもらっちゃおっかな…？　[r]ふふ、冗談よ。ありがとうね」[p]
-（すごく喜んでくれたようだ）[p]
+[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_01c.gif"]Rinko「Oa, trông ngon quá...! Đang làm việc cô cũng hay bị đói bụng, món này đúng là cứu tinh đấy.」[p]
+Rinko「Nhưng mà mùi thơm ngọt ngào thế này... khéo cô ăn hết sạch trong một nốt nhạc mất.」[p]
+[舜]「Ơ? Thế cũng tốt mà. Cô cứ giữ ăn một mình đi.」[p]
+Rinko「Không được đâu. Tại vì... người lớn mà béo lên thì khó giảm cân lắm cháu biết không?」[p]
+Rinko「Nếu người cô mà trở nên đầy đặn quá thì cháu phải chịu trách nhiệm đấy nhé...? [r]Khc..., cô đùa thôi. Cảm ơn cháu nhé.」[p]
+（Có vẻ cô ấy cực kỳ vui.）[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]テンションが少し上がった[resetfont][p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng một chút[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.pure_wagasi-=1"  name="pure_wagasi"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
@@ -396,15 +397,15 @@
 *deto_nigate_seikou
 
 [tb_start_text mode=1 ]
-凛子「デート、かぁ…そうね[r]お店に来てくれたら、お茶くらいは出せるけど…それでもいいかな？」[p]
-[舜]「もちろん！」[p]
-凛子「お客さんの予約がない時に遊びに来てね」[p]
+Rinko「Hẹn hò, à... Đúng rồi nhỉ,[r]nếu cháu đến tiệm thì cô có thể pha trà mời cháu... Như vậy có được không?」[p]
+[舜]「Tất nhiên là được ạ!」[p]
+Rinko「Lúc nào không có khách đặt lịch thì cháu ghé chơi nhé.」[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]凛子とデートの約束をした[resetfont][p]
-（次の休日か、忘れないようにしないとな）[p]
+[font color="yellow"]Đã hẹn hò với Rinko[resetfont][p]
+（Ngày nghỉ tới à, phải nhớ kỹ mới được.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.deto_rinko=1"  name="deto_rinko"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -412,16 +413,16 @@
 *deto_hutuu_seikou
 
 [tb_start_text mode=1 ]
-凛子「ふふっ、私を誘ってくれるの？　ありがとう」[p]
-凛子「でも予約がいっぱいで、外に出る時間がないから[r]お店に来てくれたら、ゆっくりお話できるよ」[p]
-[舜]（やったぜ！）[p]
+Rinko「Khc..., cháu rủ cô đi chơi sao? Cảm ơn cháu nhé.」[p]
+Rinko「Nhưng vì lịch đặt trước kín hết rồi nên cô không có thời gian ra ngoài.[r]Nếu cháu đến tiệm thì chúng ta có thể từ từ nói chuyện.」[p]
+[舜]（Tuyệt quá!）[p]
 
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]凛子とデートの約束をした[resetfont][p]
-（次の休日か、忘れないようにしないとな）[p]
+[font color="yellow"]Đã hẹn hò với Rinko[resetfont][p]
+（Ngày nghỉ tiếp theo à, mình phải nhớ mới được.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.deto_rinko=1"  name="deto_rinko"  cmd="="  op="t"  val="1"  ]
@@ -429,15 +430,15 @@
 *deto_yuukou_seikou
 
 [tb_start_text mode=1 ]
-凛子「デート？　ふふ、とっても素敵なお誘いなんだけど」[p]
-凛子「しばらくは忙しくて難しそうなの。その代わりお店に来るのはどう？[r]美味しいお菓子とお茶でおもてなしできるよ」[p]
-[舜]（やったぜ！）[p]
+Rinko「Hẹn hò sao? Fufu, một lời mời thật tuyệt vời.」[p]
+Rinko「Nhưng dạo này cô hơi bận nên chắc là khó rồi. Thay vào đó, cháu đến tiệm thì sao?[r]Cô sẽ tiếp đãi cháu bằng bánh kẹo ngon và trà.」[p]
+[舜]（Tuyệt quá!）[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]凛子とデートの約束をした[resetfont][p]
-（次の休日か、忘れないようにしないとな）[p]
+[font color="yellow"]Đã hẹn hò với Rinko[resetfont][p]
+（Ngày nghỉ tiếp theo à, mình phải nhớ mới được.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.deto_rinko=1"  name="deto_rinko"  cmd="="  op="t"  val="1"  ]
@@ -445,17 +446,17 @@
 *deto_suki_seikou
 
 [tb_start_text mode=1 ]
-凛子「えっ…嬉しい…[舜]くんと出かけたら楽しいだろうな」[p]
-凛子「でも仕事があるから出かけるのは難しくて…あの、もしよかったら──」[p]
-凛子「お店に、来ない？　２人きりでゆっくり話せるよ？」[p]
-[舜]「もちろん行きます！」[p]
+Rinko「Hả... Cô vui lắm... Nếu được đi chơi cùng Shun-kun thì chắc chắn sẽ rất vui.」[p]
+Rinko「Nhưng vì bận công việc nên cô khó ra ngoài lắm... Nếu cháu không phiền thì──」[p]
+Rinko「Cháu đến tiệm được không? Chỉ có hai người chúng ta, có thể từ từ nói chuyện đấy.」[p]
+[舜]「Tất nhiên là cháu sẽ đến rồi!」[p]
 
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]凛子とデートの約束をした[resetfont][p]
-（次の休日か、忘れないようにしないとな）[p]
+[font color="yellow"]Đã hẹn hò với Rinko[resetfont][p]
+（Ngày nghỉ tiếp theo à, mình phải nhớ mới được.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.deto_rinko=1"  name="deto_rinko"  cmd="="  op="t"  val="1"  ]
@@ -463,16 +464,16 @@
 *deto_koibito_seikou
 
 [tb_start_text mode=1 ]
-凛子「もちろん…！　ふふ、デートだなんて楽しみ」[p]
-凛子「[舜]くんのおかげで、毎日ときめいていてお肌も調子がいいみたい」[p]
-凛子「どこに行こうか、一緒に考えなくちゃね」[p]
+Rinko「Tất nhiên rồi...! Fufu, hẹn hò cơ đấy, cô mong chờ lắm.」[p]
+Rinko「Nhờ có Shun-kun mà ngày nào tim cô cũng đập thình thịch, da dẻ cũng đẹp lên hẳn đấy.」[p]
+Rinko「Chúng ta phải cùng nhau nghĩ xem nên đi đâu nhé.」[p]
 
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]凛子とデートの約束をした[resetfont][p]
-（次の休日か、忘れないようにしないとな）[p]
+[font color="yellow"]Đã hẹn hò với Rinko[resetfont][p]
+（Ngày nghỉ tiếp theo à, mình phải nhớ mới được.）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.deto_rinko=1"  name="deto_rinko"  cmd="="  op="t"  val="1"  ]
@@ -511,15 +512,15 @@
 *syokuji_nigate_seikou
 
 [tb_start_text mode=1 ]
-凛子「そうね…それも楽しいかも」[p]
-凛子「でもお店があるから、うちで簡単な食事でもしよっか」[p]
+Rinko「Đúng nhỉ... Thế cũng vui đấy.」[p]
+Rinko「Nhưng cô còn phải trông tiệm, hay là chúng ta dùng bữa đơn giản ở nhà cô nhé.」[p]
 [_tb_end_text]
 
 [jump  storage="EV_deto_dinner.ks"  target="*rinko"  ]
 *syokuji_nigate_sippai
 
 [tb_start_text mode=1 ]
-凛子「ごめんなさい…ちょっと食事には行けないかな…また明日ね」[p]
+Rinko「Cô xin lỗi... Chắc là cô không đi ăn được rồi... Hẹn cháu ngày mai nhé.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.syokuji_sippai=1"  name="syokuji_sippai"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -527,16 +528,16 @@
 *syokuji_hutuu_seikou
 
 [tb_start_text mode=1 ]
-凛子「そうね…それも楽しいかも」[p]
-凛子「ふふっ…じゃあ、うちで簡単な食事でもどう？お店もあるし…ちょっとだけなら、ね」[p]
+Rinko「Đúng nhỉ... Thế cũng vui đấy.」[p]
+Rinko「Fufu... Vậy dùng bữa đơn giản ở nhà cô thì sao? Cô còn phải trông tiệm nữa... Chỉ một lát thôi nhé.」[p]
 [_tb_end_text]
 
 [jump  storage="EV_deto_dinner.ks"  target="*rinko"  ]
 *syokuji_hutuu_sippai
 
 [tb_start_text mode=1 ]
-凛子「ごめんなさい、やらなくちゃいけないことがあって」[p]
-凛子「お疲れ様、気をつけて帰ってね」[p]
+Rinko「Cô xin lỗi, cô có việc phải làm mất rồi.」[p]
+Rinko「Cháu vất vả rồi, đi đường cẩn thận nhé.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.syokuji_sippai=1"  name="syokuji_sippai"  cmd="="  op="t"  val="1"  ]
@@ -544,16 +545,16 @@
 *syokuji_yuukou_seikou
 
 [tb_start_text mode=1 ]
-凛子「ふふ、嬉しいお誘いありがと。」[p]
-凛子「じゃあ、よかったらうちで軽く食べていかない？お店もあるし、気を使わなくていいから」[p]
+Rinko「Fufu, cảm ơn cháu vì lời mời nhé.」[p]
+Rinko「Vậy, nếu được thì cháu ghé nhà cô ăn nhẹ nhé? Cô còn phải trông tiệm nữa, cháu không cần phải giữ kẽ đâu.」[p]
 [_tb_end_text]
 
 [jump  storage="EV_deto_dinner.ks"  target="*rinko"  ]
 *syokuji_yuukou_sippai
 
 [tb_start_text mode=1 ]
-凛子「行きたいけど…用事があるの。また誘って？」[p]
-凛子「その時は、私がご馳走するからね」[p]
+Rinko「Cô cũng muốn đi lắm... nhưng lại bận việc mất rồi. Lần sau cháu lại rủ cô nhé?」[p]
+Rinko「Lúc đó cô sẽ khao cháu nhé.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.syokuji_sippai=1"  name="syokuji_sippai"  cmd="="  op="t"  val="1"  ]
@@ -561,16 +562,16 @@
 *syokuji_suki_seikou
 
 [tb_start_text mode=1 ]
-凛子「え、夕飯？　ふふ、嬉しい…男の子にご飯に誘ってもらえるなんて」[p]
-凛子「うふふ、よかったら、うちで軽く食べていかない？[r]お店もあるし…二人きりで、ゆっくり話せるから」[p]
+Rinko「Hả, bữa tối sao? Fufu, cô vui lắm... Không ngờ lại được một chàng trai rủ đi ăn đấy.」[p]
+Rinko「Ufufu, nếu được thì cháu ghé nhà cô ăn nhẹ nhé?[r]Cô còn phải trông tiệm nữa... Chỉ có hai người chúng ta, có thể từ từ nói chuyện.」[p]
 [_tb_end_text]
 
 [jump  storage="EV_deto_dinner.ks"  target="*rinko"  ]
 *syokuji_suki_sippai
 
 [tb_start_text mode=1 ]
-凛子「ごめんなさい…ちょっと忙しくて。でも誘ってくれて嬉しかった」[p]
-凛子「もしよかったら、また誘って？　その時は絶対に行くから…」[p]
+Rinko「Cô xin lỗi... Cô hơi bận một chút. Nhưng cô rất vui vì cháu đã rủ cô.」[p]
+Rinko「Nếu được, lần sau cháu lại rủ cô nhé? Khi đó cô nhất định sẽ đi...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.syokuji_sippai=1"  name="syokuji_sippai"  cmd="="  op="t"  val="1"  ]
@@ -578,18 +579,18 @@
 *syokuji_koibito_seikou
 
 [tb_start_text mode=1 ]
-凛子「もちろん。あなたと一緒なら、どこでも楽しいよ」[p]
-凛子「ふふ、浮かれすぎかな？　嬉しくて…」[p]
-凛子「ねぇ、今日はうちで食べない？あなたのために手料理、作ってあげたいな」[p]
+Rinko「Tất nhiên rồi. Nếu đi cùng cháu thì ở đâu cũng vui cả.」[p]
+Rinko「Fufu, cô phấn khích quá chăng? Tại cô vui quá...」[p]
+Rinko「Này, hôm nay cháu ăn ở nhà cô nhé? Cô muốn đích thân nấu ăn cho cháu.」[p]
 [_tb_end_text]
 
 [jump  storage="EV_deto_dinner.ks"  target="*rinko"  ]
 *syokuji_koibito_sippai
 
 [tb_start_text mode=1 ]
-凛子「残念…用事があって駄目なの。[r]代わりに、今度ウチにご飯を食べに来るのはどう？」[p]
-凛子「[舜]くんの好きなもの、なんでも作って待ってるから」[p]
-凛子「いっそ、泊まっていってくれてもいい…からね？」[p]
+Rinko「Tiếc quá... Cô có việc bận nên không được rồi.[r]Thay vào đó, lần tới cháu đến nhà cô ăn cơm thì sao?」[p]
+Rinko「Cô sẽ nấu bất cứ món gì Shun-kun thích và đợi cháu.」[p]
+Rinko「Thà rằng, cháu ở lại qua đêm cũng được... nhé?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.syokuji_sippai=1"  name="syokuji_sippai"  cmd="="  op="t"  val="1"  ]
@@ -597,21 +598,21 @@
 *okanenasi
 
 [tb_start_text mode=1 ]
-（さすがにこの手持ちじゃ無理か）[p]
+（Với số tiền hiện tại thì chắc là không đủ rồi.）[p]
 [_tb_end_text]
 
 [jump  storage="komyu_nagi.ks"  target="*top"  ]
 *deto_sasoenai1
 
 [tb_start_text mode=1 ]
-凛子「お店で待ってるね？ お仕事の話抜きで、ゆっくり話せるといいね」[p]
+Rinko「Cô đợi cháu ở tiệm nhé? Gác lại chuyện công việc, chúng ta từ từ nói chuyện thì tốt biết mấy.」[p]
 [_tb_end_text]
 
 [jump  storage="komyu_rinko.ks"  target="*top"  ]
 *deto_sasoenai2
 
 [tb_start_text mode=1 ]
-(そういえば、その日は予定があったはずだ。誘うのはまた今度にしておこう）[p]
+(Nhắc mới nhớ, ngày hôm đó mình có hẹn mất rồi. Để lần sau rủ vậy.）[p]
 [_tb_end_text]
 
 [jump  storage="komyu_rinko.ks"  target="*top"  ]
@@ -621,7 +622,7 @@
 *pure_nikaime
 
 [tb_start_text mode=1 ]
-[舜]（一度に渡したら、なんか俺が必死みたいだしな…）[p]
+[舜]（Nếu đưa hết một lần thì trông mình có vẻ tuyệt vọng quá...）[p]
 [_tb_end_text]
 
 [jump  storage="komyu_rinko.ks"  target="*top"  ]

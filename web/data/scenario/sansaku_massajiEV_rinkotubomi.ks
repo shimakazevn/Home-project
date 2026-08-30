@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_sansaku_massajiEV_rinkotubomi.ks]
 
 [call  storage="ui_base.ks"  target="*top"  ]
@@ -15,15 +16,15 @@
 [tb_show_message_window  ]
 [mask_off  time="800"  effect="slideOutRight"  ]
 [tb_start_text mode=1 ]
-店内は空いており、いつものように穏やかな時間が流れている。[p]
+Bên trong tiệm khá vắng vẻ, một khoảng thời gian êm đềm vẫn trôi qua như thường lệ.[p]
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-（蕾が来ているようだ。話しかけてみようかな？）
+（Tsubomi có vẻ đang ở đây. Có nên bắt chuyện thử không nhỉ?）
 [_tb_end_text]
 
-[glink  color="btn_03_black"  storage="sansaku_massajiEV_rinkotubomi.ks"  size="20"  text="二人に話しかける"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*hanasu"  ]
-[glink  color="btn_03_black"  storage="sansaku_massajiEV.ks"  size="20"  text="マッサージを受ける（体力▲￥5000▼）"  x="415"  y="290"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
+[glink  color="btn_03_black"  storage="sansaku_massajiEV_rinkotubomi.ks"  size="20"  text="Bắt chuyện với cả hai người"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*hanasu"  ]
+[glink  color="btn_03_black"  storage="sansaku_massajiEV.ks"  size="20"  text="Massage trị liệu (Hồi Thể lực / -5,000 Yên)"  x="415"  y="290"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
 [s  ]
 *hanasu
 
@@ -49,20 +50,20 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-凛子「うーん…この日、予約いっぱいだからもう１人いてくれたら嬉しいんだけど」[p]
-蕾「それなら私がお店手伝うから」[p]
-[舜]「あ、それなら俺が──」[p]
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_02c.gif"]蕾「私が出勤するからいいんだってば…！　ママ、私で良いでしょ？」[p]
-凛子「えっ？　連勤になるけど大丈夫…？　忙しいんじゃないの？」[p]
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_01c.gif"]蕾「平気だよ。誰かさんはお喋りが苦手みたいだし、私のほうがお客さん受けもいいでしょ？」[p]
-[舜]（ぐ…っ、正論すぎて言い返せねぇ）[p]
-[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_06c.gif"]凛子「ごめんね、[舜]くん。また必要な時に相談させてもらっていいかな？」[p]
-[舜]「あ、は、はい…」[p]
-[舜]（今日はこのくらいにしておいてやらぁ…）[p]
+Rinko「Ừm... Ngày hôm nay kín lịch đặt trước rồi nên nếu có thêm một người nữa thì tốt biết mấy.」[p]
+Tsubomi「Nếu vậy thì để con phụ giúp tiệm cho.」[p]
+[舜]「A, nếu vậy thì để tôi──」[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_02c.gif"]Tsubomi「Đã bảo là con đi làm rồi cơ mà...! Mẹ, con làm là được rồi đúng không?」[p]
+Rinko「Hả? Nhưng làm liên tục như vậy có ổn không...? Con đang bận mà đúng không?」[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_01c.gif"]Tsubomi「Không sao đâu ạ. Ai đó có vẻ kém giao tiếp, con phục vụ khách hàng chắc chắn sẽ được lòng hơn chứ?」[p]
+[舜]（Hự... Lý lẽ quá sắc bén, không thể cãi lại được.）[p]
+[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_06c.gif"]Rinko「Xin lỗi cháu nhé, Shun-kun. Lúc nào cần cô sẽ nhờ cháu sau được không?」[p]
+[舜]「A, v-vâng ạ...」[p]
+[舜]（Hôm nay cứ tạm thế này đã...）[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]二人の好感度が上がった[resetfont][p]
+[font color="yellow"]Hảo cảm của cả hai đã tăng lên[resetfont][p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP3"  ]
@@ -76,20 +77,20 @@
 *EV_rinkotubomi2
 
 [tb_start_text mode=1 ]
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif"]蕾「あっ、ど、どうしたの？　来るなら連絡頂戴よ」[p]
-[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_04c.gif"]凛子「ひょっとして会いに来てくれた、とか？」[p]
-蕾「それを言うなら、私に会いに来てくれたの！　そうでしょ？」[p]
-[舜]「２人の顔を見に来たんだけど…」[p]
-凛子「ふふ、[舜]くんは嬉しいこと言ってくれるね」[p]
-蕾「え～、ママと私どっちに会いに来たのか気になるんだけど。」[p]
-凛子「本人を前にしたら言いづらいわよね？　でもいいよ、正直に答えてくれて」[p]
-蕾「私でしょ？」[p]
-凛子「ふふ、わかってるから大丈夫よ。ね？　[舜]くん」[p]
-[舜]（こ、これは答えづらいぞ…）[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif"]Tsubomi「Á, c-có chuyện gì vậy? Muốn đến thì phải liên lạc trước chứ.」[p]
+[chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_04c.gif"]Rinko「Hay là cháu cất công đến để gặp cô?」[p]
+Tsubomi「Nếu nói vậy thì là đến để gặp con mới đúng! Có phải vậy không?」[p]
+[舜]「Tôi đến để nhìn mặt cả hai người thôi mà...」[p]
+Rinko「Khc, Shun-kun khéo nói quá nhỉ.」[p]
+Tsubomi「Uầy, tò mò không biết anh đến gặp mẹ hay gặp tôi đây.」[p]
+Rinko「Đứng trước mặt người ta thì khó nói lắm nhỉ? Nhưng không sao đâu, cháu cứ trả lời thành thật đi.」[p]
+Tsubomi「Là tôi đúng không?」[p]
+Rinko「Khc, cô hiểu mà nên không sao đâu. Đúng không nào? Shun-kun.」[p]
+[舜]（C-Câu này khó trả lời quá...）[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]二人の好感度が上がった[resetfont][p]
+[font color="yellow"]Hảo cảm của cả hai đã tăng lên[resetfont][p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP3"  ]

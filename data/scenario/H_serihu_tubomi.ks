@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_H_serihu_tubomi.ks]
 
 *high
@@ -30,9 +31,9 @@
 *supiritasu_kaiwa1
 
 [tb_start_text mode=1 ]
-蕾「やだぁ、見ないでよ…恥ずかしいからぁ…」[p]
-蕾「黙ってたら、不安になるでしょ～？　なんか言ってってばぁ♡」[p]
-[舜]（めちゃくちゃ酔っ払ってるな…）[p]
+Tsubomi「Không chịu đâu, đừng nhìn em mà... Xấu hổ lắm...」[p]
+Tsubomi「Anh cứ im lặng mãi thế, làm em bất an đấy biết không~? Nói gì đi chứ♡」[p]
+[舜]（Say bí tỉ luôn rồi...）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -40,9 +41,9 @@
 *supiritasu_kaiwa2
 
 [tb_start_text mode=1 ]
-蕾「私ばっかり見られるのずるい～っ♡　そっちも見せてよぉ♡」[p]
-[舜]「好きなだけ見ていいよ…その代わり蕾の体もっと見たい」[p]
-蕾「も～っ、そんな真剣な顔で言わないでよぉ♡　んっ…はぁ…恥ずかし…♡」[p]
+Tsubomi「Chỉ có mỗi em bị nhìn thôi thì ăn gian quá~♡ Cho em xem của anh nữa đi♡」[p]
+[舜]「Em muốn nhìn bao nhiêu cũng được... Bù lại anh muốn nhìn cơ thể của Tsubomi nhiều hơn nữa.」[p]
+Tsubomi「Mồ~, đừng có làm vẻ mặt nghiêm túc thế mà nói chứ♡ Ưm... haa... xấu hổ quá đi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -50,9 +51,9 @@
 *supiritasu_kaiwa3
 
 [tb_start_text mode=1 ]
-蕾「見られてるだけなのに…変な気分になってきちゃったの…♡　やだあ、もうっ…♡」[p]
-蕾「もっとよく見て…？　私の体、綺麗？　ちゃんと褒めてよぉ♡　あんたに褒めてほしいの♡」[p]
-蕾「んふふ、顔見ればわかるけど…♡　すっごい興奮してるんでしょ～♡」[p]
+Tsubomi「Chỉ bị nhìn thôi mà... em đã thấy rạo rực hết cả lên rồi này...♡ Ghét quá đi mất...♡」[p]
+Tsubomi「Nhìn kỹ hơn nữa đi...? Cơ thể em, có đẹp không? Phải khen em đàng hoàng đấy nhé♡ Em muốn được anh khen cơ♡」[p]
+Tsubomi「Ưm phu phu, nhìn mặt là biết ngay mà...♡ Anh đang hưng phấn lắm đúng không~♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa=0"  name="H_kaiwa"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -60,9 +61,9 @@
 *supiritasu_kiss1
 
 [tb_start_text mode=1 ]
-蕾「ちゅぷ、ちゅく、んんっ♡　ふぅぅっ、んんっ…ちゅぷちゅちゅ…♡」[p]
-蕾「っ！　はーっ♡　はーっ♡　はーっ♡　がっつきすぎっ♡　息できないってばぁ♡」[p]
-蕾「そんなに夢中になっちゃうの…？　じゃあ…もっとキスしていいよ…♡」[p]
+Tsubomi「Chụt, chu, ưm...♡ Phù, ưm... chụt chu chu...♡」[p]
+Tsubomi「A! Haa...♡ Haa...♡ Haa...♡ Anh ngấu nghiến quá đấy♡ Em không thở nổi nữa rồi♡」[p]
+Tsubomi「Anh say mê đến thế sao...? Vậy thì... hôn em thêm nữa cũng được đấy...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss+=1"  name="H_kiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -72,9 +73,9 @@
 *supiritasu_kiss2
 
 [tb_start_text mode=1 ]
-蕾「ちゅぷ、ちゅくちゅく、んっ…♡　はぁ、あふ♡　キス気持ちいい…んんぅっ♡」[p]
-蕾「はぁ、はふ、あぁっ♡　口の中…グチャグチャになってるの…♡　ん、もっと、もっと頂戴♡」[p]
-蕾「んっ♡　ちゅっちゅっちゅ♡　ちゅぷ、じゅるるるる♡　んちゅ、じゅぷじゅぷ……♡」[p]
+Tsubomi「Chụt, chu chu, ưm...♡ Haa, a phu♡ Hôn sướng quá đi... Ưm ư...♡」[p]
+Tsubomi「Haa, ha phu, a...♡ Khoang miệng em... ướt át nát bét hết rồi này...♡ Ưm, nữa đi, cho em thêm nữa đi♡」[p]
+Tsubomi「Ưm...♡ Chụt chụt chụt♡ Chụt, rột rột rột♡ Ưm chu, chụt chụt...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss+=1"  name="H_kiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -84,8 +85,8 @@
 *supiritasu_kiss3
 
 [tb_start_text mode=1 ]
-蕾「ちゅく、ちゅ…はぁ、あぁ♡　キスだけなのに…なんか変…お腹の下のほう…キュンってしてる…♡」[p]
-蕾「ほしいっていってるのかも…♡　これで終わりだなんて言わないでしょ…？」[p]
+Tsubomi「Chu, chu... Haa, a...♡ Chỉ hôn thôi mà... lạ quá... phần bụng dưới của em... cứ nhói lên này...♡」[p]
+Tsubomi「Chắc là nó đang thèm khát đấy...♡ Đừng nói với em là chỉ thế này thôi nhé...?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss=0"  name="H_kiss"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -97,9 +98,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「んぅぅぅっ♡　ふっ、ふぅ…今の……なんなの…♡」[p]
-蕾「チューしただけで…すっごい気持ちよくなっちゃった…♡　何したのぉ？」[p]
-蕾「なんか…慣れてるみたいでムカつく♡」[p]
+Tsubomi「Ưm ư ư...♡ Phu, phù... Cảm giác vừa rồi... là sao chứ...♡」[p]
+Tsubomi「Chỉ hôn thôi mà... em đã thấy sướng rơn người rồi...♡ Anh đã làm gì em thế?」[p]
+Tsubomi「Cứ như... anh đã quen tay lắm rồi ấy, thật đáng ghét♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -108,9 +109,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「んっ…♡　あぁっ♡　あっ♡　んっ…はっ…はあ♡　おっぱい触られてるっ♡」[p]
-[舜]「すご、柔らか…」[p]
-蕾「んぅっ♡　はっ、はぁ♡　感触確かめられちゃってりゅ♡　ひぅぅぅっ♡　あぁぁっ♡」[p]
+Tsubomi「Ưm...♡ A...♡ A...♡ Ưm... hộc... haa♡ Vú em đang bị sờ này...♡」[p]
+[舜]「Tuyệt thật, mềm quá...」[p]
+Tsubomi「Ưm...♡ Hộc, haa♡ Anh đang nắn bóp kiểm tra độ mềm kìa♡ Hi ư ư...♡ A a...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -120,9 +121,9 @@
 *supiritasu_munemomi2
 
 [tb_start_text mode=1 ]
-蕾「はふ、はっ♡　あんっ♡　あぁぁっ♡　んぁぁっ♡　反応しちゃうぅ♡」[p]
-[舜]「乳首もピンって立ってきた…エッロ」[p]
-蕾「あっ♡　言わないでぇ…♡　触れて反応してるんだってばぁ♡」[p]
+Tsubomi「Ha phu, hộc...♡ A...♡ A a...♡ Ưm a...♡ Phản ứng mất rồi...♡」[p]
+[舜]「Đầu vú cũng cương cứng lên rồi này... Dâm quá đi.」[p]
+Tsubomi「A...♡ Đừng nói mà...♡ Bị chạm vào nên nó mới phản ứng đấy chứ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -133,8 +134,8 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「らめぇぇ、そんなに揉み揉みしないでぇ♡　はふ、はぁ♡　あっ、反応しちゃうっ…腰動いちゃう♡」[p]
-蕾「んんっ…おっぱいだけなのに…下もキュンキュンしてるっ♡」[p]
+Tsubomi「Không được đâu, đừng có xoa bóp nhiều thế chứ♡ Ha phu, haa♡ A, phản ứng mất rồi... hông tự động nẩy lên luôn này♡」[p]
+Tsubomi「Ưm... Chỉ sờ mỗi vú thôi mà... phần dưới cũng nhói lên rồi này...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi=0"  name="H_munemomi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -147,9 +148,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひゃうぅぅっ♡　はっ、あぁ、あんっ……♡　おっぱい、気持ちいいの…♡」[p]
-蕾「なんか、今のでお腹のしたのほう…キュンってしちゃったぁ…♡」[p]
-蕾「うぅぅ…♡　まだ…体ジンジンしてる…♡」[p]
+Tsubomi「Hya ư ư...♡ Hộc, a, a...♡ Vú em, sướng quá đi...♡」[p]
+Tsubomi「Làm thế... phần bụng dưới của em... nhói lên luôn rồi này...♡」[p]
+Tsubomi「Ư ư...♡ Cơ thể em... vẫn còn tê rần rần này...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -158,9 +159,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「ひあぁぁっ♡　痛いっ…お尻、叩かないでぇ…♡　ひぐっ…痛い、からぁ」[p]
-[舜]「反応してるじゃん」[p]
-蕾「んっ♡　ふぅ、だって…叩かれたところジリジリあっつくて…変な感じっ♡」[p]
+Tsubomi「Hi a a...♡ Đau quá... Đừng đánh vào mông em mà...♡ Hức... đau lắm đấy.」[p]
+[舜]「Đang phản ứng rồi kìa.」[p]
+Tsubomi「Ưm...♡ Phù, tại vì... chỗ bị đánh cứ nóng ran lên... cảm giác lạ lắm...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supankingu+=1"  name="H_supankingu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -170,9 +171,9 @@
 *supiritasu_supankingu2
 
 [tb_start_text mode=1 ]
-蕾「ひゃぅぅぅっ♡　あんっ♡　あとになっちゃう、赤くなっちゃうからぁ♡」[p]
-蕾「はっ♡　はっ♡　はっ♡　変…痛いのに…気持ち良くなってきちゃった…♡」[p]
-蕾「もっと欲しくなっちゃうぅ♡　私変なのっ♡」[p]
+Tsubomi「Hya ư ư...♡ A...♡ Nó in dấu lại, đỏ ửng lên mất thôi♡」[p]
+Tsubomi「Hộc...♡ Hộc...♡ Hộc...♡ Lạ quá... Rõ ràng là đau... thế mà lại sướng rơn lên rồi...♡」[p]
+Tsubomi「Em lại muốn bị đánh thêm nữa cơ♡ Em biến thái quá đi mất♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supankingu+=1"  name="H_supankingu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -183,9 +184,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あぁぁぁっ♡　はっ♡　はっ♡　はっ♡　はっ♡　もっと、もっとぉ♡　気持ちいぃ♡」[p]
-蕾「お尻、癖になっちゃう♡　はひ、はぁ、あんっ♡　あぁぁぁ♡」[p]
-蕾「叩かれただけでイッちゃう…体変になってりゅぅ♡」[p]
+Tsubomi「A a a...♡ Hộc...♡ Hộc...♡ Hộc...♡ Hộc...♡ Nữa đi, mạnh nữa đi anh♡ Sướng quá đi...♡」[p]
+Tsubomi「Bị đánh mông, thành nghiện luôn rồi này♡ Ha hi, haa, a...♡ A a a...♡」[p]
+Tsubomi「Chỉ bị đánh đòn thôi mà cũng ra mất... Cơ thể em trở nên biến thái mất rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supankingu=0"  name="H_supankingu"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -198,9 +199,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「んあぁぁっ♡　あっ、それっ…やだぁぁっ♡　おかしく、なる…♡」[p]
-[舜]「すっごい反応…」[p]
-蕾「やっ…痛いのにぃ♡　イッちゃうかと思った…♡」[p]
+Tsubomi「Ưm a a...♡ A, chỗ đó... không chịu đâu...♡ Em phát điên, mất thôi...♡」[p]
+[舜]「Phản ứng dữ dội thật...」[p]
+Tsubomi「A... Đau thế cơ mà♡ Em cứ tưởng là mình ra luôn rồi chứ...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -209,9 +210,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あぁぁぁぁぁっ♡　指入ってりゅ♡　は、激しく動かさないでっ…優しくしてぇ♡」[p]
-[舜]「うわ、めっちゃ濡れてる…ドロドロだ」[p]
-蕾「あうぅっ♡　言わないでぇ♡　はう、あぁぁっ♡　指、しゅごいぃ♡」[p]
+Tsubomi「A a a a a...♡ Ngón tay đút vào rồi kìa♡ Đ-Đừng có ngoáy mạnh thế chứ... Nhẹ nhàng thôi anh♡」[p]
+[舜]「Chà, ướt sũng luôn rồi này... Nhầy nhụa hết cả.」[p]
+Tsubomi「A ư...♡ Đừng nói mà♡ Ha ư, a a...♡ Ngón tay, tuyệt quá đi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman+=1"  name="H_teman"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -221,9 +222,9 @@
 *supiritasu_teman2
 
 [tb_start_text mode=1 ]
-蕾「ゆ、指だけでイッちゃうっ…♡　おっ♡　おぉぉっ♡　らめ、そこっ♡　弱いぃ♡」[p]
-蕾「んぉぉぉ♡　あっ♡　あっ♡　あっ♡　集中狙いっ、しないでぇぇぇ♡」[p]
-蕾「おかしくなっちゃうからぁっ♡　あっ♡　あっ♡　あっ♡　ひぐぅぅっ♡」[p]
+Tsubomi「Ng-Ngón tay thôi mà em cũng ra mất...♡ Ô...♡ Ô ô...♡ Không được, chỗ đó...♡ Điểm yếu của em đấy♡」[p]
+Tsubomi「Ưm ô ô...♡ A...♡ A...♡ A...♡ Đừng có nhắm, tập trung vào một chỗ thế chứ...♡」[p]
+Tsubomi「Em phát điên lên mất thôi...♡ A...♡ A...♡ A...♡ Hức ư ư...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman+=1"  name="H_teman"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -234,9 +235,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あ゛あ゛っ♡　んぉぉっ♡　おまんこっ、じんじんしてりゅ♡　奥まで指届いてりゅ♡」[p]
-蕾「らめ、らめらめ…ホントにイク…指だけでイッちゃうぅぅ♡」[p]
-蕾「おかしく、なりゅうぅぅ♡　はぁ、はっ、あぁぁぁっ♡」[p]
+Tsubomi「A a...♡ Ưm ô ô...♡ Cô bé, tê rần rần lên rồi này♡ Ngón tay chạm đến tận sâu bên trong luôn rồi♡」[p]
+Tsubomi「Không được, không được không được... Ra thật đấy... Chỉ dùng ngón tay thôi mà em cũng ra mất...♡」[p]
+Tsubomi「Em phát điên, mất thôi...♡ Haa, hộc, a a a...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman=0"  name="H_teman"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -249,9 +250,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「お゛お゛っ♡　あ゛う゛う゛っ♡　何それ何それ何それぇぇぇっ♡」[p]
-蕾「頭っ、おかしくなっちゃうっ♡　イッちゃうからだめぇぇぇぇっ♡」[p]
-蕾「おっほぉぉっ♡　おまんこグチャグチャになってイクぅぅ♡」[p]
+Tsubomi「Ô ô...♡ A ư ư...♡ Gì thế gì thế cái gì thế này...♡」[p]
+Tsubomi「Đầu óc em, phát điên lên mất thôi...♡ Ra mất nên không được đâu...♡」[p]
+Tsubomi「Ô hô ô...♡ Cô bé nát bét hết rồi em ra mất thôi...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -260,9 +261,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「や、だぁぁ、そんなとこ…舐めないでぇ♡　恥ずかし…」[p]
-[舜]「ヌルヌルになってる」[p]
-蕾「も、なんで言うのぉ♡　あっ♡　あぁぁ♡　ペロペロだめ…♡」[p]
+Tsubomi「Kh-Không chịu đâu, chỗ đó... đừng liếm mà♡ Xấu hổ lắm...」[p]
+[舜]「Trơn tuột nhầy nhụa luôn rồi.」[p]
+Tsubomi「Mồ, sao anh lại nói ra chứ♡ A...♡ A a...♡ Liếm láp thế không được đâu...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kunni+=1"  name="H_kunni"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -272,9 +273,9 @@
 *supiritasu_kunni2
 
 [tb_start_text mode=1 ]
-蕾「んんんっ…♡　も、いいでしょっ…あっ、これ以上、は…だめぇぇっ♡」[p]
-[舜]「腰動いてるけど？」[p]
-蕾「はぁ、あっ、あんっ♡　だってぇっ…♡　気持ちいいんだもん…」[p]
+Tsubomi「Ưm ưm ưm...♡ Th-Thế là đủ rồi mà... A, hơn thế nữa, thì... không được đâu...♡」[p]
+[舜]「Hông em đang tự động nẩy lên kìa?」[p]
+Tsubomi「Haa, a, a...♡ Tại vì...♡ Sướng quá đi mất...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kunni+=1"  name="H_kunni"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -285,9 +286,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「はぁっ♡　はぁっ♡　はぁっ♡　あんっ♡　あぁぁ、温かいの…気持ちいいっ♡」[p]
-蕾「あぁぁっ、吸われるの気持ちいいっ♡　それっ、それ好きぃ♡」[p]
-蕾「んんっ♡　あっ♡　トロトロになっちゃうぅぅっ♡」[p]
+Tsubomi「Haa...♡ Haa...♡ Haa...♡ A...♡ A a, ấm nóng quá... sướng quá đi...♡」[p]
+Tsubomi「A a, bị mút thế này sướng quá đi...♡ Đúng rồi, em thích thế lắm♡」[p]
+Tsubomi「Ưm...♡ A...♡ Nhầy nhụa ướt át hết luôn rồi này...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kunni=0"  name="H_kunni"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -300,9 +301,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「んぉぉぉ♡　それっ、やだぁぁぁ♡　はっ♡　はっ♡　んんっ♡　そこ敏感だからっ…♡」[p]
-蕾「やっ…やっ、あぁぁぁんっ♡　んぉぉ♡　おおおっ♡　も、舐めるのだめぇ♡」[p]
-蕾「なんかきちゃう、から…やだやだやだぁ♡」[p]
+Tsubomi「Ưm ô ô...♡ Chỗ đó, không chịu đâu...♡ Hộc...♡ Hộc...♡ Ưm...♡ Chỗ đó nhạy cảm lắm cơ mà...♡」[p]
+Tsubomi「A... A, a a a...♡ Ưm ô ô♡ Ô ô ô...♡ Kh-Không được liếm nữa đâu♡」[p]
+Tsubomi「Sắp ra rồi, nên là... không chịu không chịu không chịu đâu♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -311,9 +312,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「んっ…♡　はぁ、手つき…エッチ…♡　ずっとお尻触りたかったの？」[p]
-蕾「んんっ…手、あったかい…変な感じなの…♡」[p]
-[舜]「腰、くねらせていやらしいな…」[p]
+Tsubomi「Ưm...♡ Haa, cách sờ... dâm đãng quá...♡ Anh muốn sờ mông em từ lâu rồi đúng không?」[p]
+Tsubomi「Ưm... Bàn tay, ấm quá... cảm giác lạ lắm cơ...♡」[p]
+[舜]「Hông em, uốn éo trông dâm đãng quá đấy...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_naderu+=1"  name="H_naderu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -323,9 +324,9 @@
 *supiritasu_naderu2
 
 [tb_start_text mode=1 ]
-蕾「ひゃんっ…♡　あんまりナデナデしないでぇ…♡　もっと欲しくなっちゃうからぁ」[p]
-蕾「んっ♡　ふ～っ…ふ～っ♡　撫でられてるだけなのに…気持ちいい…♡」[p]
-蕾「もっと前のほう…キュンって切なくなってきちゃった…♡」[p]
+Tsubomi「Hya...♡ Đừng có vuốt ve nhiều quá mà...♡ Em lại muốn thêm nữa mất thôi.」[p]
+Tsubomi「Ưm...♡ Phù... Phù...♡ Chỉ vuốt ve thôi mà... sướng quá đi...♡」[p]
+Tsubomi「Phần phía trước... lại nhói lên khao khát rồi này...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_naderu+=1"  name="H_naderu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -336,9 +337,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あぁぁっ♡　こ、腰動いちゃう…♡　自分で動かしてないのにぃ♡」[p]
-蕾「ぞわぞわって…全身に気持ちいいの広がってるの…♡」[p]
-蕾「何されちゃうんだろって…期待しちゃってる…♡」[p]
+Tsubomi「A a...♡ H-Hông em nẩy lên mất...♡ Rõ ràng em không tự cử động cơ mà♡」[p]
+Tsubomi「Râm ran... Cảm giác sướng rơn lan tỏa khắp toàn thân luôn này...♡」[p]
+Tsubomi「Sắp bị làm gì đây... em đang mong chờ lắm cơ...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_naderu=0"  name="H_naderu"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -350,9 +351,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あ゛っ♡　い、今の何…♡　気持ちいい…♡　わかんなくなる…♡」[p]
-蕾「お尻撫でられてるだけなのに…目の前、チカチカってしちゃったぁ…♡」[p]
-蕾「はぁ…はぁ…はぁ…まだビクビクってしてる…♡」[p]
+Tsubomi「A...♡ C-Cái gì vừa rồi thế...♡ Sướng quá...♡ Em không biết gì nữa rồi...♡」[p]
+Tsubomi「Chỉ bị vuốt ve mông thôi mà... trước mắt em, nổ đom đóm luôn rồi này...♡」[p]
+Tsubomi「Haa... Haa... Haa... Vẫn còn giật giật này...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -360,9 +361,9 @@
 *supiritasu_pisuton_yukkuri1
 
 [tb_start_text mode=1 ]
-蕾「あっ♡　はぁ♡　あんっ…♡　はぁ、やらぁ、奥まできてる…♡」[p]
-蕾「こ、こんなにいっぱいになっちゃうの…？　おっきいの中に入って動いてるの♡」[p]
-蕾「はーっ♡　はーっ♡　ね、根元まで…全部入っちゃったぁ♡」[p]
+Tsubomi「A...♡ Haa♡ A...♡ Haa, không chịu đâu, vào đến tận sâu bên trong rồi...♡」[p]
+Tsubomi「Ch-Chật kín thế này luôn sao...? Thứ to lớn đút vào trong rồi ngoáy ngoáy kìa♡」[p]
+Tsubomi「Haa...♡ Haa...♡ Đ-Đến tận gốc... đút lọt hết vào trong rồi này♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -372,9 +373,9 @@
 *supiritasu_pisuton_yukkuri2
 
 [tb_start_text mode=1 ]
-蕾「はっ♡　はぁ♡　はあんっ♡　はっ♡　んっ♡　ズンってしないでぇ♡」[p]
-[舜]「全部咥えこんでるよ」[p]
-蕾「んぅぅっ♡　だってぇっ♡　奥までジュポジュポするからぁっ♡」[p]
+Tsubomi「Hộc...♡ Haa♡ Haa a...♡ Hộc...♡ Ưm...♡ Đừng có đâm huỵch huỵch thế chứ♡」[p]
+[舜]「Em đang ngậm chặt lấy toàn bộ luôn kìa.」[p]
+Tsubomi「Ưm ư ư...♡ Tại vì...♡ Anh cứ thụt ra thụt vào tận sâu bên trong cơ mà...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -384,9 +385,9 @@
 *supiritasu_pisuton_yukkuri3
 
 [tb_start_text mode=1 ]
-蕾「ひぐうぅ♡　あうぅ♡　はっ♡　はっ♡　ダメ、奥から気持ちいいの上がってきちゃう♡」[p]
-蕾「壊れちゃう…お、おまんこおかしくなっちゃうぅ♡　ひうぅっ♡　はっ♡　はっ♡　はんっ♡」[p]
-蕾「それ、好きぃ♡　もっとっ♡　もっともっとぉ♡」[p]
+Tsubomi「Hức ư ư...♡ A ư...♡ Hộc...♡ Hộc...♡ Không được, cảm giác sướng rơn trào lên từ tận sâu bên trong mất rồi♡」[p]
+Tsubomi「Hỏng bét mất... c-cô bé phát điên lên mất thôi...♡ Hi ư ư...♡ Hộc...♡ Hộc...♡ Hộc...♡」[p]
+Tsubomi「Chỗ đó, em thích lắm...♡ Nữa đi...♡ Nữa đi mạnh nữa đi anh♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri=0"  name="H_supiritasu_pisuton_yukkuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -398,9 +399,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あ゛あ゛っ♡　それぇぇ♡　だめなとこ…当たってる♡　はぁ♡　おっ♡　おほぉ♡[p]
-蕾「変になる、おかしくなっちゃうぅぅ♡　弱いトコ、狙わないでぇ♡」[p]
-蕾「すごいのっ、きちゃうからぁぁっ♡」[p]
+Tsubomi「A a...♡ Chỗ đó...♡ Đâm trúng... điểm yếu rồi...♡ Haa♡ Ô...♡ Ô hô...♡」[p]
+Tsubomi「Trở nên kỳ lạ, phát điên lên mất thôi...♡ Đừng nhắm vào, điểm yếu của em mà...♡」[p]
+Tsubomi「Sướng quá, em ra mất thôi...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*high2"  cond="f.H_high1==1"  ]
@@ -409,9 +410,9 @@
 *supiritasu_pisuton_hagesiku1
 
 [tb_start_text mode=1 ]
-蕾「あぁぁぁぁっ♡　気持ちいいっ♡　激しいの、好きぃ♡」[p]
-[舜]「くっ…体、のけ反りすぎだろっ♡」[p]
-蕾「あうぅぅっ♡　こ、壊れりゅ…♡　気持ちいいっ♡　好き♡　好き好き好きぃぃ♡」[p]
+Tsubomi「A a a a...♡ Sướng quá đi...♡ Đâm mãnh liệt thế này, em thích lắm cơ...♡」[p]
+[舜]「Hừ... Cơ thể em, uốn cong quá rồi đấy...♡」[p]
+Tsubomi「A ư ư...♡ H-Hỏng bét mất...♡ Sướng quá đi...♡ Em thích lắm...♡ Thích lắm thích lắm thích lắm cơ...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -421,9 +422,9 @@
 *supiritasu_pisuton_hagesiku2
 
 [tb_start_text mode=1 ]
-蕾「おちんちん出たり入ったりしてるのっ、わかりゅ♡　おまんこキュンキュンしてりゅぅっ♡」[p]
-蕾「ひぅぅぅっ♡　あうぅぅ♡　もっとっ、めちゃくちゃにしてぇ♡　はひっ♡　好きにしてっ♡」[p]
-蕾「んぉぉぉっ♡　お゛お゛お゛っ♡　はっ♡　はっ♡　癖になっちゃうぅ♡」[p]
+Tsubomi「Con cu thụt ra thụt vào, em cảm nhận rõ lắm...♡ Cô bé của em đang giật giật nhói lên rồi này...♡」[p]
+Tsubomi「Hi ư ư...♡ A ư ư...♡ Nữa đi, hãy làm em nát bét ra đi anh...♡ Ha hi...♡ Cứ làm theo ý anh thích đi...♡」[p]
+Tsubomi「Ưm ô ô...♡ Ô ô ô...♡ Hộc...♡ Hộc...♡ Em nghiện mất thôi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -433,9 +434,9 @@
 *supiritasu_pisuton_hagesiku3
 
 [tb_start_text mode=1 ]
-蕾「はっ♡　はっ♡　はっ♡　アァァァ、お腹の奥…あっつくなってきたぁ♡　あうぅぅ♡」[p]
-蕾「すごいのきちゃう…♡　あうぅぅ♡　好き♡　好き好き好き♡」[p]
-蕾「セックス、こんな気持ちいいなんてっ♡　あうぅぅぅ♡　しゅきぃぃ♡」[p]
+Tsubomi「Hộc...♡ Hộc...♡ Hộc...♡ A a a, tận sâu trong bụng... nóng rực lên rồi này...♡ A ư ư...♡」[p]
+Tsubomi「Sướng quá sắp ra rồi...♡ A ư ư...♡ Em thích lắm...♡ Thích lắm thích lắm thích lắm cơ...♡」[p]
+Tsubomi「Làm tình, lại sướng rơn thế này sao...♡ A ư ư ư...♡ Em thích lắm...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku=0"  name="H_supiritasu_pisuton_hagesiku"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -447,9 +448,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「お゛お゛お゛っ♡　わがんない゛っ♡　体っ、変になってるっ♡」[p]
-蕾「ぎもぢいとこだけっ…当たっててっ♡　集中狙いされてるぅ♡」[p]
-蕾「壊れるっ♡　壊れちゃうぅぅっ♡　あ゛あ゛あ゛あ゛っ♡」[p]
+Tsubomi「Ô ô ô...♡ Em không biết nữa...♡ Cơ thể em, trở nên kỳ lạ mất rồi...♡」[p]
+Tsubomi「Toàn đâm trúng... chỗ sướng thôi...♡ Bị nhắm tập trung vào một chỗ rồi...♡」[p]
+Tsubomi「Hỏng bét... hỏng bét mất thôi...♡ A a a a...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*high2"  cond="f.H_high2==1"  ]
@@ -457,9 +458,9 @@
 *H1_kaiwa1
 
 [tb_start_text mode=1 ]
-蕾「これから…ホントにセックスしちゃうんだね…」[p]
-[舜]「怖いなら無理することないよ」[p]
-蕾「む、無理してない…！　早く１つになりたいから…ちょっと緊張してるだけだってば」[p]
+Tsubomi「Từ giờ... chúng ta thật sự sẽ làm tình nhỉ...」[p]
+[舜]「Nếu em sợ thì không cần phải cố quá đâu.」[p]
+Tsubomi「K-Không có cố...! Em muốn nhanh chóng được hòa làm một với anh... nên chỉ hơi căng thẳng chút thôi mà.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -467,9 +468,9 @@
 *H1_kaiwa2
 
 [tb_start_text mode=1 ]
-蕾「いいの？　ママのほうがよかったんじゃないの？　私ママみたいにおっぱいも大きくないし？」[p]
-[舜]「そんなわけないだろ。蕾がいいんだよ」[p]
-蕾「そう？　ふふ、そんなにハッキリ言われちゃったら、しょうがないなぁっ。ふふっ、嬉し」[p]
+Tsubomi「Thật sự ổn chứ? Anh không thấy mẹ tốt hơn sao? Vú em đâu có to được như mẹ đâu?」[p]
+[舜]「Làm gì có chuyện đó chứ. Anh chỉ cần Tsubomi thôi.」[p]
+Tsubomi「Vậy sao? Khc, anh đã nói thẳng ra như thế thì đành chịu vậy. Khc, em vui lắm.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -477,9 +478,9 @@
 *H1_kaiwa3
 
 [tb_start_text mode=1 ]
-蕾「あ…でも、ちょっと気になって…初めてって痛いって聞くけど…痛いのかな…？」[p]
-蕾「痛くないようにしてくれる…？　その…い、挿れる時…気持ちよくなるまで、待って…」[p]
-蕾「あっ、私、何言ってんだろ…も～、恥ずかしい…！」[p]
+Tsubomi「A... nhưng mà, em hơi tò mò chút... nghe bảo lần đầu sẽ đau lắm... không biết có đau thật không nhỉ...?」[p]
+Tsubomi「Anh sẽ làm cho em không thấy đau chứ...? Chuyện đó... kh-khi đút vào... hãy đợi đến khi em thấy sướng đã nhé...」[p]
+Tsubomi「A, em đang nói cái gì thế này... Mồ~, xấu hổ quá đi...!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa=0"  name="H_kaiwa"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -487,9 +488,9 @@
 *H1_kiss1
 
 [tb_start_text mode=1 ]
-蕾「ちゅっ…んッ…♡　ふふ、キスしちゃった…唇触れるだけなのに、こんなに幸せなんだね」[p]
-[舜]「へぇ、可愛いこと言うんだな」[p]
-蕾「な、なんでニヤニヤしてんの？　やだ…見ないでよ…恥ずかしいでしょ」[p]
+Tsubomi「Chụt... Ưm...♡ Khc, hôn mất rồi... Chỉ chạm môi thôi mà cũng hạnh phúc đến thế này nhỉ.」[p]
+[舜]「Chà, em nói nghe đáng yêu đấy.」[p]
+Tsubomi「S-Sao anh lại cười tủm tỉm thế hả? Ghét quá... đừng nhìn em mà... Xấu hổ lắm đấy.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss+=1"  name="H_kiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -499,9 +500,9 @@
 *H1_kiss2
 
 [tb_start_text mode=1 ]
-蕾「ちゅ、ちゅっちゅ…♡　んんっ♡　ちゅく、ちゅ、はぁ、ふ…キス、気持ちいい…」[p]
-蕾「どうしよう、こんなの知っちゃったら、唇離すの嫌になっちゃうよ…♡」[p]
-蕾「もっとキスしてほしくなっちゃう…♡」[p]
+Tsubomi「Chu, chụt chụt...♡ Ưm...♡ Chu, chu, haa, phu... Hôn sướng quá đi...」[p]
+Tsubomi「Phải làm sao đây, biết được cảm giác này rồi, em chẳng muốn rời môi anh ra chút nào nữa đâu...♡」[p]
+Tsubomi「Em lại muốn được anh hôn nhiều hơn nữa cơ...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss+=1"  name="H_kiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -511,9 +512,9 @@
 *H1_kiss3
 
 [tb_start_text mode=1 ]
-蕾「ちゅくちゅく、ちゅぷちゅぷ、じゅぷじゅるるる、はぁ、んんっ♡」[p]
-蕾「なんでこんなにエッチなキスの仕方知ってるの…？　ズルい…私にも教えてよ…ちゅっちゅ♡」[p]
-蕾「は～っ♡　は～っ♡　なんだか…体の奥熱くなってきちゃったぁ」[p]
+Tsubomi「Chu chu, chụt chụt, chụt rột rột rột, haa, ưm...♡」[p]
+Tsubomi「Sao anh lại biết cách hôn dâm đãng thế này cơ chứ...? Ăn gian quá... Chỉ cho em với đi... chụt chụt♡」[p]
+Tsubomi「Haa...♡ Haa...♡ Chẳng hiểu sao... sâu trong cơ thể em nóng ran lên rồi này.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss=0"  name="H_kiss"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -525,9 +526,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ちゅく、ちゅ……んっふぅぅっ♡　はぁ、はっ、びっくり、した…♡」[p]
-蕾「いきなり気持ちいいの湧き上がってきて…お腹の下…キュンって切なくなっちゃった…」[p]
-蕾「今の…イキそうになっちゃったってこと、かな？」[p]
+Tsubomi「Chu, chu... Ưm phu...♡ Haa, hộc, làm em, giật cả mình...♡」[p]
+Tsubomi「Tự dưng cảm giác sướng rơn trào lên... phần bụng dưới... lại nhói lên khao khát rồi...」[p]
+Tsubomi「Cảm giác vừa rồi... là em sắp ra rồi đúng không nhỉ?」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -536,9 +537,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「んんっ…♡　おっぱい、揉み甲斐ないな、なんて思ってない？」[p]
-[舜]「そんなこと思うわけないだろ…すごい可愛いよ」[p]
-蕾「も、もう…そんなこと言われたら…恥ずかしいってば…でも、ありがと♡」[p]
+Tsubomi「Ưm...♡ Anh không nghĩ là... vú em chán ngắt, chẳng bõ công xoa bóp đấy chứ?」[p]
+[舜]「Làm gì có chuyện đó chứ... Rất đáng yêu là đằng khác.」[p]
+Tsubomi「M-Mồ... anh nói thế... làm em xấu hổ chết đi được... nhưng mà, cảm ơn anh nhé♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -548,9 +549,9 @@
 *H1_munemomi2
 
 [tb_start_text mode=1 ]
-蕾「あっ…ん…おっぱいに夢中になりすぎだってばぁ…♡」[p]
-蕾「興奮してる顔見るの…ヤバいかも…私まで興奮してきちゃった…」[p]
-蕾「ふ～っ…恥ずかしいところ…キュンって疼いちゃってるみたい…」[p]
+Tsubomi「A... ưm... anh say mê vú em quá rồi đấy...♡」[p]
+Tsubomi「Nhìn khuôn mặt hưng phấn của anh... chết thật... làm em cũng hưng phấn lây luôn rồi...」[p]
+Tsubomi「Phù... Chỗ đáng xấu hổ đó... có vẻ đang nhói lên nhức nhối rồi...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -561,9 +562,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あんっ…♡　あっ…♡　おっぱい、ばっかり…触らないでってばぁ♡」[p]
-[舜]「でも顔とろけてるよ…」[p]
-蕾「だってぇ…触られてるとこ、すっごく熱くて…気持ちよくなってるんだもん」[p]
+Tsubomi「A...♡ A...♡ Đừng có... sờ mỗi vú thôi thế chứ♡」[p]
+[舜]「Nhưng khuôn mặt em đang tan chảy ra kìa...」[p]
+Tsubomi「Tại vì... chỗ bị sờ, nóng rực lên... làm em sướng rơn người mà.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi=0"  name="H_munemomi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -576,9 +577,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひゃぁぁっ♡　おっぱい、気持ちいいのっ♡　揉みしだかれるの、好き♡」[p]
-蕾「はぁ、んっ…おっぱいさわられて気持ちよくなっちゃうかと思ったぁ」[p]
-蕾「好きな人に触られるのって、こんなに気持ちいいんだ♡」[p]
+Tsubomi「Hya...♡ Vú em, sướng quá đi...♡ Em thích bị nắn bóp thế này lắm♡」[p]
+Tsubomi「Haa, ưm... Em cứ tưởng chỉ sờ vú thôi là đã đủ sướng rơn lên rồi chứ.」[p]
+Tsubomi「Được người mình thích chạm vào, lại sướng rơn thế này sao♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -587,9 +588,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t3.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「ひぅぅっ♡　んんっ♡　あっ、乳首っ…だめ…そこ敏感だからぁっ♡」[p]
-蕾「はぁっ…はぁ…あんっ♡　ペロペロ舐めてるトコ見るの…恥ずかし…」[p]
-蕾「も、だめだめっ…こっち、見ないでよ…！」[p]
+Tsubomi「Hi ư ư...♡ Ưm...♡ A, đầu vú... không được... chỗ đó nhạy cảm lắm cơ mà♡」[p]
+Tsubomi「Haa... Haa... A...♡ Nhìn anh đang liếm láp thế kia... xấu hổ quá đi...」[p]
+Tsubomi「M-Mồ, không được không được... Đừng có nhìn em mà...!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiname+=1"  name="H_tikubiname"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -599,9 +600,9 @@
 *H1_tikubiname2
 
 [tb_start_text mode=1 ]
-蕾「んっ♡　はっ、はぁっ♡　音立てて舐められるの…恥ずかし…」[p]
-蕾「乳首こんなに気持ちいいの…？　全然知らなかった…気持ちいいの覚えちゃった♡」[p]
-蕾「責任とって、これから気持ちよくしてもらわないと…我慢できなくなっちゃう…♡」[p]
+Tsubomi「Ưm...♡ Hộc, haa...♡ Bị liếm phát ra tiếng thế này... xấu hổ lắm...」[p]
+Tsubomi「Đầu vú lại sướng rơn thế này sao...? Trước giờ em hoàn toàn không biết luôn... Em nhớ kỹ cảm giác sướng này rồi nhé♡」[p]
+Tsubomi「Anh phải chịu trách nhiệm, từ giờ phải làm cho em sướng rơn lên đấy... Không thì em không chịu nổi đâu...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiname+=1"  name="H_tikubiname"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -612,9 +613,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「んぅぅっ♡　乳首、ばっかり…あうぅっ♡　あっ♡　あぁ♡」[p]
-蕾「気持ちいい…ねっとり舐められるの、弱いのっ…♡　あ、それ…んんんっ♡」[p]
-蕾「ぺ、ぺろぺろもだめぇ♡　気持ちよくなる…おっぱいだけでイッちゃうってば…♡」[p]
+Tsubomi「Ưm ư ư...♡ Toàn nhắm vào, đầu vú thôi... A ư...♡ A...♡ A...♡」[p]
+Tsubomi「Sướng quá... bị liếm nhóp nhép thế này, là điểm yếu của em đấy...♡ A, chỗ đó... ưm ưm ưm...♡」[p]
+Tsubomi「L-Liếm láp thế cũng không được đâu♡ Sướng quá đi... chỉ sờ vú thôi mà em cũng ra mất...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiname=0"  name="H_tikubiname"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -627,9 +628,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひあぁぁぁっ♡　そこっ、だめぇぇぇっ♡　気持ちいいのっ♡」[p]
-蕾「乳首舐められてるだけなのに…お腹の奥までジュンってしちゃったの…」[p]
-蕾「どうしよう…我慢できなくなっちゃうぅ♡　もっと敏感なトコ、触ってほしいの♡」[p]
+Tsubomi「Hi a a a...♡ Chỗ đó, không được đâu...♡ Sướng quá đi mất...♡」[p]
+Tsubomi「Chỉ bị liếm đầu vú thôi mà... tận sâu trong bụng em cũng râm ran lên rồi này...」[p]
+Tsubomi「Làm sao đây... em không chịu nổi nữa rồi♡ Em muốn anh sờ vào chỗ nhạy cảm hơn nữa cơ♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -638,9 +639,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「やっ…ちょ、ちょっと待って…そんなとこいきなり舐めるの…！？」[p]
-蕾「汚くないの！？　あ、ああんっ♡　ヌルヌルであったかいの…当たってる…♡」[p]
-蕾「嘘っ…ホントに舐められてる…？　も、やだぁ、恥ずかしい…」[p]
+Tsubomi「A... kh-khoan đã... Tự dưng lại liếm chỗ đó sao...!?」[p]
+Tsubomi「Không bẩn sao!? A, a a...♡ Thứ gì đó ấm nóng ướt át... đang chạm vào kìa...♡」[p]
+Tsubomi「Không thể nào... Đang bị liếm thật sao...? Mồ, ghét quá, xấu hổ chết đi được...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kunni+=1"  name="H_kunni"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -650,9 +651,9 @@
 *H1_kunni2
 
 [tb_start_text mode=1 ]
-蕾「ひあぁぁっ♡　あんっ、あぁ♡　刺激、強すぎてっ…腰動いちゃう…」[p]
-[舜]「ヘコヘコさせて、エッロ」[p]
-蕾「しょうがないでしょっ…気持ちいいんだからぁ♡　あぁぁんっ♡　それ、気持ちいい♡」[p]
+Tsubomi「Hi a...♡ A, a...♡ Kích thích, mạnh quá... hông em tự động nẩy lên luôn rồi...」[p]
+[舜]「Cong hông lên thụt ra thụt vào thế này, dâm quá đấy.」[p]
+Tsubomi「Đành chịu thôi chứ biết sao... tại sướng quá cơ mà♡ A a a...♡ Chỗ đó, sướng quá đi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kunni+=1"  name="H_kunni"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -663,9 +664,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「んんっ♡　あっ♡　あっ♡　ペロペロされてるっ…クリも入り口も…全部舐められてる♡」[p]
-蕾「そんなっ、味わうみたいに舐めないでよぉ♡　んんんっ、体、食べられちゃってるみたいな…」[p]
-蕾「んんっ、ふっ♡　あ～、とろけちゃう…気持ちいいのぉ♡」[p]
+Tsubomi「Ưm...♡ A...♡ A...♡ Đang bị liếm láp này... Hột le rồi cả lối vào nữa... bị liếm sạch sành sanh luôn rồi♡」[p]
+Tsubomi「Đừng có, liếm láp như đang thưởng thức thế chứ♡ Ưm ưm ưm, cơ thể em, cứ như sắp bị nuốt chửng vậy...」[p]
+Tsubomi「Ưm, phu...♡ A~, tan chảy ra mất thôi... sướng quá đi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kunni=0"  name="H_kunni"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -678,9 +679,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひあぁぁぁっ♡　それっ…何したのっ…おかしくなるっ…おまんこ溶けちゃうぅ♡」[p]
-蕾「やぁぁぁっ♡　ジュルジュル吸うのっ、だめぇぇぇっ♡　あっ、あっ、あっ…んっくぅぅっ♡」[p]
-蕾「イッちゃうかと思った…気持ちよすぎて…目の前、チカチカしてる…♡」[p]
+Tsubomi「Hi a a a...♡ Chỗ đó... anh vừa làm gì thế... em phát điên lên mất... cô bé tan chảy ra mất thôi♡」[p]
+Tsubomi「A a a...♡ Mút rột rột thế này, không được đâu...♡ A, a, a... Ưm khư ư...♡」[p]
+Tsubomi「Em cứ tưởng là mình ra luôn rồi chứ... Sướng quá đi mất... trước mắt em, nổ đom đóm luôn rồi này...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -689,9 +690,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「はぁ、んっ…♡　足撫でるの好きなの？　エッチなおじさんみたいな触り方…」[p]
-[舜]「うるせぇよ。　まだまだ余裕ありそうだなぁっ？」[p]
-蕾「ひゃうっ♡　あっ…♡　ご、ごめんってば…あんまりナデナデしないで…♡」[p]
+Tsubomi「Haa, ưm...♡ Anh thích vuốt ve chân sao? Cách sờ y hệt mấy lão già dâm dê ấy...」[p]
+[舜]「Im đi. Trông em có vẻ vẫn còn dư sức chán nhỉ?」[p]
+Tsubomi「Hya ư...♡ A...♡ X-Xin lỗi mà... Đừng có vuốt ve nhiều quá thế chứ...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_naderu+=1"  name="H_naderu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -701,9 +702,9 @@
 *H1_naderu2
 
 [tb_start_text mode=1 ]
-蕾「はあ、んっ…そこばっかり…撫でられたら…変な気分になっちゃうからぁ♡」[p]
-蕾「も、もっと…別の場所触ってほしい、とか…もっとエッチに触ってほしい、とか…」[p]
-蕾「あ～、恥ずかしいっ…言わされちゃったぁ♡」[p]
+Tsubomi「Haa, ưm... Cứ bị vuốt ve... mỗi chỗ đó thôi... làm em thấy rạo rực hết cả lên rồi này♡」[p]
+Tsubomi「E-Em muốn... anh sờ vào chỗ khác cơ... hoặc là... sờ dâm đãng hơn nữa cơ...」[p]
+Tsubomi「A~, xấu hổ quá đi... Bị bắt phải nói ra mất rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_naderu+=1"  name="H_naderu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -714,9 +715,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「んんっ…手のひら、熱くなってる…興奮してるのバレバレだからねっ？」[p]
-蕾「太ももだけじゃ物足りないでしょ？　もっと違うトコも…触っていいんだから…♡」[p]
-蕾「女の子から言わせないでよ…わかってるくせに♡　もっと…上のほう…足の間も触ってよぉ♡」[p]
+Tsubomi「Ưm... Lòng bàn tay anh, đang nóng rực lên kìa... Lộ rõ là anh đang hưng phấn rồi đấy nhé?」[p]
+Tsubomi「Chỉ sờ mỗi đùi thôi thì chưa đã đúng không? Anh sờ vào... chỗ khác nữa cũng được mà...♡」[p]
+Tsubomi「Đừng bắt con gái phải nói ra chứ... Rõ ràng là anh biết tỏng rồi cơ mà♡ Sờ lên... phía trên nữa đi... sờ vào giữa hai chân em ấy♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_naderu=0"  name="H_naderu"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -729,9 +730,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひああぁぁっ♡　あんっ…足、撫でられてるだけなのに…♡　こ、こんなに気持ちいいなんて…」[p]
-蕾「や、だ…変になっちゃう…♡　あうぅっ♡　体動いちゃうってばぁ♡」[p]
-蕾「体の奥までキュンってしちゃって…私、おかしくなっちゃってる…♡」[p]
+Tsubomi「Hi a a a...♡ A... Chỉ bị vuốt ve chân thôi mà...♡ L-Lại sướng rơn đến thế này sao...」[p]
+Tsubomi「Kh-Không chịu đâu... kỳ lạ lắm...♡ A ư...♡ Cơ thể tự động nẩy lên luôn rồi này♡」[p]
+Tsubomi「Tận sâu trong cơ thể cũng nhói lên khao khát rồi... Em, phát điên lên mất thôi...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -740,9 +741,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「な、何考えてんの、そんなとこ…キスするなんて…汚い、って…んっ♡」[p]
-蕾「ふぅっ、ふっ…足裏って、こんなに敏感なんだね…意識したことなかったから、変な感じ…」[p]
-蕾「きゃっ♡　舐めたでしょ…恥ずかしいから嫌だってばぁ」[p]
+Tsubomi「A-Anh đang nghĩ gì thế, tự dưng lại hôn... vào chỗ đó chứ... Bẩn lắm... Ưm...♡」[p]
+Tsubomi「Phù, phu... Lòng bàn chân, lại nhạy cảm thế này sao... Trước giờ em chưa từng để ý luôn đấy, cảm giác lạ lắm...」[p]
+Tsubomi「Kya...♡ Anh liếm đúng không... Đã bảo là xấu hổ lắm nên không chịu đâu mà.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_nameru+=1"  name="H_nameru"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -752,9 +753,9 @@
 *H1_asiura2
 
 [tb_start_text mode=1 ]
-蕾「んっ…あっ、はぁ♡　舌出して…ベロベロ舐めないでよぉ…くすぐったい♡」[p]
-蕾「あんっ♡　今指先甘噛みしたでしょ…はぁ、ふっ…こんなことされるの初めて…♡」[p]
-蕾「指先って…敏感なのは足も同じなんだ…今ので、感じちゃったみたい…♡」[p]
+Tsubomi「Ưm... A, haa♡ Thè lưỡi ra... đừng có liếm nhóp nhép thế chứ... nhột lắm cơ♡」[p]
+Tsubomi「A...♡ Anh vừa cắn nhẹ vào đầu ngón chân đúng không... Haa, phu... Lần đầu tiên em bị làm thế này đấy...♡」[p]
+Tsubomi「Đầu ngón tay... nhạy cảm thì đầu ngón chân cũng vậy nhỉ... Làm thế ban nãy, hình như em có cảm giác luôn rồi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_nameru+=1"  name="H_nameru"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -765,9 +766,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「んぅぅっ♡　ふぅ、ふ～っ…あぁ…足舐め回されるの…好きになっちゃった、かも…」[p]
-[舜]「蕾様のおみ足、舐めさせていただきますよ」[p]
-蕾「私がやらせてるわけじゃないのに…そんな言い方しないでよぉ♡　んあぁぁっ♡」[p]
+Tsubomi「Ưm ư ư...♡ Phù, phù... A... Bị liếm láp khắp bàn chân thế này... có khi em thích mất rồi...」[p]
+[舜]「Xin phép được liếm láp đôi bàn chân ngọc ngà của Tsubomi-sama nhé.」[p]
+Tsubomi「Có phải em bắt anh làm đâu chứ... Đừng có nói kiểu đó mà♡ Ưm a a...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_nameru=0"  name="H_nameru"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -780,9 +781,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひあぁぁっ♡　あんっ…♡　はっ、はっ、足の裏から…気持ちいいの全身に走っちゃった…♡」[p]
-蕾「んっ♡　まだっ、体全部ビリビリってしてる…♡　は～っ♡　は～っ♡」[p]
-蕾「どうしよう…気持ちいいことしか考えられなくなっちゃうよぉ♡」[p]
+Tsubomi「Hi a...♡ A...♡ Hộc, hộc, từ lòng bàn chân... cảm giác sướng rơn chạy dọc khắp toàn thân luôn rồi này...♡」[p]
+Tsubomi「Ưm...♡ Toàn thân em, vẫn còn tê rần rần đây này...♡ Haa...♡ Haa...♡」[p]
+Tsubomi「Làm sao đây... trong đầu em giờ chỉ toàn nghĩ đến chuyện sướng rơn thôi này♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -790,9 +791,9 @@
 *H1_pisuton_yukkuri1
 
 [tb_start_text mode=1 ]
-蕾「んっ…ふぅっ、ふっ…♡　あぁっ♡　お、お腹の中…いっぱいになってる…」[p]
-蕾「これが…中に入ってるっていう感覚なんだって思うと…嬉しいの…♡」[p]
-蕾「はぁ、あっ、あんっ♡　ゆっくり動いて慣らそうとしてくれてるの…？」[p]
+Tsubomi「Ưm... Phù, phu...♡ A...♡ B-Bên trong bụng em... chật kín luôn rồi...」[p]
+Tsubomi「Cứ nghĩ đến việc... đây là cảm giác khi có thứ gì đó đút vào trong... em lại thấy vui lắm cơ...♡」[p]
+Tsubomi「Haa, a, a...♡ Anh đang cử động chầm chậm để em quen dần đấy à...?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -802,9 +803,9 @@
 *H1_pisuton_yukkuri2
 
 [tb_start_text mode=1 ]
-蕾「それっ♡　それ気持ちいいのっ…そこ、好き…♡　はぁ、あっ、１人でするのと全然違う♡」[p]
-[舜]「へぇ１人でしてたんだ？」[p]
-蕾「やっ…聞かないでよっ…あぁぁっ♡　意地悪、しないでぇっ♡」[p]
+Tsubomi「Chỗ đó...♡ Chỗ đó sướng quá đi... em thích chỗ đó...♡ Haa, a, khác hẳn với lúc em tự sướng một mình luôn♡」[p]
+[舜]「Chà, em tự sướng một mình rồi sao?」[p]
+Tsubomi「A... Đừng có hỏi mà... A a a...♡ Đừng có, bắt nạt em thế chứ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -814,9 +815,9 @@
 *H1_pisuton_yukkuri3
 
 [tb_start_text mode=1 ]
-蕾「あ～っ…気持ちいい…♡　１つになってる…んっ、私っ、セックスしちゃってるんだ♡」[p]
-蕾「んっ♡　あっ♡　あぁっ♡　やめないでっ♡　奥まで届いてるの、嬉しいからっ♡」[p]
-蕾「もっと…ぶつけて…[舜]の…エッチな気持ち…受け止めたいの…♡」[p]
+Tsubomi「A~... Sướng quá đi...♡ Đang hòa làm một rồi này... Ưm, em, đang làm tình thật rồi♡」[p]
+Tsubomi「Ưm...♡ A...♡ A...♡ Đừng dừng lại mà...♡ Chạm đến tận sâu bên trong rồi, em vui lắm cơ...♡」[p]
+Tsubomi「Hãy trút... nhiều hơn nữa đi... Em muốn đón nhận... dục vọng dâm đãng... của Shun cơ...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri=0"  name="H_supiritasu_pisuton_yukkuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -828,9 +829,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あ゛あ゛っ♡　何、今…いきなり体がビクビクって…わかんなくなっちゃいそうっ♡」[p]
-蕾「すっごい弱いトコ…当たってる…んっ、はぁ、あんっ♡　ビクビクしちゃう♡」[p]
-蕾「はぁ、あっ♡　あっつ♡　私もっ、腰動いちゃう…♡　気持ちいいっ…♡」[p]
+Tsubomi「A a...♡ Gì thế, vừa rồi... tự dưng cơ thể giật nẩy lên... em không biết gì nữa luôn rồi này...♡」[p]
+Tsubomi「Đâm trúng... điểm yếu nhất của em rồi... Ưm, haa, a...♡ Giật nẩy lên mất thôi♡」[p]
+Tsubomi「Haa, a...♡ Nóng quá♡ Em cũng, tự động nẩy hông luôn rồi này...♡ Sướng quá đi...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*high2"  cond="f.H_high1==1"  ]
@@ -839,9 +840,9 @@
 *H1_pisuton_hagesiku1
 
 [tb_start_text mode=1 ]
-蕾「はぁっ♡　はぁっ♡　あっ、激しすぎ、だってばぁ…♡　壊れちゃうっ…♡」[p]
-[舜]「んっ、何が壊れちゃうって？」[p]
-蕾「言わせないでよ…お、おまんこっ♡　おまんこがっ、壊れちゃうからぁっ♡」[p]
+Tsubomi「Haa...♡ Haa...♡ A, mãnh liệt quá, rồi đấy...♡ Hỏng bét mất thôi...♡」[p]
+[舜]「Ưm, cái gì hỏng bét cơ?」[p]
+Tsubomi「Đừng bắt em phải nói ra mà... C-Cô bé...♡ Cô bé của em, hỏng bét mất thôi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -851,9 +852,9 @@
 *H1_pisuton_hagesiku2
 
 [tb_start_text mode=1 ]
-[舜]「気持ちいい声出てるな…そんなにいいんだ？」[p]
-蕾「んんんっ♡　気持ちいいの…♡　すっごく気持ちいい…♡」[p]
-蕾「いっつもいろんなこと教えてくれるけどっ…まさかセックスまで教えてくれるなんてぇ♡」[p]
+[舜]「Rên rỉ nghe sướng tai thật đấy... Em sướng đến thế cơ à?」[p]
+Tsubomi「Ưm ưm ưm...♡ Sướng quá...♡ Sướng quá đi mất...♡」[p]
+Tsubomi「Lúc nào anh cũng dạy cho em đủ thứ chuyện... nhưng không ngờ lại dạy cho em cả chuyện làm tình thế này♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -863,9 +864,9 @@
 *H1_pisuton_hagesiku3
 
 [tb_start_text mode=1 ]
-蕾「そんな激しく突かれたらっ♡　馬鹿になっちゃうぅ♡　何もわかんなくなっちゃうってばぁ♡」[p]
-蕾「深いトコっ…当たってる…だめ…気持ちいい…あ゛あ゛っ♡　この体勢ダメっ…」[p]
-蕾「気持ちいいトコ擦れてっ…あ゛あ゛っ♡」[p]
+Tsubomi「Bị đâm mãnh liệt thế này♡ Em sẽ phát điên lên mất♡ Chẳng còn biết gì nữa đâu♡」[p]
+Tsubomi「Tận sâu bên trong... bị đâm trúng rồi... không được... sướng quá... A a...♡ Tư thế này không được đâu...」[p]
+Tsubomi「Cọ xát đúng chỗ sướng rồi... A a...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku=0"  name="H_supiritasu_pisuton_hagesiku"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -877,9 +878,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひゃうぅぅぅっ♡　おっ♡　おおおっ♡　奥っ、ゾリゾリって…擦れる♡」[p]
-蕾「こんなのっ、イッちゃうぅぅ♡　おっ、おおっ♡　ぎもぢぃ♡」[p]
-蕾「おちんちんっ、締め付けちゃう…ぎもちよすぎるぅぅ♡」[p]
+Tsubomi「Hya ư ư...♡ Ô...♡ Ô ô ô...♡ Tận sâu bên trong, cứ cọ xát... sột soạt kìa♡」[p]
+Tsubomi「Thế này thì, em ra mất thôi...♡ Ô, ô ô...♡ Sướng quá đi♡」[p]
+Tsubomi「Siết chặt lấy con cu mất rồi... Sướng quá đi mất...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*high2"  cond=""  ]
@@ -888,9 +889,9 @@
 *J1_kaiwa1
 
 [tb_start_text mode=1 ]
-蕾「もー、なんでじっと見てるの…？　見過ぎだってば…恥ずかしいんだけど…」[p]
-[舜]「仕事終わりの格好も、やっぱ可愛いなと思って…」[p]
-蕾「仕事して片付けして汗かいちゃったし…絶対メイク崩れてるよ。至近距離で見るの禁止っ！」[p]
+Tsubomi「Mồ, sao anh cứ nhìn chằm chằm thế...? Nhìn nhiều quá rồi đấy... Xấu hổ lắm cơ...」[p]
+[舜]「Anh chỉ nghĩ là dáng vẻ sau khi tan làm của em vẫn đáng yêu quá thôi...」[p]
+Tsubomi「Em làm việc rồi dọn dẹp nên đổ mồ hôi hết rồi... Chắc chắn là lớp trang điểm trôi hết rồi đấy. Cấm anh nhìn ở cự ly gần!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -898,9 +899,9 @@
 *J1_kaiwa2
 
 [tb_start_text mode=1 ]
-蕾「メイド服だと余計にドキドキしちゃう？　ふふっ、こういうの好きだもんね♡」[p]
-[舜]「まぁ…そりゃ好きだよ。でも誰でもいいってわけじゃないし」[p]
-蕾「あ～、またかっこいいこと言ってる。私がかっこいいって言ったから意識しちゃった？」[p]
+Tsubomi「Mặc đồ hầu gái thế này làm anh hồi hộp hơn sao? Khc, anh thích mấy kiểu này mà nhỉ♡」[p]
+[舜]「Thì... đúng là anh thích. Nhưng không phải ai mặc anh cũng thích đâu.」[p]
+Tsubomi「A~, lại nói mấy câu ngầu lòi rồi. Có phải vì em khen ngầu nên anh để ý không đấy?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -908,9 +909,9 @@
 *J1_kaiwa3
 
 [tb_start_text mode=1 ]
-蕾「今日も１日頑張ったんだけど？　こーゆー時は、まず褒めてくれなくちゃね？」[p]
-[舜]「頑張っててえらいよ。っていうか、いつも仕事は真剣にやってるだろ」[p]
-蕾「まぁそうだけどね～。今日は特別頑張ったの！　言葉だけじゃなくてご褒美ももらおっかな♡」[p]
+Tsubomi「Hôm nay em cũng đã cố gắng cả ngày rồi đấy nhé? Những lúc thế này, anh phải khen em trước tiên chứ nhỉ?」[p]
+[舜]「Em cố gắng lắm, ngoan lắm. Mà nói đúng hơn thì, lúc nào em chẳng làm việc nghiêm túc.」[p]
+Tsubomi「Thì đúng là vậy rồi~. Nhưng hôm nay em đã cố gắng đặc biệt hơn cơ! Chỉ nói suông thôi chưa đủ đâu, chắc em phải đòi phần thưởng thôi nhỉ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa=0"  name="H_kaiwa"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -918,9 +919,9 @@
 *J1_kiss1
 
 [tb_start_text mode=1 ]
-蕾「ちゅ…♡　閉店後だとはいえ、お店でこういうことしちゃうの、ホントはだめだよね」[p]
-蕾「昔の私なら、ルールは守らなきゃって意地になってたはずなのに…あんたのせいだからね？」[p]
-蕾「でも…ちょっとくらい破っちゃったほうが楽しいこともあるんだって、教えられちゃったんだもん」[p]
+Tsubomi「Chu...♡ Dù là đã đóng cửa rồi, nhưng làm mấy chuyện này ở quán, thực ra là không được đâu nhỉ.」[p]
+Tsubomi「Nếu là em ngày xưa, chắc chắn sẽ ngoan cố bảo vệ luật lệ cho bằng được... Đều tại anh hết đấy nhé?」[p]
+Tsubomi「Nhưng mà... vì em đã được anh dạy cho biết rằng thỉnh thoảng phá luật một chút cũng vui mà.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss+=1"  name="H_kiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -930,9 +931,9 @@
 *J1_kiss2
 
 [tb_start_text mode=1 ]
-蕾「ちゅ、ちゅっちゅっ♡　んんっ、ふぅ、ふっ…ちょっと、がっつきすぎだから…！」[p]
-[舜]「あ、悪い…つい…だってキス気持ちよすぎるから…」[p]
-蕾「も、もうっ…すぐそうやって、私のことその気にするんだから…ズルいってば♡」[p]
+Tsubomi「Chu, chụt chụt♡ Ưm, phù, phu... Khoan đã, anh ngấu nghiến quá rồi đấy...!」[p]
+[舜]「A, xin lỗi... tự dưng... tại vì nụ hôn sướng quá mà...」[p]
+Tsubomi「M-Mồ... anh cứ hay làm em có hứng lên ngay lập tức thế... Ăn gian quá đi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss+=1"  name="H_kiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -942,9 +943,9 @@
 *J1_kiss3
 
 [tb_start_text mode=1 ]
-[舜]「んっ…キスも前よりうまくなったって思ってるんだけど、どう？」[p]
-蕾「も、もうっ…！　面と向かって聞くなんてデリカシーなさすぎでしょ…！　そ、それに──」[p]
-蕾「キスしてる時、私全然余裕ないし…わかるわけないじゃない…頭の中沸騰しそうなんだからっ」[p]
+[舜]「Ưm... Anh thấy kỹ năng hôn của anh cũng giỏi hơn trước rồi đấy, em thấy sao?」[p]
+Tsubomi「M-Mồ...! Hỏi thẳng mặt thế này vô duyên quá đi mất...! V-Với lại──」[p]
+Tsubomi「Lúc hôn, em làm gì còn tâm trí đâu cơ chứ... sao mà em biết được... Đầu óc em cứ như sắp sôi lên ấy.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss=0"  name="H_kiss"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -956,9 +957,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ちゅ、んんっ♡　はぁ、はっ…いつこんなに気持ちいいキス覚えたの…？」[p]
-蕾「[舜]のくせに…優しくてエッチなキスするなんて…おかげで体がムズムズしちゃったじゃない♡」[p]
-蕾「責任…とってもらわなくちゃだめかも…♡　拒否する権利なんかないからね？」[p]
+Tsubomi「Chu, ưm...♡ Haa, hộc... Anh học được kiểu hôn sướng thế này từ lúc nào vậy...?」[p]
+Tsubomi「Chỉ là Shun thôi mà... lại hôn vừa dịu dàng vừa dâm đãng thế này... Nhờ ơn anh mà cơ thể em rạo rực hết cả lên rồi này♡」[p]
+Tsubomi「Chắc anh... phải chịu trách nhiệm thôi...♡ Anh không có quyền từ chối đâu đấy nhé?」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -967,9 +968,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「ひぅっ…こんな感じでいいの…？　強さ、とか…動かし方とかよくわからないんだけど…」[p]
-[舜]「くっ…気持ちいいよ…めちゃくちゃ上手だ…そのまましごいて…」[p]
-蕾「ふふ、情けない顔になってる♡　私がこの顔させてるって思うと…ちょっと変な気分になるかも♡」[p]
+Tsubomi「Hi ư... Như thế này được chưa...? Độ mạnh, hay là... cách cử động em cũng không rõ lắm...」[p]
+[舜]「Hừ... Sướng lắm... Em làm giỏi lắm... Cứ sục cu như thế đi...」[p]
+Tsubomi「Khc, mặt anh trông thảm hại chưa kìa♡ Cứ nghĩ đến việc chính em đã khiến anh có khuôn mặt này... lại thấy cảm giác là lạ làm sao ấy♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_paizuri+=1"  name="H_paizuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -979,9 +980,9 @@
 *J1_paizuri2
 
 [tb_start_text mode=1 ]
-蕾「んっ…はぁ、はっ…あぁ♡　なんか…ヌルヌルしてきた…おっぱいの間。熱くなってる♡」[p]
-蕾「あぁっ…♡　すごい…ビクビクしてる♡　気持ちよくなってるんだって伝わってくる…♡」[p]
-蕾「んんっ♡　はぁ、もっとしてほしいの？　言わなくてもわかるよ…♡」[p]
+Tsubomi「Ưm... Haa, hộc... A...♡ Cứ như... đang trơn tuột nhầy nhụa vậy... Giữa hai bầu vú. Nóng rực lên rồi này♡」[p]
+Tsubomi「A...♡ Tuyệt quá... cứ giật giật này♡ Em cảm nhận rõ là anh đang sướng rơn lên đấy...♡」[p]
+Tsubomi「Ưm...♡ Haa, anh muốn em làm thêm nữa sao? Không nói em cũng biết thừa rồi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_paizuri+=1"  name="H_paizuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -992,9 +993,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「はぁ、あっ、んんっ…♡　変、なの…私は気持ちいいことしてるだけなのに…」[p]
-蕾「体がすっごく熱くて…ムズムズしてきちゃった…私、変になっちゃったみたい♡」[p]
-蕾「でも…あんたも変になってるでしょ？　ここ、すっごいガチガチになってるもん」[p]
+Tsubomi「Haa, a, ưm...♡ Lạ, thật đấy... Rõ ràng em chỉ đang làm cho anh sướng thôi mà...」[p]
+Tsubomi「Cơ thể em nóng rực lên... rạo rực hết cả rồi... Hình như em trở nên kỳ lạ mất rồi♡」[p]
+Tsubomi「Nhưng mà... anh cũng đang trở nên kỳ lạ đúng không? Chỗ này, cứng ngắc hết cả lên rồi này.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_paizuri=0"  name="H_paizuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1007,9 +1008,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひぅぅっ♡　あっ…♡　んんっ…熱くなったおちんちん、擦れてるってば…♡」[p]
-蕾「ズルい…私の反応見て楽しんでるんでしょ？　そういう悪い彼氏はっ…！」[p]
-蕾「こうやって激しくシコシコしちゃうんだから…♡　んっ♡　はぁっ♡　あぁっ♡　あうっ♡」[p]
+Tsubomi「Hi ư ư...♡ A...♡ Ưm... Con cu nóng hổi, đang cọ xát vào kìa...♡」[p]
+Tsubomi「Ăn gian quá... Anh đang thích thú nhìn phản ứng của em đúng không? Đồ bạn trai xấu xa...!」[p]
+Tsubomi「Em sẽ sục cu thật mạnh bạo thế này luôn...♡ Ưm...♡ Haa...♡ A...♡ A ư...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -1018,9 +1019,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あぁっ…はぁっ…♡　あぁっ♡　触り方、やらしすぎ…やわやわ触るの、どうやって覚えたの…」[p]
-[舜]「えっ？　別に…蕾の反応見ながら触ってるだけだって」[p]
-蕾「へぇ、じゃあ…私に合わせたオーダーメイドの触り方ってこと？　そんなことまでできるんだ♡」[p]
+Tsubomi「A... Haa...♡ A...♡ Cách sờ, dâm đãng quá... Cách sờ nắn mềm mại này, anh học từ đâu ra thế...」[p]
+[舜]「Hả? Đâu có... Anh chỉ vừa sờ vừa quan sát phản ứng của Tsubomi thôi mà.」[p]
+Tsubomi「Chà, vậy là... cách sờ này được đo ni đóng giày riêng cho em sao? Anh có thể làm đến mức đó cơ à♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1030,9 +1031,9 @@
 *J1_munemomi2
 
 [tb_start_text mode=1 ]
-蕾「ふぅっ…はぁ、あっ♡　何、その焦らすみたいな触り方ぁ♡　わざとやってるでしょ…♡」[p]
-[舜]「バレたか…どんな反応してくれるかなと思って。もっと触ってほしい？」[p]
-蕾「わかってるくせに♡　もっと触ってほしい…おっぱい、好きに揉んで♡」[p]
+Tsubomi「Phù... Haa, a...♡ Cách sờ cứ như đang trêu chọc đó là sao hả♡ Anh cố tình làm thế đúng không...♡」[p]
+[舜]「Bị lộ rồi à... Anh chỉ tò mò xem em sẽ phản ứng thế nào thôi. Em có muốn anh sờ thêm nữa không?」[p]
+Tsubomi「Rõ ràng là anh biết tỏng rồi cơ mà♡ Em muốn anh sờ thêm nữa... Hãy nắn bóp vú em theo ý anh thích đi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1043,9 +1044,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あっ♡　あぁぁっ♡　んんっ♡　乳首、触れてないのにっ…先っぽジンジンしてきた♡」[p]
-[舜]「確かに。乳首ぷっくり膨れてきちゃったな？」[p]
-蕾「んんっ♡　だってっ♡　こんなにエッチな触り方されてたら…しょうがないでしょ♡」[p]
+Tsubomi「A...♡ A a...♡ Ưm...♡ Chưa chạm vào đầu vú mà... phần đầu đã tê rần rần lên rồi này♡」[p]
+[舜]「Đúng thật. Đầu vú sưng phồng lên luôn rồi này?」[p]
+Tsubomi「Ưm...♡ Tại vì...♡ Bị sờ dâm đãng thế này thì... đành chịu thôi chứ biết sao♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi=0"  name="H_munemomi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1058,9 +1059,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひあぁぁっ♡　あっ♡　んんっ♡　乳首の先っぽ、ムズムズして…我慢できなくなっちゃう♡」[p]
-蕾「あっ♡　あんっ…♡　自分の体じゃないみたい…♡　仕事場、なのにっ…♡」[p]
-蕾「いっつも仕事してるとこで、こんなエッチなことしちゃうなんて…だめなのにぃ♡」[p]
+Tsubomi「Hi a...♡ A...♡ Ưm...♡ Đầu vú, rạo rực quá... Em không chịu nổi nữa rồi♡」[p]
+Tsubomi「A...♡ A...♡ Cứ như không phải cơ thể của em vậy...♡ Rõ ràng đây là chỗ làm việc, thế mà...♡」[p]
+Tsubomi「Làm mấy chuyện dâm đãng ở ngay chỗ mình hay làm việc thế này... là không được đâu đấy nhé♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -1069,9 +1070,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あっ、あんっ…♡　んっ…♡　あっ♡　あっ♡　あぁっ♡おっぱいしゃぶるのだめぇっ♡」[p]
-蕾「ホント、おっぱい好きなんだから…そんなに吸ってもなんにも出てこないってばぁ…」[p]
-[舜]「そうか？　でも舐めてるとめちゃくちゃ甘く感じる気がするんだけどな」[p]
+Tsubomi「A, a...♡ Ưm...♡ A...♡ A...♡ A...♡ Không được mút vú em đâu...♡」[p]
+Tsubomi「Đúng là anh thích vú thật đấy... Anh có mút thế chứ mút nữa cũng chẳng ra cái gì đâu mà...」[p]
+[舜]「Vậy sao? Nhưng anh có cảm giác lúc liếm ngọt ngào lắm đấy chứ.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munename+=1"  name="H_munename"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1081,9 +1082,9 @@
 *J1_munename2
 
 [tb_start_text mode=1 ]
-蕾「あうっ♡　や、だぁ…なんで私の顔見ながら舐めてるの…？　恥ずかしいから見ないで…」[p]
-[舜]「どんな風に感じてるのか見たいから。それに気持ちいいのか教えてくれないと」[p]
-蕾「わ、わかったっ♡　教えるからぁっ♡　あ、あぁぁっ♡　ペロペロ舐めるの…気持ちいいの♡」[p]
+Tsubomi「A ư...♡ Kh-Không chịu đâu... Sao anh vừa liếm vừa nhìn mặt em thế...? Xấu hổ lắm đừng nhìn em mà...」[p]
+[舜]「Vì anh muốn xem em đang có cảm giác thế nào mà. Với lại em phải nói cho anh biết là có sướng không chứ.」[p]
+Tsubomi「R-Rồi, em biết rồi♡ Em sẽ nói cho anh mà♡ A, a a...♡ Bị liếm láp thế này... sướng quá đi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munename+=1"  name="H_munename"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1094,9 +1095,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「やっ…あっ、あぁぁぁっ♡　乳首…溶けちゃう♡　ダメ、ホントにっ、変になっちゃうっ♡」[p]
-蕾「乳首だけで…こんなに気持ちよくなっちゃうなんて…♡　んっ…あっ、あぁぁぁっ♡」[p]
-[舜]「あ～、すっごい反応…おっぱいだけで、腰まで動いてるじゃん」[p]
+Tsubomi「A... A, a a a...♡ Đầu vú... tan chảy ra mất thôi♡ Không được đâu, em sẽ trở nên kỳ lạ thật mất♡」[p]
+Tsubomi「Chỉ mỗi đầu vú thôi mà... lại sướng rơn thế này sao...♡ Ưm... A, a a a...♡」[p]
+[舜]「A~, phản ứng dữ dội thật... Chỉ sờ vú thôi mà hông em đã tự động nẩy lên rồi kìa.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munename=0"  name="H_munename"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1109,9 +1110,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あっ♡　あぁぁぁんっ♡　き、気持ちいいのが…電流みたいにビリビリって…」[p]
-蕾「おっぱいの先っぽから…お、お腹の奥まで…痺れて…変なの♡　腰、動いちゃう…♡」[p]
-蕾「足の間もじゅわって…あったかくなっちゃった…私の体、どんどんエッチになってる♡」[p]
+Tsubomi「A...♡ A a a...♡ C-Cảm giác sướng rơn... giật tê rần như dòng điện ấy...」[p]
+Tsubomi「Từ đầu vú... đến tận sâu trong bụng... tê dại hết cả lên... lạ lắm cơ♡ Hông em, tự động nẩy lên luôn này...♡」[p]
+Tsubomi「Giữa hai chân cũng trào nước ra... nóng ran lên rồi... Cơ thể em, ngày càng trở nên dâm đãng mất rồi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -1120,9 +1121,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t3.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「んっ…あっ、あぁっ♡　待って待ってっ！　汗かいたからぁっ…舐めちゃダメだってば…！」[p]
-[舜]「ん…でもめちゃくちゃ濡れてんじゃん。足開かれて興奮してるんじゃないの？」[p]
-蕾「言わないでよ、馬鹿ぁ…んんっ♡　舐められたら反応しちゃうに決まってるでしょ…♡」[p]
+Tsubomi「Ưm... A, a...♡ Khoan đã khoan đã! Em đang đổ mồ hôi mà... Đã bảo là không được liếm đâu...!」[p]
+[舜]「Ưm... Nhưng mà ướt nhẹp hết cả rồi kìa. Bị banh chân ra thế này làm em hưng phấn lắm đúng không?」[p]
+Tsubomi「Đừng nói ra mà, đồ ngốc... Ưm...♡ Bị liếm thế thì phải phản ứng lại là điều hiển nhiên mà...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kunni+=1"  name="H_kunni"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1133,9 +1134,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あっ♡　あぁっ♡　あぅっ♡　仕事場、なのにっ♡　こんな恥ずかしい格好しちゃってるっ♡」[p]
-蕾「んっ…くぅぅっ♡　あぁぁぁっ♡　ペロペロ舐め回されるの、弱いって知ってるくせにっ♡」[p]
-蕾「あっ♡　あんっ♡　はぁ、ああっ♡　やだ、やだやだっ♡　変な声、出ちゃうぅぅっ♡」[p]
+Tsubomi「A...♡ A...♡ A ư...♡ Rõ ràng là chỗ làm việc, thế mà...♡ Em lại mang cái bộ dạng đáng xấu hổ này...♡」[p]
+Tsubomi「Ưm... Khư ư...♡ A a a...♡ Rõ ràng anh biết bị liếm láp khắp nơi là điểm yếu của em rồi cơ mà...♡」[p]
+Tsubomi「A...♡ A...♡ Haa, a a...♡ Không chịu đâu, không chịu không chịu đâu...♡ Em phát ra mấy âm thanh kỳ lạ mất thôi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kunni+=1"  name="H_kunni"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1146,9 +1147,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「ひぐぅぅっ♡　あっ、あぁぁぁっ♡　そこっ…だめ…敏感だからっ♡　吸い上げないでぇっ♡」[p]
-[舜]「へぇ、クリしゃぶられんの好きなんだ…ここ、プリップリに膨らんでるもんなぁ」[p]
-蕾「あっ♡　あ゛あ゛あ゛っ♡　ひぅぅっ♡　ジュルジュル吸うの、ダメだって言ってるのにぃ♡」[p]
+Tsubomi「Hức ư ư...♡ A, a a a...♡ Chỗ đó... không được đâu... nhạy cảm lắm cơ...♡ Đừng có mút mạnh thế mà...♡」[p]
+[舜]「Chà, em thích bị mút hột le nhỉ... Chỗ này, sưng phồng căng mọng lên luôn rồi kìa.」[p]
+Tsubomi「A...♡ A a a...♡ Hi ư ư...♡ Đã bảo là mút rột rột thế không được đâu mà...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kunni=0"  name="H_kunni"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1161,9 +1162,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あ゛あ゛っ♡　　[舜]、気が利いて優しくなったって思ったのにっ…いきなり意地悪になるっ♡」[p]
-[舜]「蕾のことが好きだから、気持ちよくしたいだけだって」[p]
-蕾「するいっ、不意打ちでそんなこと言うなんて…♡　余計気持ちよくなっちゃうってばあっ♡」[p]
+Tsubomi「A a...♡ Em cứ tưởng Shun tinh tế và dịu dàng hơn rồi chứ... tự dưng lại trở nên xấu xa thế này...♡」[p]
+[舜]「Vì anh thích Tsubomi nên mới muốn làm cho em sướng rơn lên thôi mà.」[p]
+Tsubomi「Ăn gian quá, tự dưng đánh úp nói mấy câu như thế...♡ Làm em lại càng sướng rơn lên mất thôi...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -1172,9 +1173,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「ひゃっ♡　あぁぁっ♡　ま、待って…あっ♡　あっ♡　そこっ…ダメなトコ当たってるの…♡」[p]
-[舜]「奥がいいんだ？　蕾は素直だからわかりやすくていいな。もっとエロい顔見せてよ」[p]
-蕾「なんでっ…あんたばっかり余裕なのっ♡　ずるいぃっ♡　あっ♡　あっ♡　あぁぁっ♡」[p]
+Tsubomi「Hya...♡ A a...♡ Kh-Khoan đã... A...♡ A...♡ Chỗ đó... Đâm trúng điểm yếu rồi...♡」[p]
+[舜]「Em thích đâm sâu à? Tsubomi thành thật thế này dễ hiểu quá đi. Cho anh xem khuôn mặt dâm đãng hơn nữa đi nào.」[p]
+Tsubomi「Sao... chỉ có mỗi anh là thong thả thế chứ...♡ Ăn gian quá...♡ A...♡ A...♡ A a...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman+=1"  name="H_teman"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1184,9 +1185,9 @@
 *J1_teman2
 
 [tb_start_text mode=1 ]
-蕾「んっ♡　あっ♡　あぁっ♡　私ばっかり…好き放題されちゃって悔しいっ…私だってっ…」[p]
-蕾「あんたのとろけた顔、見てやるんだからっ…♡　あっ、あぁぁぁぁっ♡　激し…壊れちゃう♡」[p]
-蕾「なんで私の弱いトコばっかり…集中狙いしてくるのっ？　全部気持ちいいトコバレちゃってる♡」[p]
+Tsubomi「Ưm...♡ A...♡ A...♡ Bực thật đấy, chỉ có mỗi em... là bị làm tình làm tội đủ kiểu... Cả em cũng...」[p]
+Tsubomi「Em cũng sẽ làm cho anh có khuôn mặt tan chảy ra luôn cho xem...♡ A, a a a a...♡ Mãnh liệt quá... hỏng bét mất thôi♡」[p]
+Tsubomi「Sao anh toàn nhắm tập trung... vào điểm yếu của em thế hả? Bị lộ hết mấy chỗ sướng rồi còn đâu♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman+=1"  name="H_teman"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1197,9 +1198,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「ひぐぅぅっ♡　あっ…や、やだっ…♡　トントンノックされるの…気持ちよくって…」[p]
-蕾「頭の中ビリビリって…電流走ってるみたいなのっ♡　はぁ、あっ♡　そこばっかり、だめ…」[p]
-蕾「んっ♡　あっ♡　あっ♡　あぁぁ♡　腰動いちゃうっ♡　ヘコヘコ情けない姿見ないでぇっ♡」[p]
+Tsubomi「Hức ư ư...♡ A... kh-không chịu đâu...♡ Bị thọc sâu vào thế này... sướng quá đi...」[p]
+Tsubomi「Trong đầu cứ tê rần rần... như có dòng điện chạy qua ấy...♡ Haa, a...♡ Toàn nhắm vào chỗ đó, không được đâu...」[p]
+Tsubomi「Ưm...♡ A...♡ A...♡ A a...♡ Hông tự động nẩy lên luôn này...♡ Đừng nhìn cái dáng vẻ thảm hại cứ cong hông lên của em mà...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman=0"  name="H_teman"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1212,9 +1213,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あぁぁぁっ♡　へ、変なのっ…気持ちいいのこみ上げてきて…なんか、出ちゃうぅぅっ♡」[p]
-[舜]「あーあー、恥ずかしいって言ってたのに。ガニ股で腰ヘコヘコさせちゃって…」[p]
-蕾「やっ、ヤダ、言わないでよ…こんな格好恥ずかしいのに…気持ちよくて体が勝手に動いちゃうの♡」[p]
+Tsubomi「A a a...♡ L-Lạ lắm... cảm giác sướng rơn trào dâng lên... có thứ gì đó, sắp tuôn ra rồi này...♡」[p]
+[舜]「Chà chà, rõ ràng miệng bảo xấu hổ. Thế mà lại dạng hai chân cong hông thụt ra thụt vào thế này...」[p]
+Tsubomi「Kh-Không chịu đâu, đừng nói mà... Dáng vẻ thế này đáng xấu hổ lắm... nhưng sướng quá nên cơ thể cứ tự động nẩy lên thôi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -1222,9 +1223,9 @@
 *J1_pisuton_yukkuri1
 
 [tb_start_text mode=1 ]
-蕾「んっ♡　ふぅ、はっ、あぁっ♡　中、いっぱいになってる…内側擦れて…ぐちゃぐちゃになるっ♡」[p]
-[舜]「あー、すっごい狭いんだけど…そんな締め付けたら動けないって。力抜いて」[p]
-蕾「そんなの無理っ…んんっ♡　あぁぁっ♡　自分でもどうしたらいいのかわかんないんだもん…！」[p]
+Tsubomi「Ưm...♡ Phù, hộc, a...♡ Bên trong, chật kín hết cả rồi... Thành bên trong bị cọ xát... nát bét hết mất thôi♡」[p]
+[舜]「A, chật chội quá đi... Em siết chặt thế này anh không cử động được đâu. Thả lỏng ra nào.」[p]
+Tsubomi「Thế thì chịu thôi... Ưm...♡ A a...♡ Chính em cũng không biết phải làm sao nữa cơ mà...!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1234,9 +1235,9 @@
 *J1_pisuton_yukkuri2
 
 [tb_start_text mode=1 ]
-蕾「あっ♡　あっ♡　あぁぁっ♡　１番奥っ…だ、ダメなとこ…当たってるっ♡　潰れちゃうぅ♡」[p]
-[舜]「あんっ！　くっ…なんだ、めちゃくちゃ締まってんだけど…！」[p]
-蕾「あぁぁぁっ♡　深いトコまで…トントンって先っぽでノックしちゃだめ、なのにっ♡」[p]
+Tsubomi「A...♡ A...♡ A a...♡ Tận cùng bên trong... đ-điểm yếu... bị đâm trúng rồi...♡ Bị nghiền nát mất thôi...♡」[p]
+[舜]「A! Hừ... Sao thế này, em siết chặt quá đấy...!」[p]
+Tsubomi「A a a...♡ Đâm đến tận sâu bên trong... dùng phần đầu thọc mạnh thế này là không được đâu, cơ mà...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1246,9 +1247,9 @@
 *J1_pisuton_yukkuri3
 
 [tb_start_text mode=1 ]
-蕾「あっ♡　ぐぅぅっ♡　んんっ♡　ふぅっ♡　はっ♡　あぁ、無理っ、無理無理ぃっ♡」[p]
-[舜]「無理じゃないだろ、こんなに締め付けて…めっちゃエロい声も出てるし…！」[p]
-蕾「んんっ♡　ホントにっ、無理なのに…♡　はぁ、あっ、頭、真っ白になっちゃうぅぅっ♡」[p]
+Tsubomi「A...♡ Gư ư...♡ Ưm...♡ Phù...♡ Hộc...♡ A, không chịu nổi đâu, không chịu nổi nữa đâu...♡」[p]
+[舜]「Không chịu nổi sao được, em siết chặt thế này cơ mà... Lại còn phát ra giọng dâm đãng thế kia nữa chứ...!」[p]
+Tsubomi「Ưm...♡ Em không chịu nổi, thật mà...♡ Haa, a, đầu óc em, trắng xóa hết cả rồi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri=0"  name="H_supiritasu_pisuton_yukkuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1260,9 +1261,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひぐぅぅっ♡　あぅぅっ♡　おっ♡　おおおっ♡　わかんないっ♡　わかんなくなってるぅっ♡」[p]
-[舜]「体のけ反りヤバ…前より敏感になってんじゃないか？　あぁ、チンポに響く…！」[p]
-蕾「あぁぁぁっ♡　だ、だめっ♡　これ以上興奮しないでぇっ♡　中っ、ヒクヒクしすぎっ♡」[p]
+Tsubomi「Hức ư ư...♡ A ư ư...♡ Ô...♡ Ô ô ô...♡ Em không biết nữa...♡ Em không biết gì nữa rồi...♡」[p]
+[舜]「Cơ thể uốn cong ghê thật... Có phải em nhạy cảm hơn trước rồi không? A, sướng tận óc luôn...!」[p]
+Tsubomi「A a a...♡ Kh-Không được đâu...♡ Đừng hưng phấn thêm nữa mà...♡ Bên trong, giật giật dữ quá...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*high2"  cond="f.H_high1==1"  ]
@@ -1271,9 +1272,9 @@
 *J1_pisuton_hagesiku1
 
 [tb_start_text mode=1 ]
-[舜]「普段仕事してるとこで、セックスしちゃってんのめっちゃエロいよな…」[p]
-蕾「んあぁぁっ♡　や、だ…言わないで…だめっ♡　悪いことしてるって感じちゃう、から…」[p]
-蕾「あっ、あぁぁぁっ♡　余計にっ…お腹の奥キュンキュンってしちゃうの♡」[p]
+[舜]「Làm tình ở ngay nơi mình hay làm việc, cảm giác dâm đãng thật đấy nhỉ...」[p]
+Tsubomi「Ưm a a...♡ Kh-Không chịu đâu... đừng nói mà... không được đâu...♡ Em có cảm giác như mình đang làm chuyện xấu xa vậy...」[p]
+Tsubomi「A, a a a...♡ Càng làm... tận sâu trong bụng em càng nhói lên khao khát này♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1283,9 +1284,9 @@
 *J1_pisuton_hagesiku2
 
 [tb_start_text mode=1 ]
-蕾「ダメ、激し…奥までっ、グチャグチャにかき回されちゃってるっ♡　壊れちゃうぅっ♡」[p]
-蕾「やだ、やだやだぁっ♡　仕事してる時もっ…感触とかっ、全部思い出しちゃうってばっ♡」[p]
-蕾「んっ♡　あぁっ♡　んっくぅっ♡　エッチな気分になっちゃったらっ、責任取ってよねっ！」[p]
+Tsubomi「Không được, mãnh liệt quá... Tận sâu bên trong, bị khuấy đảo nát bét hết rồi...♡ Hỏng bét mất thôi...♡」[p]
+Tsubomi「Không chịu đâu, không chịu không chịu đâu...♡ Kể cả lúc đang làm việc... cảm giác này, em sẽ nhớ lại hết mất thôi...♡」[p]
+Tsubomi「Ưm...♡ A...♡ Ưm khư ư...♡ Nếu em có hứng lên làm mấy chuyện dâm đãng, anh phải chịu trách nhiệm đấy nhé!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1295,9 +1296,9 @@
 *J1_pisuton_hagesiku3
 
 [tb_start_text mode=1 ]
-[舜]「ん～？　次は仕事中にこうやって犯してほしいって？　欲しがりだな蕾は…！」[p]
-蕾「くぅっ♡　そんなこと言ってないでしょ…馬鹿っ♡　仕事中はお金稼ぐんだからっ♡」[p]
-蕾「はぁっ♡　あっ♡　あぁっ♡　するのは…あ、あんたの家に帰ってからにしてっ♡」[p]
+[舜]「Hửm~? Lần tới em muốn bị làm tình ngay trong lúc làm việc sao? Tsubomi thèm khát quá nhỉ...!」[p]
+Tsubomi「Khư ư...♡ Em đâu có nói thế... Đồ ngốc...♡ Lúc làm việc là phải kiếm tiền chứ...♡」[p]
+Tsubomi「Haa...♡ A...♡ A...♡ Muốn làm thì... đ-đợi về nhà anh rồi hẵng làm...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku=0"  name="H_supiritasu_pisuton_hagesiku"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1309,9 +1310,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あぁぁぁぁっ♡　んっ、うぅぅ♡　だめぇぇっ♡　なんにも考えられなくなるっ♡」[p]
-蕾「気持ちいいしか考えられなくなっちゃうのっ♡　はぁ、あっ、あぁっ♡　んぅぅぅっ♡」[p]
-蕾「こんなのっ、自分じゃないみたいっ♡　体、エッチになっちゃってる、戻れなくなっちゃう♡」[p]
+Tsubomi「A a a a...♡ Ưm, ư ư...♡ Không được đâu...♡ Em không suy nghĩ được gì nữa rồi...♡」[p]
+Tsubomi「Trong đầu em giờ chỉ còn biết đến sướng thôi...♡ Haa, a, a...♡ Ưm ư ư...♡」[p]
+Tsubomi「Thế này, cứ như không phải em vậy...♡ Cơ thể, trở nên dâm đãng mất rồi, không quay lại như cũ được nữa đâu...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*high2"  cond=""  ]
@@ -1320,9 +1321,9 @@
 *J1_2_kaiwa1
 
 [tb_start_text mode=1 ]
-蕾「ねぇ、まだ何にもしてないのにエッチな顔になってるよ…？　すっごい興奮してるんでしょ♡」[p]
-[舜]「しょうがないだろ、こんなシチュエーション…興奮するに決まってるし」[p]
-蕾「ふふ、そうだよね～？　私も…エッチな気持ちになっちゃってるもん…♡」[p]
+Tsubomi「Này, vẫn chưa làm gì mà mặt anh đã dâm đãng thế rồi sao...? Anh đang hưng phấn lắm đúng không♡」[p]
+[舜]「Đành chịu thôi chứ biết sao, tình huống thế này... hưng phấn là điều hiển nhiên mà.」[p]
+Tsubomi「Khc, đúng thế nhỉ~? Cả em... cũng thấy rạo rực muốn làm chuyện dâm đãng rồi này...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1330,9 +1331,9 @@
 *J1_2_kaiwa2
 
 [tb_start_text mode=1 ]
-蕾「このあと、どんなことされちゃうのかな～？　私とエッチなことしたいんでしょ♡」[p]
-[舜]「俺はめちゃくちゃそのつもりだったけど…蕾が嫌なら無理強いはしたくない…」[p]
-蕾「も、もうっ…何かっこいいこと言っちゃってるの？　私だって…期待してるに決まってるでしょ」[p]
+Tsubomi「Lát nữa, em sẽ bị làm những chuyện gì đây ta~? Anh muốn làm chuyện dâm đãng với em đúng không♡」[p]
+[舜]「Anh cũng định thế lắm rồi... Nhưng nếu Tsubomi không thích thì anh không muốn ép buộc đâu...」[p]
+Tsubomi「M-Mồ... Anh đang nói mấy câu ngầu lòi gì thế hả? Em cũng... đang mong chờ lắm cơ mà.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1340,9 +1341,9 @@
 *J1_2_kaiwa3
 
 [tb_start_text mode=1 ]
-蕾「たまには強引に迫ってほしい時だってあるんだからね？　乙女心は複雑なのっ」[p]
-蕾「きて…♡　今日も仕事しながら、あんたに会いたいなってずっと思ってたんだから…」[p]
-蕾「会って…その…キスしたり…イチャイチャしたいって思ってたのっ…♡」[p]
+Tsubomi「Thỉnh thoảng em cũng muốn anh ép buộc em một chút đấy biết không? Trái tim thiếu nữ phức tạp lắm đấy nhé.」[p]
+Tsubomi「Đến đây đi...♡ Hôm nay lúc làm việc, em cũng cứ mãi nghĩ là muốn gặp anh đấy...」[p]
+Tsubomi「Muốn gặp anh... rồi... hôn anh... muốn được âu yếm anh...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa=0"  name="H_kaiwa"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1350,9 +1351,9 @@
 *J1_2_Dkiss1
 
 [tb_start_text mode=1 ]
-蕾「ちゅ、ちゅぷ、ちゅっちゅ、んんっ♡　はぁ、口の中…熱くなってる…♡」[p]
-蕾「ちゅく、ちゅっちゅっちゅ♡　んんっ…こんな気持ちいいキス教えられちゃうなんて…」[p]
-蕾「もう、子供だましみたいな軽いキスじゃ満足できなくなっちゃったでしょ♡　責任取ってね？」[p]
+Tsubomi「Chu, chụt, chụt chụt, ưm...♡ Haa, khoang miệng em... nóng rực lên rồi...♡」[p]
+Tsubomi「Chu, chụt chụt chụt♡ Ưm... Được anh dạy cho nụ hôn sướng rơn thế này...」[p]
+Tsubomi「Giờ thì mấy nụ hôn phớt nhẹ như trẻ con không làm em thỏa mãn được nữa rồi đâu♡ Anh phải chịu trách nhiệm đấy nhé?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_Dkiss+=1"  name="H_Dkiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1362,9 +1363,9 @@
 *J1_2_Dkiss2
 
 [tb_start_text mode=1 ]
-蕾「はふ…ちゅぷ、ちゅ、んんっ、じゅるるるるっ♡　あぁっ…舌、絡ませるの気持ちよくて…」[p]
-蕾「ちゅく、ちゅっちゅっちゅ♡　や、だぁ…キスだけなのに…体の奥までジンジン痺れてきたぁ…♡」[p]
-蕾「私、絶対変な顔になってるってばぁ…あんまり見ないで…♡　可愛い顔しか見せたくないのっ！」[p]
+Tsubomi「Ha phu... chụt, chu, ưm, rột rột rột...♡ A... Lưỡi, quấn lấy nhau sướng quá đi...」[p]
+Tsubomi「Chu, chụt chụt chụt♡ Kh-Không chịu đâu... Chỉ hôn thôi mà... tận sâu trong cơ thể em đã tê rần rần lên rồi...♡」[p]
+Tsubomi「Chắc chắn mặt em trông dị hợm lắm rồi... Đừng nhìn em nhiều quá mà...♡ Em chỉ muốn cho anh thấy khuôn mặt đáng yêu thôi!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_Dkiss+=1"  name="H_Dkiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1374,9 +1375,9 @@
 *J1_2_Dkiss3
 
 [tb_start_text mode=1 ]
-蕾「んむっ♡　ちゅっちゅ、ちゅぷ、じゅぷ、じゅるる♡　唇、離せなくなっちゃった…♡」[p]
-[舜]「はぁ、はっ…蕾、めちゃくちゃエロい顔になってる…止まんなくなりそ…」[p]
-蕾「も、いちいち言わなくていいからっ♡　ちゅっちゅっちゅ♡　私もっ…止まらなくなっちゃう♡」[p]
+Tsubomi「Ưm...♡ Chụt chụt, chụt, chụt, rột rột♡ Em không rời môi anh ra được nữa rồi...♡」[p]
+[舜]「Haa, hộc... Tsubomi, khuôn mặt em dâm đãng quá đi mất... Anh không dừng lại được nữa đâu...」[p]
+Tsubomi「M-Mồ, anh không cần phải nói rõ ra thế đâu♡ Chụt chụt chụt♡ Em cũng... không dừng lại được nữa rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_Dkiss=0"  name="H_Dkiss"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1388,9 +1389,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ちゅぷ、ちゅく、んっ、んんっ♡　ふぅ、ふっ…♡　キスだけなのに…頭の中…熱くなってる♡」[p]
-蕾「もっともっと欲しくなっちゃったぁ♡　今まで私、こんな気持ちになることなかったのに」[p]
-蕾「私もあんたに触られてから…気持ちいいの覚えて、どんどんエッチな体になっちゃってるの♡」[p]
+Tsubomi「Chụt, chu, ưm, ưm...♡ Phù, phu...♡ Chỉ hôn thôi mà... trong đầu em... nóng rực lên rồi này♡」[p]
+Tsubomi「Em lại thèm khát thêm nữa mất rồi♡ Trước giờ em chưa từng có cảm giác thế này bao giờ đâu.」[p]
+Tsubomi「Từ lúc bị anh chạm vào... em đã biết thế nào là sướng rơn, cơ thể em ngày càng trở nên dâm đãng mất rồi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -1398,9 +1399,9 @@
 *J1_2_fera1
 
 [tb_start_text mode=1 ]
-蕾「んっ、ちゅっ…ねぇ、すっごいガチガチになってるみたいなんだけど…？」[p]
-蕾「こんなに反り返っちゃって…やらしー♡　期待してるんでしょ？　ちゅ、ちゅっちゅ…♡」[p]
-蕾「ふ～っ…♡　はぁ、はっ…エッチな匂いしてる♡　先っぽも我慢汁溢れちゃってるよ？」[p]
+Tsubomi「Ưm, chụt... Này, có vẻ như của anh đang cứng ngắc hết cả lên rồi kìa...?」[p]
+Tsubomi「Cong vút lên thế này... dâm quá đi♡ Anh đang mong chờ lắm đúng không? Chu, chụt chụt...♡」[p]
+Tsubomi「Phù...♡ Haa, hộc... Mùi dâm đãng quá đi♡ Phần đầu cũng trào nước nhờn ra rồi kìa?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_fera+=1"  name="H_fera"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1410,9 +1411,9 @@
 *J1_2_fera2
 
 [tb_start_text mode=1 ]
-蕾「ちゅ、ちゅ、じゅぷ、じゅぽじゅぽじゅぽじゅぽっ♡　んんっ♡　おっきいっ♡」[p]
-蕾「口の中…いっぱいになってる…アゴ外れちゃいそうっ♡　ちゅぷ、ちゅぽじゅぽじゅぽっ♡」[p]
-蕾「んんっ♡　はぁ、匂いと味でくらくらしちゃう♡　体の奥、すっごく熱くなってきちゃった…」[p]
+Tsubomi「Chu, chu, chụt, sột soạt sột soạt sột soạt...♡ Ưm...♡ Bự quá đi♡」[p]
+Tsubomi「Khoang miệng em... chật kín luôn rồi... Sắp trật khớp hàm luôn rồi này♡ Chụt, sột soạt sột soạt sột soạt...♡」[p]
+Tsubomi「Ưm...♡ Haa, mùi và vị của nó làm em choáng váng hết cả lên♡ Tận sâu trong cơ thể, nóng rực lên rồi...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_fera+=1"  name="H_fera"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1422,9 +1423,9 @@
 *J1_2_fera3
 
 [tb_start_text mode=1 ]
-蕾「じゅぷ、じゅぽっ♡　じゅぽじゅぽじゅぽじゅぽっ♡　んんっ…興奮しますか、ご主人様？」[p]
-[舜]「くっ…それ、ヤバい…！　他の客には…やってない、だろうな…？」[p]
-蕾「やってるわけないでしょ？　これは…こ、恋人だけの…特別オプション、なんだから…♡」[p]
+Tsubomi「Chụt, sột soạt...♡ Sột soạt sột soạt sột soạt...♡ Ưm... Chủ nhân có hưng phấn không ạ?」[p]
+[舜]「Hừ... Thế này, tuyệt quá...! Em không làm thế này... với khách hàng khác, đúng không...?」[p]
+Tsubomi「Làm gì có chuyện em làm chứ? Đây là... d-dịch vụ đặc biệt... chỉ dành riêng cho người yêu thôi đấy...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_fera=0"  name="H_fera"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1436,9 +1437,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「んむぅぅっ♡　んんっ♡　の、喉奥まで…届いてっ♡　んぅぅっ♡　なんで、気持ちいいの♡」[p]
-[舜]「んんっ！　バキュームヤバ…あぁ、先っぽも柔らかいトコにめちゃくちゃ擦れてる…」[p]
-蕾「んんっ♡　ふぅぅっ♡　や、だぁ…アソコ、ジンジンって痺れたみたいに熱くなっちゃった…♡」[p]
+Tsubomi「Ưm ư ư...♡ Ưm...♡ Ch-Chạm đến... tận sâu trong cổ họng rồi...♡ Ưm ư ư...♡ Sao lại, sướng thế này cơ chứ♡」[p]
+[舜]「Ưm! Lực hút mạnh quá... A, phần đầu cũng cọ xát dữ dội vào chỗ mềm mại rồi...」[p]
+Tsubomi「Ưm...♡ Phù...♡ Kh-Không chịu đâu... Chỗ đó, nóng rực lên như bị tê rần rần ấy...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -1447,9 +1448,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「ひぅぅっ♡　あっ…おっぱい鷲掴みされちゃった♡　指、沈み込んでる…♡」[p]
-蕾「フーッ…フーッ…フーッ…♡　おっぱいばっかり揉みしだかれるの…だめ♡」[p]
-蕾「手のひらに乳首擦れて…んっ♡　余計敏感になっちゃうからぁっ♡　あっ、あぁぁぁっ♡」[p]
+Tsubomi「Hi ư ư...♡ A... Bị bóp vú chặt quá rồi này♡ Ngón tay, lún sâu vào luôn rồi...♡」[p]
+Tsubomi「Phù... Phù... Phù...♡ Cứ nắn bóp mỗi vú thôi... không được đâu♡」[p]
+Tsubomi「Đầu vú cọ xát vào lòng bàn tay... Ưm...♡ Càng làm nó nhạy cảm hơn mất thôi♡ A, a a a...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1459,9 +1460,9 @@
 *J1_2_munemomi2
 
 [tb_start_text mode=1 ]
-蕾「あっ♡　あぁっ♡　や、だめっ♡　おっぱい揉みくちゃになっちゃうからぁっ♡」[p]
-蕾「そんなに揉みしだかれたら、おっぱいトロトロにとろけちゃうってば…♡」[p]
-蕾「えっ…なんで余計に興奮してるの？　ちょ、ちょっと待って…あぁぁぁっ♡」[p]
+Tsubomi「A...♡ A...♡ Kh-Không được đâu...♡ Vú em bị vò nát bét mất thôi...♡」[p]
+Tsubomi「Bị nắn bóp dữ dội thế này, vú em tan chảy ra mất thôi...♡」[p]
+Tsubomi「Hả... sao anh lại hưng phấn hơn thế? Kh-Khoan đã... A a a...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1472,9 +1473,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あっ♡　あぁっ♡　おっぱい揉みくちゃにしながら私の顔、見ないでよぉ♡」[p]
-蕾「だらしなくなってるの、自分でわかるからっ♡　変な顔見せて嫌われたくないのっ…♡」[p]
-[舜]「めちゃくちゃエロくて可愛いよ。もっともっと好きになるんだけど…！」[p]
+Tsubomi「A...♡ A...♡ Vừa vò nát vú em vừa nhìn chằm chằm vào mặt em thế chứ♡」[p]
+Tsubomi「Em tự biết là mặt em đang dâm đãng lắm rồi...♡ Em không muốn cho anh thấy khuôn mặt kỳ lạ rồi bị anh ghét đâu...♡」[p]
+[舜]「Dâm đãng và đáng yêu lắm. Anh lại càng thích em hơn nữa đấy...!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi=0"  name="H_munemomi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1486,9 +1487,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あっ…あぁぁぁっ♡　あうぅっ♡　頭おかしくなっちゃうっ♡　おっぱいだけなのにっ♡」[p]
-蕾「お腹の奥からっ…気持ちいいのが上がってきちゃってる…♡　こんなの知らないっ♡」[p]
-蕾「はぁっ♡　はぁっ♡　あっ♡　腰、勝手に動いちゃって…恥ずかし…あぁっ♡」[p]
+Tsubomi「A... A a a...♡ A ư...♡ Đầu óc em phát điên lên mất...♡ Rõ ràng chỉ sờ mỗi vú thôi mà...♡」[p]
+Tsubomi「Từ tận sâu trong bụng... cảm giác sướng rơn đang trào dâng lên rồi này...♡ Em chưa từng biết đến cảm giác này bao giờ...♡」[p]
+Tsubomi「Haa...♡ Haa...♡ A...♡ Hông em, cứ tự động nẩy lên... xấu hổ quá đi... A...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -1497,9 +1498,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「や、やだっ♡　待って…チュウチュウ吸うの…刺激強すぎてっ♡　あっ♡　あぁぁぁっ♡」[p]
-蕾「だめ、だめだめっ♡　声、止まらない…あっ、あぁぁぁっ♡　こんな気持ちいいなんてっ♡」[p]
-蕾「んっ♡　ふぅぅぅっ♡　乳首、気持ちいいのっ♡　ねっとり舐められるの好きぃ♡」[p]
+Tsubomi「Kh-Không chịu đâu... Khoan đã... mút chùn chụt thế này... kích thích mạnh quá...♡ A...♡ A a a...♡」[p]
+Tsubomi「Không được, không được không được đâu...♡ Không kìm được tiếng rên... A, a a a...♡ Lại sướng rơn đến thế này sao...♡」[p]
+Tsubomi「Ưm...♡ Phù...♡ Đầu vú, sướng quá đi...♡ Em thích bị liếm nhóp nhép thế này lắm♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munename+=1"  name="H_munename"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1509,9 +1510,9 @@
 *J1_2_munename2
 
 [tb_start_text mode=1 ]
-[舜]「何されるのが好きなのか教えて。メイドなんだから素直に言うこと聞いてくれるんだろ？」[p]
-蕾「ひぅっ♡　あっ♡　あぁぁっ♡　乳首っ…思いっきり吸われるの…好きなの…」[p]
-蕾「あぁぁぁっ♡　それっ…それっ…♡　あっ♡　あぁぁっ♡　お腹の底から熱いの上がってきてる♡」[p]
+[舜]「Nói cho anh biết em thích bị làm gì đi. Là hầu gái thì phải ngoan ngoãn nghe lời đúng không?」[p]
+Tsubomi「Hi ư...♡ A...♡ A a...♡ Đầu vú... bị mút thật mạnh... em thích lắm...」[p]
+Tsubomi「A a a...♡ Chỗ đó... chỗ đó...♡ A...♡ A a...♡ Từ tận sâu trong bụng trào lên cảm giác nóng rực rồi này♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munename+=1"  name="H_munename"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1522,9 +1523,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「んぅぅぅっ♡　乳首、前より敏感になってるかも…体が気持ちいいの覚えちゃってるみたい♡」[p]
-[舜]「へぇ、じゃあもっと気持ちいいこと覚えてもらわなくちゃな…」[p]
-蕾「ひぅっ、だめ♡　そんなことされたら…おっぱい舐められただけでイッちゃうからっ…」[p]
+Tsubomi「Ưm ư ư...♡ Đầu vú, hình như nhạy cảm hơn trước rồi thì phải... Có vẻ như cơ thể em đã ghi nhớ cảm giác sướng rơn này rồi♡」[p]
+[舜]「Chà, vậy thì phải để em ghi nhớ thêm nhiều chuyện sướng rơn hơn nữa mới được...」[p]
+Tsubomi「Hi ư, không được đâu♡ Bị làm thế... chỉ liếm vú thôi mà em cũng ra mất...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munename=0"  name="H_munename"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1537,9 +1538,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あぁぁぁっ♡　乳首、敏感なんだからぁっ♡　思いっきり吸い上げたら馬鹿になっちゃうっ♡」[p]
-蕾「乳首吸われてるだけなのにぃっ♡　腰、動いて止まらないのっ…♡　やだぁ…♡」[p]
-蕾「私前はこんなにエッチな子じゃなかったのに…あんたのせいでこうなっちゃったんだからねっ♡」[p]
+Tsubomi「A a a...♡ Đầu vú, nhạy cảm lắm cơ mà...♡ Bị mút mạnh thế này em sẽ phát điên lên mất thôi...♡」[p]
+Tsubomi「Chỉ bị mút đầu vú thôi mà...♡ Hông em, cứ nẩy lên không dừng lại được này...♡ Ghét quá đi...♡」[p]
+Tsubomi「Rõ ràng trước đây em đâu có dâm đãng thế này đâu... Đều tại anh nên em mới thành ra thế này đấy nhé♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -1548,9 +1549,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「んっ…くうぅっ♡　はっ、あぁっ♡　だめ…そ、そんな奥まで舐めちゃうのっ？」[p]
-蕾「あっ…あぁぁっ…舌入ってきてる♡　ん、くぅぅっ♡　ぐちゃぐちゃになっちゃうよぉっ♡」[p]
-蕾「体の奥まで…味見されちゃってるみたいなんだけど…♡　気持ちいいけどっ、恥ずかしいっ…♡」[p]
+Tsubomi「Ưm... Khư ư...♡ Hộc, a...♡ Không được... s-sao anh lại liếm tận sâu bên trong thế?」[p]
+Tsubomi「A... A a... Lưỡi anh đút vào rồi kìa♡ Ưm, khư ư...♡ Nát bét hết mất thôi...♡」[p]
+Tsubomi「Tận sâu trong cơ thể... cứ như đang bị nếm thử vậy...♡ Sướng thì sướng thật đấy, nhưng mà xấu hổ lắm cơ...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tituname+=1"  name="H_tituname"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1560,9 +1561,9 @@
 *J1_2_tituname2
 
 [tb_start_text mode=1 ]
-[舜]「お味はどうですかご主人様って言わないと…可愛いメイドさんなら言えるだろ？」[p]
-蕾「そんなこと言わせようとするなんて変態すぎ…んんっ♡　あぁっ、わかった、わかったからぁっ♡」[p]
-蕾「蕾の…おまんこのお味は…どうですかご主人様っ…♡　ん、くぅぅっ♡　興奮しないでっ♡」[p]
+[舜]「Em phải hỏi là \"Mùi vị thế nào thưa Chủ nhân\" chứ... Cô hầu gái đáng yêu thì phải nói được câu đó chứ nhỉ?」[p]
+Tsubomi「Bắt em nói mấy câu đó đúng là đồ biến thái mà... Ưm...♡ A, em biết rồi, em biết rồi mà♡」[p]
+Tsubomi「Mùi vị cô bé... của Tsubomi... thế nào thưa Chủ nhân...♡ Ưm, khư ư...♡ Đừng có hưng phấn lên thế chứ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tituname+=1"  name="H_tituname"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1573,9 +1574,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「ひぅっ♡　ああっ♡　舌出し入れするの、だめぇっ♡　気持ちいいの、湧き上がってきちゃう♡」[p]
-蕾「あっ♡　あっ♡　あぁぁっ♡　いつも仕事してるところで…こんな格好しちゃってる…♡」[p]
-蕾「恥ずかしいところ舐め回されて舌で犯されてるみたいで…だめなのにっ、だめなのにぃっ♡」[p]
+Tsubomi「Hi ư...♡ A...♡ Lưỡi cứ thụt ra thụt vào thế, không được đâu...♡ Cảm giác sướng rơn, trào dâng lên mất rồi♡」[p]
+Tsubomi「A...♡ A...♡ A a...♡ Ở ngay nơi mình hay làm việc... mà lại mang cái bộ dạng này...♡」[p]
+Tsubomi「Bị liếm láp khắp chỗ đáng xấu hổ, cứ như đang bị lưỡi làm tình vậy... Không được đâu, rõ ràng là không được cơ mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tituname=0"  name="H_tituname"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1588,9 +1589,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あ゛あ゛あ゛っ♡　おかしくなっちゃうっ…♡　頭の中…ぐちゃぐちゃでわかんなくなるぅっ♡」[p]
-[舜]「腰動かしすぎて舐めらんないって…自分で腰振っちゃってるじゃん」[p]
-蕾「やだ、やだぁ…言わないで…♡　だって止められないんだもん。あんたが舐めるからでしょっ♡」[p]
+Tsubomi「A a a...♡ Em phát điên lên mất thôi...♡ Trong đầu... rối bời hết cả lên chẳng biết gì nữa rồi...♡」[p]
+[舜]「Hông em nẩy dữ quá anh không liếm được này... Em đang tự động dập hông luôn rồi kìa.」[p]
+Tsubomi「Kh-Không chịu đâu... đừng nói mà...♡ Tại em không kìm lại được cơ mà. Đều do anh liếm hết đấy chứ♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -1599,9 +1600,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「ひぅぅっ♡　あ゛あ゛っ♡　奥ばっかりっ…トントンするからぁっ…なんか出ちゃったっ♡」[p]
-[舜]「あーあ、せっかく掃除したのになぁ？　あとで一緒に綺麗にするから大丈夫だって」[p]
-蕾「うぅぅっ、そういう問題じゃないってばぁっ♡　おもらしなんて恥ずかしくて死んじゃうっ」[p]
+Tsubomi「Hi ư ư...♡ A a...♡ Toàn thọc sâu... vào tận bên trong cơ mà... có thứ gì đó trào ra mất rồi...♡」[p]
+[舜]「Chà chà, uổng công em vừa dọn dẹp xong nhỉ? Lát nữa chúng ta cùng dọn lại là được chứ gì.」[p]
+Tsubomi「Ư ư, vấn đề đâu phải là thế chứ♡ Tè dầm thế này xấu hổ chết đi được.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_siohuki+=1"  name="H_siohuki"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1612,9 +1613,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あっ♡　やだっ、おもらし止まんないっ♡　お腹の奥もおまんこも熱くて…馬鹿になちゃったぁ♡」[p]
-[舜]「おもらしじゃなくて潮吹きだから…気持ちよくなると出るんだよ…ほら、また出てる」[p]
-蕾「ひぐぅっ♡　あっ♡　あっ♡　あぁぁぁっ♡　やっ…もう出したくないのにぃっ…♡」[p]
+Tsubomi「A...♡ Không chịu đâu, nước cứ trào ra không dừng lại được này♡ Tận sâu trong bụng lẫn cô bé đều nóng rực lên... em phát điên lên mất thôi♡」[p]
+[舜]「Đâu phải tè dầm, là phun nước đấy chứ... Sướng rơn lên là nó phun ra thôi... Kìa, lại trào ra nữa rồi.」[p]
+Tsubomi「Hức ư...♡ A...♡ A...♡ A a a...♡ Kh-Không chịu đâu... rõ ràng em không muốn trào ra nữa cơ mà...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_siohuki+=1"  name="H_siohuki"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1624,9 +1625,9 @@
 *J1_2_siohuki3
 
 [tb_start_text mode=1 ]
-蕾「あっ♡　あぁっ♡　あったかいの出てるっ…♡　ん、くぅぅっ♡　止まらないよぉ…」[p]
-蕾「これ癖になっちゃったらどうするのっ…ちょっと触られるだけでも潮吹きするようになっちゃう♡」[p]
-蕾「はぁっ♡　はぁ♡　私の体…ものすごくエッチで敏感になっちゃうじゃないっ…♡」[p]
+Tsubomi「A...♡ A...♡ Thứ gì đó ấm nóng đang trào ra này...♡ Ưm, khư ư...♡ Không dừng lại được đâu...」[p]
+Tsubomi「Nhỡ thành nghiện luôn thì phải làm sao đây... Chỉ bị sờ một chút thôi là lại phun nước ra mất♡」[p]
+Tsubomi「Haa...♡ Haa♡ Cơ thể em... trở nên dâm đãng và nhạy cảm quá mức mất rồi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_siohuki=0"  name="H_siohuki"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1639,9 +1640,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひあぁぁぁぁっ♡　おっ、おおおっ♡　まだっ、出てるのに…♡　激しくしないでぇっ♡」[p]
-[舜]「あーあー、おまんこぐっちゃぐちゃ…蕾の入り口も完全にとろけて開いてる」[p]
-蕾「はーっ…はーっ♡　だって…ほぐさないとあんたのモノ…入らないでしょっ♡　準備できてるの♡」[p]
+Tsubomi「Hi a a a a...♡ Ô, ô ô ô...♡ Nước vẫn, đang trào ra cơ mà...♡ Đừng có làm mãnh liệt thế chứ...♡」[p]
+[舜]「Chà chà, cô bé ướt át nát bét hết rồi này... Lối vào của Tsubomi cũng hoàn toàn tan chảy mở toang ra rồi.」[p]
+Tsubomi「Haa... Haa...♡ Tại vì... không nới lỏng ra thì thứ đó của anh... đâu có đút vào lọt chứ♡ Em đã chuẩn bị sẵn sàng rồi đây♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -1649,9 +1650,9 @@
 *J1_2_pisuton_yukkuri1
 
 [tb_start_text mode=1 ]
-蕾「あっ♡　あぁぁっ♡　いきなり動くのだめ、なのにっ…♡　んぅぅっ♡　や、深いのっ♡」[p]
-[舜]「ダメって言いながら、ちゃんと中締め付けてヒクヒクうねってるじゃん」[p]
-蕾「んんっ♡　はぁ、ああっ♡　だって…体が勝手に…反応しちゃうからぁっ…♡」[p]
+Tsubomi「A...♡ A a...♡ Tự dưng cử động thế là không được đâu, cơ mà...♡ Ưm ư ư...♡ Kh-Không chịu đâu, sâu quá đi...♡」[p]
+[舜]「Miệng thì bảo không được, thế mà bên trong lại siết chặt giật giật liên hồi kìa.」[p]
+Tsubomi「Ưm...♡ Haa, a a...♡ Tại vì... cơ thể cứ tự động... phản ứng lại cơ mà...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1661,9 +1662,9 @@
 *J1_2_pisuton_yukkuri2
 
 [tb_start_text mode=1 ]
-[舜]「メイドさんなんだから、ご主人様のチンポ甘やかして差し上げますくらい言わないと…！」[p]
-蕾「ひぅっ♡　あっ♡　変態…♡　ご、ご主人様のおちんちん、甘やかして差し上げます…♡」[p]
-蕾「蕾のおまんこで…とろとろにしてあげますからね♡　んんっ♡　あぁっ、またおっきくなってる♡」[p]
+[舜]「Là hầu gái thì ít nhất cũng phải nói được câu \"Em sẽ cưng chiều con cu của Chủ nhân\" chứ...!」[p]
+Tsubomi「Hi ư...♡ A...♡ Đồ biến thái...♡ C-Con cu của Chủ nhân, em sẽ cưng chiều nó ạ...♡」[p]
+Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra luôn nhé♡ Ưm...♡ A, lại bự lên nữa rồi này♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1673,9 +1674,9 @@
 *J1_2_pisuton_yukkuri3
 
 [tb_start_text mode=1 ]
-蕾「はーっ♡　はーっ♡　メイドに奥まで挿れたあげく夢中で腰振るなんて…変態なんですね♡」[p]
-蕾「あっ♡　くぅぅっ♡　はぁっ♡　はぁっ♡　中、跳ねてるっ…♡　反応しすぎだからぁっ♡」[p]
-蕾「ひあぁぁ♡　くっ…あぁぁっ♡　やっぱりメイドに興奮してるんじゃないの？　変態ご主人様♡」[p]
+"Hà...♡ Hà...♡ Đút sâu vào trong hầu gái rồi còn say sưa lắc hông thế này... Anh đúng là biến thái mà♡"[p]
+"A...♡ Ư...♡ Hà...♡ Hà...♡ Bên trong, nảy lên rồi...♡ Anh phản ứng thái quá rồi đấy♡"[p]
+"Hiaa...♡ Ư... a...♡ Quả nhiên là anh hưng phấn với hầu gái đúng không? Ông chủ biến thái♡"[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri=0"  name="H_supiritasu_pisuton_yukkuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1687,9 +1688,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あ゛あ゛っ♡　んんぅっ♡　やっ…弱いトコ、ばっかり…突き上げないでぇっ♡」[p]
-蕾「こ、壊れるっ♡　壊れちゃう…♡　ん゛っ♡　おおっ♡　腰掴んで固定だめっ♡」[p]
-蕾「ひぅぅっ♡　ゆっくりトントンされて…すぐイッちゃう…！　気持ちいいのキちゃうからぁっ♡」[p]
+"A...♡ Ưm...♡ Á... Đừng có... cứ nhắm vào chỗ nhạy cảm... mà thúc lên thế chứ♡"[p]
+"H-Hỏng mất...♡ Hỏng mất thôi...♡ Ưm...♡ Ồ...♡ Đừng có giữ chặt hông em lại chứ♡"[p]
+"Hiu...♡ Cứ bị thúc nhè nhẹ thế này... em ra mất thôi...! Khoái cảm ập đến mất rồi♡"[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*high2"  cond="f.H_high1==1"  ]
@@ -1698,9 +1699,9 @@
 *J1_2_pisuton_hagesiku1
 
 [tb_start_text mode=1 ]
-蕾「あっ♡　あぁっ♡　揺さぶるの、激しっ…♡　もうっ…ぐちゃぐちゃになっちゃうぅ♡」[p]
-[舜]「もう１度掃除し直しになっちゃったなぁ。マットレスもドロドロになりそうだし」[p]
-蕾「んっ♡　はっ♡　あぁっ♡　だって…[舜]が激しくするからぁっ♡　しょうがないでしょっ♡」[p]
+"A...♡ A...♡ Lắc mạnh quá...♡ Thôi mà... em nát bét ra mất♡"[p]
+"[舜]「Lại phải dọn dẹp lại từ đầu rồi. Nệm chắc cũng ướt nhẹp hết cả rồi đây.」[p]
+"Ưm...♡ Hà...♡ A...♡ Tại vì... [舜] làm mạnh quá mà...♡ Biết làm sao được chứ♡"[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1710,9 +1711,9 @@
 *J1_2_pisuton_hagesiku2
 
 [tb_start_text mode=1 ]
-蕾「くっ♡　ふぅ、はっ、はぁっ♡　あぁっ♡　顔、本気になりすぎ、だからっ…♡」[p]
-蕾「あんたのオスの顔…私しか知らないんでしょ？　はぅっ♡　あぁっ♡　悪い気はしないかもっ♡」[p]
-蕾「あっ♡　あぁぁっ♡　これからも私にしか見せないでよっ…よそ見禁止だからっ…♡」[p]
+"Ư...♡ Phù, hà, hà...♡ A...♡ Mặt anh, nghiêm túc quá rồi đấy...♡"[p]
+"Khuôn mặt đàn ông này của anh... chỉ có mình em biết thôi đúng không? Háu...♡ A...♡ Cảm giác cũng không tệ đâu♡"[p]
+"A...♡ A...♡ Từ giờ trở đi cũng chỉ được cho mình em thấy thôi đấy... Cấm nhìn người khác...♡"[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1722,9 +1723,9 @@
 *J1_2_pisuton_hagesiku3
 
 [tb_start_text mode=1 ]
-蕾「あっ♡　あぁぁぁっ♡　んんっ♡　私のっ…めちゃくちゃになっちゃってる顔も…あんただけ…」[p]
-蕾「独占していいからぁっ♡　他の誰かのこと考えるのもダメなんだからねっ♡　私だけにして…」[p]
-蕾「約束っ…ああぁぁっ♡　なんで今興奮してんのっ♡　おっきすぎて…壊れちゃうからっ♡」[p]
+"A...♡ A...♡ Ưm...♡ Khuôn mặt... rối bời này của em... cũng chỉ có anh... "[p]
+"Được độc chiếm thôi đấy♡ Không được nghĩ đến ai khác đâu nhé♡ Chỉ mình em thôi..."[p]
+"Hứa đi... A...♡ Sao tự dưng anh lại hưng phấn thế♡ To quá... hỏng mất thôi♡"[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku=0"  name="H_supiritasu_pisuton_hagesiku"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1736,9 +1737,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひゃぅぅぅっ♡　んっ♡　おっ、おおおっ♡　腰っ、浮いちゃうぅっ♡　イッちゃう♡」[p]
-蕾「お腹の奥…すっごく熱くなってるの…♡　はぁ、あっ、あぁっ♡　イク準備、始めてる♡」[p]
-蕾「あんたのこと…受け入れる準備始めちゃってるのっ♡　勝手に体反応しちゃうぅ♡」[p]
+"Hya...♡ Ưm...♡ Ồ, ồ...♡ Hông em, nảy lên mất...♡ Ra mất thôi♡"[p]
+"Sâu trong bụng... đang nóng ran lên này...♡ Hà, a, a...♡ Chuẩn bị ra rồi♡"[p]
+"Đang chuẩn bị để tiếp nhận anh rồi đấy♡ Cơ thể cứ tự động phản ứng thôi♡"[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*high2"  cond=""  ]
@@ -1747,9 +1748,9 @@
 *J2_kaiwa1
 
 [tb_start_text mode=1 ]
-蕾「美味しいご飯を作って、一緒に食べたあとは…こうやって気持ちいいことでご奉仕するの♡」[p]
-蕾「同棲したら、いずれは結婚かぁ♡　こういう新婚生活も悪くないかな～って思うんだけど…♡」[p]
-[舜]「悪くない…っていうか、めちゃくちゃいいと思う…！」[p]
+"Làm cơm ngon, cùng nhau ăn xong thì... em sẽ hầu hạ anh bằng những chuyện sung sướng thế này đây♡"[p]
+"Sống chung rồi, sớm muộn gì cũng kết hôn nhỉ♡ Cuộc sống tân hôn thế này cũng không tệ đâu ha...♡"[p]
+"[舜]「Không tệ... mà phải nói là tuyệt vời luôn ấy chứ...!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1757,9 +1758,9 @@
 *J2_kaiwa2
 
 [tb_start_text mode=1 ]
-[舜]「同棲してそのまま結婚もいいけど。夢があるのに、結婚してる場合じゃないんじゃないのか？」[p]
-蕾「もちろん、夢は絶対叶えるつもりでチャレンジする。だから、いつかの話ってこと…♡」[p]
-蕾「でも…もしあんたが、私のことすぐに欲しいから結婚してって言ったら…考えるかも♡」[p]
+"[舜]「Sống chung rồi cứ thế kết hôn cũng tốt. Nhưng em còn có ước mơ mà, đâu phải lúc để kết hôn đúng không?」[p]
+"Tất nhiên, em sẽ cố gắng hết sức để thực hiện ước mơ. Thế nên, đó là chuyện của sau này cơ...♡"[p]
+"Nhưng mà... nếu anh nói muốn có em ngay lập tức nên hãy kết hôn đi... thì em sẽ suy nghĩ lại đấy♡"[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1767,9 +1768,9 @@
 *J2_kaiwa3
 
 [tb_start_text mode=1 ]
-蕾「あと…いっぱいエッチなことしてたら、新しい家族ができちゃうかもしれないし？」[p]
-蕾「その時は、家庭に入ってもいっかなって思ってる♡　あんたとなら幸せになれそうだし…」[p]
-蕾「誰にでも言ってるわけじゃないからね？　っていうか…こんなこと思うの、あんたが初めて…」[p]
+"Với lại... cứ làm chuyện dâm đãng nhiều thế này, biết đâu lại có thêm thành viên mới thì sao?"[p]
+"Lúc đó, em nghĩ lui về chăm lo gia đình cũng được♡ Nếu là với anh thì chắc chắn sẽ hạnh phúc mà..."[p]
+"Không phải với ai em cũng nói thế đâu nhé? Mà phải nói là... anh là người đầu tiên làm em có suy nghĩ này đấy..."[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa=0"  name="H_kaiwa"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1777,9 +1778,9 @@
 *J2_kiss1
 
 [tb_start_text mode=1 ]
-蕾「ちゅっ…んんっ♡　ちゅっちゅ…唇、あったかい…♡　んんっ♡　ちゅっちゅ♡」[p]
-蕾「今日はいつもよりしつこくしちゃうよ？　だって…私以外を見てほしくないんだもん…」[p]
-蕾「ねぇ、私知ってるよ？　私じゃなくて、他の誰かのこと、まだ気になってるって…」[p]
+"Chu... Ưm...♡ Chu chu... Môi anh, ấm quá...♡ Ưm...♡ Chu chu♡"[p]
+"Hôm nay em sẽ bám dai hơn mọi khi đấy nhé? Tại vì... em không muốn anh nhìn ai khác ngoài em đâu..."[p]
+"Này, em biết hết đấy nhé? Rằng anh vẫn còn đang để tâm đến ai đó khác, không phải em..."[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss+=1"  name="H_kiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1789,9 +1790,9 @@
 *J2_kiss2
 
 [tb_start_text mode=1 ]
-蕾「私のことだけ見て？　私なら、あんたが私にくれる以上の好きの気持ち、渡せるんだからっ」[p]
-蕾「ちゅっ…♡　ちゅっちゅ♡　ね？　キスだけでも好きって気持ち、伝わるでしょ…？」[p]
-蕾「はぁっ♡　ちゅ、ちゅっちゅ…まだ他の人のこと忘れられなくてもいいから…早く独占させて♡」[p]
+"Chỉ nhìn mình em thôi được không? Nếu là em, em có thể trao cho anh tình cảm nhiều hơn cả những gì anh dành cho em đấy"[p]
+"Chu...♡ Chu chu♡ Thấy chưa? Chỉ qua nụ hôn thôi anh cũng cảm nhận được tình cảm của em đúng không...?"[p]
+"Hà...♡ Chu, chu chu... Bây giờ anh chưa quên được người khác cũng không sao... nhưng hãy mau để em độc chiếm anh đi♡"[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss+=1"  name="H_kiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1801,9 +1802,9 @@
 *J2_kiss3
 
 [tb_start_text mode=1 ]
-蕾「ちゅぷ、ちゅく、ちゅっちゅっ♡　はぁ、はっ…んんっ♡　キスだけなのに気持ちいい…♡」[p]
-[舜]「ふーっ…今日の蕾、めちゃくちゃエロいんだけど…ヤバい…」[p]
-蕾「ホント？　私…されるばっかりじゃないんだって証明するから♡　骨抜きにしていい？」[p]
+"Chụt, chu, chu chu...♡ Hà, hà... Ưm...♡ Chỉ hôn thôi mà cũng sướng quá...♡"[p]
+"[舜]「Phù... Tsubomi hôm nay, dâm đãng quá đấy... Nguy hiểm thật...」[p]
+"Thật á? Em sẽ chứng minh cho anh thấy em không chỉ biết hưởng thụ đâu♡ Em làm anh mê mẩn luôn nhé?"[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss=0"  name="H_kiss"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1815,9 +1816,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「んぅぅっ♡　ふぅっ♡　ちゅっちゅ♡　ちゅぷっ…♡　ズルい、結局私が夢中になってる…」[p]
-蕾「はぁ…キスだけなのに…体、熱くなってきちゃった♡　今日は私がリードする気だったのに」[p]
-蕾「でもまだまだ負けない…♡　他の女の子なんか見えないくらい、夢中にさせるんだから♡」[p]
+"Ưm...♡ Phù...♡ Chu chu♡ Chụt...♡ Gian xảo quá, rốt cuộc lại là em say đắm anh mất rồi..."[p]
+"Hà... Mới chỉ hôn thôi mà... người đã nóng ran lên rồi♡ Rõ ràng hôm nay em định chủ động cơ mà"[p]
+"Nhưng em vẫn chưa chịu thua đâu...♡ Em sẽ làm anh say đắm đến mức không còn nhìn thấy cô gái nào khác nữa cơ♡"[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -1826,9 +1827,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「んっ…あぁっ♡　はぁ、あぁっ♡　ローションでヌルヌルになってるでしょ？　んっ、ふぅ♡」[p]
-蕾「掴めない感じ…もどかしい、でしょ…？　んっ♡　あぁっ♡　手、滑っちゃうもんね？」[p]
-蕾「はぁっ♡　はぁっ♡　掴もうって一生懸命おっぱい触ってる姿…すっごいいいかも…♡」[p]
+"Ưm... A...♡ Hà, a...♡ Trơn tuột hết vì tinh dầu rồi đúng không? Ưm, phù♡"[p]
+"Cảm giác không nắm bắt được... khó chịu lắm, đúng không...? Ưm...♡ A...♡ Tay anh cứ trượt đi nhỉ?"[p]
+"Hà...♡ Hà...♡ Bộ dạng anh cố gắng sờ ngực em để tóm lấy... trông tuyệt lắm đấy...♡"[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1838,9 +1839,9 @@
 *J2_munemomi2
 
 [tb_start_text mode=1 ]
-蕾「んんっ♡　はぁ、あっ…♡　やだ…ヌルヌルの感じ…気持ちよくなってきちゃった…♡」[p]
-[舜]「乳首ももうビンビンに立ってるもんな？　いつもと違うから、余計敏感になってんのかも」[p]
-蕾「あぁぁっ♡　やっ、乳首手のひらでスリスリ擦るの、だめっ♡　あぁっ♡　あんっ♡」[p]
+"Ưm...♡ Hà, a...♡ Thôi mà... cảm giác trơn tuột này... làm em sướng lên mất rồi...♡"[p]
+"[舜]「Núm vú cũng cương cứng hết cả lên rồi này? Khác với mọi khi, chắc là nhạy cảm hơn rồi nhỉ」[p]
+"A...♡ Đừng, đừng có dùng lòng bàn tay xoa xoa núm vú em thế chứ♡ A...♡ Á...♡"[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1851,9 +1852,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「や、やだぁっ♡　そんな、焦らすみたいに…おっぱいやわやわ揉まないで…♡」[p]
-蕾「おっぱいから…体の奥まで電流走ったみたいに気持ちよくなっちゃうの…ビリビリしちゃう♡」[p]
-蕾「ひぅぅっ♡　あっ…あぁぁ…♡　やっ♡　もう腰動いちゃうの…勝手に動いて止まんないっ♡」[p]
+"Đ-Đừng mà...♡ Đừng có nắn bóp ngực em nhẹ nhàng... như trêu ngươi thế chứ...♡"[p]
+"Từ ngực... truyền sâu vào trong cơ thể như có dòng điện chạy qua vậy, sướng quá đi mất... Tê dại hết cả người♡"[p]
+"Hiu...♡ A... A...♡ Đừng♡ Hông em cứ tự động nảy lên... không dừng lại được nữa rồi♡"[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi=0"  name="H_munemomi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1866,9 +1867,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あぁぁぁっ♡　はぁ、はぁっ、あぁっ♡　き、気持ちいいの…♡　切なくなってる♡」[p]
-蕾「おっぱいも乳首もっジンジンしちゃってる…♡　もっと触ってほしくなっちゃうぅ♡」[p]
-[舜]「今日は甘えんぼだな…めちゃくちゃ可愛い。たっぷり甘やかさないと…」[p]
+"A...♡ Hà, hà, a...♡ S-Sướng quá...♡ Bứt rứt quá đi♡"[p]
+"Cả ngực lẫn núm vú đều đang râm ran hết cả lên rồi...♡ Muốn được anh sờ nhiều hơn nữa cơ♡"[p]
+"[舜]「Hôm nay làm nũng ghê nhỉ... Đáng yêu quá đi mất. Phải chiều chuộng em thật nhiều mới được...」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -1877,9 +1878,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「ひゃぁぁんっ♡　あっ♡　あぁぁっ♡　ジュルジュル音立てて舐めるのすごいのっ…♡」[p]
-蕾「はぁっ♡　あぁっ♡　何されてるのか余計に意識しちゃう…♡　気持ちいいしか考えられないっ」[p]
-蕾「私ばっかり…夢中になるのやだぁ♡　あんたも…私のことだけ考えてっ、夢中になってよ♡」[p]
+"Hya...♡ A...♡ A...♡ Liếm phát ra tiếng chùn chụt thế này tuyệt quá đi...♡"[p]
+"Hà...♡ A...♡ Làm em càng ý thức được mình đang bị làm gì hơn...♡ Trong đầu giờ chỉ còn mỗi chữ sướng thôi"[p]
+"Chỉ mỗi em... say đắm thế này thì ấm ức lắm♡ Anh cũng... chỉ được nghĩ đến em thôi, say đắm em đi♡"[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiname+=1"  name="H_tikubiname"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1889,9 +1890,9 @@
 *J2_tikubiname2
 
 [tb_start_text mode=1 ]
-蕾「ひぅっ♡　あっ♡　あぁ♡　乳首ペロペロしながら…なんで顔見てるのよ…♡」[p]
-蕾「下からのアングルなんてっ、絶対ビジュ悪いのにぃっ♡　変な顔しちゃってるし…」[p]
-[舜]「気持ちよくてトロトロになってる顔、めちゃくちゃ可愛いしエロいからもっと見せろって」[p]
+"Hiu...♡ A...♡ A...♡ Vừa liếm láp núm vú... sao lại còn nhìn chằm chằm mặt em thế...♡"[p]
+"Góc nhìn từ dưới lên, chắc chắn là xấu lắm luôn ấy♡ Mặt em đang kỳ cục lắm mà..."[p]
+"[舜]「Khuôn mặt đê mê vì sung sướng này, vừa đáng yêu vừa dâm đãng lắm, nên cho anh nhìn thêm đi」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiname+=1"  name="H_tikubiname"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1902,9 +1903,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「んんっ♡　おっぱい気持ちいいの…♡　乳首好きっ♡　もっとっ、もっと舐めて…♡」[p]
-[舜]「こうやってワガママ言ってくれんのも可愛いんだって。はいはい、お嬢様…！　んんっ…！」[p]
-蕾「ひゃうぅぅっ♡　ちゅくちゅく吸うの気持ちよすぎて…はぁ、あぁ、体の芯、熱くなってる♡」[p]
+"Ưm...♡ Sờ ngực sướng lắm...♡ Thích núm vú lắm♡ Nữa đi, liếm nhiều hơn nữa đi...♡"[p]
+"[舜]「Thấy em nhõng nhẽo thế này cũng đáng yêu lắm cơ. Tuân lệnh, thưa tiểu thư...! Ưm...!」[p]
+"Hya...♡ Hút chùn chụt thế này sướng quá đi mất... Hà, a, sâu trong cơ thể, đang nóng ran lên rồi♡"[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiname=0"  name="H_tikubiname"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1917,9 +1918,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ああぁっ♡　おっぱいだけなのに…イッちゃうかと思ったぁっ♡　こんなに気持ちいいなんて♡」[p]
-蕾「おうちで甘トロ本気セックス…すっごい興奮してるのかも…♡　もう濡れちゃったもん…」[p]
-蕾「でもいいでしょ？　エッチな体になっても…私のこと受け止めてくれるでしょ？」[p]
+"A...♡ Mới chỉ làm ngực thôi mà... em cứ tưởng mình sắp ra luôn rồi ấy♡ Không ngờ lại sướng đến thế này♡"[p]
+"Làm tình ngọt ngào tại nhà thế này... chắc là em hưng phấn lắm rồi...♡ Ướt nhẹp hết cả rồi đây này..."[p]
+"Nhưng thế cũng được đúng không? Dù cơ thể em có dâm đãng thế nào... anh cũng sẽ chấp nhận em mà, nhỉ?"[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -1928,9 +1929,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「ふふっ…あんたが頭撫でてくれるなんて…なんか意外♡　でも…すっごく嬉しい♡」[p]
-[舜]「え、俺、頭撫でそうになかった？　でも確かに、前は女の子触る機会もなかったし…」[p]
-蕾「も～っ、そういうことを聞きたいんじゃなくって…！　可愛いねとか、好きとか聞きたいのっ」[p]
+"Hehe... Được anh xoa đầu thế này... có chút bất ngờ đấy♡ Nhưng mà... em vui lắm♡"[p]
+"[舜]「Ủa, nhìn anh không giống kiểu người hay xoa đầu à? Nhưng đúng là trước đây anh cũng chẳng có cơ hội chạm vào con gái...」[p]
+"Mồ~, em đâu có muốn nghe mấy chuyện đó...! Em muốn nghe anh khen đáng yêu hay nói thích em cơ"[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_naderu+=1"  name="H_naderu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1940,9 +1941,9 @@
 *J2_naderu2
 
 [tb_start_text mode=1 ]
-蕾「当然だけど…ちゃんと男の人のおっきい手で…なんかドキドキしちゃうんだけど…」[p]
-蕾「この手で…気持ちいいトコも撫でられて…ぐちゃぐちゃにされちゃうんだって思ったら余計に…」[p]
-蕾「はぁっ、ん…♡　私がこんなにエッチになっちゃったの、絶対に[舜]のせいなんだからね…？」[p]
+"Dù là chuyện đương nhiên... nhưng bàn tay to lớn của đàn ông... làm em hồi hộp quá..."[p]
+"Nghĩ đến việc bàn tay này... sẽ vuốt ve những chỗ nhạy cảm... làm em nát bét ra, em lại càng..."[p]
+"Hà, ưm...♡ Em trở nên dâm đãng thế này, chắc chắn là lỗi của [舜] đấy nhé...?"[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_naderu+=1"  name="H_naderu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1953,9 +1954,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「もう…くすぐったいってば…♡　でも…まっすぐ見つめながら撫でてくれるの嬉しいの…♡」[p]
-[舜]「可愛いなって思ってたんだよ…こんな幸せそうにしてくれたら、目そらせないだろ…」[p]
-蕾「かっこいいこと不意打ちで言ってくるのなんなのっ…ドキドキしちゃうじゃない♡」[p]
+"Thôi nào... nhột quá đi mất...♡ Nhưng mà... được anh nhìn thẳng vào mắt rồi vuốt ve thế này, em vui lắm...♡"[p]
+"[舜]「Anh đang nghĩ em đáng yêu quá đấy... Thấy em hạnh phúc thế này, sao anh rời mắt đi được chứ...」[p]
+"Tự dưng nói mấy câu ngầu thế làm gì chứ... Làm tim em đập thình thịch rồi đây này♡"[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_naderu=0"  name="H_naderu"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1968,9 +1969,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひぅぅっ♡　はぁ、あっ…♡　やだ…撫でられてるだけで…体がジンって痺れちゃった…」[p]
-蕾「恥ずかしいな…体がエッチなモードに切り替わっちゃってるせいかも…♡」[p]
-蕾「欲しくて欲しくてしょうがないの♡　私…[舜]のことだけ見てるんだからね？」[p]
+"Hiu...♡ Hà, a...♡ Thôi mà... mới vuốt ve thôi... cơ thể đã tê rần lên rồi..."[p]
+"Xấu hổ quá... Chắc là do cơ thể em đã chuyển sang chế độ dâm đãng mất rồi...♡"[p]
+"Muốn lắm rồi, không chịu nổi nữa đâu♡ Em... chỉ nhìn mỗi [舜] thôi đấy nhé?"[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -1979,9 +1980,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あぁ…すごい…ガチガチになってる…♡　ふふ、なんだ、あんたも興奮してくれてたんだ♡」[p]
-[舜]「当たり前だろ…蕾のこんなエロい姿見せられて、興奮するなって方が無理…」[p]
-蕾「嬉しい…んっ♡　はぁ、あっ♡　おちんちん、たっぷり甘やかしてあげるからっ♡」[p]
+"A... tuyệt quá... cứng ngắc luôn rồi này...♡ Hehe, gì chứ, hóa ra anh cũng đang hưng phấn lắm đúng không♡"[p]
+"[舜]「Đương nhiên rồi... Nhìn thấy bộ dạng dâm đãng này của Tsubomi, bảo không hưng phấn mới là lạ đấy...」[p]
+"Vui quá... Ưm...♡ Hà, a...♡ Em sẽ chiều chuộng con cu của anh thật nhiều nhé♡"[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata+=1"  name="H_sumata"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1991,9 +1992,9 @@
 *J2_sumata2
 
 [tb_start_text mode=1 ]
-蕾「はぁっ♡　はぁっ♡　んんっ…♡　ローションのヌルヌルで…すっごい滑ってるっ♡」[p]
-[舜]「これ…ローションだけじゃないだろ…くっ…蕾の中から溢れてきてんじゃないのか？」[p]
-蕾「はーっ♡　はーっ♡　あぁぁっ♡　ローションと蜜、合わさってトロトロになってるの…♡」[p]
+"Hà...♡ Hà...♡ Ưm...♡ Trơn tuột vì tinh dầu rồi... trơn quá đi mất♡"[p]
+"[舜]「Cái này... đâu chỉ có tinh dầu... Ư... Là từ bên trong Tsubomi trào ra đúng không?」[p]
+"Hà...♡ Hà...♡ A...♡ Tinh dầu và dâm thủy hòa quyện vào nhau, ướt nhẹp hết cả rồi...♡"[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata+=1"  name="H_sumata"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2004,9 +2005,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あっ♡　あぁっ♡　んんっ♡　おちんちん、割れ目に擦れてるっ♡　熱々なの、伝わってる？」[p]
-蕾「ひゃぁぁっ♡　あぁっ♡　くぅっ♡　あぁ♡　すごいガチガチ…血管も浮き上がってるでしょ？」[p]
-蕾「はぁ、んんっ…擦れて…気持ちいいっ♡　ゾリゾリって割れ目めくれ上がって刺激強いのっ…♡」[p]
+"A...♡ A...♡ Ưm...♡ Con cu, đang cọ vào khe dâm này♡ Anh có cảm nhận được nó nóng hổi không?"[p]
+"Hya...♡ A...♡ Ư...♡ A♡ Cứng quá đi mất... Gân guốc cũng nổi hết cả lên rồi đúng không?"[p]
+"Hà, ưm... Cọ xát thế này... sướng quá♡ Khe dâm cứ lật lên lật xuống, kích thích mạnh quá đi...♡"[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata=0"  name="H_sumata"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2019,9 +2020,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あぁぁぁっ♡　やっ…おちんちんの先っぽ…クリに当たってるっ♡　コリコリって…♡」[p]
-蕾「押しつぶされるみたいになってるっ…これっ、気持ちいいっ♡　好きぃっ♡　あぁぁっ♡」[p]
-蕾「はぁっ♡　はぁっ♡　あんっ♡　あっ♡　先っぽ同士、キスしてじゃれ合ってるみたいだよ♡」[p]
+"A...♡ Đừng... phần đầu con cu... đang chạm vào âm vật này♡ Cứ cọ cọ...♡"[p]
+"Cảm giác như bị ép nát vậy... Thế này, sướng quá đi♡ Thích lắm♡ A...♡"[p]
+"Hà...♡ Hà...♡ Á...♡ A...♡ Phần đầu của hai đứa, cứ như đang hôn nhau đùa giỡn vậy♡"[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -2030,9 +2031,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「はぁっ♡　はぁっ♡　あぁ…すっごいおっきくなってる…♡　気持ちよくなってくれて嬉しい♡」[p]
-[舜]「これ、ヤバい…めちゃくちゃ気持ちいい…んんっ…なんでそんな触り方上手いんだよ…」[p]
-蕾「あ、他の人としてたらどうしようって思ってるんだ？　そんなわけないでしょ？　あんただけ♡」[p]
+"Hà...♡ Hà...♡ A... To quá đi mất...♡ Thấy anh sướng thế này em vui lắm♡"[p]
+"[舜]「Cái này, nguy hiểm thật... Sướng quá đi mất... Ưm... Sao em sờ giỏi thế hả...」[p]
+"A, anh đang nghĩ lỡ em làm thế này với người khác thì sao đúng không? Làm gì có chuyện đó chứ? Chỉ với anh thôi♡"[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tekoki+=1"  name="H_tekoki"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2042,9 +2043,9 @@
 *J2_tekoki2
 
 [tb_start_text mode=1 ]
-蕾「先っぽのくびれたトコ、好きなんでしょ…？　ここもいっぱい触ってあげる…♡」[p]
-蕾「はーっ♡　はーっ♡　はーっ♡　気持ちよさそうな顔…すっごくエッチなんだけど♡」[p]
-蕾「してあげるってこんな気持ちなんだ♡　ふふ、悪くないかも…もっと気持ちいい顔、見せて♡」[p]
+"Phần khấc ở đầu, anh thích đúng không...? Em sẽ sờ chỗ này thật nhiều nhé...♡"[p]
+"Hà...♡ Hà...♡ Hà...♡ Khuôn mặt sướng rơn của anh... trông dâm đãng lắm đấy♡"[p]
+"Hóa ra phục vụ người khác là cảm giác thế này à♡ Hehe, cũng không tệ... Cho em thấy khuôn mặt sung sướng hơn nữa đi♡"[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tekoki+=1"  name="H_tekoki"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2054,9 +2055,9 @@
 *J2_tekoki3
 
 [tb_start_text mode=1 ]
-蕾「ふぅ、ふっ…んんっ…♡　あぁ、ビクビクしてる…もう先っぽも膨らんで弾けちゃいそうだね♡」[p]
-蕾「もう出したくて疼いてるんでしょ…♡　でもまだだーめ♡　しごいてる最中なんだから…」[p]
-蕾「シコシコ、シコシコシコ…あぁ、気持ちいいでしょ？　歯食いしばってるの？　可愛い♡」[p]
+"Phù, phù... Ưm...♡ A, đang giật giật này... Phần đầu cũng sưng phồng lên sắp nổ tung rồi nhỉ♡"[p]
+"Đang nhức nhối muốn bắn ra lắm rồi đúng không...♡ Nhưng vẫn chưa được đâu♡ Đang sục cu mà..."[p]
+"Sục sục, sục sục sục... A, sướng lắm đúng không? Đang nghiến chặt răng kìa? Đáng yêu quá♡"[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tekoki=0"  name="H_tekoki"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2069,9 +2070,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あっ…あぁぁぁっ♡　はぁ、はぁっ…♡　私まで…お腹の奥キュンってしちゃったみたい♡」[p]
-蕾「こんなおっきいの、中に入ったらどんな感じなんだろって想像したら…私、もうっ…♡」[p]
-蕾「はーっ♡　はーっ♡　入り口、トロトロにとろけちゃった…中に挿れてもいいでしょ♡」[p]
+"A... A...♡ Hà, hà...♡ Đến cả em... sâu trong bụng cũng thắt lại rồi này♡"[p]
+"Cứ tưởng tượng thứ to lớn thế này mà đút vào trong thì sẽ thế nào... là em lại...♡"[p]
+"Hà...♡ Hà...♡ Cửa mình, ướt nhẹp hết cả rồi... Đút vào trong luôn cũng được đúng không♡"[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -2079,9 +2080,9 @@
 *J2_pisuton_yukkuri1
 
 [tb_start_text mode=1 ]
-蕾「はぁっ♡　はぁっ♡　あっ…あっ♡　んんっ♡　気持ちいい…腰止まんなくなりそうっ♡」[p]
-[舜]「くっ…ヤバ…こんなエロい腰の動き…いつの間に覚えたんだよ。搾り取られるっ…！」[p]
-蕾「ふーっ♡　ふーっ♡　あんたの動き真似してるだけ…あとはっ、イメトレしたもん…♡」[p]
+"Hà...♡ Hà...♡ A... A...♡ Ưm...♡ Sướng quá... hông em sắp không dừng lại được nữa rồi♡"[p]
+[舜]「Khỉ thật... Chết tiệt... Cái kiểu lắc hông dâm đãng này... em học được từ lúc nào thế hả. Anh sắp bị vắt kiệt rồi...!」[p]
+Tsubomi「Phù...♡ Phù...♡ Em chỉ bắt chước chuyển động của anh thôi... với lại, em cũng đã tưởng tượng trong đầu rồi mà...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2091,9 +2092,9 @@
 *J2_pisuton_yukkuri2
 
 [tb_start_text mode=1 ]
-蕾「はぁっ♡　あぅっ♡　あっ♡　中でビクビク跳ねてるっ…まだおっきくなるのっ！？　ああっ♡」[p]
-[舜]「蕾がエロ過ぎるから悪いんだろっ…こんな興奮したの初めてってレベルなんだけど…！」[p]
-蕾「はうぅっ♡　やった…私で興奮してくれてるなんて…♡　すっごい嬉しいっ♡」[p]
+Tsubomi「Hà...♡ A...♡ A...♡ Nó đang giật giật bên trong em... Nó vẫn còn to lên nữa sao!? A...♡」[p]
+[舜]「Là tại Tsubomi quá dâm đãng đấy chứ... Anh hưng phấn đến mức chưa từng thấy luôn đấy...!」[p]
+Tsubomi「A...♡ Tuyệt quá... Anh hưng phấn vì em sao...♡ Em vui lắm...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2103,9 +2104,9 @@
 *J2_pisuton_yukkuri3
 
 [tb_start_text mode=1 ]
-蕾「あんっ♡　あっ♡　あぁっ♡　私のことだけ見ててっ…♡　私もあんたのことだけ見てるから♡」[p]
-蕾「ふぅっ、んんっ♡　あんたの上で…夢中で腰振ってるの…♡　おちんちん奥まで挿れて──」[p]
-蕾「いっぱい締め付けて、出して出してっておねだりしてるんだから♡　ラブラブでしょっ♡」[p]
+Tsubomi「A...♡ A...♡ A...♡ Anh chỉ được nhìn mỗi em thôi nhé...♡ Em cũng chỉ nhìn mỗi anh thôi...♡」[p]
+Tsubomi「Phù... ưm...♡ Em đang mải mê lắc hông trên người anh này...♡ Đút con cu vào tận sâu bên trong đi──」[p]
+Tsubomi「Em đang siết chặt lấy nó, nài nỉ anh bắn ra, bắn ra đi này♡ Tình cảm quá đúng không♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri=0"  name="H_supiritasu_pisuton_yukkuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2117,9 +2118,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あぁぁぁっ♡　んんっ♡　お、奥っ…当たってるっ♡　はっ♡　はっ♡　はっ♡　あんっ♡」[p]
-蕾「んくぅぅっ♡　おっ♡　おおおっ♡　か、体、勝手に…ビクビクって跳ねちゃうのっ…♡」[p]
-蕾「気持ちよすぎて…息するのだけでやっとになってる…んくぅぅっ♡　あぁ、気持ちいいのぉ♡」[p]
+Tsubomi「A...♡ Ưm...♡ Đ-Đụng trúng tận sâu bên trong rồi...♡ Hà...♡ Hà...♡ Hà...♡ A...♡」[p]
+Tsubomi「Ưm...♡ Ơ...♡ Ơ...♡ C-Cơ thể em, tự nhiên... nảy lên giật giật này...♡」[p]
+Tsubomi「Sướng quá... Em chỉ thở thôi cũng thấy mệt rồi... ưm...♡ A, sướng quá đi mất♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*high2"  cond="f.H_high1==1"  ]
@@ -2128,9 +2129,9 @@
 *J2_pisuton_hagesiku1
 
 [tb_start_text mode=1 ]
-蕾「あっ♡　あっ♡　あっ♡　おちんちん揉みくちゃになっちゃったね…♡　はぁ、んんっ♡」[p]
-蕾「いっぱい締め付けて、キュウキュウって押して…精子出せるようにしてあげるっ♡」[p]
-蕾「私の中に全部注ぎ込んで…♡　出したくてウズウズしちゃうでしょっ♡　ほら、ほらほらほら♡」[p]
+Tsubomi「A...♡ A...♡ A...♡ Con cu của anh bị em làm cho rối tinh rối mù rồi nhỉ...♡ Hà, ưm...♡」[p]
+Tsubomi「Em sẽ siết chặt lấy nó, ép thật chặt... để anh có thể bắn tinh ra nhé♡」[p]
+Tsubomi「Hãy rót hết vào trong em đi...♡ Anh đang ngứa ngáy muốn bắn ra lắm rồi đúng không♡ Này, này này này♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2140,9 +2141,9 @@
 *J2_pisuton_hagesiku2
 
 [tb_start_text mode=1 ]
-蕾「あうぅぅっ♡　あんっ♡　くぅぅっ♡　自分で動くのがこんなに気持ちいいなんて…」[p]
-[舜]「へぇ、気に入ったなら、これから上に乗って腰振ってもらうのもいいかもなぁ？」[p]
-蕾「はぁっ♡　あっ…余裕なの、ムカつくっ♡　あんたももっと…めちゃくちゃになればいいのにっ」[p]
+Tsubomi「A...♡ A...♡ Ưm...♡ Tự mình cử động lại sướng thế này sao...」[p]
+[舜]「Hê, nếu em thích thì từ giờ cứ cưỡi lên trên rồi lắc hông cho anh cũng được đấy nhỉ?」[p]
+Tsubomi「Hà...♡ A... Thấy anh vẫn còn dư dả thế này, bực mình thật đấy♡ Đáng lẽ anh cũng phải... trở nên rối bời hơn mới đúng chứ」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2152,9 +2153,9 @@
 *J2_pisuton_hagesiku3
 
 [tb_start_text mode=1 ]
-[舜]「くっ…ふぅっ、ふっ…あぁ、ヤバ…気持ちいいっ…搾り取られそ…」[p]
-蕾「はぁっ♡　あぁ♡　んんっ…とろけてきたでしょ♡　もっと私に夢中になればいいのっ♡」[p]
-蕾「あっ♡　あっ♡　あんっ♡　よそ見する余裕なんかないくらいっ、頭の中私でいっぱいにしてっ♡」[p]
+[舜]「Khỉ thật... phù, phù... A, chết tiệt... sướng quá... sắp bị vắt kiệt rồi...」[p]
+Tsubomi「Hà...♡ A...♡ Ưm... Anh bắt đầu tan chảy rồi đúng không♡ Cứ mê mẩn em nhiều hơn nữa đi♡」[p]
+Tsubomi「A...♡ A...♡ A...♡ Hãy để đầu óc anh tràn ngập hình bóng em, đến mức không còn tâm trí để nhìn đi đâu khác nữa♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku=0"  name="H_supiritasu_pisuton_hagesiku"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2166,9 +2167,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひぅぅぅっ♡　あぁぁっ♡　何、これっ…ひぅっ♡　電流走ったみたいになってるっ…♡」[p]
-蕾「んっ♡　あっ、あぁっ♡　気持ちいいトコ…先っぽ擦れて…わかんなくなっちゃうぅ♡」[p]
-蕾「気持ちいいっ…！　気持ちいいのっ…♡　腰止まんないっ♡　イッちゃうよぉっ♡」[p]
+Tsubomi「A...♡ A...♡ Cái gì thế này... A...♡ Cảm giác như có dòng điện chạy qua người vậy...♡」[p]
+Tsubomi「Ưm...♡ A, a...♡ Chỗ sướng... bị cọ vào phần đầu... em sắp không biết gì nữa rồi♡」[p]
+Tsubomi「Sướng quá...! Sướng quá đi mất...♡ Hông em không dừng lại được♡ Em ra mất thôi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*high2"  cond=""  ]
@@ -2177,9 +2178,9 @@
 *J2_2_kaiwa1
 
 [tb_start_text mode=1 ]
-[舜]「へぇ…蕾しか見えなくなるくらい、ご奉仕してくれるんだ？　楽しみだな」[p]
-蕾「まだ余裕の顔してるの？　すぐ、わけわかんなくなるくらいドロドロにしてあげるんだから♡」[p]
-蕾「もう私以外の女の子なんか見えなくする…私のことばっかり考えるようにしちゃうからね♡」[p]
+[舜]「Hê... Em định phục vụ anh đến mức anh không thể nhìn ai khác ngoài Tsubomi sao? Anh mong chờ lắm đấy.」[p]
+Tsubomi「Anh vẫn còn tỏ vẻ thong dong được sao? Em sẽ làm anh sướng đến nhũn cả người, không biết trời trăng gì nữa luôn cho xem♡」[p]
+Tsubomi「Em sẽ làm anh không thể nhìn bất kỳ cô gái nào khác nữa... chỉ nghĩ về mỗi em thôi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2187,9 +2188,9 @@
 *J2_2_kaiwa2
 
 [tb_start_text mode=1 ]
-蕾「新婚さん気分でイチャイチャしてよ♡　結婚したばっかりで、私が奥さんのつもりで♡」[p]
-[舜]「ってことは、１番ラブラブな時期だな。っていうか、次は子作りする番じゃん」[p]
-蕾「そうだよ？　だからいっぱい気持ちよくなって、熱々の精子出さなきゃだめなんだからね？」[p]
+Tsubomi「Hãy tình tứ với em như vợ chồng son đi♡ Cứ coi như chúng ta mới cưới, và em là vợ của anh vậy♡」[p]
+[舜]「Nghĩa là đang ở giai đoạn mặn nồng nhất nhỉ. Mà nói đúng hơn, tiếp theo là đến màn tạo em bé chứ.」[p]
+Tsubomi「Đúng vậy đó? Thế nên anh phải thấy thật sướng, rồi bắn tinh dịch nóng hổi ra mới được đấy nhé?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2197,9 +2198,9 @@
 *J2_2_kaiwa3
 
 [tb_start_text mode=1 ]
-蕾「ね、結婚前提で同棲したら…毎日セックスしたくなっちゃう？　その気になって…勃っちゃう？」[p]
-[舜]「そりゃあ…まぁ。でも次の日のこと考えたら、無茶はできないよな…」[p]
-蕾「え～？　欲しがってくれたほうが、女の子は嬉しいんだよ？　イチャイチャするだけでも幸せ♡」[p]
+Tsubomi「Này, nếu sống chung với tiền đề kết hôn... anh có muốn làm tình mỗi ngày không? Có hứng thú... rồi cương lên không?」[p]
+[舜]「Chuyện đó thì... chắc là có. Nhưng nghĩ đến ngày hôm sau thì đâu thể làm bừa được...」[p]
+Tsubomi「Hả~? Con gái sẽ vui hơn nếu anh muốn làm chuyện đó đấy? Chỉ cần tình tứ với nhau thôi cũng hạnh phúc rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa=0"  name="H_kaiwa"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2207,9 +2208,9 @@
 *J2_2_Dkiss1
 
 [tb_start_text mode=1 ]
-蕾「ちゅ、ちゅっちゅ、ちゅ、じゅるるるるっ♡　んんっ♡　ねぇ…まだ私以外の女の子気になる？」[p]
-[舜]「何言ってんだよ…そんなわけないだろ…俺は蕾だけで──」[p]
-蕾「嘘。ほんっとわかりやすいんだから…でも今は私が彼女でしょ？　よそ見しないで？」[p]
+Tsubomi「Chu, chụt chụt, chu, chụt...♡ Ưm...♡ Này... anh vẫn còn để ý đến cô gái nào khác ngoài em sao?」[p]
+[舜]「Em nói gì thế... Làm gì có chuyện đó... Anh chỉ có mỗi Tsubomi──」[p]
+Tsubomi「Nói dối. Nhìn anh là biết ngay mà... Nhưng bây giờ em là bạn gái anh đúng không? Đừng có nhìn đi đâu khác nhé?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_Dkiss+=1"  name="H_Dkiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2219,9 +2220,9 @@
 *J2_2_Dkiss2
 
 [tb_start_text mode=1 ]
-蕾「ちゅ、ちゅぷ、ちゅっちゅ、んんっ♡　私だけを見て、私以外じゃ興奮しないようになってよ♡」[p]
-[舜]「そ、それはどうだろうなー…男は、刺激で簡単に勃起する生き物だから」[p]
-蕾「もうっ…！　そこは私だけって言ってよっ。一緒にいる間は興奮させるんだからっ」[p]
+Tsubomi「Chu, chụt, chụt chụt, ưm...♡ Hãy chỉ nhìn mỗi em thôi, và đừng hưng phấn với ai khác ngoài em nhé♡」[p]
+[舜]「Ch-Chuyện đó thì chưa biết được đâu... Đàn ông là sinh vật rất dễ cương lên khi bị kích thích mà.」[p]
+Tsubomi「Thiệt tình...! Lúc này anh phải nói là chỉ có em thôi chứ. Trong lúc ở bên nhau, em sẽ làm anh hưng phấn mà.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_Dkiss+=1"  name="H_Dkiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2231,9 +2232,9 @@
 *J2_2_Dkiss3
 
 [tb_start_text mode=1 ]
-蕾「ちゅぷ、ちゅ、ちゅっ、ちゅ♡　はぁ、あぁ…舌絡ませるの気持ちいい…♡　じゅるるる♡」[p]
-蕾「んんっ♡　同棲したら…毎晩こんなエッチなキスできちゃうんだ…♡　一緒に暮らすのいいかも」[p]
-蕾「あんたが勃起しちゃったら…キスの続きもしちゃお？　どんなことでも…付き合うから♡」[p]
+Tsubomi「Chụt, chu, chụt, chu♡ Hà, a... Cuốn lưỡi vào nhau sướng thật đấy...♡ Chụt...♡」[p]
+Tsubomi「Ưm...♡ Nếu sống chung... mỗi tối đều được hôn dâm đãng thế này sao...♡ Sống cùng nhau cũng hay đấy chứ.」[p]
+Tsubomi「Nếu anh cương lên rồi... mình làm tiếp chuyện sau nụ hôn nhé? Chuyện gì em cũng... chiều anh hết♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_Dkiss=0"  name="H_Dkiss"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2245,9 +2246,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ちゅぷ、んんっ♡　ふーっ♡　ふーっ♡　キス、気持ちいいっ♡　んんっ、好き、好き♡」[p]
-蕾「ちゅぷ、ちゅちゅっちゅ♡　じゅるるるるっ♡　はぁ、私…こんなにエッチじゃなかったのに♡」[p]
-蕾「すっごいがっついちゃってる…恥ずかしいのに…体が熱くて興奮収まらないの…♡」[p]
+Tsubomi「Chụt, ưm...♡ Phù...♡ Phù...♡ Hôn sướng quá...♡ Ưm, em thích, thích lắm♡」[p]
+Tsubomi「Chụt, chụt chụt chụt♡ Chụt...♡ Hà, em... vốn đâu có dâm đãng thế này đâu cơ chứ♡」[p]
+Tsubomi「Em đang vồ vập lấy anh... Xấu hổ quá... nhưng cơ thể em nóng ran, không sao kiềm chế được hưng phấn...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -2256,9 +2257,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あっ…♡　あんっ♡　あぁ…♡　激し…んんっ♡　おっぱい揉みくちゃにしてるのっ…？」[p]
-蕾「求めてくれるの、嬉し…♡　いいよ、[舜]の好きにして♡　おっぱいも体も全部…♡」[p]
-蕾「ひぅぅっ♡　あっ♡　あんっ…♡　ふーっ…ふーっ…興奮してる顔…すっごい好きなの…」[p]
+Tsubomi「A...♡ A...♡ A...♡ Mãnh liệt quá... ưm...♡ Anh đang vò nát ngực em đấy à...?」[p]
+Tsubomi「Được anh khao khát, em vui lắm...♡ Được thôi, anh cứ làm gì mình thích đi♡ Cả ngực lẫn cơ thể em, tất cả...♡」[p]
+Tsubomi「A...♡ A...♡ A...♡ Phù... phù... Khuôn mặt hưng phấn của anh... em thích lắm...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2268,9 +2269,9 @@
 *J2_2_munemomi2
 
 [tb_start_text mode=1 ]
-[舜]「あー、めっちゃ柔らか…おっぱいとろけそうなんだけど…指沈み込んでる…」[p]
-蕾「んんっ♡　はぁ、あっ…感触楽しむみたいに触られちゃってる…♡　エッチすぎだってばぁ♡」[p]
-蕾「はぁ♡　あっ♡　あっ♡　ひぅぅ♡　おへその下…キュンって痺れちゃってるの…♡[p]
+[舜]「A, mềm quá đi mất... Ngực em như sắp tan chảy ra ấy... ngón tay anh lún sâu vào luôn này...」[p]
+Tsubomi「Ưm...♡ Hà, a... Anh sờ soạng như đang thưởng thức cảm giác vậy...♡ Dâm đãng quá đi mất♡」[p]
+Tsubomi「Hà...♡ A...♡ A...♡ A...♡ Dưới rốn em... tê rần lên rồi này...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2281,9 +2282,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「フーッ♡　フーッ♡　んんっ♡　おっぱい大好きなんでしょ？　もっと触って…♡」[p]
-蕾「ひぅっ♡　あぁ♡　他の誰にも触らせたことないんだから…♡　しっかり楽しんでよね？」[p]
-蕾「ほら…私のことしか考えられなくなってきちゃったでしょ♡　よそ見、できなくなっちゃうね♡」[p]
+Tsubomi「Phù...♡ Phù...♡ Ưm...♡ Anh thích ngực lắm đúng không? Chạm vào nhiều hơn nữa đi...♡」[p]
+Tsubomi「A...♡ A...♡ Em chưa từng cho ai khác chạm vào đâu đấy...♡ Nên anh phải tận hưởng cho kỹ vào nhé?」[p]
+Tsubomi「Đấy... Anh bắt đầu không thể nghĩ về ai khác ngoài em rồi đúng không♡ Không thể nhìn đi đâu khác được nữa rồi nhỉ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi=0"  name="H_munemomi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2296,9 +2297,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひあぁぁぁっ♡　あっ♡　んんっ♡　誘惑しようって思ってたのにぃっ♡　んんっ、あぅぅっ♡」[p]
-蕾「結局っ、私のほうが気持ちよくなって…我慢できなくなっちゃうじゃないっ…♡」[p]
-蕾「はぁっ♡　あぁ…やだ…腰まで勝手に動いて…んんっ♡　恥ずかしいから見ないでぇっ…♡」[p]
+Tsubomi「A...♡ A...♡ Ưm...♡ Rõ ràng là em định quyến rũ anh cơ mà♡ Ưm, a...♡」[p]
+Tsubomi「Rốt cuộc, người thấy sướng lại là em... Không kiềm chế nổi nữa rồi...♡」[p]
+Tsubomi「Hà...♡ A... Chết mất... hông em cứ tự động lắc lư... ưm...♡ Xấu hổ lắm, anh đừng nhìn mà...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -2307,9 +2308,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あぅぅっ♡　はぁっ♡　あっ、乳首、敏感なんだってばっ♡　いきなり触るの反則っ♡」[p]
-[舜]「ホントだ…ぷっくり膨らんで、プリップリだな…めちゃくちゃエロい…」[p]
-蕾「あぅぅっ♡　あっ♡　それっ…指の腹で撫でるの…だめ、だめ…気持ちよすぎちゃうっ♡」[p]
+Tsubomi「A...♡ Hà...♡ A, nhũ hoa của em nhạy cảm lắm đấy♡ Tự nhiên chạm vào là phạm luật nhé♡」[p]
+[舜]「Đúng thật này... Nó sưng phồng lên, căng mọng rồi... dâm đãng quá đi mất...」[p]
+Tsubomi「A...♡ A...♡ Đừng... dùng bụng ngón tay vuốt ve như thế... không được, không được đâu... sướng quá mất thôi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiijiri+=1"  name="H_tikubiijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2319,9 +2320,9 @@
 *J2_2_tikubiijiri2
 
 [tb_start_text mode=1 ]
-蕾「はぅ♡　あっ♡　あぁっ♡　やっ♡　乳首ばっかりコリコリするの…だめだってばぁ…♡」[p]
-蕾「ふーっ…ふーっ♡　顔、絶対だらしなくなってるもん…見られちゃうのがやなの…」[p]
-蕾「可愛い顔にしてる余裕なんかないし…気持ちよすぎてっ、とろけちゃいそうなのっ♡」[p]
+Tsubomi「A...♡ A...♡ A...♡ Đừng...♡ Cứ mân mê nhũ hoa miết thế... không được đâu mà...♡」[p]
+Tsubomi「Phù... phù...♡ Mặt em chắc chắn đang dâm đãng lắm rồi... Em không muốn bị nhìn thấy đâu...」[p]
+Tsubomi「Em chẳng còn tâm trí đâu mà làm mặt dễ thương nữa... sướng quá, sắp tan chảy ra luôn rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiijiri+=1"  name="H_tikubiijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2332,9 +2333,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「ひぅっ♡　あっ♡　それっ、すごいのっ…きゅ～って摘ままれるとっ♡　あんっはぁ、あんっ♡」[p]
-[舜]「体のけ反ってんなぁ…そんなに気持ちいいんだ？　気持ちいいなら教えてくれなくちゃ」[p]
-蕾「んんっ♡　くぅぅっ♡　わかってるくせにぃっ…♡　すっごく気持ちいいの…おかしくなるっ♡」[p]
+Tsubomi「A...♡ A...♡ Cái đó, tuyệt quá... bị véo chặt lại...♡ A, hà, a...♡」[p]
+[舜]「Người em cong lên hết rồi kìa... Sướng đến thế cơ à? Nếu sướng thì phải nói cho anh biết chứ.」[p]
+Tsubomi「Ưm...♡ Ưm...♡ Anh biết rõ rồi cơ mà...♡ Sướng lắm... sắp phát điên rồi đây này♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiijiri=0"  name="H_tikubiijiri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2347,9 +2348,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひゃうぅぅっ♡　あっ♡　あうぅっ♡　気持ちいいっ…♡　乳首だけでイッちゃうっ♡」[p]
-蕾「はぁっ♡　あぁぁっ♡　ビリビリ電流走ってる♡　気持ちいいでいっぱいになってる♡」[p]
-蕾「ふーっ、ふーっ…♡　一緒に暮らしたら毎晩おっぱいも乳首もトロトロにしてほしいの…♡」[p]
+Tsubomi「A...♡ A...♡ A...♡ Sướng quá...♡ Chỉ với nhũ hoa thôi em cũng ra mất♡」[p]
+Tsubomi「Hà...♡ A...♡ Cảm giác như có dòng điện chạy qua vậy♡ Cơ thể em tràn ngập khoái cảm rồi♡」[p]
+Tsubomi「Phù, phù...♡ Nếu sống chung, mỗi tối em muốn anh làm cho ngực và nhũ hoa của em mềm nhũn ra cơ...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -2358,9 +2359,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「くすぐったいってばっ…足ばっかり触ってるの？　触り心地いいなって思ってる？」[p]
-[舜]「うん、程よく柔らかくて…細くて…スベスベだし触り心地最高だなって」[p]
-蕾「そりゃあ…トレーニングとかケアとかいろいろしてきてるから…まだまだだけどね」[p]
+Tsubomi「Nhột quá đi... Sao anh cứ sờ chân em miết thế? Anh thấy chạm vào thích lắm à?」[p]
+[舜]「Ừ, mềm mại vừa phải... thon thả... lại còn mịn màng nữa, cảm giác chạm vào tuyệt vời lắm.」[p]
+Tsubomi「Chuyện đó thì... em cũng phải tập luyện rồi chăm sóc đủ kiểu mà... dù vẫn chưa ăn nhằm gì đâu.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_naderu+=1"  name="H_naderu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2370,9 +2371,9 @@
 *J2_2_naderu2
 
 [tb_start_text mode=1 ]
-[舜]「最高の足だと思うよ…蕾が目一杯努力してきた結果なんだろうなってわかる…」[p]
-蕾「も、もうっ…このタイミングでいきなり褒められたら…どう答えたらいいかわからないじゃない」[p]
-蕾「他の人には触らせたりしないけど…あんただけは好きに触っていいからね♡」[p]
+[舜]「Anh thấy đây là đôi chân tuyệt vời nhất đấy... Anh hiểu đây là thành quả từ sự nỗ lực hết mình của Tsubomi mà...」[p]
+Tsubomi「Th-Thiệt tình... Tự nhiên lại khen em lúc này... làm em chẳng biết phải trả lời sao nữa.」[p]
+Tsubomi「Em sẽ không cho người khác chạm vào đâu... nhưng riêng anh thì cứ sờ thoải mái đi nhé♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_naderu+=1"  name="H_naderu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2383,9 +2384,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「足…お客さんにも、よく『マッサージしてあげる』とか『触らせて』って言われてるの」[p]
-蕾「…あれ？　ヤキモチ？　ふふ、珍しくない？　そっかそっかぁ、[舜]が嫉妬かぁ…」[p]
-蕾「ふふっ♡　嬉しいに決まってるでしょ。大丈夫、他の誰にも触らせないから…♡」[p]
+Tsubomi「Chân em... cũng hay bị khách bảo là 'để anh massage cho' hay 'cho anh sờ một chút' lắm.」[p]
+Tsubomi「...Ủa? Anh ghen à? Hehe, hiếm thấy nha? Vậy à, vậy à, Shun đang ghen kìa...」[p]
+Tsubomi「Hehe...♡ Đương nhiên là em vui rồi. Không sao đâu, em sẽ không cho ai khác chạm vào đâu...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_naderu=0"  name="H_naderu"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2398,9 +2399,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あぁっ♡　んんっ…その触り方、反則だからっ…♡　んんっ…不意打ちでエッチに触るなんて」[p]
-蕾「その触り方、どこで誰に試したのか気になるんだけどっ…疑うに決まってるでしょ？」[p]
-蕾「私だけって言うまで、触らせてあげないからね？　ひゃぁっ♡　もう、勝手に触らないでっ♡」[p]
+Tsubomi「A...♡ Ưm... Cách sờ đó là phạm luật đấy nhé...♡ Ưm... Tự nhiên lại sờ soạng dâm đãng thế chứ.」[p]
+Tsubomi「Em tò mò không biết anh đã thử cách sờ này với ai ở đâu rồi đấy... Đương nhiên là em phải nghi ngờ rồi đúng không?」[p]
+Tsubomi「Cho đến khi anh nói là chỉ có mình em, em sẽ không cho sờ đâu nhé? A...♡ Thôi nào, đừng có tự tiện sờ soạng nữa♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -2409,9 +2410,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「はぁ、んっ♡　あぁ…♡　おっきい…反り返っちゃってるじゃない…♡」[p]
-蕾「押し当てるだけですっごい質量なのに…こんなの中に入ったらどうなっちゃうんだろ♡」[p]
-蕾「お腹の奥まで…いっぱいになって…いろんなもの圧迫されちゃいそ♡　手加減してよね？」[p]
+Tsubomi「Hà, ưm...♡ A...♡ To quá... Nó cong vút lên rồi kìa...♡」[p]
+Tsubomi「Chỉ mới ép vào thôi mà đã thấy nặng trịch thế này rồi... Nếu thứ này đút vào trong thì sẽ ra sao đây♡」[p]
+Tsubomi「Chắc nó sẽ lấp đầy... tận sâu trong bụng em mất... Chắc mọi thứ sẽ bị chèn ép mất thôi♡ Anh phải nương tay đấy nhé?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata+=1"  name="H_sumata"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2421,9 +2422,9 @@
 *J2_2_sumata2
 
 [tb_start_text mode=1 ]
-蕾「はーっ♡　はーっ♡　はーっ♡　んんっ♡　どう？　トロトロのココで擦られるの…」[p]
-[舜]「すっごい気持ちいい…ヤバ。マジであっという間に出ちゃいそ…」[p]
-蕾「はぁ♡　はぁ♡　んんっ…その顔が見たかったの♡　もっと気持ちいい顔見せてっ♡」[p]
+Tsubomi「Hà...♡ Hà...♡ Hà...♡ Ưm...♡ Sao nào? Bị cọ xát bằng chỗ ướt nhẹp này...」[p]
+[舜]「Sướng quá đi mất... Chết tiệt. Chắc anh sẽ bắn ra ngay lập tức mất thôi...」[p]
+Tsubomi「Hà...♡ Hà...♡ Ưm... Em muốn thấy khuôn mặt đó của anh đấy♡ Cho em thấy vẻ mặt sung sướng hơn nữa đi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata+=1"  name="H_sumata"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2434,9 +2435,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あうぅっ♡　あっ…おちんちんビクビク跳ねてるっ…♡　んんっ、余計擦れてっ…♡」[p]
-蕾「こんなのっ…気持ちいいに決まってるっ♡　あぁっ♡　あっ♡　だめ、腰、動いちゃう…♡」[p]
-蕾「はーっ♡　はーっ♡　あっ♡　んんっ、ヌルヌル過ぎて…中入っちゃいそうなのっ♡」[p]
+Tsubomi「A...♡ A... Con cu của anh đang giật giật nảy lên kìa...♡ Ưm, cọ xát nhiều hơn nữa đi...♡」[p]
+Tsubomi「Thế này... chắc chắn là sướng rồi♡ A...♡ A...♡ Không được, hông em tự động di chuyển mất...♡」[p]
+Tsubomi「Hà...♡ Hà...♡ A...♡ Ưm, ướt át quá... cảm giác như sắp lọt hẳn vào trong rồi ấy♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata=0"  name="H_sumata"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2449,9 +2450,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あ゛あ゛あ゛っ♡　ん、くぅぅっ♡　引っかかって…擦れ合ってる…♡　気持ちいいっ♡」[p]
-蕾「熱いのがお腹の奥から…こみ上げてきてる…♡　んんっ、やだぁ、私のほうが先にイッちゃう♡」[p]
-蕾「はぁっ♡　はぁっ♡　私に夢中になってもらおうって思ってるのに…悔しいのっ♡」[p]
+Tsubomi「A...♡ Ưm, a...♡ Mắc kẹt rồi... đang cọ xát vào nhau này...♡ Sướng quá♡」[p]
+Tsubomi「Cảm giác nóng ran từ sâu trong bụng... đang trào lên...♡ Ưm, chết mất, em sẽ ra trước mất thôi♡」[p]
+Tsubomi「Hà...♡ Hà...♡ Rõ ràng em định làm anh mê mẩn cơ mà... tức thật đấy♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -2460,9 +2461,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「んっ…はぁ、あぁ♡　すっごい♡　先っぽも根元も全部ガチガチになっちゃってる♡」[p]
-蕾「すごい…ヌルヌルしたのが溢れてきてる…これが我慢汁、なんでしょ？　ふふ、可愛い♡」[p]
-[舜]「くっ…はーっ、はーっ…蕾の触り方がエロすぎるからだって…！」[p]
+Tsubomi「Ưm... hà, a...♡ Tuyệt quá♡ Cả phần đầu lẫn phần gốc đều cứng ngắc hết rồi này♡」[p]
+Tsubomi「Tuyệt thật... Nước nhờn đang trào ra này... Đây là dâm dịch đầu cu đúng không? Hehe, dễ thương quá♡」[p]
+[舜]「Khỉ thật... hà, hà... Là do cách sờ của Tsubomi dâm đãng quá đấy chứ...!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tekoki+=1"  name="H_tekoki"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2472,9 +2473,9 @@
 *J2_2_tekoki2
 
 [tb_start_text mode=1 ]
-蕾「熱くてガチガチ…♡　すっごいおっきくなってるよ。先っぽと根元のほう、どっちが好きなの？」[p]
-[舜]「いや、両方気持ちよくて比べらんないから…！」[p]
-蕾「ちゃんと比べて…真ん中から根元までシコシコされるのと…先っぽ撫でられるのどっちがいい？」[p]
+Tsubomi「Nóng ran và cứng ngắc...♡ To lên nhiều lắm rồi này. Phần đầu và phần gốc, anh thích bên nào hơn?」[p]
+[舜]「Không, cả hai đều sướng nên anh không so sánh được đâu...!」[p]
+Tsubomi「Phải so sánh đàng hoàng chứ... Bị sục từ giữa xuống tận gốc... với được vuốt ve phần đầu, anh thích cái nào hơn?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tekoki+=1"  name="H_tekoki"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2485,9 +2486,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「フーッ♡　フーッ♡　あぁ…すっごいエッチな匂いしてる…おちんちん触ってるだけなのに…」[p]
-蕾「私までお腹の奥キュンってしちゃったじゃない…体が勝手にすごい興奮してるみたい♡」[p]
-蕾「これが入ったら、どうなっちゃうんだろ…あっ！　や、やだ…私、何言ってんだろ…恥ずかし」[p]
+Tsubomi「Phù...♡ Phù...♡ A... Có mùi dâm đãng quá đi... Dù em chỉ mới chạm vào con cu thôi mà...」[p]
+Tsubomi「Làm tận sâu trong bụng em cũng nhói lên rồi này... Cơ thể em dường như đang tự hưng phấn lên thì phải♡」[p]
+Tsubomi「Nếu thứ này lọt vào trong, thì sẽ ra sao đây... A! Kh-Không, chết mất... Mình đang nói cái gì vậy nè... Xấu hổ quá」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tekoki=0"  name="H_tekoki"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2499,9 +2500,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひぅぅぅっ♡　んんっ♡　はぁ、あっ…♡　体、変なの…♡　しごいてるだけ、なのに…♡」[p]
-[舜]「蕾、すっごいエロい顔…今すぐめちゃくちゃにしたくなるだろ…」[p]
-蕾「ひゃっ…またおっきくなってるんだけど…！　興奮しすぎだってば♡」[p]
+Tsubomi「A...♡ Ưm...♡ Hà, a...♡ Cơ thể em, lạ lắm...♡ Rõ ràng chỉ mới đang sục thôi, vậy mà...♡」[p]
+[舜]「Tsubomi, vẻ mặt em dâm đãng lắm đấy... Làm anh muốn làm tình với em đến mức rối tung lên ngay bây giờ...」[p]
+Tsubomi「A... Lại to lên nữa rồi này...! Anh hưng phấn quá mức rồi đấy♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -2509,9 +2510,9 @@
 *J2_2_pisuton_yukkuri1
 
 [tb_start_text mode=1 ]
-蕾「ひぅっ♡　あっ♡　あんっ♡　はぁっ♡　あぁ♡　目、閉じないでよ…私のこと見てて♡」[p]
-蕾「ほら…私の中、出たり入ったりしてるでしょ♡　ふーっ♡　ふーっ♡　あっ、んんっ♡」[p]
-蕾「奥までっ♡　ヌルヌルって入ってきちゃってるの♡　はぁ、先っぽ…１番奥当たってるってば♡」[p]
+Tsubomi「A...♡ A...♡ A...♡ Hà...♡ A...♡ Đừng nhắm mắt lại... Hãy nhìn em đi♡」[p]
+Tsubomi「Này... Anh đang ra ra vào vào bên trong em đúng không♡ Phù...♡ Phù...♡ A, ưm...♡」[p]
+Tsubomi「Nó trơn tuột... lọt vào tận sâu bên trong rồi♡ Hà, phần đầu... đụng trúng tận cùng bên trong rồi đấy♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2521,9 +2522,9 @@
 *J2_2_pisuton_yukkuri2
 
 [tb_start_text mode=1 ]
-蕾「んっ♡　はぁ、あんっ♡　同棲して…結婚したらこうやって子作りするのかな♡」[p]
-蕾「もう一足先に子作りしちゃってるか♡　んんっ♡　いっぱいおちんちん締め付けてあげる♡」[p]
-蕾「赤ちゃんできたら…責任取ってくれるんでしょ？　私のことっ…世界一可愛いママにしてよ♡」[p]
+Tsubomi「Ưm...♡ Hà, a...♡ Sống chung... rồi kết hôn, chúng ta sẽ tạo em bé thế này sao♡」[p]
+Tsubomi「Nhưng mình đã đi trước một bước, đang tạo em bé luôn rồi nhỉ♡ Ưm...♡ Em sẽ siết chặt lấy con cu của anh nhé♡」[p]
+Tsubomi「Nếu có em bé... anh sẽ chịu trách nhiệm đúng không? Hãy biến em... thành người mẹ dễ thương nhất thế giới nhé♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2533,9 +2534,9 @@
 *J2_2_pisuton_yukkuri3
 
 [tb_start_text mode=1 ]
-蕾「ひゃぅぅっ♡　あぅ♡　はっ、興奮しすぎっ♡　また中でおっきくなってる…♡」[p]
-蕾「私のこと…ママにしようっておちんちんが本気出してるってこと？　んんっ、かっこいいね♡」[p]
-蕾「でもっ…まだまだ足りないからねっ♡　もっと頑張ってもらわないとっ♡　あっ♡　あんっ♡」[p]
+Tsubomi「A...♡ A...♡ Hà, hưng phấn quá rồi đấy♡ Nó lại to lên bên trong em nữa rồi...♡」[p]
+Tsubomi「Con cu của anh đang thực sự muốn... biến em thành mẹ đúng không? Ưm, ngầu thật đấy♡」[p]
+Tsubomi「Nhưng mà... vẫn chưa đủ đâu nhé♡ Anh phải cố gắng nhiều hơn nữa cơ♡ A...♡ A...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri=0"  name="H_supiritasu_pisuton_yukkuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2547,9 +2548,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あ゛あ゛っ♡　い、今のっ…すごいのぉっ♡　はぁ♡　奥っ、トントンってノックされてるっ♡」[p]
-蕾「私の中っ、[舜]の形になっちゃってるみたい♡　あんた仕様の体になっちゃったの…♡」[p]
-蕾「んんっ…くぅっ♡　はぁ、はっ…[舜]のおちんちんだけ受け入れるから…いっぱい出して♡」[p]
+Tsubomi「A...♡ V-Vừa rồi... tuyệt quá♡ Hà...♡ Bên trong, cứ như đang bị gõ cửa cốc cốc ấy♡」[p]
+Tsubomi「Bên trong em, dường như đã mang hình dáng của [舜] mất rồi♡ Cơ thể em đã trở thành đồ chuyên dụng của anh rồi...♡」[p]
+Tsubomi「Ưm... ưm...♡ Hà, hà... Em sẽ chỉ tiếp nhận con cu của [舜] thôi... Hãy bắn ra thật nhiều đi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*high2"  cond="f.H_high1==1"  ]
@@ -2558,9 +2559,9 @@
 *J2_2_pisuton_hagesiku1
 
 [tb_start_text mode=1 ]
-蕾「はぁっ♡　はぁっ♡　あっ♡　んんっ♡　私にいっつも顔緩んでるとか言うくせにっ…♡」[p]
-蕾「今日はあんたのほうが顔とろけてるみたいだけど？　ふーっ、はぁ♡　情けない顔になってる♡」[p]
-蕾「おちんちん気持ちよくなっちゃうでしょ♡　ふふ、私がこの顔させてるんだって思うと嬉し♡」[p]
+Tsubomi「Hà...♡ Hà...♡ A...♡ Ưm...♡ Lúc nào anh cũng bảo mặt em dâm đãng thế mà...♡」[p]
+Tsubomi「Hôm nay có vẻ như mặt anh mới là người đang tan chảy ra đấy? Phù, hà...♡ Khuôn mặt thảm hại quá đi♡」[p]
+Tsubomi「Con cu của anh sướng lắm đúng không♡ Hehe, nghĩ đến việc chính em đã khiến anh làm ra vẻ mặt này, em vui lắm♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2570,9 +2571,9 @@
 *J2_2_pisuton_hagesiku2
 
 [tb_start_text mode=1 ]
-蕾「あっ♡　あぁっ♡　んんっ♡　腰っ…止まらなくなっちゃうぅっ♡　やっ…勝手に動くの♡」[p]
-蕾「あぁ♡　へこへこって…んんっ♡　中も外も…いっぱい擦りつけて気持ちよくなっちゃうぅぅ♡」[p]
-蕾「こんなの覚えちゃったら…癖になっちゃうってばぁ♡　気持ちよすぎておかしくなりそうっ♡」[p]
+Tsubomi「A...♡ A...♡ Ưm...♡ Hông em... không dừng lại được nữa rồi♡ Chết mất... nó tự động di chuyển này♡」[p]
+Tsubomi「A...♡ Cứ lắc lư thế này... ưm...♡ Cả bên trong lẫn bên ngoài... đều bị cọ xát nhiều quá, sướng quá đi mất♡」[p]
+Tsubomi「Nếu nhớ cảm giác này... em sẽ sinh hư mất thôi♡ Sướng đến phát điên lên được♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2582,9 +2583,9 @@
 *J2_2_pisuton_hagesiku3
 
 [tb_start_text mode=1 ]
-蕾「ひっぐぅぅっ♡　おっ♡　おおっ♡　中でっ、おっきくなって…♡　すごい圧迫感なのっ♡」[p]
-蕾「これでもう他の女の子のことなんか考えられないでしょ？　私のことだけ考えて…♡」[p]
-蕾「誰かの代わりでいいなんてしおらしいこと言うタイプじゃないんだからっ…！　私だけ見てて」[p]
+Tsubomi「A...♡ Ơ...♡ Ơ...♡ Nó to lên, ở bên trong...♡ Cảm giác chèn ép kinh khủng quá♡」[p]
+Tsubomi「Thế này thì anh không thể nghĩ đến cô gái nào khác được nữa đúng không? Chỉ nghĩ về mỗi em thôi...♡」[p]
+Tsubomi「Em không phải kiểu người ngoan ngoãn chấp nhận làm người thay thế cho ai đó đâu nhé...! Chỉ được nhìn mỗi em thôi」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku=0"  name="H_supiritasu_pisuton_hagesiku"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2596,9 +2597,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「おっ♡　おおおおっ♡　んぅぅっ♡　気持ちいいっ♡　おまんこおかしくなっちゃうぅぅっ♡」[p]
-[舜]「蕾のことだけ考えて…蕾に射精したくてウズウズしてんだよ…伝わってる？」[p]
-蕾「伝わるっ♡　伝わってりゅっ♡　はぁ、あっ♡　私のことだけ考えてくれるの、嬉しいのぉ♡」[p]
+Tsubomi「Ơ...♡ Ơ...♡ Ưm...♡ Sướng quá...♡ Cô bé của em sắp phát điên rồi♡」[p]
+[舜]「Anh chỉ nghĩ về Tsubomi thôi... Anh đang ngứa ngáy muốn bắn tinh vào Tsubomi lắm rồi đây... Em có cảm nhận được không?」[p]
+Tsubomi「Cảm nhận được... Cảm nhận được mà♡ Hà, a...♡ Được anh chỉ nghĩ về mỗi em, em vui lắm♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*high2"  cond=""  ]
@@ -2607,9 +2608,9 @@
 *R1_kaiwa1
 
 [tb_start_text mode=1 ]
-蕾「言っとくけど…！　私は絶対にお客さんとエッチなことしないんだからね！」[p]
-[舜]「俺とはしてるだろ？　迫られたりして、断れなかったことはないのか？」[p]
-蕾「あるわけないでしょ！　あんたとは…しちゃったけど…あくまであんただけだからっ…！」[p]
+Tsubomi「Nói trước nhé...! Em tuyệt đối không làm chuyện dâm đãng với khách đâu đấy!」[p]
+[舜]「Nhưng em đang làm với anh đây thôi? Đã bao giờ bị ép đến mức không thể từ chối chưa?」[p]
+Tsubomi「Làm gì có chuyện đó! Với anh thì... em đã lỡ làm rồi... nhưng chỉ duy nhất mình anh thôi đấy...!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2617,9 +2618,9 @@
 *R1_kaiwa2
 
 [tb_start_text mode=1 ]
-[舜]「『セックスしたい』って金持ちのお客さんから札束積まれたらどうすんの？」[p]
-蕾「えっ、札束…？　それって大金ってことよね？　それは考えちゃうかも──」[p]
-蕾「冗談に決まってるでしょ。私は好きな人としかエッチしたくないもの。お金の問題じゃないの」[p]
+[舜]「Nếu có ông khách giàu có nào đó vứt một xấp tiền ra rồi bảo 'Muốn làm tình' thì em tính sao?」[p]
+Tsubomi「Hả, xấp tiền...? Tức là rất nhiều tiền đúng không? Cái đó thì chắc em sẽ suy nghĩ một chút──」[p]
+Tsubomi「Đương nhiên là em đùa rồi. Em chỉ muốn làm chuyện đó với người mình thích thôi. Không phải vấn đề tiền bạc đâu.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2627,9 +2628,9 @@
 *R1_kaiwa3
 
 [tb_start_text mode=1 ]
-蕾「ホントはロマンティックな雰囲気で、イチャイチャするエッチが好きなんだからね？」[p]
-[舜]「でも、普段仕事してる場所でエロいことする背徳感も癖になるかもしんないぞ？」[p]
-蕾「もうっ…！　勝手なことばっかり言って…何かあっても知らないからね…？」[p]
+Tsubomi「Thật ra em thích kiểu làm tình tình tứ trong một bầu không khí lãng mạn cơ, biết không?」[p]
+[舜]「Nhưng cảm giác tội lỗi khi làm chuyện dâm đãng ở nơi làm việc thường ngày cũng dễ sinh hư lắm đấy nhé?」[p]
+Tsubomi「Thiệt tình...! Toàn nói mấy lời tùy tiện... Có chuyện gì xảy ra em không biết đâu đấy nhé...?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa=0"  name="H_kaiwa"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2638,9 +2639,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「ひぅぅっ♡　やんっ…耳に息かかってるってばっ…♡　んんっ♡　くすぐったいっ♡」[p]
-蕾「あっ♡　あんっ♡　ねっとり舐めないでぇっ…もうダメだって言ってるでしょっ…」[p]
-蕾「ストップっ…！　ストップだってばぁっ♡　あんっ♡　あっ、あぁっ♡　やめてってばぁ♡」[p]
+Tsubomi「A...♡ A... Anh phả hơi thở vào tai em rồi kìa...♡ Ưm...♡ Nhột quá♡」[p]
+Tsubomi「A...♡ A...♡ Đừng liếm nhớp nháp như thế... Em đã bảo là không được rồi mà...」[p]
+Tsubomi「Dừng lại...! Em bảo dừng lại cơ mà♡ A...♡ A, a...♡ Dừng lại đi mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_miminame+=1"  name="H_miminame"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2651,9 +2652,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「ひゃんっ♡　あっ♡　あんっ♡　ねっとり舐め回しすぎ…だめ、だめだってばっ♡　んんっ♡」[p]
-[舜]「へぇ、耳舐められて興奮してんだ？　体中敏感だもんな、蕾は」[p]
-蕾「あぁぁっ♡　耳元で喋んないでっ♡　んんぅぅっ♡　別に興奮してるわけじゃないからっ…♡」[p]
+Tsubomi「A...♡ A...♡ A...♡ Anh liếm láp nhớp nháp quá rồi đấy... không được, không được đâu mà♡ Ưm...♡」[p]
+[舜]「Hê, bị liếm tai mà cũng hưng phấn à? Toàn thân Tsubomi nhạy cảm thật đấy.」[p]
+Tsubomi「A...♡ Đừng nói chuyện bên tai em nữa♡ Ưm...♡ Em đâu có hưng phấn gì đâu chứ...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_miminame+=1"  name="H_miminame"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2663,9 +2664,9 @@
 *R1_miminame3
 
 [tb_start_text mode=1 ]
-蕾「あぁぁっ♡　ちょ、ちょっとっ…耳の奥っ…舐め回さないで…♡　あっ♡　あぁぁぁっ♡」[p]
-蕾「んっくぅぅっ♡　はっ♡　はっ♡　やっ…ジュポジュポって…音、立てるのもダメェっ♡」[p]
-蕾「やっ…もうからかうならこれくらいで終わりにしてよ…これ以上はホントにダメだってばぁ♡」[p]
+Tsubomi「A...♡ T-Từ từ đã... sâu trong tai... đừng liếm láp nữa...♡ A...♡ A...♡」[p]
+Tsubomi「Ưm...♡ Hà...♡ Hà...♡ A... Đừng có phát ra... âm thanh chụt chụt như thế nữa♡」[p]
+Tsubomi「A... Nếu anh định trêu chọc thì đến đây là đủ rồi đấy... Hơn thế này nữa là không được thật đâu mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_miminame=0"  name="H_miminame"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2678,9 +2679,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひゃぅぅぅっ♡　あぅっ♡　耳奥っ、ズポズポ出し入れっ、すごいっ♡　はっ、あっ、あっ♡」[p]
-[舜]「腰、勝手にヘコヘコ動いてんじゃん。もう体はエロいスイッチ入ってんじゃないの？」[p]
-蕾「んぅぅっ♡　馬鹿っ！　あんたがエロい舐め方するからでしょっ…フーッ、フーッ…♡」[p]
+Tsubomi「A...♡ A...♡ Sâu trong tai, ra ra vào vào chụt chụt, tuyệt quá♡ Hà, a, a...♡」[p]
+[舜]「Hông em đang tự động lắc lư rồi kìa. Chẳng phải cơ thể em đã bật công tắc dâm đãng rồi sao?」[p]
+Tsubomi「Ưm...♡ Đồ ngốc! Là tại anh liếm láp dâm đãng quá đấy chứ... Phù, phù...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -2689,9 +2690,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t3.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「フーッ、フーッ、フーッ…絶対声出したりしないしっ…リアクションしないんだからっ」[p]
-[舜]「いつまで続くかな？　ほら…乳首撫でられるの、大好きだもんなぁ？」[p]
-蕾「あっ♡　あぁぁぁっ♡　もうっ…やだぁっ…乳首ばっかり意地悪しないでぇっ♡　あっ、んっ♡」[p]
+Tsubomi「Phù, phù, phù... Em nhất định sẽ không phát ra tiếng động nào đâu... cũng không phản ứng lại đâu.」[p]
+[舜]「Được bao lâu đây? Này... Em thích được vuốt ve nhũ hoa lắm đúng không?」[p]
+Tsubomi「A...♡ A...♡ Thôi mà... chết mất... Đừng có chọc ghẹo nhũ hoa của em mãi thế♡ A, ưm...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiijiri+=1"  name="H_tikubiijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2701,9 +2702,9 @@
 *R1_tikubiijiri2
 
 [tb_start_text mode=1 ]
-蕾「んっ…くっ…♡　んぅぅぅっ♡　ふぅっ♡　やだっ…こんなとこで…乳首ばっかり触られたら…」[p]
-蕾「声、出ちゃうぅ…んんっ♡　ふぅっ♡　ふっ…私はっ、流されたりしないんだからっ…！」[p]
-蕾「はぁっ♡　あっ♡　くぅぅっ♡　感じてるわけじゃないからね…ただ…反応してるだけなのっ」[p]
+Tsubomi「Ưm... ưm...♡ Ưm...♡ Phù...♡ Chết mất... Bị sờ nhũ hoa mãi ở nơi thế này...」[p]
+Tsubomi「Phát ra tiếng mất thôi... ưm...♡ Phù...♡ Phù... Em, sẽ không bị cuốn theo đâu...!」[p]
+Tsubomi「Hà...♡ A...♡ Ưm...♡ Không phải là em đang sướng đâu nhé... chỉ là... cơ thể phản ứng lại thôi.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiijiri+=1"  name="H_tikubiijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2714,9 +2715,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「はぁっ♡　はぁっ♡　ここでこれ以上したら…怒るからねっ…んんっ！　乳首もっ、だめっ♡」[p]
-[舜]「睨んでも、顔真っ赤になってるから…余計エロいんだけど？　乳首気持ちいいんだ？」[p]
-蕾「気持ちいいわけじゃないっ♡　こんなところでっ、いきなりされて怒ってるだけっ♡」[p]
+Tsubomi「Hà...♡ Hà...♡ Làm hơn thế này ở đây nữa... em giận thật đấy... ưm! Nhũ hoa cũng, không được đâu♡」[p]
+[舜]「Em có lườm thì mặt cũng đỏ bừng hết lên rồi... Nhìn càng dâm đãng hơn đấy? Nhũ hoa sướng lắm đúng không?」[p]
+Tsubomi「Có sướng gì đâu chứ♡ Em chỉ đang giận vì bị làm bất ngờ ở nơi thế này thôi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiijiri=0"  name="H_tikubiijiri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2729,9 +2730,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひあぁぁぁっ♡　乳首スリスリっ♡　だめっ♡　あっ♡　あんっ♡　腰動いちゃう…♡」[p]
-蕾「な、なんでっ…自分で動かしてないのにっ♡　カクカクって勝手に…動いてるの♡」[p]
-蕾「くぅっ♡　やだやだ、見ないで…恥ずかしい格好になっちゃってる…こんなはずじゃないのに」[p]
+Tsubomi「A...♡ Mân mê nhũ hoa... không được đâu♡ A...♡ A...♡ Hông em tự động di chuyển mất...♡」[p]
+Tsubomi「S-Sao thế này... rõ ràng em không tự cử động mà♡ Nó cứ tự động... giật giật này♡」[p]
+Tsubomi「Ưm...♡ Không chịu đâu, đừng nhìn mà... Tư thế xấu hổ quá đi mất... Đáng lẽ không phải thế này cơ mà.」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -2740,9 +2741,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あうっ♡　はぁ、あっ…おっぱいから手離してってばぁ。何で好き放題してるのよっ」[p]
-[舜]「嫌なら強引に振り払えばいいのに。蕾ならできるだろ。しないってことは嫌じゃないんじゃないか？」[p]
-蕾「ち、違っ…またそうやって意地悪なことばっかりっ！　あんたなんか嫌いっ…！」[p]
+Tsubomi「A...♡ Hà, a... Bỏ tay ra khỏi ngực em đi mà. Sao anh cứ tự tiện làm gì mình thích thế hả.」[p]
+[舜]「Nếu ghét thì em cứ mạnh bạo hất ra là được mà. Tsubomi làm được đúng không. Không làm thế tức là không ghét chứ gì?」[p]
+Tsubomi「Kh-Không phải... Anh lại cứ nói mấy lời trêu ghẹo thế nữa rồi! Em ghét anh...!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2752,9 +2753,9 @@
 *R1_munemomi2
 
 [tb_start_text mode=1 ]
-[舜]「イヤイヤしてても、乳首はぷっくり膨らんでるみたいだけどなぁ？　ほら、手のひらに当たる」[p]
-蕾「ひあっ♡　あっ♡　あんっ♡　手のひらでスリスリ、だめぇぇっ♡　敏感だからっ…♡」[p]
-蕾「はぅぅっ♡　んっ…わざと乳首狙って…触ってるでしょっ♡　ずるいってばぁっ…！」[p]
+[舜]「Miệng thì bảo ghét, nhưng nhũ hoa sưng phồng lên hết rồi này? Thấy không, đụng trúng lòng bàn tay anh luôn rồi.」[p]
+Tsubomi「A...♡ A...♡ A...♡ Đừng dùng lòng bàn tay cọ xát như thế...♡ Nó nhạy cảm lắm...♡」[p]
+Tsubomi「A...♡ Ưm... Anh cố tình nhắm vào nhũ hoa... để sờ đúng không♡ Gian xảo quá đi mất...!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2765,9 +2766,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「んんっ♡　仕事場で…気持ちよくなるなんてダメなのにっ…私はルール違反はしないのに♡」[p]
-[舜]「でもほら、お客さん相手じゃなくて彼氏とのラブラブセックスだから」[p]
-蕾「そういう問題じゃなくてっ…ここでエッチなことするのがダメだって言ってるんだってば♡」[p]
+Tsubomi「Ưm...♡ Ở nơi làm việc... sướng thế này là không được đâu... Em vốn không vi phạm luật lệ cơ mà♡」[p]
+[舜]「Nhưng mà này, đây không phải là làm với khách, mà là làm tình mặn nồng với bạn trai cơ mà.」[p]
+Tsubomi「Không phải vấn đề đó... Em đang nói là làm chuyện dâm đãng ở đây là không được cơ mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi=0"  name="H_munemomi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2780,9 +2781,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あっ♡　あぁぁぁぁっ♡　んんっ♡　触り方っ、エッチすぎっ…♡　おっぱいとろけちゃう♡」[p]
-[舜]「蕾、めちゃくちゃエロい声出てるけど？　ダメだって言いながら気持ちよくなってんだろ」[p]
-蕾「んんっ♡　だってっ…弱いところばっかりずーっと触るんだもん…気持ちよくなっちゃうの♡」[p]
+Tsubomi「A...♡ A...♡ Ưm...♡ Cách sờ của anh, dâm đãng quá...♡ Ngực em tan chảy mất thôi♡」[p]
+[舜]「Tsubomi, em đang phát ra âm thanh dâm đãng lắm đấy? Miệng thì bảo không được, nhưng lại sướng lắm đúng không.」[p]
+Tsubomi「Ưm...♡ Tại vì... anh cứ sờ mãi vào chỗ nhạy cảm của em mà... em sướng mất thôi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -2791,9 +2792,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「ひあぁぁ♡　あっ♡　そこはホントにダメッ…クリ敏感なのっ♡　スリスリしないでぇっ♡」[p]
-蕾「あっ♡　あっ♡　あっ♡　こ、腰浮いちゃう♡　仕事場なのにエッチなことされちゃってるっ♡」[p]
-[舜]「ほら、めちゃくちゃ興奮してんじゃん…おまんこもぐしょ濡れになってるし…」[p]
+Tsubomi「A...♡ A...♡ Chỗ đó thật sự không được đâu... âm vật của em nhạy cảm lắm♡ Đừng cọ xát nữa mà♡」[p]
+Tsubomi「A...♡ A...♡ A...♡ H-Hông em nảy lên mất♡ Đang ở nơi làm việc mà lại bị làm chuyện dâm đãng thế này♡」[p]
+[舜]「Đấy, em đang hưng phấn tột độ rồi kìa... Cô bé cũng ướt sũng rồi...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kuriijiri+=1"  name="H_kuriijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2804,9 +2805,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-[舜]「ヤッバ。もう割れ目の外まで濡れてんじゃん…クリもヌルヌルになってるし」[p]
-蕾「やっ♡　だめっ…そこばっかり…コリコリってしないで…♡　おかしくなっちゃう♡」[p]
-蕾「あっ♡　あっ♡　んっ♡　いつも仕事してるところなのに…エッチなことしちゃだめなのにっ♡」[p]
+[舜]「Ghê thật. Ướt ra tận ngoài khe luôn rồi này... Âm vật cũng trơn tuột hết cả rồi.」[p]
+Tsubomi「A...♡ Không được... đừng cứ mân mê... chỗ đó mãi thế...♡ Em phát điên mất♡」[p]
+Tsubomi「A...♡ A...♡ Ưm...♡ Nơi em làm việc hàng ngày cơ mà... làm chuyện dâm đãng là không được đâu♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kuriijiri+=1"  name="H_kuriijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2817,9 +2818,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あっ♡　あぁっ♡　やっ！　先っぽ…カリカリ…だめ、だめだめだめっ♡　壊れちゃうっ♡」[p]
-蕾「ひぅっ♡　あっ♡　ビリビリ気持ちいいの痺れてっ…お腹の奥までジンジン熱くなってるの♡」[p]
-蕾「んんっ♡　仕事中にエッチなことしちゃったって思い出しちゃったらどうするの…」[p]
+Tsubomi「A...♡ A...♡ A! Phần đầu... cứ gãi gãi... không được, không được đâu♡ Em hỏng mất♡」[p]
+Tsubomi「A...♡ A...♡ Cảm giác sướng tê rần chạy dọc cơ thể... tận sâu trong bụng cũng nóng ran lên rồi♡」[p]
+Tsubomi「Ưm...♡ Nhỡ sau này em lại nhớ ra mình từng làm chuyện dâm đãng trong lúc làm việc thì phải làm sao đây...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kuriijiri=0"  name="H_kuriijiri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2832,9 +2833,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あぅぅぅっ♡　あっ♡　んっ♡　ひぐぅぅっ♡　声、我慢できないぃっ♡」[p]
-蕾「押しつぶすみたいに…揉まないでぇっ♡　刺激強すぎて…なんにも考えられなくなっちゃう♡」[p]
-蕾「あっ♡　あぁぁっ♡　やっ…だめ、ホントにイッちゃう…♡　やだやだやだぁっ♡」[p]
+Tsubomi「A...♡ A...♡ Ưm...♡ A...♡ Em không kiềm chế giọng nói được nữa rồi♡」[p]
+Tsubomi「Đừng có vò nát... như muốn nghiền nát nó ra thế♡ Kích thích mạnh quá... em không nghĩ được gì nữa rồi♡」[p]
+Tsubomi「A...♡ A...♡ A... Không được, em ra thật mất...♡ Không chịu, không chịu đâu♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -2843,9 +2844,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t3.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「ちょ、ちょっとっ…！　お尻はダメっ…何考えてんの。こんなところで…」[p]
-蕾「私のこと…本当に普段からエッチなことやってるような女の子だって思ってるんじゃないの？」[p]
-蕾「お客さんから誘われても断ってるに決まってるじゃないっ！　好きな人とじゃなきゃ無理…」[p]
+Tsubomi「T-Từ từ đã...! Mông thì không được đâu... Anh đang nghĩ gì thế hả. Ở nơi thế này...」[p]
+Tsubomi「Có phải anh... thực sự nghĩ em là loại con gái hay làm mấy chuyện dâm đãng không hả?」[p]
+Tsubomi「Khách có gạ gẫm thì em cũng từ chối chứ sao! Nếu không phải là người mình thích thì em không làm đâu...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruijiri+=1"  name="H_anaruijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2855,9 +2856,9 @@
 *R1_anaruijiri2
 
 [tb_start_text mode=1 ]
-蕾「んんっ♡　やっ…ほぐさないで…お尻…汚いってばぁ…♡　そんなとこ触んないでよ♡」[p]
-[舜]「汚くないよ。めちゃくちゃ可愛い…きゅ～って閉じててヒクヒクしてて。いじめたくなる」[p]
-蕾「やっ…やだいじめないでっ♡　そこはっ…挿れる場所じゃないんだってばぁっ♡」[p]
+Tsubomi「Ưm...♡ A... Đừng có nới lỏng ra... mông... bẩn lắm đấy...♡ Đừng có chạm vào chỗ đó mà♡」[p]
+[舜]「Không bẩn đâu. Dễ thương lắm... Nó đóng chặt lại, cứ giật giật liên hồi. Làm anh muốn bắt nạt quá đi.」[p]
+Tsubomi「A... Đừng bắt nạt em mà♡ Chỗ đó... không phải chỗ để đút vào đâu♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruijiri+=1"  name="H_anaruijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2868,9 +2869,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「んぅぅぅっ♡　だ、だめっ♡　そこっ…撫でられるの変な感じしちゃう…♡　ほぐれてきてる…」[p]
-蕾「お尻、とろけさせてどうするつもりなのっ？　ここにはなんにも入らないからね？」[p]
-蕾「だから、これ以上はだめだって…んっ♡　あっ♡　あぁぁぁっ♡　私の話、聞いてよおっ♡」[p]
+Tsubomi「Ưm...♡ Kh-Không được♡ Chỗ đó... bị vuốt ve cảm giác lạ lắm...♡ Nó đang giãn ra rồi...」[p]
+Tsubomi「Làm mông em tan chảy ra rồi anh định làm gì hả? Chỗ này không đút được gì vào đâu đấy nhé?」[p]
+Tsubomi「Thế nên, hơn thế này là không được đâu... Ưm...♡ A...♡ A...♡ Nghe em nói đi mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruijiri=0"  name="H_anaruijiri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2883,9 +2884,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あうぅっ♡　あぁぁっ♡　お尻なのに…こ、こんなに気持ちいいなんて…私の体変なの…？」[p]
-蕾「ひっぐぅ♡　んん…はぁっ♡　はぁっ♡　ヒクヒクってしちゃう…やだ、違うのぉっ♡」[p]
-蕾「あっ♡　あんっ♡　ただ気持ちいいだけで…受け入れる準備してるわけじゃないからぁっ♡」[p]
+Tsubomi「A...♡ A...♡ Rõ ràng là mông cơ mà... s-sao lại sướng thế này chứ... Cơ thể em lạ lắm sao...?」[p]
+Tsubomi「A...♡ Ưm... Hà...♡ Hà...♡ Nó cứ giật giật liên hồi... Chết mất, không phải thế đâu♡」[p]
+Tsubomi「A...♡ A...♡ Chỉ là sướng thôi... chứ không phải em đang chuẩn bị tiếp nhận đâu đấy♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -2894,9 +2895,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あっ♡　あうっ♡　あぁっ♡　指っ…ジュポジュポ出し入れするのっ…だめなのぉ♡」[p]
-[舜]「ダメって言ってるのに、すっごい締め付けだけど？　蜜も飛び散ってんじゃん…！」[p]
-蕾「ひぅぅっ♡　あぁぁ♡　だって…弱いところ当たって擦れてるんだもん♡　我慢できないっ♡」[p]
+Tsubomi「A...♡ A...♡ A...♡ Ngón tay... ra ra vào vào chụt chụt thế... không được đâu♡」[p]
+[舜]「Miệng thì bảo không được, mà siết chặt thế này cơ à? Mật ngọt văng tung tóe luôn rồi kìa...!」[p]
+Tsubomi「A...♡ A...♡ Tại vì... anh đụng trúng chỗ nhạy cảm rồi cọ xát mà♡ Em không kiềm chế nổi đâu♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman+=1"  name="H_teman"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2907,9 +2908,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あっ♡　あっ♡　あっ♡　んっ、くぅぅっ♡　激しっ…中ぐちゃぐちゃになってるのっ♡」[p]
-[舜]「腰浮いてるじゃん。そんなに気持ちいいんだ？　正直に教えてくれないとやめちゃうよ？」[p]
-蕾「やっ…やだっ…気持ちいいっ♡　気持ちいいからぁっ♡　ここまでしてやめないでっ♡」[p]
+Tsubomi「A...♡ A...♡ A...♡ Ưm, ưm...♡ Mãnh liệt quá... bên trong em rối tung lên hết rồi♡」[p]
+[舜]「Hông em nảy lên rồi kìa. Sướng đến thế cơ à? Nếu không thành thật nói cho anh biết là anh dừng lại đấy nhé?」[p]
+Tsubomi「A... Không chịu đâu... sướng lắm♡ Sướng lắm mà♡ Đã đến mức này rồi thì đừng dừng lại mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman+=1"  name="H_teman"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2919,9 +2920,9 @@
 *R1_teman3
 
 [tb_start_text mode=1 ]
-[舜]「気持ちいいんだ？　どこがどんなふうに気持ちよくなってるのか教えて？」[p]
-蕾「んんっ♡　意地悪っ…♡　お、おまんこがっ…キュンキュンって気持ちよくなってるのっ♡」[p]
-蕾「それっ♡　好きっ♡　んっ♡　内側ナデナデされて…気持ちよくって力抜けちゃいそうなのっ♡」[p]
+[舜]「Sướng lắm à? Nói anh nghe xem chỗ nào đang sướng như thế nào nào?」[p]
+Tsubomi「Ưm...♡ Đồ xấu tính...♡ C-Cô bé của em... đang nhói lên sung sướng lắm rồi♡」[p]
+Tsubomi「Cái đó...♡ Em thích lắm♡ Ưm...♡ Bị vuốt ve bên trong... sướng đến mức rã rời cả người luôn♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman=0"  name="H_teman"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2934,9 +2935,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ああぁぁぁっ♡　やっ…イッちゃうっ♡　イッちゃうのぉ♡　普段っ、働いてるとこなのに♡」[p]
-蕾「おまんこトロトロにされて…イク準備始めちゃってるっ♡　やだぁっ、悪い子になっちゃう♡」[p]
-蕾「はぁっ♡　あぁ♡　気持ちよすぎてっ、止まらない…流されちゃうよぉ♡」[p]
+Tsubomi「A...♡ A... Em ra mất♡ Em ra mất thôi♡ Đang ở nơi làm việc thường ngày cơ mà♡」[p]
+Tsubomi「Cô bé bị làm cho ướt nhẹp... bắt đầu chuẩn bị lên đỉnh mất rồi♡ Chết mất, em sẽ thành đứa trẻ hư mất thôi♡」[p]
+Tsubomi「Hà...♡ A...♡ Sướng quá, không dừng lại được... Em bị cuốn theo mất thôi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -2944,9 +2945,9 @@
 *R1_pisuton_yukkuri1
 
 [tb_start_text mode=1 ]
-蕾「あっ♡　あぁっ♡　ほ、ほんとに入っちゃってる…♡　や、だめ、だめぇっ♡」[p]
-蕾「んんっ♡　仕事場でセックスしちゃうなんてっ♡　私も他の女の子たちと同じになっちゃうっ♡」[p]
-[舜]「真面目だよな蕾は…！　大丈夫だよ、俺たちは客とスタッフじゃないんだから…！」[p]
+Tsubomi「A...♡ A...♡ N-Nó lọt hẳn vào trong rồi...♡ Kh-Không được, không được đâu♡」[p]
+Tsubomi「Ưm...♡ Làm tình ở nơi làm việc thế này♡ Em cũng sẽ trở nên giống mấy cô gái khác mất thôi♡」[p]
+[舜]「Tsubomi nghiêm túc thật đấy...! Không sao đâu, chúng ta đâu phải là khách và nhân viên đâu mà...!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2956,9 +2957,9 @@
 *R1_pisuton_yukkuri2
 
 [tb_start_text mode=1 ]
-蕾「あうっ♡　んんっ♡　奥まで…届いてっ…弱いトコ、コリコリって当たってるのっ♡」[p]
-蕾「はぁっ♡　あっ♡　あっ♡　ゆっくりだからっ、余計に感触伝わってきてるの♡」[p]
-蕾「お腹の奥…いっぱいになっちゃってるの♡　感触、体が覚えちゃうってば♡」[p]
+Tsubomi「A...♡ Ưm...♡ Chạm đến... tận cùng rồi... Đụng trúng chỗ nhạy cảm rồi♡」[p]
+Tsubomi「Hà...♡ A...♡ A...♡ Vì chậm rãi nên... cảm giác truyền đến càng rõ ràng hơn đấy♡」[p]
+Tsubomi「Sâu trong bụng... bị lấp đầy mất rồi♡ Cơ thể em sẽ nhớ kỹ cảm giác này mất thôi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2968,9 +2969,9 @@
 *R1_pisuton_yukkuri3
 
 [tb_start_text mode=1 ]
-蕾「[舜]の…いつもよりおっきくなってるっ♡　あんただって…興奮してるんでしょっ♡」[p]
-[舜]「そりゃそうだろ…興奮するよ、蕾が普段仕事してるトコでエロいことしてるんだから…！」[p]
-蕾「んんっ♡　変態っ♡　もう絶対こんなことしないんだから…今回だけだからねっ！」[p]
+Tsubomi「Của [舜]... to hơn mọi khi rồi kìa♡ Anh cũng... đang hưng phấn lắm đúng không♡」[p]
+[舜]「Đương nhiên rồi... Hưng phấn chứ, đang làm chuyện dâm đãng ở nơi Tsubomi làm việc hàng ngày cơ mà...!」[p]
+Tsubomi「Ưm...♡ Đồ biến thái♡ Lần sau tuyệt đối không làm thế này nữa đâu... Chỉ duy nhất lần này thôi đấy!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri=0"  name="H_supiritasu_pisuton_yukkuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2982,9 +2983,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あ゛あ゛あ゛っ♡　奥…ゾリゾリって当たってるっ♡　やっ、腰…浮いちゃうぅぅっ♡」[p]
-[舜]「刺激受け流そうとしてもダメだって。腰がっちり抑えてんだから逃げられるわけないだろ」[p]
-蕾「ひぅぅっ♡　あっ♡　奥ばっかりっ、突き上げないでぇっ♡　わかんなくなっちゃうってばっ♡」[p]
+Tsubomi「A...♡ Bên trong... bị cọ xát dữ dội quá♡ A, hông em... nảy lên mất thôi♡」[p]
+[舜]「Có cố lờ đi kích thích cũng vô ích thôi. Anh giữ chặt hông em rồi, sao mà trốn được.」[p]
+Tsubomi「A...♡ A...♡ Đừng cứ đâm chọc... vào tận sâu bên trong mãi thế♡ Em sắp không biết gì nữa rồi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*high2"  cond="f.H_high1==1"  ]
@@ -2993,9 +2994,9 @@
 *R1_pisuton_hagesiku1
 
 [tb_start_text mode=1 ]
-蕾「くぅっ♡　ん゛っ♡　ん゛っ♡　あぁぁ♡　せっかく掃除したのに、全部汚れちゃったぁ♡」[p]
-[舜]「また掃除し直しだな…手伝うって。だから余計なこと考えないで気持ちよくなればいいじゃん」[p]
-蕾「あ゛っ♡　あ゛っ♡　もうこんなことっ、しないからねっ♡　仕事場でセックスなんてぇっ♡」[p]
+Tsubomi「Ưm...♡ Ưm...♡ Ưm...♡ A...♡ Cất công dọn dẹp sạch sẽ rồi, thế mà bị làm bẩn hết rồi♡」[p]
+[舜]「Lại phải dọn dẹp lại từ đầu rồi... Anh sẽ giúp mà. Thế nên đừng nghĩ ngợi linh tinh nữa, cứ tận hưởng khoái cảm đi.」[p]
+Tsubomi「A...♡ A...♡ Lần sau em sẽ không làm... chuyện này nữa đâu nhé♡ Làm tình ở nơi làm việc thế này♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3005,9 +3006,9 @@
 *R1_pisuton_hagesiku2
 
 [tb_start_text mode=1 ]
-[舜]「口ではダメだって言っても、すっごい締め付けだけど…やっぱ体は喜んでるじゃん」[p]
-蕾「そんなことないっ♡　あっ♡　んんっ♡　ルール違反はしないんだって決めてたんだからっ♡」[p]
-蕾「いけないことはしないって…決めてたのにっ♡　なのに…なんでこんなに気持ちいいのよぉ♡」[p]
+[舜]「Miệng thì bảo không được, mà siết chặt thế này cơ à... Quả nhiên là cơ thể em đang sung sướng lắm đúng không.」[p]
+Tsubomi「Làm gì có chuyện đó♡ A...♡ Ưm...♡ Rõ ràng em đã quyết tâm là không vi phạm luật lệ rồi cơ mà♡」[p]
+Tsubomi「Rõ ràng đã quyết tâm... là không làm chuyện sai trái rồi cơ mà♡ Thế mà... sao lại sướng thế này chứ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3017,9 +3018,9 @@
 *R1_pisuton_hagesiku3
 
 [tb_start_text mode=1 ]
-蕾「あっ♡　んっ、ふぅ、ふっ…♡　激しっ…中でさっきから脈打ってるでしょ…わかるんだから♡」[p]
-[舜]「大正解…！　アメリアちゃんは相手のことよく見てるんだな…！」[p]
-蕾「んんっ♡　その名前で呼ぶのやめてよっ…！　仕事中みたいな気分になるでしょっ…♡」[p]
+Tsubomi「A...♡ Ưm, phù, phù...♡ Mãnh liệt quá... Nó cứ đập thình thịch bên trong nãy giờ đúng không... Em biết mà♡」[p]
+[舜]「Chính xác...! Bé Amelia quan sát đối phương kỹ thật đấy...!」[p]
+Tsubomi「Ưm...♡ Đừng gọi em bằng cái tên đó nữa...! Làm em có cảm giác như đang làm việc vậy...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku=0"  name="H_supiritasu_pisuton_hagesiku"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3031,9 +3032,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひあぁぁぁっ♡　あっ♡　あぁぁっ♡　ダメなトコっ♡　ぴったり当たっちゃってりゅ…♡」[p]
-蕾「そこばっかりトントンされたらっ…壊れるっ、壊れちゃうからぁっ♡　だめだめだめぇっ♡」[p]
-蕾「おっ♡　おおおっ♡　や、だぁ♡　体っ、勝手に動いて…変になってるのっ♡」[p]
+Tsubomi「A...♡ A...♡ A...♡ Chỗ không được đụng vào♡ Đụng trúng phóc luôn rồi...♡」[p]
+Tsubomi「Cứ bị gõ liên tục vào chỗ đó... hỏng mất, em hỏng mất thôi♡ Không được, không được đâu♡」[p]
+Tsubomi「Ơ...♡ Ơ...♡ Kh-Không chịu đâu♡ Cơ thể em, tự động di chuyển... lạ lắm rồi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*high2"  cond=""  ]
@@ -3042,9 +3043,9 @@
 *R1_2_kaiwa1
 
 [tb_start_text mode=1 ]
-蕾「私のこと…緩い女だって思ってる？　知らない人にどう思われようと、関係ないけど…」[p]
-蕾「[舜]に、お客さんからお小遣いもらうためにエッチするような女の子だって思われたくないの」[p]
-蕾「私、絶対しないから…！　ルール守らないのも嫌だし…好きな人としかエッチしないもの」[p]
+Tsubomi「Anh nghĩ em... là loại con gái dễ dãi sao? Người không quen biết nghĩ sao thì em cũng mặc kệ...」[p]
+Tsubomi「Nhưng em không muốn bị [舜] nghĩ là loại con gái sẵn sàng làm chuyện dâm đãng để moi tiền boa của khách đâu.」[p]
+Tsubomi「Em tuyệt đối sẽ không làm đâu...! Em ghét việc phá vỡ luật lệ... và em cũng chỉ làm chuyện đó với người mình thích thôi.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3052,9 +3053,9 @@
 *R1_2_kaiwa2
 
 [tb_start_text mode=1 ]
-[舜]「誰とでもエロいことするような子だなんて思ってないって。誘われてないか聞いたんだよ」[p]
-蕾「ホント～？　それならいいけど…誘われることは…そりゃあ何度もあるけど…」[p]
-蕾「だってエッチなお店だと思って来るお客さんも多いし。私は適当にあしらってるけどね！」[p]
+[舜]「Anh đâu có nghĩ em là loại con gái bạ ai cũng làm chuyện dâm đãng đâu. Anh chỉ hỏi xem em có bị gạ gẫm không thôi mà.」[p]
+Tsubomi「Thật không~? Nếu vậy thì được... Chuyện bị gạ gẫm thì... đương nhiên là có vô số lần rồi...」[p]
+Tsubomi「Tại vì có nhiều khách cứ tưởng đây là quán phục vụ chuyện dâm đãng mà đến cơ. Nhưng em toàn từ chối khéo thôi!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3062,9 +3063,9 @@
 *R1_2_kaiwa3
 
 [tb_start_text mode=1 ]
-蕾「私、仕事はお金を貰う以上しっかりやるし、ルールはちゃんと守るようにしてるんだから」[p]
-蕾「一生懸命頑張って、お客さんから信頼してもらってるママの姿見てるからね。私も負けられない」[p]
-蕾「だから…簡単にエッチなことでお金稼いだりするのは好きじゃないの。私はしないからね？」[p]
+Tsubomi「Đã nhận tiền thì em sẽ làm việc đàng hoàng, và em luôn cố gắng tuân thủ luật lệ mà.」[p]
+Tsubomi「Tại em luôn nhìn thấy hình ảnh mẹ cố gắng hết sức để giành được sự tin tưởng của khách hàng mà. Em cũng không thể thua kém được.」[p]
+Tsubomi「Thế nên... em không thích kiếm tiền dễ dãi bằng mấy chuyện dâm đãng đâu. Em sẽ không làm thế đâu nhé?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa=0"  name="H_kaiwa"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3073,9 +3074,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「んっ♡　待って…なんで舐めてるのよ…ひゃっ…強引に迫ればいいって思ってるんでしょ？」[p]
-蕾「そんなに簡単にとろけたりしないんだから♡　んんっ♡　耳ばっかり舐めてもだめだよっ♡」[p]
-蕾「職場では真面目に仕事するのっ…ルール違反なことする子たちとは違うんだからねっ…♡」[p]
+Tsubomi「Ưm...♡ Khoan đã... sao tự nhiên lại liếm em... a... Anh nghĩ cứ cưỡng ép là được chứ gì?」[p]
+Tsubomi「Em không dễ dãi tan chảy thế đâu nhé♡ Ưm...♡ Cứ liếm tai em mãi cũng vô ích thôi♡」[p]
+Tsubomi「Ở nơi làm việc em rất nghiêm túc... Em khác với mấy đứa hay vi phạm luật lệ đấy nhé...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_miminame+=1"  name="H_miminame"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3085,9 +3086,9 @@
 *R1_2_miminame2
 
 [tb_start_text mode=1 ]
-蕾「んんっ♡　ふーっ…ふーっ…あぁっ♡　お、音立てて舐めないで…ジュポジュポさせるの反則…」[p]
-蕾「[舜]の息とエッチな音しか聞こえないよ…他になんにも聞こえなくなってるっ♡」[p]
-蕾「ひうぅっ♡　やだぁ…頭の中までエッチな音でいっぱい…体の奥ムズムズしてきちゃう、からっ…♡」[p]
+Tsubomi「Ưm...♡ Phù... phù... a...♡ Đ-Đừng có liếm phát ra tiếng thế chứ... Làm ra tiếng chụt chụt là phạm luật đấy...」[p]
+Tsubomi「Em chỉ nghe thấy hơi thở của [舜] và mấy âm thanh dâm đãng thôi... Chẳng còn nghe thấy gì khác nữa rồi♡」[p]
+Tsubomi「A...♡ Chết mất... Trong đầu em tràn ngập mấy âm thanh dâm đãng rồi... Sâu trong cơ thể cứ ngứa ngáy khó chịu lắm...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_miminame+=1"  name="H_miminame"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3098,9 +3099,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あっ♡　あぁっ♡　ヌルって奥まで舌入ってきちゃった…♡　だめ、抜いてっ♡　はぁ、んっ♡」[p]
-蕾「こんなのっ…舌で耳奥まで犯されてるみたいだよ♡　ジュポジュポピストンされちゃってるっ♡」[p]
-蕾「耳でセックスしちゃってるんだって思うと…おへその下…キュンって反応しちゃっう♡」[p]
+Tsubomi「A...♡ A...♡ Lưỡi anh trơn tuột chui tọt vào tận sâu bên trong rồi...♡ Không được, rút ra đi♡ Hà, ưm...♡」[p]
+Tsubomi「Thế này... cứ như bị lưỡi anh cưỡng hiếp tận sâu trong tai ấy♡ Bị thụt ra thụt vào kêu chụt chụt luôn rồi♡」[p]
+Tsubomi「Nghĩ đến việc đang làm tình bằng tai... dưới rốn em... cứ nhói lên phản ứng lại này♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_miminame=0"  name="H_miminame"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3113,9 +3114,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひっぐぅぅっ♡　あっ♡　あぁぁっ♡　ゾワゾワって…気持ちいいのこみ上げてきてるっ♡」[p]
-[舜]「あーあ、ダメって言ってたのに…顔ゆるゆるになってんじゃん。蕾弱すぎ」[p]
-蕾「んんっ♡　ち、違…あんたが耳の奥まで舐め回すから♡　勝手に反応しちゃってるんでしょ♡」[p]
+Tsubomi「A...♡ A...♡ A...♡ Cảm giác râm ran... sung sướng đang trào dâng lên rồi♡」[p]
+[舜]「Ây da, miệng thì bảo không được... mà mặt mũi dâm đãng hết cả rồi kìa. Tsubomi yếu đuối quá đi.」[p]
+Tsubomi「Ưm...♡ Kh-Không phải... Là tại anh liếm láp tận sâu trong tai em mà♡ Nên nó mới tự động phản ứng lại thôi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -3124,9 +3125,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「やっ…乳首摘まんでコリコリしないで…そこ、弱いって知ってるでしょ…んんっ♡　あっ、あぁ♡」[p]
-[舜]「だからこねてるんだよ。乳首集中狙いしたら…あっという間に気持ちよくなっちゃうんだろ？」[p]
-蕾「あぁっ♡　意地悪っ…♡　私、簡単に流されないからねっ…？　普段だってちゃんと断ってるし」[p]
+Tsubomi「A... Đừng có véo nhũ hoa rồi mân mê thế chứ... Anh biết chỗ đó nhạy cảm mà... ưm...♡ A, a...♡」[p]
+[舜]「Thế nên anh mới nhào nặn nó đấy. Cứ nhắm thẳng vào nhũ hoa... là em sẽ sướng ngay lập tức đúng không?」[p]
+Tsubomi「A...♡ Đồ xấu tính...♡ Em không dễ bị cuốn theo đâu nhé...? Bình thường em vẫn từ chối dứt khoát cơ mà.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubitumami+=1"  name="H_tikubitumami"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3136,9 +3137,9 @@
 *R1_2_tikubitumami2
 
 [tb_start_text mode=1 ]
-蕾「フーッ♡　フーッ♡　あぁ…乳首カリカリも…だめなの…先っぽばっかり刺激しないでぇ♡」[p]
-[舜]「ん～？　流されないんじゃないのか？　断ってるって言葉も怪しく聞こえるなぁ」[p]
-蕾「ちゃんと断ってるってば…！　あんたが…私の弱いトコ知っててそこばっかり触るからっ♡」[p]
+Tsubomi「Phù...♡ Phù...♡ A... Cứ gãi gãi nhũ hoa thế... không được đâu... Đừng có kích thích mỗi phần đầu thế chứ♡」[p]
+[舜]「Hửm~? Chẳng phải em bảo không dễ bị cuốn theo sao? Câu nói hay từ chối dứt khoát nghe cũng đáng ngờ lắm đấy.」[p]
+Tsubomi「Em từ chối dứt khoát thật mà...! Là tại anh... biết điểm yếu của em nên cứ sờ vào chỗ đó suốt thôi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubitumami+=1"  name="H_tikubitumami"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3149,9 +3150,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あっ♡　あぁぁぁっ♡　やっ…お、おっぱい気持ちいい…はぁ、んっ…足の間…熱くなって…」[p]
-蕾「ジリジリってして疼いちゃってる…やだ、私の体こんなにエッチになっちゃったなんて」[p]
-蕾「どうしよう、恥ずかし…絶対にしないって思ってたのに。こんなはずじゃなかったのにぃっ♡」[p]
+Tsubomi「A...♡ A...♡ A... Ng-Ngực sướng quá... hà, ưm... Giữa hai chân... nóng ran lên rồi...」[p]
+Tsubomi「Nó cứ râm ran nhức nhối... Chết mất, cơ thể em lại trở nên dâm đãng thế này sao.」[p]
+Tsubomi「Làm sao đây, xấu hổ quá... Rõ ràng đã nghĩ là tuyệt đối sẽ không làm cơ mà. Đáng lẽ không phải thế này chứ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubitumami=0"  name="H_tikubitumami"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3164,9 +3165,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あぅぅっ♡　あっ♡　乳首っ…キュ～って摘ままないでっ…こんなのっ、おかしくなっちゃう♡」[p]
-蕾「はっ…はぁ、はぁっ…♡　んんっ♡　くぅぅっ…私の顔と反応見て…喜んでるんでしょ…」[p]
-蕾「悔しいっ…ダメって言ってるのに…触られると体がビクビクってしちゃう…悔しい…」[p]
+Tsubomi「A...♡ A...♡ Nhũ hoa... đừng có véo chặt thế... Thế này thì, em phát điên mất thôi♡」[p]
+Tsubomi「Hà... hà, hà...♡ Ưm...♡ Ưm... Nhìn khuôn mặt và phản ứng của em... anh đang đắc ý lắm đúng không...」[p]
+Tsubomi「Tức thật... Rõ ràng miệng bảo không được... mà bị sờ vào là cơ thể lại giật giật phản ứng... Tức quá đi...」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -3175,9 +3176,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「ひゃうぅっ♡　あっ…そんな鷲掴みにされちゃうなんて…んんっ♡　だめ、離してっ♡」[p]
-[舜]「なあ、お客さんにいきなりおっぱい揉まれたらどうすんの？　ちゃんとダメって言えんの？」[p]
-蕾「言えるに決まってるでしょ…ちゃんと振り払って…んっ♡　ダメですって言えるんだからっ♡」[p]
+Tsubomi「A...♡ A... Bị bóp chặt lấy thế này... ưm...♡ Không được, buông ra đi♡」[p]
+[舜]「Này, nếu đột nhiên bị khách xoa ngực thì em tính sao? Có nói không được đàng hoàng không?」[p]
+Tsubomi「Đương nhiên là nói được rồi... Em sẽ hất tay ra... ưm...♡ Rồi bảo là không được ngay♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3187,9 +3188,9 @@
 *R1_2_munemomi2
 
 [tb_start_text mode=1 ]
-蕾「あっ♡　んんっ♡　やっ…おっぱいの形変わっちゃうっ…あんたの手のあとついちゃう♡」[p]
-[舜]「じゃあ、俺仕様のおっぱいになるんだ…それめっちゃいいじゃん。揉みしだいてとろけさせよ」[p]
-蕾「やっ…もうっ、変態なんだから…♡　んっ♡　んんっ♡　おっぱいばっかりだめぇ…♡」[p]
+Tsubomi「A...♡ Ưm...♡ A... Hình dáng ngực em thay đổi mất... Sẽ in hằn dấu tay của anh mất thôi♡」[p]
+[舜]「Vậy là sẽ thành bộ ngực chuyên dụng của anh rồi... Tuyệt quá còn gì. Anh sẽ nhào nặn cho nó tan chảy ra luôn.」[p]
+Tsubomi「A... Thiệt tình, đồ biến thái...♡ Ưm...♡ Ưm...♡ Đừng có sờ mỗi ngực thế chứ...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3200,9 +3201,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「職場でこんなことしてるってバレたら大変なんだからねっ？　んっ♡　あぁっ、わかってるの？」[p]
-[舜]「へぇ、でも乳首はビンビンに立ち上がってるけど？　体は欲しがってるみたいだなぁ」[p]
-蕾「ひぅぅっ♡　触られてるから…自然に反応してるだけだもん♡　欲しがってるわけじゃないの♡」[p]
+Tsubomi「Làm chuyện này ở nơi làm việc mà bị phát hiện là to chuyện lắm đấy nhé? Ưm...♡ A, anh có hiểu không thế?」[p]
+[舜]「Hê, nhưng nhũ hoa dựng đứng hết cả lên rồi này? Có vẻ cơ thể em đang thèm khát lắm thì phải.」[p]
+Tsubomi「A...♡ Bị sờ vào nên... nó tự động phản ứng lại thôi mà♡ Em đâu có thèm khát gì đâu♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi=0"  name="H_munemomi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3215,9 +3216,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひゃうぅぅっ♡　あぅ♡　おっぱいだけなのに…頭の中…火花散ってるみたい♡　はぁっ♡」[p]
-蕾「なんで…いつもより敏感だし気持ちよくなってる♡　はぁ、はぁっ…あんたの言う通り──」[p]
-蕾「普段働いてる場所でエッチして興奮しちゃってるのかも…私いやらしい子になっちゃったんだ…」[p]
+Tsubomi「A...♡ A...♡ Chỉ mới sờ ngực thôi mà... trong đầu em... như có pháo hoa nổ tung vậy♡ Hà...♡」[p]
+Tsubomi「Sao thế này... nhạy cảm và sướng hơn mọi khi nhiều♡ Hà, hà... Đúng như anh nói──」[p]
+Tsubomi「Chắc là do làm chuyện dâm đãng ở nơi làm việc hàng ngày nên em mới hưng phấn thế này... Em biến thành đứa trẻ hư hỏng mất rồi...」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -3226,9 +3227,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t3.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あぁぁっ♡　あっ…刺激っ、強すぎなのっ…そこばっかり触らないで…だめ、だめっ♡」[p]
-[舜]「すっごいクリおっきくなってるよ？　ほら、チンポが勃起してるみたいになってる」[p]
-蕾「やっ…恥ずかしいこと言わないでよ♡　んんっ♡　そんなにおっきくなってないでしょっ」[p]
+Tsubomi「A...♡ A... Kích thích, mạnh quá rồi đấy... đừng cứ sờ mãi chỗ đó... không được, không được đâu♡」[p]
+[舜]「Âm vật sưng to lắm rồi này? Thấy không, cứ như con cu đang cương lên ấy.」[p]
+Tsubomi「A... Đừng nói mấy lời đáng xấu hổ thế chứ♡ Ưm...♡ Đâu có to đến mức đấy đâu」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kuriijiri+=1"  name="H_kuriijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3238,9 +3239,9 @@
 *R1_2_kuriijiri2
 
 [tb_start_text mode=1 ]
-[舜]「ほーら、アメリアちゃんのメイドクリチンポ、シコシコしてあげような。シコシコシコシコ」[p]
-蕾「おっ♡　おおっ♡　あっ、あぁっ♡　やっ、だめ、だめだめっ♡　頭おかしくなりゅっ♡」[p]
-蕾「こんなのっ、知らないっ…♡　あぁぁっ♡　腰、動いちゃう♡　止まんないっ、変になっちゃう」[p]
+[舜]「Này, để anh sục con cu âm vật hầu gái của bé Amelia cho nhé. Sục sục sục sục.」[p]
+Tsubomi「Ơ...♡ Ơ...♡ A, a...♡ A, không được, không được đâu♡ Em phát điên mất thôi♡」[p]
+Tsubomi「Cảm giác này, em chưa từng biết...♡ A...♡ Hông em, tự động lắc lư này♡ Không dừng lại được, em lạ lắm rồi.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kuriijiri+=1"  name="H_kuriijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3251,9 +3252,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「おっ♡　おおっ♡　クリばっかり…だめ♡　これ以上されたらおしっこ出ちゃうってばぁ♡」[p]
-[舜]「職場でエロいことした上、おもらしとか…とんだスケベメイドになっちゃうなぁ？」[p]
-蕾「ひっぐぅぅっ♡　や、だぁ♡　そんなこと言われたらっ、余計に意識しちゃうじゃない♡」[p]
+Tsubomi「Ơ...♡ Ơ...♡ Cứ nghịch âm vật mãi... không được đâu♡ Hơn thế này nữa là em tè ra mất♡」[p]
+[舜]「Đã làm chuyện dâm đãng ở nơi làm việc rồi, lại còn tè dầm nữa... Em đúng là cô hầu gái dâm đãng hết chỗ nói nhỉ?」[p]
+Tsubomi「A...♡ Kh-Không chịu đâu♡ Bị nói thế, em lại càng để ý hơn đấy♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kuriijiri=0"  name="H_kuriijiri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3266,9 +3267,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「おおおおっ♡　んっくぅぅっ♡　何それっ…刺激強くてっ…ビリビリってしてるっ♡」[p]
-[舜]「皮剥いて、剥き出しクリにしただけだよ。ほら、プリップリなとこしごいてあげる」[p]
-蕾「ひゃぁぁっ♡　あっ♡　あっ♡　あっ♡　だめっ♡　ホントにだめぇ♡　もう余裕ないのっ♡」[p]
+Tsubomi「Ơ...♡ Ưm...♡ Cái gì thế... kích thích mạnh quá... tê rần hết cả lên rồi♡」[p]
+[舜]「Anh chỉ lột da, để lộ âm vật ra thôi mà. Này, để anh sục chỗ căng mọng này cho nhé.」[p]
+Tsubomi「A...♡ A...♡ A...♡ A...♡ Không được♡ Không được thật đâu♡ Em hết chịu nổi rồi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -3277,9 +3278,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-[舜]「隣の部屋とかで他の女の子たちがエロいことしてるって、どうやってわかんの？」[p]
-蕾「このタイミングで聞くの？　声が聞こえるから…バレるのよ。んっ♡　あぁぁっ♡」[p]
-蕾「我慢してるエッチな声とか聞こえてきちゃってるし…すぐ他の子たちにわかっちゃうんだから」[p]
+[舜]「Làm sao em biết mấy cô gái khác đang làm chuyện dâm đãng ở phòng bên cạnh?」[p]
+Tsubomi「Anh hỏi vào lúc này sao? Vì nghe thấy tiếng... nên mới bị lộ đấy. Ưm...♡ A...♡」[p]
+Tsubomi「Mấy âm thanh dâm đãng cố kìm nén cứ lọt ra ngoài... nên mấy đứa khác biết ngay mà.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruijiri+=1"  name="H_anaruijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3290,9 +3291,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-[舜]「蕾がエロいことしたらソッコーばれそうだなぁ。すぐ甘くてトロトロの声出すじゃん」[p]
-蕾「んんっ♡　だからっ、私は職場ではエッチなことはしないんだってば♡　ひぅぅっ♡」[p]
-蕾「あっ♡　今だって…あんたがしてくるから…こんなことになっちゃってるだけなんだからね？」[p]
+[舜]「Nếu Tsubomi làm chuyện dâm đãng thì chắc bị lộ ngay tắp lự quá. Mới tí đã phát ra mấy âm thanh ngọt ngào dâm đãng thế này rồi cơ mà.」[p]
+Tsubomi「Ưm...♡ Thế nên, em mới không làm chuyện dâm đãng ở nơi làm việc đấy chứ♡ A...♡」[p]
+Tsubomi「A...♡ Kể cả bây giờ... cũng là do anh khơi mào... nên mới thành ra thế này thôi đấy nhé?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruijiri+=1"  name="H_anaruijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3302,9 +3303,9 @@
 *R1_2_anaruijiri3
 
 [tb_start_text mode=1 ]
-蕾「あうぅ♡　やっ…お尻…指抜いてぇっ♡　はうぅっ♡　いっぱいになってるっ、だめぇ♡」[p]
-蕾「指…ズポズポされたら…お尻馬鹿になっちゃうっ♡　開いたままになっちゃうからぁ♡」[p]
-蕾「あ♡　あんっ♡　やっ…お尻の中…確かめるみたいに触らないでっ…♡　おかしくなるぅ♡」[p]
+Tsubomi「A...♡ A... Rút ngón tay... khỏi mông em đi♡ A...♡ Bị lấp đầy mất rồi, không được đâu♡」[p]
+Tsubomi「Bị ngón tay... thọc ra thụt vào thế này... mông em hỏng mất♡ Sẽ cứ mở toang ra mất thôi♡」[p]
+Tsubomi「A...♡ A...♡ A... Đừng sờ soạng... như đang kiểm tra bên trong mông em thế chứ...♡ Em phát điên mất thôi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruijiri=0"  name="H_anaruijiri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3317,9 +3318,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひっぐぅぅぅっ♡　おっ♡　おおおっ♡　お尻っ…指奥まで入っちゃってりゅ…♡」[p]
-蕾「はぁっ♡　あっ♡　トロトロになって…癖になりかけてるの♡　お尻ズポズポ好きになってる♡」[p]
-蕾「だめ、だめだめだめ…職場だもん…お尻かき回されて気持ちよくなっちゃだめぇっ♡」[p]
+Tsubomi「A...♡ Ơ...♡ Ơ...♡ Mông em... ngón tay đút vào tận sâu bên trong rồi...♡」[p]
+Tsubomi「A...♡ A...♡ Trở nên ướt nhẹp rồi... em sắp sinh hư mất thôi♡ Em bắt đầu thích bị thụt ra thụt vào mông rồi này♡」[p]
+Tsubomi「Không được, không được không được không được... Đang ở nơi làm việc mà... Bị ngoáy tung mông lên rồi thấy sướng là không được đâu♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -3328,9 +3329,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t3.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あぁぁぁぁっ♡　やっ…出ちゃってるっ…♡　うぅっ、恥ずかし…止まんないのっ♡」[p]
-[舜]「あー、すっごい塩吹き…結局仕事場で気持ちよくなって潮まで吹いちゃったじゃん」[p]
-蕾「あぁぁぁっ♡　だ、だってっ♡　弱いトコばっかり刺激するからっ、勝手に出ちゃったの♡」[p]
+Tsubomi「A...♡ A... Bắn ra mất rồi...♡ Ưm, xấu hổ quá... không dừng lại được đâu♡」[p]
+[舜]「A, em phun nước nhiều thật đấy... Rốt cuộc lại sướng đến mức phun nước lênh láng ở nơi làm việc luôn rồi kìa.」[p]
+Tsubomi「A...♡ T-Tại vì♡ Anh cứ kích thích mãi vào chỗ nhạy cảm, nên nó tự động bắn ra thôi mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_siohuki+=1"  name="H_siohuki"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3341,9 +3342,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「ひぅぅっ♡　ああっ♡　あっ♡　あっ♡　奥ばっかりトントンされたらっ…またっ♡」[p]
-蕾「あぁぁぁぁっ♡　また出ちゃってるっ♡　やだやだっ、ピュルピュル出て止まんないっ♡」[p]
-蕾「んんっ♡　体言うこと聞かなくなっちゃってる…私変なのっ♡　こんなの、自分じゃないみたい」[p]
+Tsubomi「A...♡ A...♡ A...♡ A...♡ Cứ bị gõ liên tục vào tận sâu bên trong thế này... lại nữa rồi♡」[p]
+Tsubomi「A...♡ Lại bắn ra nữa rồi♡ Không chịu đâu, nó cứ tuôn ra liên tục không dừng lại được♡」[p]
+Tsubomi「Ưm...♡ Cơ thể em không nghe lời nữa rồi... Em lạ lắm♡ Cảm giác này, cứ như không phải là mình vậy.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_siohuki+=1"  name="H_siohuki"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3354,9 +3355,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あ゛あ゛あ゛っ♡　だめぇぇぇっ♡　ブースの中っ、汚しちゃうっ♡　掃除したのにぃ♡」[p]
-蕾「やだ、いつもより気持ちよくて止められないのっ♡　なんでっ…こんなに熱くなってるのっ」[p]
-[舜]「仕事場でエロいことして興奮してるからだろ…蕾もやっぱりエロメイドなんだな」[p]
+Tsubomi「A...♡ Không được đâu♡ Làm bẩn hết... trong buồng rồi♡ Rõ ràng em đã dọn dẹp sạch sẽ rồi cơ mà♡」[p]
+Tsubomi「Chết mất, sướng hơn mọi khi nhiều, không thể dừng lại được♡ Sao thế này... sao lại nóng ran thế này chứ.」[p]
+[舜]「Là do làm chuyện dâm đãng ở nơi làm việc nên em mới hưng phấn thế đấy... Quả nhiên Tsubomi là cô hầu gái dâm đãng mà.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_siohuki=0"  name="H_siohuki"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3369,9 +3370,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あぁぁぁっ♡　んっ、くぅぅっ♡　やっ…あぁぁぁ♡　無理っ、変になってるのっ♡」[p]
-[舜]「エッロ、体のけ反りすぎ…気持ちよくなってるじゃん。ホントはエロいことしたかったんだろ」[p]
-蕾「ち、違…[舜]が…触るからっ♡　こんなに気持ちよくなっちゃうなんて思わなくてっ…」[p]
+Tsubomi「A...♡ Ưm, ưm...♡ A... A...♡ Không được đâu, em lạ lắm rồi♡」[p]
+[舜]「Dâm đãng quá, người em cong vút lên hết rồi kìa... Sướng lắm đúng không. Thật ra là em muốn làm chuyện dâm đãng chứ gì.」[p]
+Tsubomi「Kh-Không phải... Là tại [舜]... sờ em mà♡ Em đâu ngờ lại sướng đến thế này...」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -3379,9 +3380,9 @@
 *R1_2_pisuton_yukkuri1
 
 [tb_start_text mode=1 ]
-蕾「はーっ♡　あぁっ…お店で…セックスしちゃったぁ♡　おちんちん受け入れちゃったの…♡」[p]
-[舜]「くっ…あぁ、すっごい締まってる…ダメって言いながら、興奮しすぎだろ」[p]
-蕾「だってっ…気持ちいいんだからしょうがないでしょっ…♡　[舜]だって…おっきくなってるし♡」[p]
+Tsubomi「Hà...♡ A... Đã làm tình... ở quán mất rồi♡ Đã tiếp nhận con cu của anh mất rồi...♡」[p]
+[舜]「Khỉ thật... A, siết chặt quá... Miệng thì bảo không được, mà em hưng phấn quá mức rồi đấy.」[p]
+Tsubomi「Tại vì... sướng quá nên đâu còn cách nào khác chứ...♡ [舜] cũng... to lên rồi mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3391,9 +3392,9 @@
 *R1_2_pisuton_yukkuri2
 
 [tb_start_text mode=1 ]
-蕾「あぁっ♡　はぁ♡　はぁっ♡　いけないことしてると、余計エッチな気分になっちゃう♡」[p]
-蕾「お客さんとエッチしちゃってる子たちも…今の私みたいに気持ちよくなってるのかな…」[p]
-蕾「あぅっ♡　きっと全然違うよね…好きな人とのセックスのが気持ちいいに決まってるっ♡」[p]
+Tsubomi「A...♡ Hà♡ Hà...♡ Làm chuyện sai trái, lại càng khiến tâm trạng dâm đãng hơn nữa♡」[p]
+Tsubomi「Mấy cô gái làm tình với khách... không biết có thấy sướng như em bây giờ không nhỉ...」[p]
+Tsubomi「A...♡ Chắc chắn là khác hoàn toàn rồi... Làm tình với người mình thích đương nhiên là sướng hơn hẳn rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3403,9 +3404,9 @@
 *R1_2_pisuton_yukkuri3
 
 [tb_start_text mode=1 ]
-蕾「あっ♡　あんっ♡　はぁ、顔…夢中になってるみたいだけどっ？　オスの顔してる…♡」[p]
-蕾「私のこと『いつもより興奮してる』って言ってたけどっ、自分のが興奮してるでしょっ♡」[p]
-蕾「ん゛ん゛っ♡　おちんちんだって…いつもより硬くなってるし…おっきくなってるっ♡」[p]
+Tsubomi「A...♡ A...♡ Hà, vẻ mặt anh... có vẻ như đang mải mê lắm thì phải? Vẻ mặt của một con đực...♡」[p]
+Tsubomi「Anh bảo em là 'hưng phấn hơn mọi khi', nhưng bản thân anh mới là người đang hưng phấn hơn đúng không♡」[p]
+Tsubomi「Ưm...♡ Con cu của anh... cũng cứng hơn mọi khi... và to hơn nữa này♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri=0"  name="H_supiritasu_pisuton_yukkuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3417,9 +3418,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「お゛お゛っ♡　やっ…な、何これ…下品な声、出ちゃうぅぅっ♡　こんなのっ、私じゃない♡」[p]
-蕾「はひぃぃっ♡　ん゛お゛っ♡　あ゛っ♡　やだ、やだぁ♡　恥ずかしいの、聞かないでっ♡[p]
-蕾「奥当たるたびっ、声勝手に出ちゃうぅっ♡　あ゛っ♡　あ゛ぅ゛♡　もうやだってばぁ♡」[p]
+Tsubomi「Ơ...♡ A... C-Cái gì thế này... Âm thanh hạ lưu, phát ra mất thôi♡ Thế này, không phải là em đâu♡」[p]
+Tsubomi「A...♡ Ưm...♡ A...♡ Chết mất, không chịu đâu♡ Xấu hổ lắm, anh đừng nghe mà♡」[p]
+Tsubomi「Mỗi lần đụng trúng bên trong, âm thanh lại tự động phát ra♡ A...♡ A...♡ Đã bảo là không chịu đâu mà♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*high2"  cond="f.H_high1==1"  ]
@@ -3428,9 +3429,9 @@
 *R1_2_pisuton_hagesiku1
 
 [tb_start_text mode=1 ]
-蕾「あっ♡　あぁっ♡　激しっ♡　そんなに揺さぶらないで…壊れちゃうからっ…！」[p]
-蕾「はぁっ♡　はぁっ♡　ダメなことだってわかってるのに…余計に体が熱くなってる♡」[p]
-蕾「気持ちいいの…いつも仕事してるところで…ぐちゃぐちゃにエッチしちゃってる♡」[p]
+Tsubomi「A...♡ A...♡ Mãnh liệt quá♡ Đừng có lắc mạnh thế chứ... em hỏng mất thôi...!」[p]
+Tsubomi「Hà...♡ Hà...♡ Dù biết là chuyện không được phép... nhưng cơ thể lại càng nóng ran hơn nữa♡」[p]
+Tsubomi「Sướng quá... Làm chuyện dâm đãng rối tung lên... ở ngay nơi mình làm việc hàng ngày♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3440,9 +3441,9 @@
 *R1_2_pisuton_hagesiku2
 
 [tb_start_text mode=1 ]
-蕾「やだぁっ、この感触…忘れられなくなっちゃったらどうしよ♡　また欲しくなっちゃうかもっ」[p]
-[舜]「その時はまた、こうやって誰もいない時にこっそりエッチすりゃいいんだよ」[p]
-蕾「私っ、どんどん悪い子になっちゃうよ…気持ちいいことも覚えて…あんたのせいだからねっ♡」[p]
+Tsubomi「Chết mất, cảm giác này... lỡ không thể quên được thì phải làm sao đây♡ Chắc em lại thèm khát nữa mất thôi.」[p]
+[舜]「Đến lúc đó thì cứ lén lút làm tình lúc không có ai như thế này là được mà.」[p]
+Tsubomi「Em, sẽ dần trở thành một đứa trẻ hư mất thôi... Biết cả những chuyện sung sướng này... Là tại anh hết đấy nhé♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3452,9 +3453,9 @@
 *R1_2_pisuton_hagesiku3
 
 [tb_start_text mode=1 ]
-[舜]「あーあー、蕾も腰動いちゃってるじゃん。気持ちよさそ…ん～？　クリも擦られたいの？」[p]
-蕾「ひあぁぁぁっ♡　あ゛っ♡　あ゛う゛っ♡　中と外っ、同時にグチャグチャにするの、だめぇっ」[p]
-蕾「はひっ♡　はっ♡　はっ♡　お゛お゛お゛っ♡　力、入んなくなっちゃう…動けなくなりゅ♡」[p]
+[舜]「Ây da, hông Tsubomi cũng đang tự động lắc lư rồi kìa. Trông sướng chưa kìa... Hửm~? Muốn anh cọ xát cả âm vật nữa sao?」[p]
+Tsubomi「A...♡ A...♡ A...♡ Làm rối tung cả bên trong lẫn bên ngoài cùng lúc, không được đâu♡」[p]
+Tsubomi「A...♡ Hà...♡ Hà...♡ Ơ...♡ Em không còn sức nữa rồi... không cử động được nữa đâu♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku=0"  name="H_supiritasu_pisuton_hagesiku"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3466,9 +3467,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あ゛あ゛あ゛っ♡　ぎ、ぎもぢ…♡　気持ちいいのっ…♡　はっ♡　あぁぁ、焼き切れちゃう♡」[p]
-蕾「ダメなことしてるって…思えば思うほどっ…興奮しちゃうの♡　中、キュンキュンって──」[p]
-蕾「おちんちんもっと頂戴って欲しがっちゃうのぉ♡　私の体、完全にダメになっちゃったぁ♡」[p]
+Tsubomi「A...♡ S-Sướng quá...♡ Sướng quá đi mất...♡ Hà...♡ A, cháy máy mất thôi♡」[p]
+Tsubomi「Càng nghĩ... mình đang làm chuyện không được phép... lại càng hưng phấn hơn♡ Bên trong, nhói lên liên hồi──」[p]
+Tsubomi「Lại càng thèm khát con cu của anh nhiều hơn nữa♡ Cơ thể em, hoàn toàn hỏng bét mất rồi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*high2"  cond=""  ]
@@ -3477,9 +3478,9 @@
 *R2_kaiwa1
 
 [tb_start_text mode=1 ]
-[舜]「恥ずかしそうにするのもいいけど…たまには挑発するように、大胆に乱れてくれないとな」[p]
-蕾「そんなこと言われても…難しい…もうとっくに恥ずかしさ限界突破しちゃってるんだもん」[p]
-蕾「エッチなこと言って[舜]を興奮させればいいの？　そしたら…エッチしてくれるんでしょ♡」[p]
+[舜]「Vẻ mặt ngượng ngùng cũng được đấy... nhưng thỉnh thoảng em cũng phải mạnh bạo dâm đãng lên để khiêu khích anh chứ.」[p]
+Tsubomi「Anh nói thế... cũng khó lắm... Em đã vượt quá giới hạn xấu hổ từ lâu rồi cơ mà.」[p]
+Tsubomi「Em chỉ cần nói mấy lời dâm đãng để làm [舜] hưng phấn là được đúng không? Vậy thì... anh sẽ làm chuyện dâm đãng với em chứ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3487,9 +3488,9 @@
 *R2_kaiwa2
 
 [tb_start_text mode=1 ]
-蕾「ね、いっぱい気持ちいいことしよ♡　[舜]のおちんちん…私の中に挿れてほしいの…♡」[p]
-蕾「もう充分トロトロだけど…好みの柔らかさにして奥まで挿れて♡　いっぱい腰振って♡」[p]
-蕾「最後は好きなところに出していいよ♡　体にかけてもいいし…中にたっぷり注ぎ込んでもいいの」[p]
+Tsubomi「Này, hãy làm thật nhiều chuyện sung sướng đi♡ Con cu của [舜]... em muốn anh đút vào trong em...♡」[p]
+Tsubomi「Tuy là đã ướt nhẹp đủ rồi... nhưng anh cứ làm cho nó mềm nhũn theo ý thích rồi đút vào tận sâu bên trong đi♡ Lắc hông thật nhiều vào♡」[p]
+Tsubomi「Đến cuối cùng thì anh cứ bắn ra ở đâu cũng được♡ Bắn lên người em cũng được... mà rót đầy vào bên trong em cũng được.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3497,9 +3498,9 @@
 *R2_kaiwa3
 
 [tb_start_text mode=1 ]
-[舜]「もっともっとエロくおねだりできるだろ？　ほら、何もしてやんないよ？」[p]
-蕾「わ、わかったっ♡　私のおまんこに…[舜]のガチガチのおちんちん挿れて種付けして…♡」[p]
-蕾「溢れちゃうくらい精子注ぎ込んでください♡　私の体全部[舜]のモノになってるんだから♡」　[p]
+[舜]「Em có thể nài nỉ dâm đãng hơn nữa được mà đúng không? Nếu không là anh chẳng làm gì đâu đấy?」[p]
+Tsubomi「V-Vâng ạ♡ Hãy đút con cu cứng ngắc của [舜] vào cô bé của em... rồi tạo em bé đi...♡」[p]
+Tsubomi「Hãy rót tinh dịch vào đến mức trào cả ra ngoài nhé♡ Toàn bộ cơ thể em đã là đồ vật của [舜] rồi mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa=0"  name="H_kaiwa"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3507,9 +3508,9 @@
 *R2_kiss1
 
 [tb_start_text mode=1 ]
-蕾「ちゅっ、ちゅっちゅ♡　はぁ、あんっ…んんっ、そうやって焦らすようなキスするんだから♡」[p]
-[舜]「欲しがる顔、見せてくれるかと思って。蕾からもおねだりキスしてくれるんだよな？」[p]
-蕾「あうっ、わかった♡　ちゅ、ちゅっちゅ♡　もっと頂戴♡　エッチなキスしてほしいの♡」[p]
+Tsubomi「Chụt, chụt chụt♡ Hà, a... Ưm, anh cứ hôn kiểu trêu ngươi thế cơ mà♡」[p]
+[舜]「Anh tưởng sẽ được thấy vẻ mặt thèm khát của em chứ. Tsubomi cũng sẽ chủ động hôn nài nỉ anh đúng không?」[p]
+Tsubomi「A, vâng ạ♡ Chu, chụt chụt♡ Cho em thêm đi♡ Em muốn anh hôn thật dâm đãng cơ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss+=1"  name="H_kiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3519,9 +3520,9 @@
 *R2_kiss2
 
 [tb_start_text mode=1 ]
-蕾「はふ♡　ちゅっちゅ…ちゅく、んっ♡　んぅっ…はぁ、食べちゃうみたいなキス、好きなの♡」[p]
-[舜]「まだキスしてるだけなのに、足もじもじさせてんの？　いつの間にそんなスケベになったの」[p]
-蕾「んぅっ♡　ちゅ、ちゅ♡　ごめんなさ…キスしてたらお腹の奥…キュンって疼いちゃって…」[p]
+Tsubomi「Hà♡ Chụt chụt... chu, ưm...♡ Ưm... hà, em thích kiểu hôn như muốn nuốt chửng lấy nhau ấy♡」[p]
+[舜]「Mới chỉ hôn thôi mà chân em đã cọ xát vào nhau rồi kìa? Em trở nên dâm đãng thế này từ lúc nào vậy.」[p]
+Tsubomi「Ưm...♡ Chu, chụt♡ Xin l... Khi hôn nhau, tận sâu trong bụng... cứ nhói lên râm ran...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss+=1"  name="H_kiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3531,9 +3532,9 @@
 *R2_kiss3
 
 [tb_start_text mode=1 ]
-蕾「ちゅぷ、ちゅっちゅ♡　はぁ、はふ…もっとキスして…んんっ、舌ねっとり絡ませてほしいの♡」[p]
-[舜]「ん～？　そんなエロいキスしたことあったっけ？　俺以外とキスしたんじゃないの？」[p]
-蕾「そんなことするわけないでしょ…いつもおちんちん挿れたあと、ベロチューしてくれるくせに♡」[p]
+Tsubomi「Chụt, chụt chụt♡ Hà, hà... Hôn em nữa đi... Ưm, em muốn anh cuốn lưỡi thật nhớp nháp cơ♡」[p]
+[舜]「Hửm~? Em từng có nụ hôn dâm đãng thế này rồi sao? Chẳng lẽ em từng hôn ai khác ngoài anh à?」[p]
+Tsubomi「Làm gì có chuyện đó... Rõ ràng lúc nào đút con cu vào xong, anh cũng hôn sâu với em cơ mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss=0"  name="H_kiss"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3545,9 +3546,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「んんんっ♡　フーッ…フーッ♡　キスだけなのに…体ビリビリしちゃう♡　ちゅっちゅっちゅ…」[p]
-蕾「はふ…ちゅくちゅくちゅく♡　キス好き…もっと…もっとチューして♡　お願い♡」[p]
-蕾「ちゅっちゅっちゅ♡　あぁ、唇柔らかい…んんっ♡　はぁ、エッチなキスしたいの…♡」[p]
+Tsubomi「Ưm...♡ Phù... Phù...♡ Chỉ mới hôn thôi mà... cơ thể đã tê rần lên rồi♡ Chụt chụt chụt...」[p]
+Tsubomi「Hà... chu chu chu♡ Thích hôn quá... Hôn em... hôn em nhiều hơn nữa đi♡ Xin anh đấy♡」[p]
+Tsubomi「Chụt chụt chụt♡ A, môi anh mềm quá... Ưm...♡ Hà, em muốn hôn thật dâm đãng cơ...♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -3556,9 +3557,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あぅ♡　あぁ♡　おっぱい、手の中に入っちゃったぁ♡　好き放題揉みしだかれちゃう♡」[p]
-[舜]「ん～？　めちゃくちゃに揉んでほしいくせに。ほら、おねだりは？　できるよな？」[p]
-蕾「はぁっ♡　はぁっ♡　おっぱい、好きに揉んでほしいの♡　トロトロフワフワにして♡」[p]
+Tsubomi「A...♡ A...♡ Ngực em, nằm gọn trong tay anh rồi này♡ Bị anh tùy ý nhào nặn mất rồi♡」[p]
+[舜]「Hửm~? Rõ ràng em muốn anh nhào nặn thật mạnh cơ mà. Này, lời nài nỉ đâu? Em làm được đúng không?」[p]
+Tsubomi「Hà...♡ Hà...♡ Ngực em, em muốn anh cứ tùy ý nhào nặn đi♡ Làm cho nó mềm nhũn và bồng bềnh ra đi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3568,9 +3569,9 @@
 *R2_munemomi2
 
 [tb_start_text mode=1 ]
-蕾「あっ、んんっ♡　ひぅぅ♡　[舜]っておっぱい大好きだよね♡　もっと大きくなくていいの？」[p]
-[舜]「蕾のおっぱいだからエロくて好きなんだろ。余計なこと考えなくていいんだよ…！」[p]
-蕾「ひあぁっ♡　ああぁ♡　ごめんなさっ♡　私のおっぱい、思う存分楽しんでくださいっ♡」[p]
+Tsubomi「A, ưm...♡ A...♡ [舜] thích ngực lắm nhỉ♡ Nó không cần to hơn nữa sao?」[p]
+[舜]「Vì là ngực của Tsubomi nên anh mới thấy dâm đãng và thích đấy chứ. Em không cần phải nghĩ ngợi lung tung đâu...!」[p]
+Tsubomi「A...♡ A...♡ Xin l...♡ Xin anh hãy tận hưởng bộ ngực của em thỏa thích đi ạ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3581,9 +3582,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-[舜]「あ～、おっぱいぷるんぷるん揺れる感じエロいわ。めちゃくちゃにしたくなる」[p]
-蕾「あぁっ♡　おっぱい鷲掴みにされて…もみくちゃにされちゃうの？　フーッ♡　フーッ♡」[p]
-蕾「んっ♡　あぁぁっ♡　おっぱいに指のあとつけてもいいからっ♡　思いっきり掴んで♡」[p]
+[舜]「A~, cái cảm giác ngực nảy lên núng nính dâm đãng thật đấy. Làm anh muốn nhào nặn đến mức rối tung lên luôn.」[p]
+Tsubomi「A...♡ Bị bóp chặt lấy ngực... rồi bị nhào nặn đến rối tung lên sao? Phù...♡ Phù...♡」[p]
+Tsubomi「Ưm...♡ A...♡ Có để lại dấu tay trên ngực cũng được mà♡ Cứ bóp thật mạnh vào đi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi=0"  name="H_munemomi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3596,9 +3597,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「おっ♡　っほぉ♡　そこっ、だめ…♡　乳首スリスリしながらおっぱい揉むの、弱いのっ♡」[p]
-蕾「はひっ♡　はっ♡　はっ♡　い、今ので…おまんこキュンキュンときめいちゃった…」[p]
-蕾「おっぱい揉みしだかれてるだけなのに…お腹の奥まで気持ちよくなっちゃったよ♡」[p]
+Tsubomi「Ơ...♡ Ơ...♡ Chỗ đó, không được...♡ Vừa mân mê nhũ hoa vừa xoa ngực, em yếu chỗ đó lắm♡」[p]
+Tsubomi「A...♡ Hà...♡ Hà...♡ V-Vừa rồi... cô bé của em nhói lên sung sướng mất rồi...」[p]
+Tsubomi「Rõ ràng chỉ mới bị nhào nặn ngực thôi mà... tận sâu trong bụng cũng thấy sướng lên rồi này♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -3607,9 +3608,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「おっ♡　んぅっ♡　乳首っ、ちゅっちゅって吸うのしゅごいっ♡　それ気持ちいいのっ♡」[p]
-[舜]「乳首敏感すぎだろ。ちょっとしゃぶるだけで、腰動いてんだけど…エロいな蕾は」[p]
-蕾「はぅぅっ♡　だってっ♡　乳首からおまんこまで気持ちいいの響いちゃってるんだもん♡」[p]
+Tsubomi「Ơ...♡ Ưm...♡ Nhũ hoa, bị mút chụt chụt tuyệt quá♡ Sướng quá đi mất♡」[p]
+[舜]「Nhũ hoa nhạy cảm quá đấy. Chỉ mới mút một chút thôi mà hông đã lắc lư rồi kìa... Tsubomi dâm đãng thật đấy.」[p]
+Tsubomi「A...♡ Tại vì♡ Khoái cảm từ nhũ hoa lan truyền đến tận cô bé luôn mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiname+=1"  name="H_tikubiname"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3619,9 +3620,9 @@
 *R2_tikubiname2
 
 [tb_start_text mode=1 ]
-蕾「あふぅ♡　んっ♡　あぁ、ちゅくちゅくおっぱい飲んでるの…可愛く見えてきちゃったじゃない」[p]
-蕾「ふーっ…ふーっ…♡　赤ちゃんみたいね。ママのおっぱい飲んで、おっきくなって♡」[p]
-蕾「って、あんたは赤ちゃんじゃなくてパパのほうか…♡　私のこと、ママにしてくれるんでしょ♡」[p]
+Tsubomi「A...♡ Ưm...♡ A, anh đang mút ngực chụt chụt kìa... Trông đáng yêu quá đi mất.」[p]
+Tsubomi「Phù... phù...♡ Cứ như em bé vậy. Uống sữa mẹ, rồi lớn lên nhé♡」[p]
+Tsubomi「À mà, anh đâu phải em bé mà là ba mới đúng chứ...♡ Anh sẽ biến em thành mẹ đúng không♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiname+=1"  name="H_tikubiname"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3632,9 +3633,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あはぁ♡　んぉっ♡　おおっ♡　ジュルジュル…すごい音っ♡　んぅぅっ♡　意識しちゃう♡」[p]
-蕾「そんなにしゃぶってもミルク出ないってばぁ♡　はぁ、あんっ♡　んんっ♡　でもっ──」[p]
-蕾「赤ちゃんできちゃったら…いっぱい甘くて美味しいミルク、ピュッピュって出ちゃうかも♡」[p]
+Tsubomi「A...♡ Ơ...♡ Ơ...♡ Chụt chụt... âm thanh lớn quá♡ Ưm...♡ Em để ý mất thôi♡」[p]
+Tsubomi「Anh có mút mạnh thế cũng không có sữa chảy ra đâu♡ Hà, a...♡ Ưm...♡ Nhưng mà──」[p]
+Tsubomi「Nếu có em bé... chắc sữa ngọt ngào thơm ngon sẽ tuôn ra xối xả mất♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiname=0"  name="H_tikubiname"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3647,9 +3648,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「んほぉぉっ♡　はっ♡　はっ♡　乳首甘噛みっ♡　それだめぇっ♡　はひぃっ♡　だめだめ」[p]
-蕾「おまんこヒクつきとまんなくなっちゃう♡　あぁ…じゅわって…蜜も溢れてきちゃった…」[p]
-蕾「おちんちん挿れて種付けされる準備、始めちゃってるの♡　私の体、ママになっちゃうよぉ♡」[p]
+Tsubomi「Ơ...♡ Hà...♡ Hà...♡ Cắn nhẹ nhũ hoa♡ Không được đâu♡ A...♡ Không được, không được đâu.」[p]
+Tsubomi「Cô bé giật giật không dừng lại được nữa rồi♡ A... ướt át quá... mật ngọt cũng trào ra rồi này...」[p]
+Tsubomi「Nó bắt đầu chuẩn bị để đút con cu vào tạo em bé rồi này♡ Cơ thể em, sẽ trở thành mẹ mất thôi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -3658,9 +3659,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「ひゃぁっ♡　い、痛いってばっ！　きゃっ！　手のあとついちゃうっ…んんっ♡　あんっ♡」[p]
-[舜]「嫌な割には、顔とろんとしてるみたいだけど？　興奮してるんだろ…！」[p]
-蕾「やっ♡　あぁっ、あんっ♡　叩かれたとこ、痛いのに…ジリジリって熱くて変なのっ♡」[p]
+Tsubomi「A...♡ Đ-Đau quá! Á! Sẽ in hằn dấu tay mất... Ưm...♡ A...♡」[p]
+[舜]「Miệng thì bảo ghét, mà vẻ mặt có vẻ đê mê lắm thì phải? Em đang hưng phấn đúng không...!」[p]
+Tsubomi「A...♡ A... A...♡ Chỗ bị đánh, rõ ràng là đau mà... nó cứ râm ran nóng lên, lạ lắm♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supankingu+=1"  name="H_supankingu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3670,9 +3671,9 @@
 *R2_supankingu2
 
 [tb_start_text mode=1 ]
-蕾「や、やだ…気持ちよくなってきちゃったの…私のおまんこ、キュンってときめいてるの…」[p]
-蕾「なんで…痛いのなんて嫌なのに…怖いはずなのにっ♡　あうぅっ♡　もっともっとって──」[p]
-蕾「ジンジンするの、ほしくなっちゃってる♡　あぁっ♡　私、変態になっちゃったぁ♡」[p]
+Tsubomi「Kh-Không chịu đâu... em bắt đầu thấy sướng rồi... Cô bé của em, đang nhói lên sung sướng này...」[p]
+Tsubomi「Sao thế này... Rõ ràng em ghét bị đau cơ mà... Đáng lẽ phải thấy sợ chứ♡ A...♡ Thêm nữa, thêm nữa đi──」[p]
+Tsubomi「Cảm giác râm ran này, em bắt đầu thèm khát nó rồi♡ A...♡ Em, biến thành kẻ biến thái mất rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supankingu+=1"  name="H_supankingu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3683,9 +3684,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「はひっ♡　も、もっと…蕾のこと叩いてください♡　真っ赤な手のあとついてもいいからぁっ♡」[p]
-蕾「ひぅぅっ♡　あっ♡　あんっ♡　衝撃のたびに…体の奥っ、熱くなってるっ…♡」[p]
-蕾「おっ♡　おんっ♡　はーっ♡　はーっ♡　気持ちいいのが、お腹の底からこみあげてきてる…♡」[p]
+Tsubomi「A...♡ H-Hãy đánh... Tsubomi nhiều hơn nữa đi ạ♡ Có in hằn dấu tay đỏ chót cũng được mà♡」[p]
+Tsubomi「A...♡ A...♡ A...♡ Mỗi lần bị tác động... tận sâu bên trong cơ thể, lại nóng ran lên...♡」[p]
+Tsubomi「Ơ...♡ Ưm...♡ Hà...♡ Hà...♡ Khoái cảm, đang trào dâng từ tận đáy bụng...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supankingu=0"  name="H_supankingu"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3698,9 +3699,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「おっ♡　おおおっ♡　はっ♡　あっ♡　あっ♡　ごめんなさい、太ももまで…濡れちゃったぁ♡」[p]
-蕾「おまんこ、先走って興奮しちゃってごめんなさいっ♡　叩かれて気持ちよくなっちゃいました♡」[p]
-蕾「あぁぁっ♡　はっ♡　はぁ♡　恥ずかし…体、ビクビク反応しっぱなしになっちゃってるの♡」[p]
+Tsubomi「Ơ...♡ Ơ...♡ Hà...♡ A...♡ A...♡ Xin lỗi anh, ướt đẫm... đến tận đùi luôn rồi♡」[p]
+Tsubomi「Cô bé, tự ý hưng phấn trước mất rồi, em xin lỗi ạ♡ Bị đánh nên em thấy sướng mất rồi♡」[p]
+Tsubomi「A...♡ Hà...♡ Hà...♡ Xấu hổ quá... Cơ thể, cứ giật giật phản ứng liên tục thôi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -3709,9 +3710,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t3.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「おっ♡　おっ♡　おおおっ♡　奥までぐちゃぐちゃにかき回されてりゅっ♡　しゅごいぃ♡」[p]
-[舜]「すっご、もうトロットロじゃん。指にめっちゃ吸い付いてきてんだけど…！」[p]
-蕾「おほぉっ♡　はひっ♡　もうおちんちん挿れてもらう準備、できてるってことだってばぁ♡」[p]
+Tsubomi「Ơ...♡ Ơ...♡ Ơ...♡ Bị ngoáy tung tận sâu bên trong rồi♡ Tuyệt quá♡」[p]
+[舜]「Ghê thật, ướt nhẹp hết cả rồi. Nó cứ bám chặt lấy ngón tay anh này...!」[p]
+Tsubomi「Ơ...♡ A...♡ Đã chuẩn bị sẵn sàng để anh đút con cu vào rồi đấy♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman+=1"  name="H_teman"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3722,9 +3723,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-[舜]「あー、こん中チンポ挿れてめちゃくちゃに突き上げたら超気持ちよさそうなんだけど…！」[p]
-蕾「おっ♡　お゛お゛お゛っ♡　おちんちん挿れてっ♡　奥…ドチュ、ドチュって突き上げて♡」[p]
-蕾「[舜]の好きに腰振っていいからっ…♡　おまんこグチャグチャにかき回してほしいのっ♡」[p]
+[舜]「A, nếu đút con cu vào trong này rồi đâm chọc điên cuồng thì chắc sướng lắm đây...!」[p]
+Tsubomi「Ơ...♡ Ơ...♡ Hãy đút con cu vào đi♡ Bên trong... hãy đâm chọc thình thịch đi♡」[p]
+Tsubomi「Anh [舜] cứ việc đưa hông theo ý thích đi ạ...♡ Em muốn anh khuấy đảo cô bé nhầy nhụa lên cơ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman+=1"  name="H_teman"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3735,9 +3736,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あっ♡　ひぅ♡　おんっ♡　おおっ♡　何も考えられないっ♡　気持ちいしか考えられないの♡」[p]
-[舜]「顔、ユルユルんなってる。今自分がどんな顔してんのかわかってんの？」[p]
-蕾「やらぁ♡　おほぉ♡　おまんこ気持ちよくてっ…か、可愛い顔なんて無理ぃぃ♡」[p]
+Tsubomi「A...♡ Hức...♡ Ưm...♡ Ôi...♡ Em chẳng còn nghĩ được gì nữa rồi♡ Trong đầu chỉ toàn thấy sướng thôi♡」[p]
+[舜]「Mặt em dâm đãng hết cả ra rồi kìa. Có biết bây giờ trông vẻ mặt mình như thế nào không hả?」[p]
+Tsubomi「Không chịu đâu♡ Ôi trời♡ Cô bé sướng quá rồi... l-làm sao giữ được vẻ mặt ngoan ngoãn đáng yêu nữa chứ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_teman=0"  name="H_teman"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3750,9 +3751,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「お゛お゛お゛っ♡　ひぐぅぅっ♡　指だけで…イッちゃううぅっ♡　気持ちいいのっ♡」[p]
-[舜]「じゃあチンポ挿れなくても満足できる？　もう挿れなくてもいっか？」[p]
-蕾「やだやだやだぁっ♡　おちんちん挿れてっ♡　いっぱいズポズポしてほしいのぉっ♡」[p]
+Tsubomi「Ôi... ôi trời ơi...♡ Hức...♡ Chỉ mới có ngón tay thôi mà... em sắp lên đỉnh rồi này...♡ Sướng quá đi mất♡」[p]
+[舜]「Thế không cần đút cu vào em cũng thỏa mãn rồi à? Khỏi cần đút vào nữa nhé?」[p]
+Tsubomi「Không chịu đâu, không chịu đâu mà♡ Đút con cu vào đi anh♡ Em muốn anh dập thụt liên tục vào cơ♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -3761,9 +3762,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「んっほぉ♡　お尻、だめ、ユルユルにしないでっ…ほじっちゃだめぇぇっ♡」[p]
-[舜]「ここ、出すだけじゃなくて挿れることもできるって覚えさせないと…」[p]
-蕾「やっ、だめだめっ♡　おっ♡　おおおおっ♡　お尻…馬鹿になっちゃう♡　だめなのぉ♡」[p]
+Tsubomi「Ư... hức♡ Mông em, đừng mà, đừng làm nó lỏng ra... đừng ngoáy vào chỗ đó mà♡」[p]
+[舜]「Phải dạy cho chỗ này nhớ rằng ngoài việc bài tiết ra thì còn có thể đút vào được nữa chứ...」[p]
+Tsubomi「Á, không được đâu♡ Ôi...♡ Ôi trời ơi♡ Mông em... sẽ hỏng mất thôi♡ Không được đâu mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruseme+=1"  name="H_anaruseme"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3774,9 +3775,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「おっ♡　おおおっ♡　揉みほぐされてりゅ…あっ…指入っちゃうぅ♡　だめだめだめ♡」[p]
-[舜]「へ～？　シャワー浴びた時、ちゃんとお尻も綺麗にしてたくせに。期待してたんだろ？」[p]
-蕾「あぅぅぅっ♡　で、でもっ…汚い場所、だからぁっ♡　おっ♡　おおおっ♡」[p]
+Tsubomi「Ôi...♡ Ôi...♡ Đang được xoa nắn mềm ra này... á... ngón tay lọt vào mất rồi♡ Không được, không được đâu♡」[p]
+[舜]「Hê~? Lúc tắm em còn kỳ cọ sạch sẽ chỗ mông cơ mà. Rõ ràng là đang mong đợi còn gì?」[p]
+Tsubomi「A... hức♡ N-Nhưng mà... chỗ đó bẩn lắm... nên là...♡ Ôi...♡ Ôi trời ơi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruseme+=1"  name="H_anaruseme"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3786,9 +3787,9 @@
 *R2_anaruseme3
 
 [tb_start_text mode=1 ]
-蕾「おっ♡　おおおっ♡　お尻…開かないでぇ♡　揉みしだかれたら…緩んじゃうよ♡」[p]
-蕾「指入らいないっ♡　そこはっ…まだキュって閉じてるからっ…無理なのぉっ♡」[p]
-蕾「お尻じゃなくて…とろけてほぐれちゃったおまんこをかまって甘やかしてほしいのにっ♡」[p]
+Tsubomi「Ôi...♡ Ôi...♡ Đừng banh mông em ra mà♡ Bị nhào nặn thế này... nó sẽ nhão ra mất thôi♡」[p]
+Tsubomi「Ngón tay không vào được đâu♡ Chỗ đó... vẫn còn khép chặt lắm... không làm được đâu ạ♡」[p]
+Tsubomi「Thay vì mông... em muốn anh nuông chiều chăm sóc cho cô bé đang tan chảy ướt đẫm này cơ mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruseme=0"  name="H_anaruseme"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3801,9 +3802,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「おっほぉぉ♡　おっ♡　お尻で…イク、イッちゃうぅ♡　おっ♡　おっ♡　おっ♡」[p]
-蕾「んぅぅっ♡　お尻の穴っ、ヒクヒク止まんないっ…♡　すっごい気持ちよくなってる♡」[p]
-蕾「あうぅ♡　お尻なのにっ…おまんこウズウズ止まんないのにっ♡　全部気持ちいいよぉ♡」[p]
+Tsubomi「Ôi trời ơi♡ Ôi...♡ Bằng lỗ mông mà... em sắp ra, sắp lên đỉnh mất rồi♡ Ôi...♡ Ôi...♡ Ôi...♡」[p]
+Tsubomi「Ư... hức♡ Lỗ mông cứ giật giật không ngừng được...♡ Sướng kinh khủng luôn ý♡」[p]
+Tsubomi「A... ưm♡ Rõ ràng là lỗ mông... vậy mà cô bé phía trước cứ ngứa ngáy râm ran không dừng được♡ Chỗ nào cũng sướng hết á♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -3811,9 +3812,9 @@
 *R2_pisuton_yukkuri1
 
 [tb_start_text mode=1 ]
-蕾「あっ♡　あっ♡　あぁっ♡　おちんちん、いつもよりおっきいっ♡　奥、押しつぶされてりゅ♡」[p]
-[舜]「すっご、このコリってしてるとこ…普段触っちゃいけないトコなんじゃないの？　こーこ！」[p]
-蕾「おっ♡　ほぉぉぉんっ♡　そこっ♡　ビリビリってして…絶対ダメなトコっ♡　あひぃ♡」[p]
+Tsubomi「A...♡ A...♡ A...♡ Con cu hôm nay to hơn mọi khi nữa♡ Tận sâu bên trong như bị nghiền nát ra vậy♡」[p]
+[舜]「Kinh thật, cái chỗ cưng cứng gồ lên này... bình thường đâu được chạm vào đâu nhỉ? Đây này!」[p]
+Tsubomi「Ôi...♡ Hức... a...♡ Chỗ đó... tê rần rần lên rồi... tuyệt đối không được chạm vào đâu mà♡ Á...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3823,9 +3824,9 @@
 *R2_pisuton_yukkuri2
 
 [tb_start_text mode=1 ]
-蕾「おっ♡　おっ♡　やっときたぁ♡　これ、ほしかったの♡　いっぱい突いてほしかったの♡」[p]
-[舜]「焦らした分、中めちゃくちゃ熱くなってんじゃん…すっごいトロットロなんだけど」[p]
-蕾「あうぅっ♡　味わうみたいに…中擦られるのヤバいっ♡　気持ちいいの…♡」[p]
+Tsubomi「Ôi...♡ Ôi...♡ Cuối cùng cũng tới rồi♡ Em thèm cái này lắm rồi♡ Em muốn anh đâm thật nhiều vào đây cơ♡」[p]
+[舜]「Bắt em nhịn nãy giờ nên bên trong nóng ran lên rồi kìa... ướt sũng nhầy nhụa luôn rồi này」[p]
+Tsubomi「A... hức♡ Giống như đang nhấm nháp thưởng thức vậy... bị cọ sát bên trong sướng điên lên được♡ Thích quá đi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3835,9 +3836,9 @@
 *R2_pisuton_yukkuri3
 
 [tb_start_text mode=1 ]
-蕾「ひぅっ♡　あっ♡　おっ、おおっ♡　お腹の奥っ、押しつぶされちゃってる♡　あ゛あ゛っ♡」[p]
-蕾「ずっと挿れてくれなかったからぁっ♡　早くほしくてウズウズしてたのっ…♡」[p]
-蕾「んっ♡　我慢した分、いっぱい突いて…♡　奥まで挿れて…めちゃくちゃにしてっ♡　」[p]
+Tsubomi「Hức...♡ A...♡ Ôi, ôi trời♡ Tận sâu trong bụng, như bị nghiến nát ra rồi♡ A... a...♡」[p]
+Tsubomi「Vì anh mãi không chịu đút vào... nên em cứ bồn chồn thèm khát muốn có nó sớm thôi...♡」[p]
+Tsubomi「Ưm...♡ Bù cho lúc nãy phải nhịn, hãy đâm thật nhiều vào đi...♡ Đút sâu tận đáy... làm em tơi bời đi anh♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri=0"  name="H_supiritasu_pisuton_yukkuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3849,9 +3850,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あ゛あ゛あ゛っ♡　ダメなトコ、当たってりゅぅ♡　ドチュって…お゛っ♡　お゛お゛っ♡」[p]
-蕾「そこっ…そこ弱いのにっ♡　集中狙いされてるのっ♡　おっほぉ♡　お゛っ♡　お゛っ♡」[p]
-蕾「あぁぁっ♡　ぎもぢいいのっ♡　イッちゃうっ♡　頭の中バチバチって弾けちゃってるぅ♡」[p]
+Tsubomi「A... a... a...♡ Chạm đúng chỗ nhạy cảm rồi♡ Nó đâm thụt vào... ôi...♡ Ôi trời ơi...♡」[p]
+Tsubomi「Chỗ đó... chỗ đó yếu lắm mà♡ Anh cứ nhắm thẳng vào đó đâm liên tục thôi♡ Ôi trời♡ Ôi...♡ Ôi...♡」[p]
+Tsubomi「A... a...♡ Sướng quá đi mất♡ Em ra mất thôi♡ Trong đầu như có pháo hoa nổ tung bép bép vậy á♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*high2"  cond="f.H_high1==1"  ]
@@ -3860,9 +3861,9 @@
 *R2_pisuton_hagesiku1
 
 [tb_start_text mode=1 ]
-蕾「お゛っ♡　お゛っ♡　お゛っ♡　激しっ…すごいぃっ♡　壊れるっ♡　壊れちゃうのっ♡」[p]
-[舜]「逃げようとしてんの？　欲しがってたんだから素直に受け入れなきゃだめだ、ろっ！」[p]
-蕾「ひっぐぅぅぅっ♡　おぉぉ♡　おちんちんおっきいっ♡　お腹の奥まで届いてりゅっ♡」[p]
+Tsubomi「Ôi...♡ Ôi...♡ Ôi...♡ Mãnh liệt quá... tuyệt quá đi♡ Em hỏng mất♡ Em sẽ bị anh làm hỏng mất thôi♡」[p]
+[舜]「Định trốn đi đâu hả? Đã thèm thuồng thế này thì phải ngoan ngoãn mà tiếp nhận cho hết, chứ hả!」[p]
+Tsubomi「Hức... a...♡ Ôi...♡ Con cu to quá♡ Chạm tới tận sâu đáy bụng em luôn rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3872,9 +3873,9 @@
 *R2_pisuton_hagesiku2
 
 [tb_start_text mode=1 ]
-蕾「んぉっ♡　おおっ♡　内側っ、押し上げられちゃってるっ♡　おちんちんで持ち上がってりゅ♡」[p]
-[舜]「ホントだ…あー、突き上げるたびお腹ポコポコ持ち上がってんじゃん。エッロ」[p]
-蕾「お゛っ♡　お゛お゛っ♡　壊れちゃうっ♡　お腹の中っ、おちんちん暴れまわってるからっ♡」[p]
+Tsubomi「Ư... ôi...♡ Phía bên trong, bị đẩy nhô cả lên rồi kìa♡ Bị con cu đội cả bụng lên rồi này♡」[p]
+[舜]「Thật luôn kìa... À, mỗi lần thúc lên là bụng lại nhấp nhô phập phồng. Dâm thật sự」[p]
+Tsubomi「Ôi...♡ Ôi trời...♡ Hỏng mất thôi♡ Bên trong bụng, con cu đang tung hoành dữ dội quá mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3884,9 +3885,9 @@
 *R2_pisuton_hagesiku3
 
 [tb_start_text mode=1 ]
-蕾「ん゛っ♡　押し付けられてりゅ♡　あぁっ、刺激強いのにっ、受け流せないのっ♡」[p]
-蕾「お゛っ♡　これが種付けなのっ？　はーっ♡　はーっ♡　精子注がれるだけのっセックス♡」[p]
-蕾「すごいっ…♡　な、中でおちんちん膨らんでくのわかるっ…♡　はぁ、あっ、すごいのぉ♡」[p]
+Tsubomi「Ư...♡ Bị ép chặt vào trong rồi♡ A, kích thích mạnh quá, em không chịu nổi nữa đâu♡」[p]
+Tsubomi「Ôi...♡ Đây là gieo giống sao anh? Hà...♡ Hà...♡ Cuộc ân ái chỉ để rót tinh trùng vào trong♡」[p]
+Tsubomi「Tuyệt quá...♡ Em cảm nhận được con cu đang nở to dần bên trong...♡ Hà, a, kinh khủng thật đấy♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku=0"  name="H_supiritasu_pisuton_hagesiku"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3898,9 +3899,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひっぐぅぅぅっ♡　おぉぉっ♡　ぎもぢぃぃ♡　腰ヘコしちゃうっ♡　動いちゃうぅ♡」[p]
-[舜]「くぅぅっ、すっご…！　めちゃくちゃ締まってる…！　あー、ヤバ出る…！」[p]
-蕾「はーっ♡　はーっ♡　早く出してっ♡　精子注いでっ♡　種付けしてほしいのっ♡」[p]
+Tsubomi「Hức... a...♡ Ôi...♡ Sướng quá đi♡ Hông em cứ tự động lắc lư dập dềnh theo mất rồi♡」[p]
+[舜]「Khốn thật, ghê quá đi mất...! Nó bóp chặt kinh khủng...! A, chết tiệt, anh sắp bắn rồi...!」[p]
+Tsubomi「Hà...♡ Hà...♡ Bắn nhanh đi anh♡ Rót đầy tinh trùng vào đi♡ Em muốn anh thụ tinh tạo em bé cho em cơ♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*high2"  cond=""  ]
@@ -3909,9 +3910,9 @@
 *R2_2_kaiwa1
 
 [tb_start_text mode=1 ]
-[舜]「今の蕾なら、ドスケベに誘えるんじゃないの？　散々教えただろ。ほら、早く…」[p]
-蕾「はぁっ♡　はぁ、んっ♡　蕾のおまんこ…熱々トロトロだから、[舜]の精子注いで…♡」[p]
-蕾「好きに腰振って、体ホールドして…熱々の出来立て精液、ビュッビュってしていいから…♡」[p]
+[舜]「Với độ dâm đãng của Tsubomi bây giờ thì gạ gẫm ngon lành rồi nhỉ? Anh đã dạy bao nhiêu lần rồi. Nào, mau lên...」[p]
+Tsubomi「Hà...♡ Hà, ưm...♡ Cô bé của Tsubomi... nóng rực ướt đẫm lắm rồi, hãy rót đầy tinh trùng của anh [舜] vào đi ạ...♡」[p]
+Tsubomi「Cứ việc đưa hông theo ý thích, giữ chặt lấy cơ thể em... rồi bắn thật nhiều dòng tinh dịch nóng hổi mới ra vào đây nhé...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3919,9 +3920,9 @@
 *R2_2_kaiwa2
 
 [tb_start_text mode=1 ]
-蕾「フーッ♡　フーッ♡　おまんこの１番奥に先っぽ擦りつけながらいっぱい射精してほしいの♡」[p]
-[舜]「ヤバ、言いながら興奮してんじゃん…蕾めちゃくちゃエロい顔になってるよ」[p]
-蕾「だって…奥までパンパン音立てて犯される想像したら、おまんこ疼いちゃったんだもん…♡」[p]
+Tsubomi「Phù...♡ Phù...♡ Em muốn anh vừa cọ đầu khấc vào tận sâu đáy cô bé vừa xuất thật nhiều tinh trùng vào cơ♡」[p]
+[舜]「Kinh thật, vừa nói vừa tự thấy nứng kìa... Mặt Tsubomi trông dâm đãng hết nấc luôn rồi đấy」[p]
+Tsubomi「Tại vì... tưởng tượng cảnh bị đâm phầm phập phát ra tiếng tới tận đáy, cô bé của em lại ngứa ngáy râm ran lên mất rồi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3929,9 +3930,9 @@
 *R2_2_kaiwa3
 
 [tb_start_text mode=1 ]
-蕾「精子注ぎ込まれる準備、できてるんだよ♡　興奮しすぎて、子宮まで準備できちゃったかも」[p]
-蕾「今のまま注ぎ込まれたら…お腹の奥で赤ちゃんの種、プチュって卵にぶつかって受精しちゃう♡」[p]
-蕾「ママにされちゃうね♡　は～っ♡　は～っ♡　そんなのだめなのに…エッチになっちゃう♡」[p]
+Tsubomi「Đã chuẩn bị sẵn sàng để đón nhận tinh trùng rồi này♡ Hưng phấn quá, có khi đến cả tử cung cũng sẵn sàng luôn rồi ý」[p]
+Tsubomi「Nếu bây giờ rót vào... hạt giống em bé sẽ đâm xuyên tận đáy bụng, chạm vào trứng rồi thụ tinh mất thôi♡」[p]
+Tsubomi「Em sẽ bị biến thành mẹ trẻ con mất thôi♡ Hà~♡ Hà~♡ Rõ ràng là không được... vậy mà lại dâm đãng thế này♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa=0"  name="H_kaiwa"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3939,9 +3940,9 @@
 *R2_2_Dkiss1
 
 [tb_start_text mode=1 ]
-蕾「ちゅく♡　ちゅちゅぷ、ちゅっちゅ♡　んんっ、自分からこんなにベロチューしちゃうなんて♡」[p]
-蕾「私…エッチな体になっちゃったの♡　はぁ、はふ♡　エッチなことしてもらえないと──」[p]
-蕾「おまんこがウズウズして…自分でオナニーしても収まらない体になっちゃったんだからぁ♡」[p]
+Tsubomi「Chụt...♡ Chụt... mút... chụt chụt♡ Ưm, tự bản thân em lại chủ động hôn sâu quấn lưỡi thế này cơ chứ♡」[p]
+Tsubomi「Em... đã biến thành cơ thể dâm đãng mất rồi♡ Hà, hà...♡ Nếu không được làm chuyện ân ái thì──」[p]
+Tsubomi「Cô bé sẽ cứ ngứa ngáy râm ran... dù có tự thủ dâm cũng chẳng thể nào thỏa mãn nổi cơ thể này nữa rồi mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_Dkiss+=1"  name="H_Dkiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3951,9 +3952,9 @@
 *R2_2_Dkiss2
 
 [tb_start_text mode=1 ]
-[舜]「ちゅ、ちゅく、ほら、舌絡ませてほしいんだろ？　口開けて舌出せ。だらしないアヘ顔見せろ」[p]
-蕾「はひ♡　あはぁ♡　ちゅ、ちゅぷ、ちゅっちゅ、じゅるるるる♡　きもひぃれしゅ♡」[p]
-蕾「じゅぷ、ちゅ、ベロチューしゅき♡　あふぅ♡　じゅるるるる。ありがとうございますっ♡」[p]
+[舜]「Chụt, mút, nào, em muốn được quấn lưỡi đúng không? Mở miệng ra thè lưỡi tới đây. Cho anh xem bộ mặt đê mê ngây dại của em đi」[p]
+Tsubomi「Vâng ạ♡ A... hà♡ Chụt, mút, chụt chụt, rột rột...♡ Sướng quá đi anh ơi♡」[p]
+Tsubomi「Mút, chụt, em thích hôn sâu lắm♡ A... phù♡ Rột rột rột. Em cảm ơn anh nhiều lắm ạ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_Dkiss+=1"  name="H_Dkiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -3963,9 +3964,9 @@
 *R2_2_Dkiss3
 
 [tb_start_text mode=1 ]
-蕾「あぁ♡　ねっとりベロチュー、もっともっと♡　にゅぷ、にゅる、ちゅっちゅっちゅ♡」[p]
-蕾「はぁ、あぅっ♡　舌絡ませるの、好きなの♡　ちゅぷちゅっちゅ♡　ちゅ、ちゅくちゅく♡」[p]
-蕾「キスだけで…おまんこウズウズしっぱなし…♡　ちゅちゅっちゅ。気持ちいいよぉ♡」[p]
+Tsubomi「A...♡ Hôn sâu ướt át hơn nữa đi anh♡ Mút, nuốt, chụt chụt chụt♡」[p]
+Tsubomi「Hà, a...♡ Em thích quấn lưỡi lắm cơ♡ Chụt mút chụt chụt♡ Chụt, mút mút...♡」[p]
+Tsubomi「Chỉ hôn thôi... mà cô bé cứ nhấp nhổm ngứa ngáy liên tục...♡ Chụt chụt chụt. Sướng quá đi anh♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_Dkiss=0"  name="H_Dkiss"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -3977,9 +3978,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ちゅぷ、じゅるるるっ♡　じゅぷ、んふぅぅっ♡　あぁぁっ♡　ぎもぢぃぃ♡　しゅきぃ♡」[p]
-蕾「じゅぷ、ちゅぷちゅっちゅ♡　おっ♡　おほぉ♡　口の中まで食べられちゃうぅ…すごい♡」[p]
-蕾「んぅぅっ♡　お口でセックスしてるみたいっ♡　ちゅっちゅ、じゅぷ、じゅるるるる♡」[p]
+Tsubomi「Mút, rột rột...♡ Mút, ưm...♡ A... a...♡ Sướng quá đi... em thích lắm♡」[p]
+Tsubomi「Mút, chụt chụt mút♡ Ôi...♡ Ôi trời♡ Cảm giác như cả khoang miệng bị anh nuốt chửng vậy... tuyệt quá đi♡」[p]
+Tsubomi「Ưm...♡ Cứ như đang quan hệ bằng miệng vậy á♡ Chụt chụt, mút, rột rột rột♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -3988,9 +3989,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-[舜]「さっき自分でもおっぱい揉んでたけど…もっと思いっきり掴んで、揉みしだかなきゃ…！」[p]
-蕾「ああぁぁっ♡　ごめんなさ…♡　あんっ♡　今度はっ、ちゃんとおっぱい握るからぁ♡」[p]
-蕾「[舜]にされてるみたいに…力いっぱい揉みしだいて、おっぱいもみくちゃにしますっ♡」[p]
+[舜]「Vừa nãy em cũng tự bóp vú đấy thôi... nhưng phải tóm chặt lấy rồi nhào nặn thật mạnh bạo vào chứ...!」[p]
+Tsubomi「A... a... a...♡ Em xin lỗi...♡ A...♡ Lần này, em sẽ nắm thật chắc lấy cặp vú mà bóp ạ♡」[p]
+Tsubomi「Giống như đang được anh [舜] nặn vậy... em sẽ dồn hết sức nhào nặn cho hai bầu ngực méo mó biến dạng luôn ạ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -4000,9 +4001,9 @@
 *R2_2_munemomi2
 
 [tb_start_text mode=1 ]
-蕾「あっ♡　見て…おっぱい柔らかくなってきちゃったぁ♡　もみくちゃにされて、とろふわなの♡」[p]
-蕾「おっぱい気持ちいい…♡　もっと揉みしだいて♡　[舜]の手の中で、トロットロにして♡」[p]
-蕾「はひ♡　あぅ♡　あっ♡　おっぱい好き…もっと触って…形変わっちゃうくらい握ってぇ♡」[p]
+Tsubomi「A...♡ Nhìn này... ngực em bắt đầu mềm nhũn ra rồi nè♡ Bị nhào nặn tơi bời, nó mềm mịn như bánh bông lan ý♡」[p]
+Tsubomi「Bóp ngực sướng quá...♡ Hãy nhào nặn nhiều hơn nữa đi anh♡ Hãy làm cho nó mềm nhũn ra trong lòng bàn tay anh [舜] đi♡」[p]
+Tsubomi「Vâng ạ♡ A...♡ A...♡ Em thích ngực lắm... hãy chạm vào nhiều hơn nữa đi... bóp chặt đến mức biến dạng luôn cũng được mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -4013,9 +4014,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-[舜]「こんなにおっぱい揉まれて、形崩れたらヤバいんじゃないの？　モデルになれんの？」[p]
-蕾「あうぅっ♡　ちゃんとっ…ケアするから大丈夫だもん♡　それに裸のモデルじゃないしっ♡」[p]
-蕾「やめないでほしい♡　ぎゅって握って力いっぱい揉みしだかれるの…好きなんだもんっ♡」[p]
+[舜]「Bị bóp ngực nhiều thế này, lỡ hỏng mất dáng ngực thì sao hả? Có làm người mẫu được nữa không đấy?」[p]
+Tsubomi「A... hức♡ Em sẽ... chăm sóc kỹ càng nên không sao đâu mà♡ Với lại em đâu phải người mẫu khỏa thân đâu chứ♡」[p]
+Tsubomi「Em không muốn anh dừng lại đâu♡ Bị tóm chặt rồi dùng lực nhào nặn tơi bời thế này... em thích lắm cơ mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi=0"  name="H_munemomi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -4028,9 +4029,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あひぃぃっ♡　これすごい♡　おっぱいでイグゥゥッ♡　イッちゃうぅ♡　おっ、おおおっ♡」[p]
-[舜]「あーあー、乳首もビンビンに立ってんじゃん…めっちゃエロ…乳首も触ってほしいんだろ」[p]
-蕾「はひっ♡　あぅぅ、触ってほしいっ♡　乳首っ、コリコリって甘やかしてほしいですぅっ♡」[p]
+Tsubomi「A... a... a...♡ Tuyệt quá đi♡ Em lên đỉnh bằng ngực mất thôi...♡ Sắp ra rồi...♡ Ôi, ôi trời ơi...♡」[p]
+[舜]「Nhìn xem, đầu nhũ hoa cũng dựng đứng cứng ngắc lên rồi kìa... Dâm thật sự... Em cũng muốn được sờ vào đầu ti đúng không?」[p]
+Tsubomi「Vâng ạ♡ A... em muốn anh chạm vào lắm♡ Hãy vân vê mơn trớn đầu nhũ hoa để nuông chiều em đi ạ♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -4039,9 +4040,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「おっ♡　おっ♡　おっ♡　乳首コリコリっ♡　しゅっご♡　んほぉ♡　おまんこに響くっ♡」[p]
-[舜]「エッロ…腰ヘコさせて下品だって思わないのか？　こんなんでオーディション受かるつもりか」[p]
-蕾「おおおっ♡　だ、だってぇっ♡　おっぱい気持ちよくて…体勝手に動いちゃうからぁっ♡」[p]
+Tsubomi「Ôi...♡ Ôi...♡ Ôi...♡ Đầu ti bị vân vê kìa♡ Tuyệt quá♡ Ưm... ôi♡ Nó truyền kích thích xuống tận cô bé luôn này♡」[p]
+[舜]「Dâm vãi... Lắc lư hông thế này mà không thấy bậy bạ hả? Định đi thử vai người mẫu với bộ dạng này đấy à?」[p]
+Tsubomi「Ôi trời...♡ T-Tại vì... ngực sướng quá... cơ thể em cứ tự động di chuyển theo thôi mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiijiri+=1"  name="H_tikubiijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -4051,9 +4052,9 @@
 *R2_2_tikubiijiri2
 
 [tb_start_text mode=1 ]
-[舜]「乳首コリコリってされながら、オーディションだと思って自己紹介してみないとな」[p]
-蕾「は、はひ♡　モデル志望の…蕾ですっ♡　お、お洒落と服が大好きでっ…♡　あぅぅっ♡」[p]
-蕾「あとはっ…おっぱいもみくちゃにされながら…太いおちんちん挿れられるのも大好きっ♡」[p]
+[舜]「Vừa bị vân vê đầu ti thế này, vừa coi như đang thử vai mà tự giới thiệu bản thân đi xem nào」[p]
+Tsubomi「A... hà♡ Em là Naruse Tsubomi, 17 tuổi... v-vừa bị vân vê đầu ti... vừa... a...♡」[p]
+Tsubomi「Cặp vú này... đang được anh Shun xoa nắn tơi bời đây ạ♡ Ôi...♡ Ôi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiijiri+=1"  name="H_tikubiijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -4064,9 +4065,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-[舜]「乳首だけじゃなくて、乳輪まで膨らんでるけど。エッロ…両方摘まんでやろうか、ほら！」[p]
-蕾「おっほぉぉぉ♡　ありがとう、ございましゅっ♡　キュ～って摘まんで引っ張られるのしゅき♡」[p]
-蕾「おっ♡　おおおっ♡　子宮にクるっ♡　お腹の奥っ、ジンジンって響いちゃうぅぅっ♡」[p]
+Tsubomi「Ư... hức♡ Đ-Đặc điểm quyến rũ của em là... đôi gò bồng đào mềm mại và nhạy cảm vô cùng này ạ♡」[p]
+[舜]「Được đấy, tiếp tục đi. Giới thiệu xem chỗ dâm đãng dưới háng em nhạy cảm thế nào nữa xem nào」[p]
+Tsubomi「Hà...♡ Vâng ạ♡ Cô bé của em... mỗi lần được chạm vào ngực là lại rỉ nước nhờn ướt sũng ra ạ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiijiri=0"  name="H_tikubiijiri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -4079,9 +4080,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひっぐぅぅぅっ♡　おおおっ♡　乳首気持ちいいっ♡　ああ、引っ張ってコリコリいいのっ♡」[p]
-蕾「はふっ♡　はっ♡　はっ♡　乳首どんどん敏感になっちゃってる♡　乳首だけでイッちゃうぅ♡」[p]
-[舜]「あー、エッロ…おっぱいだけで腰ヘコヘコさせんの止まんなくなってるじゃん。たまんね…」[p]
+Tsubomi「Chỉ cần được anh Shun đút con cu vào thụt... là em sẽ sướng đến mức phát điên lên mất thôi ạ♡」[p]
+Tsubomi「Ôi trời ơi♡ Tuyệt quá... đầu ti tê rần rần lên rồi♡ Em lên đỉnh mất thôi...♡」[p]
+[舜]「Tốt lắm, em đậu rồi đấy. Phần thưởng là được anh cho con cu vào nhé」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -4090,9 +4091,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「ひゃぅっ♡　あっ♡　痛っ♡　あぁ♡　おっぱい、叩かれてるっ…♡　なんで？　怒ってるの？」[p]
-[舜]「違うよ、これはご褒美。おっぱい可愛がられたかったんだろ…！　ほらっ！　ほらっ！」[p]
-蕾「あっ♡　あうぅっ♡　ご褒美？　んんっ♡　可愛がってくれてありがとうございますっ♡」[p]
+Tsubomi「Cảm ơn anh nhiều lắm ạ♡ Em muốn con cu của anh đâm nát cô bé của em cơ♡」[p]
+Tsubomi「A... a... a...♡ Đút vào rồi♡ Con cu bự quá đi mất♡」[p]
+Tsubomi「Hà...♡ Hà...♡ Sướng quá đi... trong bụng em đầy ắp con cu của anh rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supankingu+=1"  name="H_supankingu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -4102,9 +4103,9 @@
 *R2_2_supankingu2
 
 [tb_start_text mode=1 ]
-[舜]「じゃー、おっぱい叩かれながら、俺のこと興奮させてよ。蕾なら上手にできるだろ？」[p]
-蕾「んっ♡　あひっ♡　で、できるっ♡　私…[舜]の専用おちんぽケースになりたいの…♡」[p]
-蕾「どんなにおっきくなっても…反り返っちゃっても上手におまんこに挿れられるからっ♡」[p]
+Tsubomi「Đâm sâu vào nữa đi anh♡ Hãy thụ tinh cho em đi mà♡」[p]
+[舜]「Đúng là con bé dâm đãng... thích bị đâm sâu thế này cơ à?」[p]
+Tsubomi「Vâng ạ♡ Em thích lắm... em muốn trở thành người đàn bà của anh Shun cơ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supankingu+=1"  name="H_supankingu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -4115,9 +4116,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「おっ♡　おおおっ♡　おっぱい赤くなってきちゃった♡　手のあと…ついてりゅ…」[p]
-蕾「叩かれたとこ…ヒリヒリしてきてりゅ♡　はーっ♡　はーっ♡　あと、残っちゃう♡」[p]
-蕾「はぁっ♡　あんっ♡　おっぱいめちゃくちゃにされたの思い出して、おまんこ濡れちゃうよぉ♡」[p]
+Tsubomi「Ôi...♡ Ôi...♡ Nó chạm vào cổ tử cung rồi kìa♡ Sướng điếng cả người luôn á♡」[p]
+Tsubomi「A... a...♡ Bắn vào trong đi anh♡ Rót đầy tinh dịch vào trong em đi ạ♡」[p]
+[舜]「Bắn nhé... Tsubomi...! Nhận lấy toàn bộ tinh trùng của anh đi!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supankingu=0"  name="H_supankingu"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -4130,9 +4131,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「んおぉぉっ♡　はーっ♡　はーっ♡　だらしない顔になっちゃって、ごめんなしゃい♡」[p]
-蕾「おっぱい叩かれて…おまんこ準備万端になっちゃったぁ♡　早く…早く中に欲しいの♡」[p]
-蕾「はひっ♡　蕾のおまんこ…いっぱい躾けて♡　１番奥までトントンって叩いてくださいっ♡」[p]
+Tsubomi「Ư... ôi...♡ Hà...♡ Hà...♡ Để lộ bộ mặt đê mê xấu hổ thế này, em xin lỗi anh nha♡」[p]
+Tsubomi「Bị vỗ vào ngực... cô bé của em đã sẵn sàng đón nhận từ lâu rồi nè♡ Mau lên... em muốn có nó ở bên trong cơ♡」[p]
+Tsubomi「Vâng ạ♡ Hãy dạy dỗ cô bé của Tsubomi thật nhiều vào đi ạ♡ Đâm thụt gõ phầm phập vào tận đáy sâu nhất luôn đi ạ♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -4141,9 +4142,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t3.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「ひっぅぅぅっ♡　おっ♡　おおおっ♡　しゅごっ♡　潮吹きっ、止まんないっ♡　出てりゅ♡」[p]
-蕾「ひぐっ♡　おもらししてるみたいっ…気持ちよくっていっぱい出ちゃうのぉ♡　お゛お゛おっ♡」[p]
-蕾「ゆ、指でっ♡　ドチュッ、ドチュって…奥突き上げるの癖になっちゃうってばぁ♡」[p]
+Tsubomi「Hức... a...♡ Ôi...♡ Ôi trời ơi♡ Tuyệt quá♡ Nước dâm phun ra... không dừng lại được rồi♡ Nó trào ra kìa♡」[p]
+Tsubomi「Hức...♡ Cứ như đang tè dầm vậy á... sướng quá nên nước cứ phun trào xối xả ra thôi♡ Ôi... ôi...♡」[p]
+Tsubomi「Ng-Ngón tay...♡ Thụt vào... đâm phầm phập vào đáy sâu thế này em sẽ bị nghiện mất thôi mà♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_siohuki+=1"  name="H_siohuki"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -4154,9 +4155,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「しゅごいっ…何度もぴゅっぴゅって…お腹の中水分空っぽになっちゃう♡　おっ♡　おおおっ♡」[p]
-[舜]「大丈夫だよ、おまんこトロトロになってんだから。いくらでも潮吹けばいいじゃん…」[p]
-蕾「あっひぃぃ♡　おっ♡　奥っ…指できゅ～って押すのだめっ♡　また出ちゃうぅぅ♡　おほぉ♡」[p]
+Tsubomi「Tuyệt thật đấy... phụt phụt liên tục mấy lần liền... bên trong bụng em sắp cạn sạch nước luôn rồi nè♡ Ôi...♡ Ôi trời ơi♡」[p]
+[舜]「Không sao đâu, cô bé của em nhầy nhụa ướt sũng thế này cơ mà. Muốn phun bao nhiêu nước cứ việc phun ra...」[p]
+Tsubomi「A... hức♡ Ôi...♡ Đừng dùng ngón tay ấn mạnh vào tận đáy như thế mà♡ Lại sắp phun ra nữa rồi nè♡ Ôi trời ơi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_siohuki+=1"  name="H_siohuki"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -4167,9 +4168,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あ゛っ♡　あ゛う゛っ♡　すごぃぃ♡　お゛お゛っ♡　おまんこぎもぢぃぃっ♡」」[p]
-[舜]「声汚くなってんだけど。モデル志望なのに、自分を可愛く見せる努力しなくていいのか」[p]
-蕾「はひっ♡　はぅぅ♡　そんな余裕ないんだってばぁ♡　あ゛う゛っ♡　お潮とまんないぃ♡」[p]
+Tsubomi「A...♡ A... hức♡ Tuyệt quá đi♡ Ôi...♡ Cô bé sướng tê người luôn rồi♡」[p]
+[舜]「Giọng em bắt đầu khàn đục dâm đãng hết cả ra rồi đấy. Muốn làm người mẫu mà không biết giữ hình tượng đáng yêu à?」[p]
+Tsubomi「Vâng ạ♡ Hà...♡ Lúc này làm sao mà giữ kẽ được nữa chứ ạ♡ A... hức♡ Nước dâm cứ tuôn ra không ngừng được này♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_siohuki=0"  name="H_siohuki"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -4182,9 +4183,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「お゛お゛お゛っ♡　イグッ♡　イグゥゥッ♡　おまんこすごいのキちゃうぅぅぅっ♡」[p]
-[舜]「エッロ…蕾、スケベになりすぎだろ…もう普通のセックスなんかできないなぁ？」[p]
-蕾「できないっ♡　いっぱいエッチなセックス覚えちゃったからっ♡　めちゃくちゃにされたいの♡」[p]
+Tsubomi「Ôi... ôi trời ơi...♡ Em ra mất♡ Lên đỉnh mất thôi♡ Cô bé đang dâng trào khoái cảm khủng khiếp lắm rồi này♡」[p]
+[舜]「Dâm vãi... Tsubomi, em trở nên dâm đãng quá đà rồi đấy... Thế này thì sau này làm sao làm tình kiểu bình thường được nữa hả?」[p]
+Tsubomi「Không thể đâu ạ♡ Em đã nếm trải cảm giác làm tình bạo liệt thế này rồi mà♡ Em chỉ muốn bị anh làm cho tơi bời thôi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -4193,9 +4194,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「あ゛っ♡　あ゛っ♡　そこ…お尻の穴っ、ナデナデ…恥ずかし…ヒクついちゃうぅ♡」[p]
-[舜]「あーあー、もう指咥え込もうとして、パクパク開き始めてるけど？」[p]
-蕾「お゛っ♡　おっほぉ♡　撫でてほぐされてりゅ…♡　内側も…撫でてほしくなっちゃってるの♡」[p]
+Tsubomi「A...♡ A...♡ Chỗ đó... lỗ mông được vuốt ve mơn trớn... xấu hổ quá... nó cứ giật giật thắt lại này♡」[p]
+[舜]「Nhìn kìa, nó bắt đầu hé mở mấp máy như muốn nuốt chửng ngón tay anh vào trong rồi đấy?」[p]
+Tsubomi「Ôi...♡ Ôi trời♡ Được xoa nắn mềm ra rồi...♡ Phía bên trong... cũng muốn được anh vuốt ve nữa cơ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruseme+=1"  name="H_anaruseme"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -4206,9 +4207,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t3.mp3"  ]
 [tb_start_text mode=1 ]
-[舜]「あ～、ほら、クパッて開いてるわ…あとちょっとで指入りそ。じっくり慣らしていくから」[p]
-蕾「あひっ♡　あぁ♡　お尻の穴もっ、おちんちん入るようになっちゃうっ♡　両方使われちゃう♡」[p]
-蕾「嬉しいのっ…私の全身で[舜]が気持ちよくなってくれるの…楽しみになってりゅっ♡」[p]
+[舜]「À~ nhìn này, nó banh rộng ra rồi kìa... thêm chút nữa là ngón tay lọt vào được rồi. Anh sẽ từ từ nong cho nó quen dần nhé」[p]
+Tsubomi「A... hức♡ A...♡ Lỗ mông cũng sắp đút vừa con cu vào rồi này♡ Thế là cả hai lỗ đều được anh sử dụng hết rồi♡」[p]
+Tsubomi「Em hạnh phúc lắm... toàn bộ cơ thể em có thể khiến anh [舜] cảm thấy sung sướng... em mong chờ lắm cơ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruseme+=1"  name="H_anaruseme"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -4219,9 +4220,9 @@
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-蕾「はひぃっ♡　おっ♡　おっほぉぉ♡　指、入ってりゅ…にゅるって入ってきちゃってりゅ♡」[p]
-[舜]「おまんこユルユルになっちゃったら、今度はお尻でチンポ締め付けてもらうからな」[p]
-蕾「わかったっ♡　わかりましたぁ♡　蕾の体、おまんこもお尻もいっぱい使ってくだしゃいっ♡」[p]
+Tsubomi「Vâng ạ♡ Ôi...♡ Ôi trời ơi♡ Ngón tay... vào trong rồi... nó trơn tuột lọt hẳn vào trong rồi kìa♡」[p]
+[舜]「Nếu cô bé phía trước bị đâm lỏng ra, thì lần sau anh sẽ dùng lỗ mông này để kẹp chặt con cu đấy nhé」[p]
+Tsubomi「Em hiểu rồi ạ♡ Em nghe lời anh hết♡ Cả cô bé lẫn lỗ mông của Tsubomi, xin anh hãy tận tình sử dụng hết đi ạ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_anaruseme=0"  name="H_anaruseme"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -4234,9 +4235,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひっぐぅぅぅっ♡　おっ♡　おっほぉぉ♡　お尻の中っ、ナデナデされてりゅっ♡　ひぐぅ♡」[p]
-蕾「ん、くぅぅっ♡　はぁ、ああっ♡　指だけでいっぱいになってりゅ♡　おっ、おおおっ♡」[p]
-[舜]「ヤッバ、すっごい締め付けなんだけど…チンポ挿れられるようになったら最高だろうなぁ」[p]
+Tsubomi「Hức... a...♡ Ôi...♡ Ôi trời ơi♡ Bên trong lỗ mông... đang được mơn trớn kìa♡ Hức...♡」[p]
+Tsubomi「Ư... hức♡ Hà, a...♡ Chỉ mới một ngón tay thôi mà đã đầy ắp rồi nè♡ Ôi, ôi trời ơi♡」[p]
+[舜]「Kinh thật, nó thắt chặt ghê gớm luôn ấy... Nếu đút con cu vào được đây thì chắc sướng tê người luôn cho xem」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -4244,9 +4245,9 @@
 *R2_2_pisuton_yukkuri1
 
 [tb_start_text mode=1 ]
-蕾「ひぅぅっ♡　あっ♡　あぁぁ♡　きたっ♡　奥まできてりゅ♡　もっと頂戴っ♡」[p]
-蕾「先っぽで、奥突き上げてっ…♡　いっぱいこねてほしいの…♡　あぁぁぁっ♡」[p]
-蕾「おっ♡　おっ♡　おおっ♡　欲しくて欲しくて、どんどんスケベになっちゃうよぉっ♡」[p]
+Tsubomi「Hức...♡ A...♡ A...♡ Tới rồi♡ Chạm vào tận sâu bên trong rồi kìa♡ Cho em thêm nữa đi anh♡」[p]
+Tsubomi「Dùng đầu khấc thúc mạnh vào tận sâu bên trong đi anh...♡ Em muốn anh khuấy đảo thật nhiều cơ...♡ A... a...♡」[p]
+Tsubomi「Ôi...♡ Ôi...♡ Ôi trời♡ Vì quá thèm thuồng nên em càng lúc càng trở nên dâm đãng mất rồi nè♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -4256,9 +4257,9 @@
 *R2_2_pisuton_yukkuri2
 
 [tb_start_text mode=1 ]
-蕾「はーっ♡　はーっ♡　んっくぅっ♡　血管浮き上がったおちんちんでゾリゾリされてりゅの♡」[p]
-蕾「温度も大きさも硬さも全部伝わってくるっ♡　気持ちいい♡　ゴムなし生セックスしゅごぃぃ♡」[p]
-蕾「こんなの癖になっちゃうってばぁ♡　おっ♡　おぉぉんっ♡　お腹の奥、圧迫されちゃった♡」[p]
+Tsubomi「Hà...♡ Hà...♡ Ư... hức♡ Từng đường gân guốc nổi cộm trên con cu đang cọ sát rần rật vào trong em kìa♡」[p]
+Tsubomi「Cả nhiệt độ, kích thước lẫn độ cứng em đều cảm nhận rõ mồn một luôn♡ Sướng quá♡ Quan hệ trần không bao tuyệt vời quá đi♡」[p]
+Tsubomi「Cứ thế này em sẽ bị nghiện mất thôi mà♡ Ôi...♡ Ư... ôi...♡ Đáy bụng em bị chèn ép căng tức cả ra rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri+=1"  name="H_supiritasu_pisuton_yukkuri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -4268,9 +4269,9 @@
 *R2_2_pisuton_yukkuri3
 
 [tb_start_text mode=1 ]
-蕾「んほぉぉ♡　おおおっ♡　ゆっくり焦らすみたいに…出し入れされるのっ、すごいのぉ♡」[p]
-[舜]「めちゃくちゃ締め付けてくるじゃん…中に出してっておねだりしてくれてんの？」[p]
-蕾「そうだよっ♡　中に出してほしいの…たっぷり注ぎ込んでほしいっ♡　早く頂戴♡」[p]
+Tsubomi「Ư... ôi...♡ Ôi trời ơi♡ Cứ rút ra đút vào chậm rãi như đang trêu ngươi thế này... tuyệt vời quá đi anh ơi♡」[p]
+[舜]「Em kẹp chặt kinh khủng vậy... đang nũng nịu đòi anh bắn tinh vào trong đúng không hả?」[p]
+Tsubomi「Đúng thế đấy ạ♡ Em muốn anh bắn vào trong... rót thật nhiều tinh trùng vào cho em đi mà♡ Mau lên anh♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri=0"  name="H_supiritasu_pisuton_yukkuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -4282,9 +4283,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「お゛お゛お゛っ♡　はっ、はぁ…種付けしてやるって本気伝わってきちゃうぅぅっ♡」[p]
-蕾「ん、くうぅっ♡　はぁ、はっ、受け入れる準備整っちゃったぁ…注がれるだけになってる♡」[p]
-蕾「い、今なら…ホントに種付けされちゃう♡　あんたの遺伝子、全部受け入れちゃうぅぅっ♡」[p]
+Tsubomi「Ôi... ôi trời ơi...♡ Hà, hà... Ý định muốn gieo giống cho em của anh truyền thẳng sang em rồi này♡」[p]
+Tsubomi「Ư... hức♡ Hà, hà, em đã chuẩn bị sẵn sàng hết rồi... chỉ chờ được anh rót đầy vào thôi nè♡」[p]
+Tsubomi「N-Nếu là lúc này... em sẽ thực sự được anh gieo giống mất thôi♡ Toàn bộ hạt giống của anh, em sẽ đón nhận hết♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*high2"  cond="f.H_high1==1"  ]
@@ -4293,9 +4294,9 @@
 *R2_2_pisuton_hagesiku1
 
 [tb_start_text mode=1 ]
-蕾「しゅごいぃ♡　おちんちんっ…本気出してるっ♡　絶対に種付けてやるって…狂暴になってる♡」[p]
-蕾「あぁぁっ♡　ひっぐ♡　おっ♡　おまんこ悦んでるの♡　精子注がれる準備始めちゃってりゅ♡」[p]
-蕾「んぅぅぅっ♡　い、今出されたら…精子全部受け止めちゃう♡　受精しちゃうぅぅっ♡」[p]
+Tsubomi「Tuyệt quá đi♡ Con cu của anh... đang bung hết sức ra rồi kìa♡ Như muốn quyết tâm thụ tinh cho em bằng được vậy... cuồng bạo quá♡」[p]
+Tsubomi「A...♡ Hức...♡ Ôi...♡ Cô bé của em đang mừng rỡ reo vui này♡ Đang chuẩn bị để hứng trọn dòng tinh dịch rồi nè♡」[p]
+Tsubomi「Ư... hức♡ N-Nếu bây giờ bắn vào... em sẽ hứng trọn toàn bộ tinh trùng mất♡ Sẽ thụ thai mất thôi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -4305,9 +4306,9 @@
 *R2_2_pisuton_hagesiku2
 
 [tb_start_text mode=1 ]
-[舜]「あ～、種付けするためだけに腰振ってんの最高…！　このまま１番奥に出していいんだろ？」[p]
-蕾「おおっ♡　あぅ♡　出してくださいっ♡　腰掴んだまま１番奥に…ドクドクって出してっ♡」[p]
-蕾「んっ♡　おおぉっ♡　子宮までダイレクトに注いでほしいからぁっ♡　勢いよく出してぇ♡」[p]
+[舜]「À~ chỉ đưa hông để thụ tinh cho em thôi mà sướng thế này cơ mà...! Cứ thế này bắn thẳng vào nơi sâu nhất nhé?」[p]
+Tsubomi「Ôi...♡ A...♡ Bắn vào đi anh♡ Giữ chặt lấy hông em rồi bắn ừng ực vào tận đáy sâu nhất đi ạ♡」[p]
+Tsubomi「Ưm...♡ Ôi trời ơi♡ Em muốn anh rót thẳng trực tiếp vào tận tử cung cơ mà♡ Hãy bắn thật mạnh vào nhé♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -4317,9 +4318,9 @@
 *R2_2_pisuton_hagesiku3
 
 [tb_start_text mode=1 ]
-蕾「あ゛あ゛っ…♡　お腹の中っ、全部引きずり出されちゃいそ…♡　おちんちん引っかかって──」[p]
-蕾「中までぐちゃぐちゃにされちゃってるのっ♡　お゛お゛っ♡　こんな激しいの知らないっ♡」[p]
-蕾「お゛っ♡　お゛っ♡　どうしよ…頭の中も体も…弾けて壊れちゃうぅぅっ♡」[p]
+Tsubomi「A... a...♡ Cảm giác như toàn bộ ruột gan trong bụng sắp bị kéo tuột ra ngoài vậy...♡ Con cu cứ móc sâu vào──」[p]
+Tsubomi「Bên trong bị khuấy đảo nhão nhoét hết cả ra rồi này♡ Ôi...♡ Em chưa bao giờ biết cảm giác mãnh liệt đến thế này đâu♡」[p]
+Tsubomi「Ôi...♡ Ôi...♡ Phải làm sao đây... cả trong đầu lẫn thể xác... như sắp nổ tung vỡ vụn ra mất thôi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku=0"  name="H_supiritasu_pisuton_hagesiku"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -4331,9 +4332,9 @@
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひぎゅぅぅっ♡　おほぉ♡　おちんちんビクビク暴れてりゅ♡　おまんこで抑えきれない♡」[p]
-蕾「内側擦れてグチャグチャになって…こんなの、すぐイッちゃう♡　おかしくなっちゃうぅ♡」[p]
-蕾「はっ♡　はっ♡　はっ♡　私の体、どんどんあんた仕様になっちゃってるの…幸せだよぉ♡」[p]
+Tsubomi「Hức... a...♡ Ôi trời♡ Con cu đang giật giật quẫy đạp dữ dội bên trong kìa♡ Cô bé của em không kìm hãm nổi nữa rồi♡」[p]
+Tsubomi「Thành bên trong bị cọ sát nát bấy... cứ thế này thì em sẽ lên đỉnh ngay mất thôi♡ Em sắp phát điên lên rồi♡」[p]
+Tsubomi「Hà...♡ Hà...♡ Hà...♡ Cơ thể em càng ngày càng biến thành hình dáng dành riêng cho anh mất rồi... Hạnh phúc quá đi mà♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*high2"  cond=""  ]

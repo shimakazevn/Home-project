@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_sinnyu_rihure_sekkyaku_haiti.ks]
 
 *top

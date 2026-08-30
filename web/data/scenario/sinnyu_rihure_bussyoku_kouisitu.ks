@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_sinnyu_rihure_bussyoku_kouisitu.ks]
 
 [tb_start_tyrano_code]
@@ -127,4 +128,3 @@
 
 [jump target="*sentaku_top"]
 [_tb_end_tyrano_code]
-

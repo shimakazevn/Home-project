@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_sinnyu_byouin_rokka_haiti.ks]
 
 *top
@@ -165,4 +166,3 @@
 
 [jump target="*sentaku_top"]
 [_tb_end_tyrano_code]
-

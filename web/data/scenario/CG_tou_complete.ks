@@ -1,3 +1,4 @@
+ 
 [_tb_system_call storage=system/_CG_tou_complete.ks]
 
 [bg  time="0"  method="crossfade"  storage="title_VoyeurCGGallery.png"  ]
@@ -14,9 +15,9 @@
 [endif]
 [_tb_end_tyrano_code]
 
-[tb_ptext_show  x="1040"  y="11"  size="21"  color="0xffffff"  time="0"  text="盗撮CG回収率"  anim="false"  face="serif,'游明朝'"  edge="undefined"  shadow="undefined"  ]
-[tb_ptext_show  x="1244"  y="11"  size="21"  color="0xffffff"  time="0"  anim="false"  face="serif,'游明朝'"  text="％"  edge="undefined"  shadow="undefined"  ]
-[tb_ptext_show  x="1204"  y="11"  size="21"  color="0xffcf0f"  time="0"  anim="false"  face="serif,'游明朝'"  text="&sf.cg_rate"  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="1040"  y="11"  size="21"  color="0xffffff"  time="0"  text="Tỷ lệ thu thập:"  anim="false"  face="NotoSansVN, serif"  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="1244"  y="11"  size="21"  color="0xffffff"  time="0"  anim="false"  face="NotoSansVN, serif"  text="％"  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="1204"  y="11"  size="21"  color="0xffcf0f"  time="0"  anim="false"  face="NotoSansVN, serif"  text="&sf.cg_rate"  edge="undefined"  shadow="undefined"  ]
 [return  ]
 *Complete
 
@@ -27,8 +28,8 @@
 [playse  volume="100"  time="1000"  buf="0"  storage="sistem_omoide.mp3"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]Congratulations! CG Collection Complete![p]
-スタート画面の画像が変更出来るようになりました[resetfont][p]
+Bên cạnh người con gái tôi yêu thương và chiếm hữu.[p]
+Mọi thứ thật hoàn hảo.[p]
 [_tb_end_text]
 
 [l  ]

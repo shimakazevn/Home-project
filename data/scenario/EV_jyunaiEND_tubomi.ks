@@ -1,3 +1,5 @@
+
+
 [_tb_system_call storage=system/_EV_jyunaiEND_tubomi.ks]
 
 [tb_start_tyrano_code]
@@ -23,88 +25,88 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-俺たちの間に流れる空気は大きくは変わっていない。[p]
-デートする時に『オプション料金を払わなくてよくなった』ことが1番の変化かもしれない。[p]
-なんて言ったら、元アメリアちゃんに滅茶苦茶怒られそうだけど。[p]
+Bầu không khí giữa chúng tôi cũng không có gì thay đổi lớn.[p]
+Có lẽ sự thay đổi lớn nhất chính là 『Không còn phải trả phí dịch vụ tùy chọn』 mỗi khi đi hẹn hò nữa.[p]
+Nếu mà nói ra điều này, chắc chắn sẽ bị cô bé cựu Amelia mắng cho một trận tơi bời khói lửa mất.[p]
 [_tb_end_text]
 
 [bg  time="2000"  method="crossfade"  storage="back_room0.png"  ]
 [call  storage="BGM.ks"  target="*love1"  ]
 [tb_start_text mode=1 ]
 #蕾
-蕾「あ、動いたらダメだってば。じっとしてて？　甘皮切りすぎたら血出ちゃうんだからね」[p]
-[舜]「それは怖い…！　気を付けてくれよ」[p]
+Tsubomi「A, đã bảo là không được nhúc nhích cơ mà. Ở yên đó đi? Lỡ cắt phạm vào biểu bì là chảy máu đấy nhé.」[p]
+[舜]「Đáng sợ quá...! Em cẩn thận chút đi.」[p]
 #蕾
-蕾「そっちが動かなきゃいいだけでしょ！」[p]
-俺の爪周りの甘皮を綺麗にカットし、透明なマニキュアを手早く塗ってくれる。[p]
-[舜]（集中してる集中してる…練習させてくれって言うから何かと思ったけど）[p]
-[舜]（こんなことなら、いつでも喜んで…だな)[p]
-唇を突き出しながら真剣に作業する蕾を眺めているのは、幸せな時間だった。[p]
+Tsubomi「Chỉ cần anh không nhúc nhích là được chứ gì!」[p]
+Em ấy cắt gọn gàng phần biểu bì quanh móng tay tôi, rồi nhanh nhẹn quét lên một lớp sơn bóng trong suốt.[p]
+[舜]（Đang tập trung kìa, tập trung kìa... Tự nhiên bảo cho em thực hành, mình còn đang thắc mắc là chuyện gì cơ chứ.）[p]
+[舜]（Nếu là chuyện này thì, lúc nào mình cũng sẵn lòng... nhỉ.）[p]
+Được ngắm nhìn Tsubomi vừa chu môi ra vừa chăm chú làm việc, quả là một khoảng thời gian hạnh phúc.[p]
 #蕾
-蕾「完成！　どう？　綺麗でしょ～？」[p]
-[舜]「おお、爪がツヤツヤピカピカだ。うまいもんだな」[p]
+Tsubomi「Hoàn thành! Sao hả? Đẹp đúng không~?」[p]
+[舜]「Ồ, móng tay bóng lộn lấp lánh luôn này. Em làm khéo tay thật đấy.」[p]
 #蕾
-蕾「私、メイドリフレのお店でお客さんに頼まれて爪を綺麗にしてあげてたの」[p]
+Tsubomi「Hồi trước ở quán Maid Reflex, có khách nhờ nên em hay làm sạch móng tay cho họ lắm.」[p]
 #蕾
-蕾「だからネイルなら得意かもと思って…思った通りだった」[p]
-蕾は目をキラキラと輝かせ、俺の顔を覗き込んだ。[p]
-透明なマニュキュアを施された俺の爪なんかより、はるかに輝いて美しい…と思った。[p]
-もちろんそんなこと言えば、[r]彼女は真っ赤になって「からかわないで」と怒るに決まってるのだけど。[p]
+Tsubomi「Thế nên em mới nghĩ chắc mình cũng có khiếu làm nail... Quả nhiên đúng là vậy thật.」[p]
+Tsubomi chớp chớp đôi mắt sáng long lanh, ghé sát vào nhìn mặt tôi.[p]
+Tôi chợt nghĩ... đôi mắt ấy còn rực rỡ và xinh đẹp hơn cả những chiếc móng tay vừa được sơn bóng của mình.[p]
+Tất nhiên nếu tôi mà nói ra điều đó, [r]kiểu gì em ấy cũng sẽ đỏ bừng mặt rồi cáu gắt "Đừng có trêu em" cho mà xem.[p]
 [_tb_end_text]
 
 [bg  time="2000"  method="crossfade"  storage="event/tubomi_jyunaiEND.png"  ]
 [tb_cg  id="cg_tubomi_jyunaiEND"  ]
 [tb_start_text mode=1 ]
 #蕾
-蕾「私決めた。ママみたいに自分のお店を開く！」[p]
+Tsubomi「Em quyết định rồi. Em sẽ tự mở một tiệm cho riêng mình giống như mẹ!」[p]
 #蕾
-蕾「経営も勉強して、ネイルの勉強もして…ネイリストになる」[p]
+Tsubomi「Em sẽ học quản lý kinh doanh, học cả làm nail nữa... rồi trở thành thợ làm nail.」[p]
 #蕾
-蕾「ハンドマッサージもすっごく気持ちいいって噂になっちゃうようなお店にするんだから」[p]
-[舜]「すごくいいと思う」[p]
+Tsubomi「Em sẽ biến nó thành một tiệm nổi tiếng với lời đồn đại là massage tay cũng cực kỳ sung sướng cho xem.」[p]
+[舜]「Anh thấy ý tưởng đó rất tuyệt.」[p]
 #蕾
-蕾「モデルの夢、諦めることになっちゃうんだけどね」[p]
-[舜]「いいや、夢が少し変わっただけだろ？」[p]
-嘘ではなく、心からそう思った。今までたくさん悩んだことはきっと無駄にならないはずだ。[p]
-彼女を強くしなやかにして、夢に近づくための力になるだろう。[p]
+Tsubomi「Nhưng mà, như vậy là em sẽ phải từ bỏ giấc mơ làm người mẫu đấy.」[p]
+[舜]「Không đâu, chỉ là giấc mơ thay đổi một chút thôi mà, đúng không?」[p]
+Đó không phải là lời nói dối, tôi thực lòng nghĩ như vậy. Những trăn trở từ trước đến nay chắc chắn sẽ không hề uổng phí.[p]
+Nó sẽ khiến em ấy trở nên mạnh mẽ, dẻo dai hơn, và trở thành sức mạnh để em ấy tiến gần hơn đến ước mơ của mình.[p]
 #蕾
-蕾「ありがと。おかげでいろいろ吹っ切れたし、新しい夢も見つけられたし」[p]
+Tsubomi「Cảm ơn anh. Nhờ có anh mà em đã rũ bỏ được nhiều thứ, và còn tìm thấy một giấc mơ mới nữa.」[p]
 #蕾
-蕾「あんたのおかげ…本当にありがとね？」[p]
-[舜]「新しい夢を見つけたのは蕾の力だろ」[p]
+Tsubomi「Đều là nhờ anh cả đấy... Thực sự cảm ơn anh nhé?」[p]
+[舜]「Tìm thấy giấc mơ mới là nhờ năng lực của Tsubomi chứ.」[p]
 #蕾
-蕾「[舜]のくせにかっこいいこと言うのズルい！」[p]
-[舜]「お前、彼氏に[舜]のくせにとか言うなよ…！」[p]
+Tsubomi「Chỉ là Shun thôi mà dám nói những lời ngầu thế là ăn gian đấy nhé!」[p]
+[舜]「Cái con bé này, đừng có nói kiểu "Chỉ là Shun thôi" với bạn trai mình chứ...!」[p]
 #蕾
-蕾「ふふ、も～、付き合っても全然変わんないね。甘々イチャイチャするかと思ったのに」[p]
+Tsubomi「Khc, mồ~, hẹn hò rồi mà chẳng thay đổi gì cả. Cứ tưởng sẽ ngọt ngào âu yếm lắm cơ.」[p]
 #蕾
-蕾「でもいいや、私たちっぽいし…」[p]
+Tsubomi「Nhưng thôi cũng được, như vậy mới giống hai đứa mình...」[p]
 #蕾
-蕾「ねぇ、私がお店を開いた時はさ。あんたのことママの店から引き抜いてもいい？」[p]
-[舜]「え～、だめだろ」[p]
+Tsubomi「Này, đến lúc em mở tiệm ấy. Em lôi kéo anh từ tiệm của mẹ sang có được không?」[p]
+[舜]「Uầy~, không được đâu.」[p]
 #蕾
-蕾「何それ！　そこは『いいよ』でしょ～！？　まさかママのほうが好きとか！？」[p]
+Tsubomi「Cái gì thế! Chỗ đó anh phải trả lời là 『Được chứ』 chứ~!? Không lẽ anh thích mẹ hơn à!?」[p]
 #蕾
-蕾「浮気者～っ！　どおりでイチャイチャしないわけだなぁっ」[p]
-[舜]「そんなわけないだろ！」[p]
+Tsubomi「Cái đồ lăng nhăng~! Thảo nào anh chẳng chịu âu yếm em gì cả.」[p]
+[舜]「Làm gì có chuyện đó!」[p]
 #蕾
-蕾「…じゃあ、今日泊まっていってもいい？」[p]
+Tsubomi「...Vậy thì, hôm nay em ngủ lại đây có được không?」[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-蕾の目がすでに潤んでいる。[p]
-何を期待してくれているのかは、一目瞭然だった。[p]
-[舜]「もちろん」[p]
+Đôi mắt Tsubomi đã ngấn nước từ lúc nào.[p]
+Nhìn thoáng qua cũng đủ hiểu rõ em ấy đang mong đợi điều gì.[p]
+[舜]「Tất nhiên rồi.」[p]
 #蕾
-蕾「よそ見禁止だからね？　破ったら罰金！」[p]
-[舜]「また金とるのかよ…！」[p]
-敵わないな…と思いつつ俺たちはキスを交わした。[p]
+Tsubomi「Cấm anh lơ đãng nhìn đi chỗ khác đấy nhé? Vi phạm là phạt tiền!」[p]
+[舜]「Lại đòi tiền nữa cơ à...!」[p]
+Vừa nghĩ thầm "Chịu thua em rồi..." chúng tôi vừa trao nhau một nụ hôn.[p]
 [_tb_end_text]
 
 [bg  time="2000"  method="crossfade"  storage="black.jpg"  ]
 [wait  time="1000"  ]
 [tb_start_text mode=1 ]
-【蕾_純愛END　Re:start】[p]
+【Tsubomi_Pure Love END　Re:start】[p]
 [_tb_end_text]
 
 [wait  time="3000"  ]
@@ -128,4 +130,3 @@
 location.href="./index.html";
 [endscript]
 [_tb_end_tyrano_code]
-

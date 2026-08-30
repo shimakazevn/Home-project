@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_EV_OP_map.ks]
 
 [tb_start_tyrano_code]
@@ -16,9 +17,9 @@
 [stopbgm  time="1000"  fadeout="true"  ]
 [wait  time="1500"  ]
 [tb_start_text mode=1 ]
-[舜]（はぁ……うだうだしてるうちに、もうこんな時間か）[p]
-──やはり、まずは病院へ行って情報を得るしかない。[p]
-[舜]（……よし、普通に患者として行けば、不自然じゃないはずだ。[r]凪が働いてるってのは確かなはずだしな）[p]
+[舜]（Haa……cứ quanh quẩn nãy giờ, đã muộn thế này rồi sao.）[p]
+──Quả nhiên, trước tiên chỉ còn cách đến bệnh viện để thu thập thông tin thôi.[p]
+[舜]（……Được rồi, cứ đến đó như một bệnh nhân bình thường thì sẽ không có gì đáng ngờ cả.[r]Chắc chắn là Nagi đang làm việc ở đó mà.）[p]
 [_tb_end_text]
 
 [playbgm  volume="100"  time="1000"  loop="true"  storage="nitijyou3.mp3"  ]
@@ -53,8 +54,8 @@
 [cm  ]
 [bg  time="1500"  method="crossfade"  storage="back_rihure.png"  cross="false"  ]
 [tb_start_text mode=1 ]
-[舜]（ん？　なんだここ…[font color="yellow"]メイドリフレ[resetfont]？　へぇ、事務のバイトを募集してるのか）[p]
-[舜]（女の子たちの中で働くのも、案外悪くないかもしれないな。ちょっと頭の片隅に置いておこう）[p]
+[舜]（Hửm? Chỗ này là sao... [font color="yellow"]Quán bấm huyệt hầu gái Maid Reflex[resetfont]? Ồ, đang tuyển nhân viên văn phòng làm thêm à.）[p]
+[舜]（Làm việc giữa một đám con gái, biết đâu lại không tệ như mình nghĩ. Cứ ghi nhớ trong đầu đã.）[p]
 [_tb_end_text]
 
 [jump  storage="EV_OP_map.ks"  target="*top2"  ]
@@ -67,8 +68,8 @@
 [cm  ]
 [bg  time="1500"  method="crossfade"  storage="back_famiresu.png"  cross="false"  ]
 [tb_start_text mode=1 ]
-[舜]（こんなところにファミレスがあるのか…。ちょうどいいな。ちょっと何か適当に食べていくか）[p]
-[舜]（[font color="yellow"]一人で静かに過ごせる場所ってありがたいよな。[resetfont]人の気配はあるけど、干渉されない…[r]そんな空間がちょうどいいんだよな）[p]
+[舜]（Ở chỗ này mà cũng có nhà hàng gia đình sao... Vừa hay. Tiện thể kiếm gì đó ăn tạm vậy.）[p]
+[舜]（[font color="yellow"]Một nơi có thể yên tĩnh một mình thế này thật tốt.[resetfont]Tuy vẫn có người xung quanh, nhưng không bị ai can thiệp...[r]Một không gian như vậy là vừa vặn nhất.）[p]
 [_tb_end_text]
 
 [jump  storage="EV_OP_map.ks"  target="*top2"  ]
@@ -77,7 +78,7 @@
 [cm  ]
 [bg  time="1500"  method="crossfade"  storage="back_kaimono1.png"  cross="false"  ]
 [tb_start_text mode=1 ]
-[舜]（[font color="yellow"]薬局から電気屋まで、何でも揃ってるショッピングビルだ。[resetfont]便利そうだな…。[r]これからの生活、きっと何かとお世話になることになりそうだ）[p]
+[舜]（[font color="yellow"]Một trung tâm thương mại có đủ mọi thứ từ hiệu thuốc đến cửa hàng điện máy.[resetfont]Trông tiện lợi thật...[r]Cuộc sống sau này, chắc chắn sẽ phải nhờ cậy nơi này nhiều đây.）[p]
 [_tb_end_text]
 
 [jump  storage="EV_OP_map.ks"  target="*top2"  ]
@@ -86,8 +87,8 @@
 [cm  ]
 [bg  time="1500"  method="crossfade"  storage="back_hankagai.png"  cross="false"  ]
 [tb_start_text mode=1 ]
-[舜]（はぁ…ここは相変わらず人が多いな。雑踏の中にいるだけで、なんだか気が滅入る）[p]
-[舜]（よく見たら、雑居ビルに[font color="yellow"]スポーツジム[resetfont]が入ってるな…。まあ、俺には関係ないか）[p]
+[舜]（Haa... Chỗ này vẫn đông người như mọi khi. Chỉ cần đứng giữa đám đông ồn ào thôi cũng đủ thấy chán nản rồi.）[p]
+[舜]（Nhìn kỹ mới thấy, trong tòa nhà phức hợp này có cả [font color="yellow"]phòng tập gym[resetfont]... Mà thôi, chắc cũng chẳng liên quan gì đến mình.）[p]
 [_tb_end_text]
 
 [jump  storage="EV_OP_map.ks"  target="*top2"  ]

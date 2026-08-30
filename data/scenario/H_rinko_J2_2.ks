@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_H_rinko_J2_2.ks]
 
 [tb_start_tyrano_code]
@@ -34,7 +35,7 @@
 
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="rinko/voice_j_rinko_kaisi3.mp3" buf="3"]凛子「綺麗に洗ってくれるの？　じゃあ順番に洗いっこしましょうか♡」[p]
+[playse storage="rinko/voice_j_rinko_kaisi3.mp3" buf="3"]Rinko「Em sẽ tắm rửa sạch sẽ cho chị sao? Vậy thì chúng ta lần lượt tắm cho nhau nhé♡」[p]
 [_tb_end_text]
 
 *top2
@@ -333,11 +334,11 @@
 [jump  storage="H_rinko_J2_2.ks"  target="*sounyu_skip"  cond="f.H_sounyu==1"  ]
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
-[舜]「体の中も洗ってあげなくちゃいけませんよね…足開いてください」[p]
-[playse storage="rinko/voice_j2_2_rinko_sou1.mp3" buf="3"]凛子「[舜]くんのおちんちんブラシを使ってくれるの？　お願い…♡　奥まで綺麗に洗ってくれる？」[p]
-[playse storage="rinko/voice_j2_2_rinko_sou2.mp3" buf="3"]凛子「奥までいっぱいにして、綺麗に洗ってね…」[p]
-[舜]「エロ過ぎです…任せてください、綺麗に洗いますからね…！　入りますよ…んんっ！」[p]
-[playse storage="rinko/voice_j2_2_rinko_sou3.mp3" buf="3"]凛子「あぁぁっ♡　奥まで届いてる…はぁ、あんっ♡　お腹の中までいっぱいになっちゃった♡」[p]
+[舜]「Em cũng phải rửa cả bên trong cơ thể cho chị chứ nhỉ... chị dạng chân ra đi.」[p]
+[playse storage="rinko/voice_j2_2_rinko_sou1.mp3" buf="3"]Rinko「Em sẽ dùng bàn chải con cu của Shun-kun sao? Xin em đấy...♡ Hãy rửa sạch tận sâu bên trong chị nhé?」[p]
+[playse storage="rinko/voice_j2_2_rinko_sou2.mp3" buf="3"]Rinko「Lấp đầy tận sâu bên trong, rồi rửa cho thật sạch nhé...」[p]
+[舜]「Dâm quá rồi đấy... cứ giao cho em, em sẽ rửa thật sạch mà...! Vào đây... ưm!」[p]
+[playse storage="rinko/voice_j2_2_rinko_sou3.mp3" buf="3"]Rinko「Aaa♡ Chạm đến tận sâu bên trong rồi... hà, an♡ Trong bụng đầy ứ lên mất rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sounyu=1"  name="H_sounyu"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -573,10 +574,10 @@
 
 [cm  ]
 [tb_start_text mode=1 ]
-凛子「んんっ♡　[舜]くんのおちんちん、パンパンになってる…もう出していいよ…頂戴♡」[p]
-[舜]「はーっ…はーっ…出しますよ…！　よく洗って綺麗にした体にぶっかけていいですか…！」[p]
-凛子「頂戴♡　[舜]くんの匂いでいっぱいにして……！」[p]
-[舜]「あーっ、もう、出るっ！　イク、凛子さんにぶっかるの、ヤバ…あっ、あぁぁぁぁっ！」[p]
+Rinko「Ưm♡ Con cu của Shun-kun, đang căng cứng lên kìa... em bắn ra được rồi đấy... cho chị đi♡」[p]
+[舜]「Hà... hà... em bắn đây...! Em bắn lên cơ thể vừa được tắm rửa sạch sẽ này được không...!」[p]
+Rinko「Cho chị đi♡ Hãy lấp đầy bằng mùi của Shun-kun đi......!」[p]
+[舜]「A, sắp, ra rồi! Ra, bắn lên người chị Rinko, kích thích quá... a, aaaa!」[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="0"  fadeout="true"  ]
@@ -590,9 +591,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ひゃぅぅぅっ♡　ボディソープくらい濃厚なの、出ちゃったね♡　トロトロだよ」[p]
-[舜]「これ、凛子さんの体に塗り込んで洗ってもいいんですか？」[p]
-凛子「もちろん♡　でもどうしよう、[舜]くんの匂いでいっぱいになったら…エッチになっちゃう♡」[p]
+Rinko「Hyauuu♡ Thứ đặc sệt như sữa tắm, bắn ra rồi nhỉ♡ Dính nhem nhuốc rồi.」[p]
+[舜]「Cái này, em thoa lên người chị Rinko để tắm được không?」[p]
+Rinko「Tất nhiên rồi♡ Nhưng phải làm sao đây, nếu tràn ngập mùi của Shun-kun... thì dâm đãng mất thôi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_bukkake_rinko+=1"  name="Hresult_bukkake_rinko"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -606,9 +607,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁぁっ…あったかい…はぁ、んんっ、体に残ったボディソープ、洗い流してくれたの？」[p]
-凛子「[舜]くんのシャワー…熱々トロトロだね♡　最後までしっかり洗ってくれて嬉しいな…」[p]
-凛子「今回だけじゃなくって、また次回もお願いしてもいい？」[p]
+Rinko「Aaaa... ấm quá... hà, ưm, em xả sạch sữa tắm còn sót lại trên người chị rồi sao?」[p]
+Rinko「Vòi sen của Shun-kun... nóng hổi và sền sệt nhỉ♡ Chị vui lắm vì em đã tắm rửa đàng hoàng cho chị đến tận phút cuối...」[p]
+Rinko「Không chỉ lần này, mà lần tới chị cũng nhờ em được chứ?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_bukkake_rinko+=1"  name="Hresult_bukkake_rinko"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -618,10 +619,10 @@
 
 [cm  ]
 [tb_start_text mode=1 ]
-[舜]「あ～、もう出ちゃいそうです…凛子さん、せっかく綺麗にしたんですけど、中に出していいですか？」[p]
-凛子「出して…最後の仕上げでしょう？　[舜]くんの熱々トロトロなボディミルクで保湿して…」[p]
-[舜]「くっ…凛子さんエロすぎです…あぁ、出る…１番奥までしっかり保湿しましょうね…！」[p]
-[舜]「イク、出る…！　あっ、あぁぁぁぁっ！」[p]
+[舜]「A, sắp ra mất rồi... Chị Rinko, mất công tắm rửa sạch sẽ rồi, nhưng em bắn vào trong được không?」[p]
+Rinko「Bắn đi em... là bước hoàn thiện cuối cùng mà đúng không? Hãy dùng sữa dưỡng thể nóng hổi sền sệt của Shun-kun để dưỡng ẩm cho chị đi...」[p]
+[舜]「Khốn... chị Rinko dâm quá rồi đấy... a, ra mất... để em dưỡng ẩm thật kỹ tận sâu bên trong nhé...!」[p]
+[舜]「Ra, bắn đây...! A, aaaa!」[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="0"  fadeout="true"  ]
@@ -649,9 +650,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「んっ♡　あぁぁぁっ♡　すごい…いっぱいになっちゃった…♡」[p]
-凛子「中綺麗にして、準備万端だったものね…♡　今は[舜]くんの精液だけでいっぱいになったよ♡」[p]
-凛子「んっ…はぁ…♡　動いたらこぼれちゃいそう…♡　もったいないから溜めておかなくちゃね」[p]
+Rinko「Ưm♡ Aaaa♡ Tuyệt quá... đầy ứ lên mất rồi...♡」[p]
+Rinko「Bên trong đã được rửa sạch, chuẩn bị tươm tất hết rồi mà nhỉ...♡ Bây giờ thì chỉ toàn là tinh dịch của Shun-kun lấp đầy thôi♡」[p]
+Rinko「Ưm... hà...♡ Cử động là trào ra mất...♡ Lãng phí lắm nên phải giữ lại bên trong thôi nhỉ.」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_nakadasi_rinko+=1"  name="Hresult_nakadasi_rinko"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -664,9 +665,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「あぁぁぁっ♡　そんなに入らないってば…♡　んんっ…すごい量出ちゃったね…」[p]
-凛子「ボディソープと[舜]くんの匂いが混ざって…すっごくいい香りになってる…♡」[p]
-凛子「勿体ないから、もう少しだけこのまま[舜]くんの精液中に溜めておいてもいい？」[p]
+Rinko「Aaaa♡ Đã bảo là không chứa hết được đâu mà...♡ Ưm... bắn ra nhiều quá rồi đấy...」[p]
+Rinko「Sữa tắm hòa quyện với mùi của Shun-kun... tạo thành mùi hương dễ chịu lắm...♡」[p]
+Rinko「Lãng phí lắm, nên cứ giữ tinh dịch của Shun-kun đọng lại bên trong thêm một chút nữa được không em?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_nakadasi_rinko+=1"  name="Hresult_nakadasi_rinko"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]

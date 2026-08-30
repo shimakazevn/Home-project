@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_job_kintore.ks]
 
 [tb_show_message_window  ]
@@ -7,7 +8,7 @@
 *top0
 
 [tb_start_text mode=1 ]
-[舜]（気が乗らないけど……いつか役に立つ日が来るかもしれない）[p]
+[舜]（Dù không có hứng thú lắm...... nhưng biết đâu sẽ có ngày cần dùng đến.）[p]
 [_tb_end_text]
 
 [tb_keyconfig  flag="0"  ]

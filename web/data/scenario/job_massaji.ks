@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_job_massaji.ks]
 
 [tb_start_tyrano_code]
@@ -34,7 +35,7 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[舜]（在庫の補充に掃除に洗濯……やることが山ほどあるな。よし、頑張るか）[p]
+[舜]（Bổ sung hàng tồn kho, dọn dẹp rồi giặt giũ...... Có cả núi việc phải làm. Được rồi, cố lên nào.）[p]
 [_tb_end_text]
 
 [wait  time="1000"  ]

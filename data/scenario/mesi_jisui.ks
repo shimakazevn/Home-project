@@ -1,4 +1,4 @@
-[_tb_system_call storage=system/_mesi_jisui.ks]
+n][_tb_system_call storage=system/_mesi_jisui.ks]
 
 [tb_show_message_window  ]
 [mask  time="500"  effect="fadeIn"  color="0x000000"  ]
@@ -14,6 +14,5 @@
 *top
 
 [tb_start_text mode=1 ]
-舜「よし、今日は自炊するか[r]何を作ろうかな」[p]
+Shun「Được rồi, hôm nay tự nấu ăn thôi.[r]Nên nấu món gì đây nhỉ.」[p]
 [_tb_end_text]
-

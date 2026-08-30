@@ -1,23 +1,13 @@
 // awakegame_ex main.js
 ;(function(){
 const _setLayerHtml = TYRANO.kag.layer.setLayerHtml;
-TYRANO.kag.layer.setLayerHtml = function(layer){
-    let clone = $("#tyrano_base").clone();
-    clone.attr("id", "tyrano_base_old");
-    clone.attr("class", "tyrano_base_old");
-
-    _setLayerHtml.apply(TYRANO.kag.layer, arguments);
-
-    $("#tyrano_base").css({
-        position: "absolute",
-    });
-    $("#tyrano_base").after(clone);
-    clone.fadeOut(TYRANO.kag.variable.tf._awakegame_ex || 300, function(){
-        clone.remove();
-        $("#tyrano_base").css({
-            position: "",
-        });
-    });
+TYRANO.kag.layer.setLayerHtml = function(layer, html){
+    if(!html) return;
+    try {
+        _setLayerHtml.apply(this, arguments);
+    } catch(e) {
+        console.warn("[awakegame_ex] setLayerHtml suppressed error:", e);
+    }
 };
 
 TYRANO.kag.tag.awakegame_ex = {

@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_komyuhyouka_hayato.ks]
 
 [tb_show_message_window  ]

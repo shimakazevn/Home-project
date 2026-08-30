@@ -1,3 +1,4 @@
+
 [iscript ]
 if(sf._skskpnt_volume === undefined){
     sf._skskpnt_volume = []
@@ -17,4 +18,4 @@ TYRANO.kag.ftag.startTag("jump", {
 [s]
 
 *volume_end
-[return ]
+[return]

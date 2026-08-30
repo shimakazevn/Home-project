@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_sansaku_hankagaiEV_nagi.ks]
 
 [call  storage="ui_base.ks"  target="*top"  ]
@@ -15,22 +16,22 @@
 [tb_show_message_window  ]
 [mask_off  time="800"  effect="slideOutRight"  ]
 [tb_start_text mode=1 ]
-[舜](相変わらず人が多くて疲れるな）[p]
+[舜]（Vẫn đông người như mọi khi, mệt thật đấy.）[p]
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-（凪がいる。話しかけてみようかな？）
+（Có Nagi kìa. Hay là bắt chuyện thử xem sao?）
 [_tb_end_text]
 
-[glink  color="btn_03_black"  storage="sansaku_hankagaiEV_nagi.ks"  size="20"  text="凪に話しかける"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*hanasu"  ]
-[glink  color="btn_03_black"  storage="sansaku_hankagaiEV_nagi.ks"  size="20"  text="街を散策する"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*sansaku"  ]
+[glink  color="btn_03_black"  storage="sansaku_hankagaiEV_nagi.ks"  size="20"  text="Bắt chuyện với Nagi"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*hanasu"  ]
+[glink  color="btn_03_black"  storage="sansaku_hankagaiEV_nagi.ks"  size="20"  text="Đi dạo quanh phố"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*sansaku"  ]
 [s  ]
 *sansaku
 
 [bg  time="300"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
-（まぁ、無理に話す必要はないよな）[p]
-（さて、どこに行こうかな？）[p]
+（Mà, cũng không cần thiết phải cố bắt chuyện làm gì.）[p]
+（Giờ thì, nên đi đâu đây nhỉ?）[p]
 [_tb_end_text]
 
 [bg  time="300"  method="crossfade"  storage="back_hankagai.png"  ]
@@ -77,7 +78,7 @@
 
 [tb_start_text mode=1 ]
 #凪
-凪「あれ？　偶然だね。お出かけなんだ。私も買い物中だよ」[p]
+Nagi「Ủa? Tình cờ thật đấy. Cậu đang đi dạo à. Tớ cũng đang đi mua sắm đây.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -152,9 +153,9 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-[舜]「よっ」[p]
+[舜]「Yo.」[p]
 #凪
-凪「わ、びっくりした。[舜]ちゃんか、脅かさないで～」[p]
+Nagi「Oái, giật cả mình. Shun-chan à, đừng có dọa tớ chứ~」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -230,7 +231,7 @@
 
 [tb_start_text mode=1 ]
 #凪
-凪「あ、[舜]ちゃんだ。後姿を見た時にそうかなって思ったんだ」[p]
+Nagi「A, Shun-chan. Nhìn từ đằng sau tớ đã ngờ ngợ là cậu rồi.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -307,7 +308,7 @@
 
 [tb_start_text mode=1 ]
 #凪
-凪「[舜]ちゃん！　ふふ、姿が見えたから追いかけて来ちゃった」[p]
+Nagi「Shun-chan! Khc, nhìn thấy bóng cậu nên tớ đuổi theo luôn đấy.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -384,7 +385,7 @@
 
 [tb_start_text mode=1 ]
 #凪
-凪「ふふ、今日はなんとなく[舜]ちゃんに会えそうな気がしてたんだ。的中だね」[p]
+Nagi「Khc, hôm nay tớ có linh cảm là sẽ gặp được Shun-chan. Trúng phóc luôn.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]

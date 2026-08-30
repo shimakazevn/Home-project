@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_sansaku_kaimono1.ks]
 
 [tb_start_tyrano_code]
@@ -21,7 +22,7 @@
 [tb_show_message_window  ]
 [call  storage="system.ks"  target="*fade_out"  ]
 [tb_start_text mode=1 ]
-[舜]「あぁ、涼しいな。さて、ちょっとぶらぶらしてみるか」[p]
+[舜]「Chà, mát mẻ thật. Giờ thì đi dạo loanh quanh một chút xem sao.」[p]
 [_tb_end_text]
 
 *kaden
@@ -52,21 +53,21 @@
 [tb_start_tyrano_code]
 ;所持数_家電
 ;盗撮用小型カメラ
-[tb_ptext_show  x="288"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="288"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có:"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="345"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_com"  edge="undefined"  shadow="undefined"  ]
 
 ;防水小型カメラ
-[tb_ptext_show  x="550"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="550"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có:"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="607"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_com_bousui"  edge="undefined"  shadow="undefined"  ]
 
 ;移動用小型カメラ
-[tb_ptext_show  x="817"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="817"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có:"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="874"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_com_idou"  edge="undefined"  shadow="undefined"  ]
 [_tb_end_tyrano_code]
 
 [call  storage="system.ks"  target="*fade_out_effect"  ]
 [tb_start_text mode=4 ]
-[舜]（何を買おうかな）
+[舜]（Nên mua gì đây nhỉ.）
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -129,22 +130,22 @@
 [tb_start_tyrano_code]
 ;所持数_書籍
 ;活力の道・上巻
-[tb_ptext_show  x="288"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="288"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có:"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="345"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_book_katuryoku_s"  edge="undefined"  shadow="undefined"  ]
 
 ;媚薬
 ;活力の道・下巻
-[tb_ptext_show  x="550"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="550"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có:"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="607"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_book_katuryoku2_s"  edge="undefined"  shadow="undefined"  ]
 
 ;社会力の極意
-[tb_ptext_show  x="817"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="817"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có:"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="874"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_book_syakairyoku_s"  edge="undefined"  shadow="undefined"  ]
 [_tb_end_tyrano_code]
 
 [mask_off  time="600"  effect="slideOutRight"  ]
 [tb_start_text mode=4 ]
-[舜]（何を買おうかな）
+[舜]（Nên mua gì đây nhỉ.）
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -216,29 +217,29 @@
 [tb_start_tyrano_code]
 ;所持数_薬品
 ;睡眠薬
-[tb_ptext_show  x="288"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="288"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có:"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="345"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_4"  edge="undefined"  shadow="undefined"  ]
 
 ;媚薬
-[tb_ptext_show  x="550"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="550"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có:"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="607"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_1"  edge="undefined"  shadow="undefined"  ]
 
 ;媚薬プレミアム
-[tb_ptext_show  x="817"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="817"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có:"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="874"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_2"  edge="undefined"  shadow="undefined"  ]
 
 ;媚薬クリーム
-[tb_ptext_show  x="1079"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="1079"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có:"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="1136"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_3"  edge="undefined"  shadow="undefined"  ]
 
 ;スピリタスカプセル
-[tb_ptext_show  x="288"  y="453"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="288"  y="453"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có:"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="345"  y="453"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_supiritasu"  edge="undefined"  shadow="undefined"  ]
 [_tb_end_tyrano_code]
 
 [mask_off  time="600"  effect="slideOutRight"  ]
 [tb_start_text mode=4 ]
-[舜]（何を買おうかな）
+[舜]（Nên mua gì đây nhỉ.）
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -322,34 +323,34 @@
 [tb_start_tyrano_code]
 ;所持数_プレゼント
 ;コーヒーギフト
-[tb_ptext_show  x="288"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="288"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có:"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="345"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.pure_coffee"  edge="undefined"  shadow="undefined"  ]
 
 ;レトロゲーム
-[tb_ptext_show  x="550"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="550"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có:"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="607"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.pure_game"  edge="undefined"  shadow="undefined"  ]
 
 ;化粧品
-[tb_ptext_show  x="817"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="817"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có:"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="874"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.pure_konpakuto"  edge="undefined"  shadow="undefined"  ]
 
 ;花束
-[tb_ptext_show  x="1079"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="1079"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có:"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="1136"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.pure_hana"  edge="undefined"  shadow="undefined"  ]
 
 ;プラチナアクセ
-[tb_ptext_show  x="288"  y="453"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="288"  y="453"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có:"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="345"  y="453"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.pure_akuse"  edge="undefined"  shadow="undefined"  ]
 
 ;お菓子ギフトセット
-[tb_ptext_show  x="550"  y="453"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="550"  y="453"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có:"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="607"  y="453"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.pure_wagasi"  edge="undefined"  shadow="undefined"  ]
 
 [_tb_end_tyrano_code]
 
 [mask_off  time="600"  effect="slideOutRight"  ]
 [tb_start_text mode=4 ]
-[舜]（何を買おうかな）
+[舜]（Nên mua gì đây nhỉ.）
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -425,17 +426,17 @@
 [tb_start_tyrano_code]
 ;R18
 ;高級ボディーオイル
-[tb_ptext_show  x="288"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="288"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có:"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="345"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_oil_s"  edge="undefined"  shadow="undefined"  ]
 
 ;SM拘束具
-[tb_ptext_show  x="550"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="550"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có:"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="607"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_sm_s"  edge="undefined"  shadow="undefined"  ]
 [_tb_end_tyrano_code]
 
 [mask_off  time="600"  effect="slideOutRight"  ]
 [tb_start_text mode=4 ]
-[舜]（何を買おうかな）
+[舜]（Nên mua gì đây nhỉ.）
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -476,7 +477,7 @@
 
 [bg  time="500"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
-[舜]「よし、こんなもんかな」[p]
+[舜]「Được rồi, chắc thế này là đủ.」[p]
 [_tb_end_text]
 
 [jump  storage="sansaku.ks"  target="*end"  ]

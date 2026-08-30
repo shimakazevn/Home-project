@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_EV_kyouaiEND_nagi.ks]
 
 [tb_start_tyrano_code]
@@ -25,50 +26,50 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-凪と隼人が結婚したと報告を受けてから、もう一年以上が過ぎた。[p]
-ある夏の午後、正午を少し回った頃だった。[p]
-蝉の声が窓の外で騒がしく鳴き続ける中、俺は久しぶりに凪の家を訪れていた。[p]
+Kể từ lúc nhận được thông báo Nagi và Hayato đã kết hôn, cũng đã hơn một năm trôi qua.[p]
+Vào một buổi chiều mùa hè nọ, lúc ấy vừa qua buổi trưa một chút.[p]
+Giữa tiếng ve kêu râm ran ồn ã ngoài cửa sổ, tôi ghé thăm nhà Nagi sau một thời gian dài.[p]
 #凪
-凪「いらっしゃい……[舜]ちゃん、どうぞあがって」[p]
-[舜]「隼人は？」[p]
+Nagi「Chào cậu...... Shun-chan, mời cậu vào.」[p]
+[舜]「Hayato đâu rồi?」[p]
 #凪
-凪「大丈夫、今はいないから。彼、毎日忙しくしてるけど…定時になったらすぐ帰ってきてくれるの。赤ちゃんのこと、すごく気にしてくれてて」[p]
-凪のお腹は大きく膨らんでいる。出産も間近だ。[p]
+Nagi「Không sao đâu, bây giờ anh ấy không có nhà. Anh ấy ngày nào cũng bận rộn... nhưng cứ hết giờ làm là lập tức về ngay. Anh ấy lo cho em bé lắm.」[p]
+Bụng Nagi đã phình to. Cũng sắp đến ngày dự sinh rồi.[p]
 [_tb_end_text]
 
 [bg  time="2000"  method="crossfade"  storage="event/nagi_kyouaiEND.png"  ]
 [tb_cg  id="cg_nagi_kyouaiEND"  ]
 [tb_start_text mode=1 ]
-[舜]「ずいぶん大きくなったな。予定日は？」[p]
+[舜]「Bụng cậu lớn quá rồi nhỉ. Bao giờ thì sinh thế?」[p]
 #凪
-凪「もうすぐ……。　隼人ね、最近毎日ソワソワしてるの。[r]“絶対女の子だ”って言って、名前まで考えてるんだよ」[p]
-[舜]「……そうか」[p]
-笑う凪の目は優しい。[p]
-けれどその奥に、どこか遠くを見つめるような光があった。[p]
-[舜]（この子が生まれても、きっと隼人は何も気づかない。[p]
-だけど、俺は……この子の顔を見た瞬間に、確信するだろう）[p]
-そう、きっと俺に似た顔をしている。[p]
-でも、凪はこの家庭を壊さない。[p]
-そして俺も、それを壊すつもりはなかった。[p]
+Nagi「Sắp rồi...... Hayato ấy, dạo này ngày nào cũng đứng ngồi không yên.[r]Cứ khăng khăng bảo “Chắc chắn là con gái”, rồi còn nghĩ cả tên sẵn luôn rồi đấy.」[p]
+[舜]「......Vậy à.」[p]
+Đôi mắt Nagi khi cười trông thật hiền từ.[p]
+Thế nhưng sâu thẳm trong đôi mắt ấy, lại ánh lên một tia nhìn xa xăm nào đó.[p]
+[舜]（Dù đứa bé này có ra đời, chắc chắn Hayato cũng sẽ không nhận ra điều gì đâu.[p]
+Nhưng mà, tôi...... chỉ cần nhìn thấy gương mặt đứa bé này, chắc chắn sẽ nhận ra ngay.）[p]
+Đúng vậy, chắc chắn đứa bé sẽ mang gương mặt giống tôi.[p]
+Nhưng mà, Nagi sẽ không phá vỡ gia đình này.[p]
+Và tôi, cũng không hề có ý định phá vỡ nó.[p]
 #凪
-凪「本当はね……お腹の子、男の子なんだ。[r]でも──次は、女の子だったらいいなって思うの。隼人がきっと、すごく喜ぶから」[p]
-[舜]「……ああ、そうだな」[p]
-凪はそっとお腹に手を添えて、微笑んだ。[p]
-その姿がとても穏やかで、母としての穏やかさと、滲むような妖艶さが同居していた。[p]
+Nagi「Thực ra thì...... đứa bé trong bụng là con trai đấy.[r]Nhưng mà──lần tới, em mong sẽ là con gái. Chắc chắn Hayato sẽ mừng lắm.」[p]
+[舜]「......Ừ, đúng vậy nhỉ.」[p]
+Nagi nhẹ nhàng đặt tay lên bụng, khẽ mỉm cười.[p]
+Dáng vẻ ấy vô cùng bình yên, sự dịu dàng của một người mẹ hòa quyện cùng nét yêu kiều kiều diễm.[p]
 #凪
-凪「ねぇ…この子が生まれても、[舜]ちゃん、そばにいてくれる？」[p]
-[舜]「ああ、もちろんだよ。２人目もすぐに作ろうな」[p]
+Nagi「Này... Dù đứa bé này có ra đời, Shun-chan vẫn sẽ ở bên cạnh em chứ?」[p]
+[舜]「Ừ, tất nhiên rồi. Chúng ta sẽ sớm sinh đứa thứ hai nữa nhé.」[p]
 #凪
-凪「ありがとう…うれしいっ！♡」[p]
-それだけで、もう充分だった。[p]
-ふたりの関係に、名前はつけられない。[p]
-けれど確かに心は寄り添っていた。[p]
-[舜]「今日は夫婦の寝室でしよう…お腹の子に本当のパパは誰か教えてやらなきゃな」[p]
-凪は我慢できないと言った表情で俺のズボンを脱がせてくる。[p]
+Nagi「Cảm ơn anh... em vui lắm!♡」[p]
+Chỉ cần như vậy, là đã quá đủ rồi.[p]
+Mối quan hệ giữa hai chúng tôi, chẳng thể gọi thành tên.[p]
+Thế nhưng, trái tim của cả hai thực sự đã hướng về nhau.[p]
+[舜]「Hôm nay mình làm trong phòng ngủ của vợ chồng em đi... Phải dạy cho đứa bé trong bụng biết ai mới là người bố thật sự của nó chứ.」[p]
+Nagi mang vẻ mặt như thể không thể kìm nén được nữa, cởi phăng chiếc quần của tôi ra.[p]
 #凪
-凪「あぁぁ♡　これ、これが欲しかったの♡」[p]
-過去も未来も背負って、今という一瞬だけに身を委ねながら、[p]
-俺たちはそっと、重なり合うように扉の向こうへと消えていった。[p]
+Nagi「Aaa♡ Cái này, em muốn cái này cơ♡」[p]
+Gánh vác cả quá khứ lẫn tương lai, chỉ buông mình vào khoảnh khắc của hiện tại,[p]
+Hai chúng tôi khẽ khàng hòa quyện vào nhau, rồi khuất dần sau cánh cửa.[p]
 
 
 [_tb_end_text]
@@ -76,7 +77,7 @@
 [bg  time="2000"  method="crossfade"  storage="black.jpg"  ]
 [wait  time="1000"  ]
 [tb_start_text mode=1 ]
-【凪_狂愛END　歪みの果て】[p]
+【Nagi_Cuồng Ái END　Tận cùng của sự méo mó】[p]
 [_tb_end_text]
 
 [wait  time="3000"  ]
@@ -100,4 +101,3 @@
 location.href="./index.html";
 [endscript]
 [_tb_end_tyrano_code]
-

@@ -1,3 +1,4 @@
+ 
 [tb_clear_images][mask time=200][bg  time="1"  storage="title_EventReplay.png"  _tb_parts_type="bg"  ]
 [button  graphic="replay_back.png"  storage="title_screen.ks"  target="*replay_back"  time="1"  width="68"  height="44"  x="1206"  y="669"  _tb_parts_type="button"  ]
 [tb_replay_image_button  graphic="kaisou_EV/k_nagi_kokuhaku.png"  storage="title_kaisou.ks"  target="*kaisou_nagi_kokuhaku"  role="sleepgame"  no_graphic="&sf._tb_replay_noimage"  time="1"  width="287"  height="52"  x="94"  y="125"  _tb_parts_type="replay_image_button"  id="nagi_kokuhaku"  ]
@@ -16,4 +17,4 @@
 [tb_replay_image_button  graphic="kaisou_EV/k_HarlemEND.png"  storage="title_kaisou.ks"  target="*haremuEND"  role="sleepgame"  no_graphic="&sf._tb_replay_noimage"  time="1"  width="287"  height="52"  x="893"  y="562"  _tb_parts_type="replay_image_button"  id="haremuEND"  ]
 [button  graphic="kaisou_EV/NameChange.png"  storage="title_kaisou.ks"  target="*NameChange_END"  time="1"  width="223"  height="43"  x="1053"  y="6"  _tb_parts_type="button"  ]
 [mask_off time=200] 
-[s] 
+[s]

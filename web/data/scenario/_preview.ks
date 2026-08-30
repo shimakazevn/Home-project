@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_preview.ks ]
 
 [mask time=10]
@@ -18,9 +19,9 @@
 [chara_hide  name="kankei"  time="0"  wait="true"  pos_mode="false"  ]
 [call  storage="system.ks"  target="*fade_out"  ]
 [tb_start_text mode=1 ]
-凪「……なにこれ。 ゴミ箱の中に…コンドーム…？」[p]
-凪「…これ、使われてる……？ え…ど、どういうこと………？」[p]
-凪「…やだ……気持ち悪い……もう、何も考えたくないよ……」[p]
+Nagi「...Cái gì thế này. Trong thùng rác... có bao cao su sao...?」[p]
+Nagi「...Cái này, đã qua sử dụng rồi sao......? Ơ... th-thế này là sao chứ.........?」[p]
+Nagi「...Không muốn đâu...... Kinh tởm quá...... Mình không muốn nghĩ gì thêm nữa đâu......」[p]
 [_tb_end_text]
 
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]

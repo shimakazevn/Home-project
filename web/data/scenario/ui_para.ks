@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_ui_para.ks]
 
 *top
@@ -351,4 +352,3 @@
 [chara_show  name="para_taityou_rank"  time="0"  wait="false"  storage="chara/142/para_t_kenkou.png"  width="48"  height="24"  top="0"  left="232"  ]
 [tb_eval  exp="f.byouki_taityou=0"  name="byouki_taityou"  cmd="="  op="t"  val="0"  ]
 *end
-

@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_sinnyu_byouin_bussyoku.ks]
 
 [tb_start_tyrano_code]
@@ -24,7 +25,7 @@
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-（さてと、適当に漁ってみるか）[p]
+（Giờ thì, thử lục lọi xem sao.）[p]
 [_tb_end_text]
 
 [tb_hide_message_window  ]

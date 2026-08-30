@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_sansaku_hankagaiEV_hayato.ks]
 
 [call  storage="ui_base.ks"  target="*top"  ]
@@ -25,22 +26,22 @@
 [tb_show_message_window  ]
 [mask_off  time="800"  effect="slideOutRight"  ]
 [tb_start_text mode=1 ]
-[舜](相変わらず人が多くて疲れるな）[p]
+[舜]（Vẫn đông người như mọi khi, mệt thật đấy.）[p]
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-（隼人がいる。話しかけてみようかな？）
+（Có Hayato kìa. Hay là bắt chuyện thử xem sao?）
 [_tb_end_text]
 
-[glink  color="btn_03_black"  storage="sansaku_hankagaiEV_hayato.ks"  size="20"  text="隼人に話しかける"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*hanasu"  ]
-[glink  color="btn_03_black"  storage="sansaku_hankagaiEV_hayato.ks"  size="20"  text="街を散策する"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*sansaku"  ]
+[glink  color="btn_03_black"  storage="sansaku_hankagaiEV_hayato.ks"  size="20"  text="Bắt chuyện với Hayato"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*hanasu"  ]
+[glink  color="btn_03_black"  storage="sansaku_hankagaiEV_hayato.ks"  size="20"  text="Đi dạo quanh phố"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*sansaku"  ]
 [s  ]
 *sansaku
 
 [bg  time="300"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
-（まぁ、無理に話す必要はないよな）[p]
-（さて、どこに行こうかな？）[p]
+（Mà, cũng không cần thiết phải cố bắt chuyện làm gì.）[p]
+（Giờ thì, nên đi đâu đây nhỉ?）[p]
 [_tb_end_text]
 
 [bg  time="300"  method="crossfade"  storage="back_hankagai.png"  ]
@@ -76,7 +77,7 @@
 *aisatu1_nigate
 
 [tb_start_text mode=1 ]
-隼人「おー…こんなとこで何してんの。お前はいつもお気楽そうでいいよなぁ」[p]
+Hayato「Ồ... Cậu làm gì ở đây thế. Cậu lúc nào cũng có vẻ thảnh thơi, sướng thật đấy.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -145,7 +146,7 @@
 *aisatu2_hutuu
 
 [tb_start_text mode=1 ]
-隼人「へぇ、誰かと約束してんの？　あ、1人か…ま、1人のが気楽だよな」[p]
+Hayato「Hể, cậu có hẹn với ai à? A, đi một mình sao... Mà, một mình thì cũng thoải mái nhỉ.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -214,7 +215,7 @@
 *aisatu3_yuukou
 
 [tb_start_text mode=1 ]
-隼人「お～、元気？　どこか行くとこだったのか？　買い物ならお勧めの店教えるから言えよ」[p]
+Hayato「Ồ~, khỏe không? Đang định đi đâu à? Nếu đi mua sắm thì cứ bảo tôi, tôi chỉ cho mấy tiệm hay lắm.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -285,7 +286,7 @@
 *aisatu4_suki
 
 [tb_start_text mode=1 ]
-隼人「おっと！　目合ったんだから先に気づけよ。ははっ、別にいいけどさ」[p]
+Hayato「Úi chà! Chạm mắt nhau rồi thì cậu phải nhận ra trước chứ. Ha ha, mà thôi không sao.」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -358,29 +359,29 @@
 *jimusasoi
 
 [tb_start_text mode=1 ]
-隼人「そうそう、これからジム行くとこなんだけど、一緒に行こうぜ？」[p]
-[舜]「はぁ？　なんでジムなんか…」[p]
-隼人「ファッションの基本は体作りだろ？　体動かせば気分もスッキリするし」[p]
-隼人「スマートな男にもなれるし一石二鳥じゃん。会員じゃなくても5,000円出せば入れるし」[p]
-[舜]（高っ！　なんだそのぼったくりジム…でもコイツの隙を見つけるチャンスか？）[p]
+Hayato「Đúng rồi, tôi đang định đi tập gym đây, cậu đi cùng không?」[p]
+[舜]「Hả? Tự nhiên lại đi tập gym...」[p]
+Hayato「Nền tảng của thời trang là vóc dáng cơ thể mà đúng không? Vận động một chút cũng giúp tinh thần sảng khoái hơn.」[p]
+Hayato「Vừa được tiếng là người đàn ông phong độ, đúng là một công đôi việc. Không phải hội viên thì cứ xì ra 5.000 Yên là vào được.」[p]
+[舜]（Đắt thế! Phòng tập hút máu người à... Nhưng đây cũng là cơ hội để tìm ra sơ hở của hắn nhỉ?）[p]
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-（まさかこいつから誘われるとは…）
+（Không ngờ lại được tên này rủ rê...）
 [_tb_end_text]
 
-[glink  color="btn_03_black"  storage="sansaku_hankagaiEV_hayato.ks"  size="20"  text="一緒に行く（▲テンション▲筋力▼￥5000）"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*iku"  ]
-[glink  color="btn_03_black"  storage="sansaku_hankagaiEV_hayato.ks"  size="20"  text="断る"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*kotowaru"  ]
+[glink  color="btn_03_black"  storage="sansaku_hankagaiEV_hayato.ks"  size="20"  text="Đi cùng nhau (-5,000 Yên)"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*iku"  ]
+[glink  color="btn_03_black"  storage="sansaku_hankagaiEV_hayato.ks"  size="20"  text="Từ chối"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*kotowaru"  ]
 [s  ]
 *iku
 
 [cm  ]
 [jump  storage="sansaku_hankagaiEV_hayato.ks"  target="*okanenasi"  cond="f.money<5000"  ]
 [tb_start_text mode=1 ]
-[舜]「まぁ、一緒に行ってやらんことはない」[p]
-隼人「はは、なんだよそれ。もっと素直に喜べよ」[p]
-隼人「じゃー俺がトレーニング指導してやるからさ。　一緒にモテる体になろーぜ」[p]
-[舜]（ウザいな…まぁ行くって決めたからには、値段分体鍛えてやる）[p]
+[舜]「Ừm, đi cùng cậu cũng được.」[p]
+Hayato「Ha ha, thái độ kiểu gì thế. Phải tỏ ra vui mừng thành thật hơn đi chứ.」[p]
+Hayato「Vậy để tôi hướng dẫn cậu tập nhé. Cùng nhau rèn luyện vóc dáng sát gái nào.」[p]
+[舜]（Phiền phức thật... Mà đã quyết định đi rồi thì phải tập cho đáng đồng tiền bát gạo mới được.）[p]
 [_tb_end_text]
 
 [mask  time="500"  effect="fadeIn"  color="0x000000"  ]
@@ -389,14 +390,14 @@
 [playse  volume="100"  time="1000"  buf="0"  storage="hasiru3.mp3"  ]
 [mask_off  time="500"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-（くそ、全然ついていけねぇ………）[p]
-隼人のペースにはまったくついていけなかったけれど、不思議と嫌な気はしなかった。[p]
+（Chết tiệt, hoàn toàn không theo kịp tốc độ của hắn.........）[p]
+Dù hoàn toàn không theo kịp nhịp độ của Hayato, nhưng kỳ lạ là tôi lại không hề thấy khó chịu chút nào.[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="0"  fadeout="true"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="job_daiseikou.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]筋力が10上昇した[resetfont][r][font color="yellow"]テンションが上がった[resetfont][p]
+[font color="yellow"]Sức mạnh tăng 10 điểm[resetfont][r][font color="yellow"]Chỉ số Hưng phấn đã tăng[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.tension+=2"  name="tension"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
@@ -404,7 +405,7 @@
 [call  storage="ui_parameter.ks"  target="*kinryoku_update"  ]
 [jump  storage="sansaku_hankagaiEV_hayato.ks"  target="*atm"  cond="f.kan_atm_hayato==1"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]5000円支払った[resetfont][p]
+[font color="yellow"]Đã thanh toán 5000 Yên[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.money_updated-=5000"  name="money_updated"  cmd="-="  op="t"  val="5000"  val_2="undefined"  ]
@@ -417,10 +418,10 @@
 *okanenasi
 
 [tb_start_text mode=1 ]
-[舜]「行かない。そんな暇はない。」[p]
-[舜]（というか金がない）[p]
-隼人「おまえなぁ。そういうところだぞ？[r]まぁいいや、また今度付き合えよ。」[p]
-隼人「じゃあな」[p]
+[舜]「Không đi đâu. Tôi không rảnh.」[p]
+[舜]（Nói đúng hơn là không có tiền.）[p]
+Hayato「Cậu đấy nhé. Cứ cái kiểu đó bảo sao...[r]Mà thôi cũng được, lần sau nhớ đi cùng đấy.」[p]
+Hayato「Vậy nhé.」[p]
 [_tb_end_text]
 
 [call  storage="komyuhyouka_hayato.ks"  target="*top"  ]
@@ -428,11 +429,11 @@
 *kotowaru
 
 [tb_start_text mode=1 ]
-[舜]「やめとくわ」[p]
-[舜]（何もコイツと運動する必要ないもんな）[p]
-隼人「あー、そっか？　まぁ無理することはないけどさ」[p]
-隼人「じゃ、俺だけかっこよくなってモテさせてもらうわ」[p]
-[舜]（いちいち腹立つな…！　なんなんだアイツ）[p]
+[舜]「Tôi xin kiếu.」[p]
+[舜]（Cũng chẳng có lý do gì phải đi tập tành với tên này.）[p]
+Hayato「À, vậy sao? Mà cũng không cần phải gượng ép đâu.」[p]
+Hayato「Thế thì tôi đành một mình rèn luyện để đẹp trai và sát gái hơn vậy.」[p]
+[舜]（Mở miệng ra câu nào là thấy ghét câu đó...! Tên này bị cái quái gì vậy.）[p]
 [_tb_end_text]
 
 [call  storage="komyuhyouka_hayato.ks"  target="*top"  ]
@@ -441,7 +442,7 @@
 
 [call  storage="statusUP.ks"  target="*jyouken_cleared"  ]
 [tb_start_text mode=1 ]
-[舜]（どういうわけか、隼人が会計を済ませてくれていたらしい。ラッキー！）[p]
+[舜]（Không hiểu sao Hayato lại trả tiền luôn cho mình rồi. May quá!）[p]
 [_tb_end_text]
 
 [jump  storage="sansaku_hankagaiEV_hayato.ks"  target="*atm_call"  ]

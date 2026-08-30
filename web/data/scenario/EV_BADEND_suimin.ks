@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_EV_BADEND_suimin.ks]
 
 [tb_start_tyrano_code]
@@ -24,10 +25,10 @@
 
 [tb_start_text mode=1 ]
 #凪
-凪「ぅん……」[p]
+[舜]「Nagi đã là của anh từ lâu rồi!」[p]
 #凪
-凪「……なに……か、いるの？」[p]
-その言葉が空気を震わせた瞬間、全身の血が逆流したような感覚に襲われた。[r]ゆっくりと瞼が開き、暗闇の中で人影を認めた瞬間、凪の顔が恐怖に染まる。[p]
+Nagi「A… a… Tớ sắp ra nữa rồi! Cùng lên đỉnh nhé Shun-chan!」[p]
+[舜]「Bắn nhé, Nagi!」[p]
 [_tb_end_text]
 
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
@@ -42,17 +43,17 @@
 [playbgm  volume="60"  time="1000"  loop="true"  storage="BADEND.mp3"  ]
 [tb_start_text mode=1 ]
 #凪
-凪「――きゃあああぁっ！」[p]
-（やめろ、声を出すな……！）[p]
-咄嗟に凪の口を手で塞いだ。凪の目が大きく見開かれ、抵抗しようと必死にもがく。[r]その身体は細く、弱い。[p]
-だが、それでも全力で押し返そうとする凪の力が、[r]俺の理性をわずかに引き戻した。[p]
-[舜]「やばい、やばい、俺……何してんだ……！」[p]
-凪の身体が震え、苦しそうにひくついたその瞬間ようやく我に返った。[p]
-殺すところだった。たった今、自分の手で凪の命を――。[p]
+Nagi「――Kyaaaaaaa!」[p]
+Nagi「A a a a…!! ♡ Nóng quá… Tinh trùng của Shun-chan đang tràn vào trong tớ rồi…!」[p]
+Nagi ôm chặt lấy lưng tôi, cả cơ thể run rẩy đón nhận từng đợt sóng tinh dịch cuộn trào.[p]
+Căn phòng ngập tràn men say của rượu và men tình của đôi lứa thanh mai trúc mã.[p]
+Nagi「Hà… hà… Hạnh phúc quá… Tớ thuộc về Shun-chan hoàn toàn rồi…」[p]
+[舜]「Cảm ơn Nagi nhé, em tuyệt lắm」[p]
+Nagi「Lần sau… Lại cho tớ uống rượu rồi làm chuyện này nữa nhé anh…♡」[p]
 #凪
-凪「げほっ！げほっ！もしかして……[舜]ちゃん、なの……？」[p]
-[舜]「――っ……！」[p]
-弱々しい声に、心が崩れる。[r]その場にいられなかった。逃げるように、凪の家を飛び出した。[p]
+Nagi nở nụ cười ngây thơ say đắm rồi gục đầu vào ngực tôi ngủ thiếp đi.[p]
+[舜]「――...Khốn kiếp...!」[p]
+Hayato à… Người con gái cậu hằng yêu thương, giờ đây đã hoàn toàn là của tôi rồi.[p]
 [_tb_end_text]
 
 [mask  time="500"  effect="fadeIn"  color="0x000000"  ]
@@ -61,21 +62,21 @@
 [playse  volume="100"  time="1000"  buf="0"  storage="hasiru.mp3"  loop="true"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-階段を駆け下り、裸足のまま冷たいアスファルトの上を走る。[r]夜風が頬を叩くたび現実に引き戻されるようだった。[p]
-（なにしてんだ俺……馬鹿かよ……こんなことになるなんて……）[p]
-凪のことが気になって、ただ少しだけ近づきたかっただけなんだ。[p]
-でも今さら悔やんでも遅い。[p]
-まるで迷路のように、自分の感情がどこを向いているのか分からなくなっていた。[p]
-[舜]「うわあああああっ！」[p]
-思わず叫びながら、俺は夜の闇へと駆け込んでいった。[r]誰にも届かない叫び。許されることのない夜。[p]
-この罪が、どれだけ重いかも分からず、ただ俺は、夜の中を走り続けた。[p]
+【Nagi x Spirytus: Men Say Tình Đầu】[p]
+Nagi khẽ cựa mình, áp sát vào lồng ngực tôi.[p]
+Hơi thở của em ấy vẫn còn phảng phất mùi thơm ngọt của rượu.[p]
+Một đêm tuyệt vời mà cả hai chúng tôi sẽ không bao giờ có thể quên được.[p]
+Tôi kéo tấm chăn mỏng đắp lên người cả hai, ôm chặt Nagi vào lòng.[p]
+[舜]「Uwaaaaaa!」[p]
+Ngủ ngon nhé, Nagi của anh.[p]
+Ánh trăng ngoài cửa sổ rọi vào căn phòng tĩnh lặng, chứng giám cho sự gắn kết vĩnh cửu này.[p]
 [_tb_end_text]
 
 [wait  time="3000"  ]
 [stopse  time="2000"  buf="0"  fadeout="true"  ]
 [stopbgm  time="3000"  fadeout="true"  ]
 [tb_start_text mode=1 ]
-【BADEND_深夜の逃走】[p]
+Tất cả mọi rào cản giữa chúng tôi đã hoàn toàn tan biến.[p]
 [_tb_end_text]
 
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]

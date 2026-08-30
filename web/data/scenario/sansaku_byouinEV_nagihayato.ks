@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_sansaku_byouinEV_nagihayato.ks]
 
 [call  storage="ui_base.ks"  target="*top"  ]
@@ -22,15 +23,15 @@
 [tb_show_message_window  ]
 [mask_off  time="800"  effect="slideOutRight"  ]
 [tb_start_text mode=1 ]
-夕食時のせいだろうか、院内はいつも以上に静かだ。[p]
+[舜]「Ủa? Tình cờ thật đấy, hai người đang nói chuyện gì thế?」[p]
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-（凪と隼人がいる。話しかけてみようかな？）
+Nagi「A, Shun-chan...」[p]
 [_tb_end_text]
 
-[glink  color="btn_03_black"  storage="sansaku_byouinEV_nagihayato.ks"  size="20"  text="二人に話しかける"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*hanasu"  ]
-[glink  color="btn_03_black"  storage="sansaku_byouinEV.ks"  size="20"  text="診察を受ける（体力▲￥5000▼）"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
+[glink  color="btn_03_black"  storage="sansaku_byouinEV_nagihayato.ks"  size="20"  text="Bắt chuyện với cả hai người"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*hanasu"  ]
+[glink  color="btn_03_black"  storage="sansaku_byouinEV.ks"  size="20"  text="Khám bệnh (Hồi Thể lực / -5,000 Yên)"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
 [s  ]
 *hanasu
 
@@ -51,19 +52,19 @@
 
 [jump  storage="sansaku_byouinEV_nagihayato.ks"  target="*EV_nagihayato2"  cond="f.koukando_nagi>29"  ]
 [tb_start_text mode=1 ]
-[舜]「あれ？　偶然だな、なんの話してたんだ？」[p]
-凪「あ、[舜]ちゃん…」[p]
-[chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_01c.gif"]隼人「恋人同士の話をしてたんだよ」[p]
-隼人「デートはどこに行こうかとか…結婚の挨拶はいつにしようとか、式場はどこがいいとか」[p]
-凪「え？　えっと、そんな話はしてなかったけど…」[p]
-隼人「これからしようと思ってたトコだから」[p]
-[舜]（完全に牽制されてるな…）[p]
-[chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_00c.gif"]凪「ごめんね[舜]ちゃん、また今度」[p]
-[舜]「あぁ、また今度な」[p]
+[chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_01c.gif"]Hayato「Đang nói chuyện của những người yêu nhau thôi.」[p]
+Hayato「Như là hẹn hò ở đâu này... Khi nào thì đi chào hỏi hai bên gia đình, rồi chọn nơi tổ chức đám cưới ở đâu này.」[p]
+[chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_01c.gif"] Nagi「Hả? Ưm, tụi em đâu có nói mấy chuyện đó đâu...」[p]
+Hayato「Thì bây giờ anh đang định nói đây.」[p]
+[舜]（Bị dằn mặt hoàn toàn rồi...）[p]
+[chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_00c.gif"]Nagi「Xin lỗi Shun-chan nhé, hẹn cậu dịp khác.」[p]
+[舜]「Ừ, hẹn dịp khác nhé.」[p]
+[chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_00c.gif"] [font color="yellow"]Hảo cảm của hai người đã tăng[resetfont][p]
+[舜]「Chào Nagi!」[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]二人の好感度が上がった[resetfont][p]
+[chara_mod name="kyara_nagi_sabun2" cross="false" time="500" storage="chara/179/ADV_nagi_01_04c.gif"]Nagi「Shun-chan...! Cậu làm gì ở đây thế... Tình cờ thật đấy.」[p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP3"  ]
@@ -77,20 +78,20 @@
 *EV_nagihayato2
 
 [tb_start_text mode=1 ]
-[舜]「よっ、凪！」[p]
-[chara_mod name="kyara_nagi_sabun2" cross="false" time="500" storage="chara/179/ADV_nagi_01_04c.gif"]凪「[舜]ちゃん…！　どうしたの？　こんなところで…偶然だね」[p]
-凪「会えると思ってなかったから…嬉しいな」[p]
-隼人「幼馴染だからって、ずいぶん親し気に声かけてくるんだな」[p]
-凪「いいの、[舜]ちゃんとは昔からずーっと変わらない関係なんだから。ね？　[舜]ちゃん」[p]
-[舜]「んー、そうだな」[p]
-[chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_03c.gif"]隼人「う…でも、一応俺と付き合ってるんだからさ…周りの目もあるし…」[p]
-凪「そうかな？　別に私は大丈夫だよ？」[p]
-[舜]「まぁまぁ、彼氏としてはやっぱり他の男の存在は気になるだろうから。また連絡するよ」[p]
-凪「うん、待ってるね…！」[p]
+Nagi「Tớ không nghĩ là sẽ gặp được cậu... Vui quá đi.」[p]
+[chara_mod name="kyara_nagi_sabun2" cross="false" time="500" storage="chara/179/ADV_nagi_01_04c.gif"] Hayato「Bạn thuở nhỏ thì bạn thuở nhỏ, cậu cũng bắt chuyện thân thiết gớm nhỉ.」[p]
+Nagi「Không sao đâu, tớ với Shun-chan từ ngày xưa đã luôn thân thiết thế này rồi mà. Nhỉ? Shun-chan.」[p]
+[舜]「Ừm, đúng thế thật.」[p]
+[chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_03c.gif"]Hayato「Ư... Nhưng mà, dù sao em cũng đang hẹn hò với anh cơ mà... Còn ánh mắt của mọi người xung quanh nữa chứ...」[p]
+Nagi「Thế sao? Em thấy bình thường mà?」[p]
+[chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_03c.gif"] [舜]「Thôi nào, làm bạn trai thì đương nhiên sẽ bận tâm đến sự tồn tại của những người đàn ông khác rồi. Tớ sẽ liên lạc lại sau nhé.」[p]
+Nagi「Ừm, tớ đợi cậu nhé...!」[p]
+[font color="yellow"]Hảo cảm của hai người đã tăng[resetfont][p]
+[舜]（Có Hayato ở đây... Tạm thời bỏ qua vậy.）[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-[font color="yellow"]二人の好感度が上がった[resetfont][p]
+Bên trong quán khá náo nhiệt, nhưng đâu đó vẫn phảng phất một sự tĩnh lặng dễ chịu.[p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP3"  ]
@@ -108,7 +109,7 @@
 *koibito
 
 [tb_start_text mode=1 ]
-[舜]（隼人がいる…今はやめておこう）[p]
+（Giờ thì, phải làm sao đây?）
 [_tb_end_text]
 
 [jump  storage="sansaku.ks"  target="*end"  ]

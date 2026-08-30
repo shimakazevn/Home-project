@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_H_tubomi_J2.ks]
 
 [tb_start_tyrano_code]
@@ -40,7 +41,7 @@
 
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_j_tubomi_kaisi3.mp3" buf="2"]蕾「エッチなご奉仕してくれる奥さんってどう？　しかも、すっごく可愛いんだから♡　好きでしょ？」[p]
+[playse storage="tubomi/voice_j_tubomi_kaisi3.mp3" buf="2"]Tsubomi「Một cô vợ nhỏ biết hầu hạ chuyện giường chiếu dâm đãng thế này thì sao nào? Đã vậy còn siêu cấp đáng yêu nữa chứ♡ Anh thích lắm đúng không?」[p]
 [_tb_end_text]
 
 *top2
@@ -339,11 +340,11 @@
 [jump  storage="H_tubomi_J2.ks"  target="*sounyu_skip"  cond="f.H_sounyu==1"  ]
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_j2_1_tubomi_sou1.mp3" buf="2"]蕾「はーっ…はーっ…はーっ♡　動いちゃダメ…今日は私がするんだから…♡」[p]
-[舜]「無理することないから…蕾、一旦待って。やっぱ俺が…」[p]
-[playse storage="tubomi/voice_j2_1_tubomi_sou2.mp3" buf="2"]蕾「だーめっ…！　入るトコ…見てて？　ほら、腰落として…おちんちん食べちゃうよ？」[p]
-[舜]「今日の蕾…エロすぎだろ…あぁ、ヤバ…フル勃起してる…」[p]
-[playse storage="tubomi/voice_j2_1_tubomi_sou3.mp3" buf="2"]蕾「んんっ♡　あっ、あぁっ♡　お、おっきいっ…入ってく♡　んんっ♡　中いっぱいになってる♡」[p]
+[playse storage="tubomi/voice_j2_1_tubomi_sou1.mp3" buf="2"]Tsubomi「Hà... hà... hà...♡ Đừng cử động nhé... Hôm nay để em tự làm hết cho...♡」[p]
+[舜]「Không cần phải gượng ép đâu... Tsubomi, chờ chút đã. Hay để anh...」[p]
+[playse storage="tubomi/voice_j2_1_tubomi_sou2.mp3" buf="2"]Tsubomi「Không được đâu...! Hãy nhìn chỗ nó đang đi vào đi này? Nào, hạ hông xuống... Em sẽ nuốt trọn con cu vào nhé?」[p]
+[舜]「Tsubomi hôm nay... dâm quá thể đáng rồi đấy... A, chết tiệt... Cương cứng hết cỡ luôn rồi...」[p]
+[playse storage="tubomi/voice_j2_1_tubomi_sou3.mp3" buf="2"]Tsubomi「Ưm...♡ A, a...♡ T-To quá... Đang chui vào rồi♡ Ưm...♡ Bên trong đầy ắp cả rồi này♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sounyu=1"  name="H_sounyu"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -580,11 +581,11 @@
 
 [cm  ]
 [tb_start_text mode=1 ]
-[舜]「はぁっ、はぁっ！　あぁ、もうヤバ…出るっ！　蕾っ…！」[p]
-蕾「私に全部かけてっ♡　精子でベトベトにしてほしいのっ♡　真っ白になっちゃうほどぶっかけてっ♡」[p]
-[舜]「くぅぅっ！　エロすぎだろ…この前までエロいこと言われるだけで真っ赤になってたくせに…」[p]
-蕾「あんたに大人にされちゃったの♡　んっ♡　あっ♡　あぁっ♡　かけて、全部頂戴っ♡」[p]
-[舜]「なんでそんなエロいんだよ…！　だめだっ、出る…！　イクっ！　くぅっ、あっ、あぁぁぁっ！」[p]
+[舜]「Hà, hà! A, chết rồi... Sắp ra mất! Tsubomi...!」[p]
+Tsubomi「Hãy bắn hết lên người em đi♡ Em muốn người dính đầy tinh dịch nhơm nhớp cơ♡ Bắn thật nhiều đến mức trắng xóa cả người luôn đi anh♡」[p]
+[舜]「Khốn thật! Dâm đãng quá mức rồi đấy... Mới mấy hôm trước chỉ cần nghe nói bậy bạ thôi là mặt đã đỏ bừng rồi cơ mà...」[p]
+Tsubomi「Tại vì em đã bị anh biến thành người lớn mất rồi mà♡ Ưm...♡ A...♡ A...♡ Bắn lên đi, cho em tất cả đi mà♡」[p]
+[舜]「Sao em lại dâm đến mức này cơ chứ...! Không xong rồi, ra mất...! Bắn đây! Khốn thật, a, a... a...!」[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="0"  fadeout="true"  ]
@@ -599,9 +600,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あんっ♡　あっ、あぁぁぁっ♡　すごい…♡　興奮していっぱい出ちゃったの？」[p]
-[舜]「蕾がエロ過ぎて…我慢できなかった…まだ、ビクビク跳ねてんだけど…」[p]
-蕾「んんっ…おかげで体精子まみれになっちゃった…♡　[舜]の匂いにされちゃったよ」[p]
+Tsubomi「A...♡ A, a... a...♡ Tuyệt quá...♡ Vì hưng phấn quá nên anh bắn ra nhiều thế này sao?」[p]
+[舜]「Vì Tsubomi quá đỗi gợi tình... nên anh không kìm nén nổi... Nhìn kìa, nó vẫn còn đang giật nảy lên này...」[p]
+Tsubomi「Ưm... Nhờ vậy mà khắp người em dính đầy tinh dịch rồi nè...♡ Em bị nhuộm trọn mùi hương của anh [舜] mất rồi」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_bukkake_tubomi+=1"  name="Hresult_bukkake_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -616,9 +617,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あぅぅっ♡　何、コレっ…もうっ…体中ヌルヌルになっちゃってるんだけど…♡」[p]
-蕾「ホントに体真っ白になるほどかけられちゃったぁ♡　それにすごい匂い…♡　これ、だめかも♡」[p]
-蕾「ふーっ…はぁ、匂い嗅いでるだけで…奥、またキュンってときめいちゃうんだってばぁ♡」[p]
+Tsubomi「A... hức♡ Cái gì thế này... Trời ạ... Toàn thân em trơn tuột nhầy nhụa hết cả rồi nè...♡」[p]
+Tsubomi「Thực sự là bị bắn lên trắng xóa cả người luôn rồi này♡ Đã vậy mùi còn nồng nặc nữa...♡ Thế này thì chết mất thôi♡」[p]
+Tsubomi「Phù... Hà, chỉ cần ngửi mùi thôi... Là nơi sâu kín lại nhói lên sung sướng rồi này♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_bukkake_tubomi+=1"  name="Hresult_bukkake_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -628,11 +629,11 @@
 
 [cm  ]
 [tb_start_text mode=1 ]
-蕾「んんっ♡　すごいっ♡　先っぽ膨れてきたっ♡　はぁ、あっ♡　ビクビクしてるっ…もう出ちゃうの？」[p]
-[舜]「もう出る…！　一旦抜いてくれ…早く…！　もう射精寸前だからっ…！」[p]
-蕾「だめ♡　中に出して♡　私のこと見て…私の中に出してるんだって意識しながら…全部注いで♡」[p]
-蕾「私のこと…あんたのモノにしてくれるんでしょ♡　早く…頂戴っ♡」[p]
-[舜]「はぁ、はっ、ああぁっ！　なら…１番奥に注いでやる…！　出る、出る出るでるっ！　あっ、あぁぁぁ！」[p]
+Tsubomi「Ưm...♡ Tuyệt quá♡ Đầu khấc lại nở to lên rồi kìa♡ Hà, a...♡ Nó đang giật giật kìa... Sắp bắn nữa sao anh?」[p]
+[舜]「Sắp ra rồi...! Rút ra nhanh đi em... Mau lên...! Anh sắp xuất tinh tới nơi rồi...!」[p]
+Tsubomi「Không chịu đâu♡ Bắn vào bên trong đi anh♡ Hãy nhìn em... Vừa ý thức được rằng anh đang bắn vào bên trong em... Vừa rót hết toàn bộ vào đây đi♡」[p]
+Tsubomi「Anh sẽ biến em... Thành người phụ nữ của anh cơ mà đúng không♡ Mau lên... Cho em đi anh♡」[p]
+Tsubomi「Anh [舜]... Mau lên... Đút vào bên trong đi mà♡」[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="0"  fadeout="true"  ]
@@ -661,9 +662,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「あぁぁぁっ♡　あっ、中っ…ドクドクって出てるのわかるっ…♡　すごい…♡」[p]
-蕾「お腹の中注がれちゃってるっ♡　んっ♡　はぁっ、あぁっ♡　熱いの、いっぱいになっちゃったぁ」[p]
-蕾「ふーっ♡　ふーっ♡　んんっ♡　私の中、あんた仕様になっちゃったよ？　ふふ、幸せ♡」[p]
+[舜]「Bắn nhé...! Anh bắn vào trong đây! Nhận lấy toàn bộ tinh dịch của anh đi!」[p]
+Tsubomi「A... a... a...♡ Bên trong... Bắn ừng ực từng đợt rồi kìa♡ Sướng quá đi anh ơi♡」[p]
+[舜]「Khốn thật... Trong này nóng ran như thiêu đốt vậy...! Phê quá đi mất!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_nakadasi_tubomi+=1"  name="Hresult_nakadasi_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -677,9 +678,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-蕾「ひぅぅぅっ♡　おっ♡　おおおっ♡　すごいっ…溢れちゃうっ…いっぱい出てるのっ♡」[p]
-蕾「こんなに出されたら…全部精子でいっぱいになっちゃうじゃない♡　１番奥まで届いてるかも♡」[p]
-蕾「さっきから…先っぽが子宮の入口にも当たってるんだからね？　中に直接注がれちゃった…♡」[p]
+Tsubomi「Hức... a...♡ Ôi...♡ Ôi trời ơi♡ Tuyệt quá... Trào ra ngoài rồi... Bắn ra nhiều kinh khủng luôn á♡」[p]
+Tsubomi「Bị bắn nhiều đến mức này... Thì toàn bộ bên trong đầy ắp tinh dịch rồi còn gì nữa♡ Chắc chạm tới tận sâu đáy cùng luôn rồi quá♡」[p]
+Tsubomi「Từ nãy tới giờ... Đầu khấc cứ cọ sát thẳng vào cửa tử cung cơ mà đúng không? Bị rót thẳng trực tiếp vào bên trong rồi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_nakadasi_tubomi+=1"  name="Hresult_nakadasi_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]

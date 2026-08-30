@@ -1,3 +1,4 @@
+
 [_tb_system_call storage=system/_H_rinko_R2_2.ks]
 
 [tb_start_tyrano_code]
@@ -33,7 +34,7 @@
 
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="rinko/voice_r_rinko_kaisi2.mp3" buf="3"]凛子「私がＭだなんて…年下の[舜]くんにわからせられちゃうの…？　恥ずかしいよ…」[p]
+[playse storage="rinko/voice_r_rinko_kaisi2.mp3" buf="3"]Rinko「Chị mà lại là M sao... bị Shun-kun nhỏ tuổi hơn dạy dỗ cho thế này...? Xấu hổ lắm...」[p]
 [_tb_end_text]
 
 *top2
@@ -340,11 +341,11 @@
 [jump  storage="H_rinko_R2_2.ks"  target="*sounyu_skip"  cond="f.H_sounyu==1"  ]
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
-[playse storage="rinko/voice_r2_2_rinko_sou1.mp3" buf="3"]凛子「[舜]くん、ここでこのまま中に挿れちゃうんでしょう…？」[p]
-[舜]「期待でいっぱいの顔しちゃって…もちろん挿れるよ。ちゃんと踏ん張ってね？」[p]
-[playse storage="rinko/voice_r2_2_rinko_sou2.mp3" buf="3"]凛子「やっぱり今日の[舜]くん、いつもよりグイグイきてて意地悪だね…♡」[p]
-[舜]「強引なほうが興奮するくせに。中もトロトロ…簡単に奥まで入っちゃうよ…ほらっ…！」[p]
-[playse storage="rinko/voice_r2_2_rinko_sou3.mp3" buf="3"]凛子「あ゛ぅっ♡　いっぱいになってる…♡　んんっ♡」　[p]
+[playse storage="rinko/voice_r2_2_rinko_sou1.mp3" buf="3"]Rinko「Shun-kun, em định cứ thế đút vào trong ở chỗ này sao...?」[p]
+[舜]「Làm vẻ mặt đầy mong đợi thế kia... tất nhiên là đút vào rồi. Đứng cho vững đấy nhé?」[p]
+[playse storage="rinko/voice_r2_2_rinko_sou2.mp3" buf="3"]Rinko「Quả nhiên hôm nay Shun-kun tấn công dồn dập hơn mọi khi, xấu tính quá đi...♡」[p]
+[舜]「Rõ ràng là cưỡng ép thì chị mới hưng phấn mà. Bên trong cũng ướt nhẹp rồi... dễ dàng vào tận sâu bên trong thôi... đây này...!」[p]
+[playse storage="rinko/voice_r2_2_rinko_sou3.mp3" buf="3"]Rinko「Au♡ Đầy ứ lên rồi...♡ Ưm♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sounyu=1"  name="H_sounyu"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -580,11 +581,11 @@
 
 [cm  ]
 [tb_start_text mode=1 ]
-[舜]「あぁ、はぁっ…イク…凛子さんの体に思いっきりかけていい？」[p]
-凛子「はぁっ、はぁっ、ダメって言ってもかけるつもりなんでしょう？」[p]
-[舜]「さすが凛子さんわかってるね…イクとこ…鏡越しに見ててよ…あぁ、もう出る…出ちゃうっ」[p]
-凛子「出して…♡　[舜]くんの精液、思いっきりかけてくれていいからっ♡」[p]
-[舜]「あぁ、出る…！　凛子さんの体…精子まみれにしてあげる…！　あぁぁぁぁっ！」[p]
+[舜]「A, hà... ra mất... em bắn hết cỡ lên người chị Rinko được không?」[p]
+Rinko「Hà, hà, dù chị có nói không được thì em cũng định bắn mà đúng không?」[p]
+[舜]「Quả nhiên chị Rinko hiểu rõ nhỉ... lúc em ra... hãy nhìn qua gương đi nhé... a, sắp ra rồi... ra mất thôi.」[p]
+Rinko「Bắn đi em...♡ Tinh dịch của Shun-kun, em cứ bắn hết cỡ lên người chị đi♡」[p]
+[舜]「A, sắp ra rồi...! Cơ thể chị Rinko... em sẽ làm cho dính đầy tinh dịch...! Aaaa!」[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="0"  fadeout="true"  ]
@@ -598,9 +599,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ん゛ん゛っ♡　あぁぁっ♡　はぁっ、はぁっ…[舜]くんがイク時の顔…見ちゃった…」[p]
-凛子「はぁ、あっ♡　んんっ♡　反応して…中ヒクヒクしてるの止まらないの♡」[p]
-[舜]「俺の顔で興奮しちゃったんだ？　やっぱ凛子さんはスケベだな…」[p]
+Rinko「Ưm♡ Aaaa♡ Hà, hà... khuôn mặt lúc Shun-kun lên đỉnh... chị thấy rồi...」[p]
+Rinko「Hà, a♡ Ưm♡ Phản ứng lại rồi... bên trong cứ giật giật không chịu dừng lại kìa♡」[p]
+[舜]「Thấy mặt em là hưng phấn rồi sao? Quả nhiên chị Rinko dâm đãng thật đấy...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_bukkake_rinko+=1"  name="Hresult_bukkake_rinko"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -614,9 +615,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「お゛お゛お゛っ♡　くぅぅっ♡　はぁ、あっ…いっぱい出ちゃったね…♡」[p]
-凛子「んっ…はぁ、あっ…かけられちゃった…[舜]くんの匂い、マーキングされちゃったみたいね」[p]
-凛子「はぁっ…はぁ…こんなに精液まみれになったら、少し洗っただけじゃ匂い落ちないかも♡」[p]
+Rinko「Oo♡ Khốn♡ Hà, a... bắn ra nhiều quá nhỉ...♡」[p]
+Rinko「Ưm... hà, a... bị bắn lên người rồi... mùi của Shun-kun, cứ như bị đánh dấu vậy nhỉ.」[p]
+Rinko「Hà... hà... bị dính đầy tinh dịch thế này, chỉ rửa sơ qua chắc không bay hết mùi đâu♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_bukkake_rinko+=1"  name="Hresult_bukkake_rinko"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -626,10 +627,10 @@
 
 [cm  ]
 [tb_start_text mode=1 ]
-凛子「あっ♡　あぁっ♡　んんっ♡　[舜]くんの、中で膨らんできてるっ…」[p]
-[舜]「よくわかったね…もう出ちゃうって合図送ってたんだよ…凛子さん全部受け止めてくれるでしょ？」[p]
-凛子「んんっ♡　いっぱい出されたら…受け止めきれない…溢れちゃうよ♡」[p]
-[舜]「だめ、全部注ぎ込むからこぼさないようにして…あぁ、出る…いく、イクイクイクっ！　あっ、あぁぁ！」[p]
+Rinko「A♡ A♡ Ưm♡ Của Shun-kun, đang căng phồng lên ở bên trong kìa...」[p]
+[舜]「Chị hiểu rõ quá nhỉ... em đã ra hiệu là sắp ra rồi đấy... chị Rinko sẽ đón nhận tất cả đúng không?」[p]
+Rinko「Ưm♡ Bắn nhiều quá... chị không đón nhận hết nổi đâu... trào ra mất thôi♡」[p]
+[舜]「Không được, em sẽ rót tất cả vào nên chị đừng để trào ra đấy... a, sắp ra rồi... ra, ra, ra mất! A, aaaa!」[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="0"  fadeout="true"  ]
@@ -657,9 +658,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ひぅぅぅっ♡　あっ、あぁぁぁっ♡　中で弾けて…あっ、んんんっ♡」[p]
-[舜]「ヤッバ、中出しされてる瞬間の顔まで…全部見えちゃってる」[p]
-凛子「んんっ♡　ダメっ、ダメダメっ、見ないでっ♡　あっ、あぁぁぁっ♡　変な顔だからっ♡」[p]
+Rinko「Hiu♡ A, aaaa♡ Phọt ra ở bên trong rồi... a, ưmmm♡」[p]
+[舜]「Kích thích quá, đến cả khuôn mặt trong khoảnh khắc bị bắn vào trong... cũng nhìn thấy rõ mồn một kìa.」[p]
+Rinko「Ưm♡ Không được, không được đâu, đừng nhìn mà♡ A, aaaa♡ Mặt chị đang kỳ lạ lắm♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_nakadasi_rinko+=1"  name="Hresult_nakadasi_rinko"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -672,9 +673,9 @@
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-凛子「ひぐぅぅぅっ♡　お゛お゛っ♡　すごい量…お腹の中っ、パンパンになっちゃう♡」[p]
-凛子「あ゛っ♡　あ゛あ゛っ♡　こぼれちゃう…熱いの…太ももに伝って流れちゃってるの♡」[p]
-凛子「んんっ…いっぱい出たんだね[舜]くん…♡　もう収まりきらないの…」[p]
+Rinko「Hức♡ Oo♡ Lượng nhiều quá... trong bụng, căng phồng lên mất thôi♡」[p]
+Rinko「A♡ Aaa♡ Trào ra mất... thứ nóng hổi... đang chảy dọc xuống đùi rồi này♡」[p]
+Rinko「Ưm... em bắn ra nhiều thật đấy Shun-kun...♡ Chị không chứa nổi nữa đâu...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_nakadasi_rinko+=1"  name="Hresult_nakadasi_rinko"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
