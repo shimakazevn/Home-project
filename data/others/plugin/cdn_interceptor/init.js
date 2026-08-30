@@ -29,7 +29,7 @@
     // HOME_AssetDB — IndexedDB Persistent Asset Cache
     // ============================================================
     const IDB_NAME = 'HOME_AssetDB';
-    const IDB_VERSION = 1;
+    const IDB_VERSION = 2; // v2: xóa 'images' store (quá nặng ~8GB), chỉ giữ audio_raw + meta
     let assetDB = null;
     let assetDBReady = null; // Promise that resolves to db
 
@@ -40,8 +40,12 @@
                 const req = indexedDB.open(IDB_NAME, IDB_VERSION);
                 req.onupgradeneeded = (e) => {
                     const db = e.target.result;
-                    if (!db.objectStoreNames.contains('images')) {
-                        db.createObjectStore('images', { keyPath: 'key' });
+                    // Migration v1 → v2: xóa 'images' store cũ (~8GB không cần thiết)
+                    // Browser HTTP Cache xử lý ảnh tốt hơn, tự giới hạn dung lượng
+                    // IDB chỉ dùng cho audio_raw (Stego decode) và meta (fingerprint)
+                    if (db.objectStoreNames.contains('images')) {
+                        db.deleteObjectStore('images');
+                        console.log('[HOME_AssetDB] Đã xóa images store cũ (~8GB), giải phóng disk.');
                     }
                     if (!db.objectStoreNames.contains('audio_raw')) {
                         db.createObjectStore('audio_raw', { keyPath: 'key' });
@@ -116,10 +120,9 @@
     async function clearAssetDB() {
         if (!assetDB) return;
         try {
-            const tx = assetDB.transaction(['images', 'audio_raw', 'meta'], 'readwrite');
-            tx.objectStore('images').clear();
-            tx.objectStore('audio_raw').clear();
-            tx.objectStore('meta').clear();
+            const stores = ['audio_raw', 'meta'];
+            const tx = assetDB.transaction(stores, 'readwrite');
+            stores.forEach(s => { if (assetDB.objectStoreNames.contains(s)) tx.objectStore(s).clear(); });
             await new Promise((r) => { tx.oncomplete = r; tx.onerror = r; });
             console.log('[HOME_AssetDB] Đã xóa cache cũ do phiên bản manifest thay đổi.');
         } catch(e) {}
@@ -157,30 +160,12 @@
         });
     }
 
-    // Read-through cache: ảnh PNG/GIF/JPG → lưu Blob vào IDB, trả Blob URL
-    const idbImageBlobURLs = new Map();
-    async function getIDBImage(key, cdnUrl) {
-        // 1. RAM cache (phiên hiện tại)
-        if (idbImageBlobURLs.has(key)) return idbImageBlobURLs.get(key);
-        // 2. IndexedDB (các phiên trước) — đọc ổ cứng ~1ms, không cần mạng
-        const stored = await idbGet('images', key);
-        if (stored && stored.blob) {
-            const blobUrl = URL.createObjectURL(stored.blob);
-            idbImageBlobURLs.set(key, blobUrl);
-            return blobUrl;
-        }
-        // 3. CDN fetch (có giới hạn đồng thời) → lưu IDB cho lần sau
-        try {
-            const resp = await throttledFetch(cdnUrl, { referrerPolicy: 'no-referrer' });
-            if (!resp.ok) return cdnUrl;
-            const blob = await resp.blob();
-            const blobUrl = URL.createObjectURL(blob);
-            idbImageBlobURLs.set(key, blobUrl);
-            idbPut('images', { key, blob, cachedAt: Date.now() }).catch(() => {});
-            return blobUrl;
-        } catch(e) {
-            return cdnUrl;
-        }
+    // ẢNH: KHÔNG lưu vào IDB — Browser HTTP Cache xử lý tốt hơn, không tốn hàng chục GB disk!
+    // Chỉ cần `new Image()` là browser tự cache. IDB chỉ dành cho audio Stego.
+    function preloadImage(url) {
+        const img = new Image();
+        img.crossOrigin = 'anonymous';
+        img.src = url;
     }
 
     // Read-through cache: Stego Audio PNG → MP3 ArrayBuffer → lưu IDB (bỏ bước giải mã Deflate)
@@ -328,24 +313,20 @@
             }
         }
 
-        console.log(`[CDN Preloader] Xếp hàng nạp trước ${tier1List.length} Tier-1 + ${tier2List.length} Tier-2 tài nguyên (tối đa 6 fetch song song)...`);
+        console.log(`[CDN Preloader] Xếp hàng nạp trước ${tier1List.length} Tier-1 + ${tier2List.length} Tier-2 tài nguyên (tối đa 6 fetch song song, không lưu IDB)...`);
 
-        // Gộp Tier-1 và Tier-2 vào 1 hàng đợi duy nhất, Tier-1 ưu tiên trước
-        // Tất cả đều dùng idle batching để KHÔNG bao giờ fire dồn dập
+        // Gộp Tier-1 và Tier-2 vào 1 hàng đợi, Tier-1 ưu tiên trước
+        // Ảnh dùng new Image() → Browser HTTP Cache tự động, không tốn disk
         const allItems = [...tier1List, ...tier2List];
         let idx = 0;
-        const BATCH = 8; // 8 assets mỗi lượt idle → tối đa 8 * 6 = 48 concurrent trong 1 batch
+        const BATCH = 8;
 
         const loadNextBatch = () => {
             const batch = allItems.slice(idx, idx + BATCH);
             idx += BATCH;
             batch.forEach(item => {
                 if (item.url.includes('.png') || item.url.includes('.jpg') || item.url.includes('.gif') || item.url.includes('.webp') || item.key.includes('/fgimage/') || item.key.includes('/bgimage/')) {
-                    getIDBImage(item.key, item.url).catch(() => {
-                        const img = new Image();
-                        img.crossOrigin = 'anonymous';
-                        img.src = item.url;
-                    });
+                    preloadImage(item.url);
                 } else if (item.url.endsWith('.mp3') || item.key.includes('/sound/') || item.key.includes('/bgm/')) {
                     fetchAudioBuffer(item.key).catch(() => {});
                 }
@@ -359,7 +340,7 @@
             }
         };
 
-        // Trì hoãn 2s sau khi load xong để game khởi động mượt, rồi mới bắt đầu warm-up cache
+        // Trì hoãn 2s sau khi load xong để game khởi động mượt
         setTimeout(loadNextBatch, 2000);
     }
 
