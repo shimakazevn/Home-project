@@ -194,10 +194,74 @@ if (sf.config_default_set !== true) {
 	}
 
 	tf.change_bgm = function(){
+		let vol = parseInt(tf.current_bgm_vol);
+		if (isNaN(vol)) vol = 80;
+		TYRANO.kag.config.defaultBgmVolume = vol;
+		if (!TYRANO.kag.stat.map_bgm_volume || typeof TYRANO.kag.stat.map_bgm_volume !== 'object') {
+			TYRANO.kag.stat.map_bgm_volume = {};
+		}
+		TYRANO.kag.stat.map_bgm_volume["0"] = vol;
 		TYRANO.kag.ftag.startTag("bgmopt", {
-			volume: tf.current_bgm_vol,
-		})
-	}
+			volume: vol,
+		});
+	};
+
+	tf.change_se = function(){
+		let vol = parseInt(tf.current_se_vol);
+		if (isNaN(vol)) vol = 80;
+		TYRANO.kag.config.defaultSeVolume = vol;
+		if (!TYRANO.kag.stat.map_se_volume || typeof TYRANO.kag.stat.map_se_volume !== 'object') {
+			TYRANO.kag.stat.map_se_volume = {};
+		}
+		TYRANO.kag.stat.map_se_volume["0"] = vol;
+		if (sf._skskpnt_volume) sf._skskpnt_volume[0] = vol;
+		TYRANO.kag.ftag.startTag("seopt", {
+			buf: "0",
+			volume: vol,
+		});
+	};
+
+	tf.change_voice_1 = function(){
+		let vol = parseInt(tf.current_voice_1_vol);
+		if (isNaN(vol)) vol = 80;
+		if (!TYRANO.kag.stat.map_se_volume || typeof TYRANO.kag.stat.map_se_volume !== 'object') {
+			TYRANO.kag.stat.map_se_volume = {};
+		}
+		TYRANO.kag.stat.map_se_volume["1"] = vol;
+		if (sf._skskpnt_volume) sf._skskpnt_volume[1] = vol;
+		TYRANO.kag.ftag.startTag("seopt", {
+			buf: "1",
+			volume: vol,
+		});
+	};
+
+	tf.change_voice_2 = function(){
+		let vol = parseInt(tf.current_voice_2_vol);
+		if (isNaN(vol)) vol = 80;
+		if (!TYRANO.kag.stat.map_se_volume || typeof TYRANO.kag.stat.map_se_volume !== 'object') {
+			TYRANO.kag.stat.map_se_volume = {};
+		}
+		TYRANO.kag.stat.map_se_volume["2"] = vol;
+		if (sf._skskpnt_volume) sf._skskpnt_volume[2] = vol;
+		TYRANO.kag.ftag.startTag("seopt", {
+			buf: "2",
+			volume: vol,
+		});
+	};
+
+	tf.change_voice_3 = function(){
+		let vol = parseInt(tf.current_voice_3_vol);
+		if (isNaN(vol)) vol = 80;
+		if (!TYRANO.kag.stat.map_se_volume || typeof TYRANO.kag.stat.map_se_volume !== 'object') {
+			TYRANO.kag.stat.map_se_volume = {};
+		}
+		TYRANO.kag.stat.map_se_volume["3"] = vol;
+		if (sf._skskpnt_volume) sf._skskpnt_volume[3] = vol;
+		TYRANO.kag.ftag.startTag("seopt", {
+			buf: "3",
+			volume: vol,
+		});
+	};
 	[endscript]
 
 [cm]
@@ -215,48 +279,19 @@ if (sf.config_default_set !== true) {
 ;------------------------------------------------------------------------------------------------------
 [slider name="bgm" var="tf.current_bgm_vol" x="219" y="161" width="290" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*vol_bgm_change" exp="tf.change_bgm()"]
 [call target="*mute_bgm_button" ]
-; 	[button name="bgmvol,bgmvol_10"  fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[1]"  y="112" exp="tf.current_bgm_vol =  10; tf.config_num_bgm =  1"]
-; 	[button name="bgmvol,bgmvol_20"  fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[2]"  y="112" exp="tf.current_bgm_vol =  20; tf.config_num_bgm =  2"]
-; 	[button name="bgmvol,bgmvol_30"  fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[3]"  y="112" exp="tf.current_bgm_vol =  30; tf.config_num_bgm =  3"]
-; 	[button name="bgmvol,bgmvol_40"  fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[4]"  y="112" exp="tf.current_bgm_vol =  40; tf.config_num_bgm =  4"]
-; 	[button name="bgmvol,bgmvol_50"  fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[5]"  y="112" exp="tf.current_bgm_vol =  50; tf.config_num_bgm =  5"]
-; 	[button name="bgmvol,bgmvol_60"  fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[6]"  y="112" exp="tf.current_bgm_vol =  60; tf.config_num_bgm =  6"]
-; 	[button name="bgmvol,bgmvol_70"  fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[7]"  y="112" exp="tf.current_bgm_vol =  70; tf.config_num_bgm =  7"]
-; 	[button name="bgmvol,bgmvol_80"  fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[8]"  y="112" exp="tf.current_bgm_vol =  80; tf.config_num_bgm =  8"]
-; 	[button name="bgmvol,bgmvol_90"  fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[9]"  y="112" exp="tf.current_bgm_vol =  90; tf.config_num_bgm =  9"]
-; 	[button name="bgmvol,bgmvol_100" fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[10]" y="112" exp="tf.current_bgm_vol = 100; tf.config_num_bgm = 10"]
-
-; ;	BGMミュート
-; ;	[button name="bgmvol,bgmvol_0"   fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="32" height="32" x="956" y="197" exp="tf.current_bgm_vol = 0; tf.config_num_bgm = 0"]
-; 	[button name="bgmvol,bgmvol_0"   fix="true" target="*vol_bgm_mute" graphic="&tf.btn_path_off" width="32" height="32" x="956" y="112"]
 
 ;------------------------------------------------------------------------------------------------------
 ; SE音量
 ;------------------------------------------------------------------------------------------------------
-[slider name="se" var="tf.current_se_vol" x="219" y="233" width="290" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*vol_se_change"]
+[slider name="se" var="tf.current_se_vol" x="219" y="233" width="290" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*vol_se_change" exp="tf.change_se()"]
 [call target="*mute_se_button" ]
-
-; 	[button name="sevol,sevol_10"  fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[1]"  y="170" exp="tf.current_se_vol =  10; tf.config_num_se =  1"]
-; 	[button name="sevol,sevol_20"  fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[2]"  y="170" exp="tf.current_se_vol =  20; tf.config_num_se =  2"]
-; 	[button name="sevol,sevol_30"  fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[3]"  y="170" exp="tf.current_se_vol =  30; tf.config_num_se =  3"]
-; 	[button name="sevol,sevol_40"  fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[4]"  y="170" exp="tf.current_se_vol =  40; tf.config_num_se =  4"]
-; 	[button name="sevol,sevol_50"  fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[5]"  y="170" exp="tf.current_se_vol =  50; tf.config_num_se =  5"]
-; 	[button name="sevol,sevol_60"  fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[6]"  y="170" exp="tf.current_se_vol =  60; tf.config_num_se =  6"]
-; 	[button name="sevol,sevol_70"  fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[7]"  y="170" exp="tf.current_se_vol =  70; tf.config_num_se =  7"]
-; 	[button name="sevol,sevol_80"  fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[8]"  y="170" exp="tf.current_se_vol =  80; tf.config_num_se =  8"]
-; 	[button name="sevol,sevol_90"  fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[9]"  y="170" exp="tf.current_se_vol =  90; tf.config_num_se =  9"]
-; 	[button name="sevol,sevol_100" fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[10]" y="170" exp="tf.current_se_vol = 100; tf.config_num_se = 10"]
-
-; ;	SEミュート
-; ;	[button name="sevol,sevol_0"   fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="32" height="32" x="956" y="280" exp="tf.current_se_vol = 0; tf.config_num_se = 0"]
-; 	[button name="sevol,sevol_0"   fix="true" target="*vol_se_mute" graphic="&tf.btn_path_off" width="32" height="32" x="956" y="170"]
 
 ;------------------------------------------------------------------------------------------------------
 ; ボイス音量
 ;------------------------------------------------------------------------------------------------------
-[slider name="voice_1" var="tf.current_voice_1_vol" x="883" y="161" width="249" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*vol_voice_change"]
-[slider name="voice_2" var="tf.current_voice_2_vol" x="883" y="233" width="249" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*vol_voice_change"]
-[slider name="voice_3" var="tf.current_voice_3_vol" x="883" y="305" width="249" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*vol_voice_change"]
+[slider name="voice_1" var="tf.current_voice_1_vol" x="883" y="161" width="249" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*vol_voice_change" exp="tf.change_voice_1()"]
+[slider name="voice_2" var="tf.current_voice_2_vol" x="883" y="233" width="249" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*vol_voice_change" exp="tf.change_voice_2()"]
+[slider name="voice_3" var="tf.current_voice_3_vol" x="883" y="305" width="249" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*vol_voice_change" exp="tf.change_voice_3()"]
 [call target="*mute_voice_button" ]
 ; 	[button name="voicevol,voicevol_10"  fix="true" target="*vol_voice_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[1]"  y="231" exp="tf.current_voice_vol =  10; tf.config_num_voice =  1"]
 ; 	[button name="voicevol,voicevol_20"  fix="true" target="*vol_voice_change" graphic="&tf.btn_path_off" width="40" height="40" x="&tf.config_x[2]"  y="231" exp="tf.current_voice_vol =  20; tf.config_num_voice =  2"]

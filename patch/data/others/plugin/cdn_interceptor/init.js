@@ -1834,9 +1834,20 @@
         if (kag.tag.bgmopt) {
             const origBgmOpt = kag.tag.bgmopt.start;
             kag.tag.bgmopt.start = function(pm) {
-                if (pm.volume && activeBgmGainNode) {
+                if (pm && pm.volume !== undefined && pm.volume !== "") {
                     let normVol = parseFloat(pm.volume) / 100.0;
-                    activeBgmGainNode.gain.value = Math.max(0, Math.min(1.0, normVol * MASTER_BGM_SCALE));
+                    if (activeBgmGainNode) {
+                        activeBgmGainNode.gain.value = Math.max(0, Math.min(1.0, normVol * MASTER_BGM_SCALE));
+                    }
+                    if (kag.stat) {
+                        if (!kag.stat.map_bgm_volume || typeof kag.stat.map_bgm_volume !== 'object') {
+                            kag.stat.map_bgm_volume = {};
+                        }
+                        kag.stat.map_bgm_volume["0"] = parseInt(pm.volume);
+                    }
+                    if (kag.config) {
+                        kag.config.defaultBgmVolume = parseInt(pm.volume);
+                    }
                 }
                 return origBgmOpt.apply(this, arguments);
             };
@@ -1845,9 +1856,25 @@
         if (kag.tag.seopt) {
             const origSeOpt = kag.tag.seopt.start;
             kag.tag.seopt.start = function(pm) {
-                if (pm.volume && kag.stat && kag.stat.map_se_volume) {
-                    let buf = pm.buf || "0";
-                    kag.stat.map_se_volume[buf] = parseInt(pm.volume);
+                if (pm && pm.volume !== undefined && pm.volume !== "") {
+                    let buf = (pm.buf !== undefined && pm.buf !== "") ? String(pm.buf) : "0";
+                    if (kag.stat) {
+                        if (!kag.stat.map_se_volume || typeof kag.stat.map_se_volume !== 'object') {
+                            kag.stat.map_se_volume = {};
+                        }
+                        kag.stat.map_se_volume[buf] = parseInt(pm.volume);
+                    }
+                    if (buf === "0" && kag.config) {
+                        kag.config.defaultSeVolume = parseInt(pm.volume);
+                    }
+                    // Cập nhật real-time GainNode cho âm thanh/voice đang phát trên buffer này
+                    if (activeBufMap.has(buf)) {
+                        const item = activeBufMap.get(buf);
+                        if (item && item.gainNode) {
+                            let normVol = parseFloat(pm.volume) / 100.0;
+                            item.gainNode.gain.value = Math.max(0, Math.min(1.0, normVol * MASTER_SE_SCALE));
+                        }
+                    }
                 }
                 return origSeOpt.apply(this, arguments);
             };

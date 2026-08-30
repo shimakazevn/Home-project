@@ -11,8 +11,10 @@ mp.frame_opacity = mp.frame_opacity || "255";
 
 // コンフィグ初期値
 if (!sf.config_default_set) {
-  TYRANO.kag.stat.map_bgm_volume = 50;
-  TYRANO.kag.stat.map_se_volume = 50;
+  TYRANO.kag.stat.map_bgm_volume = { "0": 80 };
+  TYRANO.kag.stat.map_se_volume = { "0": 80, "1": 80, "2": 80, "3": 80 };
+  TYRANO.kag.config.defaultBgmVolume = 80;
+  TYRANO.kag.config.defaultSeVolume = 80;
   TYRANO.kag.config.chSpeed = 50;
   TYRANO.kag.config.autoSpeed = 2500;
   sf.config_default_set = true;
