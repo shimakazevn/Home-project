@@ -188,7 +188,7 @@ TYRANO.kag.ftag.master_tag.awakegame_ex.kag = TYRANO.kag;
     uiparts_init = '[loadjs storage="plugin/uiparts_set/select.js" ]\n[loadjs storage="plugin/uiparts_set/slider.js" ]\n[loadcss file="./data/others/plugin/uiparts_set/select.css" ]\n[loadcss file="./data/others/plugin/uiparts_set/slider.css" ]\n\n[return]\n'
     waapi_init = '; Plugin waapi stub\n[return]\n'
 
-    for base_p in [plugin_dst, patch_plugin_dir]:
+    for base_p in [plugin_dst]:
         os.makedirs(os.path.join(base_p, 'awakegame_ex'), exist_ok=True)
         with open(os.path.join(base_p, 'awakegame_ex', 'init.ks'), 'w', encoding='utf-8') as f:
             f.write(awakegame_init)

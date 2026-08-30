@@ -1,7 +1,7 @@
 {
   "version": "3.1.0",
-  "generated_at": "2026-08-31 00:35:20",
-  "total_files": 369,
+  "generated_at": "2026-08-31 00:37:07",
+  "total_files": 365,
   "files": {
     "data/asset_manifest.json": {
       "sha256": "691e7a4c2b5ca30a8a25543b629f0d7e9c1f9646650f8c356764e14ef1f76396",
@@ -31,14 +31,6 @@
       "sha256": "b2870a6e3c02a7f58010f971762fa3db4576c4cfeb2b894a8b37892bfa5bd820",
       "size": 876
     },
-    "data/others/plugin/awakegame_ex/init.ks": {
-      "sha256": "ee101ace3b2b4b8337111fc5e30af141dc0b7b1e374a0ed0f1e452717e457fff",
-      "size": 60
-    },
-    "data/others/plugin/awakegame_ex/main.js": {
-      "sha256": "55bcf1b980f4d586c87f57b111d0da6d61eda122bfc908f6db155fae32a78e23",
-      "size": 3619
-    },
     "data/others/plugin/button_ex/blank.png": {
       "sha256": "f4538220ee51d61048f3ab52b3c02bf05365819266de5ce69ea9fd65697b099b",
       "size": 997
@@ -58,10 +50,6 @@
     "data/others/plugin/cdn_interceptor/init.js": {
       "sha256": "448319740a06c4834c9c9f48fc4980225e484e8f9b1adf9cc96aed03af3065d5",
       "size": 602632
-    },
-    "data/others/plugin/tb_save_img/init.ks": {
-      "sha256": "e97ff151a0dbca911a61e7c94a09dca784eb279cfc8da50456f75e45960618bc",
-      "size": 148
     },
     "data/others/plugin/theme_kopanda_09_2/builder.json": {
       "sha256": "54d4768483fa9877187e48f7237e4531ac2f709b9210ce49c86ba7f1661a54f2",
@@ -378,10 +366,6 @@
     "data/others/plugin/uiparts_set/image/arrow.png": {
       "sha256": "ee0697feddf9cbe9be608a39307fb437f3de7402eef340da9fe3cabae53eedc8",
       "size": 283
-    },
-    "data/others/plugin/waapi/init.ks": {
-      "sha256": "ece95219de9eb00f1b85bb9f4859bfe3cdc65f0e61c3638cf01832ab7f999b86",
-      "size": 31
     },
     "data/others/plugin/web_save/init.js": {
       "sha256": "c0247b6f999dab9e92cfd89898dc282ee63c9c47071ebe53a17c95c6bac0e5a7",
