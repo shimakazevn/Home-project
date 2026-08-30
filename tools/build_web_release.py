@@ -593,6 +593,18 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
             'Howler.ctx = new webkitAudioContext();',
             'Howler.ctx = (window.HOME_AudioEngine && window.HOME_AudioEngine.getAudioContext) ? window.HOME_AudioEngine.getAudioContext() : (Howler.ctx || new webkitAudioContext());'
         )
+        howler_code = howler_code.replace(
+            'if (typeof self.ctx.resume === \'function\') {\n          self.ctx.resume();\n        }',
+            'if (typeof self.ctx.resume === \'function\') { try { var _r = self.ctx.resume(); if (_r && _r.catch) _r.catch(function(){}); } catch(e){} }'
+        )
+        howler_code = howler_code.replace(
+            'self.ctx.resume().then(function() {',
+            'var _rp = self.ctx.resume(); if (_rp && _rp.then) { _rp.then(function() {'
+        )
+        howler_code = howler_code.replace(
+            'for (var i=0; i<self._howls.length; i++) {\n            self._howls[i]._emit(\'resume\');\n          }\n        });',
+            'for (var i=0; i<self._howls.length; i++) {\n            self._howls[i]._emit(\'resume\');\n          }\n        }).catch(function(){}); }'
+        )
         with open(howler_path, 'w', encoding='utf-8') as f:
             f.write(howler_code)
 

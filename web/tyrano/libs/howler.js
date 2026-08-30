@@ -362,9 +362,7 @@
         }
 
         // Calling resume() on a stack initiated by user gesture is what actually unlocks the audio on Android Chrome >= 55.
-        if (typeof self.ctx.resume === 'function') {
-          self.ctx.resume();
-        }
+        if (typeof self.ctx.resume === 'function') { try { var _r = self.ctx.resume(); if (_r && _r.catch) _r.catch(function(){}); } catch(e){} }
 
         // Setup a timeout to check that we are unlocked on the next event loop.
         source.onended = function() {
@@ -495,14 +493,14 @@
         clearTimeout(self._suspendTimer);
         self._suspendTimer = null;
       } else if (self.state === 'suspended') {
-        self.ctx.resume().then(function() {
+        var _rp = self.ctx.resume(); if (_rp && _rp.then) { _rp.then(function() {
           self.state = 'running';
 
           // Emit to all Howls that the audio has resumed.
           for (var i=0; i<self._howls.length; i++) {
             self._howls[i]._emit('resume');
           }
-        });
+        }).catch(function(){}); }
 
         if (self._suspendTimer) {
           clearTimeout(self._suspendTimer);

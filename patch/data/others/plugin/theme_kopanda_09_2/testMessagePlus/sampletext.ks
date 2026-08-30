@@ -1,5 +1,19 @@
-Bầu trời xanh ngắt trải rộng trên đầu. Mùi cỏ non ngai ngái.[r]
-Cảm giác như chỉ cần sải bước là có thể đi tới bất cứ đâu.[p]
 
-Hơi thở không dồn dập, cơ thể cũng thật nhẹ nhõm.[r]
-Đã bao lâu rồi mình mới được chạy một cách sảng khoái thế này nhỉ.[p]
+;
+; 表示させたいサンプル文を入力してください。
+; 使えるタグは、
+;
+;   ● [p] ページの区切り
+;   ● [r] 改行
+;   ● [kidoku]～[endkidoku] 囲まれた部分を既読色で表示する
+;
+; の３つのみです。
+; 他のタグは使うことができません。
+; また、@（アットマーク）表記のタグも使用できません。
+;
+
+頭の上いっぱいに広がる青い空。青々とした草の匂い。[r]
+手足を動かせば、どこまでも行けそうだった。[p]
+
+息も切れず、体も軽い。
+こんなに気持ちよく走ったのは、いったいいつ以来だろう。[p]
