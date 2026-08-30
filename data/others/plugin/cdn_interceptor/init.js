@@ -401,6 +401,7 @@
 
         // Hook Sound Effect Player
         const activeBufMap = new Map();
+        const lastSePlayTimeMap = new Map();
 
         kag.ft_play_stego_se = async function(cdnUrl, rawVol, buf) {
             try {
@@ -408,9 +409,22 @@
                 if (ctx.state === 'suspended') {
                     ctx.resume();
                 }
+
+                // Debounce cho âm thanh rê chuột để không bị dồn dập
+                const now = Date.now();
+                if (cdnUrl.includes('sistem_starton.mp3')) {
+                    if (lastSePlayTimeMap.has(cdnUrl) && (now - lastSePlayTimeMap.get(cdnUrl) < 60)) {
+                        return;
+                    }
+                    lastSePlayTimeMap.set(cdnUrl, now);
+                }
+
                 const audioBuffer = await window.decodeStegoAudioFromUrl(cdnUrl);
                 const source = ctx.createBufferSource();
                 const gainNode = ctx.createGain();
+                const filterNode = ctx.createBiquadFilter();
+                filterNode.type = 'lowpass';
+                filterNode.frequency.value = 12000; // Bộ lọc 12kHz giữ âm trong trẻo, khử sạch gắt chói
                 
                 source.buffer = audioBuffer;
                 source.loop = false;
@@ -431,6 +445,11 @@
                 
                 let finalVol = Math.max(0, Math.min(1.0, vol * bufRatio * MASTER_SE_SCALE));
 
+                // Âm thanh rê nút menu sistem_starton chuẩn hóa dịu nhẹ (35% volume)
+                if (cdnUrl.includes('sistem_starton.mp3')) {
+                    finalVol *= 0.35;
+                }
+
                 // Nếu slot buffer này đang phát âm thanh trước, dừng mượt mà tránh "chét"
                 if (activeBufMap.has(bufIdx)) {
                     const prev = activeBufMap.get(bufIdx);
@@ -438,10 +457,13 @@
                     activeBufMap.delete(bufIdx);
                 }
 
-                gainNode.gain.setValueAtTime(finalVol, ctx.currentTime);
+                // Khởi đầu mượt mà (4ms attack ramp) tránh tiếng click cơ học
+                gainNode.gain.setValueAtTime(0.0001, ctx.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(Math.max(0.0001, finalVol), ctx.currentTime + 0.004);
 
                 source.connect(gainNode);
-                gainNode.connect(ctx.destination);
+                gainNode.connect(filterNode);
+                filterNode.connect(ctx.destination);
 
                 source.start(0);
                 activeSeSources.push(source);
