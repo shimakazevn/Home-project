@@ -306,7 +306,7 @@
 
         const style = document.createElement('style');
         style.textContent = `
-            /* 1. APPLE CONTROL CENTER FLOATING GEAR ORB */
+            /* 1. APPLE CONTROL CENTER FLOATING ORB (iOS 18 STYLE) */
             #home-gear-btn {
                 position: fixed;
                 bottom: 14px;
@@ -315,36 +315,36 @@
                 width: 44px;
                 height: 44px;
                 border-radius: 50%;
-                background: rgba(30, 30, 32, 0.75);
-                backdrop-filter: blur(25px) saturate(180%);
-                -webkit-backdrop-filter: blur(25px) saturate(180%);
-                border: 0.5px solid rgba(255, 255, 255, 0.18);
-                box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+                background: rgba(30, 30, 32, 0.82);
+                backdrop-filter: blur(30px) saturate(190%);
+                -webkit-backdrop-filter: blur(30px) saturate(190%);
+                border: 0.5px solid rgba(255, 255, 255, 0.2);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
                 outline: none;
-                transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.2s, background 0.2s;
-                opacity: 0.75;
+                transition: transform 0.18s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.18s, background 0.18s;
+                opacity: 0.85;
                 user-select: none;
                 -webkit-tap-highlight-color: transparent;
             }
             #home-gear-btn:hover {
                 opacity: 1;
-                transform: scale(1.06);
-                background: rgba(45, 45, 48, 0.9);
-                border-color: rgba(255, 255, 255, 0.3);
+                transform: scale(1.05);
+                background: rgba(44, 44, 46, 0.95);
+                border-color: rgba(255, 255, 255, 0.35);
             }
             #home-gear-btn:active {
-                transform: scale(0.94);
-                opacity: 0.9;
+                transform: scale(0.92);
+                opacity: 0.75;
             }
             #home-gear-btn svg {
                 width: 20px;
                 height: 20px;
                 fill: none;
-                stroke: rgba(255, 255, 255, 0.9);
+                stroke: #FFFFFF;
                 stroke-width: 1.8;
                 stroke-linecap: round;
                 stroke-linejoin: round;
@@ -363,14 +363,14 @@
             #home-gear-badge.downloading { background: #FF9F0A; animation: hgb-pulse 1s infinite; }
             @keyframes hgb-pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.3);opacity:0.6} }
 
-            /* 2. APPLE LIQUID MATERIAL MODAL */
+            /* 2. APPLE INSET GROUPED MODAL SHEET (macOS / iOS SYSTEM SETTINGS) */
             #home-modal-overlay {
                 position: fixed;
                 inset: 0;
                 z-index: 1000000;
-                background: rgba(0, 0, 0, 0.48);
-                backdrop-filter: blur(24px);
-                -webkit-backdrop-filter: blur(24px);
+                background: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -388,16 +388,16 @@
                 width: 100%;
                 max-width: 440px;
                 max-height: 88vh;
-                background: rgba(28, 28, 30, 0.88);
-                backdrop-filter: blur(40px) saturate(190%);
-                -webkit-backdrop-filter: blur(40px) saturate(190%);
-                border: 0.5px solid rgba(255, 255, 255, 0.14);
-                border-radius: 20px;
-                box-shadow: 0 24px 64px rgba(0, 0, 0, 0.56);
+                background: rgba(28, 28, 30, 0.92);
+                backdrop-filter: blur(50px) saturate(200%);
+                -webkit-backdrop-filter: blur(50px) saturate(200%);
+                border: 0.5px solid rgba(255, 255, 255, 0.16);
+                border-radius: 22px;
+                box-shadow: 0 32px 80px rgba(0, 0, 0, 0.65), 0 0 1px 0.5px rgba(255, 255, 255, 0.1);
                 display: flex;
                 flex-direction: column;
                 overflow: hidden;
-                transform: scale(0.94);
+                transform: scale(0.95);
                 transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1);
                 color: #FFFFFF;
                 font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
@@ -408,35 +408,33 @@
                 transform: scale(1);
             }
 
+            /* Sheet Grabber for iOS touch feel */
+            .hmc-sheet-handle {
+                width: 36px;
+                height: 5px;
+                border-radius: 999px;
+                background: rgba(255, 255, 255, 0.22);
+                margin: 8px auto 0;
+                flex-shrink: 0;
+            }
+
             .hmc-header {
-                padding: 16px 18px 12px;
+                padding: 10px 18px 12px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+                border-bottom: 0.5px solid rgba(84, 84, 88, 0.35);
                 flex-shrink: 0;
             }
-            .hmc-title-group {
-                display: flex;
-                flex-direction: column;
-                gap: 1px;
-            }
             .hmc-title {
-                font-size: 16px;
-                font-weight: 600;
+                font-size: 17px;
+                font-weight: 700;
                 color: #FFFFFF;
                 letter-spacing: -0.02em;
                 margin: 0;
             }
-            .hmc-subtitle {
-                font-size: 11px;
-                font-weight: 400;
-                color: rgba(235, 235, 245, 0.55);
-                letter-spacing: -0.01em;
-                margin: 0;
-            }
             .hmc-close {
-                background: rgba(120, 120, 128, 0.2);
+                background: rgba(120, 120, 128, 0.24);
                 border: none;
                 border-radius: 50%;
                 width: 28px;
@@ -444,16 +442,16 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                color: rgba(235, 235, 245, 0.6);
+                color: rgba(235, 235, 245, 0.7);
                 cursor: pointer;
                 font-size: 12px;
-                font-weight: 600;
+                font-weight: 700;
                 transition: all 0.15s ease;
                 flex-shrink: 0;
                 outline: none;
             }
             .hmc-close:hover {
-                background: rgba(120, 120, 128, 0.35);
+                background: rgba(120, 120, 128, 0.4);
                 color: #FFFFFF;
             }
             .hmc-close:active {
@@ -470,7 +468,7 @@
                 touch-action: pan-y;
                 display: flex;
                 flex-direction: column;
-                gap: 12px;
+                gap: 14px;
                 scrollbar-width: thin;
                 scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
             }
@@ -484,100 +482,205 @@
                 background: rgba(255, 255, 255, 0.22);
                 border-radius: 4px;
             }
-            .hmc-body::-webkit-scrollbar-thumb:hover {
-                background: rgba(255, 255, 255, 0.4);
-            }
 
-            /* iOS Inset Grouped Section */
-            .hmc-section {
-                background: rgba(120, 120, 128, 0.12);
-                border: 0.5px solid rgba(255, 255, 255, 0.06);
-                border-radius: 14px;
-                padding: 12px;
-                flex-shrink: 0;
-            }
-            .hmc-section-title {
+            /* Section Header (Uppercase tracking) */
+            .hmc-group-header {
                 font-size: 11px;
                 font-weight: 600;
                 text-transform: uppercase;
-                letter-spacing: 0.04em;
+                letter-spacing: 0.05em;
                 color: rgba(235, 235, 245, 0.5);
-                margin-bottom: 8px;
-                margin-left: 2px;
+                margin: 0 0 6px 4px;
             }
 
-            .hmc-grid-2 {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 8px;
-            }
-            .hmc-grid-3 {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 6px;
+            /* iOS Inset Group Container */
+            .hmc-inset-group {
+                background: rgba(44, 44, 46, 0.72);
+                border: 0.5px solid rgba(255, 255, 255, 0.08);
+                border-radius: 13px;
+                overflow: hidden;
+                flex-shrink: 0;
             }
 
-            .hmc-btn {
-                background: rgba(255, 255, 255, 0.08);
-                border: 0.5px solid rgba(255, 255, 255, 0.06);
-                border-radius: 10px;
-                color: #FFFFFF;
-                padding: 9px 8px;
-                font-size: 12px;
-                font-weight: 500;
-                letter-spacing: -0.01em;
-                cursor: pointer;
+            /* iOS Table Row */
+            .hmc-row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 12px;
+                position: relative;
+            }
+            .hmc-row + .hmc-row {
+                border-top: 0.5px solid rgba(84, 84, 88, 0.35);
+            }
+
+            .hmc-row-left {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                min-width: 0;
+            }
+
+            /* Apple SF Squircle App Icon */
+            .hmc-squircle {
+                width: 28px;
+                height: 28px;
+                border-radius: 7px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                gap: 6px;
-                transition: all 0.12s cubic-bezier(0.25, 1, 0.5, 1);
-                outline: none;
-                text-align: center;
-                -webkit-tap-highlight-color: transparent;
-                min-height: 38px;
-                box-sizing: border-box;
-            }
-            .hmc-btn:hover {
-                background: rgba(255, 255, 255, 0.14);
-            }
-            .hmc-btn:active {
-                transform: scale(0.97);
-                opacity: 0.85;
-            }
-            .hmc-btn svg {
                 flex-shrink: 0;
-                stroke: currentColor;
-                opacity: 0.85;
-            }
-            .hmc-btn-primary {
-                background: #0A84FF;
-                border: none;
                 color: #FFFFFF;
-                font-weight: 600;
             }
-            .hmc-btn-primary:hover {
-                background: #0071E3;
-            }
-            .hmc-btn-danger {
-                background: rgba(255, 69, 58, 0.14);
-                border: 0.5px solid rgba(255, 69, 58, 0.2);
-                color: #FF453A;
-            }
-            .hmc-btn-danger:hover {
-                background: rgba(255, 69, 58, 0.22);
-            }
-            .hmc-btn.active-state {
-                background: rgba(10, 132, 255, 0.2);
-                border: 0.5px solid rgba(10, 132, 255, 0.4);
-                color: #0A84FF;
+            .hmc-squircle svg {
+                width: 15px;
+                height: 15px;
+                stroke-width: 2.2;
             }
 
-            .hmc-bar-bg {
+            .sq-blue { background: #0A84FF; }
+            .sq-orange { background: #FF9F0A; }
+            .sq-purple { background: #AF52DE; }
+            .sq-green { background: #30D158; }
+            .sq-teal { background: #64D2FF; }
+            .sq-indigo { background: #5E5CE6; }
+            .sq-gray { background: #8E8E93; }
+            .sq-red { background: #FF453A; }
+
+            .hmc-row-label {
+                font-size: 13.5px;
+                font-weight: 400;
+                color: #FFFFFF;
+                letter-spacing: -0.01em;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .hmc-row-sublabel {
+                font-size: 11px;
+                color: rgba(235, 235, 245, 0.55);
+                letter-spacing: -0.01em;
+                margin-top: 1px;
+            }
+
+            .hmc-row-actions {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                flex-shrink: 0;
+            }
+
+            /* Apple Pill Action Button */
+            .hmc-pill-btn {
+                background: rgba(255, 255, 255, 0.12);
+                border: none;
+                border-radius: 999px;
+                color: #0A84FF;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: -0.01em;
+                padding: 5px 12px;
+                cursor: pointer;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                transition: all 0.12s cubic-bezier(0.25, 1, 0.5, 1);
+                outline: none;
+                -webkit-tap-highlight-color: transparent;
+                min-height: 28px;
+            }
+            .hmc-pill-btn:hover {
+                background: rgba(255, 255, 255, 0.2);
+            }
+            .hmc-pill-btn:active {
+                opacity: 0.65;
+                transform: scale(0.96);
+            }
+            .hmc-pill-btn.pill-primary {
+                background: #0A84FF;
+                color: #FFFFFF;
+            }
+            .hmc-pill-btn.pill-primary:hover {
+                background: #0071E3;
+            }
+            .hmc-pill-btn.pill-danger {
+                background: rgba(255, 69, 58, 0.16);
+                color: #FF453A;
+            }
+            .hmc-pill-btn.pill-danger:hover {
+                background: rgba(255, 69, 58, 0.26);
+            }
+            .hmc-pill-btn.pill-orange {
+                color: #FF9F0A;
+            }
+
+            /* Apple Segmented Control (iOS Segment Bar) */
+            .hmc-segmented {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
                 background: rgba(120, 120, 128, 0.24);
+                border-radius: 9px;
+                padding: 2px;
+                gap: 2px;
+                margin: 6px 8px;
+            }
+            .hmc-segment-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 3px;
+                padding: 6px 2px;
+                border-radius: 7px;
+                border: none;
+                background: transparent;
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 11px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 0.15s ease;
+                outline: none;
+                -webkit-tap-highlight-color: transparent;
+            }
+            .hmc-segment-item:hover {
+                color: #FFFFFF;
+            }
+            .hmc-segment-item:active {
+                opacity: 0.7;
+            }
+            .hmc-segment-item.active {
+                background: rgba(255, 255, 255, 0.28);
+                color: #FFFFFF;
+                font-weight: 600;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+            }
+            .hmc-segment-item.active-warn {
+                background: #FF9F0A;
+                color: #000000;
+                font-weight: 700;
+            }
+            .hmc-segment-item.active-blue {
+                background: #0A84FF;
+                color: #FFFFFF;
+                font-weight: 700;
+            }
+            .hmc-segment-item svg {
+                width: 14px;
+                height: 14px;
+                stroke: currentColor;
+                stroke-width: 2;
+            }
+
+            /* Progress container inside group */
+            .hmc-cache-box {
+                padding: 10px 12px;
+            }
+            .hmc-bar-bg {
+                background: rgba(120, 120, 128, 0.32);
                 border-radius: 999px;
                 height: 5px;
-                margin: 8px 0;
+                margin: 8px 0 6px;
                 overflow: hidden;
             }
             .hmc-bar-fill {
@@ -589,12 +692,11 @@
             .hmc-bar-fill.complete {
                 background: #30D158;
             }
-            .hmc-info-text {
+            .hmc-cache-status {
                 font-size: 11.5px;
-                color: rgba(235, 235, 245, 0.65);
-                margin-bottom: 10px;
+                color: rgba(235, 235, 245, 0.6);
                 line-height: 1.4;
-                font-weight: 400;
+                margin-bottom: 10px;
             }
 
             /* Responsive: Mobile Portrait (< 480px width) */
@@ -608,38 +710,24 @@
                     border-radius: 18px;
                 }
                 .hmc-header {
-                    padding: 12px 14px 10px;
+                    padding: 8px 14px 10px;
                 }
                 .hmc-title {
-                    font-size: 14px;
-                }
-                .hmc-subtitle {
-                    font-size: 10px;
+                    font-size: 16px;
                 }
                 .hmc-body {
                     padding: 10px 12px 14px;
-                    gap: 10px;
+                    gap: 12px;
                 }
-                .hmc-section {
-                    padding: 10px;
-                    border-radius: 12px;
+                .hmc-row {
+                    padding: 8px 10px;
                 }
-                .hmc-section-title {
-                    font-size: 10.5px;
-                    margin-bottom: 6px;
+                .hmc-row-label {
+                    font-size: 13px;
                 }
-                .hmc-grid-2 {
-                    gap: 6px;
-                }
-                .hmc-grid-3 {
-                    gap: 5px;
-                }
-                .hmc-btn {
-                    padding: 7px 6px;
-                    font-size: 11px;
-                    gap: 4px;
-                    border-radius: 8px;
-                    min-height: 36px;
+                .hmc-pill-btn {
+                    padding: 4px 10px;
+                    font-size: 11.5px;
                 }
             }
 
@@ -653,36 +741,25 @@
                     border-radius: 14px;
                     max-width: 500px;
                 }
-                .hmc-header {
-                    padding: 6px 14px 6px;
-                }
-                .hmc-title {
-                    font-size: 13px;
-                }
-                .hmc-subtitle {
+                .hmc-sheet-handle {
                     display: none;
                 }
-                .hmc-close {
-                    width: 24px;
-                    height: 24px;
-                    font-size: 11px;
+                .hmc-header {
+                    padding: 6px 14px;
+                }
+                .hmc-title {
+                    font-size: 14px;
                 }
                 .hmc-body {
                     padding: 6px 10px 10px;
-                    gap: 6px;
+                    gap: 8px;
                 }
-                .hmc-section {
-                    padding: 6px 8px;
-                    border-radius: 10px;
+                .hmc-row {
+                    padding: 6px 10px;
                 }
-                .hmc-section-title {
+                .hmc-group-header {
+                    margin: 0 0 3px 4px;
                     font-size: 10px;
-                    margin-bottom: 4px;
-                }
-                .hmc-btn {
-                    padding: 4px 6px;
-                    font-size: 10.5px;
-                    min-height: 30px;
                 }
             }
         `;
@@ -706,11 +783,9 @@
         overlay.id = 'home-modal-overlay';
         overlay.innerHTML = `
             <div id="home-modal-card">
+                <div class="hmc-sheet-handle"></div>
                 <div class="hmc-header">
-                    <div class="hmc-title-group">
-                        <div class="hmc-title">Cài đặt & Tiện ích</div>
-                        <div class="hmc-subtitle">HOME Visual Novel • Web Edition</div>
-                    </div>
+                    <div class="hmc-title">Cài đặt & Tiện ích</div>
                     <button class="hmc-close" id="hmc-close-btn" title="Đóng">✕</button>
                 </div>
                 <div class="hmc-body" id="hmc-dynamic-body">
@@ -755,78 +830,146 @@
                         : 'Đang chơi trực tuyến qua CDN (Tải tài nguyên khi cần).';
 
             body.innerHTML = `
-                <!-- 1. QUẢN LÝ LƯU TRỮ (SAVE / LOAD) -->
-                <div class="hmc-section">
-                    <div class="hmc-section-title">Dữ liệu Lưu trữ</div>
-                    <div class="hmc-grid-2">
-                        <button class="hmc-btn" id="btn_modal_export">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                            <span>Tải Save (.sav)</span>
-                        </button>
-                        <button class="hmc-btn" id="btn_modal_import">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                            <span>Nạp Save (.sav)</span>
-                        </button>
-                        <button class="hmc-btn" id="btn_modal_qsave">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
-                            <span>Lưu nhanh</span>
-                        </button>
-                        <button class="hmc-btn" id="btn_modal_qload">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-                            <span>Nạp nhanh</span>
-                        </button>
+                <!-- SECTION 1: LƯU TRỮ (INSET GROUP) -->
+                <div>
+                    <div class="hmc-group-header">Dữ liệu Lưu trữ</div>
+                    <div class="hmc-inset-group">
+                        <!-- Row 1: Q.Save -->
+                        <div class="hmc-row">
+                            <div class="hmc-row-left">
+                                <div class="hmc-squircle sq-blue">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                                </div>
+                                <div>
+                                    <div class="hmc-row-label">Lưu nhanh (Q.Save)</div>
+                                    <div class="hmc-row-sublabel">Ghi đè ô lưu tạm</div>
+                                </div>
+                            </div>
+                            <div class="hmc-row-actions">
+                                <button class="hmc-pill-btn" id="btn_modal_qsave">Lưu</button>
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Q.Load -->
+                        <div class="hmc-row">
+                            <div class="hmc-row-left">
+                                <div class="hmc-squircle sq-orange">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                                </div>
+                                <div>
+                                    <div class="hmc-row-label">Nạp nhanh (Q.Load)</div>
+                                    <div class="hmc-row-sublabel">Tải lại vị trí gần nhất</div>
+                                </div>
+                            </div>
+                            <div class="hmc-row-actions">
+                                <button class="hmc-pill-btn pill-orange" id="btn_modal_qload">Nạp</button>
+                            </div>
+                        </div>
+
+                        <!-- Row 3: File .sav -->
+                        <div class="hmc-row">
+                            <div class="hmc-row-left">
+                                <div class="hmc-squircle sq-purple">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                </div>
+                                <div>
+                                    <div class="hmc-row-label">Tệp sao lưu (.sav)</div>
+                                    <div class="hmc-row-sublabel">Xuất / Nhập tệp máy tính</div>
+                                </div>
+                            </div>
+                            <div class="hmc-row-actions">
+                                <button class="hmc-pill-btn" id="btn_modal_export">Xuất</button>
+                                <button class="hmc-pill-btn" id="btn_modal_import">Nhập</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- 2. OFFLINE CACHE & TẢI ASSET -->
-                <div class="hmc-section">
-                    <div class="hmc-section-title">Bộ nhớ Đệm & Offline</div>
-                    <div class="hmc-bar-bg">
-                        <div class="hmc-bar-fill ${isComplete ? 'complete' : ''}" style="width: ${pct}%"></div>
-                    </div>
-                    <div class="hmc-info-text">${offlineStatusText}</div>
-                    <div class="hmc-grid-2">
-                        ${isDownloading
-                            ? `<button class="hmc-btn hmc-btn-danger" id="btn_modal_stop_dl"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="6" width="12" height="12" rx="2"/></svg> <span>Dừng tải</span></button>`
-                            : isComplete
-                                ? `<button class="hmc-btn hmc-btn-danger" id="btn_modal_del_cache"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> <span>Xóa Cache</span></button>`
-                                : `<button class="hmc-btn hmc-btn-primary" id="btn_modal_start_dl"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> <span>Tải chơi Offline</span></button>`
-                        }
-                        ${cached > 0 && !isComplete && !isDownloading
-                            ? `<button class="hmc-btn hmc-btn-danger" id="btn_modal_del_cache"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> <span>Xóa Cache</span></button>`
-                            : ''
-                        }
+                <!-- SECTION 2: BỘ NHỚ ĐỆM & OFFLINE (INSET GROUP) -->
+                <div>
+                    <div class="hmc-group-header">Bộ nhớ Đệm & Offline</div>
+                    <div class="hmc-inset-group">
+                        <div class="hmc-cache-box">
+                            <div style="display: flex; align-items: center; justify-content: space-between;">
+                                <div class="hmc-row-left">
+                                    <div class="hmc-squircle sq-green">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                                    </div>
+                                    <div class="hmc-row-label">Chế độ Ngoại tuyến</div>
+                                </div>
+                                <div style="font-size: 12px; font-weight: 600; color: ${isComplete ? '#30D158' : 'rgba(235, 235, 245, 0.6)'};">
+                                    ${pct}% (${cached.toLocaleString()} / ${total.toLocaleString()})
+                                </div>
+                            </div>
+                            <div class="hmc-bar-bg">
+                                <div class="hmc-bar-fill ${isComplete ? 'complete' : ''}" style="width: ${pct}%"></div>
+                            </div>
+                            <div class="hmc-cache-status">${offlineStatusText}</div>
+                            <div style="display: flex; gap: 8px;">
+                                ${isDownloading
+                                    ? `<button class="hmc-pill-btn pill-danger" style="flex: 1;" id="btn_modal_stop_dl">Dừng tải</button>`
+                                    : isComplete
+                                        ? `<button class="hmc-pill-btn pill-danger" style="flex: 1;" id="btn_modal_del_cache">Xóa bộ nhớ Cache</button>`
+                                        : `<button class="hmc-pill-btn pill-primary" style="flex: 1;" id="btn_modal_start_dl">Tải về máy để chơi Offline</button>`
+                                }
+                                ${cached > 0 && !isComplete && !isDownloading
+                                    ? `<button class="hmc-pill-btn pill-danger" id="btn_modal_del_cache">Xóa Cache</button>`
+                                    : ''
+                                }
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- 3. ĐIỀU KHIỂN ĐỌC TRUYỆN (GAMEPLAY) -->
-                <div class="hmc-section">
-                    <div class="hmc-section-title">Điều khiển Đọc truyện</div>
-                    <div class="hmc-grid-3">
-                        <button class="hmc-btn ${isSkip ? 'active-state' : ''}" id="btn_modal_skip">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 19 22 12 13 5 13 19"/><polygon points="2 19 11 12 2 5 2 19"/></svg>
-                            <span>${isSkip ? 'Dừng tua' : 'Tua nhanh'}</span>
-                        </button>
-                        <button class="hmc-btn ${isAuto ? 'active-state' : ''}" id="btn_modal_auto">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                            <span>${isAuto ? 'Dừng đọc' : 'Tự đọc'}</span>
-                        </button>
-                        <button class="hmc-btn" id="btn_modal_log">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                            <span>Nhật ký</span>
-                        </button>
-                        <button class="hmc-btn" id="btn_modal_hide">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                            <span>Ẩn chữ</span>
-                        </button>
-                        <button class="hmc-btn" id="btn_modal_fullscreen">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
-                            <span>Toàn màn</span>
-                        </button>
-                        <button class="hmc-btn" id="btn_modal_title">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                            <span>Về Title</span>
-                        </button>
+                <!-- SECTION 3: ĐIỀU KHIỂN ĐỌC TRUYỆN (INSET GROUP) -->
+                <div>
+                    <div class="hmc-group-header">Điều khiển Đọc truyện</div>
+                    <div class="hmc-inset-group">
+                        <!-- Apple Segmented Control for Reading Mode -->
+                        <div class="hmc-segmented">
+                            <button class="hmc-segment-item ${isSkip ? 'active-warn' : ''}" id="btn_modal_skip">
+                                <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 19 22 12 13 5 13 19"/><polygon points="2 19 11 12 2 5 2 19"/></svg>
+                                <span>${isSkip ? 'Dừng tua' : 'Tua'}</span>
+                            </button>
+                            <button class="hmc-segment-item ${isAuto ? 'active-blue' : ''}" id="btn_modal_auto">
+                                <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                <span>${isAuto ? 'Dừng đọc' : 'Tự đọc'}</span>
+                            </button>
+                            <button class="hmc-segment-item" id="btn_modal_log">
+                                <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                                <span>Nhật ký</span>
+                            </button>
+                            <button class="hmc-segment-item" id="btn_modal_hide">
+                                <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                <span>Ẩn chữ</span>
+                            </button>
+                        </div>
+
+                        <!-- Row: Fullscreen -->
+                        <div class="hmc-row">
+                            <div class="hmc-row-left">
+                                <div class="hmc-squircle sq-indigo">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+                                </div>
+                                <div class="hmc-row-label">Toàn màn hình</div>
+                            </div>
+                            <div class="hmc-row-actions">
+                                <button class="hmc-pill-btn" id="btn_modal_fullscreen">Mở</button>
+                            </div>
+                        </div>
+
+                        <!-- Row: Back to Title -->
+                        <div class="hmc-row">
+                            <div class="hmc-row-left">
+                                <div class="hmc-squircle sq-gray">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                </div>
+                                <div class="hmc-row-label">Màn hình chính (Title)</div>
+                            </div>
+                            <div class="hmc-row-actions">
+                                <button class="hmc-pill-btn" id="btn_modal_title">Về Title</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             `;
