@@ -1,3 +1,4 @@
+
 function object(o) {
   var f = object.f, i, len, n, prop;
   f.prototype = o;
@@ -137,4 +138,3 @@ $(function(){
 TYRANO.init();
     
 });
-

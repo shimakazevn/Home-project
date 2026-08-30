@@ -1,4 +1,4 @@
-/**
+);/**
  * 
  * jQuery A3D  v1.0　To use CSS3 Keyframe Animation from JavaScript
  * http:// 
@@ -430,8 +430,6 @@
     }
     
 })(jQuery);
-
-
 
 
 

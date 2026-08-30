@@ -1,4 +1,5 @@
-/*
+
+}/*
  * textillate.js
  * http://jschr.github.com/textillate
  * MIT licensed
@@ -284,4 +285,4 @@
     type: 'char'
   };
 
-}(jQuery));
+}(jQuery))

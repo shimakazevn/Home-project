@@ -1,4 +1,5 @@
-/*global jQuery */
+
+}/*global jQuery */
 /*!	
 * FitText.js 1.1
 *
@@ -40,4 +41,4 @@
 
   };
 
-})( jQuery );
+})( jQuery 

@@ -1,4 +1,4 @@
-/*global jQuery */
+);/*global jQuery */
 /*!	
 * Lettering.JS 0.6.1
 *
@@ -63,4 +63,4 @@
 		return this;
 	};
 
-})(jQuery);
+})(jQuery

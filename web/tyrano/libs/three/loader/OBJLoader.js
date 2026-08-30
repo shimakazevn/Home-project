@@ -1,3 +1,4 @@
+;
 /**
  * @author mrdoob / http://mrdoob.com/
  */
@@ -796,4 +797,4 @@ THREE.OBJLoader = ( function () {
 
 	return OBJLoader;
 
-} )();
+} )()

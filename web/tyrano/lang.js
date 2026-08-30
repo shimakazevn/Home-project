@@ -1,19 +1,19 @@
-window.tyrano_lang = {
+`�window.tyrano_lang = {
 
     word : {
         
-        "go_title":"Quay về màn hình chính. Bạn có chắc chắn không?",
-        "exit_game":"Đóng cửa sổ và thoát trò chơi. Bạn có chắc chắn không?",
-        "not_saved":"Chưa có dữ liệu lưu",
-        "tag":"Thẻ lệnh",
-        "not_exists":"không tồn tại",
-        "error":"Đã xảy ra lỗi. Vui lòng kiểm tra lại kịch bản",
-        "label":"Nhãn nhảy",
-        "label_double":"bị trùng lặp trong cùng một tệp kịch bản",
-        "error_occurred":"Đã xảy ra lỗi",
-        "save_file_violation_1":"Phát hiện dữ liệu lưu bị chỉnh sửa bất thường. Hủy khởi động game",
-        "save_file_violation_2":"Đã hủy khởi động. Vui lòng xóa dữ liệu lưu và thử khởi động lại",
-        "reload":"Tải lại"
+        "go_title":"タイトルに戻ります。よろしいですね？",
+        "exit_game":"ウィンドウを閉じて終了します。よろしいですね？",
+        "not_saved":"まだ、保存されているデータがありません",
+        "tag":"タグ",
+        "not_exists":"は存在しません",
+        "error":"エラーが発生しました。スクリプトを確認して下さい",
+        "label":"ラベル",
+        "label_double":"は同一シナリオファイル内に重複しています",
+        "error_occurred":"エラーが発生しました",
+        "save_file_violation_1":"不正なセーブデータの改変を検知しました。ゲームの起動を中止します",
+        "save_file_violation_2":"起動を中止しました。セーブデータを削除してもう一度、起動してください",
+        "reload":"リロード",
     },
 
     novel : {
@@ -27,7 +27,9 @@ window.tyrano_lang = {
         "file_save_bg":"menu_save_bg.jpg",
         "file_load_bg":"menu_load_bg.jpg",
         "file_button_menu":"button_menu.png",
-        "error_occurred":"Đã xảy ra lỗi"
+        "error_occurred":"error occurred"
+    
+        
     }
 
 };

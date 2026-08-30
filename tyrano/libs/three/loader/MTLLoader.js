@@ -1,3 +1,4 @@
+;
 /**
  * Loads a Wavefront .mtl file specifying materials
  *
@@ -528,4 +529,4 @@ THREE.MTLLoader.MaterialCreator.prototype = {
 
 	}
 
-};
+}

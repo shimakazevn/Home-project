@@ -1,3 +1,4 @@
+;
 tyrano.plugin.kag.ftag = {
     tyrano: null,
     kag: null,
@@ -1628,7 +1629,7 @@ tyrano.plugin.kag.tag.layermode = {
         "" != pm.folder ? (folder = pm.folder) : (folder = "image")
         var storage_url = ""
         if ("" != pm.graphic) {
-            if ($.isHTTP(pm.graphic)) { storage_url = pm.graphic; } else if (pm.graphic.indexOf("../") == 0) { storage_url = "./data/" + pm.graphic.replace("../", ""); } else { if ($.isHTTP(pm.graphic)) { storage_url = pm.graphic; } else if (pm.graphic.indexOf("../") == 0) { storage_url = "./data/" + pm.graphic.replace("../", ""); } else { storage_url = "./data/" + folder + "/" + pm.graphic; }; }
+            storage_url = "./data/" + folder + "/" + pm.graphic
             blend_layer.css("background-image", "url(" + storage_url + ")")
         }
         blend_layer.css("mix-blend-mode", pm.mode)
@@ -1737,4 +1738,3 @@ tyrano.plugin.kag.tag.free_layermode = {
             "false" == pm.wait && this.kag.ftag.nextOrder()
         } else that.kag.ftag.nextOrder()
     },
-}
