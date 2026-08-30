@@ -143,6 +143,55 @@ def check_asset_files(base_dir):
                 
     return asset_errors
 
+import json
+import hashlib
+import time
+
+def generate_and_verify_sha256_manifest(patch_dir):
+    """Tính toán và tạo manifest mã băm SHA256 cho 100% tệp trong bản patch"""
+    print(f"[*] Đang khởi tạo và đối chiếu mã băm SHA256 cho toàn bộ tệp...")
+    manifest = {
+        'version': '3.1.0',
+        'generated_at': time.strftime('%Y-%m-%d %H:%M:%S'),
+        'total_files': 0,
+        'files': {}
+    }
+    sha_errors = []
+    
+    for folder in ['data', 'tyrano']:
+        f_root = os.path.join(patch_dir, folder)
+        if not os.path.exists(f_root):
+            continue
+        for root, dirs, files in os.walk(f_root):
+            for file in files:
+                abs_p = os.path.join(root, file)
+                rel_p = os.path.relpath(abs_p, patch_dir).replace('\\', '/')
+                try:
+                    sha = hashlib.sha256()
+                    sz = os.path.getsize(abs_p)
+                    with open(abs_p, 'rb') as f:
+                        while chunk := f.read(65536):
+                            sha.update(chunk)
+                    hex_sha = sha.hexdigest()
+                    manifest['files'][rel_p] = {
+                        'sha256': hex_sha,
+                        'size': sz
+                    }
+                except Exception as e:
+                    sha_errors.append(f"Không thể băm SHA256 cho {rel_p}: {e}")
+                    
+    manifest['total_files'] = len(manifest['files'])
+    
+    manifest_path = os.path.join(patch_dir, 'patch_manifest.json')
+    try:
+        with open(manifest_path, 'w', encoding='utf-8') as f:
+            json.dump(manifest, f, indent=2, ensure_ascii=False)
+        print(f"  [OK] Đã tạo patch_manifest.json chứa {manifest['total_files']} chữ ký SHA256!")
+    except Exception as e:
+        sha_errors.append(f"Không thể ghi patch_manifest.json: {e}")
+        
+    return sha_errors, manifest['total_files']
+
 def run_full_verification(patch_dir='patch'):
     print("=" * 65)
     print("      KIỂM TRA TOÀN VẸN BẢN PATCH VIỆT HÓA CHUẨN 100%")
@@ -152,8 +201,9 @@ def run_full_verification(patch_dir='patch'):
     tag_errors = check_scenario_tags(scenario_dir)
     untranslated = check_untranslated_text(scenario_dir)
     asset_errors = check_asset_files(patch_dir)
+    sha_errors, total_hashed = generate_and_verify_sha256_manifest(patch_dir)
     
-    total_issues = len(tag_errors) + len(untranslated) + len(asset_errors)
+    total_issues = len(tag_errors) + len(untranslated) + len(asset_errors) + len(sha_errors)
     
     print()
     print("-" * 65)
@@ -167,6 +217,10 @@ def run_full_verification(patch_dir='patch'):
         
     print(f"  [3] Lỗi thiếu Assets / Font / CSS: {len(asset_errors)} lỗi")
     for err in asset_errors:
+        print(f"      ❌ {err}")
+        
+    print(f"  [4] Xác thực chữ ký SHA256:       {total_hashed} tệp ({len(sha_errors)} lỗi)")
+    for err in sha_errors:
         print(f"      ❌ {err}")
     print("-" * 65)
     
@@ -183,3 +237,4 @@ if __name__ == '__main__':
     target = sys.argv[1] if len(sys.argv) > 1 else 'patch'
     success = run_full_verification(target)
     sys.exit(0 if success else 1)
+

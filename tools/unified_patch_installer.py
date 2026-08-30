@@ -28,6 +28,7 @@ import zipfile
 import threading
 import subprocess
 import tempfile
+import hashlib
 import urllib.request
 import urllib.error
 
@@ -164,6 +165,14 @@ def create_selective_backup(app_dir, backup_dir, log_func=print):
     total_sz = sum(os.path.getsize(os.path.join(r, f)) for r, _, files in os.walk(backup_dir) for f in files)
     log_func(f"[OK] Đã hoàn tất sao lưu bản gốc ({total_sz/(1024*1024):.2f} MB)!")
 
+def compute_sha256(file_path):
+    """Tính mã băm SHA256 của tệp để kiểm tra tính toàn vẹn tuyệt đối"""
+    sha = hashlib.sha256()
+    with open(file_path, 'rb') as f:
+        while chunk := f.read(65536):
+            sha.update(chunk)
+    return sha.hexdigest()
+
 def execute_folder_patch(game_dir, patch_files_dict, log_func=print, progress_func=None):
     """Vá trực tiếp các tệp Việt hóa vào thư mục resources/app (No Archive)"""
     t_start = time.time()
@@ -201,16 +210,30 @@ def execute_folder_patch(game_dir, patch_files_dict, log_func=print, progress_fu
             except Exception:
                 pass
 
-    # 4. Copy trực tiếp các file patch vào app_dir
-    log_func("[*] Đang cập nhật dữ liệu kịch bản & giao diện vào game...")
+    # 4. Copy trực tiếp và đối chiếu mã băm SHA256 từng file vào app_dir
+    log_func("[*] Đang cập nhật dữ liệu và đối chiếu mã băm SHA256 từng file...")
     copied_count = 0
+    verified_count = 0
     total_patch = len(patch_files_dict)
     
     for idx, (rel_path, src_path) in enumerate(patch_files_dict.items(), 1):
         norm_rel = rel_path.replace('/', '\\').lstrip('\\')
         dst_path = os.path.join(app_dir, norm_rel)
         os.makedirs(os.path.dirname(dst_path), exist_ok=True)
-        shutil.copy2(src_path, dst_path)
+        
+        src_hash = compute_sha256(src_path)
+        
+        # Copy kèm đối chiếu SHA256 (tự động retry nếu có lỗi ghi đĩa)
+        for attempt in range(3):
+            shutil.copy2(src_path, dst_path)
+            dst_hash = compute_sha256(dst_path)
+            if src_hash == dst_hash:
+                verified_count += 1
+                break
+            time.sleep(0.05)
+        else:
+            raise IOError(f"Lỗi đối chiếu SHA256 không khớp tại tệp: {rel_path} sau 3 lần thử!")
+            
         copied_count += 1
         
         if progress_func and idx % 20 == 0:
@@ -219,10 +242,11 @@ def execute_folder_patch(game_dir, patch_files_dict, log_func=print, progress_fu
     if progress_func:
         progress_func(100.0, total_patch, total_patch)
         
+    log_func(f"[OK] Đã xác thực toàn vẹn {verified_count}/{total_patch} tệp với mã băm SHA256 khớp 100%!")
     elapsed = round(time.time() - t_start, 2)
     log_func("============================================================")
     log_func(f"  >>> CÀI ĐẶT & CẬP NHẬT THÀNH CÔNG 100% TRONG {elapsed} GIÂY!")
-    log_func("  >>> Game hiện đang chạy ở chế độ No-Archive siêu mượt!")
+    log_func("  >>> Toàn bộ tệp đã được kiểm chứng SHA256 an toàn tuyệt đối!")
     log_func("============================================================")
     return True, copied_count, elapsed
 
