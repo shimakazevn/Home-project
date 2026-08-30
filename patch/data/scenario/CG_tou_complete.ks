@@ -15,7 +15,7 @@
 [endif]
 [_tb_end_tyrano_code]
 
-[tb_ptext_show  x="1040"  y="11"  size="21"  color="0xffffff"  time="0"  text="Tỷ lệ thu thập CG quay lén:"  anim="false"  face="serif,'游明朝'"  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="1050"  y="11"  size="21"  color="0xffffff"  time="0"  text="Tỷ lệ thu thập:"  anim="false"  face="serif,'游明朝'"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="1244"  y="11"  size="21"  color="0xffffff"  time="0"  anim="false"  face="serif,'游明朝'"  text="％"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="1204"  y="11"  size="21"  color="0xffcf0f"  time="0"  anim="false"  face="serif,'游明朝'"  text="&sf.cg_rate"  edge="undefined"  shadow="undefined"  ]
 [return  ]
@@ -28,8 +28,8 @@
 [playse  volume="100"  time="1000"  buf="0"  storage="sistem_omoide.mp3"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-Bên cạnh người con gái tôi yêu thương và chiếm hữu.[p]
-Mọi thứ thật hoàn hảo.[p]
+[font color="yellow"]Chúc mừng! Đã thu thập đủ 100% CG![p]
+Ảnh nền màn hình Start giờ đã có thể thay đổi tùy ý[resetfont][p]
 [_tb_end_text]
 
 [l  ]
