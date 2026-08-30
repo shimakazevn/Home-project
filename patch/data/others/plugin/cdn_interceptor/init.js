@@ -101,12 +101,15 @@
         return assetManifest || {};
     }
 
-    // 2. Chuyển đổi đường dẫn cục bộ -> URL Blogger CDN
+    // 2. Chuyển đổi đường dẫn cục bộ -> URL Blogger CDN (Hỗ trợ query strings / timestamps)
     window.resolveCDNUrl = function(rawPath) {
         if (!assetManifest || !rawPath || typeof rawPath !== 'string') return rawPath;
         if (rawPath.startsWith('https://lh3.googleusercontent.com')) return rawPath;
 
-        let clean = rawPath.replace(/^[./]+/, '').replace(/\\/g, '/');
+        let [basePart, queryPart] = rawPath.split('?');
+        let querySuffix = queryPart !== undefined ? '?' + queryPart : '';
+
+        let clean = basePart.replace(/^[./]+/, '').replace(/\\/g, '/');
         if (clean.includes('/data/')) {
             clean = 'data/' + clean.split('/data/')[1];
         } else if (clean.startsWith('http') && clean.includes('data/')) {
@@ -114,18 +117,18 @@
         }
 
         if (assetManifest[clean]) {
-            return assetManifest[clean];
+            return assetManifest[clean] + querySuffix;
         }
         for (const k in assetManifest) {
             if (clean.endsWith(k) || k.endsWith(clean)) {
-                return assetManifest[k];
+                return assetManifest[k] + querySuffix;
             }
         }
         let filename = clean.split('/').pop();
         if (filename && filename.includes('.')) {
             for (const k in assetManifest) {
                 if (k.endsWith('/' + filename)) {
-                    return assetManifest[k];
+                    return assetManifest[k] + querySuffix;
                 }
             }
         }
@@ -171,11 +174,12 @@
 
     // 3. Giải mã Audio từ RGB24 Stego PNG (Hỗ trợ Big-Endian/Little-Endian + AudioBuffer Cache)
     window.decodeStegoAudioFromUrl = function(pngUrl) {
-        if (audioBufferCache.has(pngUrl)) {
-            return Promise.resolve(audioBufferCache.get(pngUrl));
+        const cacheKey = pngUrl.split('?')[0];
+        if (audioBufferCache.has(cacheKey)) {
+            return Promise.resolve(audioBufferCache.get(cacheKey));
         }
-        if (audioPromiseCache.has(pngUrl)) {
-            return audioPromiseCache.get(pngUrl);
+        if (audioPromiseCache.has(cacheKey)) {
+            return audioPromiseCache.get(cacheKey);
         }
 
         const decodePromise = (async () => {
@@ -234,14 +238,14 @@
                 const arrayBufferToDecode = audioBufferData.buffer.slice(0, dataSize);
                 const decodedBuffer = await audioCtx.decodeAudioData(arrayBufferToDecode);
                 applyAudioBufferFadeOut(decodedBuffer);
-                audioBufferCache.set(pngUrl, decodedBuffer);
+                audioBufferCache.set(cacheKey, decodedBuffer);
                 return decodedBuffer;
             } finally {
-                audioPromiseCache.delete(pngUrl);
+                audioPromiseCache.delete(cacheKey);
             }
         })();
 
-        audioPromiseCache.set(pngUrl, decodePromise);
+        audioPromiseCache.set(cacheKey, decodePromise);
         return decodePromise;
     };
 
