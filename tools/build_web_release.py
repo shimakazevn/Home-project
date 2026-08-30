@@ -106,21 +106,25 @@ def build_web_distribution():
         html = f.read()
 
     # Chèn meta referrer no-referrer, iOS PWA/Fullscreen, Mobile stylesheet & Plugins vào thẻ <head>
-    injections = """
+    import time
+    v_tag = int(time.time())
+    injections = f"""
 <meta name="referrer" content="no-referrer" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="apple-mobile-web-app-title" content="HOME" />
 <meta name="mobile-web-app-capable" content="yes" />
 <!-- HOME Web CDN & Save Extensions -->
-<link href="./tyrano/css/web_mobile.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="./data/others/plugin/cdn_interceptor/init.js"></script>
-<script type="text/javascript" src="./data/others/plugin/web_save/init.js"></script>
+<link href="./tyrano/css/web_mobile.css?v={v_tag}" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="./data/others/plugin/cdn_interceptor/init.js?v={v_tag}"></script>
+<script type="text/javascript" src="./data/others/plugin/web_save/init.js?v={v_tag}"></script>
 """
     if "cdn_interceptor" not in html:
         html = html.replace('<head>', f'<head>\n{injections}')
-    elif 'name="apple-mobile-web-app-capable"' not in html:
-        html = html.replace('<head>', f'<head>\n{injections}')
+    else:
+        # Replace existing injection block with latest version tag
+        import re
+        html = re.sub(r'<!-- HOME Web CDN & Save Extensions -->.*?(<title>)', f'{injections}\n  \\1', html, flags=re.DOTALL)
 
     html = html.replace('user-scalable=no">', 'user-scalable=no,viewport-fit=cover">')
 
