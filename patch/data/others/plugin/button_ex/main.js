@@ -124,43 +124,80 @@ tyrano.plugin.kag.tag.button_ex = {
             that.kag.ftag.nextOrder()
         }
 
-        parent_button.on(
-            "transitionend",
-            function () {
-                parent_button.off("transitionend")
-                pm.p_width = parseInt(parent_button.css("width")) || parent_button.width() || 0
-                pm.p_height = parseInt(parent_button.css("height")) || parent_button.height() || 0
+        const KNOWN_SIZES = {
+            'workring_fx_off.png': { w: 160, h: 144 },
+            'workring_fx_on.png': { w: 160, h: 144 },
+            'workring_neru_off.png': { w: 160, h: 144 },
+            'workring_neru_on.png': { w: 160, h: 144 },
+            'workring_kintore_off.png': { w: 184, h: 104 },
+            'workring_kintore_on.png': { w: 184, h: 104 },
+            'workring_massa_off.png': { w: 160, h: 176 },
+            'workring_massa0_off.png': { w: 160, h: 176 },
+            'workring_massa_on.png': { w: 160, h: 176 },
+            'workring_massa0_on.png': { w: 160, h: 176 },
+            'workring_jim_off.png': { w: 160, h: 176 },
+            'workring_jim0_off.png': { w: 160, h: 176 },
+            'workring_jim_on.png': { w: 160, h: 176 },
+            'workring_jim0_on.png': { w: 160, h: 176 },
+            'workring_seisou_off.png': { w: 208, h: 128 },
+            'workring_seisou0_off.png': { w: 208, h: 128 },
+            'workring_seisou_on.png': { w: 208, h: 128 },
+            'workring_seisou0_on.png': { w: 208, h: 128 },
+            'workring_en.png': { w: 160, h: 160 },
+            'shinnyu_off.png': { w: 80, h: 80 },
+            'shinnyu_on.png': { w: 80, h: 80 }
+        };
 
-                if (pm.p_width == 0) {
-                    const getWidthReplay = function () {
-                        setTimeout(() => {
-                            pm.p_width = parseInt(parent_button.css("width")) || parent_button.width() || 0
-                            pm.p_height = parseInt(parent_button.css("height")) || parent_button.height() || 0
-                            if (pm.p_width != 0) {
-                                button_set(j_button, parent_button, pm)
-                            } else {
-                                pm.p_width = 120
-                                pm.p_height = 120
-                                button_set(j_button, parent_button, pm)
-                            }
-                        }, 50)
-                    }
-                    getWidthReplay()
-                } else {
-                    button_set(j_button, parent_button, pm)
-                }
-            }.bind(this)
-        )
-
-        parent_button.css({
-            transition: "5ms",
-            opacity: 0.99,
-        })
-        setTimeout(() => {
-            if (pm.p_width == 0) {
-                parent_button.trigger("transitionend")
+        const getKnownSize = (src) => {
+            if (!src) return null;
+            for (const [k, v] of Object.entries(KNOWN_SIZES)) {
+                if (src.endsWith(k) || src.includes(k)) return v;
             }
-        }, 30)
+            return null;
+        };
+
+        const known = getKnownSize(pm.src);
+        if (known) {
+            pm.p_width = known.w;
+            pm.p_height = known.h;
+            button_set(j_button, parent_button, pm);
+            return;
+        }
+
+        const measureAndSet = () => {
+            const nw = parent_button[0] ? (parent_button[0].naturalWidth || parent_button[0].width) : 0;
+            const nh = parent_button[0] ? (parent_button[0].naturalHeight || parent_button[0].height) : 0;
+            const cw = parseInt(parent_button.css("width")) || 0;
+            const ch = parseInt(parent_button.css("height")) || 0;
+
+            pm.p_width = nw || cw || parent_button.width() || 0;
+            pm.p_height = nh || ch || parent_button.height() || 0;
+
+            if (pm.p_width > 0 && pm.p_height > 0) {
+                button_set(j_button, parent_button, pm);
+            } else {
+                const probe = new Image();
+                probe.onload = () => {
+                    pm.p_width = probe.naturalWidth || 160;
+                    pm.p_height = probe.naturalHeight || 144;
+                    button_set(j_button, parent_button, pm);
+                };
+                probe.onerror = () => {
+                    pm.p_width = 160;
+                    pm.p_height = 144;
+                    button_set(j_button, parent_button, pm);
+                };
+                probe.src = pm.src;
+            }
+        };
+
+        if (parent_button[0] && parent_button[0].complete && parent_button[0].naturalWidth > 0) {
+            pm.p_width = parent_button[0].naturalWidth;
+            pm.p_height = parent_button[0].naturalHeight;
+            button_set(j_button, parent_button, pm);
+        } else {
+            measureAndSet();
+        }
     },
 
     setEvent: function (j_button, pm) {
