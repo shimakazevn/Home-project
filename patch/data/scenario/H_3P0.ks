@@ -118,7 +118,7 @@
 ;セリフをコール（挿入＿蕾）
 
 [if exp="f.H_hit == 5 && f.H_high1 == 1"]
-[call storage=H_rinkotubomi.ks target="*3P_pisuton_yukkuri_tubomi_hit"]
+[call storage=H_serihu_rinkotubomi.ks target="*3P_pisuton_yukkuri_tubomi_hit"]
 
 [elsif exp="f.H_supiritasu_pisuton_yukkuri == 0"]
 [call storage=H_serihu_rinkotubomi.ks target="*3P_pisuton_yukkuri_tubomi1"]

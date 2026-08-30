@@ -1,33 +1,6 @@
 
 [_tb_system_call storage=system/_ui_base.ks]
 
-[tb_start_tyrano_code]
-;テンションがマイナスの場合は0を代入する(バックアップ)
-[if exp="f.tension < 0"]
-[eval exp="f.tension = 0"]
-[endif]
-
-;テンションの表示（0～5低い6～10普通11～高い）(体調29以下orストレス60以上で病気)
-[if exp="f.para_taityou_display <= 29"]
-[jump target="*ten_byouki"]
-
-[elsif exp="f.para_sutoresu_display >= 60"]
-[jump target="*ten_byouki"]
-[endif]
-
-[if exp="f.tension >= 11"]
-[jump target="*ten_takai"]
-
-[elsif exp="f.tension >= 0 && f.tension <= 5"]
-[jump target="*ten_hikui"]
-
-[elsif exp="f.tension >= 6 && f.tension <= 10"]
-[jump target="*ten_hutuu"]
-
-[endif]
-
-[_tb_end_tyrano_code]
-
 *top
 
 [chara_hide  name="para_tension"  time="0"  wait="true"  pos_mode="false"  ]

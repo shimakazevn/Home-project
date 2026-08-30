@@ -248,7 +248,7 @@ Tsubomi「Giữa em và mẹ, anh thích ai hơn... Hãy dùng tình dục để
 ;手マン_ループパターン
 
 [if exp="f.H_hit == 5 && f.H_high5 == 1 "]
-[call storage=H_serihu_trinkotubomi.ks target="*3P_teman_hit"]
+[call storage=H_serihu_rinkotubomi.ks target="*3P_teman_hit"]
 
 [elsif exp="f.H_teman == 0 "]
 [call storage=H_serihu_rinkotubomi.ks target="*3P_teman1"]
@@ -448,7 +448,7 @@ Tsubomi「Lát nữa anh cũng phải đâm vào em đàng hoàng đấy nhé♡
 ;セリフをコール（挿入＿蕾）
 
 [if exp="f.H_hit == 5 && f.H_high1 == 1"]
-[call storage=H_rinkotubomi.ks target="*3P_pisuton_yukkuri_tubomi_hit"]
+[call storage=H_serihu_rinkotubomi.ks target="*3P_pisuton_yukkuri_tubomi_hit"]
 
 [elsif exp="f.H_supiritasu_pisuton_yukkuri == 0"]
 [call storage=H_serihu_rinkotubomi.ks target="*3P_pisuton_yukkuri_tubomi1"]

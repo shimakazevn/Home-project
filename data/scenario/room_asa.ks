@@ -430,3 +430,6 @@ $(".hatena1_select").css("opacity","0")
 [_tb_end_tyrano_code]
 
 [jump  storage="room_asa.ks"  target="*mission"  ]
+
+*mission
+[s]

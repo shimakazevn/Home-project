@@ -85,20 +85,8 @@ $('.zettyou_active').css({
 [elsif exp="f.H_zettyou_kaisuu == 4"]
 [jump target="*zettyou5"]
 
-[elsif exp="f.H_zettyou_kaisuu == 5"]
+[elsif exp="f.H_zettyou_kaisuu >= 5"]
 [jump target="*zettyou6"]
-
-[elsif exp="f.H_zettyou_kaisuu == 6"]
-[jump target="*zettyou7"]
-
-[elsif exp="f.H_zettyou_kaisuu == 7"]
-[jump target="*zettyou8"]
-
-[elsif exp="f.H_zettyou_kaisuu == 8"]
-[jump target="*zettyou9"]
-
-[elsif exp="f.H_zettyou_kaisuu == 9"]
-[jump target="*zettyou10"]
 
 [endif]
 [_tb_end_tyrano_code]
@@ -346,20 +334,8 @@ $('.zettyou_active').css({
 [elsif exp="f.H_zettyou_kaisuu == 4"]
 [jump target="*zettyou5_nikubenki"]
 
-[elsif exp="f.H_zettyou_kaisuu == 5"]
+[elsif exp="f.H_zettyou_kaisuu >= 5"]
 [jump target="*zettyou6_nikubenki"]
-
-[elsif exp="f.H_zettyou_kaisuu == 6"]
-[jump target="*zettyou7_nikubenki"]
-
-[elsif exp="f.H_zettyou_kaisuu == 7"]
-[jump target="*zettyou8_nikubenki"]
-
-[elsif exp="f.H_zettyou_kaisuu == 8"]
-[jump target="*zettyou9_nikubenki"]
-
-[elsif exp="f.H_zettyou_kaisuu == 9"]
-[jump target="*zettyou10_nikubenki"]
 
 [endif]
 [_tb_end_tyrano_code]

@@ -2,7 +2,9 @@
     const __slider_ui = {
         updateRange: function (name, w, pm) {
             var rangeValue = $("#input_" + name).val()
-            var active = w * ((rangeValue - $("#input_" + name).attr("min")) / ($("#input_" + name).attr("max") - $("#input_" + name).attr("min")))
+            var minVal = parseFloat($("#input_" + name).attr("min") || 0);
+            var maxVal = parseFloat($("#input_" + name).attr("max") || 100);
+            var active = w * ((rangeValue - minVal) / (maxVal - minVal))
             var param = {width: active + "px"}
             let left = $("#input_" + name)
                 .css("left")
@@ -13,13 +15,13 @@
             let tip = $("." + name).find(".range_tip")
             if (tip.length > 0) {
                 let tip_x = 0
-                if (pm.reverse === "true") {
+                if (pm && pm.reverse === "true") {
                     tip_x = parseInt(left) + parseInt(w) - parseInt(active) - parseInt(tip.css("width").replace("px", "")) / 2
                 } else {
                     tip_x = parseInt(left) + parseInt(active) - parseInt(tip.css("width").replace("px", "")) / 2
                 }
                 tip.text(rangeValue)
-                if (pm.tip_pos !== "static") {
+                if (pm && pm.tip_pos !== "static") {
                     tip.css({
                         left: `${tip_x}px`,
                     })
@@ -46,6 +48,15 @@
             return $.convertColor(color).replace("=", "#")
         },
     }
+    window.__slider_ui = __slider_ui;
+    window.__update_slider_dom = function(name, val) {
+        var input = $("#input_" + name);
+        if (input.length > 0) {
+            input.val(val);
+            var w = parseFloat(input.css("width")) || 290;
+            __slider_ui.updateRange(name, w, { reverse: "false" });
+        }
+    };
 
     //スライダー
     TYRANO.kag.kag.tag.slider = {
@@ -282,7 +293,11 @@
                     })
                 that.kag.embScript(_pm.var + " = " + this.value)
                 if (_pm.exp != "") {
-                    that.kag.embScript(_pm.exp, _pm.preexp)
+                    let expStr = _pm.exp;
+                    if (expStr.includes("tf.change_se(") || expStr.includes("tf.change_voice_")) {
+                        expStr = expStr.replace(/\(\s*\)/, "(undefined, true)");
+                    }
+                    that.kag.embScript(expStr, _pm.preexp)
                 }
             })
             input.on("mouseup touchend", function () {

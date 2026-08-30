@@ -625,7 +625,7 @@ Nagi「Cảm ơn cậu đã đưa tớ về. Vậy thì... chúc ngủ ngon nhé
 Rủ đi ăn (Thành công) Kém[p]
 [_tb_end_text]
 
-[call  storage="deto_gohan.ks"  target="*nagi"  ]
+[call  storage="EV_deto_dinner.ks"  target="*nagi"  ]
 [jump  storage="room_yoru.ks"  target="*top"  cond=""  ]
 *gohan_seikou_hutuu
 
@@ -633,7 +633,7 @@ Rủ đi ăn (Thành công) Kém[p]
 Rủ đi ăn (Thành công) Bình thường[p]
 [_tb_end_text]
 
-[call  storage="deto_gohan.ks"  target="*nagi"  ]
+[call  storage="EV_deto_dinner.ks"  target="*nagi"  ]
 [jump  storage="room_yoru.ks"  target="*top"  cond=""  ]
 *gohan_seikou_yuukou
 
@@ -641,7 +641,7 @@ Rủ đi ăn (Thành công) Bình thường[p]
 Rủ đi ăn (Thành công) Thân thiện[p]
 [_tb_end_text]
 
-[call  storage="deto_gohan.ks"  target="*nagi"  ]
+[call  storage="EV_deto_dinner.ks"  target="*nagi"  ]
 [jump  storage="room_yoru.ks"  target="*top"  cond=""  ]
 *gohan_seikou_suki
 
@@ -649,7 +649,7 @@ Rủ đi ăn (Thành công) Thân thiện[p]
 Rủ đi ăn (Thành công) Thích[p]
 [_tb_end_text]
 
-[call  storage="deto_gohan.ks"  target="*nagi"  ]
+[call  storage="EV_deto_dinner.ks"  target="*nagi"  ]
 [jump  storage="room_yoru.ks"  target="*top"  cond=""  ]
 *sasou_b
 
@@ -672,7 +672,7 @@ Rủ đi ăn (Thành công) Thích[p]
 [freeimage layer="0"]
 [_tb_end_tyrano_code]
 
-[call  storage="character.ks"  target="*nagi"  ]
+[call  storage="character.ks"  target="*nagi_sotogi"  ]
 [call  storage="ui_onoff.ks"  target="*UI_on"  ]
 [mask_off  time="700"  effect="fadeOut"  ]
 [tb_start_tyrano_code]
@@ -782,7 +782,7 @@ Nagi「Mau tới thứ Bảy đi nào.」[p]
 [freeimage layer="0"]
 [_tb_end_tyrano_code]
 
-[call  storage="character.ks"  target="*nagi"  ]
+[call  storage="character.ks"  target="*nagi_sotogi"  ]
 [call  storage="ui_onoff.ks"  target="*UI_on"  ]
 [mask_off  time="700"  effect="fadeOut"  ]
 [tb_start_tyrano_code]

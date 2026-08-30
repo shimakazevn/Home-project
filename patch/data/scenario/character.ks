@@ -168,6 +168,18 @@
 [endif]
 [_tb_end_tyrano_code]
 
+*nagi_date_kirai
+
+[chara_show  name="kyara_nagi"  time="500"  wait="true"  storage="chara/153/ADV_nagi_03_base.png"  width="832"  height="832"  left="260"  top="32"  reflect="false"  ]
+[chara_show  name="kyara_nagi_sabun2"  time="0"  wait="false"  storage="chara/179/ADV_nagi_01_00c.gif"  width="832"  height="832"  left="260"  top="32"  reflect="false"  ]
+[return  ]
+
+*nagi_date_nigate
+
+[chara_show  name="kyara_nagi"  time="500"  wait="true"  storage="chara/153/ADV_nagi_03_base.png"  width="832"  height="832"  left="260"  top="32"  reflect="false"  ]
+[chara_show  name="kyara_nagi_sabun2"  time="0"  wait="false"  storage="chara/179/ADV_nagi_01_00c.gif"  width="832"  height="832"  left="260"  top="32"  reflect="false"  ]
+[return  ]
+
 *nagi_date_hutuu
 
 [chara_show  name="kyara_nagi"  time="500"  wait="true"  storage="chara/153/ADV_nagi_03_base.png"  width="832"  height="832"  left="260"  top="32"  reflect="false"  ]

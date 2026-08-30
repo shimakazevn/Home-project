@@ -203,99 +203,136 @@ if (sf.config_default_set !== true) {
 		}
 	}
 
-	tf.change_bgm = function(){
-		let vol = parseInt(tf.current_bgm_vol);
+	tf.change_bgm = function(val){
+		var kag = TYRANO.kag;
+		var tf = kag.variable.tf;
+		let vol = val !== undefined ? parseInt(val) : parseInt(tf.current_bgm_vol);
 		if (isNaN(vol)) vol = 80;
-		TYRANO.kag.config.defaultBgmVolume = vol;
-		if (!TYRANO.kag.stat.map_bgm_volume || typeof TYRANO.kag.stat.map_bgm_volume !== 'object') {
-			TYRANO.kag.stat.map_bgm_volume = {};
+		vol = Math.max(0, Math.min(100, vol));
+		tf.current_bgm_vol = vol;
+		if (kag.setBgmVolume) {
+			kag.setBgmVolume(vol);
 		}
-		TYRANO.kag.stat.map_bgm_volume["0"] = vol;
-		sf._system_config_bgm_volume = vol;
-		TYRANO.kag.saveSystemVariable();
-		var map_bgm = TYRANO.kag.tmp.map_bgm;
-		if (map_bgm) {
-			var new_volume = parseFloat(vol / 100);
-			for (var key in map_bgm) {
-				if (map_bgm[key] && map_bgm[key].volume) {
-					map_bgm[key].volume(new_volume);
-				}
-			}
+		if (val !== undefined && window.__update_slider_dom) {
+			window.__update_slider_dom("bgm", vol);
+		}
+		// Cập nhật icon Mute BGM
+		var btn = $(".fixlayer.bgm_mute");
+		if (btn.length > 0) {
+			btn.find("img").attr("src", tf.img_path + (vol > 0 ? "off.gif" : "on.png"));
 		}
 	};
 
-	tf.change_se = function(){
-		let vol = parseInt(tf.current_se_vol);
+	tf.change_se = function(val, playSample){
+		var kag = TYRANO.kag;
+		var tf = kag.variable.tf;
+		let vol = val !== undefined ? parseInt(val) : parseInt(tf.current_se_vol);
 		if (isNaN(vol)) vol = 80;
-		TYRANO.kag.config.defaultSeVolume = vol;
-		if (!TYRANO.kag.stat.map_se_volume || typeof TYRANO.kag.stat.map_se_volume !== 'object') {
-			TYRANO.kag.stat.map_se_volume = {};
+		vol = Math.max(0, Math.min(100, vol));
+		tf.current_se_vol = vol;
+		if (kag.setSeVolume) {
+			kag.setSeVolume("0", vol);
 		}
-		TYRANO.kag.stat.map_se_volume["0"] = vol;
-		if (sf._skskpnt_volume) sf._skskpnt_volume[0] = vol;
-		sf._system_config_se_volume = vol;
-		TYRANO.kag.saveSystemVariable();
-		var map_se = TYRANO.kag.tmp.map_se;
-		if (map_se && map_se["0"] && map_se["0"].volume) {
-			map_se["0"].volume(parseFloat(vol / 100));
+		if (val !== undefined && window.__update_slider_dom) {
+			window.__update_slider_dom("se", vol);
+		}
+		// Cập nhật icon Mute SE
+		var btn = $(".fixlayer.se_mute");
+		if (btn.length > 0) {
+			btn.find("img").attr("src", tf.img_path + (vol > 0 ? "off.gif" : "on.png"));
+		}
+		if (playSample && kag.playTestAudio) {
+			kag.playTestAudio('se', vol);
 		}
 	};
 
-	tf.change_voice_1 = function(){
-		let vol = parseInt(tf.current_voice_1_vol);
-		if (isNaN(vol)) vol = 80;
-		if (!TYRANO.kag.stat.map_se_volume || typeof TYRANO.kag.stat.map_se_volume !== 'object') {
-			TYRANO.kag.stat.map_se_volume = {};
-		}
-		TYRANO.kag.stat.map_se_volume["1"] = vol;
-		if (sf._skskpnt_volume) sf._skskpnt_volume[1] = vol;
-		TYRANO.kag.saveSystemVariable();
-		var map_se = TYRANO.kag.tmp.map_se;
-		if (map_se && map_se["1"] && map_se["1"].volume) {
-			map_se["1"].volume(parseFloat(vol / 100));
+	tf.update_voice_mute_ui = function(){
+		var tf = TYRANO.kag.variable.tf;
+		var voice_mute_btns = $(".fixlayer.voice_mute");
+		if (voice_mute_btns.length >= 3) {
+			voice_mute_btns.eq(0).find("img").attr("src", tf.img_path + (tf.current_voice_1_vol > 0 ? "off.gif" : "on.png"));
+			voice_mute_btns.eq(1).find("img").attr("src", tf.img_path + (tf.current_voice_2_vol > 0 ? "off.gif" : "on.png"));
+			voice_mute_btns.eq(2).find("img").attr("src", tf.img_path + (tf.current_voice_3_vol > 0 ? "off.gif" : "on.png"));
 		}
 	};
 
-	tf.change_voice_2 = function(){
-		let vol = parseInt(tf.current_voice_2_vol);
+	tf.change_voice_1 = function(val, playSample){
+		var kag = TYRANO.kag;
+		var tf = kag.variable.tf;
+		let vol = val !== undefined ? parseInt(val) : parseInt(tf.current_voice_1_vol);
 		if (isNaN(vol)) vol = 80;
-		if (!TYRANO.kag.stat.map_se_volume || typeof TYRANO.kag.stat.map_se_volume !== 'object') {
-			TYRANO.kag.stat.map_se_volume = {};
+		vol = Math.max(0, Math.min(100, vol));
+		tf.current_voice_1_vol = vol;
+		if (kag.setSeVolume) {
+			kag.setSeVolume("1", vol);
 		}
-		TYRANO.kag.stat.map_se_volume["2"] = vol;
-		if (sf._skskpnt_volume) sf._skskpnt_volume[2] = vol;
-		TYRANO.kag.saveSystemVariable();
-		var map_se = TYRANO.kag.tmp.map_se;
-		if (map_se && map_se["2"] && map_se["2"].volume) {
-			map_se["2"].volume(parseFloat(vol / 100));
+		if (val !== undefined && window.__update_slider_dom) {
+			window.__update_slider_dom("voice_1", vol);
+		}
+		tf.update_voice_mute_ui();
+		if (playSample && kag.playTestAudio) {
+			kag.playTestAudio('voice_1', vol);
 		}
 	};
 
-	tf.change_voice_3 = function(){
-		let vol = parseInt(tf.current_voice_3_vol);
+	tf.change_voice_2 = function(val, playSample){
+		var kag = TYRANO.kag;
+		var tf = kag.variable.tf;
+		let vol = val !== undefined ? parseInt(val) : parseInt(tf.current_voice_2_vol);
 		if (isNaN(vol)) vol = 80;
-		if (!TYRANO.kag.stat.map_se_volume || typeof TYRANO.kag.stat.map_se_volume !== 'object') {
-			TYRANO.kag.stat.map_se_volume = {};
+		vol = Math.max(0, Math.min(100, vol));
+		tf.current_voice_2_vol = vol;
+		if (kag.setSeVolume) {
+			kag.setSeVolume("2", vol);
 		}
-		TYRANO.kag.stat.map_se_volume["3"] = vol;
-		if (sf._skskpnt_volume) sf._skskpnt_volume[3] = vol;
-		TYRANO.kag.saveSystemVariable();
-		var map_se = TYRANO.kag.tmp.map_se;
-		if (map_se && map_se["3"] && map_se["3"].volume) {
-			map_se["3"].volume(parseFloat(vol / 100));
+		if (val !== undefined && window.__update_slider_dom) {
+			window.__update_slider_dom("voice_2", vol);
+		}
+		tf.update_voice_mute_ui();
+		if (playSample && kag.playTestAudio) {
+			kag.playTestAudio('voice_2', vol);
+		}
+	};
+
+	tf.change_voice_3 = function(val, playSample){
+		var kag = TYRANO.kag;
+		var tf = kag.variable.tf;
+		let vol = val !== undefined ? parseInt(val) : parseInt(tf.current_voice_3_vol);
+		if (isNaN(vol)) vol = 80;
+		vol = Math.max(0, Math.min(100, vol));
+		tf.current_voice_3_vol = vol;
+		if (kag.setSeVolume) {
+			kag.setSeVolume("3", vol);
+		}
+		if (val !== undefined && window.__update_slider_dom) {
+			window.__update_slider_dom("voice_3", vol);
+		}
+		tf.update_voice_mute_ui();
+		if (playSample && kag.playTestAudio) {
+			kag.playTestAudio('voice_3', vol);
 		}
 	};
 
 	tf.change_ch_speed = function(val){
+		var kag = TYRANO.kag;
+		var sf = kag.variable.sf;
+		var tf = kag.variable.tf;
 		let speed = val !== undefined ? parseInt(val) : (101 - parseInt(tf.slider_ch_speed || 51));
 		if (isNaN(speed) || speed < 1) speed = 50;
 		tf.current_ch_speed = speed;
 		tf.slider_ch_speed = 101 - speed;
-		TYRANO.kag.stat.ch_speed = "";
-		TYRANO.kag.config.chSpeed = speed;
+		kag.stat.ch_speed = "";
+		kag.config.chSpeed = speed;
 		sf._system_config_ch_speed = speed;
 		sf._config_ch_speed = speed;
-		TYRANO.kag.saveSystemVariable();
+		kag.saveSystemVariable();
+		if (val !== undefined && window.__update_slider_dom) {
+			window.__update_slider_dom("text", tf.slider_ch_speed);
+		}
+		var btn = $(".fixlayer.text_mute");
+		if (btn.length > 0) {
+			btn.find("img").attr("src", tf.img_path + (speed > 1 ? "off.gif" : "on.png"));
+		}
 		if (window.gMessageTester && window.gMessageTester.next) {
 			window.gMessageTester.currentTextNumber = 0;
 			window.gMessageTester.next(true);
@@ -303,14 +340,24 @@ if (sf.config_default_set !== true) {
 	};
 
 	tf.change_auto_speed = function(val){
+		var kag = TYRANO.kag;
+		var sf = kag.variable.sf;
+		var tf = kag.variable.tf;
 		let speed = val !== undefined ? parseInt(val) : (5001 - parseInt(tf.slider_auto_speed || 2501));
 		if (isNaN(speed) || speed < 1) speed = 2500;
 		tf.current_auto_speed = speed;
 		tf.slider_auto_speed = 5001 - speed;
-		TYRANO.kag.config.autoSpeed = speed;
+		kag.config.autoSpeed = speed;
 		sf._system_config_auto_speed = speed;
 		sf._config_auto_speed = speed;
-		TYRANO.kag.saveSystemVariable();
+		kag.saveSystemVariable();
+		if (val !== undefined && window.__update_slider_dom) {
+			window.__update_slider_dom("auto", tf.slider_auto_speed);
+		}
+		var btn = $(".fixlayer.auto_mute");
+		if (btn.length > 0) {
+			btn.find("img").attr("src", tf.img_path + (speed > 1 ? "off.gif" : "on.png"));
+		}
 		if (window.gMessageTester && window.gMessageTester.next) {
 			window.gMessageTester.currentTextNumber = 0;
 			window.gMessageTester.next(true);
@@ -458,24 +505,20 @@ TYRANO.kag.saveSystemVariable();
 	// ミュート
 	if( tf.isMute_bgm ){
 		f.prev_vol_list.bgm = tf.current_bgm_vol || 80;
-		tf.current_bgm_vol = 0;
+		tf.change_bgm(0);
 	// 解除
 	} else {
-		tf.current_bgm_vol = f.prev_vol_list.bgm || 80;
+		tf.change_bgm(f.prev_vol_list.bgm || 80);
 	}
-	tf.change_bgm();
 [endscript]
 [call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*mute_bgm_button" ]
 [return]
 
 *vol_bgm_change
-	[free layer="0" name="bgmvol" time="0" wait="true"]
-	[bgmopt volume="&tf.current_bgm_vol"]
 	[iscript]
 	tf.change_bgm();
 	[endscript]
 [call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*mute_bgm_button" ]
-
 [return]
 
 ;--------------------------------------------------------------------------------
@@ -487,26 +530,20 @@ TYRANO.kag.saveSystemVariable();
 	// ミュート
 	if( tf.isMute_se ){
 		f.prev_vol_list.se = tf.current_se_vol || 80;
-		tf.current_se_vol = 0;
+		tf.change_se(0);
 	// 解除
 	} else {
-		tf.current_se_vol = f.prev_vol_list.se || 80;
+		tf.change_se(f.prev_vol_list.se || 80);
 	}
-	tf.change_se();
 [endscript]
 [call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*mute_se_button" ]
-
 [return]
 
 *vol_se_change
 	[iscript ]
-		sf._skskpnt_volume[0] = tf.current_se_vol;
 		tf.change_se();
 	[endscript ]
-	[free layer="0" name="sevol" time="0" wait="true"]
-	[seopt buf="0" volume="&tf.current_se_vol"]
 [call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*mute_se_button" ]
-
 [return]
 
 ;--------------------------------------------------------------------------------
@@ -516,35 +553,27 @@ TYRANO.kag.saveSystemVariable();
 
 [iscript]
 	if (!f.prev_vol_list.voice) f.prev_vol_list.voice = [80, 80, 80];
-	// ミュート
-	if( tf.isMute ){
+	var targetVol = 0;
+	if (tf.isMute) {
 		f.prev_vol_list.voice[tf.isMuteNum] = tf["current_voice_" + (tf.isMuteNum + 1) + "_vol"] || 80;
-		tf["current_voice_" + (tf.isMuteNum + 1) + "_vol"] = 0;
-	// 解除
+		targetVol = 0;
 	} else {
-		tf["current_voice_" + (tf.isMuteNum + 1)+ "_vol"] = f.prev_vol_list.voice[tf.isMuteNum] || 80;
+		targetVol = f.prev_vol_list.voice[tf.isMuteNum] || 80;
 	}
-	if (tf.isMuteNum === 0) tf.change_voice_1();
-	else if (tf.isMuteNum === 1) tf.change_voice_2();
-	else if (tf.isMuteNum === 2) tf.change_voice_3();
+	if (tf.isMuteNum === 0) tf.change_voice_1(targetVol);
+	else if (tf.isMuteNum === 1) tf.change_voice_2(targetVol);
+	else if (tf.isMuteNum === 2) tf.change_voice_3(targetVol);
 [endscript]
 [call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*mute_voice_button" ]
 [return]
 
 *vol_voice_change
 [iscript ]
-	sf._skskpnt_volume[1] = tf.current_voice_1_vol;
-	sf._skskpnt_volume[2] = tf.current_voice_2_vol;
-	sf._skskpnt_volume[3] = tf.current_voice_3_vol;
 	tf.change_voice_1();
 	tf.change_voice_2();
 	tf.change_voice_3();
 [endscript ]
-[seopt buf="1" volume="&tf.current_voice_1_vol"]
-[seopt buf="2" volume="&tf.current_voice_2_vol"]
-[seopt buf="3" volume="&tf.current_voice_3_vol"]
 [call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*mute_voice_button" ]
-
 [return]
 
 

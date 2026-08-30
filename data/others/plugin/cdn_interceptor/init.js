@@ -1937,53 +1937,119 @@
             return origTagPlayse.apply(this, arguments);
         };
 
-        // Hook tag bgmopt / seopt (Slider volume)
-        if (kag.tag.bgmopt) {
-            const origBgmOpt = kag.tag.bgmopt.start;
-            kag.tag.bgmopt.start = function(pm) {
-                if (pm && pm.volume !== undefined && pm.volume !== "") {
-                    let normVol = parseFloat(pm.volume) / 100.0;
-                    if (activeBgmGainNode) {
-                        activeBgmGainNode.gain.value = Math.max(0, Math.min(1.0, normVol * MASTER_BGM_SCALE));
-                    }
-                    if (kag.stat) {
-                        if (!kag.stat.map_bgm_volume || typeof kag.stat.map_bgm_volume !== 'object') {
-                            kag.stat.map_bgm_volume = {};
-                        }
-                        kag.stat.map_bgm_volume["0"] = parseInt(pm.volume);
-                    }
-                    if (kag.config) {
-                        kag.config.defaultBgmVolume = parseInt(pm.volume);
+        // Global Direct Audio Volume Setters (Seamless real-time audio volume control)
+        kag.setBgmVolume = function(vol) {
+            let numVol = parseInt(vol);
+            if (isNaN(numVol)) numVol = 80;
+            numVol = Math.max(0, Math.min(100, numVol));
+            let normVol = numVol / 100.0;
+            
+            if (activeBgmGainNode) {
+                activeBgmGainNode.gain.value = Math.max(0, Math.min(1.0, normVol * MASTER_BGM_SCALE));
+            }
+            if (kag.stat) {
+                if (!kag.stat.map_bgm_volume || typeof kag.stat.map_bgm_volume !== 'object') {
+                    kag.stat.map_bgm_volume = {};
+                }
+                kag.stat.map_bgm_volume["0"] = numVol;
+            }
+            if (kag.config) {
+                kag.config.defaultBgmVolume = numVol;
+            }
+            if (kag.variable && kag.variable.sf) {
+                kag.variable.sf._system_config_bgm_volume = numVol;
+                kag.saveSystemVariable();
+            }
+            const map_bgm = kag.tmp ? kag.tmp.map_bgm : null;
+            if (map_bgm) {
+                for (let key in map_bgm) {
+                    if (map_bgm[key] && map_bgm[key].volume) {
+                        map_bgm[key].volume(normVol);
                     }
                 }
-                return origBgmOpt.apply(this, arguments);
+            }
+        };
+
+        kag.setSeVolume = function(buf, vol) {
+            let numVol = parseInt(vol);
+            if (isNaN(numVol)) numVol = 80;
+            numVol = Math.max(0, Math.min(100, numVol));
+            let normVol = numVol / 100.0;
+            let bufStr = (buf !== undefined && buf !== "") ? String(buf) : "0";
+            
+            if (activeBufMap.has(bufStr)) {
+                const item = activeBufMap.get(bufStr);
+                if (item && item.gainNode) {
+                    item.gainNode.gain.value = Math.max(0, Math.min(1.0, normVol * MASTER_SE_SCALE));
+                }
+            }
+            if (kag.stat) {
+                if (!kag.stat.map_se_volume || typeof kag.stat.map_se_volume !== 'object') {
+                    kag.stat.map_se_volume = {};
+                }
+                kag.stat.map_se_volume[bufStr] = numVol;
+            }
+            if (bufStr === "0" && kag.config) {
+                kag.config.defaultSeVolume = numVol;
+            }
+            if (kag.variable && kag.variable.sf) {
+                if (!kag.variable.sf._skskpnt_volume) {
+                    kag.variable.sf._skskpnt_volume = [80, 80, 80, 80];
+                }
+                kag.variable.sf._skskpnt_volume[parseInt(bufStr) || 0] = numVol;
+                if (bufStr === "0") {
+                    kag.variable.sf._system_config_se_volume = numVol;
+                }
+                kag.saveSystemVariable();
+            }
+            const map_se = kag.tmp ? kag.tmp.map_se : null;
+            if (map_se && map_se[bufStr] && map_se[bufStr].volume) {
+                map_se[bufStr].volume(normVol);
+            }
+        };
+
+        // Sample audio preview player for config screen testing
+        let _testAudioDebounce = 0;
+        kag.playTestAudio = function(type, vol) {
+            const now = Date.now();
+            if (now - _testAudioDebounce < 250) return;
+            _testAudioDebounce = now;
+
+            let sampleMap = {
+                'se': { path: 'data/sound/cam.mp3', buf: '0' },
+                'voice_1': { path: 'data/sound/nagi/voice_BADEND_nagi1.mp3', buf: '1' },
+                'voice_2': { path: 'data/sound/rinko/voice_3P_r_naka2.mp3', buf: '2' },
+                'voice_3': { path: 'data/sound/tubomi/voice_3P_kaisi1.mp3', buf: '3' }
+            };
+            let sample = sampleMap[type];
+            if (!sample) return;
+            
+            let cdnUrl = window.resolveCDNUrl(sample.path);
+            if (cdnUrl && cdnUrl.startsWith('http')) {
+                kag.ft_play_stego_se(cdnUrl, vol, sample.buf);
+            }
+        };
+
+        // Hook tag bgmopt / seopt (Slider volume)
+        if (kag.tag.bgmopt) {
+            kag.tag.bgmopt.start = function(pm) {
+                if (pm && pm.volume !== undefined && pm.volume !== "") {
+                    kag.setBgmVolume(pm.volume);
+                }
+                if (this && this.kag && this.kag.ftag) {
+                    this.kag.ftag.nextOrder();
+                }
             };
         }
 
         if (kag.tag.seopt) {
-            const origSeOpt = kag.tag.seopt.start;
             kag.tag.seopt.start = function(pm) {
                 if (pm && pm.volume !== undefined && pm.volume !== "") {
-                    let buf = (pm.buf !== undefined && pm.buf !== "") ? String(pm.buf) : "0";
-                    if (kag.stat) {
-                        if (!kag.stat.map_se_volume || typeof kag.stat.map_se_volume !== 'object') {
-                            kag.stat.map_se_volume = {};
-                        }
-                        kag.stat.map_se_volume[buf] = parseInt(pm.volume);
-                    }
-                    if (buf === "0" && kag.config) {
-                        kag.config.defaultSeVolume = parseInt(pm.volume);
-                    }
-                    // Cập nhật real-time GainNode cho âm thanh/voice đang phát trên buffer này
-                    if (activeBufMap.has(buf)) {
-                        const item = activeBufMap.get(buf);
-                        if (item && item.gainNode) {
-                            let normVol = parseFloat(pm.volume) / 100.0;
-                            item.gainNode.gain.value = Math.max(0, Math.min(1.0, normVol * MASTER_SE_SCALE));
-                        }
-                    }
+                    kag.setSeVolume(pm.buf, pm.volume);
                 }
-                return origSeOpt.apply(this, arguments);
+                if (this && this.kag && this.kag.ftag) {
+                    this.kag.ftag.nextOrder();
+                }
             };
         }
 

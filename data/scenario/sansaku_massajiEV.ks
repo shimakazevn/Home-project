@@ -86,3 +86,6 @@ Rinko「……Cháu có vẻ hơi mệt mỏi nhỉ? Xong rồi. Ừm, sắc m�
 [_tb_end_text]
 
 [jump  storage="sansaku.ks"  target="*end"  ]
+
+*kaeru
+[jump  storage="sansaku.ks"  target="*end"  ]

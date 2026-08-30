@@ -151,7 +151,7 @@ Tsubomi「Giữa em và mẹ, anh thích ai hơn... Hãy dùng tình dục để
 ;蕾キスループパターン
 
 [if exp="f.H_hit == 5 && f.H_high1 == 1"]
-[call storage=H_serihu_rinkotubomi.ks target="*3P_Dkiss_tubomi_hit"]
+[call storage=H_serihu_rinkotubomi.ks target="*3P_2_Dkiss_tubomi_hit"]
 
 [elsif exp="f.H_Dkiss == 0"]
 [call storage=H_serihu_rinkotubomi.ks target="*3P_2_Dkiss_tubomi1"]
@@ -249,7 +249,7 @@ Tsubomi「Giữa em và mẹ, anh thích ai hơn... Hãy dùng tình dục để
 ;手マン_ループパターン
 
 [if exp="f.H_hit == 5 && f.H_high5 == 1 "]
-[call storage=H_serihu_trinkotubomi.ks target="*3P_2_teman_hit"]
+[call storage=H_serihu_rinkotubomi.ks target="*3P_2_teman_hit"]
 
 [elsif exp="f.H_teman == 0 "]
 [call storage=H_serihu_rinkotubomi.ks target="*3P_2_teman1"]
@@ -449,7 +449,7 @@ Tsubomi「A♡ Aaaa♡ Đang nong rộng ra rồi đâm vào này♡ Bên trong 
 ;セリフをコール（挿入＿蕾）
 
 [if exp="f.H_hit == 5 && f.H_high1 == 1"]
-[call storage=H_rinkotubomi.ks target="*3P_pisuton_yukkuri_tubomi_hit"]
+[call storage=H_serihu_rinkotubomi.ks target="*3P_pisuton_yukkuri_tubomi_hit"]
 
 [elsif exp="f.H_supiritasu_pisuton_yukkuri == 0"]
 [call storage=H_serihu_rinkotubomi.ks target="*3P_pisuton_yukkuri_tubomi1"]
