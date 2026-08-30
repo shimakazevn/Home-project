@@ -5,17 +5,18 @@ tools/unified_patch_installer.py
 Trình cài đặt & Cập nhật Patch Việt Hóa Tự Động Trực Tuyến (Online 1-Click Patcher)
 Tựa game: HOME (ROOM) - SORAREVO [RJ01556529]
 Nhóm dịch: Shimakaze VN Translation Team
-Thiết kế giao diện: Phong cách macOS Modern Dark Theme
+Thiết kế: Visual Novel Launcher HUD - Full Artwork & Minimalist Flat Dock
 
-Cơ chế hoạt động 100% Online:
-1. Tự động kết nối tới GitHub Repository (shimakazevn/Home-project).
-2. Tải về phiên bản dữ liệu dịch mới nhất theo thời gian thực (Real-time).
-3. Kiến trúc No-Archive & Lightweight Backup:
-   - Giải nén 1 lần app.asar -> resources/app/ (nếu chưa giải nén).
-   - Tự động tạo bản sao lưu chọn lọc resources/backup_original/ (~17MB, loại trừ file GIF nặng).
-   - Dọn sạch 16GB tệp asar thừa để giải phóng ổ cứng.
-   - Vá trực tiếp dữ liệu mới nhất vào resources/app/ trong 0.16 giây!
-4. Khôi phục bản gốc tiếng Nhật 1-Click tức thì.
+Tính năng:
+1. Giao diện hình nền Visual Novel toàn màn hình, thanh điều khiển phẳng (Flat HUD).
+2. Tự động kết nối GitHub Releases kéo bản dịch mới nhất theo thời gian thực (Real-time).
+3. Xác thực mã băm SHA256 cho từng tệp để chống lỗi ghi đĩa và lỗi mạng tuyệt đối.
+4. Kiến trúc No-Archive & Lightweight Backup:
+   - Giải nén 1 lần app.asar -> resources/app/
+   - Sao lưu chọn lọc ~17MB (loại trừ GIF)
+   - Tự động dọn 16GB asar thừa
+   - Vá trực tiếp vào app trong 0.16s
+5. Khôi phục bản gốc tiếng Nhật 1-Click tức thì.
 """
 
 import os
@@ -32,7 +33,7 @@ import hashlib
 import urllib.request
 import urllib.error
 
-# Bật High-DPI Awareness trên Windows để giao diện sắc nét
+# Bật High-DPI Awareness trên Windows
 if sys.platform == 'win32':
     try:
         import ctypes
@@ -49,7 +50,7 @@ if sys.stdout:
     except Exception:
         pass
 
-VERSION = "3.1.0"
+VERSION = "3.2.0"
 APP_TITLE = f"HOME (ROOM) - Bản Việt Hóa v{VERSION}"
 GITHUB_REPO_OWNER = "shimakazevn"
 GITHUB_REPO_NAME = "Home-project"
@@ -57,7 +58,37 @@ GITHUB_API_LATEST_RELEASE = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{
 GITHUB_RAW_ARCHIVE_URL = f"https://github.com/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/archive/refs/heads/main.zip"
 
 # ─────────────────────────────────────────────────────────────────────────────
-# 1. BỘ GIẢI NÉN VÀ VÁ FILE TRỰC TIẾP LÊN THƯ MỤC APP (NO ARCHIVE)
+# 1. TIỆN ÍCH HỆ THỐNG VÀ XÁC THỰC MÃ BĂM SHA256
+# ─────────────────────────────────────────────────────────────────────────────
+
+def get_base_dir():
+    if getattr(sys, 'frozen', False):
+        return os.path.dirname(os.path.abspath(sys.executable))
+    return os.path.dirname(os.path.abspath(__file__))
+
+def get_asset_path(filename):
+    if hasattr(sys, '_MEIPASS'):
+        p = os.path.join(sys._MEIPASS, filename)
+        if os.path.exists(p):
+            return p
+    base_p = os.path.join(get_base_dir(), filename)
+    if os.path.exists(base_p):
+        return base_p
+    tools_p = os.path.join(os.path.dirname(get_base_dir()), 'tools', filename)
+    if os.path.exists(tools_p):
+        return tools_p
+    return None
+
+def compute_sha256(file_path):
+    """Tính mã băm SHA256 của tệp để kiểm tra tính toàn vẹn tuyệt đối"""
+    sha = hashlib.sha256()
+    with open(file_path, 'rb') as f:
+        while chunk := f.read(65536):
+            sha.update(chunk)
+    return sha.hexdigest()
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 2. BỘ GIẢI NÉN VÀ VÁ FILE TRỰC TIẾP LÊN THƯ MỤC APP (NO ARCHIVE)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def read_asar_header(f_in):
@@ -165,16 +196,8 @@ def create_selective_backup(app_dir, backup_dir, log_func=print):
     total_sz = sum(os.path.getsize(os.path.join(r, f)) for r, _, files in os.walk(backup_dir) for f in files)
     log_func(f"[OK] Đã hoàn tất sao lưu bản gốc ({total_sz/(1024*1024):.2f} MB)!")
 
-def compute_sha256(file_path):
-    """Tính mã băm SHA256 của tệp để kiểm tra tính toàn vẹn tuyệt đối"""
-    sha = hashlib.sha256()
-    with open(file_path, 'rb') as f:
-        while chunk := f.read(65536):
-            sha.update(chunk)
-    return sha.hexdigest()
-
 def execute_folder_patch(game_dir, patch_files_dict, log_func=print, progress_func=None):
-    """Vá trực tiếp các tệp Việt hóa vào thư mục resources/app (No Archive)"""
+    """Vá trực tiếp và đối chiếu SHA256 từng tệp vào resources/app"""
     t_start = time.time()
     resources_dir = os.path.join(game_dir, 'resources')
     if not os.path.exists(resources_dir):
@@ -183,7 +206,7 @@ def execute_folder_patch(game_dir, patch_files_dict, log_func=print, progress_fu
     app_dir = os.path.join(resources_dir, 'app')
     backup_dir = os.path.join(resources_dir, 'backup_original')
     
-    # 1. Nếu chưa có thư mục app, giải nén từ app.asar
+    # 1. Giải nén app.asar nếu chưa có thư mục app
     if not os.path.exists(app_dir) or not os.path.exists(os.path.join(app_dir, 'data', 'scenario')):
         asar_candidates = [
             os.path.join(resources_dir, 'app.asar.original.bak'),
@@ -197,10 +220,10 @@ def execute_folder_patch(game_dir, patch_files_dict, log_func=print, progress_fu
             
         unpack_asar_to_app(target_asar, app_dir, log_func=log_func, progress_func=progress_func)
         
-    # 2. Tạo bản sao lưu gốc siêu nhẹ nếu chưa có
+    # 2. Tạo bản sao lưu gốc siêu nhẹ
     create_selective_backup(app_dir, backup_dir, log_func=log_func)
     
-    # 3. Dọn dẹp các tệp asar 8GB thừa để giải phóng dung lượng đĩa
+    # 3. Dọn dẹp tệp asar thừa
     for junk_name in ['app.asar', 'app.asar.disabled', 'app.asar.original.bak', 'app.asar.patching_tmp']:
         junk_p = os.path.join(resources_dir, junk_name)
         if os.path.exists(junk_p):
@@ -210,7 +233,7 @@ def execute_folder_patch(game_dir, patch_files_dict, log_func=print, progress_fu
             except Exception:
                 pass
 
-    # 4. Copy trực tiếp và đối chiếu mã băm SHA256 từng file vào app_dir
+    # 4. Copy và đối chiếu mã băm SHA256 từng file vào app_dir
     log_func("[*] Đang cập nhật dữ liệu và đối chiếu mã băm SHA256 từng file...")
     copied_count = 0
     verified_count = 0
@@ -223,7 +246,7 @@ def execute_folder_patch(game_dir, patch_files_dict, log_func=print, progress_fu
         
         src_hash = compute_sha256(src_path)
         
-        # Copy kèm đối chiếu SHA256 (tự động retry nếu có lỗi ghi đĩa)
+        # Copy kèm đối chiếu SHA256
         for attempt in range(3):
             shutil.copy2(src_path, dst_path)
             dst_hash = compute_sha256(dst_path)
@@ -269,7 +292,7 @@ def restore_folder_original(game_dir, log_func=print):
     return True
 
 # ─────────────────────────────────────────────────────────────────────────────
-# 2. ĐỘNG CƠ TẢI DỮ LIỆU TRỰC TUYẾN TỪ GITHUB (ONLINE UPDATER ENGINE)
+# 3. ĐỘNG CƠ TẢI DỮ LIỆU TRỰC TUYẾN TỪ GITHUB (ONLINE UPDATER)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def fetch_github_latest_info():
@@ -391,15 +414,6 @@ def parse_patch_from_zip(zip_path):
 
     return patch_dict, temp_dir
 
-# ─────────────────────────────────────────────────────────────────────────────
-# 3. NHẬN DIỆN THƯ MỤC GAME
-# ─────────────────────────────────────────────────────────────────────────────
-
-def get_base_dir():
-    if getattr(sys, 'frozen', False):
-        return os.path.dirname(os.path.abspath(sys.executable))
-    return os.path.dirname(os.path.abspath(__file__))
-
 def find_game_directory():
     base_dir = get_base_dir()
     candidates = [
@@ -418,139 +432,166 @@ def find_game_directory():
     return None
 
 # ─────────────────────────────────────────────────────────────────────────────
-# 4. GIAO DIỆN ĐỒ HỌA MACOS DARK THEME (100% ONLINE AUTO-UPDATER)
+# 4. GIAO DIỆN GAME LAUNCHER HUD (ARTWORK HERO & MINIMALIST FLAT CONTROLS)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def launch_gui():
     import tkinter as tk
     from tkinter import ttk, filedialog, messagebox
+    from PIL import Image, ImageTk, ImageDraw
 
     root = tk.Tk()
     root.title(APP_TITLE)
-    root.geometry("680x580")
-    root.minsize(640, 520)
-    root.configure(bg="#16161a")
+    root.geometry("760x520")
+    root.minsize(720, 480)
+    root.configure(bg="#0c0c12")
 
-    try:
-        icon_p = os.path.join(get_base_dir(), 'tyrano.ico')
-        if os.path.exists(icon_p):
+    icon_p = get_asset_path('tyrano.ico')
+    if icon_p and os.path.exists(icon_p):
+        try:
             root.iconbitmap(icon_p)
-    except Exception:
-        pass
+        except Exception:
+            pass
 
-    style = ttk.Style()
-    style.theme_use('clam')
-    style.configure("TProgressbar", thickness=14, troughcolor="#23232c", background="#30d158")
+    # Canvas toàn màn hình hiển thị Artwork Game
+    canvas = tk.Canvas(root, bg="#0c0c12", highlightthickness=0)
+    canvas.pack(fill=tk.BOTH, expand=True)
 
-    # 1. macOS Window Header & Traffic Light Controls
-    hdr_card = tk.Frame(root, bg="#1c1c24", height=60)
-    hdr_card.pack(fill=tk.X, side=tk.TOP)
+    bg_p = get_asset_path('installer_bg.png')
+    base_bg_img = None
+    if bg_p and os.path.exists(bg_p):
+        try:
+            base_bg_img = Image.open(bg_p).convert("RGBA")
+        except Exception:
+            base_bg_img = None
 
-    # Traffic light dots (Red, Yellow, Green)
-    dots_frame = tk.Frame(hdr_card, bg="#1c1c24", padx=16, pady=16)
-    dots_frame.pack(side=tk.LEFT)
+    bg_photo = None
 
-    dot_red = tk.Label(dots_frame, text="●", font=("Segoe UI", 12), fg="#ff5f56", bg="#1c1c24")
-    dot_red.pack(side=tk.LEFT, padx=2)
-    dot_yellow = tk.Label(dots_frame, text="●", font=("Segoe UI", 12), fg="#ffbd2e", bg="#1c1c24")
-    dot_yellow.pack(side=tk.LEFT, padx=2)
-    dot_green = tk.Label(dots_frame, text="●", font=("Segoe UI", 12), fg="#27c93f", bg="#1c1c24")
-    dot_green.pack(side=tk.LEFT, padx=2)
+    def render_background(w, h):
+        nonlocal bg_photo
+        if not base_bg_img or w <= 10 or h <= 10:
+            return
+        
+        # Scale ảnh nền chính
+        img_scaled = base_bg_img.resize((w, h), Image.Resampling.LANCZOS)
+        
+        # Tạo overlay tối phía dưới để HUD điều khiển nổi bật
+        overlay = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+        draw = ImageDraw.Draw(overlay)
+        
+        # Gradient tối dần ở 45% phía dưới
+        split_y = int(h * 0.45)
+        for y in range(split_y, h):
+            ratio = (y - split_y) / (h - split_y)
+            alpha = int(ratio * 240)
+            draw.line([(0, y), (w, y)], fill=(10, 10, 16, alpha))
+            
+        combined = Image.alpha_composite(img_scaled, overlay)
+        bg_photo = ImageTk.PhotoImage(combined)
+        canvas.delete("bg_tag")
+        canvas.create_image(0, 0, image=bg_photo, anchor=tk.NW, tags="bg_tag")
+        canvas.tag_lower("bg_tag")
 
-    # Title & Version Badge in Header
-    title_frame = tk.Frame(hdr_card, bg="#1c1c24", pady=12)
-    title_frame.pack(side=tk.LEFT, padx=10)
+    # Top Header Minimalist Bar
+    top_bar = tk.Frame(canvas, bg="#0e0e14", padx=16, pady=8, highlightbackground="#222230", highlightthickness=1)
+    top_bar_window = canvas.create_window(380, 24, window=top_bar, width=730, height=38)
 
-    tk.Label(title_frame, text="HOME (ROOM) Việt Hóa", font=("Segoe UI", 12, "bold"), fg="#f4f4f6", bg="#1c1c24").pack(anchor=tk.W)
-    tk.Label(title_frame, text=f"Bản phát hành v{VERSION} | Shimakaze VN Team", font=("Segoe UI", 8), fg="#9494a8", bg="#1c1c24").pack(anchor=tk.W)
+    tk.Label(top_bar, text="HOME (ROOM) — PATCH VIỆT HÓA", font=("Segoe UI", 10, "bold"), fg="#ffffff", bg="#0e0e14").pack(side=tk.LEFT)
+    lbl_remote_ver = tk.Label(top_bar, text="[GitHub: Đang kết nối...]", font=("Segoe UI", 8), fg="#00e676", bg="#0e0e14")
+    lbl_remote_ver.pack(side=tk.RIGHT)
 
-    # Remote GitHub Pill Badge
-    lbl_remote_ver = tk.Label(hdr_card, text="● GitHub: Đang kiểm tra", font=("Segoe UI", 8, "bold"), fg="#ffbd2e", bg="#262634", padx=10, pady=4)
-    lbl_remote_ver.pack(side=tk.RIGHT, padx=16, pady=16)
+    # Bottom HUD Control Dock
+    dock_frame = tk.Frame(canvas, bg="#101018", padx=16, pady=12, highlightbackground="#2a2a3c", highlightthickness=1)
+    dock_window = canvas.create_window(380, 390, window=dock_frame, width=730, height=225)
 
-    # 2. Main Content Container
-    main_container = tk.Frame(root, bg="#16161a", padx=20, pady=12)
-    main_container.pack(fill=tk.BOTH, expand=True)
+    def on_resize(event):
+        w = event.width
+        h = event.height
+        render_background(w, h)
+        canvas.coords(top_bar_window, w // 2, 24)
+        canvas.itemconfig(top_bar_window, width=w - 30)
+        canvas.coords(dock_window, w // 2, h - 125)
+        canvas.itemconfig(dock_window, width=w - 30)
 
-    # 3. macOS Card: Game Directory Path
-    path_card = tk.Frame(main_container, bg="#20202a", padx=16, pady=12, highlightbackground="#303040", highlightthickness=1)
-    path_card.pack(fill=tk.X, pady=(0, 12))
+    canvas.bind("<Configure>", on_resize)
 
-    tk.Label(path_card, text="📁 Thư mục cài đặt game:", font=("Segoe UI", 9, "bold"), fg="#d0d0dc", bg="#20202a").pack(anchor=tk.W)
+    # 1. Folder Selection Row (Flat & Clean)
+    path_row = tk.Frame(dock_frame, bg="#101018")
+    path_row.pack(fill=tk.X, pady=(0, 8))
 
-    p_sub = tk.Frame(path_card, bg="#20202a")
-    p_sub.pack(fill=tk.X, pady=(6, 0))
+    tk.Label(path_row, text="Thư mục game:", font=("Segoe UI", 9, "bold"), fg="#c0c0d0", bg="#101018").pack(side=tk.LEFT, padx=(0, 8))
 
     game_dir_var = tk.StringVar()
     detected = find_game_directory()
     if detected:
         game_dir_var.set(detected)
 
-    txt_entry = tk.Entry(p_sub, textvariable=game_dir_var, font=("Consolas", 9), bg="#14141c", fg="#f0f0f8", insertbackground="#f0f0f8", relief=tk.FLAT, highlightbackground="#38384c", highlightthickness=1)
-    txt_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, ipady=5, padx=(0, 8))
+    txt_entry = tk.Entry(path_row, textvariable=game_dir_var, font=("Consolas", 9), bg="#181824", fg="#ffffff", insertbackground="#ffffff", relief=tk.FLAT, highlightbackground="#36364c", highlightthickness=1)
+    txt_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, ipady=3, padx=(0, 6))
 
     def choose_dir():
         d = filedialog.askdirectory(title="Chọn thư mục chứa game HOME (ROOM)")
         if d:
             game_dir_var.set(d)
 
-    btn_browse = tk.Button(p_sub, text="Duyệt...", command=choose_dir, font=("Segoe UI", 9), bg="#323244", fg="#f0f0f8", activebackground="#424258", activeforeground="#ffffff", relief=tk.FLAT, padx=14, pady=3, cursor="hand2")
+    btn_browse = tk.Button(path_row, text="Duyệt...", command=choose_dir, font=("Segoe UI", 8, "bold"), bg="#2c2c3e", fg="#ffffff", activebackground="#3e3e56", activeforeground="#ffffff", relief=tk.FLAT, padx=12, pady=2, cursor="hand2")
     btn_browse.pack(side=tk.RIGHT)
 
-    # 4. Status Pill & Apple Style Progress Bar
-    status_card = tk.Frame(main_container, bg="#16161a")
-    status_card.pack(fill=tk.X, pady=(0, 10))
+    # 2. Progress Bar Row
+    prog_row = tk.Frame(dock_frame, bg="#101018")
+    prog_row.pack(fill=tk.X, pady=(0, 8))
 
-    status_var = tk.StringVar(value="● Sẵn sàng kết nối GitHub")
-    lbl_status = tk.Label(status_card, textvariable=status_var, font=("Segoe UI", 9), fg="#82aaff", bg="#16161a")
-    lbl_status.pack(anchor=tk.W, pady=(0, 4))
+    status_var = tk.StringVar(value="Sẵn sàng kết nối GitHub...")
+    lbl_status = tk.Label(prog_row, textvariable=status_var, font=("Segoe UI", 8), fg="#64b5f6", bg="#101018")
+    lbl_status.pack(anchor=tk.W, pady=(0, 2))
 
-    progress_bar = ttk.Progressbar(status_card, style="TProgressbar", mode="determinate")
+    style = ttk.Style()
+    style.theme_use('clam')
+    style.configure("TProgressbar", thickness=8, troughcolor="#1c1c28", background="#00e676")
+
+    progress_bar = ttk.Progressbar(prog_row, style="TProgressbar", mode="determinate")
     progress_bar.pack(fill=tk.X)
 
-    # 5. macOS Action Buttons
-    btn_card = tk.Frame(main_container, bg="#16161a")
-    btn_card.pack(fill=tk.X, pady=(0, 12))
+    # 3. Action Buttons Row (Crisp, Flat, High-Contrast)
+    btn_row = tk.Frame(dock_frame, bg="#101018")
+    btn_row.pack(fill=tk.X, pady=(0, 8))
 
-    # Nút chính: Cupertino Royal Blue (#007AFF)
-    btn_install = tk.Button(btn_card, text="⚡ Cài Đặt & Cập Nhật Patch Việt Hóa (Online)", font=("Segoe UI", 11, "bold"), bg="#007aff", fg="#ffffff", activebackground="#0062cc", activeforeground="#ffffff", relief=tk.FLAT, pady=8, cursor="hand2")
-    btn_install.pack(fill=tk.X, pady=(0, 8))
+    # Nút Cài đặt chính phẳng sắc nét
+    btn_install = tk.Button(btn_row, text="⚡ CÀI ĐẶT / CẬP NHẬT PATCH (ONLINE)", font=("Segoe UI", 9, "bold"), bg="#0066ff", fg="#ffffff", activebackground="#0052cc", activeforeground="#ffffff", relief=tk.FLAT, pady=6, cursor="hand2")
+    btn_install.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 4))
 
-    btn_sub_row = tk.Frame(btn_card, bg="#16161a")
-    btn_sub_row.pack(fill=tk.X)
+    # Nút Khởi động phẳng
+    btn_launch = tk.Button(btn_row, text="▶ KHỞI ĐỘNG GAME", font=("Segoe UI", 9, "bold"), bg="#00a854", fg="#ffffff", activebackground="#008a44", activeforeground="#ffffff", relief=tk.FLAT, pady=6, cursor="hand2")
+    btn_launch.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(2, 2))
 
-    # Nút phụ 1: Mint Green Launch
-    btn_launch = tk.Button(btn_sub_row, text="▶ Khởi Động Game", font=("Segoe UI", 9, "bold"), bg="#30d158", fg="#111116", activebackground="#25a244", relief=tk.FLAT, pady=6, cursor="hand2")
-    btn_launch.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 4))
-
-    # Nút phụ 2: Subtle Red Restore
-    btn_restore = tk.Button(btn_sub_row, text="↩ Khôi Phục Bản Gốc", font=("Segoe UI", 9), bg="#2c2c38", fg="#ff453a", activebackground="#3a3a4c", activeforeground="#ff6961", relief=tk.FLAT, pady=6, cursor="hand2")
+    # Nút Bản gốc phẳng
+    btn_restore = tk.Button(btn_row, text="↩ BẢN GỐC", font=("Segoe UI", 9), bg="#222230", fg="#ff5252", activebackground="#303042", activeforeground="#ff1744", relief=tk.FLAT, pady=6, cursor="hand2")
     btn_restore.pack(side=tk.RIGHT, fill=tk.X, expand=True, padx=(4, 0))
 
-    # 6. macOS Console Terminal Activity Card
-    log_card = tk.Frame(main_container, bg="#121218", padx=12, pady=10, highlightbackground="#282836", highlightthickness=1)
-    log_card.pack(fill=tk.BOTH, expand=True)
+    # 4. Minimalist Single-Line Live Log
+    log_row = tk.Frame(dock_frame, bg="#0a0a10", padx=8, pady=4, highlightbackground="#1e1e2c", highlightthickness=1)
+    log_row.pack(fill=tk.X)
 
-    tk.Label(log_card, text="Nhật ký hoạt động:", font=("Segoe UI", 8), fg="#727288", bg="#121218").pack(anchor=tk.W)
-
-    log_txt = tk.Text(log_card, font=("Consolas", 8), bg="#121218", fg="#9494a8", insertbackground="#f0f0f8", relief=tk.FLAT, wrap=tk.WORD, height=6)
-    log_txt.pack(fill=tk.BOTH, expand=True, pady=(4, 0))
+    log_line_var = tk.StringVar(value="[Hệ thống] Sẵn sàng nhận lệnh.")
+    lbl_log_line = tk.Label(log_row, textvariable=log_line_var, font=("Consolas", 8), fg="#9090a8", bg="#0a0a10", anchor=tk.W)
+    lbl_log_line.pack(fill=tk.X)
 
     def append_log(msg):
         def _write():
-            log_txt.insert(tk.END, str(msg) + "\n")
-            log_txt.see(tk.END)
+            clean_msg = str(msg).strip()
+            if clean_msg:
+                log_line_var.set(clean_msg)
         root.after(0, _write)
 
     def update_progress(pct, cur, total):
         def _prog():
             progress_bar['value'] = pct
             if total > 0 and total < 10000:
-                status_var.set(f"● Đang cập nhật... {pct:.1f}% ({cur}/{total} tệp)")
+                status_var.set(f"Đang cập nhật... {pct:.1f}% ({cur}/{total} tệp)")
             elif total >= 10000:
                 mb_cur = cur / (1024 * 1024)
                 mb_tot = total / (1024 * 1024)
-                status_var.set(f"● Đang tải dữ liệu GitHub... {pct:.1f}% ({mb_cur:.1f}/{mb_tot:.1f} MB)")
+                status_var.set(f"Đang tải GitHub... {pct:.1f}% ({mb_cur:.1f}/{mb_tot:.1f} MB)")
         root.after(0, _prog)
 
     def set_buttons_state(state):
@@ -561,8 +602,8 @@ def launch_gui():
     def check_github_background():
         info = fetch_github_latest_info()
         tag = info.get('tag_name', 'Mới nhất')
-        root.after(0, lambda: lbl_remote_ver.config(text=f"● GitHub: {tag}", fg="#30d158"))
-        append_log(f"[*] Đã kết nối GitHub Repository: {GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME} ({tag})")
+        root.after(0, lambda: lbl_remote_ver.config(text=f"GitHub: {tag}", fg="#00e676"))
+        append_log(f"[*] Đã kết nối GitHub: {tag}")
 
     threading.Thread(target=check_github_background, daemon=True).start()
 
@@ -580,28 +621,28 @@ def launch_gui():
             tmp_dir = None
             try:
                 append_log(f"[*] Thư mục game: {target}")
-                status_var.set("● Đang truy vấn phiên bản mới nhất từ GitHub...")
+                status_var.set("Đang truy vấn phiên bản mới nhất từ GitHub...")
                 info = fetch_github_latest_info()
                 dl_url = info.get('download_url') or GITHUB_RAW_ARCHIVE_URL
                 
-                status_var.set("● Đang tải dữ liệu bản vá từ GitHub...")
+                status_var.set("Đang tải dữ liệu bản vá từ GitHub...")
                 append_log(f"[*] Đang tải dữ liệu từ: {dl_url}")
                 dl_zip = download_file_with_progress(dl_url, log_func=append_log, progress_func=update_progress)
 
-                status_var.set("● Đang giải nén và phân tích cấu trúc...")
+                status_var.set("Đang giải nén và phân tích cấu trúc...")
                 patch_dict, tmp_dir = parse_patch_from_zip(dl_zip)
                 
                 if not patch_dict:
                     raise RuntimeError("Không tìm thấy tệp kịch bản hoặc giao diện hợp lệ trong gói tải về!")
 
-                status_var.set("● Đang cập nhật trực tiếp vào thư mục game...")
+                status_var.set("Đang đối chiếu SHA256 và cập nhật trực tiếp vào game...")
                 ok, count, el = execute_folder_patch(target, patch_dict, log_func=append_log, progress_func=update_progress)
 
-                status_var.set(f"✓ Cập nhật thành công! Đã vá {count} tệp trong {el}s.")
-                root.after(0, lambda: messagebox.showinfo("Cập Nhật Thành Công", f"Đã cài đặt & cập nhật bản Việt Hóa mới nhất từ GitHub thành công 100% trong {el} giây!\nChúc bạn chơi game vui vẻ!"))
+                status_var.set(f"Cập nhật thành công! Đã vá {count} tệp trong {el}s.")
+                root.after(0, lambda: messagebox.showinfo("Cập Nhật Thành Công", f"Đã cài đặt & cập nhật bản Việt Hóa mới nhất từ GitHub thành công 100% trong {el} giây!\nToàn bộ tệp đã qua kiểm chứng SHA256 an toàn tuyệt đối!"))
             except Exception as e:
-                append_log(f"\n[LỖI]: {e}")
-                status_var.set("✕ Cập nhật thất bại!")
+                append_log(f"[LỖI]: {e}")
+                status_var.set("Cập nhật thất bại!")
                 root.after(0, lambda: messagebox.showerror("Lỗi", f"Có lỗi xảy ra trong quá trình cài đặt/cập nhật:\n{e}"))
             finally:
                 if dl_zip and os.path.exists(dl_zip):
@@ -630,13 +671,13 @@ def launch_gui():
             try:
                 ok = restore_folder_original(target, log_func=append_log)
                 if ok:
-                    status_var.set("✓ Đã khôi phục bản gốc tiếng Nhật thành công.")
+                    status_var.set("Đã khôi phục bản gốc tiếng Nhật thành công.")
                     root.after(0, lambda: messagebox.showinfo("Thành công", "Đã khôi phục bản gốc tiếng Nhật 100% thành công!"))
                 else:
-                    status_var.set("✕ Khôi phục thất bại!")
+                    status_var.set("Khôi phục thất bại!")
             except Exception as e:
-                append_log(f"\n[LỖI]: {e}")
-                status_var.set("✕ Khôi phục thất bại!")
+                append_log(f"[LỖI]: {e}")
+                status_var.set("Khôi phục thất bại!")
                 root.after(0, lambda: messagebox.showerror("Lỗi", f"Có lỗi xảy ra khi khôi phục:\n{e}"))
             finally:
                 root.after(0, lambda: set_buttons_state(tk.NORMAL))
@@ -671,14 +712,10 @@ def launch_gui():
     btn_restore.config(command=do_restore)
     btn_launch.config(command=do_launch)
 
-    append_log(f"============================================================")
-    append_log(f"  {APP_TITLE}")
-    append_log(f"  Giao diện macOS Dark Theme | Tự động cập nhật từ GitHub")
-    append_log(f"============================================================")
     if detected:
-        append_log(f"[*] Tự động nhận diện thư mục game: {detected}")
+        append_log(f"[*] Nhận diện thư mục game: {detected}")
     else:
-        append_log(f"[*] Vui lòng bấm [Duyệt...] để chọn thư mục cài đặt game của bạn.")
+        append_log("[*] Bấm [Duyệt...] để chọn thư mục cài đặt game của bạn.")
 
     root.mainloop()
 

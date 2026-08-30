@@ -117,10 +117,14 @@ def build_pc_patch():
         '--clean',
         '--noconsole',
         '--name', 'CAI_DAT_PATCH_VIET_HOA',
-        os.path.join(TOOLS_DIR, 'unified_patch_installer.py')
     ]
+    bg_p = os.path.join(TOOLS_DIR, 'installer_bg.png')
+    if os.path.exists(bg_p):
+        pyinstaller_cmd.extend(['--add-data', f'{bg_p};.'])
     if icon_path:
-        pyinstaller_cmd.extend(['--icon', icon_path])
+        pyinstaller_cmd.extend(['--icon', icon_path, '--add-data', f'{icon_path};.'])
+        
+    pyinstaller_cmd.append(os.path.join(TOOLS_DIR, 'unified_patch_installer.py'))
 
     subprocess.run(pyinstaller_cmd, cwd=ROOT_DIR, check=True)
     
