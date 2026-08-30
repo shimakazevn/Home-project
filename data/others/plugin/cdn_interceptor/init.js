@@ -294,10 +294,10 @@
     };
 
     // ============================================================
-    // Unified Web Game Toolbar (Save Export/Import + Offline Cache)
+    // Unified Game Control Center Modal (PC & Mobile Single Gear UI)
     // ============================================================
-    function injectOfflineCacheWidget(manifest) {
-        if (document.getElementById('home-web-toolbar')) return;
+    function injectUnifiedGearModal(manifest) {
+        if (document.getElementById('home-gear-btn')) return;
 
         const totalAssets = Object.keys(manifest).filter(k =>
             /\.(png|jpg|gif|webp|mp3)$/i.test(k) || k.includes('/sound/') || k.includes('/bgm/')
@@ -306,184 +306,323 @@
 
         const style = document.createElement('style');
         style.textContent = `
-            #home-web-toolbar {
+            /* 1. NÚT BÁNH RĂNG CƯA DUY NHẤT (PC & MOBILE) */
+            #home-gear-btn {
                 position: fixed;
-                bottom: 8px;
-                left: 8px;
+                bottom: 12px;
+                left: 12px;
                 z-index: 999999;
-                display: inline-flex;
-                align-items: center;
-                gap: 4px;
-                background: rgba(12, 16, 28, 0.72);
-                backdrop-filter: blur(14px);
-                -webkit-backdrop-filter: blur(14px);
-                border: 1px solid rgba(255, 255, 255, 0.14);
-                border-radius: 20px;
-                padding: 3px 8px;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-                font-size: 11px;
-                color: #cbd5e1;
-                user-select: none;
-                pointer-events: auto;
-                opacity: 0.65;
-                transition: opacity 0.2s ease, transform 0.2s ease;
-            }
-            #home-web-toolbar:hover, #home-web-toolbar.active {
-                opacity: 1;
-            }
-            .hwt-btn {
-                background: transparent;
-                border: none;
-                color: #e2e8f0;
-                padding: 4px 7px;
-                border-radius: 12px;
-                font-size: 11px;
-                font-weight: 500;
-                cursor: pointer;
-                display: inline-flex;
-                align-items: center;
-                gap: 4px;
-                outline: none;
-                transition: all 0.15s ease;
-                white-space: nowrap;
-            }
-            .hwt-btn:hover {
-                background: rgba(255, 255, 255, 0.15);
-                color: #ffffff;
-                transform: translateY(-1px);
-            }
-            .hwt-btn:active {
-                transform: translateY(0);
-            }
-            .hwt-sep {
-                width: 1px;
-                height: 12px;
-                background: rgba(255, 255, 255, 0.15);
-                margin: 0 2px;
-            }
-            .hwt-dot {
-                width: 6px;
-                height: 6px;
+                width: 42px;
+                height: 42px;
                 border-radius: 50%;
-                display: inline-block;
+                background: rgba(15, 23, 42, 0.75);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                border: 1px solid rgba(255, 255, 255, 0.18);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                outline: none;
+                transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s, opacity 0.2s;
+                opacity: 0.65;
+                user-select: none;
+                -webkit-tap-highlight-color: transparent;
             }
-            .hwt-dot.online { background: #38bdf8; box-shadow: 0 0 6px #38bdf8; }
-            .hwt-dot.cached { background: #34d399; box-shadow: 0 0 6px #34d399; }
-            .hwt-dot.downloading { background: #fbbf24; box-shadow: 0 0 6px #fbbf24; animation: hwt-pulse 1.2s infinite ease-in-out; }
-            @keyframes hwt-pulse {
-                0%, 100% { opacity: 1; transform: scale(1); }
-                50% { opacity: 0.4; transform: scale(1.3); }
+            #home-gear-btn:hover {
+                opacity: 1;
+                transform: scale(1.1) rotate(30deg);
+                background: rgba(30, 41, 59, 0.92);
+                border-color: rgba(255, 255, 255, 0.35);
+                box-shadow: 0 6px 24px rgba(99, 102, 241, 0.4);
+            }
+            #home-gear-btn:active {
+                transform: scale(0.95);
+            }
+            #home-gear-btn svg {
+                width: 22px;
+                height: 22px;
+                fill: none;
+                stroke: #e2e8f0;
+                stroke-width: 2;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                transition: stroke 0.2s;
+            }
+            #home-gear-btn:hover svg {
+                stroke: #818cf8;
+            }
+            #home-gear-badge {
+                position: absolute;
+                top: 2px;
+                right: 2px;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: #38bdf8;
+                border: 1.5px solid #0f172a;
+                box-shadow: 0 0 6px #38bdf8;
+            }
+            #home-gear-badge.cached { background: #10b981; box-shadow: 0 0 6px #10b981; }
+            #home-gear-badge.downloading { background: #f59e0b; box-shadow: 0 0 6px #f59e0b; animation: hgb-pulse 1s infinite; }
+            @keyframes hgb-pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.4);opacity:0.5} }
+
+            /* 2. MODAL OVERLAY & CARD */
+            #home-modal-overlay {
+                position: fixed;
+                inset: 0;
+                z-index: 1000000;
+                background: rgba(0, 0, 0, 0.68);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 16px;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.25s ease;
+                box-sizing: border-box;
+            }
+            #home-modal-overlay.open {
+                opacity: 1;
+                pointer-events: auto;
+            }
+            #home-modal-card {
+                width: 100%;
+                max-width: 480px;
+                max-height: 88vh;
+                background: rgba(14, 18, 32, 0.95);
+                backdrop-filter: blur(24px);
+                -webkit-backdrop-filter: blur(24px);
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                border-radius: 22px;
+                box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 1px 1px rgba(255,255,255,0.05);
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                transform: scale(0.92) translateY(12px);
+                transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+                color: #e2e8f0;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+                user-select: none;
+            }
+            #home-modal-overlay.open #home-modal-card {
+                transform: scale(1) translateY(0);
             }
 
-            /* Floating Panel Popup */
-            #home-cache-panel {
-                position: fixed;
-                bottom: 46px;
-                left: 8px;
-                z-index: 1000000;
-                width: 270px;
-                background: rgba(12, 16, 28, 0.92);
-                backdrop-filter: blur(20px);
-                -webkit-backdrop-filter: blur(20px);
-                border: 1px solid rgba(255, 255, 255, 0.16);
-                border-radius: 14px;
-                padding: 12px 14px;
-                box-shadow: 0 12px 32px rgba(0, 0, 0, 0.65);
-                color: #e2e8f0;
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-                font-size: 12px;
-                user-select: none;
-                pointer-events: auto;
-                display: none;
-                animation: hwt-fade-in 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-            }
-            @keyframes hwt-fade-in {
-                from { opacity: 0; transform: translateY(6px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
-            .hcp-header {
+            .hmc-header {
+                padding: 16px 20px 12px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                font-weight: 600;
-                font-size: 13px;
-                margin-bottom: 8px;
-                color: #f1f5f9;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
             }
-            .hcp-close {
-                cursor: pointer;
-                color: rgba(255,255,255,0.4);
-                font-size: 15px;
-                line-height: 1;
-                padding: 2px 6px;
-                border-radius: 4px;
-            }
-            .hcp-close:hover { color: #ffffff; background: rgba(255,255,255,0.1); }
-            .hcp-bar-bg {
-                background: rgba(255, 255, 255, 0.08);
-                border-radius: 6px;
-                height: 6px;
-                margin: 8px 0;
-                overflow: hidden;
-            }
-            .hcp-bar-fill {
-                height: 100%;
-                border-radius: 6px;
-                background: linear-gradient(90deg, #6366f1, #34d399);
-                transition: width 0.3s ease;
-            }
-            .hcp-info {
-                color: #94a3b8;
-                font-size: 11px;
-                margin-bottom: 10px;
-                line-height: 1.4;
-            }
-            .hcp-btns {
+            .hmc-title-group {
                 display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .hmc-title-icon {
+                font-size: 20px;
+                width: 34px;
+                height: 34px;
+                border-radius: 10px;
+                background: rgba(99, 102, 241, 0.18);
+                border: 1px solid rgba(99, 102, 241, 0.3);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .hmc-title {
+                font-size: 15px;
+                font-weight: 700;
+                color: #f8fafc;
+                margin: 0;
+            }
+            .hmc-subtitle {
+                font-size: 11px;
+                color: #94a3b8;
+                margin: 2px 0 0;
+            }
+            .hmc-close {
+                background: rgba(255, 255, 255, 0.07);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 50%;
+                width: 32px;
+                height: 32px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #94a3b8;
+                cursor: pointer;
+                font-size: 15px;
+                transition: all 0.15s;
+            }
+            .hmc-close:hover {
+                background: rgba(239, 68, 68, 0.2);
+                color: #f87171;
+                border-color: rgba(239, 68, 68, 0.3);
+            }
+
+            .hmc-body {
+                padding: 16px 20px;
+                overflow-y: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+            }
+            .hmc-body::-webkit-scrollbar { width: 5px; }
+            .hmc-body::-webkit-scrollbar-track { background: transparent; }
+            .hmc-body::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15); border-radius: 4px; }
+
+            .hmc-section {
+                background: rgba(255, 255, 255, 0.03);
+                border: 1px solid rgba(255, 255, 255, 0.07);
+                border-radius: 14px;
+                padding: 12px 14px;
+            }
+            .hmc-section-title {
+                font-size: 12px;
+                font-weight: 600;
+                color: #cbd5e1;
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                letter-spacing: 0.2px;
+            }
+
+            .hmc-grid-2 {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+            .hmc-grid-3 {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
                 gap: 6px;
             }
-            .hcp-btn {
-                flex: 1;
-                padding: 6px 10px;
-                border: none;
-                border-radius: 8px;
+
+            .hmc-btn {
+                background: rgba(255, 255, 255, 0.06);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+                color: #e2e8f0;
+                padding: 8px 10px;
+                font-size: 11.5px;
+                font-weight: 500;
                 cursor: pointer;
-                font-size: 11px;
-                font-weight: 600;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
                 transition: all 0.15s ease;
                 outline: none;
                 text-align: center;
+                -webkit-tap-highlight-color: transparent;
             }
-            .hcp-btn:hover { opacity: 0.9; transform: translateY(-1px); }
-            .hcp-btn-dl {
-                background: linear-gradient(135deg, #6366f1, #3b82f6);
+            .hmc-btn:hover {
+                background: rgba(255, 255, 255, 0.14);
                 color: #ffffff;
+                transform: translateY(-1px);
+                border-color: rgba(255, 255, 255, 0.25);
             }
-            .hcp-btn-stop {
-                background: rgba(239, 68, 68, 0.2);
-                color: #f87171;
-                border: 1px solid rgba(239, 68, 68, 0.35);
+            .hmc-btn:active {
+                transform: translateY(0);
             }
-            .hcp-btn-del {
-                background: rgba(255, 255, 255, 0.07);
-                color: #cbd5e1;
-                border: 1px solid rgba(255, 255, 255, 0.12);
+            .hmc-btn-primary {
+                background: linear-gradient(135deg, #6366f1, #4f46e5);
+                border-color: rgba(255, 255, 255, 0.2);
+                color: #ffffff;
+                font-weight: 600;
+            }
+            .hmc-btn-primary:hover {
+                background: linear-gradient(135deg, #4f46e5, #4338ca);
+                box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+            }
+            .hmc-btn-danger {
+                background: rgba(239, 68, 68, 0.15);
+                color: #fca5a5;
+                border-color: rgba(239, 68, 68, 0.3);
+            }
+            .hmc-btn-danger:hover {
+                background: rgba(239, 68, 68, 0.25);
+                color: #fee2e2;
+                border-color: rgba(239, 68, 68, 0.5);
+            }
+
+            .hmc-bar-bg {
+                background: rgba(255, 255, 255, 0.08);
+                border-radius: 8px;
+                height: 7px;
+                margin: 8px 0;
+                overflow: hidden;
+            }
+            .hmc-bar-fill {
+                height: 100%;
+                border-radius: 8px;
+                background: linear-gradient(90deg, #6366f1, #10b981);
+                transition: width 0.3s ease;
+            }
+            .hmc-info-text {
+                font-size: 11px;
+                color: #94a3b8;
+                margin-bottom: 10px;
+                line-height: 1.45;
+            }
+
+            .hmc-btn.active-state {
+                background: rgba(245, 158, 11, 0.25);
+                border-color: #f59e0b;
+                color: #fde68a;
             }
         `;
         document.head.appendChild(style);
 
-        const toolbar = document.createElement('div');
-        toolbar.id = 'home-web-toolbar';
-        document.body.appendChild(toolbar);
+        // Gear Button
+        const gearBtn = document.createElement('div');
+        gearBtn.id = 'home-gear-btn';
+        gearBtn.title = 'Cài đặt & Tiện ích Game';
+        gearBtn.innerHTML = `
+            <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+            <div id="home-gear-badge"></div>
+        `;
+        document.body.appendChild(gearBtn);
 
-        const panel = document.createElement('div');
-        panel.id = 'home-cache-panel';
-        document.body.appendChild(panel);
+        // Modal Overlay & Card
+        const overlay = document.createElement('div');
+        overlay.id = 'home-modal-overlay';
+        overlay.innerHTML = `
+            <div id="home-modal-card">
+                <div class="hmc-header">
+                    <div class="hmc-title-group">
+                        <div class="hmc-title-icon">⚙️</div>
+                        <div>
+                            <div class="hmc-title">Trung tâm Tiện ích & Cài đặt</div>
+                            <div class="hmc-subtitle">HOME Visual Novel • Web Controller</div>
+                        </div>
+                    </div>
+                    <button class="hmc-close" id="hmc-close-btn" title="Đóng">✕</button>
+                </div>
+                <div class="hmc-body" id="hmc-dynamic-body">
+                </div>
+            </div>
+        `;
+        document.body.appendChild(overlay);
 
-        let panelOpen = false;
+        const closeModal = () => { overlay.classList.remove('open'); };
+        const openModal = () => { overlay.classList.add('open'); renderModal(); };
 
-        async function render() {
+        gearBtn.onclick = openModal;
+        document.getElementById('hmc-close-btn').onclick = closeModal;
+        overlay.onclick = (e) => { if (e.target === overlay) closeModal(); };
+
+        async function renderModal() {
             const status = await OfflineCacheManager.getStatus();
             const cached = status.imgCached + status.audioCached;
             const total = totalAssets;
@@ -491,100 +630,192 @@
             const isComplete = pct >= 100;
             const isDownloading = OfflineCacheManager._downloading;
 
-            const dotClass = isDownloading ? 'downloading' : isComplete ? 'cached' : cached > 0 ? 'cached' : 'online';
-            const cacheLabel = isDownloading ? `⏳ ${pct}%` : isComplete ? `✅ Offline sẵn sàng` : cached > 0 ? `💾 ${pct}%` : `💾 Chơi offline`;
+            // Update badge
+            const badge = document.getElementById('home-gear-badge');
+            if (badge) {
+                badge.className = isDownloading ? 'downloading' : isComplete ? 'cached' : cached > 0 ? 'cached' : '';
+            }
 
-            toolbar.className = panelOpen ? 'active' : '';
-            toolbar.innerHTML = `
-                <button class="hwt-btn" id="hwt-cache-btn" title="Cài đặt Cache Offline">
-                    <span class="hwt-dot ${dotClass}"></span>
-                    <span>${cacheLabel}</span>
-                </button>
-                <div class="hwt-sep"></div>
-                <button class="hwt-btn" onclick="if(window.exportCurrentSaveToFile) window.exportCurrentSaveToFile();" title="Tải file tiến trình save về máy (.sav)">
-                    📥 Tải save
-                </button>
-                <button class="hwt-btn" onclick="if(window.importSaveFromFile) window.importSaveFromFile();" title="Nạp file tiến trình save từ máy (.sav)">
-                    📤 Nạp save
-                </button>
-            `;
+            const body = document.getElementById('hmc-dynamic-body');
+            if (!body) return;
 
-            document.getElementById('hwt-cache-btn').onclick = () => {
-                panelOpen = !panelOpen;
-                panel.style.display = panelOpen ? 'block' : 'none';
-                render();
-            };
+            const isSkip = !!(window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.stat && window.TYRANO.kag.stat.is_skip);
+            const isAuto = !!(window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.stat && window.TYRANO.kag.stat.is_auto);
 
-            const statusText = isComplete
-                ? 'Đã tải toàn bộ asset vào bộ nhớ máy. Bạn có thể chơi hoàn toàn offline mà không cần kết nối mạng.'
+            const offlineStatusText = isComplete
+                ? '✅ Đã lưu toàn bộ asset vào máy. Bạn có thể chơi hoàn toàn offline không cần mạng.'
                 : isDownloading
-                    ? `Đang tải tài nguyên vào bộ nhớ máy... (${cached.toLocaleString()} / ${total.toLocaleString()})`
+                    ? `⏳ Đang tải asset về máy... (${cached.toLocaleString()} / ${total.toLocaleString()})`
                     : cached > 0
-                        ? `Đã tải ${pct}% tài nguyên (${cached.toLocaleString()} / ${total.toLocaleString()}). Bấm tiếp tục để tải đủ toàn bộ game.`
-                        : 'Game đang chạy trực tuyến từ CDN. Bạn có thể tải toàn bộ tài nguyên về máy để chơi mượt mà với 0ms độ trễ.';
+                        ? `💾 Đã nạp ${pct}% tài nguyên (${cached.toLocaleString()} / ${total.toLocaleString()}).`
+                        : '🌐 Đang chơi trực tuyến từ CDN. Bạn có thể tải toàn bộ về máy để đạt độ trễ 0ms.';
 
-            panel.innerHTML = `
-                <div class="hcp-header">
-                    <span>💾 Quản lý Cache Offline</span>
-                    <span class="hcp-close" id="hcp-close-btn">✕</span>
+            body.innerHTML = `
+                <!-- 1. QUẢN LÝ LƯU TRỮ (SAVE / LOAD) -->
+                <div class="hmc-section">
+                    <div class="hmc-section-title">💾 Quản lý Dữ liệu Save</div>
+                    <div class="hmc-grid-2">
+                        <button class="hmc-btn" id="btn_modal_export">
+                            <span>📥</span> <span>Tải Save về máy (.sav)</span>
+                        </button>
+                        <button class="hmc-btn" id="btn_modal_import">
+                            <span>📤</span> <span>Nạp Save từ máy (.sav)</span>
+                        </button>
+                        <button class="hmc-btn" id="btn_modal_qsave">
+                            <span>💾</span> <span>Lưu nhanh (Q.Save)</span>
+                        </button>
+                        <button class="hmc-btn" id="btn_modal_qload">
+                            <span>📂</span> <span>Nạp nhanh (Q.Load)</span>
+                        </button>
+                    </div>
                 </div>
-                <div class="hcp-bar-bg">
-                    <div class="hcp-bar-fill" style="width: ${pct}%"></div>
+
+                <!-- 2. OFFLINE CACHE & TẢI ASSET -->
+                <div class="hmc-section">
+                    <div class="hmc-section-title">🚀 Bộ nhớ Đệm & Chơi Offline (0ms)</div>
+                    <div class="hmc-bar-bg">
+                        <div class="hmc-bar-fill" style="width: ${pct}%"></div>
+                    </div>
+                    <div class="hmc-info-text">${offlineStatusText}</div>
+                    <div class="hmc-grid-2">
+                        ${isDownloading
+                            ? `<button class="hmc-btn hmc-btn-danger" id="btn_modal_stop_dl">⏹ Dừng tải</button>`
+                            : isComplete
+                                ? `<button class="hmc-btn hmc-btn-danger" id="btn_modal_del_cache">🗑 Xóa dữ liệu Cache</button>`
+                                : `<button class="hmc-btn hmc-btn-primary" id="btn_modal_start_dl">📥 Tải về máy để chơi Offline</button>`
+                        }
+                        ${cached > 0 && !isComplete && !isDownloading
+                            ? `<button class="hmc-btn hmc-btn-danger" id="btn_modal_del_cache">🗑 Xóa bộ nhớ đệm</button>`
+                            : ''
+                        }
+                    </div>
                 </div>
-                <div class="hcp-info">${statusText}</div>
-                <div class="hcp-btns">
-                    ${isDownloading
-                        ? `<button class="hcp-btn hcp-btn-stop" id="hcp-stop-btn">⏹ Dừng tải</button>`
-                        : isComplete
-                            ? `<button class="hcp-btn hcp-btn-del" id="hcp-del-btn">🗑 Xóa cache</button>`
-                            : `<button class="hcp-btn hcp-btn-dl" id="hcp-dl-btn">📥 Tải về máy</button>`
-                    }
-                    ${cached > 0 && !isComplete && !isDownloading ? `<button class="hcp-btn hcp-btn-del" id="hcp-del-btn">🗑 Xóa</button>` : ''}
+
+                <!-- 3. ĐIỀU KHIỂN ĐỌC TRUYỆN (GAMEPLAY) -->
+                <div class="hmc-section">
+                    <div class="hmc-section-title">🎮 Điều khiển Đọc truyện</div>
+                    <div class="hmc-grid-3">
+                        <button class="hmc-btn ${isSkip ? 'active-state' : ''}" id="btn_modal_skip">
+                            <span>⏩</span> <span>${isSkip ? 'Dừng tua' : 'Tua nhanh'}</span>
+                        </button>
+                        <button class="hmc-btn ${isAuto ? 'active-state' : ''}" id="btn_modal_auto">
+                            <span>▶️</span> <span>${isAuto ? 'Dừng đọc' : 'Tự đọc'}</span>
+                        </button>
+                        <button class="hmc-btn" id="btn_modal_log">
+                            <span>📜</span> <span>Nhật ký</span>
+                        </button>
+                        <button class="hmc-btn" id="btn_modal_hide">
+                            <span>👁️</span> <span>Ẩn chữ</span>
+                        </button>
+                        <button class="hmc-btn" id="btn_modal_fullscreen">
+                            <span>⛶</span> <span>Toàn màn hình</span>
+                        </button>
+                        <button class="hmc-btn" id="btn_modal_title">
+                            <span>🏠</span> <span>Về Title</span>
+                        </button>
+                    </div>
                 </div>
             `;
 
-            document.getElementById('hcp-close-btn').onclick = () => {
-                panelOpen = false;
-                panel.style.display = 'none';
-                render();
-            };
+            // Wire up events
+            document.getElementById('btn_modal_export')?.addEventListener('click', () => {
+                if (window.exportCurrentSaveToFile) window.exportCurrentSaveToFile();
+            });
+            document.getElementById('btn_modal_import')?.addEventListener('click', () => {
+                if (window.importSaveFromFile) window.importSaveFromFile();
+            });
+            document.getElementById('btn_modal_qsave')?.addEventListener('click', () => {
+                if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.menu) {
+                    window.TYRANO.kag.menu.setQuickSave();
+                    closeModal();
+                }
+            });
+            document.getElementById('btn_modal_qload')?.addEventListener('click', () => {
+                if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.menu) {
+                    window.TYRANO.kag.menu.loadQuickSave();
+                    closeModal();
+                }
+            });
 
-            const dlBtn = document.getElementById('hcp-dl-btn');
-            if (dlBtn) {
-                dlBtn.onclick = () => {
+            document.getElementById('btn_modal_skip')?.addEventListener('click', () => {
+                if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.ftag) {
+                    if (window.TYRANO.kag.stat.is_skip) {
+                        window.TYRANO.kag.ftag.startTag("skipstop", {});
+                    } else {
+                        window.TYRANO.kag.ftag.startTag("skipstart", {});
+                    }
+                    closeModal();
+                }
+            });
+            document.getElementById('btn_modal_auto')?.addEventListener('click', () => {
+                if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.ftag) {
+                    if (window.TYRANO.kag.stat.is_auto) {
+                        window.TYRANO.kag.ftag.startTag("autostop", { next: "false" });
+                    } else {
+                        window.TYRANO.kag.ftag.startTag("autostart", {});
+                    }
+                    closeModal();
+                }
+            });
+            document.getElementById('btn_modal_log')?.addEventListener('click', () => {
+                if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.menu) {
+                    closeModal();
+                    window.TYRANO.kag.menu.displayLog();
+                }
+            });
+            document.getElementById('btn_modal_hide')?.addEventListener('click', () => {
+                if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.layer) {
+                    closeModal();
+                    window.TYRANO.kag.layer.hideMessageLayers();
+                }
+            });
+            document.getElementById('btn_modal_fullscreen')?.addEventListener('click', () => {
+                if (!document.fullscreenElement) {
+                    document.documentElement.requestFullscreen().catch(() => {});
+                } else {
+                    document.exitFullscreen().catch(() => {});
+                }
+            });
+            document.getElementById('btn_modal_title')?.addEventListener('click', () => {
+                if (window.TYRANO && window.TYRANO.kag) {
+                    closeModal();
+                    window.TYRANO.kag.backTitle();
+                }
+            });
+
+            // Cache manager
+            const startDlBtn = document.getElementById('btn_modal_start_dl');
+            if (startDlBtn) {
+                startDlBtn.onclick = () => {
                     OfflineCacheManager.startDownload(manifest, (done, total) => {
                         const p = Math.round((done / total) * 100);
-                        const fill = panel.querySelector('.hcp-bar-fill');
-                        const info = panel.querySelector('.hcp-info');
-                        const cacheBtnSpan = toolbar.querySelector('#hwt-cache-btn span:last-child');
+                        const fill = body.querySelector('.hmc-bar-fill');
+                        const info = body.querySelector('.hmc-info-text');
                         if (fill) fill.style.width = p + '%';
-                        if (info) info.textContent = `Đang tải tài nguyên vào bộ nhớ máy... ${p}% (${done.toLocaleString()} / ${total.toLocaleString()})`;
-                        if (cacheBtnSpan) cacheBtnSpan.textContent = `⏳ ${p}%`;
-                        if (done >= total) setTimeout(render, 500);
-                    }).then(render);
-                    render();
+                        if (info) info.textContent = `⏳ Đang tải asset về máy... ${p}% (${done.toLocaleString()} / ${total.toLocaleString()})`;
+                        if (done >= total) setTimeout(renderModal, 500);
+                    }).then(renderModal);
+                    renderModal();
                 };
             }
-
-            const stopBtn = document.getElementById('hcp-stop-btn');
-            if (stopBtn) {
-                stopBtn.onclick = () => {
+            const stopDlBtn = document.getElementById('btn_modal_stop_dl');
+            if (stopDlBtn) {
+                stopDlBtn.onclick = () => {
                     OfflineCacheManager.stopDownload();
-                    render();
+                    renderModal();
                 };
             }
-
-            const delBtn = document.getElementById('hcp-del-btn');
-            if (delBtn) {
-                delBtn.onclick = async () => {
-                    if (!confirm('Bạn có chắc chắn muốn xóa toàn bộ dữ liệu offline đã cache? Game sẽ chuyển về chế độ tải từ CDN.')) return;
+            const delCacheBtn = document.getElementById('btn_modal_del_cache');
+            if (delCacheBtn) {
+                delCacheBtn.onclick = async () => {
+                    if (!confirm('Bạn có chắc chắn muốn xóa toàn bộ bộ nhớ đệm Offline? Game sẽ chuyển về tải trực tuyến từ CDN.')) return;
                     await OfflineCacheManager.clearCache();
-                    render();
+                    renderModal();
                 };
             }
         }
 
-        render();
+        renderModal();
     }
 
     // Read-through cache: Stego Audio PNG → MP3 ArrayBuffer → lưu IDB (bỏ bước giải mã Deflate)
@@ -699,9 +930,9 @@
                 }
                 checkAndInvalidateCache(assetManifest).then(() => {
                     preloadCoreAssets();
-                    // Inject widget sau khi DOM sẵn sàng
-                    if (document.body) injectOfflineCacheWidget(assetManifest);
-                    else window.addEventListener('load', () => injectOfflineCacheWidget(assetManifest));
+                    // Inject Unified Gear Modal sau khi DOM sẵn sàng
+                    if (document.body) injectUnifiedGearModal(assetManifest);
+                    else window.addEventListener('load', () => injectUnifiedGearModal(assetManifest));
                 });
             }
         } catch (e) {
@@ -1564,227 +1795,6 @@
 
         console.log("[CDN Interceptor] ✅ Đã gắn hoàn tất toàn bộ Hook (bg, image, chara, button, bgmovie, audio, bgmopt, save_thumbnail).");
         setupMobileAutoFit();
-        injectMobileSideWings();
-    }
-
-    // ══════════════════════════════════════════════════════════════════════════
-    // 5. MOBILE SIDE TOUCH CONTROLLER (TRÍCH XUẤT NÚT SANG 2 BÊN SƯỜN MÀN HÌNH)
-    // ══════════════════════════════════════════════════════════════════════════
-    function injectMobileSideWings() {
-        if (document.getElementById('mobile_left_wing')) return;
-
-        const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || window.matchMedia('(pointer: coarse)').matches;
-        const isMobileDevice = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) || isTouch;
-
-        if (!isMobileDevice) {
-            console.log("[Mobile Controller] Thiết bị hiện tại là PC Desktop. Giữ nguyên giao diện chuẩn.");
-            return;
-        }
-
-        console.log("[Mobile Controller] Đã phát hiện thiết bị di động / cảm ứng! Đang kích hoạt bộ nút 2 bên sườn màn hình...");
-
-        // Haptic feedback helper
-        const triggerHaptic = () => {
-            try {
-                if (navigator.vibrate) navigator.vibrate(12);
-            } catch(e) {}
-        };
-
-        // 1. Cánh trái: Hệ thống Save / Load / Quản lý tệp
-        const leftWing = document.createElement('div');
-        leftWing.id = 'mobile_left_wing';
-        leftWing.className = 'mobile-side-wing';
-        leftWing.innerHTML = `
-            <button class="mobile-wing-btn" id="btn_m_qsave" title="Lưu nhanh (Quick Save)">
-                <span class="btn-icon">💾</span>
-                <span class="btn-label">L.Nhanh</span>
-            </button>
-            <button class="mobile-wing-btn" id="btn_m_qload" title="Nạp nhanh (Quick Load)">
-                <span class="btn-icon">📂</span>
-                <span class="btn-label">T.Nhanh</span>
-            </button>
-            <button class="mobile-wing-btn" id="btn_m_save" title="Bảng lưu game">
-                <span class="btn-icon">📋</span>
-                <span class="btn-label">Lưu/Nạp</span>
-            </button>
-            <button class="mobile-wing-btn" id="btn_m_export" title="Tải file .sav về máy">
-                <span class="btn-icon">📥</span>
-                <span class="btn-label">Tải .sav</span>
-            </button>
-            <button class="mobile-wing-btn" id="btn_m_import" title="Nạp file .sav từ máy">
-                <span class="btn-icon">📤</span>
-                <span class="btn-label">Nạp .sav</span>
-            </button>
-            <button class="mobile-wing-toggle" id="toggle_left_wing" title="Thu gọn / Mở rộng">
-                <span>◀</span>
-            </button>
-        `;
-
-        // 2. Cánh phải: Hệ thống Điều khiển kịch bản & Cài đặt
-        const rightWing = document.createElement('div');
-        rightWing.id = 'mobile_right_wing';
-        rightWing.className = 'mobile-side-wing';
-        rightWing.innerHTML = `
-            <button class="mobile-wing-btn" id="btn_m_skip" title="Bật/Tắt Tua nhanh (Skip)">
-                <span class="btn-icon">⏩</span>
-                <span class="btn-label">Tua</span>
-            </button>
-            <button class="mobile-wing-btn" id="btn_m_auto" title="Bật/Tắt Tự đọc thoại (Auto)">
-                <span class="btn-icon">▶️</span>
-                <span class="btn-label">Tự đọc</span>
-            </button>
-            <button class="mobile-wing-btn" id="btn_m_log" title="Xem lại lịch sử thoại (Backlog)">
-                <span class="btn-icon">📜</span>
-                <span class="btn-label">Nhật ký</span>
-            </button>
-            <button class="mobile-wing-btn" id="btn_m_window" title="Ẩn khung lời thoại">
-                <span class="btn-icon">👁️</span>
-                <span class="btn-label">Ẩn chữ</span>
-            </button>
-            <button class="mobile-wing-btn" id="btn_m_config" title="Cài đặt âm lượng & tốc độ">
-                <span class="btn-icon">⚙️</span>
-                <span class="btn-label">Cài đặt</span>
-            </button>
-            <button class="mobile-wing-btn" id="btn_m_title" title="Về màn hình Title">
-                <span class="btn-icon">🏠</span>
-                <span class="btn-label">Title</span>
-            </button>
-            <button class="mobile-wing-toggle" id="toggle_right_wing" title="Thu gọn / Mở rộng">
-                <span>▶</span>
-            </button>
-        `;
-
-        document.body.appendChild(leftWing);
-        document.body.appendChild(rightWing);
-
-        // 3. Gắn sự kiện điều khiển
-        // Cánh trái
-        document.getElementById('btn_m_qsave')?.addEventListener('click', (e) => {
-            e.stopPropagation();
-            triggerHaptic();
-            if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.menu) {
-                window.TYRANO.kag.menu.setQuickSave();
-            }
-        });
-
-        document.getElementById('btn_m_qload')?.addEventListener('click', (e) => {
-            e.stopPropagation();
-            triggerHaptic();
-            if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.menu) {
-                window.TYRANO.kag.menu.loadQuickSave();
-            }
-        });
-
-        document.getElementById('btn_m_save')?.addEventListener('click', (e) => {
-            e.stopPropagation();
-            triggerHaptic();
-            if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.menu) {
-                window.TYRANO.kag.menu.displaySave();
-            }
-        });
-
-        document.getElementById('btn_m_export')?.addEventListener('click', (e) => {
-            e.stopPropagation();
-            triggerHaptic();
-            if (window.exportCurrentSaveToFile) window.exportCurrentSaveToFile();
-        });
-
-        document.getElementById('btn_m_import')?.addEventListener('click', (e) => {
-            e.stopPropagation();
-            triggerHaptic();
-            if (window.importSaveFromFile) window.importSaveFromFile();
-        });
-
-        // Cánh phải
-        document.getElementById('btn_m_skip')?.addEventListener('click', (e) => {
-            e.stopPropagation();
-            triggerHaptic();
-            if (window.TYRANO && window.TYRANO.kag) {
-                if (window.TYRANO.kag.stat.is_skip) {
-                    window.TYRANO.kag.ftag.startTag("skipstop", {});
-                } else {
-                    window.TYRANO.kag.ftag.startTag("skipstart", {});
-                }
-            }
-        });
-
-        document.getElementById('btn_m_auto')?.addEventListener('click', (e) => {
-            e.stopPropagation();
-            triggerHaptic();
-            if (window.TYRANO && window.TYRANO.kag) {
-                if (window.TYRANO.kag.stat.is_auto) {
-                    window.TYRANO.kag.ftag.startTag("autostop", { next: "false" });
-                } else {
-                    window.TYRANO.kag.ftag.startTag("autostart", {});
-                }
-            }
-        });
-
-        document.getElementById('btn_m_log')?.addEventListener('click', (e) => {
-            e.stopPropagation();
-            triggerHaptic();
-            if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.menu) {
-                window.TYRANO.kag.menu.displayLog();
-            }
-        });
-
-        document.getElementById('btn_m_window')?.addEventListener('click', (e) => {
-            e.stopPropagation();
-            triggerHaptic();
-            if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.layer) {
-                window.TYRANO.kag.layer.hideMessageLayers();
-            }
-        });
-
-        document.getElementById('btn_m_config')?.addEventListener('click', (e) => {
-            e.stopPropagation();
-            triggerHaptic();
-            if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.ftag) {
-                window.TYRANO.kag.ftag.startTag("sleepgame", { storage: "../others/plugin/theme_kopanda_09_2/config.ks", next: false });
-            }
-        });
-
-        document.getElementById('btn_m_title')?.addEventListener('click', (e) => {
-            e.stopPropagation();
-            triggerHaptic();
-            if (window.TYRANO && window.TYRANO.kag) {
-                window.TYRANO.kag.backTitle();
-            }
-        });
-
-        // Toggle thu gọn/mở rộng cánh
-        const toggleLeft = document.getElementById('toggle_left_wing');
-        toggleLeft?.addEventListener('click', (e) => {
-            e.stopPropagation();
-            triggerHaptic();
-            leftWing.classList.toggle('collapsed-left');
-            toggleLeft.innerHTML = leftWing.classList.contains('collapsed-left') ? '<span>▶</span>' : '<span>◀</span>';
-        });
-
-        const toggleRight = document.getElementById('toggle_right_wing');
-        toggleRight?.addEventListener('click', (e) => {
-            e.stopPropagation();
-            triggerHaptic();
-            rightWing.classList.toggle('collapsed-right');
-            toggleRight.innerHTML = rightWing.classList.contains('collapsed-right') ? '<span>◀</span>' : '<span>▶</span>';
-        });
-
-        // 4. Đồng bộ trạng thái Auto / Skip hiển thị đèn báo theo thời gian thực
-        setInterval(() => {
-            if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.stat) {
-                const isSkip = !!window.TYRANO.kag.stat.is_skip;
-                const isAuto = !!window.TYRANO.kag.stat.is_auto;
-                
-                const btnSkip = document.getElementById('btn_m_skip');
-                if (btnSkip) {
-                    btnSkip.classList.toggle('active-skip', isSkip);
-                }
-                const btnAuto = document.getElementById('btn_m_auto');
-                if (btnAuto) {
-                    btnAuto.classList.toggle('active-auto', isAuto);
-                }
-            }
-        }, 250);
     }
 
     // Tự động căn giữa tuyệt đối và co giãn màn hình hoàn hảo trên mọi thiết bị
@@ -1850,10 +1860,8 @@
     if (document.readyState === "loading") {
         document.addEventListener("DOMContentLoaded", () => {
             installTyranoHooks();
-            injectMobileSideWings();
         });
     } else {
         installTyranoHooks();
-        injectMobileSideWings();
     }
 })();
