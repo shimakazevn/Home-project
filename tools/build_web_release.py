@@ -79,13 +79,18 @@ def step3_sync_engine_and_scenarios():
     if os.path.exists(os.path.join(APP_SRC_DIR, 'tyrano')):
         shutil.copytree(os.path.join(APP_SRC_DIR, 'tyrano'), os.path.join(WEB_SRC_DIR, 'tyrano'), dirs_exist_ok=True)
     
-    # 2. Đồng bộ Plugins và scripts thiết yếu (save_thumbnail.js)
+    # 2. Đồng bộ TOÀN BỘ Plugins và scripts từ extracted_scripts và patch (awakegame_ex, tb_save_img, waapi, save_thumbnail, etc.)
     others_dst = os.path.join(WEB_SRC_DIR, 'data', 'others')
-    os.makedirs(others_dst, exist_ok=True)
-    for p in ['auto_wrap', 'button_ex', 'theme_kopanda_09_2']:
-        src = os.path.join(ROOT_DIR, 'patch', 'data', 'others', 'plugin', p)
-        if os.path.exists(src):
-            shutil.copytree(src, os.path.join(others_dst, 'plugin', p), dirs_exist_ok=True)
+    plugin_dst = os.path.join(others_dst, 'plugin')
+    os.makedirs(plugin_dst, exist_ok=True)
+    
+    orig_plugin_dir = os.path.join(ROOT_DIR, 'extracted_scripts', 'data', 'others', 'plugin')
+    if os.path.exists(orig_plugin_dir):
+        shutil.copytree(orig_plugin_dir, plugin_dst, dirs_exist_ok=True)
+        
+    patch_plugin_dir = os.path.join(ROOT_DIR, 'patch', 'data', 'others', 'plugin')
+    if os.path.exists(patch_plugin_dir):
+        shutil.copytree(patch_plugin_dir, plugin_dst, dirs_exist_ok=True)
     
     save_thumb_src = os.path.join(ROOT_DIR, 'patch', 'data', 'others', 'save_thumbnail.js')
     if os.path.exists(save_thumb_src):
@@ -1768,8 +1773,11 @@ img[src*="workring_en.png"] {
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <meta name="robots" content="noindex,nofollow" />
   <meta name="theme-color" content="#000000" />
+  <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+  <link rel="shortcut icon" href="./favicon.ico" />
 
   <script type="text/javascript">
     // Ngăn chặn và dọn dẹp triệt để redirect cũ /web/ trên trình duyệt
