@@ -1,6 +1,6 @@
 {
   "version": "3.1.0",
-  "generated_at": "2026-08-31 00:28:54",
+  "generated_at": "2026-08-31 00:35:20",
   "total_files": 369,
   "files": {
     "data/asset_manifest.json": {
@@ -380,8 +380,8 @@
       "size": 283
     },
     "data/others/plugin/waapi/init.ks": {
-      "sha256": "1a5d531e4c55aca89aa3229a7c3b9af42972713d010ba822788b209b54b40a4f",
-      "size": 125
+      "sha256": "ece95219de9eb00f1b85bb9f4859bfe3cdc65f0e61c3638cf01832ab7f999b86",
+      "size": 31
     },
     "data/others/plugin/web_save/init.js": {
       "sha256": "c0247b6f999dab9e92cfd89898dc282ee63c9c47071ebe53a17c95c6bac0e5a7",

@@ -1,4 +1,4 @@
-rn'use strict';
+'use strict';
 module.exports = class plugin_setting {
     
     constructor(TB) {
@@ -133,3 +133,4 @@ module.exports = class plugin_setting {
     }
         
 }
+

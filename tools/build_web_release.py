@@ -186,7 +186,7 @@ TYRANO.kag.ftag.master_tag.awakegame_ex.kag = TYRANO.kag;
 '''
     tb_save_img_init = '[macro name="tb_save_img"]\n[save_img  * ]\n[endmacro]\n\n[macro name="tb_save_img_reset"]\n[save_img  storage="default" ]\n[endmacro]\n\n[return]\n'
     uiparts_init = '[loadjs storage="plugin/uiparts_set/select.js" ]\n[loadjs storage="plugin/uiparts_set/slider.js" ]\n[loadcss file="./data/others/plugin/uiparts_set/select.css" ]\n[loadcss file="./data/others/plugin/uiparts_set/slider.css" ]\n\n[return]\n'
-    waapi_init = '[loadjs storage="plugin/waapi/audio-metadata.min.js"]\n[loadjs storage="plugin/waapi/audio-context.builder.js"]\n\n[return]\n'
+    waapi_init = '; Plugin waapi stub\n[return]\n'
 
     for base_p in [plugin_dst, patch_plugin_dir]:
         os.makedirs(os.path.join(base_p, 'awakegame_ex'), exist_ok=True)
@@ -1887,6 +1887,12 @@ img[src*="workring_en.png"] {
     // ─── Minimalist Loading Status HUD ───────────────────────────────────────
     let loadingHudTimer = null;
     window.showLoadingStatus = function(text, autoHideMs = 2500) {
+        if (!document.body) {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', () => window.showLoadingStatus(text, autoHideMs), { once: true });
+            }
+            return;
+        }
         let hud = document.getElementById('home-loading-hud');
         if (!hud) {
             hud = document.createElement('div');
@@ -1914,15 +1920,14 @@ img[src*="workring_en.png"] {
         }
     };
 
-    // Khi khởi động game, hiển thị nhẹ trạng thái đang tải
-    window.showLoadingStatus('Đang khởi động HOME Visual Novel...', 2500);
-
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
+            window.showLoadingStatus('Đang khởi động HOME Visual Novel...', 2500);
             autoFitGameScreen();
             injectUnifiedGearModal();
         });
     } else {
+        window.showLoadingStatus('Đang khởi động HOME Visual Novel...', 2500);
         autoFitGameScreen();
         injectUnifiedGearModal();
     }

@@ -1,4 +1,3 @@
-
 {
   "セーブキャプチャ画像設定プラグイン": "Custom Save Game Thumbnail",
   "セーブ時のキャプチャ画像を好きな画像に変更できるようになります。設定をもとに戻したい時は「セーブ画像のリセット」を配置してください。": "Set a custom thumbnail image for saved games. To restore the default thumbnail, use the Reset Saved Game Thumbnail component.",
@@ -9,3 +8,4 @@
   "セーブ画像のリセット": "Reset SaveThumbnail",
   "セーブ時のキャプチャ画像をデフォルト動作に戻します。": "Restores the default thumbnail image.",
   "": ""
+}

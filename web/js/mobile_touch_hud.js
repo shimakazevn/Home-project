@@ -306,6 +306,12 @@
     // ─── Minimalist Loading Status HUD ───────────────────────────────────────
     let loadingHudTimer = null;
     window.showLoadingStatus = function(text, autoHideMs = 2500) {
+        if (!document.body) {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', () => window.showLoadingStatus(text, autoHideMs), { once: true });
+            }
+            return;
+        }
         let hud = document.getElementById('home-loading-hud');
         if (!hud) {
             hud = document.createElement('div');
@@ -333,15 +339,14 @@
         }
     };
 
-    // Khi khởi động game, hiển thị nhẹ trạng thái đang tải
-    window.showLoadingStatus('Đang khởi động HOME Visual Novel...', 2500);
-
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
+            window.showLoadingStatus('Đang khởi động HOME Visual Novel...', 2500);
             autoFitGameScreen();
             injectUnifiedGearModal();
         });
     } else {
+        window.showLoadingStatus('Đang khởi động HOME Visual Novel...', 2500);
         autoFitGameScreen();
         injectUnifiedGearModal();
     }
