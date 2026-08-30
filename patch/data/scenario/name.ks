@@ -38,7 +38,7 @@ $(".text_box").eq(1).val('Shun');
 Tên của bạn là [emb exp="f.familyname"] [emb exp="f.name"] phải không?[p]
 [_tb_end_text]
 
-[glink  color="btn_05_black"  storage="name.ks"  size="20"  text="Có / Đồng ý"  x="430"  y="260"  width="471"  height="50"  _clickable_img=""  target="*yes"  ]
+[glink  color="btn_05_black"  storage="name.ks"  size="20"  text="Đồng ý"  x="430"  y="260"  width="471"  height="50"  _clickable_img=""  target="*yes"  ]
 [glink  color="btn_05_black"  storage="name.ks"  size="20"  text="Không"  x="430"  y="370"  width="471"  height="50"  _clickable_img=""  target="*no"  ]
 [s  ]
 *no
