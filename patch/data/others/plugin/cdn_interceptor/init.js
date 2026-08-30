@@ -95,12 +95,57 @@
             if (resp.ok) {
                 assetManifest = await resp.json();
                 console.log(`[CDN Interceptor] Đã nạp thành công ${Object.keys(assetManifest).length} CDN routes.`);
+                preloadCoreAssets();
             }
         } catch (e) {
             console.warn('[CDN Interceptor] Không thể nạp asset_manifest.json:', e);
             assetManifest = {};
         }
         return assetManifest || {};
+    }
+
+    // Tải trước tài nguyên UI và âm thanh cốt lõi vào bộ nhớ đệm (Browser Cache)
+    function preloadCoreAssets() {
+        if (!assetManifest) return;
+        const priorityPatterns = [
+            'workring_', 'frame_', 'label_', 'button_', 'icon_',
+            'back_room1', 'back_byouin', 'back_massajiten', 'back_rihure', 'manual',
+            'job_daiseikou', 'job_seikou', 'job_sippai', 'money.mp3', 'click'
+        ];
+
+        const toPreload = [];
+        for (const [key, url] of Object.entries(assetManifest)) {
+            for (const pat of priorityPatterns) {
+                if (key.includes(pat)) {
+                    toPreload.push({ key, url });
+                    break;
+                }
+            }
+        }
+
+        let idx = 0;
+        const loadNextBatch = () => {
+            const batch = toPreload.slice(idx, idx + 8);
+            idx += 8;
+            batch.forEach(item => {
+                if (item.url.includes('.png') || item.url.includes('.jpg') || item.url.includes('.gif') || item.url.includes('.webp') || item.key.includes('/fgimage/') || item.key.includes('/bgimage/')) {
+                    const img = new Image();
+                    img.crossOrigin = 'anonymous';
+                    img.src = item.url;
+                } else if (item.url.endsWith('.mp3') || item.key.includes('/sound/') || item.key.includes('/bgm/')) {
+                    fetchAudioBuffer(item.key).catch(() => {});
+                }
+            });
+            if (idx < toPreload.length) {
+                if ('requestIdleCallback' in window) {
+                    window.requestIdleCallback(loadNextBatch, { timeout: 1000 });
+                } else {
+                    setTimeout(loadNextBatch, 150);
+                }
+            }
+        };
+
+        setTimeout(loadNextBatch, 600);
     }
 
     // 2. Chuyển đổi đường dẫn cục bộ -> URL Blogger CDN (Hỗ trợ query strings / timestamps)
