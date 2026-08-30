@@ -170,7 +170,7 @@
 			if (kag.playTestAudio) {
 				kag.playTestAudio('se', vol);
 			} else if (kag.ftag && kag.ftag.startTag) {
-				kag.ftag.startTag("playse", { storage: "se/decision1.ogg", buf: "0", stop: "true" });
+				kag.ftag.startTag("playse", { storage: "cam.mp3", buf: "0", stop: "true" });
 			}
 		}
 	};
@@ -216,7 +216,7 @@
 			if (kag.playTestAudio) {
 				kag.playTestAudio('voice_1', vol);
 			} else if (kag.ftag && kag.ftag.startTag) {
-				kag.ftag.startTag("playse", { storage: "voice/nagi_sample.ogg", buf: "1", stop: "true" });
+				kag.ftag.startTag("playse", { storage: "nagi/voice_BADEND_nagi1.mp3", buf: "1", stop: "true" });
 			}
 		}
 	};
@@ -252,7 +252,7 @@
 			if (kag.playTestAudio) {
 				kag.playTestAudio('voice_2', vol);
 			} else if (kag.ftag && kag.ftag.startTag) {
-				kag.ftag.startTag("playse", { storage: "voice/tubomi_sample.ogg", buf: "2", stop: "true" });
+				kag.ftag.startTag("playse", { storage: "rinko/voice_3P_r_naka2.mp3", buf: "2", stop: "true" });
 			}
 		}
 	};
@@ -288,7 +288,7 @@
 			if (kag.playTestAudio) {
 				kag.playTestAudio('voice_3', vol);
 			} else if (kag.ftag && kag.ftag.startTag) {
-				kag.ftag.startTag("playse", { storage: "voice/rinko_sample.ogg", buf: "3", stop: "true" });
+				kag.ftag.startTag("playse", { storage: "tubomi/voice_3P_kaisi1.mp3", buf: "3", stop: "true" });
 			}
 		}
 	};

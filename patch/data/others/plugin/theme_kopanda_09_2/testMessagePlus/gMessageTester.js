@@ -209,8 +209,11 @@ window.gMessageTester = {
 		var scroll = "onwheel" in document ? "wheel" :
 		             "onmousewheel" in document ? "mousewheel" : "DOMMouseScroll";
 		
+		var parent = $(".layer_free").length > 0 && $(".layer_free").is(":visible") ? $(".layer_free") :
+		             ($(".layer_event_click").length > 0 ? $(".layer_event_click") : ($("#tyrano_base").length > 0 ? $("#tyrano_base") : $("body")));
+		
 		var area = $("<div class='" + this.className + "'></div>")
-			.appendTo(".layer_free")
+			.appendTo(parent)
 			.click(function() { TM.next(); })
 			.on(scroll, function() { TM.next(); });
 		
@@ -227,7 +230,9 @@ window.gMessageTester = {
 			"line-height": "1.5",
 			"pointer-events": "auto",
 			"cursor": "pointer",
-			"z-index": "9999"
+			"z-index": "99999",
+			"display": "block",
+			"visibility": "visible"
 		});
 		
 		this.messageArea = area;

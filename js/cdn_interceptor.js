@@ -304,13 +304,59 @@
             };
         }
 
-        // In-Memory Scenario Routing (0ms Latency)
-        if (kag.loadScenario) {
-            const origLoadScenario = kag.loadScenario;
-            kag.loadScenario = function(file_name, call_back) {
-                return origLoadScenario.call(this, file_name, call_back);
+        // ─── Web Audio Engine Volume Controls & Preview ──────────────────────
+        kag.setBgmVolume = function(vol) {
+            if (window.HOME_AudioEngine && window.HOME_AudioEngine.setBgmVolume) {
+                window.HOME_AudioEngine.setBgmVolume(vol);
+            }
+        };
+
+        kag.setSeVolume = function(buf, vol) {
+            if (window.HOME_AudioEngine && window.HOME_AudioEngine.setSeVolume) {
+                window.HOME_AudioEngine.setSeVolume(buf, vol);
+            }
+        };
+
+        if (kag.tag.bgmopt) {
+            const origBgmopt = kag.tag.bgmopt.start;
+            kag.tag.bgmopt.start = function(pm) {
+                if (pm && pm.volume !== undefined && pm.volume !== "") {
+                    kag.setBgmVolume(pm.volume);
+                }
+                return origBgmopt.apply(this, arguments);
             };
         }
+
+        if (kag.tag.seopt) {
+            const origSeopt = kag.tag.seopt.start;
+            kag.tag.seopt.start = function(pm) {
+                if (pm && pm.volume !== undefined && pm.volume !== "") {
+                    kag.setSeVolume(pm.buf || "0", pm.volume);
+                }
+                return origSeopt.apply(this, arguments);
+            };
+        }
+
+        let _testAudioDebounce = 0;
+        kag.playTestAudio = function(type, vol) {
+            const now = Date.now();
+            if (now - _testAudioDebounce < 250) return;
+            _testAudioDebounce = now;
+
+            const sampleMap = {
+                'se': { path: 'data/sound/cam.mp3', buf: '0' },
+                'voice_1': { path: 'data/sound/nagi/voice_BADEND_nagi1.mp3', buf: '1' },
+                'voice_2': { path: 'data/sound/rinko/voice_3P_r_naka2.mp3', buf: '2' },
+                'voice_3': { path: 'data/sound/tubomi/voice_3P_kaisi1.mp3', buf: '3' }
+            };
+            const sample = sampleMap[type];
+            if (!sample) return;
+
+            const cdnUrl = window.resolveCDNUrl(sample.path);
+            if (cdnUrl && cdnUrl.startsWith('http')) {
+                window.HOME_AudioEngine.playSE(cdnUrl, vol !== undefined ? vol : 80, sample.buf);
+            }
+        };
 
         // ─── Hook Movie & Background Video Engine ─────────────────────────────
         kag.tag.movie = {
