@@ -1,27 +1,12 @@
 /* ==========================================================================
-   CẤU HÌNH FONT TIẾNG VIỆT NOTO SANS & AUTO-WRAP CHO HOME WEB
+   CẤU HÌNH FONT HỆ THỐNG TỐC ĐỘ CAO (ZERO DOWNLOAD LATENCY)
+   Tận dụng font gốc của iOS / Android / Windows / macOS
    ========================================================================== */
-
-@font-face {
-    font-family: 'NotoSansVN';
-    src: url('../data/others/font/NotoSansJP-Medium.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'NotoSansVN';
-    src: url('../data/others/font/NotoSansJP-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
 
 body, div, span, p, a, input, textarea, button,
 .message_inner, .current_span, .glink_button, .button, 
 .menu_item, .ptext, .log_body, .save_list_item_text, .layer_menu {
-    font-family: 'NotoSansVN', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -35,7 +20,7 @@ body, div, span, p, a, input, textarea, button,
 }
 
 .glink_button {
-    font-family: 'NotoSansVN', sans-serif !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif !important;
     font-weight: bold !important;
     letter-spacing: 0.02em;
     word-break: keep-all !important;

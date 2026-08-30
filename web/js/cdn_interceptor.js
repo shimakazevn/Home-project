@@ -41,12 +41,16 @@
         }
 
         const norm = normalizePath(filePath);
-        if (normalizedMap.has(norm)) return normalizedMap.get(norm);
+        let url = normalizedMap.get(norm) || normalizedMap.get(norm.split('/').pop()) || filePath;
 
-        const baseName = norm.split('/').pop();
-        if (normalizedMap.has(baseName)) return normalizedMap.get(baseName);
+        // Tối ưu hóa WebP (/s0-rw/) cho toàn bộ hình ảnh thị giác (bỏ qua file audio stego)
+        const isAudio = norm.startsWith('data/sound') || norm.startsWith('data/bgm') || norm.startsWith('data/video');
+        if (!isAudio && typeof url === 'string' && url.startsWith('http')) {
+            if (url.includes('/s0/')) url = url.replace('/s0/', '/s0-rw/');
+            else if (url.includes('/s1600/')) url = url.replace('/s1600/', '/s1600-rw/');
+        }
 
-        return filePath;
+        return url;
     };
 
     // ─── Native DOM Hooks ─────────────────────────────────────────────────────

@@ -40,25 +40,39 @@ def step1_ensure_directories():
 
 
 def step2_export_cdn_manifest():
-    """Xuất bảng định tuyến CDN từ upload_cache.db sang web/data/asset_manifest.json"""
-    print("\n[2/6] 🌐 Xuất bảng định tuyến CDN (asset_manifest.json)...")
+    """Xuất bảng định tuyến CDN từ upload_cache.db sang web/data/asset_manifest.json (Kích hoạt WebP /s0-rw/)"""
+    print("\n[2/6] 🌐 Xuất bảng định tuyến CDN & Tối ưu hóa WebP (/s0-rw/)...")
     if not os.path.exists(CACHE_DB_PATH):
         raise FileNotFoundError(f"Không tìm thấy upload_cache.db tại {CACHE_DB_PATH}!")
     
     with sqlite3.connect(CACHE_DB_PATH) as conn:
         cur = conn.cursor()
         cur.execute("SELECT file_path, cdn_url FROM uploads")
-        records = dict(cur.fetchall())
+        raw_records = cur.fetchall()
+    
+    records = {}
+    webp_count = 0
+    audio_count = 0
+    for file_path, cdn_url in raw_records:
+        # Bật WebP (/s0-rw/) cho toàn bộ hình ảnh thị giác (bgimage, fgimage, image, tyrano)
+        # TUYỆT ĐỐI GIỮ NGUYÊN /s0/ cho file âm thanh Steganography để không bị mất bit nhị phân
+        is_audio = file_path.startswith(('data/sound/', 'data/bgm/', 'data/video/'))
+        if not is_audio and ('/s0/' in cdn_url or '/s1600/' in cdn_url):
+            cdn_url = cdn_url.replace('/s0/', '/s0-rw/').replace('/s1600/', '/s1600-rw/')
+            webp_count += 1
+        else:
+            audio_count += 1
+        records[file_path] = cdn_url
     
     manifest_path = os.path.join(WEB_SRC_DIR, 'data', 'asset_manifest.json')
     with open(manifest_path, 'w', encoding='utf-8') as f:
         json.dump(records, f, ensure_ascii=False, indent=2)
     
-    print(f"  [OK] Đã xuất {len(records):,} đường dẫn CDN sang web/data/asset_manifest.json.")
+    print(f"  [OK] Đã xuất {len(records):,} đường dẫn ({webp_count:,} ảnh WebP /s0-rw/ + {audio_count:,} âm thanh bit-exact).")
 
 
 def step3_sync_engine_and_scenarios():
-    """Đồng bộ TyranoScript Engine, Plugins và kịch bản Việt hóa mới nhất"""
+    """Đồng bộ TyranoScript Engine, Plugins và kịch bản Việt hóa mới nhất (Loại bỏ font TTF nặng)"""
     print("\n[3/6] 📜 Đồng bộ Engine TyranoScript & 267 tệp kịch bản .ks Việt hóa...")
     
     # 1. Đồng bộ Tyrano Engine từ HOME_/resources/app/
@@ -71,11 +85,11 @@ def step3_sync_engine_and_scenarios():
         if os.path.exists(src):
             shutil.copytree(src, os.path.join(WEB_SRC_DIR, 'data', 'others', 'plugin', p), dirs_exist_ok=True)
     
-    # 3. Đồng bộ Fonts Noto Sans JP
-    for f in ['NotoSansJP-Medium.ttf', 'NotoSansJP-Bold.ttf']:
-        src = os.path.join(ROOT_DIR, 'tools', 'fonts', f)
-        if os.path.exists(src):
-            shutil.copy2(src, os.path.join(WEB_SRC_DIR, 'data', 'others', 'font', f))
+    # 3. Dọn sạch thư mục font TTF nặng để tận dụng 100% font hệ thống siêu nhẹ
+    font_dir = os.path.join(WEB_SRC_DIR, 'data', 'others', 'font')
+    if os.path.exists(font_dir):
+        shutil.rmtree(font_dir, ignore_errors=True)
+    os.makedirs(font_dir, exist_ok=True)
             
     # 4. Đồng bộ UI Images
     if os.path.exists(os.path.join(ROOT_DIR, 'patch', 'data', 'image')):
@@ -88,12 +102,13 @@ def step3_sync_engine_and_scenarios():
     elif os.path.exists(os.path.join(ROOT_DIR, 'patch', 'data', 'scenario')):
         shutil.copytree(os.path.join(ROOT_DIR, 'patch', 'data', 'scenario'), scenario_dst, dirs_exist_ok=True)
         
-    # Cấu hình Config.tjs cho Web
+    # Cấu hình Config.tjs cho Web (Dùng font hệ thống & webstorage)
     config_tjs_path = os.path.join(WEB_SRC_DIR, 'data', 'system', 'Config.tjs')
     if os.path.exists(config_tjs_path):
         with open(config_tjs_path, 'r', encoding='utf-8', errors='ignore') as f:
             cfg = f.read()
         cfg = cfg.replace(';configSave=file', ';configSave=webstorage')
+        cfg = cfg.replace(';userFace=Quicksand, 游ゴシック体, Yu Gothic, YuGothic, ヒラギノ角ゴシック Pro, Hiragino Kaku Gothic Pro, メイリオ, Meiryo, Osaka, ＭＳ Ｐゴシック, MS PGothic, sans-serif, Arial', ';userFace=-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif')
         with open(config_tjs_path, 'w', encoding='utf-8') as f:
             f.write(cfg)
 
@@ -105,31 +120,16 @@ def step4_generate_web_core_modules():
     """Tạo bộ module Web hoàn chỉnh: Audio Engine, IndexedDB Save, CDN Interceptor, Mobile Touch HUD & CSS"""
     print("\n[4/6] ⚡ Xây dựng bộ ba Web Engine & Responsive UI Modules...")
 
-    # 1. web/css/font.css
+    # 1. web/css/font.css (Tận dụng font hệ thống có sẵn của iOS / Android / Windows / Mac)
     font_css = """/* ==========================================================================
-   CẤU HÌNH FONT TIẾNG VIỆT NOTO SANS & AUTO-WRAP CHO HOME WEB
+   CẤU HÌNH FONT HỆ THỐNG TỐC ĐỘ CAO (ZERO DOWNLOAD LATENCY)
+   Tận dụng font gốc của iOS / Android / Windows / macOS
    ========================================================================== */
-
-@font-face {
-    font-family: 'NotoSansVN';
-    src: url('../data/others/font/NotoSansJP-Medium.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'NotoSansVN';
-    src: url('../data/others/font/NotoSansJP-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
 
 body, div, span, p, a, input, textarea, button,
 .message_inner, .current_span, .glink_button, .button, 
 .menu_item, .ptext, .log_body, .save_list_item_text, .layer_menu {
-    font-family: 'NotoSansVN', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -143,7 +143,7 @@ body, div, span, p, a, input, textarea, button,
 }
 
 .glink_button {
-    font-family: 'NotoSansVN', sans-serif !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif !important;
     font-weight: bold !important;
     letter-spacing: 0.02em;
     word-break: keep-all !important;
@@ -152,6 +152,7 @@ body, div, span, p, a, input, textarea, button,
 """
     with open(os.path.join(WEB_SRC_DIR, 'css', 'font.css'), 'w', encoding='utf-8') as f:
         f.write(font_css)
+
 
     # 2. web/css/web_core.css
     web_core_css = """/* ══════════════════════════════════════════════════════════════════════════════
@@ -964,12 +965,16 @@ img[src*="workring_en.png"] {
         }
 
         const norm = normalizePath(filePath);
-        if (normalizedMap.has(norm)) return normalizedMap.get(norm);
+        let url = normalizedMap.get(norm) || normalizedMap.get(norm.split('/').pop()) || filePath;
 
-        const baseName = norm.split('/').pop();
-        if (normalizedMap.has(baseName)) return normalizedMap.get(baseName);
+        // Tối ưu hóa WebP (/s0-rw/) cho toàn bộ hình ảnh thị giác (bỏ qua file audio stego)
+        const isAudio = norm.startsWith('data/sound') || norm.startsWith('data/bgm') || norm.startsWith('data/video');
+        if (!isAudio && typeof url === 'string' && url.startsWith('http')) {
+            if (url.includes('/s0/')) url = url.replace('/s0/', '/s0-rw/');
+            else if (url.includes('/s1600/')) url = url.replace('/s1600/', '/s1600-rw/');
+        }
 
-        return filePath;
+        return url;
     };
 
     // ─── Native DOM Hooks ─────────────────────────────────────────────────────
@@ -1339,11 +1344,22 @@ img[src*="workring_en.png"] {
     print("  [OK] Đã xuất bản toàn bộ 7 tệp Web Core JS/CSS/HTML vào web/.")
 
 
+def clean_directory(dir_path):
+    if os.path.exists(dir_path):
+        import stat
+        def remove_readonly(func, path, excinfo):
+            try:
+                os.chmod(path, stat.S_IWRITE)
+                func(path)
+            except Exception:
+                pass
+        shutil.rmtree(dir_path, onexc=remove_readonly)
+
+
 def step5_package_to_dist_web():
     """Sao chép toàn bộ thư mục web/ sang dist_web/ để tạo bản phân phối sẵn sàng deploy"""
     print("\n[5/6] 📦 Đóng gói bản phát hành Web sang dist_web/...")
-    if os.path.exists(WEB_DIST_DIR):
-        shutil.rmtree(WEB_DIST_DIR)
+    clean_directory(WEB_DIST_DIR)
     
     # Tạo .nojekyll để GitHub Pages không lọc các thư mục đặc biệt
     with open(os.path.join(WEB_SRC_DIR, '.nojekyll'), 'w', encoding='utf-8') as f:
@@ -1409,14 +1425,13 @@ def deploy_to_gh_pages():
     print("=" * 60)
     
     dist_git_dir = os.path.join(WEB_DIST_DIR, '.git')
-    if os.path.exists(dist_git_dir):
-        shutil.rmtree(dist_git_dir)
+    clean_directory(dist_git_dir)
         
     try:
         subprocess.run(['git', 'init'], cwd=WEB_DIST_DIR, check=True)
         subprocess.run(['git', 'checkout', '-B', 'gh-pages'], cwd=WEB_DIST_DIR, check=True)
         subprocess.run(['git', 'add', '-A'], cwd=WEB_DIST_DIR, check=True)
-        subprocess.run(['git', 'commit', '-m', 'Deploy HOME Web Visual Novel (Refactored Release)'], cwd=WEB_DIST_DIR, check=True)
+        subprocess.run(['git', 'commit', '-m', 'Deploy HOME Web Visual Novel (WebP /s0-rw/ & System Fonts)'], cwd=WEB_DIST_DIR, check=True)
         
         remote_url = 'https://github.com/shimakazevn/Home-project.git'
         subprocess.run(['git', 'remote', 'add', 'origin', remote_url], cwd=WEB_DIST_DIR, check=True)
@@ -1431,15 +1446,7 @@ def deploy_to_gh_pages():
     except Exception as e:
         print(f"\n❌ Thất bại khi deploy: {e}")
     finally:
-        if os.path.exists(dist_git_dir):
-            def remove_readonly(func, path, excinfo):
-                import stat
-                try:
-                    os.chmod(path, stat.S_IWRITE)
-                    func(path)
-                except Exception:
-                    pass
-            shutil.rmtree(dist_git_dir, onexc=remove_readonly)
+        clean_directory(dist_git_dir)
 
 
 def build_all():
