@@ -301,44 +301,262 @@ img[src*="workring_en.png"] {
     color: #38bdf8;
 }
 
-#web_quick_toolbar {
+/* 1. MINIMALIST APPLE CONTROL ORB */
+#home-gear-btn {
     position: fixed;
-    top: 8px;
-    right: 8px;
-    z-index: 9999;
-    display: flex;
-    gap: 6px;
-    opacity: 0.35;
-    transition: opacity 0.25s ease;
-}
-
-#web_quick_toolbar:hover, #web_quick_toolbar:focus-within {
-    opacity: 1;
-}
-
-.quick-btn {
-    background: rgba(20, 20, 30, 0.85);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #e2e8f0;
-    font-size: 12px;
-    padding: 5px 10px;
-    border-radius: 6px;
-    cursor: pointer;
+    bottom: 14px;
+    left: 14px;
+    z-index: 999999;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(30, 30, 32, 0.85);
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    border: 0.5px solid rgba(255, 255, 255, 0.16);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
     display: flex;
     align-items: center;
-    gap: 4px;
-    font-family: inherit;
-    transition: background 0.15s ease, transform 0.1s ease;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+    opacity: 0.85;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+#home-gear-btn:hover {
+    opacity: 1;
+    transform: scale(1.06);
+    background: rgba(44, 44, 46, 0.95);
+}
+#home-gear-btn:active {
+    transform: scale(0.92);
+    opacity: 0.7;
+}
+#home-gear-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.9);
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
-.quick-btn:hover {
-    background: rgba(59, 130, 246, 0.8);
-    color: #ffffff;
-    border-color: rgba(255, 255, 255, 0.4);
+/* 2. APPLE MINIMALIST INSET GROUPED MODAL SHEET */
+#home-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000000;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    box-sizing: border-box;
 }
-
-.quick-btn:active {
+#home-modal-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+#home-modal-card {
+    width: 100%;
+    max-width: 420px;
+    max-height: 88vh;
+    background: rgba(28, 28, 30, 0.94);
+    backdrop-filter: blur(50px) saturate(190%);
+    -webkit-backdrop-filter: blur(50px) saturate(190%);
+    border: 0.5px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: scale(0.95);
+    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    color: #FFFFFF;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    user-select: none;
+    box-sizing: border-box;
+}
+#home-modal-overlay.open #home-modal-card {
+    transform: scale(1);
+}
+.hmc-sheet-handle {
+    width: 36px;
+    height: 4px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 8px auto 0;
+    flex-shrink: 0;
+}
+.hmc-header {
+    padding: 10px 18px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+    flex-shrink: 0;
+}
+.hmc-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+.hmc-close {
+    background: rgba(120, 120, 128, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(235, 235, 245, 0.65);
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    transition: all 0.15s ease;
+    flex-shrink: 0;
+    outline: none;
+}
+.hmc-close:hover {
+    background: rgba(120, 120, 128, 0.35);
+    color: #FFFFFF;
+}
+.hmc-body {
+    padding: 14px 16px 18px;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.hmc-group-header {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: rgba(235, 235, 245, 0.45);
+    margin: 0 0 6px 4px;
+}
+.hmc-inset-group {
+    background: rgba(120, 120, 128, 0.15);
+    border: 0.5px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.hmc-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 14px;
+    position: relative;
+}
+.hmc-row + .hmc-row {
+    border-top: 0.5px solid rgba(255, 255, 255, 0.08);
+}
+.hmc-row-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+.hmc-row-label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFFFFF;
+    letter-spacing: -0.01em;
+}
+.hmc-row-sublabel {
+    font-size: 11.5px;
+    color: rgba(235, 235, 245, 0.5);
+    letter-spacing: -0.01em;
+}
+.hmc-row-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+.hmc-pill-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 999px;
+    color: #0A84FF;
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    padding: 5px 14px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.12s ease;
+    outline: none;
+    min-height: 28px;
+}
+.hmc-pill-btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+.hmc-pill-btn:active {
+    opacity: 0.6;
     transform: scale(0.96);
+}
+.hmc-pill-btn.pill-primary {
+    background: #0A84FF;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+.hmc-pill-btn.pill-primary:hover {
+    background: #0071E3;
+}
+.hmc-segmented {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: rgba(120, 120, 128, 0.2);
+    border-radius: 8px;
+    padding: 2px;
+    gap: 2px;
+    margin: 6px 8px;
+}
+.hmc-segment-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 2px;
+    border-radius: 6px;
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    outline: none;
+}
+.hmc-segment-item:hover {
+    color: #FFFFFF;
+}
+.hmc-segment-item.active-warn {
+    background: #FF9F0A;
+    color: #000000;
+    font-weight: 600;
+}
+.hmc-segment-item.active-blue {
+    background: #0A84FF;
+    color: #FFFFFF;
+    font-weight: 600;
 }
 """
     with open(os.path.join(WEB_SRC_DIR, 'css', 'web_core.css'), 'w', encoding='utf-8') as f:
@@ -1166,11 +1384,11 @@ img[src*="workring_en.png"] {
 
     # 6. web/js/mobile_touch_hud.js
     mobile_touch_hud_js = """/**
- * HOME - Mobile Touch HUD & Responsive 16:9 Letterbox Engine
- * ==========================================================
- * - Căn giữa 16:9 sắc nét trên mọi thiết bị
- * - Cử chỉ vuốt: Vuốt lên = Nhật ký (Backlog), Vuốt xuống = Ẩn hộp thoại
- * - Tự động hiển thị màn hình nhắc xoay ngang khi dựng đứng
+ * HOME - Unified Control Orb & Modal Sheet Engine
+ * ===============================================
+ * - Minimalist Apple Control Orb (Single Floating Gear ⚙️)
+ * - Apple Inset Grouped Modal Sheet (Lưu, Nạp, .sav, Skip, Auto, Log, Fullscreen, Title)
+ * - Tự động co giãn 16:9 sắc nét & Cử chỉ cảm ứng vuốt
  */
 
 (function() {
@@ -1255,13 +1473,233 @@ img[src*="workring_en.png"] {
         }
     };
 
+    // ─── Unified Control Orb & Modal Sheet ────────────────────────────────────
+    function injectUnifiedGearModal() {
+        if (document.getElementById('home-gear-btn')) return;
+
+        // 1. Nút Bánh Răng Floating Orb
+        const gearBtn = document.createElement('div');
+        gearBtn.id = 'home-gear-btn';
+        gearBtn.title = 'Cài đặt & Tiện ích';
+        gearBtn.innerHTML = `
+            <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+        `;
+        document.body.appendChild(gearBtn);
+
+        // 2. Modal Card Sheet
+        const overlay = document.createElement('div');
+        overlay.id = 'home-modal-overlay';
+        overlay.innerHTML = `
+            <div id="home-modal-card">
+                <div class="hmc-sheet-handle"></div>
+                <div class="hmc-header">
+                    <div class="hmc-title">Cài đặt & Tiện ích</div>
+                    <button class="hmc-close" id="hmc-close-btn" title="Đóng">✕</button>
+                </div>
+                <div class="hmc-body" id="hmc-dynamic-body">
+                </div>
+            </div>
+        `;
+        document.body.appendChild(overlay);
+
+        const closeModal = () => { overlay.classList.remove('open'); };
+        const openModal = () => { overlay.classList.add('open'); renderModal(); };
+
+        gearBtn.onclick = openModal;
+        document.getElementById('hmc-close-btn').onclick = closeModal;
+        overlay.onclick = (e) => { if (e.target === overlay) closeModal(); };
+
+        function isGameActive() {
+            if (!window.TYRANO || !window.TYRANO.kag || !window.TYRANO.kag.stat) return false;
+            const stat = window.TYRANO.kag.stat;
+            const scenario = (stat.current_scenario || '').toLowerCase();
+            if (!scenario) return false;
+            if (scenario === 'first.ks' || scenario.startsWith('title_') || scenario.startsWith('_title_')) {
+                return false;
+            }
+            return true;
+        }
+
+        function renderModal() {
+            const inGame = isGameActive();
+            const body = document.getElementById('hmc-dynamic-body');
+            if (!body) return;
+
+            const isSkip = inGame && !!(window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.stat && window.TYRANO.kag.stat.is_skip);
+            const isAuto = inGame && !!(window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.stat && window.TYRANO.kag.stat.is_auto);
+
+            body.innerHTML = `
+                <!-- SECTION 1: DỮ LIỆU LƯU TRỮ -->
+                <div>
+                    <div class="hmc-group-header">Dữ liệu Lưu trữ</div>
+                    <div class="hmc-inset-group">
+                        <div class="hmc-row ${inGame ? '' : 'hmc-row-disabled'}">
+                            <div class="hmc-row-left">
+                                <div class="hmc-row-label">Lưu & Nạp Game</div>
+                                <div class="hmc-row-sublabel">Mở màn hình chọn ô nhớ</div>
+                            </div>
+                            <div class="hmc-row-actions">
+                                <button class="hmc-pill-btn ${inGame ? '' : 'pill-disabled'}" id="btn_modal_save_menu">Lưu</button>
+                                <button class="hmc-pill-btn" id="btn_modal_load_menu">Nạp</button>
+                            </div>
+                        </div>
+
+                        <div class="hmc-row ${inGame ? '' : 'hmc-row-disabled'}">
+                            <div class="hmc-row-left">
+                                <div class="hmc-row-label">Lưu nhanh (Q.Save / Q.Load)</div>
+                                <div class="hmc-row-sublabel">Ghi đè / Nạp vị trí tạm</div>
+                            </div>
+                            <div class="hmc-row-actions">
+                                <button class="hmc-pill-btn ${inGame ? '' : 'pill-disabled'}" id="btn_modal_qsave">Lưu nhanh</button>
+                                <button class="hmc-pill-btn" id="btn_modal_qload">Nạp nhanh</button>
+                            </div>
+                        </div>
+
+                        <div class="hmc-row">
+                            <div class="hmc-row-left">
+                                <div class="hmc-row-label">Tệp sao lưu (.sav)</div>
+                                <div class="hmc-row-sublabel">Xuất / Nhập tệp an toàn</div>
+                            </div>
+                            <div class="hmc-row-actions">
+                                <button class="hmc-pill-btn" id="btn_modal_export">Xuất File</button>
+                                <button class="hmc-pill-btn" id="btn_modal_import">Nhập File</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 2: ĐIỀU KHIỂN ĐỌC TRUYỆN -->
+                <div>
+                    <div class="hmc-group-header">Điều khiển Đọc truyện ${inGame ? '' : '• Khi vào game'}</div>
+                    <div class="hmc-inset-group">
+                        <div class="hmc-segmented ${inGame ? '' : 'segmented-disabled'}">
+                            <button class="hmc-segment-item ${isSkip ? 'active-warn' : ''}" id="btn_modal_skip">
+                                ${isSkip ? 'Dừng tua' : 'Tua nhanh'}
+                            </button>
+                            <button class="hmc-segment-item ${isAuto ? 'active-blue' : ''}" id="btn_modal_auto">
+                                ${isAuto ? 'Dừng đọc' : 'Tự đọc'}
+                            </button>
+                            <button class="hmc-segment-item" id="btn_modal_log">
+                                Nhật ký
+                            </button>
+                            <button class="hmc-segment-item" id="btn_modal_hide">
+                                Ẩn chữ
+                            </button>
+                        </div>
+
+                        <div class="hmc-row">
+                            <div class="hmc-row-left">
+                                <div class="hmc-row-label">Toàn màn hình</div>
+                                <div class="hmc-row-sublabel">Tối ưu không gian hiển thị</div>
+                            </div>
+                            <div class="hmc-row-actions">
+                                <button class="hmc-pill-btn" id="btn_modal_fullscreen">Bật / Tắt</button>
+                            </div>
+                        </div>
+
+                        <div class="hmc-row ${inGame ? '' : 'hmc-row-disabled'}">
+                            <div class="hmc-row-left">
+                                <div class="hmc-row-label">Màn hình chính (Title)</div>
+                                <div class="hmc-row-sublabel">${inGame ? 'Thoát về trang bắt đầu' : 'Đang ở màn hình chính'}</div>
+                            </div>
+                            <div class="hmc-row-actions">
+                                <button class="hmc-pill-btn ${inGame ? '' : 'pill-disabled'}" id="btn_modal_title">Về Title</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Gắn sự kiện
+            document.getElementById('btn_modal_save_menu')?.addEventListener('click', () => {
+                if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.menu) {
+                    closeModal();
+                    window.TYRANO.kag.menu.displaySave();
+                }
+            });
+            document.getElementById('btn_modal_load_menu')?.addEventListener('click', () => {
+                if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.menu) {
+                    closeModal();
+                    window.TYRANO.kag.menu.displayLoad();
+                }
+            });
+            document.getElementById('btn_modal_qsave')?.addEventListener('click', () => {
+                if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.menu) {
+                    window.TYRANO.kag.menu.setQuickSave();
+                    closeModal();
+                }
+            });
+            document.getElementById('btn_modal_qload')?.addEventListener('click', () => {
+                if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.menu) {
+                    window.TYRANO.kag.menu.loadQuickSave();
+                    closeModal();
+                }
+            });
+            document.getElementById('btn_modal_export')?.addEventListener('click', () => {
+                if (window.exportCurrentSaveToFile) window.exportCurrentSaveToFile();
+            });
+            document.getElementById('btn_modal_import')?.addEventListener('click', () => {
+                if (window.importSaveFromFile) window.importSaveFromFile();
+            });
+            document.getElementById('btn_modal_skip')?.addEventListener('click', () => {
+                if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.ftag) {
+                    if (window.TYRANO.kag.stat.is_skip) {
+                        window.TYRANO.kag.ftag.startTag("skipstop", {});
+                    } else {
+                        window.TYRANO.kag.ftag.startTag("skipstart", {});
+                    }
+                    closeModal();
+                }
+            });
+            document.getElementById('btn_modal_auto')?.addEventListener('click', () => {
+                if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.ftag) {
+                    if (window.TYRANO.kag.stat.is_auto) {
+                        window.TYRANO.kag.ftag.startTag("autostop", { next: "false" });
+                    } else {
+                        window.TYRANO.kag.ftag.startTag("autostart", {});
+                    }
+                    closeModal();
+                }
+            });
+            document.getElementById('btn_modal_log')?.addEventListener('click', () => {
+                if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.menu) {
+                    closeModal();
+                    window.TYRANO.kag.menu.displayLog();
+                }
+            });
+            document.getElementById('btn_modal_hide')?.addEventListener('click', () => {
+                if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.layer) {
+                    closeModal();
+                    window.TYRANO.kag.layer.hideMessageLayers();
+                }
+            });
+            document.getElementById('btn_modal_fullscreen')?.addEventListener('click', () => {
+                window.toggleWebFullscreen();
+            });
+            document.getElementById('btn_modal_title')?.addEventListener('click', () => {
+                if (window.TYRANO && window.TYRANO.kag) {
+                    closeModal();
+                    window.TYRANO.kag.backTitle();
+                }
+            });
+        }
+    }
+
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', autoFitGameScreen);
+        document.addEventListener('DOMContentLoaded', () => {
+            autoFitGameScreen();
+            injectUnifiedGearModal();
+        });
     } else {
         autoFitGameScreen();
+        injectUnifiedGearModal();
     }
     setTimeout(autoFitGameScreen, 300);
     setTimeout(autoFitGameScreen, 1000);
+    setTimeout(injectUnifiedGearModal, 500);
 })();
 """
     with open(os.path.join(WEB_SRC_DIR, 'js', 'mobile_touch_hud.js'), 'w', encoding='utf-8') as f:
@@ -1345,15 +1783,6 @@ img[src*="workring_en.png"] {
     <div class="orientation-title">VUI LÒNG XOAY NGANG MÀN HÌNH</div>
     <div class="orientation-desc">Trò chơi được tối ưu hóa cho màn hình ngang 16:9. Hãy xoay thiết bị của bạn để có trải nghiệm tốt nhất.</div>
   </div>
-
-  <!-- Quick Floating HUD Toolbar -->
-  <div id="web_quick_toolbar">
-    <button class="quick-btn" onclick="if(window.TYRANO&&window.TYRANO.kag&&window.TYRANO.kag.menu) window.TYRANO.kag.menu.displaySave();">💾 Lưu</button>
-    <button class="quick-btn" onclick="if(window.TYRANO&&window.TYRANO.kag&&window.TYRANO.kag.menu) window.TYRANO.kag.menu.displayLoad();">📂 Nạp</button>
-    <button class="quick-btn" onclick="window.exportCurrentSaveToFile();">⬇️ Xuất Save</button>
-    <button class="quick-btn" onclick="window.importSaveFromFile();">⬆️ Nhập Save</button>
-    <button class="quick-btn" onclick="window.toggleWebFullscreen();">⛶ Toàn màn hình</button>
-  </div>
 </body>
 </html>
 """
@@ -1361,6 +1790,7 @@ img[src*="workring_en.png"] {
         f.write(index_html)
 
     print("  [OK] Đã xuất bản toàn bộ 7 tệp Web Core JS/CSS/HTML vào web/.")
+
 
 
 def clean_directory(dir_path):
