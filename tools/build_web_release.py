@@ -523,6 +523,68 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
         with open(config_tjs_path, 'w', encoding='utf-8') as f:
             f.write(cfg)
 
+    # Tối ưu hóa $.loadText trong web/tyrano/libs.js: Không dùng Math.random(), ưu tiên RAM bundle
+    libs_js_path = os.path.join(WEB_SRC_DIR, 'tyrano', 'libs.js')
+    if os.path.exists(libs_js_path):
+        with open(libs_js_path, 'r', encoding='utf-8', errors='ignore') as f:
+            libs_code = f.read()
+        
+        load_text_replacement = '''
+    $.loadText = function(file_path, callback) {
+        if (!file_path) {
+            if (callback) callback("");
+            return;
+        }
+        var clean = file_path.split('?')[0];
+        var norm = clean.replace(/^[.\\/\\\\]+/, '').replace(/\\\\/g, '/');
+        var basename = norm.split('/').pop();
+
+        if (window.__HOME_SCENARIO_BUNDLE) {
+            var content = window.__HOME_SCENARIO_BUNDLE[file_path] ||
+                          window.__HOME_SCENARIO_BUNDLE[clean] ||
+                          window.__HOME_SCENARIO_BUNDLE[norm] ||
+                          window.__HOME_SCENARIO_BUNDLE['data/scenario/' + basename] ||
+                          window.__HOME_SCENARIO_BUNDLE['./data/scenario/' + basename] ||
+                          window.__HOME_SCENARIO_BUNDLE[basename];
+            if (content !== undefined) {
+                if (callback) {
+                    setTimeout(function() { callback(content); }, 0);
+                }
+                return;
+            }
+        }
+
+        if (window.__DYNAMIC_TEXT_CACHE && window.__DYNAMIC_TEXT_CACHE[norm]) {
+            if (callback) {
+                setTimeout(function() { callback(window.__DYNAMIC_TEXT_CACHE[norm]); }, 0);
+            }
+            return;
+        }
+
+        $.ajax({
+            url: file_path,
+            cache: true,
+            success: function(text) {
+                if (!window.__DYNAMIC_TEXT_CACHE) window.__DYNAMIC_TEXT_CACHE = {};
+                window.__DYNAMIC_TEXT_CACHE[norm] = text;
+                if (callback) callback(text);
+            },
+            error: function() {
+                console.warn("file not found:" + file_path);
+                if (callback) callback("");
+            }
+        });
+    };
+'''
+        target_pat = '$.loadText = function(file_path, callback) {'
+        if target_pat in libs_code:
+            idx = libs_code.find(target_pat)
+            end_idx = libs_code.find('//クッキーを取得', idx)
+            if end_idx != -1:
+                libs_code = libs_code[:idx] + load_text_replacement.strip() + '\n\n    ' + libs_code[end_idx:]
+                with open(libs_js_path, 'w', encoding='utf-8') as f:
+                    f.write(libs_code)
+
     scenario_count = len([f for f in os.listdir(scenario_dst) if f.endswith('.ks')]) if os.path.exists(scenario_dst) else 0
     print(f"  [OK] Đã nạp thành công {scenario_count} tệp scenario .ks và cấu hình Web Engine.")
 
@@ -538,6 +600,52 @@ def step4_generate_web_core_modules(records=None):
                 records = json.load(f)
         else:
             records = {}
+
+    # 0. Tạo scenario_bundle.js: Bundling toàn bộ 267 scenario .ks + Config.tjs + HTML templates vào RAM Cache
+    scenario_bundle = {}
+    scenario_dir = os.path.join(WEB_SRC_DIR, 'data', 'scenario')
+    if os.path.exists(scenario_dir):
+        for root, _, files in os.walk(scenario_dir):
+            for file in files:
+                if file.endswith('.ks'):
+                    full_p = os.path.join(root, file)
+                    rel_p = os.path.relpath(full_p, WEB_SRC_DIR).replace('\\', '/')
+                    with open(full_p, 'r', encoding='utf-8', errors='ignore') as sf:
+                        content = sf.read()
+                    scenario_bundle[file] = content
+                    scenario_bundle[rel_p] = content
+                    scenario_bundle['./' + rel_p] = content
+                    scenario_bundle[f"data/scenario/{file}"] = content
+                    scenario_bundle[f"./data/scenario/{file}"] = content
+
+    # Thêm Config.tjs
+    config_tjs_path = os.path.join(WEB_SRC_DIR, 'data', 'system', 'Config.tjs')
+    if os.path.exists(config_tjs_path):
+        with open(config_tjs_path, 'r', encoding='utf-8', errors='ignore') as cf:
+            c_text = cf.read()
+        scenario_bundle['data/system/Config.tjs'] = c_text
+        scenario_bundle['./data/system/Config.tjs'] = c_text
+        scenario_bundle['Config.tjs'] = c_text
+
+    # Thêm HTML templates
+    html_dir = os.path.join(WEB_SRC_DIR, 'tyrano', 'html')
+    if os.path.exists(html_dir):
+        for hf in os.listdir(html_dir):
+            if hf.endswith('.html'):
+                with open(os.path.join(html_dir, hf), 'r', encoding='utf-8', errors='ignore') as hfile:
+                    h_text = hfile.read()
+                scenario_bundle[f"tyrano/html/{hf}"] = h_text
+                scenario_bundle[f"./tyrano/html/{hf}"] = h_text
+                scenario_bundle[hf] = h_text
+
+    bundle_json = json.dumps(scenario_bundle, ensure_ascii=False)
+    bundle_js = f"""// HOME Visual Novel - In-Memory High-Speed Scenario & Script Bundle
+// Preloads all 267 scenario scripts directly into browser RAM for 0ms transitions
+window.__HOME_SCENARIO_BUNDLE = {bundle_json};
+console.log("[ScenarioBundle] ✅ Đã nạp sẵn " + Object.keys(window.__HOME_SCENARIO_BUNDLE).length + " mục kịch bản & tài nguyên vào RAM Cache.");
+"""
+    with open(os.path.join(WEB_SRC_DIR, 'js', 'scenario_bundle.js'), 'w', encoding='utf-8') as f:
+        f.write(bundle_js)
 
     # 1. web/css/font.css (Tận dụng font hệ thống Tiếng Việt sắc nét, tương phản cao)
     font_css = """/* ==========================================================================
@@ -1913,13 +2021,10 @@ img[src*="workring_en.png"] {
             }};
         }}
 
-        // Hook scenario loading
+        // In-Memory Scenario Routing (0ms Latency)
         if (kag.loadScenario) {{
             const origLoadScenario = kag.loadScenario;
             kag.loadScenario = function(file_name, call_back) {{
-                if (window.showLoadingStatus && file_name) {{
-                    window.showLoadingStatus('Đang đọc kịch bản: ' + file_name, 2000);
-                }}
                 return origLoadScenario.call(this, file_name, call_back);
             }};
         }}
@@ -2537,7 +2642,8 @@ img[src*="workring_en.png"] {
   <script type="text/javascript" src="./tyrano/libs/alertify/alertify.min.js"></script>
   <script type="text/javascript" src="./tyrano/libs/remodal/remodal.js"></script>
 
-  <!-- HOME Modular Web Extensions -->
+  <!-- HOME In-Memory Scenario Bundle & Modular Web Extensions -->
+  <script type="text/javascript" src="./js/scenario_bundle.js?v={v_tag}"></script>
   <script type="text/javascript" src="./js/cdn_interceptor.js?v={v_tag}"></script>
   <script type="text/javascript" src="./js/web_audio_engine.js?v={v_tag}"></script>
   <script type="text/javascript" src="./js/web_save_indexeddb.js?v={v_tag}"></script>

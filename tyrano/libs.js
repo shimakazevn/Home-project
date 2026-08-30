@@ -374,47 +374,49 @@
     };
 
     $.loadText = function(file_path, callback) {
-        
-        /*
-        var httpObj = jQuery.get(file_path + "?" + Math.floor(Math.random() * 1000000), null, function(obj) {
-            
-            var order_str = "";
+        if (!file_path) {
+            if (callback) callback("");
+            return;
+        }
+        var clean = file_path.split('?')[0];
+        var norm = clean.replace(/^[.\/\\]+/, '').replace(/\\/g, '/');
+        var basename = norm.split('/').pop();
 
-            if (httpObj) {
-                if (httpObj.responseText) {
-                    order_str = httpObj.responseText;
-                } else {
-
-                    order_str = obj;
-
+        if (window.__HOME_SCENARIO_BUNDLE) {
+            var content = window.__HOME_SCENARIO_BUNDLE[file_path] ||
+                          window.__HOME_SCENARIO_BUNDLE[clean] ||
+                          window.__HOME_SCENARIO_BUNDLE[norm] ||
+                          window.__HOME_SCENARIO_BUNDLE['data/scenario/' + basename] ||
+                          window.__HOME_SCENARIO_BUNDLE['./data/scenario/' + basename] ||
+                          window.__HOME_SCENARIO_BUNDLE[basename];
+            if (content !== undefined) {
+                if (callback) {
+                    setTimeout(function() { callback(content); }, 0);
                 }
-            } else {
-
-                order_str = obj;
-
+                return;
             }
+        }
 
-            callback(order_str);
-            // createOrder
-        });
-        
-        */
-        
+        if (window.__DYNAMIC_TEXT_CACHE && window.__DYNAMIC_TEXT_CACHE[norm]) {
+            if (callback) {
+                setTimeout(function() { callback(window.__DYNAMIC_TEXT_CACHE[norm]); }, 0);
+            }
+            return;
+        }
+
         $.ajax({
-            url: file_path + "?" + Math.floor(Math.random() * 1000000),
-            cache: false,
-            success: function(text){
-                order_str = text;
-                callback(order_str);
+            url: file_path,
+            cache: true,
+            success: function(text) {
+                if (!window.__DYNAMIC_TEXT_CACHE) window.__DYNAMIC_TEXT_CACHE = {};
+                window.__DYNAMIC_TEXT_CACHE[norm] = text;
+                if (callback) callback(text);
             },
-            error:function(){
-                alert("file not found:"+file_path);
-                callback("");
+            error: function() {
+                console.warn("file not found:" + file_path);
+                if (callback) callback("");
             }
         });
-        
-        
-
     };
 
     //クッキーを取得

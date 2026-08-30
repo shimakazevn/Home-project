@@ -258,13 +258,10 @@
             };
         }
 
-        // Hook scenario loading
+        // In-Memory Scenario Routing (0ms Latency)
         if (kag.loadScenario) {
             const origLoadScenario = kag.loadScenario;
             kag.loadScenario = function(file_name, call_back) {
-                if (window.showLoadingStatus && file_name) {
-                    window.showLoadingStatus('Đang đọc kịch bản: ' + file_name, 2000);
-                }
                 return origLoadScenario.call(this, file_name, call_back);
             };
         }
