@@ -17,8 +17,8 @@ Hãy nhập tên nhân vật chính.[p]
 f.familyname = 'Hidaka';
 f.name = 'Shun';
 [endscript]
-[edit  left="430"  top="392"  width="200"  height="40"  size="26"  maxchars="20"  name="f.familyname"  reflect="false"  ]
-[edit  left="650"  top="392"  width="200"  height="40"  size="26"  maxchars="20"  name="f.name"  reflect="false"  ]
+[edit  left="430"  top="392"  width="200"  height="40"  size="26"  maxchars="20"  name="f.familyname"  initial="Hidaka"  reflect="false"  ]
+[edit  left="650"  top="392"  width="200"  height="40"  size="26"  maxchars="20"  name="f.name"  initial="Shun"  reflect="false"  ]
 [iscript]
 $(".text_box").eq(0).val('Hidaka');
 $(".text_box").eq(1).val('Shun');
