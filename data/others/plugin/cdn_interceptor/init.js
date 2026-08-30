@@ -1147,23 +1147,45 @@
         return assetManifest || {};
     }
 
+    function normalizeRelativePath(path) {
+        if (!path) return '';
+        const parts = path.replace(/\\/g, '/').split('/');
+        const stack = [];
+        for (const part of parts) {
+            if (part === '.' || part === '') continue;
+            if (part === '..') {
+                if (stack.length > 0) stack.pop();
+            } else {
+                stack.push(part);
+            }
+        }
+        return stack.join('/');
+    }
+
     // 2. Chuyển đổi đường dẫn cục bộ -> URL Blogger CDN (Hỗ trợ query strings / timestamps)
     window.resolveCDNUrl = function(rawPath) {
         if (!assetManifest || !rawPath || typeof rawPath !== 'string') return rawPath;
-        if (rawPath.startsWith('https://lh3.googleusercontent.com')) return rawPath;
+        if (rawPath.startsWith('https://lh3.googleusercontent.com') || rawPath.startsWith('blob:') || rawPath.startsWith('data:')) return rawPath;
 
         let [basePart, queryPart] = rawPath.split('?');
         let querySuffix = queryPart !== undefined ? '?' + queryPart : '';
 
-        let clean = basePart.replace(/^[./]+/, '').replace(/\\/g, '/');
+        // Chuẩn hóa và triệt tiêu các đoạn "../" tương đối
+        let clean = basePart.replace(/\\/g, '/');
         if (clean.includes('/data/')) {
             clean = 'data/' + clean.split('/data/')[1];
         } else if (clean.startsWith('http') && clean.includes('data/')) {
             clean = 'data/' + clean.split('data/')[1];
+        } else if (clean.startsWith('./data/')) {
+            clean = clean.slice(2);
         }
+        clean = normalizeRelativePath(clean);
 
         if (assetManifest[clean]) {
             return assetManifest[clean] + querySuffix;
+        }
+        if (!clean.startsWith('data/') && assetManifest['data/' + clean]) {
+            return assetManifest['data/' + clean] + querySuffix;
         }
         for (const k in assetManifest) {
             if (clean.endsWith(k) || k.endsWith(clean)) {
