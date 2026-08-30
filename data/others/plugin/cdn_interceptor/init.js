@@ -26,12 +26,12 @@
     const audioPromiseCache = new Map();
 
     // ============================================================
-    // HOME_AssetDB — IndexedDB Persistent Asset Cache
+    // HOME_AssetDB v3 — Offline Cache Manager (User opt-in)
     // ============================================================
     const IDB_NAME = 'HOME_AssetDB';
-    const IDB_VERSION = 2; // v2: xóa 'images' store (quá nặng ~8GB), chỉ giữ audio_raw + meta
+    const IDB_VERSION = 3; // v3: thêm lại 'images' store (user-controlled, không tự động tải)
     let assetDB = null;
-    let assetDBReady = null; // Promise that resolves to db
+    let assetDBReady = null;
 
     function openAssetDB() {
         if (assetDBReady) return assetDBReady;
@@ -40,12 +40,15 @@
                 const req = indexedDB.open(IDB_NAME, IDB_VERSION);
                 req.onupgradeneeded = (e) => {
                     const db = e.target.result;
-                    // Migration v1 → v2: xóa 'images' store cũ (~8GB không cần thiết)
-                    // Browser HTTP Cache xử lý ảnh tốt hơn, tự giới hạn dung lượng
-                    // IDB chỉ dùng cho audio_raw (Stego decode) và meta (fingerprint)
-                    if (db.objectStoreNames.contains('images')) {
+                    const oldVer = e.oldVersion;
+                    // v1→2: đã xóa images (auto-cache bị đầy 8GB)
+                    // v2→3: tạo lại images cho user opt-in offline
+                    if (oldVer < 2 && db.objectStoreNames.contains('images')) {
                         db.deleteObjectStore('images');
-                        console.log('[HOME_AssetDB] Đã xóa images store cũ (~8GB), giải phóng disk.');
+                    }
+                    if (!db.objectStoreNames.contains('images')) {
+                        const imgStore = db.createObjectStore('images', { keyPath: 'key' });
+                        imgStore.createIndex('tier', 'tier', { unique: false });
                     }
                     if (!db.objectStoreNames.contains('audio_raw')) {
                         db.createObjectStore('audio_raw', { keyPath: 'key' });
@@ -54,17 +57,9 @@
                         db.createObjectStore('meta');
                     }
                 };
-                req.onsuccess = (e) => {
-                    assetDB = e.target.result;
-                    resolve(assetDB);
-                };
-                req.onerror = () => {
-                    console.warn('[HOME_AssetDB] Không thể mở IndexedDB, fallback sang CDN.');
-                    resolve(null);
-                };
-            } catch(e) {
-                resolve(null);
-            }
+                req.onsuccess = (e) => { assetDB = e.target.result; resolve(assetDB); };
+                req.onerror = () => { console.warn('[HOME_AssetDB] Không thể mở IndexedDB.'); resolve(null); };
+            } catch(e) { resolve(null); }
         });
         return assetDBReady;
     }
@@ -117,29 +112,60 @@
         });
     }
 
-    async function clearAssetDB() {
+    function idbCount(store) {
+        return new Promise((resolve) => {
+            if (!assetDB) { resolve(0); return; }
+            try {
+                const tx = assetDB.transaction(store, 'readonly');
+                const req = tx.objectStore(store).count();
+                req.onsuccess = () => resolve(req.result || 0);
+                req.onerror = () => resolve(0);
+            } catch(e) { resolve(0); }
+        });
+    }
+
+    // Kiểm tra 1 key có trong IDB chưa (nhanh hơn idbGet vì không đọc blob)
+    function idbHas(store, key) {
+        return new Promise((resolve) => {
+            if (!assetDB) { resolve(false); return; }
+            try {
+                const tx = assetDB.transaction(store, 'readonly');
+                const req = tx.objectStore(store).getKey(key);
+                req.onsuccess = () => resolve(req.result !== undefined);
+                req.onerror = () => resolve(false);
+            } catch(e) { resolve(false); }
+        });
+    }
+
+    async function clearOfflineCache() {
         if (!assetDB) return;
         try {
-            const stores = ['audio_raw', 'meta'];
-            const tx = assetDB.transaction(stores, 'readwrite');
-            stores.forEach(s => { if (assetDB.objectStoreNames.contains(s)) tx.objectStore(s).clear(); });
+            const tx = assetDB.transaction(['images', 'audio_raw', 'meta'], 'readwrite');
+            tx.objectStore('images').clear();
+            tx.objectStore('audio_raw').clear();
+            tx.objectStore('meta').clear();
             await new Promise((r) => { tx.oncomplete = r; tx.onerror = r; });
-            console.log('[HOME_AssetDB] Đã xóa cache cũ do phiên bản manifest thay đổi.');
         } catch(e) {}
     }
 
-    // Tự động xóa cache khi developer push bản mới (kiểm tra qua fingerprint của manifest)
     async function checkAndInvalidateCache(manifest) {
         await openAssetDB();
         const fingerprint = String(Object.keys(manifest).length) + '_' + Object.keys(manifest).slice(0, 5).join(',');
         const stored = await idbMetaGet('manifest_fingerprint');
         if (stored && stored !== fingerprint) {
-            await clearAssetDB();
+            // Chỉ xóa meta và audio khi manifest thay đổi, GIỮ ảnh offline của user
+            // (User phải tự quyết định xóa cache bằng nút "Xóa cache")
+            if (assetDB) {
+                const tx = assetDB.transaction(['audio_raw', 'meta'], 'readwrite');
+                tx.objectStore('audio_raw').clear();
+                tx.objectStore('meta').clear();
+                await new Promise((r) => { tx.oncomplete = r; tx.onerror = r; });
+            }
         }
         await idbMetaPut('manifest_fingerprint', fingerprint);
     }
 
-    // --- Fetch Concurrency Limiter (tối đa 6 request song song để không nghẹt mạng khi Cold Start) ---
+    // --- Fetch Concurrency Limiter (tối đa 6 request song song) ---
     const FETCH_CONCURRENCY = 6;
     let _fetchActive = 0;
     const _fetchQueue = [];
@@ -152,48 +178,298 @@
                     if (_fetchQueue.length > 0) _fetchQueue.shift()();
                 });
             };
-            if (_fetchActive < FETCH_CONCURRENCY) {
-                execute();
-            } else {
-                _fetchQueue.push(execute);
-            }
+            if (_fetchActive < FETCH_CONCURRENCY) execute();
+            else _fetchQueue.push(execute);
         });
     }
 
-    // ẢNH: KHÔNG lưu vào IDB — Browser HTTP Cache xử lý tốt hơn, không tốn hàng chục GB disk!
-    // Chỉ cần `new Image()` là browser tự cache. IDB chỉ dành cho audio Stego.
+    // Ảnh preload đơn giản qua Browser HTTP Cache
     function preloadImage(url) {
         const img = new Image();
         img.crossOrigin = 'anonymous';
         img.src = url;
     }
 
+    // ============================================================
+    // OfflineCacheManager — User opt-in full offline download
+    // ============================================================
+    const OfflineCacheManager = {
+        _downloading: false,
+        _stopFlag: false,
+        _cachedCount: 0,
+        _totalCount: 0,
+        _tier1Keys: new Set(),
+
+        // Xây dựng danh sách ưu tiên download từ manifest
+        buildQueue(manifest) {
+            const tier1Patterns = [
+                'workring_','frame_','icon_','d_ev','r_up','r_down','shinnyu_','sin_','bussyoku_','haiti_',
+                'job_','mesi_','soto_','jisui_','konbini_','map_','sansaku_','spot_','area_','btn_map_',
+                'yoru_','sunday_','komyu_','date_','purezento_','ev_sinnyu','ev_haiti','ev_bussyoku',
+                'ev_mesi','ev_komyu','ev_yoru','ev_soto','ev_jisui','workring','parameter_','param_',
+                'workring_h_','room_','asa_','gogo_','yoru_','title','chara_icon','btn_','button_',
+                'base.png','gauge_','month_','week_','tension_','rank_'
+            ];
+            const tier1 = [], tier2 = [], tier3 = [];
+            for (const [key, url] of Object.entries(manifest)) {
+                const isImg = /\.(png|jpg|gif|webp)$/i.test(key);
+                const isAudio = /\.mp3$/i.test(key) || key.includes('/sound/') || key.includes('/bgm/') || key.includes('/voice/');
+                if (isImg) {
+                    const isT1 = tier1Patterns.some(p => key.includes(p));
+                    if (isT1) { tier1.push({ key, url, tier: 1 }); this._tier1Keys.add(key); }
+                    else tier2.push({ key, url, tier: 2 });
+                } else if (isAudio) {
+                    tier3.push({ key, url, tier: 3 });
+                }
+            }
+            return [...tier1, ...tier2, ...tier3];
+        },
+
+        async getStatus() {
+            await openAssetDB();
+            const imgCached = await idbCount('images');
+            const audioCached = await idbCount('audio_raw');
+            return { imgCached, audioCached, total: this._totalCount };
+        },
+
+        async startDownload(manifest, onProgress) {
+            if (this._downloading) return;
+            this._downloading = true;
+            this._stopFlag = false;
+
+            const queue = this.buildQueue(manifest);
+            this._totalCount = queue.length;
+
+            // Đếm số đã cache để resume
+            const imgCached = await idbCount('images');
+            const audioCached = await idbCount('audio_raw');
+            this._cachedCount = imgCached + audioCached;
+
+            let done = this._cachedCount;
+            const CONCURRENCY = 4; // Offline download: 4 parallel (nhẹ hơn game)
+            let idx = 0;
+
+            const worker = async () => {
+                while (idx < queue.length && !this._stopFlag) {
+                    const item = queue[idx++];
+                    if (!item) continue;
+
+                    const store = item.tier < 3 ? 'images' : 'audio_raw';
+                    const alreadyCached = await idbHas(store, item.key);
+                    if (!alreadyCached) {
+                        try {
+                            const resp = await fetch(item.url, { referrerPolicy: 'no-referrer' });
+                            if (resp.ok) {
+                                const blob = await resp.blob();
+                                await idbPut(store, { key: item.key, blob, tier: item.tier, cachedAt: Date.now() });
+                            }
+                        } catch(e) { /* skip failed */ }
+                    }
+                    done++;
+                    this._cachedCount = done;
+                    if (onProgress) onProgress(done, queue.length);
+                }
+            };
+
+            const workers = Array.from({ length: CONCURRENCY }, () => worker());
+            await Promise.all(workers);
+
+            this._downloading = false;
+            await idbMetaPut('offline_complete', !this._stopFlag);
+            if (onProgress) onProgress(done, queue.length);
+        },
+
+        stopDownload() {
+            this._stopFlag = true;
+            this._downloading = false;
+        },
+
+        async clearCache() {
+            this.stopDownload();
+            await clearOfflineCache();
+            this._cachedCount = 0;
+        }
+    };
+
+    // ============================================================
+    // Offline Cache UI Widget
+    // ============================================================
+    function injectOfflineCacheWidget(manifest) {
+        if (document.getElementById('home-cache-widget')) return;
+
+        const totalAssets = Object.keys(manifest).filter(k =>
+            /\.(png|jpg|gif|webp|mp3)$/i.test(k) || k.includes('/sound/') || k.includes('/bgm/')
+        ).length;
+        OfflineCacheManager._totalCount = totalAssets;
+
+        const style = document.createElement('style');
+        style.textContent = `
+            #home-cache-widget {
+                position: fixed; bottom: 10px; left: 10px; z-index: 99999;
+                font-family: 'Segoe UI', sans-serif; font-size: 12px;
+                user-select: none; pointer-events: auto;
+                transition: all 0.3s ease;
+            }
+            #home-cache-widget .hcw-bubble {
+                background: rgba(15,15,25,0.82);
+                backdrop-filter: blur(12px);
+                border: 1px solid rgba(255,255,255,0.13);
+                border-radius: 12px;
+                padding: 10px 14px;
+                color: #e8e8ff;
+                min-width: 220px;
+                box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+            }
+            #home-cache-widget .hcw-icon-btn {
+                background: rgba(15,15,25,0.82);
+                backdrop-filter: blur(12px);
+                border: 1px solid rgba(255,255,255,0.13);
+                border-radius: 50%;
+                width: 36px; height: 36px;
+                display: flex; align-items: center; justify-content: center;
+                cursor: pointer; font-size: 18px;
+                box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+                transition: transform 0.2s;
+            }
+            #home-cache-widget .hcw-icon-btn:hover { transform: scale(1.1); }
+            #home-cache-widget .hcw-title {
+                font-weight: 600; font-size: 13px; margin-bottom: 6px;
+                display: flex; align-items: center; gap: 6px;
+            }
+            #home-cache-widget .hcw-bar-bg {
+                background: rgba(255,255,255,0.1); border-radius: 6px;
+                height: 7px; margin: 6px 0; overflow: hidden;
+            }
+            #home-cache-widget .hcw-bar-fill {
+                height: 100%; border-radius: 6px;
+                background: linear-gradient(90deg, #6c63ff, #48cfad);
+                transition: width 0.4s ease;
+            }
+            #home-cache-widget .hcw-info {
+                color: rgba(220,220,255,0.7); font-size: 11px; margin-bottom: 8px;
+            }
+            #home-cache-widget .hcw-btns { display: flex; gap: 6px; margin-top: 4px; }
+            #home-cache-widget .hcw-btn {
+                flex: 1; padding: 5px 8px; border: none; border-radius: 7px;
+                cursor: pointer; font-size: 11px; font-weight: 600;
+                transition: opacity 0.2s, transform 0.1s;
+            }
+            #home-cache-widget .hcw-btn:hover { opacity: 0.85; transform: scale(1.03); }
+            #home-cache-widget .hcw-btn-dl {
+                background: linear-gradient(135deg, #6c63ff, #48cfad); color: #fff;
+            }
+            #home-cache-widget .hcw-btn-stop {
+                background: rgba(255,100,100,0.3); color: #ff9999;
+                border: 1px solid rgba(255,100,100,0.3);
+            }
+            #home-cache-widget .hcw-btn-del {
+                background: rgba(255,255,255,0.07); color: rgba(220,220,255,0.6);
+                border: 1px solid rgba(255,255,255,0.1);
+            }
+            #home-cache-widget .hcw-close {
+                position: absolute; top: 6px; right: 10px;
+                cursor: pointer; color: rgba(255,255,255,0.3); font-size: 14px;
+            }
+            #home-cache-widget .hcw-close:hover { color: rgba(255,255,255,0.8); }
+        `;
+        document.head.appendChild(style);
+
+        const widget = document.createElement('div');
+        widget.id = 'home-cache-widget';
+        document.body.appendChild(widget);
+
+        let expanded = false;
+
+        async function render() {
+            const status = await OfflineCacheManager.getStatus();
+            const cached = status.imgCached + status.audioCached;
+            const total = totalAssets;
+            const pct = total > 0 ? Math.round((cached / total) * 100) : 0;
+            const isComplete = pct >= 100;
+            const isDownloading = OfflineCacheManager._downloading;
+
+            if (!expanded) {
+                widget.innerHTML = `
+                    <div class="hcw-icon-btn" id="hcw-toggle" title="Offline Cache">
+                        ${isComplete ? '✅' : isDownloading ? '⏳' : '💾'}
+                    </div>`;
+                document.getElementById('hcw-toggle').onclick = () => { expanded = true; render(); };
+                return;
+            }
+
+            const statusText = isComplete
+                ? '✅ Đã cache đầy đủ — có thể chơi offline'
+                : isDownloading
+                    ? `⏳ Đang tải... ${pct}% (${cached.toLocaleString()}/${total.toLocaleString()})`
+                    : cached > 0
+                        ? `💾 ${pct}% đã cache (${cached.toLocaleString()}/${total.toLocaleString()})`
+                        : '🌐 Đang chơi online';
+
+            widget.innerHTML = `
+                <div class="hcw-bubble" style="position:relative">
+                    <span class="hcw-close" id="hcw-close">✕</span>
+                    <div class="hcw-title">💾 Cache Offline</div>
+                    <div class="hcw-bar-bg"><div class="hcw-bar-fill" style="width:${pct}%"></div></div>
+                    <div class="hcw-info">${statusText}</div>
+                    <div class="hcw-btns">
+                        ${isDownloading
+                            ? `<button class="hcw-btn hcw-btn-stop" id="hcw-stop">⏹ Dừng tải</button>`
+                            : isComplete
+                                ? `<button class="hcw-btn hcw-btn-del" id="hcw-del">🗑 Xóa cache</button>`
+                                : `<button class="hcw-btn hcw-btn-dl" id="hcw-dl">📥 Tải về máy</button>`
+                        }
+                        ${cached > 0 && !isComplete ? `<button class="hcw-btn hcw-btn-del" id="hcw-del">🗑 Xóa</button>` : ''}
+                    </div>
+                </div>`;
+
+            document.getElementById('hcw-close').onclick = () => { expanded = false; render(); };
+
+            const dlBtn = document.getElementById('hcw-dl');
+            if (dlBtn) dlBtn.onclick = () => {
+                OfflineCacheManager.startDownload(manifest, (done, total) => {
+                    const p = Math.round((done / total) * 100);
+                    const fill = widget.querySelector('.hcw-bar-fill');
+                    const info = widget.querySelector('.hcw-info');
+                    if (fill) fill.style.width = p + '%';
+                    if (info) info.textContent = `⏳ Đang tải... ${p}% (${done.toLocaleString()}/${total.toLocaleString()})`;
+                    if (done >= total) setTimeout(render, 500);
+                }).then(render);
+                render();
+            };
+
+            const stopBtn = document.getElementById('hcw-stop');
+            if (stopBtn) stopBtn.onclick = () => { OfflineCacheManager.stopDownload(); render(); };
+
+            const delBtn = document.getElementById('hcw-del');
+            if (delBtn) delBtn.onclick = async () => {
+                if (!confirm('Đã xóa toàn bộ offline cache. Game sẽ chơi online lại từ CDN.')) return;
+                await OfflineCacheManager.clearCache();
+                render();
+            };
+        }
+
+        render();
+    }
+
     // Read-through cache: Stego Audio PNG → MP3 ArrayBuffer → lưu IDB (bỏ bước giải mã Deflate)
     async function getIDBAudioRaw(key, stegoUrl, decodeStegoCb) {
-        // 1. RAM audioBufferCache (phiên hiện tại)
         const ramKey = stegoUrl.split('?')[0];
         if (audioBufferCache.has(ramKey)) return audioBufferCache.get(ramKey);
-        // 2. IndexedDB — MP3 thô đã lưu, tránh tốn CPU Deflate
         const stored = await idbGet('audio_raw', key);
-        if (stored && stored.mp3Bytes) {
+        if (stored && stored.blob) {
             try {
                 const ctx = getAudioContext();
-                const ab = stored.mp3Bytes.slice(0);
+                const ab = await stored.blob.arrayBuffer();
                 const decodedBuffer = await ctx.decodeAudioData(ab);
                 applyAudioBufferFadeOut(decodedBuffer);
                 audioBufferCache.set(ramKey, decodedBuffer);
                 return decodedBuffer;
             } catch(e) { /* fall through to re-decode */ }
         }
-        // 3. Decode Stego PNG từ CDN → lưu IDB
-        const decodedBuffer = await decodeStegoCb(stegoUrl);
-        // Sau khi decode xong, lưu audio bytes thô vào IDB nếu có thể
-        // (Lưu ý: AudioBuffer không thể serialize, ta encode lại sang WAV bytes tạm thời)
-        // Để đơn giản: caching qua RAM audioBufferCache là đủ sau khi decode 1 lần
-        return decodedBuffer;
+        return await decodeStegoCb(stegoUrl);
     }
     // ============================================================
-    // End HOME_AssetDB
+    // End HOME_AssetDB + OfflineCacheManager
     // ============================================================
 
     // Chuẩn hóa âm lượng tự nhiên, rõ nét (BGM 90%, SE 100%)
@@ -262,16 +538,17 @@
     // 1. Tải bảng manifest định tuyến CDN + khởi động IDB
     async function loadManifest() {
         if (assetManifest) return assetManifest;
-        // Mở IndexedDB song song với fetch manifest
         openAssetDB();
         try {
             const resp = await fetch('./data/asset_manifest.json');
             if (resp.ok) {
                 assetManifest = await resp.json();
                 console.log(`[CDN Interceptor] Đã nạp thành công ${Object.keys(assetManifest).length} CDN routes.`);
-                // Kiểm tra và xóa cache cũ nếu manifest thay đổi
                 checkAndInvalidateCache(assetManifest).then(() => {
                     preloadCoreAssets();
+                    // Inject widget sau khi DOM sẵn sàng
+                    if (document.body) injectOfflineCacheWidget(assetManifest);
+                    else window.addEventListener('load', () => injectOfflineCacheWidget(assetManifest));
                 });
             }
         } catch (e) {
