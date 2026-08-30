@@ -21,7 +21,7 @@
 [bg  time="0"  method="crossfade"  storage="back_rihure_hikaesitu.png"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[舜]「Được rồi... Bắt đầu bằng việc quét dọn thôi nào」[p]
+Tôi hất tung đôi giày, thô bạo bước thẳng vào trong phòng.[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="hasiru3.mp3"  fadein="true"  ]
