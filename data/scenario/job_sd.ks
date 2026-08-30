@@ -108,7 +108,7 @@ Trạng thái rất tốt. Công việc được hoàn thành một cách hoàn 
 
 [tb_start_tyrano_code]
 ;SD表示（筋トレ＿×）
-[image storage="default/default/job_kintore1.gif" layer="1" page="fore" visible="true" x="368" y="165" width="496" height="280" name="effect1" time="0"]
+[image storage="default/job_kintore1.gif" layer="1" page="fore" visible="true" x="368" y="165" width="496" height="280" name="effect1" time="0"]
 [_tb_end_tyrano_code]
 
 [iscript]
@@ -135,7 +135,7 @@ Trạng thái không tốt. Không thể hoàn thành buổi tập như ý muố
 
 [tb_start_tyrano_code]
 ;SD表示（筋トレ＿〇）
-[image storage="default/default/job_kintore2.gif" layer="1" page="fore" visible="true" x="368" y="165" width="496" height="280" name="effect1" time="0"]
+[image storage="default/job_kintore2.gif" layer="1" page="fore" visible="true" x="368" y="165" width="496" height="280" name="effect1" time="0"]
 [_tb_end_tyrano_code]
 
 [iscript]
@@ -216,7 +216,7 @@ Trạng thái không tốt. Không thể hoàn thành công việc như ý muố
 
 [tb_start_tyrano_code]
 ;SD表示（マッサージ＿〇）
-[image storage="default/default/job_massage2.gif" layer="1" page="fore" visible="true" x="368" y="165" width="496" height="280" name="effect1" time="0"]
+[image storage="default/job_massage2.gif" layer="1" page="fore" visible="true" x="368" y="165" width="496" height="280" name="effect1" time="0"]
 [_tb_end_tyrano_code]
 
 [iscript]
@@ -297,7 +297,7 @@ Trạng thái không tốt. Không thể hoàn thành công việc như ý muố
 
 [tb_start_tyrano_code]
 ;SD表示（事務＿〇）
-[image storage="default/default/job_jim2.gif" layer="1" page="fore" visible="true" x="368" y="165" width="496" height="280" name="effect1" time="0"]
+[image storage="default/job_jim2.gif" layer="1" page="fore" visible="true" x="368" y="165" width="496" height="280" name="effect1" time="0"]
 [_tb_end_tyrano_code]
 
 [iscript]
