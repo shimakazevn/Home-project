@@ -125,3 +125,23 @@
 * Thoát ý tự nhiên thuần Việt theo hướng dẫn tại [`GEMINI_WORKSPACE_PROMPT.md`](file:///e:/HOME_/GEMINI_WORKSPACE_PROMPT.md).
 * Loại bỏ 100% ký tự ngắt âm tiếng Nhật `っ` / `ッ`, chuyển hóa thành cảm xúc tiếng Việt (`...`, `!`, `──`, hoặc từ đệm).
 * Tuân thủ đúng ma trận xưng hô giữa các nhân vật (Shun, Nagi, Rinko, Tsubomi, Hayato).
+
+---
+
+### 14. BẢO VỆ TÍNH THUẦN KHIẾT CỦA THƯ MỤC PATCH PC (`patch/`)
+* Thư mục `patch/` là gói payload tinh gọn chỉ dùng để vá game PC (chỉ chứa ~285 tệp).
+* **CHỈ CHỨA:** Các tệp kịch bản `.ks` Việt hóa, font chữ Noto Sans (`data/others/font/`), plugin `auto_wrap` (`data/others/plugin/auto_wrap/`), `tyrano/css/font.css` và `data/system/Config.tjs`.
+* **NGHIÊM CẤM:** Tuyệt đối không copy các thư mục plugin bên thứ ba (như `theme_kopanda_09_2/`) hay file ảnh gốc vào `patch/` vì game PC đã có sẵn trong `resources/app/`.
+
+---
+
+### 15. CẤM ÉP CSS SAI LỆCH VÀ BẢO VỆ THẺ TÊN NHÂN VẬT (`.chara_name_area`)
+* **NGHIÊM CẤM:** Không được dùng CSS ép `font-size: ... !important` hay `line-height` cứng vào `.chara_name_area` hoặc `.message_inner`.
+* Trong game **HOME**, nhà phát triển ẩn thẻ tên bằng `size=0` tại `(0, 0)` trong `message_window.ks` (tên nhân vật đã nằm trong thoại). Việc ép `font-size: 28px !important` sẽ làm hiện tên nhân vật ở góc trên màn hình và làm vỡ toàn bộ giao diện Vòng tròn hành động / Minigame.
+
+---
+
+### 16. ĐỊNH TUYẾN CHUẨN XÁC CỦA TRÌNH CÀI ĐẶT TRỰC TUYẾN (`parse_patch_from_zip`)
+* Trình cài đặt `unified_patch_installer.py` khi tải `main.zip` từ GitHub **BẮT BUỘC** phải trỏ đúng vào thư mục **`patch/`** bên trong archive để lấy 285 tệp patch.
+* **NGHIÊM CẤM:** Không được quét nhầm vào thư mục `data/` ở gốc repo (chứa hơn 1.100 tệp cũ) để tránh ghi đè làm hỏng bản cài PC của người dùng.
+
