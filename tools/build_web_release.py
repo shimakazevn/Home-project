@@ -19,7 +19,9 @@ import shutil
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-ASAR_PATH = r'E:\HOME_\Game\resources\app.asar'
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ASAR_PATH = r'E:\HOME_\HOME_\resources\app.asar'
+UNPACKED_APP = r'E:\HOME_\unpacked_game_app'
 PATCH_DIR = r'E:\HOME_\patch'
 WEB_DIST_DIR = r'E:\HOME_\dist_web'
 
@@ -48,40 +50,26 @@ def build_web_distribution():
                     remove_readonly(os.unlink, p, None)
     os.makedirs(WEB_DIST_DIR, exist_ok=True)
 
-    # 1. Trích xuất các file tĩnh thiết yếu từ app.asar (JS engine, CSS, system)
-    print("[1/4] Trích xuất khung engine TyranoScript từ app.asar...")
-    with open(ASAR_PATH, 'rb') as f:
-        f.read(12)
-        hs = struct.unpack('<I', f.read(4))[0]
-        header = json.loads(f.read(hs).decode('utf-8'))
-        data_offset = 16 + hs + ((4 - (hs % 4)) % 4)
+    # 0. Đồng bộ và nhúng CDN manifest vào cdn_interceptor/init.js
+    print("[0/4] Đồng bộ và nhúng CDN manifest vào cdn_interceptor/init.js...")
+    import build_web_cdn_interceptor
+    build_web_cdn_interceptor.update_cdn_interceptor()
 
-        def extract_matching_files(node, prefix=""):
-            for k, v in node.get('files', {}).items():
-                curr_path = f"{prefix}/{k}" if prefix else k
-                if 'files' in v:
-                    extract_matching_files(v, curr_path)
-                else:
-                    # Lấy toàn bộ code, kịch bản, scenario hệ thống, HTML, CSS, JS
-                    # CHỈ BỎ QUA các folder media nặng (đã đẩy lên Blogger CDN)
-                    media_dirs = ('data/bgimage/', 'data/sound/', 'data/bgm/', 'data/video/', 'data/fgimage/', 'data/image/')
-                    should_extract = (
-                        curr_path.startswith(('tyrano/', 'data/system/', 'data/others/', 'data/scenario/'))
-                        or curr_path in ('index.html', 'package.json')
-                    ) and not curr_path.startswith(media_dirs)
-
-                    if should_extract:
-                        off = int(v['offset'])
-                        sz = int(v['size'])
-                        f.seek(data_offset + off)
-                        data = f.read(sz)
-
-                        dest = os.path.join(WEB_DIST_DIR, curr_path)
-                        os.makedirs(os.path.dirname(dest), exist_ok=True)
-                        with open(dest, 'wb') as out_f:
-                            out_f.write(data)
-
-        extract_matching_files(header)
+    # 1. Trích xuất các file tĩnh thiết yếu từ unpacked_game_app (hoặc app.asar)
+    print("[1/4] Trích xuất khung engine TyranoScript từ unpacked_game_app...")
+    media_dirs = ('data/bgimage', 'data/sound', 'data/bgm', 'data/video', 'data/fgimage', 'data/image')
+    for root, dirs, files in os.walk(UNPACKED_APP):
+        rel = os.path.relpath(root, UNPACKED_APP).replace('\\', '/')
+        if rel != '.' and any(rel.startswith(md) for md in media_dirs):
+            continue
+        for f in files:
+            src_f = os.path.join(root, f)
+            rel_f = os.path.relpath(src_f, UNPACKED_APP).replace('\\', '/')
+            if any(rel_f.startswith(md) for md in media_dirs):
+                continue
+            dst_f = os.path.join(WEB_DIST_DIR, rel_f)
+            os.makedirs(os.path.dirname(dst_f), exist_ok=True)
+            shutil.copy2(src_f, dst_f)
 
     print("  [OK] Đã trích xuất cấu trúc Web Engine cơ sở.")
 
@@ -96,7 +84,23 @@ def build_web_distribution():
             os.makedirs(os.path.dirname(dst), exist_ok=True)
             shutil.copy2(src, dst)
             copied_patch += 1
-    print(f"  [OK] Đã tích hợp {copied_patch} files từ patch/.")
+    
+    # Đảm bảo Config.tjs trên bản Web luôn dùng configSave=webstorage
+    web_config_tjs = os.path.join(WEB_DIST_DIR, 'data', 'system', 'Config.tjs')
+    if os.path.exists(web_config_tjs):
+        with open(web_config_tjs, 'r', encoding='utf-8') as f:
+            cfg = f.read()
+        cfg = cfg.replace(';configSave=file', ';configSave=webstorage')
+        with open(web_config_tjs, 'w', encoding='utf-8') as f:
+            f.write(cfg)
+
+    # Đảm bảo asset_manifest.json có mặt tại dist_web/data/
+    shutil.copy2(
+        os.path.join(ROOT_DIR, 'data', 'asset_manifest.json'),
+        os.path.join(WEB_DIST_DIR, 'data', 'asset_manifest.json')
+    )
+
+    print(f"  [OK] Đã tích hợp {copied_patch} files từ patch/ và cấu hình webstorage.")
 
     # 3. Tạo/Cập nhật file index.html chuẩn cho Web
     print("[3/4] Tối ưu hóa index.html cho Web & Mobile...")
