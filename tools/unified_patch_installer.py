@@ -365,12 +365,30 @@ def download_file_with_progress(url, log_func=print, progress_func=None):
     return tmp_path
 
 def parse_patch_from_zip(zip_path):
-    """Giải nén và quét tìm toàn bộ các tệp patch data/ và tyrano/"""
+    """Giải nén và quét tìm toàn bộ các tệp patch data/ và tyrano/ từ thư mục patch/"""
     temp_dir = tempfile.mkdtemp(prefix='home_online_patch_')
     with zipfile.ZipFile(zip_path, 'r') as z:
         z.extractall(temp_dir)
         
     patch_dict = {}
+    patch_root = None
+    
+    # 1. Tìm chính xác thư mục patch/ trong repo GitHub archive
+    for root, dirs, files in os.walk(temp_dir):
+        if os.path.basename(root) == 'patch' and 'data' in dirs:
+            patch_root = root
+            break
+            
+    if patch_root:
+        for r2, _, f2 in os.walk(patch_root):
+            for f in f2:
+                abs_p = os.path.join(r2, f)
+                rel_p = os.path.relpath(abs_p, patch_root).replace('\\', '/')
+                if rel_p.startswith(('data/', 'tyrano/')):
+                    patch_dict[rel_p] = abs_p
+        return patch_dict, temp_dir
+        
+    # Fallback nếu zip chỉ chứa trực tiếp các tệp patch
     for root, dirs, files in os.walk(temp_dir):
         if 'scenario' in dirs and os.path.basename(root) == 'data':
             base_p = os.path.dirname(root)
@@ -382,18 +400,6 @@ def parse_patch_from_zip(zip_path):
                         patch_dict[rel_p] = abs_p
             break
             
-    if not patch_dict:
-        for root, dirs, files in os.walk(temp_dir):
-            for f in files:
-                abs_p = os.path.join(root, f)
-                rel_p = os.path.relpath(abs_p, temp_dir).replace('\\', '/')
-                if 'data/' in rel_p:
-                    rel_clean = rel_p[rel_p.find('data/'):]
-                    patch_dict[rel_clean] = abs_p
-                elif 'tyrano/' in rel_p:
-                    rel_clean = rel_p[rel_p.find('tyrano/'):]
-                    patch_dict[rel_clean] = abs_p
-
     return patch_dict, temp_dir
 
 def find_game_directory():
