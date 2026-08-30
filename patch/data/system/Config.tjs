@@ -1,6 +1,6 @@
 //ティラノビルダーによる自動ビルド　
 ;debugMenu.visible=false
-;configSave=webstorage
+;configSave=file
 ;global.config_version=5.00
 ;System.title=HOME
 ;projectID=HOME
