@@ -2225,6 +2225,14 @@ img[src*="workring_en.png"] {
   <!-- jQuery & Core Libraries -->
   <script type="text/javascript" src="./tyrano/libs/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="./tyrano/libs/jquery-migrate-1.4.1.js"></script>
+  <script type="text/javascript">
+    // Tyrano Environment Polyfills for Browser & Web
+    if (window.jQuery) {{
+      if (!jQuery.isElectron) jQuery.isElectron = function() {{ return false; }};
+      if (!jQuery.isNWJS) jQuery.isNWJS = function() {{ return false; }};
+      if (!jQuery.isTyranoPlayer) jQuery.isTyranoPlayer = function() {{ return false; }};
+    }}
+  </script>
   <script type="text/javascript" src="./tyrano/libs/jquery-ui.min.js"></script>
   <script type="text/javascript" src="./tyrano/libs/jquery.a3d.js"></script>
   <script type="text/javascript" src="./tyrano/libs/jsrender.min.js"></script>
@@ -2232,11 +2240,12 @@ img[src*="workring_en.png"] {
   <script type="text/javascript" src="./tyrano/libs/lz-string.min.js"></script>
 
   <!-- Dialog & Media Support Libs -->
+  <link href="./tyrano/libs/alertify/alertify.core.css" rel="stylesheet" type="text/css" />
+  <link href="./tyrano/libs/alertify/alertify.default.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="./tyrano/libs/remodal/remodal.css">
+  <link rel="stylesheet" href="./tyrano/libs/remodal/remodal-default-theme.css">
   <script type="text/javascript" src="./tyrano/libs/alertify/alertify.min.js"></script>
   <script type="text/javascript" src="./tyrano/libs/remodal/remodal.js"></script>
-  <script type="text/javascript" src="./tyrano/libs/howler.js"></script>
-  <script type="text/javascript" src="./tyrano/libs/jquery.touchSwipe.min.js"></script>
-  <script type="text/javascript" src="./tyrano/libs/jsQR.js"></script>
 
   <!-- HOME Modular Web Extensions -->
   <script type="text/javascript" src="./js/cdn_interceptor.js?v={v_tag}"></script>
@@ -2268,6 +2277,11 @@ img[src*="workring_en.png"] {
   <script type="text/javascript" src="./tyrano/plugins/kag/kag.tag_ar.js"></script>
   <script type="text/javascript" src="./tyrano/plugins/kag/kag.tag_three.js"></script>
   <script type="text/javascript" src="./tyrano/plugins/kag/kag.tag.js"></script>
+
+  <!-- Touch & Additional Libraries (Sau khi Kag & Tyrano đã sẵn sàng) -->
+  <script type="text/javascript" src="./tyrano/libs/howler.js"></script>
+  <script type="text/javascript" src="./tyrano/libs/jquery.touchSwipe.min.js"></script>
+  <script type="text/javascript" src="./tyrano/libs/jsQR.js"></script>
 </head>
 
 <body onselectstart="return false" oncontextmenu="return false;" ontouchmove="event.preventDefault()">
