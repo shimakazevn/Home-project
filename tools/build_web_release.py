@@ -760,14 +760,13 @@ console.log("[ScenarioBundle] ✅ Đã nạp sẵn " + Object.keys(window.__HOME
 
     # 1. web/css/font.css (Tận dụng font hệ thống Tiếng Việt sắc nét, tương phản cao)
     font_css = """/* ==========================================================================
-   CẤU HÌNH FONT HỆ THỐNG TIẾNG VIỆT CAO CẤP (ZERO DOWNLOAD LATENCY)
-   Tận dụng font gốc cao cấp của iOS / Android / Windows / macOS
+   CẤU HÌNH FONT TIẾNG VIỆT NOTO SANS & AUTO-WRAP CHO TYRANOSCRIPT
    ========================================================================== */
 
 * {
-    -webkit-font-smoothing: antialiased !important;
-    -moz-osx-font-smoothing: grayscale !important;
-    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 body, div, span, p, a, input, textarea, button,
@@ -776,34 +775,18 @@ body, div, span, p, a, input, textarea, button,
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif !important;
 }
 
-/* Lời thoại Visual Novel: Chữ đậm vừa vặn, bóng đổ tương phản cao, giãn dòng đẹp mắt */
-.message_inner, .current_span, .log_body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif !important;
-    font-weight: 600 !important;
-    font-size: 26px !important;
-    line-height: 1.65 !important;
-    letter-spacing: 0.02em !important;
+/* Tự động ngắt dòng thông minh cho văn bản tiếng Việt */
+.message_inner, .log_body, .current_span {
     word-break: break-word !important;
     overflow-wrap: break-word !important;
     white-space: normal !important;
-    text-shadow: 1.5px 1.5px 2.5px rgba(0, 0, 0, 0.95), -1px -1px 2px rgba(0, 0, 0, 0.9), 1px -1px 2px rgba(0, 0, 0, 0.9), -1px 1px 2px rgba(0, 0, 0, 0.9) !important;
-}
-
-/* Tên nhân vật (Name Plate) */
-.chara_name_area, [class*="chara_name"] {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif !important;
-    font-weight: 700 !important;
-    font-size: 28px !important;
-    letter-spacing: 0.03em !important;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.95) !important;
 }
 
 /* Nút bấm lựa chọn (Glink Choice Buttons) */
 .glink_button, [class*="glink"] {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif !important;
     font-weight: 600 !important;
-    font-size: 21px !important;
-    letter-spacing: 0.03em !important;
+    letter-spacing: 0.03em;
     background: rgba(18, 20, 32, 0.92) !important;
     border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
     border-radius: 10px !important;

@@ -130,8 +130,6 @@ def check_asset_files(base_dir):
         os.path.join(base_dir, 'data', 'others', 'font', 'NotoSansJP-Bold.ttf'),
         os.path.join(base_dir, 'tyrano', 'css', 'font.css'),
         os.path.join(base_dir, 'data', 'others', 'plugin', 'auto_wrap', 'init.js'),
-        os.path.join(base_dir, 'data', 'others', 'plugin', 'theme_kopanda_09_2', 'testMessagePlus', 'gMessageTester.js'),
-        os.path.join(base_dir, 'data', 'others', 'plugin', 'theme_kopanda_09_2', 'testMessagePlus', 'style.css'),
     ]
     
     for req in required_files:
