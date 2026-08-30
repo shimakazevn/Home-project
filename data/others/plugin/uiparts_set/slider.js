@@ -108,6 +108,12 @@
 
             const layer = TYRANO.kag.layer.getLayer("fix")
 
+            // Remove any existing slider with this name first to prevent duplicate elements/thumbs
+            layer.find("." + name).remove();
+            $("#input_" + name).closest(".range").remove();
+            $("#input_" + name).remove();
+            $("." + name).remove();
+
             let wrap = $('<div class="range fixlayer"></div>')
             let base = $('<div class="range_base"></div>')
             let active = $('<div class="range_active"></div>')

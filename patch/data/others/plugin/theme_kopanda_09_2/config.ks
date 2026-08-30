@@ -368,8 +368,8 @@ if (sf.config_default_set !== true) {
 [cm]
 
 	[bg storage="&tf.img_path +'bg_config.jpg'" time="286"]
-	[button fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" graphic="&tf.img_path + 'c_btn_back.png'" enterimg="&tf.img_path + 'c_btn_back2.png'" target="*backtitle" x="1208" y="7"]
-	[button fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" graphic="&tf.img_path + 'config_reset_off.png'" enterimg="&tf.img_path + 'config_reset_on.png'" target="*reset" x="1064" y="680" ]
+	[button fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" graphic="&tf.img_path + 'c_btn_back.png'" enterimg="&tf.img_path + 'c_btn_back2.png'" target="*backtitle" x="1200" y="15" name="c_btn_back"]
+	[button fix="true" storage="../others/plugin/theme_kopanda_09_2/config.ks" graphic="&tf.img_path + 'config_reset_off.png'" enterimg="&tf.img_path + 'config_reset_on.png'" target="*reset" x="1064" y="680" name="config_reset"]
 [jump storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*config_page"]
 
 
@@ -429,6 +429,7 @@ if (sf.config_default_set !== true) {
 if (window.gMessageTester && window.gMessageTester.destroy) {
 	window.gMessageTester.destroy();
 }
+$(".range").remove();
 TYRANO.kag.saveSystemVariable();
 [endscript]
 
@@ -447,41 +448,22 @@ TYRANO.kag.saveSystemVariable();
 *reset
 [iscript]
 
-f.workanime = 1
-tf.current_workanime = 1
+f.workanime = 1;
+tf.current_workanime = 1;
 
-tf.current_bgm_vol = 80
-tf.current_se_vol = 80
+tf.change_bgm(80);
+tf.change_se(80);
+tf.change_voice_1(80);
+tf.change_voice_2(80);
+tf.change_voice_3(80);
+tf.change_ch_speed(50);
+tf.change_auto_speed(2500);
 
-TG.config.defaultBgmVolume = 80
-TG.config.defaultSeVolume = 80
+var anime_btn = $(".fixlayer.anime_on");
+if (anime_btn.length > 0) {
+	anime_btn.find("img").attr("src", tf.img_path + "anime.png");
+}
 
-tf.current_voice_1_vol = 80
-tf.current_voice_2_vol = 80
-tf.current_voice_3_vol = 80
-
-if (!sf._skskpnt_volume) sf._skskpnt_volume = [80, 80, 80, 80];
-sf._skskpnt_volume[0] = 80
-sf._skskpnt_volume[1] = 80
-sf._skskpnt_volume[2] = 80
-sf._skskpnt_volume[3] = 80
-
-sf._system_config_bgm_volume = 80
-sf._system_config_se_volume = 80
-sf._system_config_ch_speed = 50
-sf._system_config_auto_speed = 2500
-
-tf.current_ch_speed = 50
-tf.current_auto_speed = 2500
-
-tf.slider_ch_speed = 51
-tf.slider_auto_speed = 2501
-
-tf.change_bgm();
-tf.change_se();
-tf.change_voice_1();
-tf.change_voice_2();
-tf.change_voice_3();
 TYRANO.kag.saveSystemVariable();
 
 [endscript]
@@ -489,8 +471,7 @@ TYRANO.kag.saveSystemVariable();
 [configdelay speed="50"]
 [autoconfig speed="2500"]
 
-[jump storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*config_page"]
-[s]
+[return]
 
 ;================================================================================
 
