@@ -1040,11 +1040,40 @@ img[src*="workring_en.png"] {
         }
     }
 
+    // ─── Decode Binary / Video Blob from URL ──────────────────────────────────
+    const blobUrlCache = new Map();
+    async function loadBinaryBlobUrl(url, mimeType = 'video/mp4') {
+        if (!url) return null;
+        if (blobUrlCache.has(url)) return blobUrlCache.get(url);
+
+        try {
+            const resp = await fetch(url);
+            const arrayBuf = await resp.arrayBuffer();
+            const u8 = new Uint8Array(arrayBuf);
+            let rawBytes;
+            // Check if PNG stego signature (0x89 0x50 0x4E 0x47)
+            if (u8[0] === 0x89 && u8[1] === 0x50 && u8[2] === 0x4E && u8[3] === 0x47) {
+                rawBytes = await extractStegoAudioBytes(arrayBuf);
+            } else {
+                rawBytes = arrayBuf;
+            }
+            const blob = new Blob([rawBytes], { type: mimeType });
+            const blobUrl = URL.createObjectURL(blob);
+            blobUrlCache.set(url, blobUrl);
+            return blobUrl;
+        } catch(err) {
+            console.error('[Web Audio Engine] Lỗi giải mã Binary/Video Blob:', err);
+            return null;
+        }
+    }
+
     // Expose toàn cục
     window.HOME_AudioEngine = {
         getAudioContext,
         unlockAudioContext,
         decodeAudioFromUrl,
+        extractStegoBytes: extractStegoAudioBytes,
+        loadBinaryBlobUrl,
         playBGM,
         stopBGM,
         playSE,
@@ -1605,17 +1634,173 @@ img[src*="workring_en.png"] {
             }};
         }}
 
-        // Bypass bgmovie safely
-        kag.tag.bgmovie = {{
-            pm: {{ time: 0, volume: 100, loop: 'true', storage: '' }},
-            start: function() {{ if (kag.ftag) kag.ftag.nextOrder(); }}
-        }};
-        kag.tag.stop_bgmovie = {{
-            pm: {{ time: 0 }},
-            start: function() {{ if (kag.ftag) kag.ftag.nextOrder(); }}
+        // ─── Hook Movie & Background Video Engine ─────────────────────────────
+        kag.tag.movie = {{
+            vital: ["storage"],
+            pm: {{
+                storage: "",
+                volume: "",
+                skip: "false",
+                mute: "false",
+                bgmode: "false",
+                loop: "false",
+                time: "300"
+            }},
+            start: function(pm) {{
+                this.playVideo(pm);
+            }},
+            playVideo: async function(pm) {{
+                const that = this;
+                const storageName = pm.storage;
+                const fullPath = (storageName.startsWith('data/') || storageName.startsWith('http')) ? storageName : `data/video/${{storageName}}`;
+                let cdnUrl = window.resolveCDNUrl(fullPath);
+                if (!cdnUrl || !cdnUrl.startsWith('http')) {{
+                    cdnUrl = window.resolveCDNUrl(storageName);
+                }}
+
+                if (!cdnUrl || (!cdnUrl.startsWith('http') && !cdnUrl.endsWith('.mp4'))) {{
+                    console.warn('[Video Engine] Không tìm thấy video:', storageName);
+                    if (pm.bgmode !== "true") {{
+                        if (that.kag.ftag) that.kag.ftag.nextOrder();
+                    }}
+                    return;
+                }}
+
+                try {{
+                    let videoSrc = cdnUrl;
+                    if (cdnUrl.includes('.png') || cdnUrl.startsWith('http')) {{
+                        if (window.showLoadingStatus) window.showLoadingStatus('Đang nạp video nền...', 2500);
+                        const blobUrl = await window.HOME_AudioEngine.loadBinaryBlobUrl(cdnUrl, 'video/mp4');
+                        if (blobUrl) videoSrc = blobUrl;
+                    }}
+
+                    const video = document.createElement("video");
+                    video.id = "bgmovie";
+                    video.className = "bgmovie";
+                    video.src = videoSrc;
+                    video.style.backgroundColor = "black";
+                    video.style.position = "absolute";
+                    video.style.top = "0px";
+                    video.style.left = "0px";
+                    video.style.width = "100%";
+                    video.style.height = "100%";
+                    video.style.objectFit = "cover";
+                    video.style.pointerEvents = "none";
+                    video.autoplay = true;
+                    video.setAttribute("playsinline", "1");
+                    video.setAttribute("webkit-playsinline", "1");
+                    
+                    // Background movies are muted by default to guarantee 100% autoplay across all modern browsers
+                    video.muted = (pm.mute === "true" || pm.bgmode === "true" || pm.storage === "title_bg.mp4");
+
+                    if (pm.bgmode === "true") {{
+                        that.kag.tmp.video_playing = true;
+                        video.style.zIndex = "1";
+                        video.loop = (pm.loop !== "false");
+                    }} else {{
+                        video.style.zIndex = "199999";
+                        video.loop = false;
+                        video.addEventListener("ended", function() {{
+                            $(video).remove();
+                            if (that.kag.ftag) that.kag.ftag.nextOrder();
+                        }});
+                        if (pm.skip === "true") {{
+                            $(video).on("click touchstart", function() {{
+                                $(video).remove();
+                                if (that.kag.ftag) that.kag.ftag.nextOrder();
+                            }});
+                        }}
+                    }}
+
+                    const jVideo = $(video);
+                    jVideo.css("opacity", 0);
+                    const tyranoBase = document.getElementById("tyrano_base") || document.querySelector(".tyrano_base");
+                    if (tyranoBase) {{
+                        const old = document.getElementById("bgmovie");
+                        if (old) old.remove();
+                        tyranoBase.appendChild(video);
+                    }}
+
+                    const fadeTime = parseInt(pm.time || 300);
+                    jVideo.animate({{ opacity: 1 }}, fadeTime);
+
+                    video.play().catch(e => {{
+                        console.warn('[Video Engine] Autoplay notice:', e);
+                        video.muted = true;
+                        video.play().catch(() => {{}});
+                    }});
+                }} catch(e) {{
+                    console.error('[Video Engine] Lỗi phát video:', e);
+                }}
+            }}
         }};
 
-        console.log('[CDN Interceptor] ✅ Đã gắn toàn bộ hook TyranoScript.');
+        kag.tag.bgmovie = {{
+            vital: ["storage"],
+            pm: {{
+                storage: "",
+                volume: "",
+                loop: "true",
+                mute: "true",
+                time: "300",
+                stop: "false"
+            }},
+            start: function(pm) {{
+                pm.skip = "false";
+                pm.bgmode = "true";
+                if (!this.kag.stat.current_bgmovie) this.kag.stat.current_bgmovie = {{}};
+                this.kag.stat.current_bgmovie.storage = pm.storage;
+                this.kag.stat.current_bgmovie.volume = pm.volume;
+                this.kag.ftag.startTag("movie", pm);
+                if (pm.stop === "false") {{
+                    this.kag.ftag.nextOrder();
+                }}
+            }}
+        }};
+
+        kag.tag.stop_bgmovie = {{
+            vital: [],
+            pm: {{ time: "300", wait: "true" }},
+            start: function(pm) {{
+                const that = this;
+                that.kag.tmp.video_playing = false;
+                if (that.kag.stat.current_bgmovie) {{
+                    that.kag.stat.current_bgmovie.storage = "";
+                    that.kag.stat.current_bgmovie.volume = "";
+                }}
+                const fadeTime = parseInt(pm.time || 300);
+                const videos = $(".tyrano_base").find("video#bgmovie, video.bgmovie");
+                if (videos.length > 0) {{
+                    videos.animate({{ opacity: 0 }}, fadeTime, function() {{
+                        $(this).remove();
+                        if (pm.wait === "true" && that.kag.ftag) that.kag.ftag.nextOrder();
+                    }});
+                    if (pm.wait !== "true" && that.kag.ftag) that.kag.ftag.nextOrder();
+                }} else {{
+                    if (that.kag.ftag) that.kag.ftag.nextOrder();
+                }}
+            }}
+        }};
+
+        kag.tag.wait_bgmovie = {{
+            vital: [],
+            pm: {{ stop: "false" }},
+            start: function(pm) {{
+                if (this.kag.tmp.video_playing) {{
+                    const video = document.getElementById("bgmovie");
+                    if (video) {{
+                        this.kag.stat.is_wait_bgmovie = true;
+                        video.loop = false;
+                    }} else {{
+                        this.kag.ftag.nextOrder();
+                    }}
+                }} else {{
+                    this.kag.ftag.nextOrder();
+                }}
+            }}
+        }};
+
+        console.log('[CDN Interceptor] ✅ Đã gắn toàn bộ hook TyranoScript & Video Engine.');
     }}
 
     if (document.readyState === 'loading') {{

@@ -291,11 +291,40 @@
         }
     }
 
+    // ─── Decode Binary / Video Blob from URL ──────────────────────────────────
+    const blobUrlCache = new Map();
+    async function loadBinaryBlobUrl(url, mimeType = 'video/mp4') {
+        if (!url) return null;
+        if (blobUrlCache.has(url)) return blobUrlCache.get(url);
+
+        try {
+            const resp = await fetch(url);
+            const arrayBuf = await resp.arrayBuffer();
+            const u8 = new Uint8Array(arrayBuf);
+            let rawBytes;
+            // Check if PNG stego signature (0x89 0x50 0x4E 0x47)
+            if (u8[0] === 0x89 && u8[1] === 0x50 && u8[2] === 0x4E && u8[3] === 0x47) {
+                rawBytes = await extractStegoAudioBytes(arrayBuf);
+            } else {
+                rawBytes = arrayBuf;
+            }
+            const blob = new Blob([rawBytes], { type: mimeType });
+            const blobUrl = URL.createObjectURL(blob);
+            blobUrlCache.set(url, blobUrl);
+            return blobUrl;
+        } catch(err) {
+            console.error('[Web Audio Engine] Lỗi giải mã Binary/Video Blob:', err);
+            return null;
+        }
+    }
+
     // Expose toàn cục
     window.HOME_AudioEngine = {
         getAudioContext,
         unlockAudioContext,
         decodeAudioFromUrl,
+        extractStegoBytes: extractStegoAudioBytes,
+        loadBinaryBlobUrl,
         playBGM,
         stopBGM,
         playSE,
