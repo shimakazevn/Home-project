@@ -929,8 +929,7 @@
                     urlToKeyMap.set(url.split('?')[0], key);
                 }
                 checkAndInvalidateCache(assetManifest).then(() => {
-                    preloadCoreAssets();
-                    // Inject Unified Gear Modal sau khi DOM sẵn sàng
+                    // Inject Unified Gear Modal sau khi DOM sẵn sàng (Không tự động tải tài nguyên nền)
                     if (document.body) injectUnifiedGearModal(assetManifest);
                     else window.addEventListener('load', () => injectUnifiedGearModal(assetManifest));
                 });
@@ -940,69 +939,6 @@
             assetManifest = {};
         }
         return assetManifest || {};
-    }
-
-    // Tải trước toàn bộ tài nguyên Vòng tròn Action và Lịch trình hàng ngày (Daily Action Wheel)
-    function preloadCoreAssets() {
-        if (!assetManifest) return;
-
-        // Tier 1: Toàn bộ Scene Vòng lặp Hàng ngày (Action Wheel, Bản đồ Thành phố / Dạo phố, Buổi tối, Thâm nhập, Bữa ăn)
-        const tier1Patterns = [
-            'workring_', 'frame_', 'icon_', 'd_ev', 'r_up', 'r_down', 'shinnyu_', 'sin_', 'bussyoku_', 'haiti_',
-            'job_', 'mesi_', 'soto_', 'jisui_', 'konbini_', 'map_', 'sansaku_', 'spot_', 'area_', 'btn_map_',
-            'yoru_', 'sunday_', 'komyu_', 'date_', 'purezento_',
-            'back_room', 'back_byouin', 'back_massajiten', 'back_rihure', 'manual',
-            'back_hankagai', 'back_famiresu', 'back_denkigai', 'back_ofis', 'back_kouen', 'back_eki', 'back_syop',
-            'jisitu.mp3', 'nitijyou', 'job_daiseikou', 'job_seikou', 'job_sippai', 'money.mp3',
-            'btn_', 'button_', 'base.png', 'gauge_', 'month_', 'week_', 'tension_', 'rank_'
-        ];
-
-        const tier1List = [];
-        const tier2List = [];
-
-        for (const [key, url] of Object.entries(assetManifest)) {
-            let isTier1 = false;
-            for (const pat of tier1Patterns) {
-                if (key.includes(pat)) {
-                    tier1List.push({ key, url });
-                    isTier1 = true;
-                    break;
-                }
-            }
-            if (!isTier1 && (key.includes('/fgimage/') || key.includes('/bgimage/'))) {
-                tier2List.push({ key, url });
-            }
-        }
-
-        console.log(`[CDN Preloader] Xếp hàng nạp trước ${tier1List.length} Tier-1 + ${tier2List.length} Tier-2 tài nguyên (tối đa 6 fetch song song, không lưu IDB)...`);
-
-        // Gộp Tier-1 và Tier-2 vào 1 hàng đợi, Tier-1 ưu tiên trước
-        // Ảnh dùng new Image() → Browser HTTP Cache tự động, không tốn disk
-        const allItems = [...tier1List, ...tier2List];
-        let idx = 0;
-        const BATCH = 8;
-
-        const loadNextBatch = () => {
-            const batch = allItems.slice(idx, idx + BATCH);
-            idx += BATCH;
-            batch.forEach(item => {
-                if (item.url.includes('.png') || item.url.includes('.jpg') || item.url.includes('.gif') || item.url.includes('.webp') || item.key.includes('/fgimage/') || item.key.includes('/bgimage/')) {
-                    preloadImage(item.url);
-                } else if (item.url.endsWith('.mp3') || item.key.includes('/sound/') || item.key.includes('/bgm/')) {
-                    fetchAudioBuffer(item.key).catch(() => {});
-                }
-            });
-            if (idx < allItems.length) {
-                if ('requestIdleCallback' in window) {
-                    window.requestIdleCallback(loadNextBatch, { timeout: 2000 });
-                } else {
-                    setTimeout(loadNextBatch, 200);
-                }
-            }
-        };
-
-        // Trì hoãn 2s sau khi load xong để game khởi động mượt
-        setTimeout(loadNextBatch, 2000);
     }
 
     // 2. Chuyển đổi đường dẫn cục bộ -> URL Blogger CDN (Hỗ trợ query strings / timestamps)
