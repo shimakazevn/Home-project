@@ -108,13 +108,15 @@
     function preloadCoreAssets() {
         if (!assetManifest) return;
 
-        // Tier 1: Toàn bộ Scene Vòng tròn Action và Công việc hàng ngày (Nạp tức thì)
+        // Tier 1: Toàn bộ Scene Vòng lặp Hàng ngày (Action Wheel, Bản đồ Thành phố / Dạo phố, Buổi tối, Thâm nhập, Bữa ăn)
         const tier1Patterns = [
-            'workring_', 'frame_', 'icon_up', 'd_ev', 'r_up', 'r_down', 'shinnyu_',
-            'job_kintore', 'job_massage', 'job_seisou', 'job_jim', 'job_neru', 'job_fx',
+            'workring_', 'frame_', 'icon_', 'd_ev', 'r_up', 'r_down', 'shinnyu_', 'sin_', 'bussyoku_', 'haiti_',
+            'job_', 'mesi_', 'soto_', 'jisui_', 'konbini_', 'map_', 'sansaku_', 'spot_', 'area_', 'btn_map_',
+            'yoru_', 'sunday_', 'komyu_', 'date_', 'purezento_',
             'back_room', 'back_byouin', 'back_massajiten', 'back_rihure', 'manual',
-            'jisitu.mp3', 'job_daiseikou', 'job_seikou', 'job_sippai', 'money.mp3',
-            'btn_', 'button_', 'base.png', 'gauge_', 'month_', 'week_', 'tension_'
+            'back_hankagai', 'back_famiresu', 'back_denkigai', 'back_ofis', 'back_kouen', 'back_eki', 'back_syop',
+            'jisitu.mp3', 'nitijyou', 'job_daiseikou', 'job_seikou', 'job_sippai', 'money.mp3',
+            'btn_', 'button_', 'base.png', 'gauge_', 'month_', 'week_', 'tension_', 'rank_'
         ];
 
         const tier1List = [];
