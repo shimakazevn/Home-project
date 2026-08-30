@@ -9,6 +9,20 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
+  <script type="text/javascript">
+    // Ngăn chặn và dọn dẹp triệt để redirect cũ /web/ trên trình duyệt
+    if (window.location.pathname.indexOf('/web') !== -1) {
+      var rootUrl = window.location.href.split('/web')[0] + '/';
+      window.location.replace(rootUrl);
+    }
+    // Hủy đăng ký Service Worker cũ nếu có
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function(regs) {
+        regs.forEach(function(r) { r.unregister(); });
+      });
+    }
+  </script>
+
   <!-- Typography & Core Web Stylesheets -->
   <link href="./css/font.css" rel="stylesheet" type="text/css" />
   <link href="./css/web_core.css" rel="stylesheet" type="text/css" />

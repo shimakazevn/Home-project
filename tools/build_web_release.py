@@ -1717,6 +1717,20 @@ img[src*="workring_en.png"] {
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
+  <script type="text/javascript">
+    // Ngăn chặn và dọn dẹp triệt để redirect cũ /web/ trên trình duyệt
+    if (window.location.pathname.indexOf('/web') !== -1) {
+      var rootUrl = window.location.href.split('/web')[0] + '/';
+      window.location.replace(rootUrl);
+    }
+    // Hủy đăng ký Service Worker cũ nếu có
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function(regs) {
+        regs.forEach(function(r) { r.unregister(); });
+      });
+    }
+  </script>
+
   <!-- Typography & Core Web Stylesheets -->
   <link href="./css/font.css" rel="stylesheet" type="text/css" />
   <link href="./css/web_core.css" rel="stylesheet" type="text/css" />
@@ -1815,6 +1829,12 @@ def step5_package_to_dist_web():
         f.write('')
         
     shutil.copytree(WEB_SRC_DIR, WEB_DIST_DIR)
+    
+    # Tạo bounce-back file nếu người dùng vô tình vào /web/ trên gh-pages
+    web_sub = os.path.join(WEB_DIST_DIR, 'web')
+    os.makedirs(web_sub, exist_ok=True)
+    with open(os.path.join(web_sub, 'index.html'), 'w', encoding='utf-8') as f:
+        f.write('<!DOCTYPE html><html><head><meta charset="utf-8"/><meta http-equiv="refresh" content="0; url=../"/><script>window.location.replace("../");</script></head><body></body></html>')
     
     total_size = sum(
         os.path.getsize(os.path.join(r, f))
