@@ -132,6 +132,43 @@
         return rawPath;
     };
 
+    // Khử nhiễu / tiếng "chét" cuối file âm thanh (5ms micro-fade out)
+    function applyAudioBufferFadeOut(audioBuffer) {
+        if (!audioBuffer) return audioBuffer;
+        try {
+            const fadeSamples = Math.min(256, Math.floor(audioBuffer.sampleRate * 0.005));
+            const numChannels = audioBuffer.numberOfChannels;
+            const len = audioBuffer.length;
+            if (len <= fadeSamples) return audioBuffer;
+
+            for (let c = 0; c < numChannels; c++) {
+                const channelData = audioBuffer.getChannelData(c);
+                for (let i = 0; i < fadeSamples; i++) {
+                    const idx = len - fadeSamples + i;
+                    const factor = 1.0 - (i / fadeSamples);
+                    channelData[idx] *= factor;
+                }
+            }
+        } catch(e) {}
+        return audioBuffer;
+    }
+
+    // Dừng nguồn âm thanh êm dịu (Anti-Pop Declick Envelope 6ms)
+    function safeStopSource(srcNode, gainNode, fadeMs = 6) {
+        try {
+            if (gainNode && srcNode) {
+                const ctx = getAudioContext();
+                gainNode.gain.setValueAtTime(gainNode.gain.value, ctx.currentTime);
+                gainNode.gain.linearRampToValueAtTime(0.0001, ctx.currentTime + fadeMs / 1000.0);
+                setTimeout(() => {
+                    try { srcNode.stop(); } catch(e) {}
+                }, fadeMs + 2);
+            } else if (srcNode) {
+                try { srcNode.stop(); } catch(e) {}
+            }
+        } catch(e) {}
+    }
+
     // 3. Giải mã Audio từ RGB24 Stego PNG (Hỗ trợ Big-Endian/Little-Endian + AudioBuffer Cache)
     window.decodeStegoAudioFromUrl = function(pngUrl) {
         if (audioBufferCache.has(pngUrl)) {
@@ -145,7 +182,12 @@
             try {
                 const resp = await fetch(pngUrl, { referrerPolicy: 'no-referrer' });
                 const blob = await resp.blob();
-                const bitmap = await createImageBitmap(blob);
+                let bitmap;
+                try {
+                    bitmap = await createImageBitmap(blob, { colorSpaceConversion: 'none', premultiplyAlpha: 'none' });
+                } catch(e) {
+                    bitmap = await createImageBitmap(blob);
+                }
 
                 const canvas = document.createElement('canvas');
                 canvas.width = bitmap.width;
@@ -191,6 +233,7 @@
                 const audioCtx = getAudioContext();
                 const arrayBufferToDecode = audioBufferData.buffer.slice(0, dataSize);
                 const decodedBuffer = await audioCtx.decodeAudioData(arrayBufferToDecode);
+                applyAudioBufferFadeOut(decodedBuffer);
                 audioBufferCache.set(pngUrl, decodedBuffer);
                 return decodedBuffer;
             } finally {
@@ -259,6 +302,8 @@
         };
 
         // Hook Sound Effect Player
+        const activeBufMap = new Map();
+
         kag.ft_play_stego_se = async function(cdnUrl, rawVol, buf) {
             try {
                 const ctx = getAudioContext();
@@ -271,6 +316,7 @@
                 
                 source.buffer = audioBuffer;
                 source.loop = false;
+                source._gainNode = gainNode;
                 
                 let vol = 1.0;
                 if (rawVol !== "" && rawVol !== undefined && !isNaN(parseFloat(rawVol))) {
@@ -278,7 +324,7 @@
                 }
                 
                 let bufRatio = 1.0;
-                let bufIdx = buf !== undefined ? buf : "0";
+                let bufIdx = buf !== undefined ? String(buf) : "0";
                 if (kag.stat && kag.stat.map_se_volume && kag.stat.map_se_volume[bufIdx] !== undefined) {
                     bufRatio = parseFloat(kag.stat.map_se_volume[bufIdx]) / 100.0;
                 } else if (kag.config && kag.config.defaultSeVolume !== undefined) {
@@ -286,16 +332,29 @@
                 }
                 
                 let finalVol = Math.max(0, Math.min(1.0, vol * bufRatio * MASTER_SE_SCALE));
-                gainNode.gain.value = finalVol;
+
+                // Nếu slot buffer này đang phát âm thanh trước, dừng mượt mà tránh "chét"
+                if (activeBufMap.has(bufIdx)) {
+                    const prev = activeBufMap.get(bufIdx);
+                    safeStopSource(prev.source, prev.gainNode, 6);
+                    activeBufMap.delete(bufIdx);
+                }
+
+                gainNode.gain.setValueAtTime(finalVol, ctx.currentTime);
 
                 source.connect(gainNode);
                 gainNode.connect(ctx.destination);
 
                 source.start(0);
                 activeSeSources.push(source);
+                activeBufMap.set(bufIdx, { source, gainNode });
                 kag.tmp.is_se_play = true;
+
                 source.onended = () => {
                     activeSeSources = activeSeSources.filter(s => s !== source);
+                    if (activeBufMap.get(bufIdx)?.source === source) {
+                        activeBufMap.delete(bufIdx);
+                    }
                     kag.tmp.is_se_play = false;
                     kag.tmp.is_vo_play = false;
                     if (kag.tmp.is_se_play_wait) {
