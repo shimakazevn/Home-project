@@ -164,7 +164,7 @@
 
       // Create a new AudioContext to make sure it is fully reset.
       if (self.usingWebAudio && self.ctx && typeof self.ctx.close !== 'undefined') {
-        self.ctx.close();
+        try { if (self.ctx.state !== 'closed') self.ctx.close(); } catch(e){}
         self.ctx = null;
         setupAudioContext();
       }
@@ -362,7 +362,7 @@
         }
 
         // Calling resume() on a stack initiated by user gesture is what actually unlocks the audio on Android Chrome >= 55.
-        if (typeof self.ctx.resume === 'function') { try { var _r = self.ctx.resume(); if (_r && _r.catch) _r.catch(function(){}); } catch(e){} }
+        if (self.ctx && self.ctx.state !== 'closed' && typeof self.ctx.resume === 'function') { try { var _r = self.ctx.resume(); if (_r && _r.catch) _r.catch(function(){}); } catch(e){} }
 
         // Setup a timeout to check that we are unlocked on the next event loop.
         source.onended = function() {
@@ -465,14 +465,14 @@
 
         self._suspendTimer = null;
         self.state = 'suspending';
-        self.ctx.suspend().then(function() {
+        if (self.ctx && self.ctx.state !== 'closed' && typeof self.ctx.suspend === 'function') { try { var _sp = self.ctx.suspend(); if (_sp && _sp.then) _sp.then(function() {
           self.state = 'suspended';
 
           if (self._resumeAfterSuspend) {
             delete self._resumeAfterSuspend;
             self._autoResume();
           }
-        });
+        }).catch(function(){}); } catch(e){} }
       }, 30000);
 
       return self;
@@ -493,14 +493,14 @@
         clearTimeout(self._suspendTimer);
         self._suspendTimer = null;
       } else if (self.state === 'suspended') {
-        var _rp = self.ctx.resume(); if (_rp && _rp.then) { _rp.then(function() {
+        if (self.ctx && self.ctx.state !== 'closed' && typeof self.ctx.resume === 'function') { try { var _rp = self.ctx.resume(); if (_rp && _rp.then) _rp.then(function() {
           self.state = 'running';
 
           // Emit to all Howls that the audio has resumed.
           for (var i=0; i<self._howls.length; i++) {
             self._howls[i]._emit('resume');
           }
-        }).catch(function(){}); }
+        }).catch(function(){}); } catch(e){} }
 
         if (self._suspendTimer) {
           clearTimeout(self._suspendTimer);

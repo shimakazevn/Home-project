@@ -595,15 +595,27 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
         )
         howler_code = howler_code.replace(
             'if (typeof self.ctx.resume === \'function\') {\n          self.ctx.resume();\n        }',
-            'if (typeof self.ctx.resume === \'function\') { try { var _r = self.ctx.resume(); if (_r && _r.catch) _r.catch(function(){}); } catch(e){} }'
+            'if (self.ctx && self.ctx.state !== \'closed\' && typeof self.ctx.resume === \'function\') { try { var _r = self.ctx.resume(); if (_r && _r.catch) _r.catch(function(){}); } catch(e){} }'
         )
         howler_code = howler_code.replace(
             'self.ctx.resume().then(function() {',
-            'var _rp = self.ctx.resume(); if (_rp && _rp.then) { _rp.then(function() {'
+            'if (self.ctx && self.ctx.state !== \'closed\' && typeof self.ctx.resume === \'function\') { try { var _rp = self.ctx.resume(); if (_rp && _rp.then) _rp.then(function() {'
         )
         howler_code = howler_code.replace(
             'for (var i=0; i<self._howls.length; i++) {\n            self._howls[i]._emit(\'resume\');\n          }\n        });',
-            'for (var i=0; i<self._howls.length; i++) {\n            self._howls[i]._emit(\'resume\');\n          }\n        }).catch(function(){}); }'
+            'for (var i=0; i<self._howls.length; i++) {\n            self._howls[i]._emit(\'resume\');\n          }\n        }).catch(function(){}); } catch(e){} }'
+        )
+        howler_code = howler_code.replace(
+            'self.ctx.suspend().then(function() {',
+            'if (self.ctx && self.ctx.state !== \'closed\' && typeof self.ctx.suspend === \'function\') { try { var _sp = self.ctx.suspend(); if (_sp && _sp.then) _sp.then(function() {'
+        )
+        howler_code = howler_code.replace(
+            'if (self._resumeAfterSuspend) {\n            delete self._resumeAfterSuspend;\n            self._autoResume();\n          }\n        });',
+            'if (self._resumeAfterSuspend) {\n            delete self._resumeAfterSuspend;\n            self._autoResume();\n          }\n        }).catch(function(){}); } catch(e){} }'
+        )
+        howler_code = howler_code.replace(
+            'if (self.usingWebAudio && self.ctx && typeof self.ctx.close !== \'undefined\') {\n        self.ctx.close();\n        self.ctx = null;\n        setupAudioContext();\n      }',
+            'if (self.usingWebAudio && self.ctx && typeof self.ctx.close !== \'undefined\') {\n        try { if (self.ctx.state !== \'closed\') self.ctx.close(); } catch(e){}\n        self.ctx = null;\n        setupAudioContext();\n      }'
         )
         with open(howler_path, 'w', encoding='utf-8') as f:
             f.write(howler_code)
@@ -1267,7 +1279,7 @@ img[src*="workring_en.png"] {
     const MASTER_SE_SCALE = 0.85;
 
     function getAudioContext() {
-        if (!audioCtx) {
+        if (!audioCtx || audioCtx.state === 'closed') {
             const AudioContextClass = window.AudioContext || window.webkitAudioContext;
             if (AudioContextClass) {
                 audioCtx = new AudioContextClass();
@@ -1278,13 +1290,12 @@ img[src*="workring_en.png"] {
     }
 
     function unlockAudioContext() {
-        if (isUnlocked) return;
         const ctx = getAudioContext();
-        if (ctx.state === 'suspended') {
+        if (ctx && ctx.state === 'suspended') {
             ctx.resume().then(() => {
                 isUnlocked = true;
             }).catch(() => {});
-        } else {
+        } else if (ctx && ctx.state === 'running') {
             isUnlocked = true;
         }
     }

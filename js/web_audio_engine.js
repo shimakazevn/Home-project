@@ -21,7 +21,7 @@
     const MASTER_SE_SCALE = 0.85;
 
     function getAudioContext() {
-        if (!audioCtx) {
+        if (!audioCtx || audioCtx.state === 'closed') {
             const AudioContextClass = window.AudioContext || window.webkitAudioContext;
             if (AudioContextClass) {
                 audioCtx = new AudioContextClass();
@@ -32,13 +32,12 @@
     }
 
     function unlockAudioContext() {
-        if (isUnlocked) return;
         const ctx = getAudioContext();
-        if (ctx.state === 'suspended') {
+        if (ctx && ctx.state === 'suspended') {
             ctx.resume().then(() => {
                 isUnlocked = true;
             }).catch(() => {});
-        } else {
+        } else if (ctx && ctx.state === 'running') {
             isUnlocked = true;
         }
     }
