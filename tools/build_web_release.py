@@ -1379,8 +1379,8 @@ def step5_package_to_dist_web():
 
 
 def step6_create_build_batch():
-    """Tạo file thực thi nhanh BUILD_WEB.bat và DEPLOY_WEB.bat ở thư mục gốc"""
-    print("\n[6/6] ⚡ Tạo file thực thi nhanh BUILD_WEB.bat & DEPLOY_WEB.bat...")
+    """Tạo file thực thi nhanh BUILD_WEB.bat, DEPLOY_WEB.bat và root index.html chuyển hướng tự động"""
+    print("\n[6/6] ⚡ Tạo file thực thi nhanh BUILD_WEB.bat, DEPLOY_WEB.bat & Root Redirector...")
     
     bat_build = """@echo off
 chcp 65001 >nul
@@ -1414,7 +1414,68 @@ pause >nul
     with open(os.path.join(ROOT_DIR, 'DEPLOY_WEB.bat'), 'w', encoding='utf-8') as f:
         f.write(bat_deploy)
 
-    print("  [OK] Đã tạo BUILD_WEB.bat và DEPLOY_WEB.bat.")
+    # Tạo file index.html ở thư mục gốc để nếu GitHub Pages chạy từ nhánh main thì tự động chuyển thẳng vào web/
+    root_redirect_html = """<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>HOME - Visual Novel [Tiếng Việt]</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="refresh" content="0; url=./web/" />
+  <script type="text/javascript">
+    window.location.replace("./web/");
+  </script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000000;
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .loader-box {
+      padding: 20px;
+    }
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid rgba(255, 255, 255, 0.2);
+      border-top-color: #4fc3f7;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 20px auto;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    h2 { margin: 0 0 10px 0; font-size: 1.4rem; }
+    p { margin: 0; opacity: 0.8; font-size: 0.95rem; }
+    a { color: #4fc3f7; text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="loader-box">
+    <div class="spinner"></div>
+    <h2>Đang khởi động HOME Visual Novel...</h2>
+    <p>Nếu không tự chuyển, vui lòng <a href="./web/">bấm vào đây để vào Game</a>.</p>
+  </div>
+</body>
+</html>
+"""
+    with open(os.path.join(ROOT_DIR, 'index.html'), 'w', encoding='utf-8') as f:
+        f.write(root_redirect_html)
+
+    with open(os.path.join(ROOT_DIR, '.nojekyll'), 'w', encoding='utf-8') as f:
+        f.write('')
+
+    print("  [OK] Đã tạo BUILD_WEB.bat, DEPLOY_WEB.bat và root index.html.")
+
 
 
 def deploy_to_gh_pages():
