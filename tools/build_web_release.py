@@ -81,6 +81,12 @@ def step3_sync_engine_and_scenarios():
     if os.path.exists(os.path.join(APP_SRC_DIR, 'tyrano')):
         shutil.copytree(os.path.join(APP_SRC_DIR, 'tyrano'), os.path.join(WEB_SRC_DIR, 'tyrano'), dirs_exist_ok=True)
     
+    # Đồng bộ các template HTML của Theme kopanda (load.html, save.html, menu.html, backlog.html) vào web/tyrano/html/ và web/data/others/plugin/theme_kopanda_09_2/html/
+    theme_html_dir = os.path.join(APP_SRC_DIR, 'data', 'others', 'plugin', 'theme_kopanda_09_2', 'html')
+    if os.path.exists(theme_html_dir):
+        shutil.copytree(theme_html_dir, os.path.join(WEB_SRC_DIR, 'tyrano', 'html'), dirs_exist_ok=True)
+        shutil.copytree(theme_html_dir, os.path.join(WEB_SRC_DIR, 'data', 'others', 'plugin', 'theme_kopanda_09_2', 'html'), dirs_exist_ok=True)
+    
     # 2. Đồng bộ TOÀN BỘ Plugins và scripts từ extracted_scripts và patch
     others_dst = os.path.join(WEB_SRC_DIR, 'data', 'others')
     plugin_dst = os.path.join(others_dst, 'plugin')
@@ -490,6 +496,15 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
     ico_src = os.path.join(ROOT_DIR, 'tools', 'tyrano.ico')
     if os.path.exists(ico_src):
         shutil.copy2(ico_src, os.path.join(WEB_SRC_DIR, 'favicon.ico'))
+        
+    # Đồng bộ video gốc (title_bg.mp4) vào web/data/video/
+    video_src_dir = os.path.join(APP_SRC_DIR, 'data', 'video')
+    video_dst_dir = os.path.join(WEB_SRC_DIR, 'data', 'video')
+    os.makedirs(video_dst_dir, exist_ok=True)
+    if os.path.exists(video_src_dir):
+        for vf in os.listdir(video_src_dir):
+            if vf.endswith('.mp4'):
+                shutil.copy2(os.path.join(video_src_dir, vf), os.path.join(video_dst_dir, vf))
     
     # 3. Dọn dẹp font TTF nặng trong web/ (Sử dụng hệ thống Web Fonts CSS sắc nét)
     font_dir = os.path.join(WEB_SRC_DIR, 'data', 'others', 'font')
@@ -636,6 +651,8 @@ def step4_generate_web_core_modules(records=None):
                     h_text = hfile.read()
                 scenario_bundle[f"tyrano/html/{hf}"] = h_text
                 scenario_bundle[f"./tyrano/html/{hf}"] = h_text
+                scenario_bundle[f"data/others/plugin/theme_kopanda_09_2/html/{hf}"] = h_text
+                scenario_bundle[f"./data/others/plugin/theme_kopanda_09_2/html/{hf}"] = h_text
                 scenario_bundle[hf] = h_text
 
     bundle_json = json.dumps(scenario_bundle, ensure_ascii=False)
@@ -2639,6 +2656,7 @@ img[src*="workring_en.png"] {
   <link href="./tyrano/libs/alertify/alertify.default.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="./tyrano/libs/remodal/remodal.css">
   <link rel="stylesheet" href="./tyrano/libs/remodal/remodal-default-theme.css">
+  <link rel="stylesheet" href="./data/others/plugin/theme_kopanda_09_2/ts09.css">
   <script type="text/javascript" src="./tyrano/libs/alertify/alertify.min.js"></script>
   <script type="text/javascript" src="./tyrano/libs/remodal/remodal.js"></script>
 
@@ -2780,6 +2798,8 @@ pause >nul
     # Đồng bộ trực tiếp game ra thư mục gốc để GitHub Pages chạy trực tiếp không cần slug /web/
     shutil.copy2(os.path.join(WEB_SRC_DIR, 'index.html'), os.path.join(ROOT_DIR, 'index.html'))
     shutil.copy2(os.path.join(WEB_SRC_DIR, '.nojekyll'), os.path.join(ROOT_DIR, '.nojekyll'))
+    if os.path.exists(os.path.join(WEB_SRC_DIR, 'favicon.ico')):
+        shutil.copy2(os.path.join(WEB_SRC_DIR, 'favicon.ico'), os.path.join(ROOT_DIR, 'favicon.ico'))
     for item in ['css', 'js', 'data', 'tyrano']:
         src_item = os.path.join(WEB_SRC_DIR, item)
         dst_item = os.path.join(ROOT_DIR, item)
