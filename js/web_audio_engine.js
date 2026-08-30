@@ -23,7 +23,10 @@
     function getAudioContext() {
         if (!audioCtx) {
             const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-            audioCtx = new AudioContextClass();
+            if (AudioContextClass) {
+                audioCtx = new AudioContextClass();
+                if (window.Howler) Howler.ctx = audioCtx;
+            }
         }
         return audioCtx;
     }

@@ -2432,16 +2432,16 @@
    */
   var setupAudioContext = function() {
     // If we have already detected that Web Audio isn't supported, don't run this step again.
-    if (!Howler.usingWebAudio) {
+    if (!Howler.usingWebAudio || Howler.ctx) {
       return;
     }
 
     // Check if we are using Web Audio and setup the AudioContext if we are.
     try {
       if (typeof AudioContext !== 'undefined') {
-        Howler.ctx = new AudioContext();
+        Howler.ctx = (window.HOME_AudioEngine && window.HOME_AudioEngine.getAudioContext) ? window.HOME_AudioEngine.getAudioContext() : (Howler.ctx || new AudioContext());
       } else if (typeof webkitAudioContext !== 'undefined') {
-        Howler.ctx = new webkitAudioContext();
+        Howler.ctx = (window.HOME_AudioEngine && window.HOME_AudioEngine.getAudioContext) ? window.HOME_AudioEngine.getAudioContext() : (Howler.ctx || new webkitAudioContext());
       } else {
         Howler.usingWebAudio = false;
       }

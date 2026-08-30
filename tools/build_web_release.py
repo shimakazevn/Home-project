@@ -512,9 +512,20 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
         shutil.rmtree(font_dir, ignore_errors=True)
     os.makedirs(font_dir, exist_ok=True)
             
-    # 4. Đồng bộ UI Images
+    # 4. Đồng bộ UI Images & Default/Special GIF Assets
     if os.path.exists(os.path.join(ROOT_DIR, 'patch', 'data', 'image')):
         shutil.copytree(os.path.join(ROOT_DIR, 'patch', 'data', 'image'), os.path.join(WEB_SRC_DIR, 'data', 'image'), dirs_exist_ok=True)
+
+    for base_src in [os.path.join(ROOT_DIR, 'resources', 'app'), os.path.join(ROOT_DIR, 'HOME_', 'resources', 'app')]:
+        fg_def_src = os.path.join(base_src, 'data', 'fgimage', 'default')
+        if os.path.exists(fg_def_src):
+            fg_def_dst = os.path.join(WEB_SRC_DIR, 'data', 'fgimage', 'default')
+            os.makedirs(fg_def_dst, exist_ok=True)
+            for item in os.listdir(fg_def_src):
+                s_item = os.path.join(fg_def_src, item)
+                d_item = os.path.join(fg_def_dst, item)
+                if os.path.isfile(s_item):
+                    shutil.copy2(s_item, d_item)
 
     # 5. Đồng bộ kịch bản .ks đã dịch (Lấy trực tiếp từ patch/data/scenario - bản dịch Tiếng Việt chuẩn SSOT)
     scenario_dst = os.path.join(WEB_SRC_DIR, 'data', 'scenario')
@@ -543,10 +554,56 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
     if os.path.exists(tag_ext_path):
         with open(tag_ext_path, 'r', encoding='utf-8', errors='ignore') as f:
             ext_code = f.read()
-        ext_code = ext_code.replace('video.play()', 'video.muted=true;video.defaultMuted=true;var _pr=video.play();if(_pr!==undefined)_pr.catch(function(){});')
-        ext_code = ext_code.replace('video2.play()', 'video2.muted=true;video2.defaultMuted=true;var _pr2=video2.play();if(_pr2!==undefined)_pr2.catch(function(){});')
+        ext_code = ext_code.replace('video=document.createElement("video")', 'video=document.createElement("video");video.muted=true;video.defaultMuted=true')
+        ext_code = ext_code.replace('video2=document.createElement("video")', 'video2=document.createElement("video");video2.muted=true;video2.defaultMuted=true')
+        ext_code = ext_code.replace('video.play()', 'try{var _pr=video.play();if(_pr&&_pr.catch)_pr.catch(function(){});}catch(e){}')
+        ext_code = ext_code.replace('video2.play()', 'try{var _pr2=video2.play();if(_pr2&&_pr2.catch)_pr2.catch(function(){});}catch(e){}')
         with open(tag_ext_path, 'w', encoding='utf-8') as f:
             f.write(ext_code)
+
+    # Sửa lỗi layermode hỗ trợ CDN URL và đường dẫn tương đối trong kag.tag.js
+    tag_js_path = os.path.join(WEB_SRC_DIR, 'tyrano', 'plugins', 'kag', 'kag.tag.js')
+    if os.path.exists(tag_js_path):
+        with open(tag_js_path, 'r', encoding='utf-8', errors='ignore') as f:
+            tag_code = f.read()
+        tag_code = tag_code.replace(
+            'storage_url = "./data/" + folder + "/" + pm.graphic',
+            'if ($.isHTTP(pm.graphic)) { storage_url = pm.graphic; } else if (pm.graphic.indexOf("../") == 0) { storage_url = "./data/" + pm.graphic.replace("../", ""); } else { storage_url = "./data/" + folder + "/" + pm.graphic; }'
+        )
+        with open(tag_js_path, 'w', encoding='utf-8') as f:
+            f.write(tag_code)
+
+    # Sửa triệt để lỗi Howler tạo lặp lại hàng chục AudioContext lúc boot
+    howler_path = os.path.join(WEB_SRC_DIR, 'tyrano', 'libs', 'howler.js')
+    if os.path.exists(howler_path):
+        with open(howler_path, 'r', encoding='utf-8', errors='ignore') as f:
+            howler_code = f.read()
+        howler_code = howler_code.replace(
+            'if (!Howler.usingWebAudio) {',
+            'if (!Howler.usingWebAudio || Howler.ctx) {'
+        )
+        howler_code = howler_code.replace(
+            'Howler.ctx = new AudioContext();',
+            'Howler.ctx = (window.HOME_AudioEngine && window.HOME_AudioEngine.getAudioContext) ? window.HOME_AudioEngine.getAudioContext() : (Howler.ctx || new AudioContext());'
+        )
+        howler_code = howler_code.replace(
+            'Howler.ctx = new webkitAudioContext();',
+            'Howler.ctx = (window.HOME_AudioEngine && window.HOME_AudioEngine.getAudioContext) ? window.HOME_AudioEngine.getAudioContext() : (Howler.ctx || new webkitAudioContext());'
+        )
+        with open(howler_path, 'w', encoding='utf-8') as f:
+            f.write(howler_code)
+
+    # Đồng bộ AudioContext trong kag.js với HOME_AudioEngine
+    kag_js_path = os.path.join(WEB_SRC_DIR, 'tyrano', 'plugins', 'kag', 'kag.js')
+    if os.path.exists(kag_js_path):
+        with open(kag_js_path, 'r', encoding='utf-8', errors='ignore') as f:
+            kag_code = f.read()
+        kag_code = kag_code.replace(
+            'AudioContext && (this.tmp.audio_context = new AudioContext())',
+            'AudioContext && (this.tmp.audio_context = (window.HOME_AudioEngine && window.HOME_AudioEngine.getAudioContext) ? window.HOME_AudioEngine.getAudioContext() : (this.tmp.audio_context || new AudioContext()))'
+        )
+        with open(kag_js_path, 'w', encoding='utf-8') as f:
+            f.write(kag_code)
 
     # Tối ưu hóa $.loadText trong web/tyrano/libs.js: Không dùng Math.random(), ưu tiên RAM bundle
     libs_js_path = os.path.join(WEB_SRC_DIR, 'tyrano', 'libs.js')
@@ -1197,7 +1254,10 @@ img[src*="workring_en.png"] {
     function getAudioContext() {
         if (!audioCtx) {
             const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-            audioCtx = new AudioContextClass();
+            if (AudioContextClass) {
+                audioCtx = new AudioContextClass();
+                if (window.Howler) Howler.ctx = audioCtx;
+            }
         }
         return audioCtx;
     }
@@ -1808,6 +1868,7 @@ img[src*="workring_en.png"] {
     function normalizePath(p) {{
         if (!p || typeof p !== 'string') return '';
         let clean = p.split('?')[0].replace(/\\\\/g, '/');
+        clean = clean.replace(/^\\.\\//, '');
         const parts = clean.split('/');
         const stack = [];
         for (const part of parts) {{
@@ -1838,7 +1899,8 @@ img[src*="workring_en.png"] {
         let url = normalizedMap.get(norm);
         if (!url) {{
             if (!norm.startsWith('data/')) {{
-                url = normalizedMap.get('data/fgimage/' + norm) ||
+                url = normalizedMap.get('data/' + norm) ||
+                      normalizedMap.get('data/fgimage/' + norm) ||
                       normalizedMap.get('data/bgimage/' + norm) ||
                       normalizedMap.get('data/image/' + norm) ||
                       normalizedMap.get('data/sound/' + norm) ||
@@ -1938,10 +2000,12 @@ img[src*="workring_en.png"] {
             }};
         }}
 
+        // Hook Stop BGM
         if (kag.tag.stopbgm) {{
+            const origStopbgm = kag.tag.stopbgm.start;
             kag.tag.stopbgm.start = function(pm) {{
-                window.HOME_AudioEngine.stopBGM(parseInt(pm.time || 1500));
-                if (kag.ftag) kag.ftag.nextOrder();
+                window.HOME_AudioEngine.stopBGM(parseInt(pm?.time || 300));
+                return origStopbgm.apply(this, arguments);
             }};
         }}
 
@@ -1993,6 +2057,28 @@ img[src*="workring_en.png"] {
             }};
         }}
 
+        // Hook Layermode & Blend Layers
+        if (kag.tag.layermode) {{
+            const origLayermode = kag.tag.layermode.start;
+            kag.tag.layermode.start = function(pm) {{
+                if (pm && pm.graphic) {{
+                    const folder = pm.folder || 'image';
+                    let rawPath = pm.graphic;
+                    if (rawPath.startsWith('../')) {{
+                        rawPath = 'data/' + rawPath.substring(3);
+                    }} else if (!rawPath.startsWith('data/') && !rawPath.startsWith('http')) {{
+                        rawPath = `data/${{folder}}/${{pm.graphic}}`;
+                    }}
+                    const cdnUrl = window.resolveCDNUrl(rawPath);
+                    if (cdnUrl && cdnUrl.startsWith('http')) {{
+                        pm.graphic = cdnUrl;
+                        pm.folder = '';
+                    }}
+                }}
+                return origLayermode.apply(this, arguments);
+            }};
+        }}
+
         // Hook Buttons
         if (kag.tag.button) {{
             const origButton = kag.tag.button.start;
@@ -2011,8 +2097,28 @@ img[src*="workring_en.png"] {
             }};
         }}
 
-        // Hook Characters
-        ['chara_show', 'chara_mod', 'chara_new', 'chara_face', 'chara_part'].forEach(tag => {{
+        // Hook Character Definition (Tối ưu hóa: KHÔNG preload dồn dập 40+ ảnh lúc boot game)
+        if (kag.tag.chara_new) {{
+            kag.tag.chara_new.start = function(pm) {{
+                if (pm && pm.name) {{
+                    let rawPath = pm.storage || '';
+                    const fullPath = (rawPath.startsWith('data/') || rawPath.startsWith('http')) ? rawPath : `data/fgimage/${{rawPath}}`;
+                    const cdnUrl = window.resolveCDNUrl(fullPath);
+                    if (cdnUrl && cdnUrl.startsWith('http')) {{
+                        pm.storage = cdnUrl;
+                    }}
+                    pm.map_face = pm.map_face || {{}};
+                    pm.map_face.default = pm.storage;
+                    // Bỏ qua this.kag.preload() ở đây -> Chara_show sẽ tự nạp on-demand khi vào cảnh chơi!
+                    kag.stat.charas[pm.name] = pm;
+                    if (pm.jname) kag.stat.jcharas[pm.jname] = pm.name;
+                }}
+                if (kag.ftag) kag.ftag.nextOrder();
+            }};
+        }}
+
+        // Hook Characters Display & Parts
+        ['chara_show', 'chara_mod', 'chara_face', 'chara_part'].forEach(tag => {{
             if (kag.tag[tag]) {{
                 const orig = kag.tag[tag].start;
                 kag.tag[tag].start = function(pm) {{

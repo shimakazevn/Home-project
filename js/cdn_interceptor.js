@@ -14,6 +14,7 @@
     function normalizePath(p) {
         if (!p || typeof p !== 'string') return '';
         let clean = p.split('?')[0].replace(/\\/g, '/');
+        clean = clean.replace(/^\.\//, '');
         const parts = clean.split('/');
         const stack = [];
         for (const part of parts) {
@@ -44,7 +45,8 @@
         let url = normalizedMap.get(norm);
         if (!url) {
             if (!norm.startsWith('data/')) {
-                url = normalizedMap.get('data/fgimage/' + norm) ||
+                url = normalizedMap.get('data/' + norm) ||
+                      normalizedMap.get('data/fgimage/' + norm) ||
                       normalizedMap.get('data/bgimage/' + norm) ||
                       normalizedMap.get('data/image/' + norm) ||
                       normalizedMap.get('data/sound/' + norm) ||
@@ -144,10 +146,12 @@
             };
         }
 
+        // Hook Stop BGM
         if (kag.tag.stopbgm) {
+            const origStopbgm = kag.tag.stopbgm.start;
             kag.tag.stopbgm.start = function(pm) {
-                window.HOME_AudioEngine.stopBGM(parseInt(pm.time || 1500));
-                if (kag.ftag) kag.ftag.nextOrder();
+                window.HOME_AudioEngine.stopBGM(parseInt(pm?.time || 300));
+                return origStopbgm.apply(this, arguments);
             };
         }
 
@@ -199,6 +203,28 @@
             };
         }
 
+        // Hook Layermode & Blend Layers
+        if (kag.tag.layermode) {
+            const origLayermode = kag.tag.layermode.start;
+            kag.tag.layermode.start = function(pm) {
+                if (pm && pm.graphic) {
+                    const folder = pm.folder || 'image';
+                    let rawPath = pm.graphic;
+                    if (rawPath.startsWith('../')) {
+                        rawPath = 'data/' + rawPath.substring(3);
+                    } else if (!rawPath.startsWith('data/') && !rawPath.startsWith('http')) {
+                        rawPath = `data/${folder}/${pm.graphic}`;
+                    }
+                    const cdnUrl = window.resolveCDNUrl(rawPath);
+                    if (cdnUrl && cdnUrl.startsWith('http')) {
+                        pm.graphic = cdnUrl;
+                        pm.folder = '';
+                    }
+                }
+                return origLayermode.apply(this, arguments);
+            };
+        }
+
         // Hook Buttons
         if (kag.tag.button) {
             const origButton = kag.tag.button.start;
@@ -217,8 +243,28 @@
             };
         }
 
-        // Hook Characters
-        ['chara_show', 'chara_mod', 'chara_new', 'chara_face', 'chara_part'].forEach(tag => {
+        // Hook Character Definition (Tối ưu hóa: KHÔNG preload dồn dập 40+ ảnh lúc boot game)
+        if (kag.tag.chara_new) {
+            kag.tag.chara_new.start = function(pm) {
+                if (pm && pm.name) {
+                    let rawPath = pm.storage || '';
+                    const fullPath = (rawPath.startsWith('data/') || rawPath.startsWith('http')) ? rawPath : `data/fgimage/${rawPath}`;
+                    const cdnUrl = window.resolveCDNUrl(fullPath);
+                    if (cdnUrl && cdnUrl.startsWith('http')) {
+                        pm.storage = cdnUrl;
+                    }
+                    pm.map_face = pm.map_face || {};
+                    pm.map_face.default = pm.storage;
+                    // Bỏ qua this.kag.preload() ở đây -> Chara_show sẽ tự nạp on-demand khi vào cảnh chơi!
+                    kag.stat.charas[pm.name] = pm;
+                    if (pm.jname) kag.stat.jcharas[pm.jname] = pm.name;
+                }
+                if (kag.ftag) kag.ftag.nextOrder();
+            };
+        }
+
+        // Hook Characters Display & Parts
+        ['chara_show', 'chara_mod', 'chara_face', 'chara_part'].forEach(tag => {
             if (kag.tag[tag]) {
                 const orig = kag.tag[tag].start;
                 kag.tag[tag].start = function(pm) {

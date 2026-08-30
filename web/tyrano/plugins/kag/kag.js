@@ -158,7 +158,7 @@ tyrano.plugin.kag = {
         })
         ;("function" == typeof TyranoPlayer || $.isNWJS()) && (this.tmp.ready_audio = !0)
         var AudioContext = window.AudioContext || window.webkitAudioContext || !1
-        AudioContext && (this.tmp.audio_context = new AudioContext())
+        AudioContext && (this.tmp.audio_context = (window.HOME_AudioEngine && window.HOME_AudioEngine.getAudioContext) ? window.HOME_AudioEngine.getAudioContext() : (this.tmp.audio_context || new AudioContext()))
         try {
             $.getBrowser()
         } catch (e) {
