@@ -24,6 +24,8 @@
     let activeSeSources = [];
     const audioBufferCache = new Map();
     const audioPromiseCache = new Map();
+    const urlToKeyMap = new Map();
+    const idbImageBlobUrls = new Map();
 
     // ============================================================
     // HOME_AssetDB v3 — Offline Cache Manager (User opt-in)
@@ -476,19 +478,37 @@
     const MASTER_BGM_SCALE = 0.90;
     const MASTER_SE_SCALE = 1.00;
 
-    // Intercept toàn diện HTMLImageElement src để không một ảnh nào bị lọt và hỗ trợ CORS cho Save Thumbnail
+    // Intercept toàn diện HTMLImageElement src để hỗ trợ IndexedDB Offline Blobs và CORS cho Save Thumbnail
     try {
+        function handleImageSrc(elem, val) {
+            if (typeof val !== 'string' || val.startsWith('data:') || val.startsWith('blob:')) return val;
+            let cdnUrl = window.resolveCDNUrl(val);
+            if (cdnUrl && cdnUrl.startsWith('http')) {
+                elem.crossOrigin = 'anonymous';
+                const cleanUrl = cdnUrl.split('?')[0];
+                if (idbImageBlobUrls.has(cleanUrl)) {
+                    return idbImageBlobUrls.get(cleanUrl);
+                }
+                const manifestKey = urlToKeyMap.get(cleanUrl) || val;
+                idbGet('images', manifestKey).then(stored => {
+                    if (stored && stored.blob) {
+                        const blobUrl = URL.createObjectURL(stored.blob);
+                        idbImageBlobUrls.set(cleanUrl, blobUrl);
+                        if (elem.src === cdnUrl || elem.src === val) {
+                            elem.src = blobUrl;
+                        }
+                    }
+                }).catch(() => {});
+                return cdnUrl;
+            }
+            return val;
+        }
+
         const origImgSrcDesc = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, 'src');
         if (origImgSrcDesc && origImgSrcDesc.set) {
             Object.defineProperty(HTMLImageElement.prototype, 'src', {
                 set: function(val) {
-                    if (typeof val === 'string' && !val.startsWith('data:') && !val.startsWith('blob:')) {
-                        let cdnUrl = window.resolveCDNUrl(val);
-                        if (cdnUrl && cdnUrl !== val && cdnUrl.startsWith('http')) {
-                            this.crossOrigin = 'anonymous';
-                            val = cdnUrl;
-                        }
-                    }
+                    val = handleImageSrc(this, val);
                     return origImgSrcDesc.set.call(this, val);
                 },
                 get: function() {
@@ -499,12 +519,8 @@
 
         const origSetAttribute = HTMLImageElement.prototype.setAttribute;
         HTMLImageElement.prototype.setAttribute = function(name, val) {
-            if (name === 'src' && typeof val === 'string' && !val.startsWith('data:') && !val.startsWith('blob:')) {
-                let cdnUrl = window.resolveCDNUrl(val);
-                if (cdnUrl && cdnUrl !== val && cdnUrl.startsWith('http')) {
-                    this.crossOrigin = 'anonymous';
-                    val = cdnUrl;
-                }
+            if (name === 'src') {
+                val = handleImageSrc(this, val);
             }
             return origSetAttribute.call(this, name, val);
         };
@@ -544,6 +560,9 @@
             if (resp.ok) {
                 assetManifest = await resp.json();
                 console.log(`[CDN Interceptor] Đã nạp thành công ${Object.keys(assetManifest).length} CDN routes.`);
+                for (const [key, url] of Object.entries(assetManifest)) {
+                    urlToKeyMap.set(url.split('?')[0], key);
+                }
                 checkAndInvalidateCache(assetManifest).then(() => {
                     preloadCoreAssets();
                     // Inject widget sau khi DOM sẵn sàng
@@ -800,8 +819,20 @@
 
         const decodePromise = (async () => {
             try {
-                const resp = await fetch(pngUrl, { referrerPolicy: 'no-referrer' });
-                const arrayBuffer = await resp.arrayBuffer();
+                let arrayBuffer = null;
+                const manifestKey = urlToKeyMap.get(cacheKey) || cacheKey;
+                const stored = await idbGet('audio_raw', manifestKey);
+                if (stored && stored.blob) {
+                    try {
+                        arrayBuffer = await stored.blob.arrayBuffer();
+                    } catch(e) {}
+                }
+
+                if (!arrayBuffer) {
+                    const resp = await fetch(pngUrl, { referrerPolicy: 'no-referrer' });
+                    arrayBuffer = await resp.arrayBuffer();
+                }
+
                 let audioBytes;
                 try {
                     audioBytes = await extractStegoBytesFromPngBuffer(arrayBuffer);
