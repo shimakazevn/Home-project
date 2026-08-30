@@ -168,3 +168,8 @@ html, body {
         display: none !important;
     }
 }
+
+/* Các ảnh trang trí không cản trở tương tác click */
+img[src*="workring_en.png"] {
+    pointer-events: none !important;
+}
