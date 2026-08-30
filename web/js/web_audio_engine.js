@@ -34,19 +34,9 @@
         if (ctx.state === 'suspended') {
             ctx.resume().then(() => {
                 isUnlocked = true;
-                const overlay = document.getElementById('web_audio_unlock_overlay');
-                if (overlay) {
-                    overlay.style.opacity = '0';
-                    setTimeout(() => { overlay.style.display = 'none'; }, 400);
-                }
             }).catch(() => {});
         } else {
             isUnlocked = true;
-            const overlay = document.getElementById('web_audio_unlock_overlay');
-            if (overlay) {
-                overlay.style.opacity = '0';
-                setTimeout(() => { overlay.style.display = 'none'; }, 400);
-            }
         }
     }
 

@@ -301,7 +301,38 @@
                 }
             });
         }
-    }
+    // ─── Minimalist Loading Status HUD ───────────────────────────────────────
+    let loadingHudTimer = null;
+    window.showLoadingStatus = function(text, autoHideMs = 2500) {
+        let hud = document.getElementById('home-loading-hud');
+        if (!hud) {
+            hud = document.createElement('div');
+            hud.id = 'home-loading-hud';
+            hud.innerHTML = `<div class="loading-spinner"></div><span id="home-loading-text"></span>`;
+            document.body.appendChild(hud);
+        }
+        const textSpan = document.getElementById('home-loading-text');
+        if (textSpan) textSpan.textContent = text || 'Đang tải tài nguyên...';
+        hud.classList.add('active');
+
+        if (loadingHudTimer) clearTimeout(loadingHudTimer);
+        if (autoHideMs > 0) {
+            loadingHudTimer = setTimeout(() => {
+                hud.classList.remove('active');
+            }, autoHideMs);
+        }
+    };
+
+    window.hideLoadingStatus = function() {
+        const hud = document.getElementById('home-loading-hud');
+        if (hud) {
+            if (loadingHudTimer) clearTimeout(loadingHudTimer);
+            hud.classList.remove('active');
+        }
+    };
+
+    // Khi khởi động game, hiển thị nhẹ trạng thái đang tải
+    window.showLoadingStatus('Đang khởi động HOME Visual Novel...', 2500);
 
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {

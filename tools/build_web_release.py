@@ -255,50 +255,56 @@ img[src*="workring_en.png"] {
     line-height: 1.5;
 }
 
-#web_audio_unlock_overlay {
+#home-loading-hud {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    height: 100dvh;
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    z-index: 99999;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    z-index: 999998;
+    background: rgba(22, 22, 26, 0.82);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 0.5px solid rgba(255, 255, 255, 0.16);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    border-radius: 999px;
+    padding: 6px 18px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    cursor: pointer;
-    transition: opacity 0.4s ease, visibility 0.4s ease;
-}
-
-.unlock-box {
-    background: rgba(30, 30, 40, 0.85);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    border-radius: 16px;
-    padding: 24px 36px;
-    text-align: center;
-    animation: pulseButton 2s infinite ease-in-out;
-}
-
-@keyframes pulseButton {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.03); }
-}
-
-.unlock-title {
-    font-size: 22px;
-    font-weight: bold;
+    gap: 10px;
     color: #ffffff;
-    margin-bottom: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.unlock-subtitle {
-    font-size: 14px;
-    color: #38bdf8;
+#home-loading-hud.active {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.loading-spinner {
+    width: 12px;
+    height: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-top-color: #0A84FF;
+    border-radius: 50%;
+    animation: hmc-spin 0.6s linear infinite;
+    flex-shrink: 0;
+}
+
+@keyframes hmc-spin {
+    to { transform: rotate(360deg); }
+}
+
+#home-loading-text {
+    max-width: 280px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* 1. MINIMALIST APPLE CONTROL ORB */
@@ -599,19 +605,9 @@ img[src*="workring_en.png"] {
         if (ctx.state === 'suspended') {
             ctx.resume().then(() => {
                 isUnlocked = true;
-                const overlay = document.getElementById('web_audio_unlock_overlay');
-                if (overlay) {
-                    overlay.style.opacity = '0';
-                    setTimeout(() => { overlay.style.display = 'none'; }, 400);
-                }
             }).catch(() => {});
         } else {
             isUnlocked = true;
-            const overlay = document.getElementById('web_audio_unlock_overlay');
-            if (overlay) {
-                overlay.style.opacity = '0';
-                setTimeout(() => { overlay.style.display = 'none'; }, 400);
-            }
         }
     }
 
@@ -1347,15 +1343,30 @@ img[src*="workring_en.png"] {
             }
         });
 
-        // Hook Preloader
+        // Hook Preloader & Resource loading status
         if (kag.preload) {
             const origPreload = kag.preload;
             kag.preload = function(src, cb) {
                 if (typeof src === 'string') {
                     const cdnUrl = window.resolveCDNUrl(src);
                     if (cdnUrl && cdnUrl.startsWith('http')) src = cdnUrl;
+                    const fileName = src.split('/').pop().split('?')[0];
+                    if (window.showLoadingStatus && fileName) {
+                        window.showLoadingStatus('Đang nạp: ' + fileName, 1500);
+                    }
                 }
                 return origPreload.call(this, src, cb);
+            };
+        }
+
+        // Hook scenario loading
+        if (kag.loadScenario) {
+            const origLoadScenario = kag.loadScenario;
+            kag.loadScenario = function(file_name, call_back) {
+                if (window.showLoadingStatus && file_name) {
+                    window.showLoadingStatus('Đang đọc kịch bản: ' + file_name, 2000);
+                }
+                return origLoadScenario.call(this, file_name, call_back);
             };
         }
 
@@ -1686,7 +1697,38 @@ img[src*="workring_en.png"] {
                 }
             });
         }
-    }
+    // ─── Minimalist Loading Status HUD ───────────────────────────────────────
+    let loadingHudTimer = null;
+    window.showLoadingStatus = function(text, autoHideMs = 2500) {
+        let hud = document.getElementById('home-loading-hud');
+        if (!hud) {
+            hud = document.createElement('div');
+            hud.id = 'home-loading-hud';
+            hud.innerHTML = `<div class="loading-spinner"></div><span id="home-loading-text"></span>`;
+            document.body.appendChild(hud);
+        }
+        const textSpan = document.getElementById('home-loading-text');
+        if (textSpan) textSpan.textContent = text || 'Đang tải tài nguyên...';
+        hud.classList.add('active');
+
+        if (loadingHudTimer) clearTimeout(loadingHudTimer);
+        if (autoHideMs > 0) {
+            loadingHudTimer = setTimeout(() => {
+                hud.classList.remove('active');
+            }, autoHideMs);
+        }
+    };
+
+    window.hideLoadingStatus = function() {
+        const hud = document.getElementById('home-loading-hud');
+        if (hud) {
+            if (loadingHudTimer) clearTimeout(loadingHudTimer);
+            hud.classList.remove('active');
+        }
+    };
+
+    // Khi khởi động game, hiển thị nhẹ trạng thái đang tải
+    window.showLoadingStatus('Đang khởi động HOME Visual Novel...', 2500);
 
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
@@ -1782,14 +1824,6 @@ img[src*="workring_en.png"] {
   <!-- Main Tyrano Canvas Frame -->
   <div id="tyrano_base" class="tyrano_base" unselectable="on" ondragstart="return false"></div>
   <div id="vchat_base" class="vchat_base" unselectable="on" ondragstart="return false"></div>
-
-  <!-- Audio Unlocker Overlay (Chạm để bật âm thanh) -->
-  <div id="web_audio_unlock_overlay">
-    <div class="unlock-box">
-      <div class="unlock-title">HOME - Visual Novel</div>
-      <div class="unlock-subtitle">🎵 Chạm vào màn hình để bật âm thanh & bắt đầu</div>
-    </div>
-  </div>
 
   <!-- Mobile Landscape Orientation Helper (Nhắc xoay ngang) -->
   <div id="orientation_overlay">

@@ -186,15 +186,30 @@
             }
         });
 
-        // Hook Preloader
+        // Hook Preloader & Resource loading status
         if (kag.preload) {
             const origPreload = kag.preload;
             kag.preload = function(src, cb) {
                 if (typeof src === 'string') {
                     const cdnUrl = window.resolveCDNUrl(src);
                     if (cdnUrl && cdnUrl.startsWith('http')) src = cdnUrl;
+                    const fileName = src.split('/').pop().split('?')[0];
+                    if (window.showLoadingStatus && fileName) {
+                        window.showLoadingStatus('Đang nạp: ' + fileName, 1500);
+                    }
                 }
                 return origPreload.call(this, src, cb);
+            };
+        }
+
+        // Hook scenario loading
+        if (kag.loadScenario) {
+            const origLoadScenario = kag.loadScenario;
+            kag.loadScenario = function(file_name, call_back) {
+                if (window.showLoadingStatus && file_name) {
+                    window.showLoadingStatus('Đang đọc kịch bản: ' + file_name, 2000);
+                }
+                return origLoadScenario.call(this, file_name, call_back);
             };
         }
 
