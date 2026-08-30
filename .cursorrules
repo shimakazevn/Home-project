@@ -1,8 +1,12 @@
 # HOME Localization Rules for AI Assistants
 
+- Game Title: Strictly **HOME** [RJ01556529]. Never append `(ROOM)` or `ROOM`.
 - Single Source of Truth: All translations must be in `translation/text_export.xlsx` and `translation/ui_export.csv`.
+- Protagonist Name Guard (`name.ks`): Must always initialize default name inputs to `Hidaka` and `Shun` with `initial="Hidaka"` and `initial="Shun"`. Zero Japanese Kanji allowed in text inputs.
 - Never modify engine control tags: `[if]`, `[endif]`, `[jump]`, `[macro]`, `[endmacro]`, `[iscript]`, `[endscript]`, `[commit]`, `[playse]`.
 - Always use `[r]` for dialog line breaks. Do not use `\n`.
-- Keep `tools/` clean: Only use core pipeline tools (`build_pc_patch.py`, `verify_patch_integrity.py`, `reimport_scenario.py`, `setup_fonts.py`, `unified_patch_installer.py`).
+- Online Auto-Patcher & Sync: Always run `git push origin main` after building releases so GitHub online installer remains in sync.
+- SHA256 Integrity: Verify all 360+ patch files against SHA256 manifest.
+- Keep `tools/` clean: Only use the 5 core pipeline tools (`build_pc_patch.py`, `verify_patch_integrity.py`, `reimport_scenario.py`, `setup_fonts.py`, `unified_patch_installer.py`).
 - Always run `python tools/verify_patch_integrity.py` to ensure 0 errors before release.
-- Build command: `python tools/build_pc_patch.py`
+- Master Build command: `python tools/build_pc_patch.py`.
