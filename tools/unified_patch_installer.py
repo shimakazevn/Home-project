@@ -2,15 +2,20 @@
 """
 tools/unified_patch_installer.py
 =================================
-Trình cài đặt Patch Việt Hóa Độc Lập 1-Click dành cho End User
+Trình cài đặt & Cập nhật Patch Việt Hóa Độc Lập 1-Click dành cho End User
 Tựa game: HOME (ROOM) - SORAREVO [RJ01556529]
 
-Kiến trúc No-Archive & Lightweight Backup:
-1. Giải nén 1 lần app.asar -> resources/app/ (nếu chưa giải nén).
-2. Tạo thư mục backup chọn lọc resources/backup_original/ (chỉ chứa script và UI image, không chứa gif nặng ~17MB).
-3. Vá trực tiếp tệp Việt hóa đè lên resources/app/ trong 0.1 giây (siêu nhanh, không làm nghẽn HDD).
-4. Vô hiệu hóa app.asar để Electron chạy trực tiếp từ thư mục app (No-Archive mode).
-5. Khôi phục bản gốc tiếng Nhật 1-Click cực nhanh trong 0.1 giây từ resources/backup_original/.
+Tính năng nổi bật:
+1. Kiến trúc No-Archive & Lightweight Backup:
+   - Giải nén 1 lần app.asar -> resources/app/ (nếu chưa giải nén).
+   - Tạo thư mục backup chọn lọc resources/backup_original/ (chỉ ~17MB, loại trừ GIF nặng).
+   - Vá trực tiếp tệp Việt hóa đè lên resources/app/ trong 0.16 giây.
+   - Tự động dọn dẹp các tệp .asar 16GB thừa thãi.
+2. Chế độ Kéo Cập Nhật Trực Tuyến Từ GitHub (Online Updater):
+   - Tự động kiểm tra phiên bản mới nhất trên GitHub Repository.
+   - Tải về và cập nhật ngay lập tức không cần tải lại toàn bộ game.
+3. Chế độ Cài đặt Offline siêu tốc từ dữ liệu nhúng sẵn trong EXE.
+4. Giao diện GUI High-DPI Tkinter thân thiện, hỗ trợ khôi phục bản gốc 1-Click.
 """
 
 import os
@@ -22,7 +27,11 @@ import time
 import zipfile
 import threading
 import subprocess
+import tempfile
+import urllib.request
+import urllib.error
 
+# Bật High-DPI Awareness trên Windows
 if sys.platform == 'win32':
     try:
         import ctypes
@@ -39,8 +48,12 @@ if sys.stdout:
     except Exception:
         pass
 
-VERSION = "2.1.0"
-APP_TITLE = f"CÀI ĐẶT PATCH VIỆT HÓA - HOME (ROOM) v{VERSION}"
+VERSION = "2.2.0"
+APP_TITLE = f"CÀI ĐẶT & CẬP NHẬT PATCH VIỆT HÓA - HOME (ROOM) v{VERSION}"
+GITHUB_REPO_OWNER = "shimakazevn"
+GITHUB_REPO_NAME = "Home-project"
+GITHUB_API_LATEST_RELEASE = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/releases/latest"
+GITHUB_RAW_VERSION_URL = f"https://raw.githubusercontent.com/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/main/version.json"
 
 # ─────────────────────────────────────────────────────────────────────────────
 # 1. BỘ GIẢI NÉN VÀ VÁ FILE TRỰC TIẾP LÊN THƯ MỤC APP (NO ARCHIVE)
@@ -66,7 +79,6 @@ def unpack_asar_to_app(asar_path, app_dir, log_func=print, progress_func=None):
     with open(asar_path, 'rb') as f:
         header, header_total_len = read_asar_header(f)
         
-        # Đếm tổng dung lượng và danh sách files
         file_list = []
         def walk_node(node, cur_path):
             if 'files' in node:
@@ -225,7 +237,6 @@ def restore_folder_original(game_dir, log_func=print):
         return False
         
     log_func("[*] Đang khôi phục toàn bộ kịch bản và giao diện tiếng Nhật gốc...")
-    # Copy đè lại backup_dir vào app_dir
     shutil.copytree(backup_dir, app_dir, dirs_exist_ok=True)
     
     log_func("============================================================")
@@ -234,7 +245,109 @@ def restore_folder_original(game_dir, log_func=print):
     return True
 
 # ─────────────────────────────────────────────────────────────────────────────
-# 2. XỬ LÝ PAYLOAD NÉN VÀ NHẬN DIỆN THƯ MỤC GAME
+# 2. BỘ ĐIỀU KHIỂN CẬP NHẬT TRỰC TUYẾN TỪ GITHUB (ONLINE UPDATER)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def fetch_github_release_info():
+    """Lấy thông tin bản phát hành mới nhất từ GitHub API"""
+    req = urllib.request.Request(
+        GITHUB_API_LATEST_RELEASE,
+        headers={'User-Agent': f'ShimakazeVN-Patcher/{VERSION}'}
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read().decode('utf-8'))
+            tag_name = data.get('tag_name', '')
+            assets = data.get('assets', [])
+            
+            # Tìm asset zip chứa bản patch
+            download_url = None
+            asset_size = 0
+            for a in assets:
+                name = a.get('name', '').lower()
+                if 'patch' in name and name.endswith('.zip'):
+                    download_url = a.get('browser_download_url')
+                    asset_size = a.get('size', 0)
+                    break
+                    
+            if not download_url and assets:
+                download_url = assets[0].get('browser_download_url')
+                asset_size = assets[0].get('size', 0)
+                
+            return {
+                'success': True,
+                'tag_name': tag_name,
+                'release_name': data.get('name', tag_name),
+                'published_at': data.get('published_at', ''),
+                'download_url': download_url,
+                'size': asset_size,
+                'body': data.get('body', '')
+            }
+    except Exception as e:
+        return {'success': False, 'error': str(e)}
+
+def download_online_patch(download_url, log_func=print, progress_func=None):
+    """Tải tệp patch zip từ GitHub với thanh tiến trình trực quan"""
+    log_func(f"[*] Đang kết nối và tải bản cập nhật từ GitHub...")
+    req = urllib.request.Request(
+        download_url,
+        headers={'User-Agent': f'ShimakazeVN-Patcher/{VERSION}'}
+    )
+    
+    tmp_file = tempfile.NamedTemporaryFile(delete=False, suffix='.zip')
+    tmp_path = tmp_file.name
+    tmp_file.close()
+    
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            total_sz = int(resp.headers.get('content-length', 0))
+            downloaded = 0
+            CHUNK = 64 * 1024
+            last_report = 0
+            
+            with open(tmp_path, 'wb') as f_out:
+                while True:
+                    chunk = resp.read(CHUNK)
+                    if not chunk:
+                        break
+                    f_out.write(chunk)
+                    downloaded += len(chunk)
+                    
+                    now = time.time()
+                    if now - last_report >= 0.2:
+                        pct = (downloaded / total_sz * 100) if total_sz > 0 else 0
+                        if progress_func:
+                            progress_func(pct, downloaded, total_sz)
+                        last_report = now
+                        
+        if progress_func:
+            progress_func(100.0, downloaded, total_sz)
+            
+        log_func(f"[OK] Đã tải thành công ({downloaded/(1024*1024):.2f} MB) từ GitHub!")
+        return tmp_path
+    except Exception as e:
+        if os.path.exists(tmp_path):
+            os.remove(tmp_path)
+        raise RuntimeError(f"Lỗi khi tải bản cập nhật: {e}")
+
+def extract_patch_from_zip(zip_file_path):
+    """Giải nén tệp patch zip và tạo danh mục các tệp cần vá"""
+    temp_extract_dir = tempfile.mkdtemp(prefix='home_online_patch_')
+    with zipfile.ZipFile(zip_file_path, 'r') as z:
+        z.extractall(temp_extract_dir)
+        
+    patch_dict = {}
+    for root, dirs, files in os.walk(temp_extract_dir):
+        for f in files:
+            abs_path = os.path.join(root, f)
+            rel_path = os.path.relpath(abs_path, temp_extract_dir).replace('\\', '/')
+            if rel_path.startswith(('data/', 'tyrano/')):
+                patch_dict[rel_path] = abs_path
+                
+    return patch_dict, temp_extract_dir
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 3. XỬ LÝ PAYLOAD NÉN VÀ NHẬN DIỆN THƯ MỤC GAME
 # ─────────────────────────────────────────────────────────────────────────────
 
 def get_base_dir():
@@ -258,7 +371,6 @@ def extract_patch_sources():
     target_zip = embedded_zip if os.path.exists(embedded_zip) else (local_zip if os.path.exists(local_zip) else None)
     
     if target_zip:
-        import tempfile
         temp_extract_dir = tempfile.mkdtemp(prefix='home_patch_')
         with zipfile.ZipFile(target_zip, 'r') as z:
             z.extractall(temp_extract_dir)
@@ -307,7 +419,7 @@ def find_game_directory():
     return None
 
 # ─────────────────────────────────────────────────────────────────────────────
-# 3. GIAO DIỆN ĐỒ HỌA (TKINTER GUI HIGH-DPI)
+# 4. GIAO DIỆN ĐỒ HỌA (TKINTER GUI HIGH-DPI & ONLINE UPDATER)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def launch_gui():
@@ -316,8 +428,8 @@ def launch_gui():
 
     root = tk.Tk()
     root.title(APP_TITLE)
-    root.geometry("680x560")
-    root.minsize(620, 500)
+    root.geometry("700x600")
+    root.minsize(640, 520)
     root.configure(bg="#1e1e2e")
 
     try:
@@ -339,7 +451,13 @@ def launch_gui():
     hdr_frame.pack(fill=tk.X)
 
     tk.Label(hdr_frame, text="HOME (ROOM) - BẢN VIỆT HÓA CHUẨN 100%", font=("Segoe UI", 13, "bold"), fg="#cdd6f4", bg="#181825").pack(anchor=tk.W)
-    tk.Label(hdr_frame, text=f"Phiên bản Patch: v{VERSION} (No-Archive Super Fast) | Nhóm dịch: Shimakaze VN", font=("Segoe UI", 9), fg="#a6adc8", bg="#181825").pack(anchor=tk.W, pady=(2, 0))
+    
+    hdr_sub = tk.Frame(hdr_frame, bg="#181825")
+    hdr_sub.pack(fill=tk.X, pady=(2, 0))
+    tk.Label(hdr_sub, text=f"Phiên bản: v{VERSION} | Nhóm dịch: Shimakaze VN", font=("Segoe UI", 9), fg="#a6adc8", bg="#181825").pack(side=tk.LEFT)
+    
+    lbl_remote_ver = tk.Label(hdr_sub, text="[Đang kiểm tra GitHub...]", font=("Segoe UI", 8, "italic"), fg="#f9e2af", bg="#181825")
+    lbl_remote_ver.pack(side=tk.RIGHT)
 
     # Path Selection Frame
     path_frame = tk.Frame(root, bg="#1e1e2e", padx=20, pady=10)
@@ -370,7 +488,7 @@ def launch_gui():
     prog_frame = tk.Frame(root, bg="#1e1e2e", padx=20, pady=4)
     prog_frame.pack(fill=tk.X)
 
-    status_var = tk.StringVar(value="Sẵn sàng cài đặt.")
+    status_var = tk.StringVar(value="Sẵn sàng.")
     lbl_status = tk.Label(prog_frame, textvariable=status_var, font=("Segoe UI", 9), fg="#89b4fa", bg="#1e1e2e")
     lbl_status.pack(anchor=tk.W, pady=(0, 4))
 
@@ -381,9 +499,17 @@ def launch_gui():
     btn_frame = tk.Frame(root, bg="#1e1e2e", padx=20, pady=10)
     btn_frame.pack(fill=tk.X)
 
-    btn_install = tk.Button(btn_frame, text="⚡ CÀI ĐẶT PATCH VIỆT HÓA", font=("Segoe UI", 11, "bold"), bg="#a6e3a1", fg="#11111b", activebackground="#94e2d5", relief=tk.FLAT, pady=7, cursor="hand2")
-    btn_install.pack(fill=tk.X, pady=(0, 6))
+    # Primary Action Row: Offline Install & Online Update
+    act_row = tk.Frame(btn_frame, bg="#1e1e2e")
+    act_row.pack(fill=tk.X, pady=(0, 6))
 
+    btn_install_offline = tk.Button(act_row, text="⚡ CÀI ĐẶT PATCH (OFFLINE)", font=("Segoe UI", 10, "bold"), bg="#a6e3a1", fg="#11111b", activebackground="#94e2d5", relief=tk.FLAT, pady=7, cursor="hand2")
+    btn_install_offline.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 4))
+
+    btn_update_online = tk.Button(act_row, text="🔄 CẬP NHẬT TỪ GITHUB (ONLINE)", font=("Segoe UI", 10, "bold"), bg="#fab387", fg="#11111b", activebackground="#f9e2af", relief=tk.FLAT, pady=7, cursor="hand2")
+    btn_update_online.pack(side=tk.RIGHT, fill=tk.X, expand=True, padx=(4, 0))
+
+    # Secondary Action Row: Launch Game & Restore Original
     btn_sub_frame = tk.Frame(btn_frame, bg="#1e1e2e")
     btn_sub_frame.pack(fill=tk.X)
 
@@ -397,7 +523,7 @@ def launch_gui():
     log_frame = tk.Frame(root, bg="#1e1e2e", padx=20, pady=(0, 15))
     log_frame.pack(fill=tk.BOTH, expand=True)
 
-    tk.Label(log_frame, text="Nhật ký cài đặt:", font=("Segoe UI", 8), fg="#6c7086", bg="#1e1e2e").pack(anchor=tk.W)
+    tk.Label(log_frame, text="Nhật ký cài đặt & cập nhật:", font=("Segoe UI", 8), fg="#6c7086", bg="#1e1e2e").pack(anchor=tk.W)
     
     log_txt = tk.Text(log_frame, font=("Consolas", 8), bg="#11111b", fg="#a6adc8", insertbackground="#cdd6f4", relief=tk.FLAT, wrap=tk.WORD, height=6)
     log_txt.pack(fill=tk.BOTH, expand=True, pady=(2, 0))
@@ -416,24 +542,39 @@ def launch_gui():
             elif total >= 10000:
                 mb_cur = cur / (1024 * 1024)
                 mb_tot = total / (1024 * 1024)
-                status_var.set(f"Đang giải nén dữ liệu... {pct:.1f}% ({mb_cur:.1f}/{mb_tot:.1f} MB)")
+                status_var.set(f"Đang xử lý dữ liệu... {pct:.1f}% ({mb_cur:.1f}/{mb_tot:.1f} MB)")
         root.after(0, _prog)
 
-    def do_install():
+    def set_buttons_state(state):
+        btn_install_offline.config(state=state)
+        btn_update_online.config(state=state)
+        btn_restore.config(state=state)
+        btn_launch.config(state=state)
+
+    def check_github_background():
+        info = fetch_github_release_info()
+        if info.get('success'):
+            tag = info.get('tag_name', 'Mới nhất')
+            root.after(0, lambda: lbl_remote_ver.config(text=f"GitHub: {tag}", fg="#a6e3a1"))
+            append_log(f"[*] Đã kết nối GitHub: Bản phát hành mới nhất là {tag}")
+        else:
+            root.after(0, lambda: lbl_remote_ver.config(text="GitHub: Offline/Sẵn sàng", fg="#6c7086"))
+
+    threading.Thread(target=check_github_background, daemon=True).start()
+
+    def do_install_offline():
         target = game_dir_var.get().strip()
         if not target or not os.path.exists(target):
             messagebox.showerror("Lỗi", "Vui lòng chọn đúng thư mục chứa game HOME (ROOM)!")
             return
 
-        btn_install.config(state=tk.DISABLED)
-        btn_restore.config(state=tk.DISABLED)
-        btn_launch.config(state=tk.DISABLED)
+        set_buttons_state(tk.DISABLED)
         progress_bar['value'] = 0
 
         def _worker():
             try:
                 append_log(f"[*] Thư mục game: {target}")
-                status_var.set("Đang chuẩn bị dữ liệu patch...")
+                status_var.set("Đang chuẩn bị dữ liệu patch Offline...")
                 patch_dict, tmp_dir = extract_patch_sources()
                 if not patch_dict:
                     raise RuntimeError("Không tìm thấy dữ liệu tệp Việt hóa!")
@@ -450,9 +591,70 @@ def launch_gui():
                 status_var.set("Cài đặt thất bại!")
                 root.after(0, lambda: messagebox.showerror("Lỗi", f"Có lỗi xảy ra trong quá trình cài đặt:\n{e}"))
             finally:
-                root.after(0, lambda: btn_install.config(state=tk.NORMAL))
-                root.after(0, lambda: btn_restore.config(state=tk.NORMAL))
-                root.after(0, lambda: btn_launch.config(state=tk.NORMAL))
+                root.after(0, lambda: set_buttons_state(tk.NORMAL))
+
+        threading.Thread(target=_worker, daemon=True).start()
+
+    def do_update_online():
+        target = game_dir_var.get().strip()
+        if not target or not os.path.exists(target):
+            messagebox.showerror("Lỗi", "Vui lòng chọn đúng thư mục chứa game HOME (ROOM)!")
+            return
+
+        set_buttons_state(tk.DISABLED)
+        progress_bar['value'] = 0
+
+        def _worker():
+            dl_zip_path = None
+            tmp_extract = None
+            try:
+                status_var.set("Đang kết nối tới GitHub Releases...")
+                append_log("[*] Đang truy vấn bản cập nhật mới nhất từ GitHub...")
+                rel_info = fetch_github_release_info()
+                
+                if not rel_info.get('success') or not rel_info.get('download_url'):
+                    # Fallback sang raw link nếu releases chưa có asset
+                    fallback_url = f"https://github.com/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/raw/main/HOME_VietHoa_PC_Patch.zip"
+                    append_log(f"[*] Sử dụng nguồn tải dự phòng: {fallback_url}")
+                    dl_url = fallback_url
+                    tag_name = "bản mới nhất"
+                else:
+                    dl_url = rel_info['download_url']
+                    tag_name = rel_info.get('tag_name', 'mới')
+
+                append_log(f"[*] Đang tải {tag_name} từ: {dl_url}")
+                status_var.set("Đang tải dữ liệu từ GitHub...")
+                dl_zip_path = download_online_patch(dl_url, log_func=append_log, progress_func=update_progress)
+
+                status_var.set("Đang giải nén và nạp tệp bản vá...")
+                patch_dict, tmp_extract = extract_patch_from_zip(dl_zip_path)
+                
+                # Nếu zip tải về là bản chứa EXE, ta lấy payload nhúng hoặc trực tiếp
+                if not patch_dict and os.path.exists(os.path.join(tmp_extract, 'CAI_DAT_PATCH_VIET_HOA.exe')):
+                    append_log("[*] Tệp tải về là bản cài đặt EXE độc lập, chuyển sang vá offline...")
+                    patch_dict, tmp_dir2 = extract_patch_sources()
+
+                if not patch_dict:
+                    raise RuntimeError("Không tìm thấy tệp dữ liệu bản vá hợp lệ trong gói tải về!")
+
+                status_var.set("Đang áp dụng bản vá vào game...")
+                ok, count, el = execute_folder_patch(target, patch_dict, log_func=append_log, progress_func=update_progress)
+
+                status_var.set(f"Cập nhật thành công! Đã vá {count} tệp trong {el}s.")
+                root.after(0, lambda: messagebox.showinfo("Cập Nhật Thành Công", f"Đã kéo và cập nhật bản Việt Hóa mới nhất từ GitHub thành công 100% trong {el} giây!\nChúc bạn chơi game vui vẻ!"))
+            except Exception as e:
+                append_log(f"\n[LỖI CẬP NHẬT ONLINE]: {e}")
+                status_var.set("Cập nhật online thất bại!")
+                root.after(0, lambda: messagebox.showerror("Lỗi Cập Nhật", f"Không thể kéo bản cập nhật từ GitHub:\n{e}\n\n(Bạn vẫn có thể dùng nút 'CÀI ĐẶT PATCH (OFFLINE)' để cài đặt bình thường)."))
+            finally:
+                if dl_zip_path and os.path.exists(dl_zip_path):
+                    try:
+                        os.remove(dl_zip_path)
+                    except Exception:
+                        pass
+                if tmp_extract and os.path.exists(tmp_extract):
+                    shutil.rmtree(tmp_extract, ignore_errors=True)
+                root.after(0, lambda: set_buttons_state(tk.NORMAL))
 
         threading.Thread(target=_worker, daemon=True).start()
 
@@ -465,9 +667,7 @@ def launch_gui():
         if not messagebox.askyesno("Xác nhận", "Bạn có chắc chắn muốn gỡ Patch và khôi phục lại bản tiếng Nhật gốc không?"):
             return
 
-        btn_install.config(state=tk.DISABLED)
-        btn_restore.config(state=tk.DISABLED)
-        btn_launch.config(state=tk.DISABLED)
+        set_buttons_state(tk.DISABLED)
 
         def _worker():
             try:
@@ -482,9 +682,7 @@ def launch_gui():
                 status_var.set("Khôi phục thất bại!")
                 root.after(0, lambda: messagebox.showerror("Lỗi", f"Có lỗi xảy ra khi khôi phục:\n{e}"))
             finally:
-                root.after(0, lambda: btn_install.config(state=tk.NORMAL))
-                root.after(0, lambda: btn_restore.config(state=tk.NORMAL))
-                root.after(0, lambda: btn_launch.config(state=tk.NORMAL))
+                root.after(0, lambda: set_buttons_state(tk.NORMAL))
 
         threading.Thread(target=_worker, daemon=True).start()
 
@@ -512,12 +710,14 @@ def launch_gui():
         else:
             messagebox.showerror("Lỗi", "Không tìm thấy file thực thi .exe của game!")
 
-    btn_install.config(command=do_install)
+    btn_install_offline.config(command=do_install_offline)
+    btn_update_online.config(command=do_update_online)
     btn_restore.config(command=do_restore)
     btn_launch.config(command=do_launch)
 
     append_log(f"============================================================")
     append_log(f"  {APP_TITLE}")
+    append_log(f"  Hỗ trợ cả chế độ Cài đặt Offline & Cập nhật Online từ GitHub")
     append_log(f"============================================================")
     if detected:
         append_log(f"[*] Tự động nhận diện thư mục game: {detected}")
@@ -527,13 +727,13 @@ def launch_gui():
     root.mainloop()
 
 # ─────────────────────────────────────────────────────────────────────────────
-# 4. CHẾ ĐỘ DÒNG LỆNH CLI DỰ PHÒNG
+# 5. CHẾ ĐỘ DÒNG LỆNH CLI DỰ PHÒNG
 # ─────────────────────────────────────────────────────────────────────────────
 
-def run_cli(target_dir=None):
+def run_cli(target_dir=None, online=False):
     print("=" * 65)
     print(f"      {APP_TITLE}")
-    print("      Phát triển bởi Shimakaze VN | Chế độ No-Archive Siêu Tốc")
+    print("      Phát triển bởi Shimakaze VN | Hỗ trợ Cập Nhật Online")
     print("=" * 65)
 
     if not target_dir:
@@ -544,14 +744,23 @@ def run_cli(target_dir=None):
         sys.exit(1)
 
     print(f"\n[+] Thư mục game: {target_dir}")
-    patch_dict, tmp_dir = extract_patch_sources()
-    if not patch_dict:
-        print("[LỖI] Không tìm thấy dữ liệu tệp Việt hóa!")
-        sys.exit(1)
 
     def cli_progress(pct, cur, total):
         sys.stdout.write(f"\r  Tiến độ: [{('=' * int(pct // 4)).ljust(25)}] {pct:5.1f}%")
         sys.stdout.flush()
+
+    if online:
+        print("[*] Đang kéo bản cập nhật mới nhất từ GitHub...")
+        rel_info = fetch_github_release_info()
+        dl_url = rel_info.get('download_url') or f"https://github.com/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/raw/main/HOME_VietHoa_PC_Patch.zip"
+        dl_zip = download_online_patch(dl_url, log_func=print, progress_func=cli_progress)
+        patch_dict, tmp_dir = extract_patch_from_zip(dl_zip)
+    else:
+        patch_dict, tmp_dir = extract_patch_sources()
+
+    if not patch_dict:
+        print("[LỖI] Không tìm thấy dữ liệu tệp Việt hóa!")
+        sys.exit(1)
 
     try:
         execute_folder_patch(target_dir, patch_dict, log_func=print, progress_func=cli_progress)
@@ -562,8 +771,9 @@ def run_cli(target_dir=None):
 
 if __name__ == '__main__':
     if '--cli' in sys.argv or '--headless' in sys.argv:
-        target = sys.argv[2] if len(sys.argv) > 2 and not sys.argv[2].startswith('--') else None
-        run_cli(target)
+        online_mode = '--online' in sys.argv or '--update' in sys.argv
+        target = next((arg for arg in sys.argv[1:] if not arg.startswith('--')), None)
+        run_cli(target, online=online_mode)
     else:
         try:
             launch_gui()
