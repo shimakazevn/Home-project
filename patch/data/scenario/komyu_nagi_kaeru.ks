@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_komyu_nagi_kaeru.ks]
 
 [call  storage="ui_base.ks"  target="*top"  ]

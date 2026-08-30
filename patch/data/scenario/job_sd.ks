@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_job_sd.ks]
 
 [bg  time="0"  method="fadeIn"  storage="back_room.png"  cross="false"  ]

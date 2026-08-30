@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_room_yoru_kankei.ks]
 
 *top

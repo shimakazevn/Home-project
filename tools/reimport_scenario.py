@@ -148,6 +148,9 @@ def reimport_and_patch(records):
         dst_path = os.path.join(OUTPUT_PATCH_DIR, f_name)
         
         lines = open(src_path, 'r', encoding='utf-8', errors='replace').readlines()
+        # Loại bỏ dấu ] thừa ở dòng 1 do TyranoBuilder xuất lỗi
+        if lines and lines[0].strip() == ']':
+            lines[0] = '\n'
         mod_lines = list(lines)
         file_translations = file_map.get(f_name, {})
         has_mod = False

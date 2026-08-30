@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_EV_deto_dinner.ks]
 
 [tb_show_message_window  ]

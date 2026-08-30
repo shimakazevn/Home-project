@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_sinnyu_nagi_haiti_toilet.ks]
 
 *top

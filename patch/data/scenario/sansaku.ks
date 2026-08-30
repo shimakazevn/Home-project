@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_sansaku.ks]
 
 [tb_start_tyrano_code]

@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_sinnyu_comhaiti.ks]
 
 [bg  time="0"  method="crossfade"  storage="sin_nagi_DK.png"  ]

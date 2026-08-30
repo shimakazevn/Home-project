@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_sansaku_hankagaiEV_game.ks]
 
 *top

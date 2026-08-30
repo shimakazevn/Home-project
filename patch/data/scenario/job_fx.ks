@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_job_fx.ks]
 
 [bg  time="0"  method="crossfade"  storage="back_room1.png"  ]

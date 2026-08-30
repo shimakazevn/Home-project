@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_H_rinko_cam.ks]
 
 [tb_show_message_window  ]

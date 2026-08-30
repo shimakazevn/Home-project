@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_komyu_syu.ks]
 
 *nagi_osananajimi

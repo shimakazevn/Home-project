@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_room_asa.ks]
 
 [tb_eval  exp="f.month=6"  name="month"  cmd="="  op="t"  val="6"  val_2="undefined"  ]

@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_EV_jyunaiEND_nagi.ks]
 
 [tb_start_tyrano_code]

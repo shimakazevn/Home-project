@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_komyu_tubomi.ks]
 
 [tb_show_message_window  ]

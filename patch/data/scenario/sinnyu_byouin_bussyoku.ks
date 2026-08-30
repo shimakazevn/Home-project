@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_sinnyu_byouin_bussyoku.ks]
 
 [tb_start_tyrano_code]

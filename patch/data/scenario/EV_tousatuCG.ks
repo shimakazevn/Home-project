@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_EV_tousatuCG.ks]
 
 *tousatu_dounyu

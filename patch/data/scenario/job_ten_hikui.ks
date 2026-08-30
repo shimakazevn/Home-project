@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_job_ten_hikui.ks]
 
 *FX_seikou

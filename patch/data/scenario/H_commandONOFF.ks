@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_H_commandONOFF.ks]
 
 *aibu_command_off

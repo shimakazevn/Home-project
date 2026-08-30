@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_sansaku_rihureEV_tubomi.ks]
 
 [call  storage="ui_base.ks"  target="*top"  ]

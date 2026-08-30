@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_komyu_H.ks]
 
 [bg  time="0"  method="crossfade"  storage="back_byouin.png"  ]

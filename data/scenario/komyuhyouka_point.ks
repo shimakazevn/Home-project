@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_komyuhyouka_point.ks]
 
 [bg  time="0"  method="crossfade"  storage="komyu_insyou.png"  ]

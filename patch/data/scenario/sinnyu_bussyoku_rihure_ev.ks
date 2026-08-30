@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_sinnyu_bussyoku_rihure_ev.ks]
 
 *isyou1

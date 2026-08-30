@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_H_tubomi_R1_2.ks]
 
 [tb_start_tyrano_code]

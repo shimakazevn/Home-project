@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_H_serihu_rinkotubomi.ks]
 
 *3P_kaiwa1

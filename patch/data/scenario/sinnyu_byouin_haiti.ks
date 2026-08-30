@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_sinnyu_byouin_haiti.ks]
 
 [bg  time="0"  method="fadeIn"  storage="sin_byouin_ura.png"  ]

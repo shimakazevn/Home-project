@@ -1,4 +1,4 @@
-]
+
 [_tb_system_call storage=system/_sansaku_famiresuEV.ks]
 
 [tb_eval  exp="f.money+=10000"  name="money"  cmd="+="  op="t"  val="10000"  val_2="undefined"  ]
