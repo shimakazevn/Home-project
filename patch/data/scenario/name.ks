@@ -14,14 +14,14 @@ Hãy nhập tên nhân vật chính.[p]
 
 [tb_keyconfig  flag="1"  ]
 [iscript]
-if (!f.familyname || f.familyname === '日高') f.familyname = 'Hidaka';
-if (!f.name || f.name === '舜') f.name = 'Shun';
+f.familyname = 'Hidaka';
+f.name = 'Shun';
 [endscript]
 [edit  left="430"  top="392"  width="200"  height="40"  size="26"  maxchars="20"  name="f.familyname"  reflect="false"  ]
 [edit  left="650"  top="392"  width="200"  height="40"  size="26"  maxchars="20"  name="f.name"  reflect="false"  ]
 [iscript]
-$(".text_box").eq(0).val(f.familyname);
-$(".text_box").eq(1).val(f.name);
+$(".text_box").eq(0).val('Hidaka');
+$(".text_box").eq(1).val('Shun');
 [endscript]
 
 [tb_start_tyrano_code]
