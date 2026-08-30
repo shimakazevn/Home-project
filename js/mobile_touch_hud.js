@@ -301,6 +301,8 @@
                 }
             });
         }
+    }
+
     // ─── Minimalist Loading Status HUD ───────────────────────────────────────
     let loadingHudTimer = null;
     window.showLoadingStatus = function(text, autoHideMs = 2500) {

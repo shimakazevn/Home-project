@@ -79,11 +79,21 @@ def step3_sync_engine_and_scenarios():
     if os.path.exists(os.path.join(APP_SRC_DIR, 'tyrano')):
         shutil.copytree(os.path.join(APP_SRC_DIR, 'tyrano'), os.path.join(WEB_SRC_DIR, 'tyrano'), dirs_exist_ok=True)
     
-    # 2. Đồng bộ Plugins thiết yếu
+    # 2. Đồng bộ Plugins và scripts thiết yếu (save_thumbnail.js)
+    others_dst = os.path.join(WEB_SRC_DIR, 'data', 'others')
+    os.makedirs(others_dst, exist_ok=True)
     for p in ['auto_wrap', 'button_ex', 'theme_kopanda_09_2']:
         src = os.path.join(ROOT_DIR, 'patch', 'data', 'others', 'plugin', p)
         if os.path.exists(src):
-            shutil.copytree(src, os.path.join(WEB_SRC_DIR, 'data', 'others', 'plugin', p), dirs_exist_ok=True)
+            shutil.copytree(src, os.path.join(others_dst, 'plugin', p), dirs_exist_ok=True)
+    
+    save_thumb_src = os.path.join(ROOT_DIR, 'patch', 'data', 'others', 'save_thumbnail.js')
+    if os.path.exists(save_thumb_src):
+        shutil.copy2(save_thumb_src, os.path.join(others_dst, 'save_thumbnail.js'))
+
+    ico_src = os.path.join(ROOT_DIR, 'tools', 'tyrano.ico')
+    if os.path.exists(ico_src):
+        shutil.copy2(ico_src, os.path.join(WEB_SRC_DIR, 'favicon.ico'))
     
     # 3. Dọn sạch thư mục font TTF nặng để tận dụng 100% font hệ thống siêu nhẹ
     font_dir = os.path.join(WEB_SRC_DIR, 'data', 'others', 'font')
@@ -1697,6 +1707,8 @@ img[src*="workring_en.png"] {
                 }
             });
         }
+    }
+
     // ─── Minimalist Loading Status HUD ───────────────────────────────────────
     let loadingHudTimer = null;
     window.showLoadingStatus = function(text, autoHideMs = 2500) {
