@@ -273,10 +273,11 @@ if (sf.config_default_set !== true) {
 		});
 	};
 
-	tf.change_ch_speed = function(){
-		let speed = 101 - parseInt(tf.slider_ch_speed || 51);
+	tf.change_ch_speed = function(val){
+		let speed = val !== undefined ? parseInt(val) : (101 - parseInt(tf.slider_ch_speed || 51));
 		if (isNaN(speed) || speed < 1) speed = 50;
 		tf.current_ch_speed = speed;
+		tf.slider_ch_speed = 101 - speed;
 		TYRANO.kag.config.chSpeed = speed;
 		sf._system_config_ch_speed = speed;
 		TYRANO.kag.saveSystemVariable();
@@ -286,10 +287,11 @@ if (sf.config_default_set !== true) {
 		}
 	};
 
-	tf.change_auto_speed = function(){
-		let speed = 5001 - parseInt(tf.slider_auto_speed || 2501);
+	tf.change_auto_speed = function(val){
+		let speed = val !== undefined ? parseInt(val) : (5001 - parseInt(tf.slider_auto_speed || 2501));
 		if (isNaN(speed) || speed < 1) speed = 2500;
 		tf.current_auto_speed = speed;
+		tf.slider_auto_speed = 5001 - speed;
 		TYRANO.kag.config.autoSpeed = speed;
 		sf._system_config_auto_speed = speed;
 		TYRANO.kag.saveSystemVariable();
@@ -361,6 +363,9 @@ if (sf.config_default_set !== true) {
 *backtitle
 [cm]
 [iscript]
+if (window.gMessageTester && window.gMessageTester.destroy) {
+	window.gMessageTester.destroy();
+}
 TYRANO.kag.saveSystemVariable();
 [endscript]
 
@@ -444,6 +449,8 @@ TYRANO.kag.saveSystemVariable();
 	}
 	tf.change_bgm();
 [endscript]
+[call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*mute_bgm_button" ]
+[return]
 
 *vol_bgm_change
 	[free layer="0" name="bgmvol" time="0" wait="true"]
@@ -471,6 +478,9 @@ TYRANO.kag.saveSystemVariable();
 	}
 	tf.change_se();
 [endscript]
+[call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*mute_se_button" ]
+
+[return]
 
 *vol_se_change
 	[iscript ]
@@ -502,6 +512,8 @@ TYRANO.kag.saveSystemVariable();
 	else if (tf.isMuteNum === 1) tf.change_voice_2();
 	else if (tf.isMuteNum === 2) tf.change_voice_3();
 [endscript]
+[call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*mute_voice_button" ]
+[return]
 
 *vol_voice_change
 [iscript ]
@@ -526,19 +538,15 @@ TYRANO.kag.saveSystemVariable();
 
 *vol_text_mute
 [iscript]
-	// 一括表示
 	if( tf.isMute_text ){
-		f.prev_vol_list.text = tf.current_ch_speed;
-		//f.prev_vol_list[7] = tf.config_num_ch;
-		tf.current_ch_speed = 1;
-		//tf.config_num_ch  = 10;
-
-	// 解除
+		f.prev_vol_list.text = tf.current_ch_speed || 50;
+		tf.change_ch_speed(1);
 	} else {
-		tf.current_ch_speed = f.prev_vol_list.text;
-		//tf.config_num_ch  = f.prev_vol_list[7];
+		tf.change_ch_speed(f.prev_vol_list.text || 50);
 	}
 [endscript]
+[call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*mute_text_button"]
+[return]
 *ch_speed_skip
 *ch_speed_change
 [iscript]
@@ -553,16 +561,15 @@ tf.change_ch_speed();
 ;--------------------------------------------------------------------------------
 *vol_auto_mute
 [iscript]
-	// 一括表示
 	if( tf.isMute_auto ){
-		f.prev_vol_list.auto = tf.current_auto_speed;
-		tf.current_auto_speed = 1;
-	// 解除
+		f.prev_vol_list.auto = tf.current_auto_speed || 2500;
+		tf.change_auto_speed(1);
 	} else {
-		tf.current_auto_speed = f.prev_vol_list.auto;
+		tf.change_auto_speed(f.prev_vol_list.auto || 2500);
 	}
-	tf.change_auto_speed();
 [endscript]
+[call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*mute_auto_button"]
+[return]
 
 *auto_speed_change
 [iscript]

@@ -274,11 +274,12 @@ window.gMessageTester = {
 
 	TM.create = function () {
 		//console.log("create.");
+		TM.destroy();
 		var that = this;
 		// フリーレイヤーの表示
 		$(".layer_free").show();
 		// 現在のデフォルトフォント設定の取得
-		var font = tyrano.plugin.kag.stat.default_font;
+		var font = (tyrano && tyrano.plugin && tyrano.plugin.kag && tyrano.plugin.kag.stat && tyrano.plugin.kag.stat.default_font) || {};
 		// スクロールイベント名
 		var scroll = "onwheel"      in document ? "wheel" :
 		             "onmousewheel" in document ? "mousewheel" :
@@ -291,10 +292,10 @@ window.gMessageTester = {
 		.click(this.next)
 		.on(scroll, this.next);
 		// スタイルのセット
-		if (!this.style["font-weight"]) area.css("font-weight", font.bold);
-		if (!this.style["font-size"  ]) area.css("font-size"  , font.size + "px");
-		if (!this.style["font-family"]) area.css("font-family", font.face);
-		if (!this.style["color"      ]) area.css("color"      , font.color);
+		if (!this.style["font-weight"]) area.css("font-weight", font.bold || "normal");
+		if (!this.style["font-size"  ]) area.css("font-size"  , (font.size || 21) + "px");
+		if (!this.style["font-family"]) area.css("font-family", font.face || "sans-serif");
+		if (!this.style["color"      ]) area.css("color"      , font.color || "#CCCCCC");
 		// 代入
 		this.messageArea = area;
 		// 起動する
@@ -310,7 +311,10 @@ window.gMessageTester = {
 		this.currentCharNumber = 0;
 		this.currentTextNumber = 0;
 		// DOM 要素の削除
-		this.messageArea.remove();
+		if (this.messageArea && this.messageArea.remove) {
+			this.messageArea.remove();
+		}
+		$("." + this.className).remove();
 	};
 
 }(window.gMessageTester));
