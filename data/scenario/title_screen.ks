@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_title_screen.ks]
 
 [tb_start_tyrano_code]
@@ -204,7 +205,7 @@
 [tb_show_message_window  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=4 ]
-Shimakaze VN Translation Team 2026.[p]
+[font color="yellow"]Mở khóa toàn bộ CG, H-Scene và các Ending. Bạn có chắc chắn không?[r]※Toàn bộ Voyeur CG sẽ được mở nhưng tỷ lệ sẽ không tự nhảy lên 100%[r]※Khuyến nghị sao lưu lại dữ liệu Save trước khi thực hiện.[resetfont]
 [_tb_end_text]
 
 [glink  color="btn_05_black"  storage="title_screen.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Mở khóa toàn bộ"  _clickable_img=""  target="*zenkaihou_yes"  ]
@@ -235,4 +236,4 @@ Hẹn gặp lại trong những tác phẩm tiếp theo![p]
 [playse  volume="100"  time="1000"  buf="0"  storage="sistem_start.mp3"  ]
 [tb_eval  exp="sf.zenkaihou=2"  name="zenkaihou"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
 [jump  storage="title_screen.ks"  target="*back"  ]
-[tb_eval  exp="sf.zenkaihou=1"  name="zenkaihou"  cmd="="  op="t"  val="1"  val_2="undefined" ]
+[tb_eval  exp="sf.zenkaihou=1"  name="zenkaihou"  cmd="="  op="t"  val="1"  val_2="undefined"  

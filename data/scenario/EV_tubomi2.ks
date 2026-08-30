@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_EV_tubomi2.ks]
 
 [tb_start_tyrano_code]
@@ -151,4 +152,4 @@ Trái tim đập rộn ràng, tôi gật đầu hết lần này đến lần kh
 [mask_off  time="1000"  effect="fadeOut"  ]
 [call  storage="komyuhyouka_tubomi.ks"  target="*top"  ]
 [stopbgm  time="1000"  fadeout="true"  ]
-[jump  storage="room_yoru.ks"  target="*top" ]
+[jump  storage="room_yoru.ks"  target="*top"  

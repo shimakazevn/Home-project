@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_ui_base.ks]
 
 [tb_start_tyrano_code]
@@ -168,4 +169,4 @@
 [tb_eval  exp="f.ten_Middle=0"  name="ten_Middle"  cmd="="  op="t"  val="0"  ]
 [tb_eval  exp="f.ten_Low=0"  name="ten_Low"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 [tb_eval  exp="f.ten_byouki=1"  name="ten_byouki"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
-[return ]
+[return  

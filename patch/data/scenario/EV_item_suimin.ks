@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_EV_item_suimin.ks]
 
 [tb_start_tyrano_code]
@@ -20,11 +21,11 @@
 [tb_show_message_window  ]
 [mask_off  time="2000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-Trạng thái chỉ số nhân vật - Tsukishiro Nagi:[p]
-Mức độ phụ thuộc: 100% (Hoàn toàn phụ thuộc)[p]
+[舜]「Đèn trong phòng... đã tắt rồi. Nagi ngủ rồi sao」[p]
+[舜]「...Có nên vào không? Làm sao bây giờ, nếu muốn vào thì chỉ có lúc này thôi」[p]
 Mức độ dâm đãng: Tối đa[p]
 Tình trạng quan hệ: Người yêu độc quyền của Shun[p]
-Trạng thái chỉ số nhân vật - Naruse Tsubomi:[p]
+[舜]「...Không, mình phải vào. Thà làm còn hơn là hối hận vì đã bỏ lỡ cơ hội」[p]
 Mức độ thuần phục: 100% (Phục tùng tuyệt đối)[p]
 [_tb_end_text]
 
@@ -35,7 +36,7 @@ Mức độ thuần phục: 100% (Phục tùng tuyệt đối)[p]
 [wait  time="2000"  ]
 [bg  time="2000"  method="crossfade"  storage="sin_nagi_DK_yoru.png"  ]
 [tb_start_text mode=1 ]
-Mức độ dâm đãng: Cực hạn (Nghiện làm tình)[p]
+[舜]「Nguy hiểm thật... Tim mình như sắp nhảy ra khỏi lồng ngực rồi」[p]
 Tình trạng quan hệ: Cô vợ nhỏ dâm đãng của Shun[p]
 
 
@@ -45,7 +46,7 @@ Tình trạng quan hệ: Cô vợ nhỏ dâm đãng của Shun[p]
 [tb_cg  id="cg_item_suimin2"  ]
 [tb_start_text mode=1 ]
 Trạng thái chỉ số nhân vật - Naruse Rinko:[p]
-Mức độ si mê: 100% (Không thể rời xa)[p]
+[舜]「Ngủ mà không phòng bị chút nào thế này... Đúng là mời gọi người ta mà」[p]
 Mức độ dâm đãng: Tối đa (Chìm đắm trong dục vọng)[p]
 
 [_tb_end_text]
@@ -54,7 +55,7 @@ Mức độ dâm đãng: Tối đa (Chìm đắm trong dục vọng)[p]
 [tb_cg  id="cg_item_suimin1"  ]
 [tb_start_text mode=1 ]
 Tình trạng quan hệ: Người tình bí mật kiêm bà chủ tiệm[p]
-Toàn bộ chỉ số đều đạt mức cao nhất có thể trong game.[p]
+[舜]「Chỉ một chút thôi... Nếu chỉ chạm nhẹ một chút thì chắc không sao đâu」[p]
 [_tb_end_text]
 
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
@@ -88,4 +89,4 @@ Hẹn gặp lại bạn trong những chuyến phiêu lưu kỳ thú tiếp theo
 
 [stopbgm  time="1000"  fadeout="true"  ]
 [tb_eval  exp="f.itemEV_suimin=2"  name="itemEV_suimin"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
-[jump  storage="room_yoru.ks"  target="*top" ]
+[jump  storage="room_yoru.ks"  target="*top"  

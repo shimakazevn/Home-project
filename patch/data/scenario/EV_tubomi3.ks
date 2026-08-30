@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_EV_tubomi3.ks]
 
 [tb_start_tyrano_code]
@@ -128,4 +129,4 @@ Ngắm nhìn nụ cười của Tsubomi, tôi bất giác cảm thấy em ấy t
 [mask_off  time="1000"  effect="fadeOut"  ]
 [call  storage="komyuhyouka_tubomi.ks"  target="*top"  ]
 [stopbgm  time="1000"  fadeout="true"  ]
-[jump  storage="room_yoru.ks"  target="*top" ]
+[jump  storage="room_yoru.ks"  target="*top"  

@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_nagi_cam.ks]
 
 [tb_show_message_window  ]
@@ -168,4 +169,4 @@
 [tb_eval  exp="f.H_cam1_on=0"  name="H_cam1_on"  cmd="="  op="t"  val="0"  ]
 [tb_eval  exp="f.H_cam2_on=1"  name="H_cam2_on"  cmd="="  op="t"  val="1"  ]
 [call  storage="H_nagi_gazou.ks"  target="*R3_hagesiku_cam2"  ]
-[return ]
+[return  

@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_title_zenkaihou.ks]
 
 *top
@@ -169,4 +170,4 @@
 [tb_replay  id="tubomi_jyunaiEND"  ]
 [tb_replay  id="tubomi_kyouaiEND"  ]
 [tb_replay  id="haremuEND"  ]
-[return ]
+[return  

@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_serihu_rinko.ks]
 
 *high
@@ -4247,4 +4248,4 @@ Rinko「Ưm...♡ Đừng... đừng nói nữa... A...♡ Em lại càng phản
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]
-[return ]
+[return  

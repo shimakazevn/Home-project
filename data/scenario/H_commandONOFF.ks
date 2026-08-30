@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_commandONOFF.ks]
 
 *aibu_command_off
@@ -8,4 +9,4 @@
 [freeimage layer="0" time="0"]
 [_tb_end_tyrano_code]
 
-[return ]
+[return  

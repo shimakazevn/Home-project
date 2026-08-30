@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_3P0.ks]
 
 [tb_start_tyrano_code]
@@ -277,4 +278,4 @@ Tsubomi「Ưm♡ Kư♡ Hà, hà♡ C-Cảm ơn anh vì đã bắn vào trong em
 [tb_replay  id="rinkotubomi_3P"  ]
 [call  storage="H_kaihaturesult_rinko.ks"  target="*top"  ]
 [call  storage="H_kaihaturesult_tubomi.ks"  target="*top"  ]
-[jump  storage="EV_3P.ks"  target="*H_END" ]
+[jump  storage="EV_3P.ks"  target="*H_END"  

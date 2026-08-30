@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_sansaku_hankagaiEV_tubomihayato.ks]
 
 [call  storage="ui_base.ks"  target="*top"  ]
@@ -96,4 +97,4 @@ Hayato「Đùa anh à...」[p]
 
 [call  storage="komyuhyouka_tubomi.ks"  target="*top"  ]
 [call  storage="komyuhyouka_hayato.ks"  target="*top"  ]
-[jump  storage="sansaku.ks"  target="*end" ]
+[jump  storage="sansaku.ks"  target="*end"  

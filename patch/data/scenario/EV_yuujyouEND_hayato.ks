@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_EV_yuujyouEND_hayato.ks]
 
 [tb_start_tyrano_code]
@@ -30,15 +31,15 @@ Tsubomi「Tại vì mùi của anh [舜] ngon quá mà… Mẹ cũng thích lắ
 [舜]「Được rồi, đến lượt Tsubomi. Lại đây nào」[p]
 Tsubomi lập tức bò tới, đưa bờ mông cong vút về phía tôi.[p]
 [chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_01c.gif"] Tsubomi「Cắm vào từ phía sau đi anh… Đâm thật mạnh vào nhé♡」[p]
-Dương vật của tôi lại một lần nữa đâm xuyên qua khe thịt ướt sũng của cô thiếu nữ.[p]
+[舜]「Cậu cừ thật đấy. Tôi thì thậm chí còn chẳng đủ can đảm để nhìn mặt cô ấy」[p]
 [chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_00c.gif"] Tsubomi「A… a a…! Sướng quá đi mất…! Mẹ ơi, anh ấy đâm sâu lắm nè!」[p]
 Rinko rướn người tới, đưa tay xoa nắn đôi gò bồng đảo đang nảy nở của con gái.[p]
 Rinko「Cố chịu đựng nhé con gái… Hãy để cho [舜]-kun yêu thương con thật nhiều」[p]
-Cảnh tượng hai mẹ con cùng nhau chia sẻ một người đàn ông dâm mỹ đến mức không tưởng.[p]
+Hayato「Đi ăn gì đó không? Tôi bao. Dù sao kinh tế của tôi cũng dư dả hơn」[p]
 [舜]「Cả hai người các cô… Đúng là hết thuốc chữa rồi」[p]
 Tsubomi「Ưm… Đều là do anh làm cho chúng em biến thành thế này cơ mà…♡」[p]
 Rinko「Phải đấy, hãy chịu trách nhiệm với cả hai mẹ con cô đến suốt đời nhé♡」[p]
-Từng cú thúc như xé tan màn đêm, đưa cả ba người chìm sâu vào hố sâu hoan lạc.[p]
+[舜]「Mà, thế này xem ra cũng không tệ lắm」[p]
 Tsubomi「A… a… Em ra mất thôi! Mẹ ơi, con sắp lên đỉnh rồi!」[p]
 Rinko「Mẹ cũng thế… Nhìn hai người làm mẹ cũng không chịu nổi nữa rồi…!」[p]
 [_tb_end_text]
@@ -59,4 +60,4 @@ location.href="./index.html";
 [endscript]
 [_tb_end_tyrano_code]
 
-[s ]
+[s  

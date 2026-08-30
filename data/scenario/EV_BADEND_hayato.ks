@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_EV_BADEND_hayato.ks]
 
 [tb_start_tyrano_code]
@@ -29,7 +30,7 @@ Rinko「Ngon quá… Tinh dịch của [舜]-kun lúc nào cũng đậm đà tuy
 [tb_start_text mode=1 ]
 Tsubomi「Ưm… Mẹ tham lam quá à… Để phần cho con nữa chứ…」[p]
 [舜]「Vẫn còn nhiều lắm, đêm nay chúng ta còn dài mà」[p]
-Cả hai người phụ nữ nhìn tôi với ánh mắt ngập tràn si mê và khát khao không đáy.[p]
+[舜]「Có chuyện gì thế? Chắc không phải tiếp thị bán hàng đến tận nhà đâu nhỉ」[p]
 [_tb_end_text]
 
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
@@ -41,17 +42,17 @@ Cả hai người phụ nữ nhìn tôi với ánh mắt ngập tràn si mê và
 [mask_off  time="2000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
 Đây chính là thiên đường tội lỗi mà tôi đã dày công xây dựng.[p]
-Một vương quốc nơi dục vọng ngự trị tối cao, không có chỗ cho sự xấu hổ hay hối hận.[p]
+Nagi「[舜]-chan, xin lỗi nhé. Cậu đang bận sao? Thật ra mình có chuyện muốn thông báo cho [舜]-chan biết」[p]
 【3P Hoan Lạc Cuồng Say: Mẹ Con Naruse】[p]
 Đêm đó, tôi đã làm tình với cả hai mẹ con họ cho đến tận khi trời rạng sáng.[p]
 Thân thể họ đẫm mồ hôi và tinh dịch, nằm ôm chặt lấy tôi ngủ thiếp đi.[p]
-Một cảm giác thỏa mãn và quyền lực tuyệt đối dâng trào trong lồng ngực.[p]
-Tôi đã biến gia đình Naruse hoàn toàn trở thành sở hữu của riêng mình.[p]
+Nagi「Mình... đã quyết định sẽ kết hôn với Hayato rồi. Người đầu tiên mình muốn chia sẻ chính là [舜]-chan」[p]
+[舜]「...Vậy à」[p]
 Không một ai có thể cướp họ khỏi tay tôi được nữa.[p]
 Hayato… Cậu có nhìn thấy cảnh này không?[p]
-Mẹ và em gái của cậu, giờ đây đang hạnh phúc rên rỉ dưới thân tôi đấy.[p]
-Sự trả thù ngọt ngào nhất chính là sự chiếm đoạt hoàn hảo này.[p]
-Tôi mỉm cười, vuốt ve mái tóc của hai người phụ nữ bên cạnh rồi nhắm mắt lại.[p]
+Nagi「Cảm ơn cậu nhé, [舜]-chan... Từ trước tới nay mình toàn phải nhờ vả [舜]-chan chăm sóc thôi...」[p]
+Hayato「Tôi cũng... cảm ơn ông vì nhiều việc nhé. Tôi nhất định sẽ mang lại hạnh phúc cho Nagi」[p]
+[舜]「À, ừ...」[p]
 Một ngày mới đầy khoái lạc lại sắp bắt đầu.[p]
 Nagi đang ngồi trên ghế sô pha, đôi mắt mơ màng vì men say của ly rượu Spirytus.[p]
 Nagi「Ưm… Shun-chan… Đầu tớ quay cuồng hết cả rồi…」[p]
@@ -89,4 +90,4 @@ location.href="./index.html";
 [endscript]
 [_tb_end_tyrano_code]
 
-[s ]
+[s  

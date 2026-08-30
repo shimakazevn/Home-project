@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_sansaku_kaimono_item.ks]
 
 [tb_eval  exp="f.money_updated+=10000"  name="money_updated"  cmd="+="  op="t"  val="10000"  val_2="undefined"  ]
@@ -213,7 +214,7 @@
 *suimin
 
 [tb_start_tyrano_code]
-;ボタンの表示(Thuốc ngủ)
+;ボタンの表示(睡眠薬)
 [button graphic="../fgimage/default/item_trap_suimin.png" storage="sansaku_kaimono_item.ks" target="*suimin2" x=120 y=152 ]
 [_tb_end_tyrano_code]
 
@@ -242,7 +243,7 @@
 *biyaku
 
 [tb_start_tyrano_code]
-;ボタンの表示(Thuốc kích dục)
+;ボタンの表示(媚薬)
 [button graphic="../fgimage/default/item_trap_biyaku.png" storage="sansaku_kaimono_item.ks" target="*biyaku_2" x=384 y=152 ]
 [_tb_end_tyrano_code]
 
@@ -271,7 +272,7 @@
 *biyaku2
 
 [tb_start_tyrano_code]
-;ボタンの表示(Thuốc kích dụcプレミアム)
+;ボタンの表示(媚薬プレミアム)
 [button graphic="../fgimage/default/item_trap_biyaku2.png" storage="sansaku_kaimono_item.ks" target="*biyaku2_2" x=648 y=152 ]
 [_tb_end_tyrano_code]
 
@@ -300,7 +301,7 @@
 *biyaku3
 
 [tb_start_tyrano_code]
-;ボタンの表示(Thuốc kích dụcクリーム)
+;ボタンの表示(媚薬クリーム)
 [button graphic="../fgimage/default/item_trap_cream.png" storage="sansaku_kaimono_item.ks" target="*biyaku3_2" x=912 y=152 ]
 [_tb_end_tyrano_code]
 
@@ -628,4 +629,4 @@
 [tb_eval  exp="f.money_updated-=100000"  name="money_updated"  cmd="-="  op="t"  val="100000"  val_2="undefined"  ]
 [call  storage="ui_parameter.ks"  target="*money_update"  ]
 [wait  time="300"  ]
-[jump  storage="sansaku_kaimono1.ks"  target="*gift" ]
+[jump  storage="sansaku_kaimono1.ks"  target="*gift"  

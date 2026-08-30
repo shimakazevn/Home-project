@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_EV_BADEND_suimin.ks]
 
 [tb_start_tyrano_code]
@@ -42,7 +43,7 @@ Nagi「A… a… Tớ sắp ra nữa rồi! Cùng lên đỉnh nhé Shun-chan!�
 [playbgm  volume="60"  time="1000"  loop="true"  storage="BADEND.mp3"  ]
 [tb_start_text mode=1 ]
 #凪
-Tôi thúc sâu một cú chí mạng, trút trọn vẹn dòng tinh dịch nồng nàn vào tận cổ tử cung của Nagi.[p]
+Nagi「――Kyaaaaaaa!」[p]
 Nagi「A a a a…!! ♡ Nóng quá… Tinh trùng của Shun-chan đang tràn vào trong tớ rồi…!」[p]
 Nagi ôm chặt lấy lưng tôi, cả cơ thể run rẩy đón nhận từng đợt sóng tinh dịch cuộn trào.[p]
 Căn phòng ngập tràn men say của rượu và men tình của đôi lứa thanh mai trúc mã.[p]
@@ -51,7 +52,7 @@ Nagi「Hà… hà… Hạnh phúc quá… Tớ thuộc về Shun-chan hoàn toà
 Nagi「Lần sau… Lại cho tớ uống rượu rồi làm chuyện này nữa nhé anh…♡」[p]
 #凪
 Nagi nở nụ cười ngây thơ say đắm rồi gục đầu vào ngực tôi ngủ thiếp đi.[p]
-Tôi vuốt ve gò má ửng hồng của Nagi, trong lòng dâng trào cảm giác chiếm hữu ngọt ngào.[p]
+[舜]「――...Khốn kiếp...!」[p]
 Hayato à… Người con gái cậu hằng yêu thương, giờ đây đã hoàn toàn là của tôi rồi.[p]
 [_tb_end_text]
 
@@ -66,7 +67,7 @@ Nagi khẽ cựa mình, áp sát vào lồng ngực tôi.[p]
 Hơi thở của em ấy vẫn còn phảng phất mùi thơm ngọt của rượu.[p]
 Một đêm tuyệt vời mà cả hai chúng tôi sẽ không bao giờ có thể quên được.[p]
 Tôi kéo tấm chăn mỏng đắp lên người cả hai, ôm chặt Nagi vào lòng.[p]
-Tương lai phía trước, Nagi sẽ chỉ thuộc về một mình tôi mà thôi.[p]
+[舜]「Uwaaaaaa!」[p]
 Ngủ ngon nhé, Nagi của anh.[p]
 Ánh trăng ngoài cửa sổ rọi vào căn phòng tĩnh lặng, chứng giám cho sự gắn kết vĩnh cửu này.[p]
 [_tb_end_text]
@@ -87,4 +88,4 @@ location.href="./index.html";
 [endscript]
 [_tb_end_tyrano_code]
 
-[s ]
+[s  

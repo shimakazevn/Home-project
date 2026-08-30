@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_EV_rinko2.ks]
 
 [tb_start_tyrano_code]
@@ -149,4 +150,4 @@ Tôi không nói gì, chỉ gật đầu trong tiếng thở dốc.[p]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [call  storage="komyuhyouka_rinko.ks"  target="*top"  ]
 [stopbgm  time="1000"  fadeout="true"  ]
-[jump  storage="room_yoru.ks"  target="*top" ]
+[jump  storage="room_yoru.ks"  target="*top"  

@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_sinnyu_massaji.ks]
 
 [tb_start_tyrano_code]
@@ -75,4 +76,4 @@
 [_tb_end_text]
 
 [tb_eval  exp="f.tension+=2"  name="tension"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
-[jump  storage="room_yoru.ks"  target="*top" ]
+[jump  storage="room_yoru.ks"  target="*top"  

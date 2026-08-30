@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_komyu_rinko.ks]
 
 [tb_show_message_window  ]
@@ -624,4 +625,4 @@ Rinko「Cô đợi cháu ở tiệm nhé? Gác lại chuyện công việc, chú
 [舜]（Nếu đưa hết một lần thì trông mình có vẻ tuyệt vọng quá...）[p]
 [_tb_end_text]
 
-[jump  storage="komyu_rinko.ks"  target="*top" ]
+[jump  storage="komyu_rinko.ks"  target="*top"  

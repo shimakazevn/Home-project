@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_sinnyu_bussyoku_massaji_ev.ks]
 
 *tenjyou1
@@ -291,4 +292,4 @@
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_gomibako_massaji+=1"  name="bussyoku_gomibako_massaji"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
-[return ]
+[return  

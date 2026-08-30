@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_sansaku.ks]
 
 [tb_start_tyrano_code]
@@ -130,4 +131,4 @@ Và khám phá tất cả những bí mật đang chờ đợi bạn.[p]
 [tb_eval  exp="f.sansakuEV_hankagai_tubomi_hayato=0"  name="sansakuEV_hankagai_tubomi_hayato"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 [tb_eval  exp="f.sansakuEV_hankagai_nagi=0"  name="sansakuEV_hankagai_nagi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 [tb_eval  exp="f.sansakuEV_rihure_tubomi=0"  name="sansakuEV_rihure_tubomi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
-[return ]
+[return  

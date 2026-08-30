@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_serihu_rinkotubomi.ks]
 
 *3P_kaiwa1
@@ -826,4 +827,4 @@ Tsubomi「Anh nói thế cũng vô ích thôi... Cảm giác sướng rơn khôn
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]
-[return ]
+[return  

@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_sansaku_massajiEV.ks]
 
 [call  storage="ui_base.ks"  target="*top"  ]
@@ -84,4 +85,4 @@ Rinko「……Cháu có vẻ hơi mệt mỏi nhỉ? Xong rồi. Ừm, sắc m�
 （Đành chịu vậy. Hôm nay đành từ bỏ thôi.）[p]
 [_tb_end_text]
 
-[jump  storage="sansaku.ks"  target="*end" ]
+[jump  storage="sansaku.ks"  target="*end"  

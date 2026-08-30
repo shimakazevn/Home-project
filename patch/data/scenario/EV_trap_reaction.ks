@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_EV_trap_reaction.ks]
 
 [tb_start_tyrano_code]
@@ -248,4 +249,4 @@ Nagi「...Không...... Kinh tởm quá...... Mình không muốn nghĩ gì nữa
 [tb_eval  exp="f.keikaido+=2"  name="keikaido"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
 [tb_eval  exp="f.kankei+=7"  name="kankei"  cmd="+="  op="t"  val="7"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
-[return ]
+[return  

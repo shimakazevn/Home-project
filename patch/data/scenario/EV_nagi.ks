@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_EV_nagi.ks]
 
 [tb_start_tyrano_code]
@@ -148,4 +149,4 @@ Tôi hướng người về phía màn hình, nắm chặt lại chiếc tay c�
 [mask_off  time="1000"  effect="fadeOut"  ]
 [call  storage="komyuhyouka_nagi.ks"  target="*top"  ]
 [stopbgm  time="1000"  fadeout="true"  ]
-[jump  storage="room_yoru.ks"  target="*top" ]
+[jump  storage="room_yoru.ks"  target="*top"  

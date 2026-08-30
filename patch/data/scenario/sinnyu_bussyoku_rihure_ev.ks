@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_sinnyu_bussyoku_rihure_ev.ks]
 
 *isyou1
@@ -326,4 +327,4 @@
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_telissyu+=1"  name="bussyoku_telissyu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
-[return ]
+[return  

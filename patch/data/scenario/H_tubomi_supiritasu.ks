@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_tubomi_supiritasu.ks]
 
 [tb_start_tyrano_code]
@@ -659,4 +660,4 @@ Tsubomi「Hà... hà... Say rượu lẫn say tình... Em chết mê chết mệ
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="tubomi_item_supiritasu"  ]
 [call  storage="H_kaihaturesult_tubomi.ks"  target="*top"  ]
-[jump  storage="EV_item_Spirytus_tubomi.ks"  target="*back" ]
+[jump  storage="EV_item_Spirytus_tubomi.ks"  target="*back"  

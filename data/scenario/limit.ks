@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_limit.ks]
 
 [iscript]
@@ -111,4 +112,4 @@ f.para_kinryoku_display = 0;
 }
 [endscript]
 
-[return ]
+[return  

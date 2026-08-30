@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_job_sd.ks]
 
 [bg  time="0"  method="fadeIn"  storage="back_room.png"  cross="false"  ]
@@ -215,7 +216,7 @@ Trạng thái không tốt. Không thể hoàn thành công việc như ý muố
 
 [tb_start_tyrano_code]
 ;SD表示（マッサージ＿〇）
-[image storage="default/job_massage2.gif" layer="1" page="fore" visible="true" x="368" y="165" width="496" height="280" name="effect1" time="0"]
+[image storage="default/default/job_massage2.gif" layer="1" page="fore" visible="true" x="368" y="165" width="496" height="280" name="effect1" time="0"]
 [_tb_end_tyrano_code]
 
 [iscript]
@@ -420,4 +421,4 @@ Trạng thái rất tốt. Một phiên giao dịch lý tưởng.[r]
 
 [wait  time="500"  ]
 [return  ]
-[jump  storage="job_sd.ks"  target="*seisou3" ]
+[jump  storage="job_sd.ks"  target="*seisou3"  

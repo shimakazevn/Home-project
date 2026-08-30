@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_EV_tubomi.ks]
 
 [tb_start_tyrano_code]
@@ -123,4 +124,4 @@ Dù cự nự như vậy, nhưng tôi vẫn ngoan ngoãn đi theo sau cô hầu 
 [mask_off  time="1000"  effect="fadeOut"  ]
 [call  storage="komyuhyouka_tubomi.ks"  target="*top"  ]
 [stopbgm  time="1000"  fadeout="true"  ]
-[jump  storage="room_yoru.ks"  target="*top" ]
+[jump  storage="room_yoru.ks"  target="*top"  

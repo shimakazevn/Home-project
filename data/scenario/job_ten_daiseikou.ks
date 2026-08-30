@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_job_ten_daiseikou.ks]
 
 *FX_daiseikou
@@ -293,4 +294,4 @@
 [endif]
 [_tb_end_tyrano_code]
 
-[return ]
+[return  

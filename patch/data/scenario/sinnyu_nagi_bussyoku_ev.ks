@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_sinnyu_nagi_bussyoku_ev.ks]
 
 *omoide
@@ -1126,4 +1127,4 @@ Chất lỏng đục ngầu sền sệt lan ra trên mặt ghế.[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_sibutu+=1"  name="bussyoku_sibutu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
-[return ]
+[return  

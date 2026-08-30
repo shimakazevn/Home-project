@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_EV_honmei.ks]
 
 *nagi
@@ -89,4 +90,4 @@ Tình cảm ấm áp dành cho cô ấy đang ngày một lớn dần lên.[p]
 [return  ]
 *no_tubomi
 
-[return ]
+[return  

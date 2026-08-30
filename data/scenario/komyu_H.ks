@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_komyu_H.ks]
 
 [bg  time="0"  method="crossfade"  storage="back_byouin.png"  ]
@@ -339,4 +340,4 @@ Tsubomi「Cứ để đến đó rồi tận hưởng cũng được... A, tận
 [_tb_end_text]
 
 [jump  storage="EV_3P.ks"  target="*top"  ]
-[s ]
+[s  

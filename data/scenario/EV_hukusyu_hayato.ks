@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_EV_hukusyu_hayato.ks]
 
 [tb_start_tyrano_code]
@@ -176,4 +177,4 @@ Hắn chỉ biết ôm đầu, co rúm người lại như thể muốn trốn c
 [_tb_end_text]
 
 [stopbgm  time="1000"  fadeout="true"  ]
-[return ]
+[return  

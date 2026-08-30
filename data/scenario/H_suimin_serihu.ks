@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_suimin_serihu.ks]
 
 [tb_start_tyrano_code]
@@ -239,4 +240,4 @@ Nagi「Ư… ưm……」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_suimin_matazuri=0"  name="H_suimin_matazuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
-[return ]
+[return  

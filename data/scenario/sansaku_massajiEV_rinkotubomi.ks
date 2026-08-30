@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_sansaku_massajiEV_rinkotubomi.ks]
 
 [call  storage="ui_base.ks"  target="*top"  ]
@@ -103,4 +104,4 @@ Rinko「Khc, cô hiểu mà nên không sao đâu. Đúng không nào? Shun-kun.
 
 [call  storage="komyuhyouka_rinko.ks"  target="*top"  ]
 [call  storage="komyuhyouka_tubomi.ks"  target="*top"  ]
-[jump  storage="sansaku.ks"  target="*end" ]
+[jump  storage="sansaku.ks"  target="*end"  

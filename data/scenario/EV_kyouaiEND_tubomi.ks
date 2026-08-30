@@ -27,7 +27,7 @@
 
 [tb_start_text mode=1 ]
 Thử sức ở buổi thử giọng của công ty giải trí rồi bị đánh trượt, đây đã là lần thứ mấy rồi không biết.[p]
-Ngay cả bản thân Tsubomi cũng nói "Em chẳng còn nhớ nổi nữa".[p]
+Chính bản thân Tsubomi dường như cũng「chẳng còn nhớ nổi nữa」rồi.[p]
 Mỗi lần bị đánh trượt ở vòng phỏng vấn hay xét duyệt, trái tim em ấy lại dần dần bị gặm nhấm.[p]
 Đến khi nhận ra, em ấy thậm chí còn chẳng biết bản thân mình là ai nữa──.[p]
 [舜]「Vậy hôm nay chúng ta lại tập tạo dáng nhé. Cởi quần áo ra rồi ngồi xổm xuống đi.」[p]

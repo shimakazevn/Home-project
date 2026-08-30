@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_a_taikenban.ks]
 
 [tb_eval  exp="f.item_4_s=1"  name="item_4_s"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -30,4 +31,4 @@ location.href="./index.html";
 [endscript]
 [_tb_end_tyrano_code]
 
-[s ]
+[s  

@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_rinko_J2_2.ks]
 
 [tb_start_tyrano_code]
@@ -681,4 +682,4 @@ Rinko「Lãng phí lắm, nên cứ giữ tinh dịch của Shun-kun đọng l�
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="rinko_HJ2_2"  ]
 [call  storage="H_kaihaturesult_rinko.ks"  target="*top"  ]
-[jump  storage="EV_rinko_J.ks"  target="*EV2_back" ]
+[jump  storage="EV_rinko_J.ks"  target="*EV2_back"  

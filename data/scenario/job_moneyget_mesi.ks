@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_job_moneyget_mesi.ks]
 
 [tb_start_tyrano_code]
@@ -44,4 +45,4 @@
 *soto
 
 [cm  ]
-[jump  storage="sansaku.ks"  target="*top" ]
+[jump  storage="sansaku.ks"  target="*top"  

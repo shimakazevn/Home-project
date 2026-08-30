@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_rinko_R1_2.ks]
 
 [tb_start_tyrano_code]
@@ -683,4 +684,4 @@ Rinko「Ép sát hông vào rồi bắn thế này...♡ Nhỡ có em bé thì p
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="rinko_HR1_2"  ]
 [call  storage="H_kaihaturesult_rinko.ks"  target="*top"  ]
-[jump  storage="EV_rinko_R.ks"  target="*EV1_back" ]
+[jump  storage="EV_rinko_R.ks"  target="*EV1_back"  

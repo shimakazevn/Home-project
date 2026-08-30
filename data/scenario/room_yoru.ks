@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_room_yoru.ks]
 
 [tb_start_tyrano_code]
@@ -36,19 +37,19 @@
 [endif]
 
 ;アイテムイベントの発生★
-;Thuốc ngủ
+;睡眠薬
 [if exp="f.itemEV_suimin == 1"]
 [jump storage="EV_item_suimin.ks" target="*top"]
 
-;Thuốc kích dục1
+;媚薬1
 [elsif exp="f.itemEV_biyaku == 1"]
 [call storage="EV_item_biyaku.ks" target="*top"]
 
-;Thuốc kích dục2
+;媚薬2
 [elsif exp="f.itemEV_biyaku2 == 1"]
 [call storage="EV_item_biyaku2.ks" target="*top"]
 
-;Thuốc kích dục3
+;媚薬3
 [elsif exp="f.itemEV_biyakucream3 == 1"]
 [call storage="EV_item_biyaku3.ks" target="*top"]
 

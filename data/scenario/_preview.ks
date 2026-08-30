@@ -19,9 +19,9 @@
 [chara_hide  name="kankei"  time="0"  wait="true"  pos_mode="false"  ]
 [call  storage="system.ks"  target="*fade_out"  ]
 [tb_start_text mode=1 ]
-Tương thích hoàn hảo trên mọi thiết bị và trình duyệt.[p]
-Một kiệt tác Visual Novel đã sẵn sàng trong tay bạn.[p]
-Hãy đắm chìm vào thế giới đầy mê hoặc của HOME (ROOM).[p]
+Nagi「...Cái gì thế này. Trong thùng rác... có bao cao su sao...?」[p]
+Nagi「...Cái này, đã qua sử dụng rồi sao......? Ơ... th-thế này là sao chứ.........?」[p]
+Nagi「...Không muốn đâu...... Kinh tởm quá...... Mình không muốn nghĩ gì thêm nữa đâu......」[p]
 [_tb_end_text]
 
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
@@ -32,4 +32,4 @@ Hãy đắm chìm vào thế giới đầy mê hoặc của HOME (ROOM).[p]
 [tb_eval  exp="f.keikaido+=2"  name="keikaido"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
 [tb_eval  exp="f.kankei+=7"  name="kankei"  cmd="+="  op="t"  val="7"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
-[return ]
+[return  

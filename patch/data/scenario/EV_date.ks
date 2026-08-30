@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_EV_date.ks]
 
 [call  storage="ui_onoff.ks"  target="*UI_on"  ]
@@ -571,4 +572,4 @@ Tôi tự nhủ trong lòng rằng sẽ trở thành một người bạn trai t
 （...Nghĩ thì nghĩ vậy, nhưng với số tiền mang theo ngần này thì chắc chắn không khao nổi rồi.）[p]
 [_tb_end_text]
 
-[return ]
+[return  

@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_sansaku_famiresuEV_tubomi.ks]
 
 [call  storage="ui_base.ks"  target="*top"  ]
@@ -464,4 +465,4 @@ Tsubomi「Chỗ này, ngay gốc ngón tay... là vùng phản xạ của hệ t
 [return  ]
 *aisatu_end
 
-[jump  storage="komyu_tubomi.ks"  target="*top" ]
+[jump  storage="komyu_tubomi.ks"  target="*top"  

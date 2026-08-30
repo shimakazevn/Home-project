@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_room_yoru_save.ks]
 
 *top
@@ -17,4 +18,4 @@
 [showsave]
 [_tb_end_tyrano_code]
 
-[jump  storage="EV_OP2.ks"  target="*top" ]
+[jump  storage="EV_OP2.ks"  target="*top"  

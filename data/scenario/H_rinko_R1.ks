@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_rinko_R1.ks]
 
 [tb_start_tyrano_code]
@@ -689,4 +690,4 @@ Rinko「Cử động là trào ra mất... ưm♡ Không chứa nổi nữa đâ
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="rinko_HR1"  ]
 [call  storage="H_kaihaturesult_rinko.ks"  target="*top"  ]
-[jump  storage="EV_rinko_R.ks"  target="*EV1_back" ]
+[jump  storage="EV_rinko_R.ks"  target="*EV1_back"  

@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_komyu_purezento.ks]
 
 *purezento_nagi
@@ -164,4 +165,4 @@
 [endif]
 [_tb_end_tyrano_code]
 
-[s ]
+[s  

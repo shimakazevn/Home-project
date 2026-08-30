@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_tubomi_R2_2.ks]
 
 [tb_start_tyrano_code]
@@ -691,4 +692,4 @@ Tsubomi「Dùng con cu bịt kín lại để không bị tràn ra ngoài đi an
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="tubomi_HR2_2"  ]
 [call  storage="H_kaihaturesult_tubomi.ks"  target="*top"  ]
-[jump  storage="EV_tubomi_R.ks"  target="*EV1_back" ]
+[jump  storage="EV_tubomi_R.ks"  target="*EV1_back"  

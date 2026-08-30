@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_komyuhyouka_point_hayato.ks]
 
 [bg  time="0"  method="crossfade"  storage="komyu_insyou.png"  ]
@@ -648,4 +649,4 @@
 [tb_eval  exp="f.kan_kirainaaite_hayato=0"  name="kan_kirainaaite_hayato"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 [tb_eval  exp="f.kan_tomodati_hayato=0"  name="kan_tomodati_hayato"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 [tb_eval  exp="f.kan_zouo_hayato=0"  name="kan_zouo_hayato"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
-[return ]
+[return  

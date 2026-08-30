@@ -1,6 +1,5 @@
 
 
-
 [_tb_system_call storage=system/_name.ks]
 
 [tb_image_show  time="0"  storage="default/title_logo_trial.png"  width="560"  height="240"  x=""  y=""  _clickable_img=""  name="img_1"  ]
@@ -10,15 +9,13 @@
 [wait  time="1000"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=4 ]
-Hãy nhập họ và tên của nhân vật chính (Mặc định: Hidaka Shun).
+Hãy nhập tên nhân vật chính.[p]
 [_tb_end_text]
 
 [tb_keyconfig  flag="1"  ]
-[edit  left="430"  top="392"  width="190"  height="42"  size="24"  maxchars="20"  name="f.familyname"  reflect="false"  ]
-[edit  left="640"  top="392"  width="190"  height="42"  size="24"  maxchars="20"  name="f.name"  reflect="false"  ]
+[edit  left="458"  top="392"  width="170"  height="40"  size="30"  maxchars="5"  name="f.familyname"  reflect="false"  ]
+[edit  left="648"  top="392"  width="170"  height="40"  size="30"  maxchars="5"  name="f.name"  reflect="false"  ]
 [iscript]
-if(!f.familyname || f.familyname == "日高") f.familyname = "Hidaka";
-if(!f.name || f.name == "舜") f.name = "Shun";
 $(".text_box").eq(0).val(f.familyname);
 $(".text_box").eq(1).val(f.name);
 [endscript]
@@ -34,18 +31,18 @@ $(".text_box").eq(1).val(f.name);
 [commit  ]
 [cm  ]
 [tb_start_text mode=4 ]
-Tên của bạn là [emb exp="f.familyname"] [emb exp="f.name"] phải không?
+Tên của bạn là [emb exp="f.familyname"] [emb exp="f.name"] phải không?[p]
 [_tb_end_text]
 
-[glink  color="btn_05_black"  storage="name.ks"  size="20"  text="Đồng ý"  x="430"  y="260"  width="471"  height="50"  _clickable_img=""  target="*yes"  ]
+[glink  color="btn_05_black"  storage="name.ks"  size="20"  text="Có / Đồng ý"  x="430"  y="260"  width="471"  height="50"  _clickable_img=""  target="*yes"  ]
 [glink  color="btn_05_black"  storage="name.ks"  size="20"  text="Không"  x="430"  y="370"  width="471"  height="50"  _clickable_img=""  target="*no"  ]
 [s  ]
 *no
 
 [cm  ]
 [tb_start_tyrano_code]
-[eval exp="f.familyname='Hidaka'"]
-[eval exp="f.name='Shun'"]
+[eval exp="f.familyname='日高'"]
+[eval exp="f.name='舜'"]
 [_tb_end_tyrano_code]
 
 [jump  storage="name.ks"  target="*top"  ]
@@ -121,4 +118,4 @@ Tên của bạn là [emb exp="f.familyname"] [emb exp="f.name"] phải không?
 [call  storage="komyuhyouka_hayato.ks"  target="*top"  ]
 [call  storage="komyuhyouka_rinko.ks"  target="*top"  ]
 [call  storage="komyuhyouka_tubomi.ks"  target="*top"  ]
-[jump  storage="EV_OP3.ks"  target="*skip"  ]
+[jump  storage="EV_OP3.ks"  target="*skip"  

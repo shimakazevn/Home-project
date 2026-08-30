@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_sinnyu_PC.ks]
 
 [tb_start_tyrano_code]
@@ -585,4 +586,4 @@ base.addEventListener('DOMMouseScroll', _tySlideWheelHandler, {passive:false, ca
 [舜]（Nagi......... Cảm ơn em đã chọn anh.）[p]
 [_tb_end_text]
 
-[jump  storage="sinnyu_PC.ks"  target="*end" ]
+[jump  storage="sinnyu_PC.ks"  target="*end"  

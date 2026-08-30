@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_ui_month.ks]
 
 *top
@@ -141,4 +142,4 @@
 *sun
 
 [chara_show  name="UI_youbi"  time="0"  wait="false"  storage="chara/175/dw07.png"  width="32"  height="40"  left="136"  ]
-[return ]
+[return  

@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_komyu_hayato.ks]
 
 [tb_show_message_window  ]
@@ -614,4 +615,4 @@ Hayato「Để lần sau tôi bù cho nhé.[r]Tôi cũng có nhiều chuyện mu
 [舜]（Mà khoan, tại sao mình lại phải tặng quà cho hắn cơ chứ.）[p]
 [_tb_end_text]
 
-[jump  storage="komyu_hayato.ks"  target="*top" ]
+[jump  storage="komyu_hayato.ks"  target="*top"  

@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_nagi_J2_2.ks]
 
 [tb_start_tyrano_code]
@@ -685,4 +686,4 @@ Nagi「Ưm... hà, a... nhúc nhích là trào ra mất...♡ Chảy tong tỏng
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="nagi_HJ2_2"  ]
 [call  storage="H_kaihaturesult_nagi.ks"  target="*top"  ]
-[jump  storage="EV_nagi_J.ks"  target="*EV2_back" ]
+[jump  storage="EV_nagi_J.ks"  target="*EV2_back"  

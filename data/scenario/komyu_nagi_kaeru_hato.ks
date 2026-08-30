@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_komyu_nagi_kaeru_hato.ks]
 
 *set
@@ -17,4 +18,4 @@ $('.heart_active').css({
 });
 [endscript]
 
-[return ]
+[return  

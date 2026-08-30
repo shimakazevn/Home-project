@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_sinnyu_nagi_bussyoku_hayato.ks]
 
 [tb_start_tyrano_code]
@@ -201,4 +202,4 @@
 [return  ]
 [bg  time="0"  method="crossfade"  storage="sin_nagi_haharoom_bussyoku.png"  ]
 [tb_image_show  time="1000"  storage="default/d_ev.gif"  width="80"  height="80"  x="223"  y="127"  _clickable_img=""  name="img_80"  ]
-[tb_image_show  time="1000"  storage="default/d_ev.gif"  width="80"  height="80"  x="392"  y="404"  _clickable_img="" ]
+[tb_image_show  time="1000"  storage="default/d_ev.gif"  width="80"  height="80"  x="392"  y="404"  _clickable_img=""  

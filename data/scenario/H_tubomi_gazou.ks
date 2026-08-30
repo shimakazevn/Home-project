@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_tubomi_gazou.ks]
 
 *supiritasu_yukkuri_cam1
@@ -137,4 +138,4 @@
 *3P_rinko_cam2
 
 [playse  volume="100"  time="1000"  buf="0"  storage="H01_20_02_01_se.mp3"  loop="true"  ]
-[return ]
+[return  

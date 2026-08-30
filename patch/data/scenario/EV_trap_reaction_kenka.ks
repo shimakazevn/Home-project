@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_EV_trap_reaction_kenka.ks]
 
 [tb_start_tyrano_code]
@@ -179,4 +180,4 @@ Nagi「......Ngủ ngon nhé, Shun-chan.」[p]
 [call  storage="ui_onoff.ks"  target="*UI_on"  ]
 [stopbgm  time="1000"  fadeout="true"  ]
 [call  storage="system.ks"  target="*fade_out"  ]
-[return ]
+[return  

@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_EV_nagi_R.ks]
 
 [tb_start_tyrano_code]
@@ -281,4 +282,4 @@ Nagi「Của anh Shun... Em chỉ là của riêng anh Shun thôi...」[p]
 [call  storage="ui_onoff.ks"  target="*UI_off"  ]
 [call  storage="character.ks"  target="*taijyou"  ]
 [call  storage="BGM.ks"  target="*love_R"  ]
-[return ]
+[return  

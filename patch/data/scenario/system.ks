@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_system.ks]
 
 [tb_start_tyrano_code]
@@ -132,4 +133,4 @@ $("#input_blocker").remove();
 [start_keyconfig]
 [_tb_end_tyrano_code]
 
-[return ]
+[return  

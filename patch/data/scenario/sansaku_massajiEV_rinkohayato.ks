@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_sansaku_massajiEV_rinkohayato.ks]
 
 [call  storage="ui_base.ks"  target="*top"  ]
@@ -97,4 +98,4 @@ Rinko「Bí mật... Khc, đúng không nào? Shun-kun.」[p]
 
 [call  storage="komyuhyouka_rinko.ks"  target="*top"  ]
 [call  storage="komyuhyouka_hayato.ks"  target="*top"  ]
-[jump  storage="sansaku.ks"  target="*end" ]
+[jump  storage="sansaku.ks"  target="*end"  

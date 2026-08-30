@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_rinko_J2.ks]
 
 [tb_start_tyrano_code]
@@ -690,4 +691,4 @@ Rinko「Ưm♡ Phù♡ Em nói thế thì... cơ thể chị tự động phản
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="rinko_HJ2"  ]
 [call  storage="H_kaihaturesult_rinko.ks"  target="*top"  ]
-[jump  storage="EV_rinko_J.ks"  target="*EV1_back" ]
+[jump  storage="EV_rinko_J.ks"  target="*EV1_back"  

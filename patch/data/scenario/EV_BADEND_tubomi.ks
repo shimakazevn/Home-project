@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_EV_BADEND_tubomi.ks]
 
 [tb_start_tyrano_code]
@@ -26,7 +27,7 @@ Nagi là của tôi, mãi mãi là như vậy.[p]
 Tôi khẽ hôn lên trán Nagi một nụ hôn dịu dàng.[p]
 Em ấy mỉm cười trong giấc mơ, ôm tôi chặt hơn một chút.[p]
 Một sự bình yên hiếm hoi sau chuỗi ngày toan tính và dục vọng.[p]
-Nhưng tôi biết, ngọn lửa ham muốn sẽ không dừng lại ở đây.[p]
+[舜]「Chắc cũng đến lúc nghỉ việc làm thêm ở chỗ chị Rinko rồi」[p]
 Ngày mai, sẽ lại có thêm những trò chơi mới thú vị hơn.[p]
 Và Nagi sẽ luôn là bạn đồng hành trung thành nhất của tôi.[p]
 Cuộc sống này, cuối cùng cũng trở nên đáng sống rồi.[p]
@@ -46,4 +47,4 @@ location.href="./index.html";
 [endscript]
 [_tb_end_tyrano_code]
 
-[s ]
+[s  

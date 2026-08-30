@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_sinnyu_nagi_haiti.ks]
 
 *top0
@@ -136,4 +137,4 @@
 [jump target="*top"]
 [_tb_end_tyrano_code]
 
-[jump  storage="sinnyu_nagi_haiti.ks"  target="*top" ]
+[jump  storage="sinnyu_nagi_haiti.ks"  target="*top"  

@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_kaihaturesult_rinko_gauge.ks]
 
 *set
@@ -17,4 +18,4 @@ $('.kaihatu_active').css({
 });
 [endscript]
 
-[return ]
+[return  

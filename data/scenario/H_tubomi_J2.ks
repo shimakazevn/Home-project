@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_tubomi_J2.ks]
 
 [tb_start_tyrano_code]
@@ -694,4 +695,4 @@ Tsubomi「Từ nãy tới giờ... Đầu khấc cứ cọ sát thẳng vào c�
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="tubomi_HJ2"  ]
 [call  storage="H_kaihaturesult_tubomi.ks"  target="*top"  ]
-[jump  storage="EV_tubomi_J.ks"  target="*EV2_back" ]
+[jump  storage="EV_tubomi_J.ks"  target="*EV2_back"  

@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_EV_item_Spirytus_tubomi.ks]
 
 [tb_start_tyrano_code]
@@ -31,13 +32,13 @@ HOME (ROOM) - Bản Việt Hóa Hoàn Tất 100%.[p]
 
 [cm  ]
 [tb_start_text mode=1 ]
-Shimakaze VN Translation Team.[p]
+[舜]（Thôi vậy. Lần này bỏ qua đi）[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
 Chúc bạn có những giờ phút trải nghiệm game thật tuyệt vời![p]
 Hẹn gặp lại trong các dự án Visual Novel tiếp theo![p]
-Trân trọng cảm ơn tất cả các bạn đã ủng hộ![p]
+Chỉ số hưng phấn tăng lên[resetfont][p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP2"  ]
@@ -71,28 +72,28 @@ Hoàn tất kịch bản đặc biệt.[p]
 
 [tb_start_text mode=1 ]
 #蕾
-Mở khóa toàn bộ thư viện ảnh CG và âm nhạc.[p]
+Tsubomi「Lần sau em muốn đi thử quầy buffet salad cơ. Ở đó á, được ăn thỏa thích luôn nha~」[p]
 Bạn có thể xem lại tất cả các cảnh trong menu Kỷ niệm.[p]
 #蕾
-Cảm ơn vì đã chơi hết toàn bộ các tuyến nhân vật.[p]
-Thành tựu cao nhất: Bậc Thầy Chiếm Đoạt.[p]
+Tsubomi「Mà nói chứ, giá mà ăn nhiều cũng không bị béo thì tốt biết mấy~」[p]
+[舜]「Đầy đặn mũm mĩm một chút cũng có sao đâu?」[p]
 #蕾
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_01c.gif"] Toàn bộ bí mật của thị trấn đã được khám phá trọn vẹn.[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_01c.gif"]Tsubomi「Aahaha! Đó là suy nghĩ của riêng anh thôi đúng không hả? Fufufu」[p]
 Tất cả các kết thúc đã được mở khóa thành công.[p]
 Dữ liệu lưu trữ đã được đồng bộ hoàn tất.[p]
 #蕾
-Hệ thống sẵn sàng cho chế độ Chơi Lại (New Game+).[p]
-Bảo lưu toàn bộ điểm kỹ năng và chỉ số đã đạt được.[p]
+Tsubomi「Ơ kìa? Lạ thế nhờ... Mặt đất cứ bồng bềnh bồng bềnh ấy...」[p]
+[舜]（Đúng là thuốc Spirytus tác dụng ghê thật đấy...）[p]
 Khởi động lại vòng lặp với những trải nghiệm phong phú hơn.[p]
-Một thế giới mới đang chờ đợi bạn khám phá.[p]
+[舜]「Này này, nguy hiểm quá. Em thấy trong người khó chịu à?」[p]
 #蕾
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif"] Hãy tận hưởng trò chơi theo cách riêng của bạn.[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif"]Tsubomi「Không saooo hết á. Ufufu, trong người đang thấy sướng lắm luôn nè~」[p]
 Trân trọng cảm ơn tác giả gốc đã tạo nên một tác phẩm tuyệt vời.[p]
-Bản địa hóa tiếng Việt thực hiện với tình yêu dành cho Visual Novel.[p]
+[舜]「Vào đâu đó nghỉ tạm một lát nhé...」[p]
 #蕾
-Bảo lưu toàn bộ bản quyền thuộc về nhà sản xuất gốc.[p]
-Mọi đóng góp ý kiến xin gửi về nhóm dịch Shimakaze VN.[p]
-Dự án hoàn thành vào ngày 29 tháng 08 năm 2026.[p]
+Tsubomi「Đừng có bảo là vào khách sạn đấy nhá~? Tôi không thèm vào khách sạn với anh đâu đấy nhé~!」[p]
+[舜]（Chậc... Đang tính đưa vào khách sạn, thế mà chỗ này vẫn còn tỉnh táo gớm）[p]
+[舜]「Biết rồi. Ngay gần đây là tiệm Refre rồi. Đi nào. Giờ tiệm cũng đóng cửa hết khách rồi nên không sao đâu」[p]
 [_tb_end_text]
 
 [stopbgm  time="1000"  fadeout="true"  ]
@@ -179,4 +180,4 @@ Tôi mở lại bức ảnh chụp tối qua một lần nữa, chậm rãi ng�
 
 [tb_eval  exp="f.itemEV_supiritasu_tubomi=2"  name="itemEV_supiritasu_tubomi"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
 [wait  time="1500"  ]
-[return ]
+[return  

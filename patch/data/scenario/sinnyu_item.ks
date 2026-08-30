@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_sinnyu_item.ks]
 
 [bg  time="0"  method="crossfade"  storage="sin_nagi_DK.png"  ]
@@ -536,7 +537,7 @@
 
 [tb_start_tyrano_code]
 ;item1ボタン
-[button storage=sinnyu_item.ks target=*item_1_nagi_ev graphic=shinnyu_item1.png x=1088 y=8 name="sinnyu" hint=Thuốc kích dục]
+[button storage=sinnyu_item.ks target=*item_1_nagi_ev graphic=shinnyu_item1.png x=1088 y=8 name="sinnyu" hint=媚薬]
 [_tb_end_tyrano_code]
 
 [return  ]
@@ -544,7 +545,7 @@
 
 [tb_start_tyrano_code]
 ;item2ボタン
-[button storage=sinnyu_item.ks target=*item_2_nagi_ev graphic=shinnyu_item2.png x=1136 y=8 name="sinnyu" hint=Thuốc kích dụcプレミアム]
+[button storage=sinnyu_item.ks target=*item_2_nagi_ev graphic=shinnyu_item2.png x=1136 y=8 name="sinnyu" hint=媚薬プレミアム]
 [_tb_end_tyrano_code]
 
 [return  ]
@@ -552,7 +553,7 @@
 
 [tb_start_tyrano_code]
 ;item3ボタン
-[button storage=sinnyu_item.ks target=*item_3_nagi_ev graphic=shinnyu_item3.png x=1184 y=8 name="sinnyu" hint=Thuốc kích dụcクリーム]
+[button storage=sinnyu_item.ks target=*item_3_nagi_ev graphic=shinnyu_item3.png x=1184 y=8 name="sinnyu" hint=媚薬クリーム]
 [_tb_end_tyrano_code]
 
 [return  ]
@@ -560,7 +561,7 @@
 
 [tb_start_tyrano_code]
 ;item4ボタン
-[button storage=sinnyu_item.ks target=*item_4_nagi_ev graphic=shinnyu_item4.png x=1232 y=8 name="sinnyu" hint=Thuốc ngủ]
+[button storage=sinnyu_item.ks target=*item_4_nagi_ev graphic=shinnyu_item4.png x=1232 y=8 name="sinnyu" hint=睡眠薬]
 [_tb_end_tyrano_code]
 
 [return  ]
@@ -740,4 +741,4 @@ Bạn có muốn sử dụng thuốc ngủ không?
 [舜]「Tạm thời hôm nay cứ thế này để xem tình hình đã. Tham lam quá mà bị lộ thì xôi hỏng bỏng không.」[p]
 [_tb_end_text]
 
-[jump  storage="sinnyu_item.ks"  target="*item_EV_end" ]
+[jump  storage="sinnyu_item.ks"  target="*item_EV_end"  

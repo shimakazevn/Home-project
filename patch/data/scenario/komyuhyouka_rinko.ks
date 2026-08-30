@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_komyuhyouka_rinko.ks]
 
 [tb_show_message_window  ]
@@ -134,4 +135,4 @@
 [bg  time="0"  method="crossfade"  storage="black.jpg"  ]
 [tb_show_message_window  ]
 [mask_off  time="600"  effect="fadeOut"  ]
-[return ]
+[return  

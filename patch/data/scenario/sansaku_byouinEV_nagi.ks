@@ -473,4 +473,4 @@ Có lẽ vì đang là giờ ăn tối nên bệnh viện yên tĩnh hơn mọi 
 [return  ]
 *aisatu_end
 
-[jump  storage="komyu_nagi.ks"  target="*top" ]
+[jump  storage="komyu_nagi.ks"  target="*top"  

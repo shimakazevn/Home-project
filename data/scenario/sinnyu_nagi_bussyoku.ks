@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_sinnyu_nagi_bussyoku.ks]
 
 [tb_start_tyrano_code]
@@ -266,4 +267,4 @@
 [freeimage layer="2" time="0"]
 [_tb_end_tyrano_code]
 
-[return ]
+[return  

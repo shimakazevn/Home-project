@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_EV_BADEND_nagi.ks]
 
 [tb_start_tyrano_code]
@@ -76,4 +77,4 @@ location.href="./index.html";
 [endscript]
 [_tb_end_tyrano_code]
 
-[s ]
+[s  

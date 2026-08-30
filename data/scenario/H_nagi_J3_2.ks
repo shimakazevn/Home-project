@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_nagi_J3_2.ks]
 
 [tb_start_tyrano_code]
@@ -689,4 +690,4 @@ Nagi「Thành thói quen mất rồi sao...? Vừa làm tình vừa hồi hộp 
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="nagi_J3_2_0"  ]
 [call  storage="H_kaihaturesult_nagi.ks"  target="*top"  ]
-[jump  storage="EV_nagi_J.ks"  target="*EV3_back" ]
+[jump  storage="EV_nagi_J.ks"  target="*EV3_back"  

@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_EV_rinko_J.ks]
 
 [tb_start_tyrano_code]
@@ -173,4 +174,4 @@ Rinko「Đúng thế nhỉ... chúng ta cùng tắm cho nhau nhé♡」[p]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [call  storage="EV_honmei.ks"  target="*rinko"  ]
 [call  storage="komyuhyouka_rinko.ks"  target="*top"  ]
-[jump  storage="room_yoru.ks"  target="*top" ]
+[jump  storage="room_yoru.ks"  target="*top"  

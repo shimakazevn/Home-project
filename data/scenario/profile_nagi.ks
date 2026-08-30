@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_profile_nagi.ks]
 
 *top
@@ -263,4 +264,4 @@
 [jump  storage="profile_rinko.ks"  target="*top"  ]
 *tabu_tubomi
 
-[jump  storage="profile_tubomi.ks"  target="*top" ]
+[jump  storage="profile_tubomi.ks"  target="*top"  

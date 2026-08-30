@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_nagi_gauge.ks]
 
 *voice_J_1
@@ -730,4 +731,4 @@ $('.zettyou_active').css({
 
 [_tb_end_tyrano_code]
 
-[return ]
+[return  

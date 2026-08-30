@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_tubomi_hajimete.ks]
 
 [tb_start_tyrano_code]
@@ -654,4 +655,4 @@ Tsubomi「Em hạnh phúc lắm... Cảm ơn anh vì đã nâng niu lần đầu
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="tubomi_H0"  ]
 [call  storage="H_kaihaturesult_tubomi.ks"  target="*top"  ]
-[jump  storage="EV_kokuhaku_tubomi.ks"  target="*H_back" ]
+[jump  storage="EV_kokuhaku_tubomi.ks"  target="*H_back"  

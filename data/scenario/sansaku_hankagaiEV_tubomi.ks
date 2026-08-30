@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_sansaku_hankagaiEV_tubomi.ks]
 
 [call  storage="ui_base.ks"  target="*top"  ]
@@ -37,4 +38,4 @@
 [jump  storage="sansaku_hankagaiEV.ks"  target="*top2"  ]
 *hanasu
 
-[jump  storage="sansaku_famiresuEV_tubomi.ks"  target="*hanasu" ]
+[jump  storage="sansaku_famiresuEV_tubomi.ks"  target="*hanasu"  

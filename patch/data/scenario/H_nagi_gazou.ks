@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_nagi_gazou.ks]
 
 *H1_yukkuri_cam1
@@ -140,4 +141,4 @@
 
 [playse  volume="100"  time="1000"  buf="0"  storage="H01_20_02_01_se.mp3"  loop="true"  ]
 [bg  time="0"  method="crossfade"  storage="H/HR03_01_90_02B.gif"  ]
-[return ]
+[return  

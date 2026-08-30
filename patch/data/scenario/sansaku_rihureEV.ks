@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_sansaku_rihureEV.ks]
 
 [call  storage="ui_base.ks"  target="*top"  ]
@@ -62,4 +63,4 @@ Có vẻ không có người quen nào ở đây. Có nên ghé vào thử một
 （Đành chịu vậy. Hôm nay đành từ bỏ thôi.）[p]
 [_tb_end_text]
 
-[jump  storage="sansaku.ks"  target="*end" ]
+[jump  storage="sansaku.ks"  target="*end"  

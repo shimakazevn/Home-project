@@ -1,3 +1,4 @@
+]
 [tb_clear_images][mask time=200][bg  time="1"  storage="title_VoyeurCGGallery.png"  _tb_parts_type="bg"  ]
 [tb_cg_image_button  graphic="button/tou_f1.png"  storage="system/master_cg.ks"  target=""  role="sleepgame"  no_graphic="&sf._tb_cg_noimage"  time="1"  width="170"  height="111"  x="93"  y="113"  _tb_parts_type="cg_image_button"  id="tou_huro_kanki"  ]
 [tb_cg_image_button  graphic="button/tou_f2.png"  storage="system/master_cg.ks"  target=""  role="sleepgame"  no_graphic="&sf._tb_cg_noimage"  time="1"  width="170"  height="111"  x="277"  y="113"  _tb_parts_type="cg_image_button"  id="tou_huro_kanki2"  ]

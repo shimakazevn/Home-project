@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_sinnyu_byouin_rokka_haiti.ks]
 
 *top

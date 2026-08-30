@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_tubomi_R1_2.ks]
 
 [tb_start_tyrano_code]
@@ -690,4 +691,4 @@ Dẫn chuyện|Dòng tinh dịch ấm nóng lại một lần nữa tưới đ�
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="tubomi_HR1_2"  ]
 [call  storage="H_kaihaturesult_tubomi.ks"  target="*top"  ]
-[jump  storage="EV_tubomi_R.ks"  target="*EV1_back" ]
+[jump  storage="EV_tubomi_R.ks"  target="*EV1_back"  

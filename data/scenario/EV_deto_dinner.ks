@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_EV_deto_dinner.ks]
 
 [tb_show_message_window  ]
@@ -202,4 +203,4 @@ Chỉ số Hưng phấn đã tăng lên[resetfont][p]
 *cam_tubomi
 
 [tb_eval  exp="f.itemEV_idoucam_tubomi=1"  name="itemEV_idoucam_tubomi"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
-[return ]
+[return  

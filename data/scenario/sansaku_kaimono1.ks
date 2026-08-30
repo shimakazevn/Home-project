@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_sansaku_kaimono1.ks]
 
 [tb_start_tyrano_code]
@@ -52,15 +53,15 @@
 [tb_start_tyrano_code]
 ;所持数_家電
 ;盗撮用小型カメラ
-[tb_ptext_show  x="288"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có: "  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="288"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="345"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_com"  edge="undefined"  shadow="undefined"  ]
 
 ;防水小型カメラ
-[tb_ptext_show  x="550"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có: "  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="550"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="607"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_com_bousui"  edge="undefined"  shadow="undefined"  ]
 
 ;移動用小型カメラ
-[tb_ptext_show  x="817"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có: "  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="817"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="874"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_com_idou"  edge="undefined"  shadow="undefined"  ]
 [_tb_end_tyrano_code]
 
@@ -81,7 +82,7 @@
 [button target=*gift enterimg=../fgimage/default/shop_gift_ON.png clickimg=../fgimage/default/shop_gift_ON.png x=800 y=56 graphic=../fgimage/default/shop_gift_OFF.png]
 ;R18
 [button target=*R18 enterimg=../fgimage/default/shop_R18_ON.png clickimg=../fgimage/default/shop_R18_ON.png x=1024 y=56 graphic=../fgimage/default/shop_R18_OFF.png]
-;Đi về
+;帰る
 [button target=*kaeru enterimg=../fgimage/default/shop_back_ON.png clickimg=../fgimage/default/shop_back_ON.png x=1160 y=448 graphic=../fgimage/default/shop_back_OFF.png]
 [_tb_end_tyrano_code]
 
@@ -129,16 +130,16 @@
 [tb_start_tyrano_code]
 ;所持数_書籍
 ;活力の道・上巻
-[tb_ptext_show  x="288"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có: "  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="288"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="345"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_book_katuryoku_s"  edge="undefined"  shadow="undefined"  ]
 
-;Thuốc kích dục
+;媚薬
 ;活力の道・下巻
-[tb_ptext_show  x="550"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có: "  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="550"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="607"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_book_katuryoku2_s"  edge="undefined"  shadow="undefined"  ]
 
 ;社会力の極意
-[tb_ptext_show  x="817"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có: "  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="817"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="874"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_book_syakairyoku_s"  edge="undefined"  shadow="undefined"  ]
 [_tb_end_tyrano_code]
 
@@ -159,7 +160,7 @@
 [button target=*gift enterimg=../fgimage/default/shop_gift_ON.png clickimg=../fgimage/default/shop_gift_ON.png x=800 y=56 graphic=../fgimage/default/shop_gift_OFF.png]
 ;R18
 [button target=*R18 enterimg=../fgimage/default/shop_R18_ON.png clickimg=../fgimage/default/shop_R18_ON.png x=1024 y=56 graphic=../fgimage/default/shop_R18_OFF.png]
-;Đi về
+;帰る
 [button target=*kaeru enterimg=../fgimage/default/shop_back_ON.png clickimg=../fgimage/default/shop_back_ON.png x=1160 y=448 graphic=../fgimage/default/shop_back_OFF.png]
 [_tb_end_tyrano_code]
 
@@ -191,19 +192,19 @@
 [image layer="2" x="64" y="56" storage="default/shop_base_drug.png" time="0" ]
 
 ;Sold outの表示
-;Thuốc ngủ
+;睡眠薬
 [if exp="f.item_4_s== 1 "]
 [image layer="2" x="120" y="152" storage="default/soldout.png" time="0" ]
 [endif]
-;Thuốc kích dục
+;媚薬
 [if exp="f.item_1_s== 1 "]
 [image layer="2" x="384" y="152" storage="default/soldout.png" time="0" ]
 [endif]
-;Thuốc kích dụcプレミアム
+;媚薬プレミアム
 [if exp="f.item_2_s== 1 "]
 [image layer="2" x="648" y="152" storage="default/soldout.png" time="0" ]
 [endif]
-;Thuốc kích dụcクリーム
+;媚薬クリーム
 [if exp="f.item_3_s== 1 "]
 [image layer="2" x="912" y="152" storage="default/soldout.png" time="0" ]
 [endif]
@@ -215,24 +216,24 @@
 
 [tb_start_tyrano_code]
 ;所持数_薬品
-;Thuốc ngủ
-[tb_ptext_show  x="288"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có: "  edge="undefined"  shadow="undefined"  ]
+;睡眠薬
+[tb_ptext_show  x="288"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="345"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_4"  edge="undefined"  shadow="undefined"  ]
 
-;Thuốc kích dục
-[tb_ptext_show  x="550"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có: "  edge="undefined"  shadow="undefined"  ]
+;媚薬
+[tb_ptext_show  x="550"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="607"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_1"  edge="undefined"  shadow="undefined"  ]
 
-;Thuốc kích dụcプレミアム
-[tb_ptext_show  x="817"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có: "  edge="undefined"  shadow="undefined"  ]
+;媚薬プレミアム
+[tb_ptext_show  x="817"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="874"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_2"  edge="undefined"  shadow="undefined"  ]
 
-;Thuốc kích dụcクリーム
-[tb_ptext_show  x="1079"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có: "  edge="undefined"  shadow="undefined"  ]
+;媚薬クリーム
+[tb_ptext_show  x="1079"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="1136"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_3"  edge="undefined"  shadow="undefined"  ]
 
 ;スピリタスカプセル
-[tb_ptext_show  x="288"  y="453"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có: "  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="288"  y="453"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="345"  y="453"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_supiritasu"  edge="undefined"  shadow="undefined"  ]
 [_tb_end_tyrano_code]
 
@@ -253,25 +254,25 @@
 [button target=*gift enterimg=../fgimage/default/shop_gift_ON.png clickimg=../fgimage/default/shop_gift_ON.png x=800 y=56 graphic=../fgimage/default/shop_gift_OFF.png]
 ;R18
 [button target=*R18 enterimg=../fgimage/default/shop_R18_ON.png clickimg=../fgimage/default/shop_R18_ON.png x=1024 y=56 graphic=../fgimage/default/shop_R18_OFF.png]
-;Đi về
+;帰る
 [button target=*kaeru enterimg=../fgimage/default/shop_back_ON.png clickimg=../fgimage/default/shop_back_ON.png x=1160 y=448 graphic=../fgimage/default/shop_back_OFF.png]
 [_tb_end_tyrano_code]
 
 [tb_start_tyrano_code]
 ;購入可能アイテムの呼び出し
-;Thuốc ngủ
+;睡眠薬
 [if exp="f.item_4_s== 0 "]
 [call storage="sansaku_kaimono_item.ks" target="*suimin"]
 [endif]
-;Thuốc kích dục
+;媚薬
 [if exp="f.item_1_s== 0"]
 [call storage="sansaku_kaimono_item.ks" target="*biyaku"]
 [endif]
-;Thuốc kích dụcプレミアム
+;媚薬プレミアム
 [if exp="f.item_2_s== 0"]
 [call storage="sansaku_kaimono_item.ks" target="*biyaku2"]
 [endif]
-;Thuốc kích dụcクリーム
+;媚薬クリーム
 [if exp="f.item_3_s== 0"]
 [call storage="sansaku_kaimono_item.ks" target="*biyaku3"]
 [endif]
@@ -322,27 +323,27 @@
 [tb_start_tyrano_code]
 ;所持数_プレゼント
 ;コーヒーギフト
-[tb_ptext_show  x="288"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có: "  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="288"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="345"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.pure_coffee"  edge="undefined"  shadow="undefined"  ]
 
 ;レトロゲーム
-[tb_ptext_show  x="550"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có: "  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="550"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="607"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.pure_game"  edge="undefined"  shadow="undefined"  ]
 
 ;化粧品
-[tb_ptext_show  x="817"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có: "  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="817"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="874"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.pure_konpakuto"  edge="undefined"  shadow="undefined"  ]
 
 ;花束
-[tb_ptext_show  x="1079"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có: "  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="1079"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="1136"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.pure_hana"  edge="undefined"  shadow="undefined"  ]
 
 ;プラチナアクセ
-[tb_ptext_show  x="288"  y="453"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có: "  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="288"  y="453"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="345"  y="453"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.pure_akuse"  edge="undefined"  shadow="undefined"  ]
 
 ;お菓子ギフトセット
-[tb_ptext_show  x="550"  y="453"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có: "  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="550"  y="453"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="607"  y="453"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.pure_wagasi"  edge="undefined"  shadow="undefined"  ]
 
 [_tb_end_tyrano_code]
@@ -364,7 +365,7 @@
 [button target=*gift enterimg=../fgimage/default/shop_gift_ON.png clickimg=../fgimage/default/shop_gift_ON.png x=800 y=56 graphic=../fgimage/default/shop_gift_ON.png]
 ;R18
 [button target=*R18 enterimg=../fgimage/default/shop_R18_ON.png clickimg=../fgimage/default/shop_R18_ON.png x=1024 y=56 graphic=../fgimage/default/shop_R18_OFF.png]
-;Đi về
+;帰る
 [button target=*kaeru enterimg=../fgimage/default/shop_back_ON.png clickimg=../fgimage/default/shop_back_ON.png x=1160 y=448 graphic=../fgimage/default/shop_back_OFF.png]
 [_tb_end_tyrano_code]
 
@@ -425,11 +426,11 @@
 [tb_start_tyrano_code]
 ;R18
 ;高級ボディーオイル
-[tb_ptext_show  x="288"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có: "  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="288"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="345"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_oil_s"  edge="undefined"  shadow="undefined"  ]
 
 ;SM拘束具
-[tb_ptext_show  x="550"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="Đang có: "  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="550"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="所持数："  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="607"  y="293"  size="13"  color="0xffffff"  time="0"  anim="false"  face="undefined"  text="&f.item_sm_s"  edge="undefined"  shadow="undefined"  ]
 [_tb_end_tyrano_code]
 
@@ -450,7 +451,7 @@
 [button target=*gift enterimg=../fgimage/default/shop_gift_ON.png clickimg=../fgimage/default/shop_gift_ON.png x=800 y=56 graphic=../fgimage/default/shop_gift_OFF.png]
 ;R18
 [button target=*R18 enterimg=../fgimage/default/shop_R18_ON.png clickimg=../fgimage/default/shop_R18_ON.png x=1024 y=56 graphic=../fgimage/default/shop_R18_ON.png]
-;Đi về
+;帰る
 [button target=*kaeru enterimg=../fgimage/default/shop_back_ON.png clickimg=../fgimage/default/shop_back_ON.png x=1160 y=448 graphic=../fgimage/default/shop_back_OFF.png]
 [_tb_end_tyrano_code]
 
@@ -479,4 +480,4 @@
 [舜]「Được rồi, chắc thế này là đủ.」[p]
 [_tb_end_text]
 
-[jump  storage="sansaku.ks"  target="*end" ]
+[jump  storage="sansaku.ks"  target="*end"  

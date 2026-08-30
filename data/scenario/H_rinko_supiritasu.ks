@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_rinko_supiritasu.ks]
 
 [tb_start_tyrano_code]
@@ -646,4 +647,4 @@ Rinko「Không chứa hết nổi... trào ra mất...♡ Chắc chắn là ch�
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="rinko_item_supiritasu"  ]
 [call  storage="H_kaihaturesult_rinko.ks"  target="*top"  ]
-[jump  storage="EV_item_Spirytus_rinko.ks"  target="*H_back" ]
+[jump  storage="EV_item_Spirytus_rinko.ks"  target="*H_back"  

@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_sansaku_byouinEV.ks]
 
 [call  storage="ui_base.ks"  target="*top"  ]
@@ -75,4 +76,4 @@ Nagi「Dạo này cậu cố gắng lắm đấy. Đừng làm việc quá sức
 （Cũng không có gì đáng bận tâm, mình không có việc gì đặc biệt ở đây cả.）[p]
 [_tb_end_text]
 
-[jump  storage="sansaku.ks"  target="*end" ]
+[jump  storage="sansaku.ks"  target="*end"  

@@ -1,3 +1,4 @@
+]
 [_tb_system_call storage=system/_H_nagi_J1_2.ks]
 
 [tb_start_tyrano_code]
@@ -666,4 +667,4 @@ Nagi「Với thứ thuốc này... khéo em dính bầu luôn mất♡」[p]
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="nagi_HJ1_1"  ]
 [call  storage="H_kaihaturesult_nagi.ks"  target="*top"  ]
-[jump  storage="EV_nagi_J.ks"  target="*H1_back" ]
+[jump  storage="EV_nagi_J.ks"  target="*H1_back"  
