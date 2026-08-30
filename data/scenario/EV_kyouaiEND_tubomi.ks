@@ -32,16 +32,16 @@ Mỗi lần bị đánh trượt ở vòng phỏng vấn hay xét duyệt, trái
 Đến khi nhận ra, em ấy thậm chí còn chẳng biết bản thân mình là ai nữa──.[p]
 [舜]「Vậy hôm nay chúng ta lại tập tạo dáng nhé. Cởi quần áo ra rồi ngồi xổm xuống đi.」[p]
 Vì vẫn chưa thể từ bỏ, em ấy ngày nào cũng chấp nhận 『khóa học』 do tôi đề xuất.[p]
-#蕾
+#Tsubomi
 Tsubomi「Em biết rồi... Nhờ anh ạ.」[p]
 [舜]「Em còn nhớ phải làm thế nào không?」[p]
 Tsubomi cởi bỏ quần áo, phơi bày cơ thể mảnh mai rồi quỳ gối xuống trước mặt tôi.[p]
 Em ấy ngậm lấy dương vật của tôi một cách đầy quen thuộc, rồi bắt đầu mút mát.[r]Vừa phát ra tiếng chùn chụt, em ấy vừa ngước đôi mắt lên nhìn tôi.[p]
 [舜]「A~, giỏi lắm giỏi lắm. Góc độ đẹp đấy... Anh hưng phấn lắm rồi.」[p]
-#蕾
+#Tsubomi
 Tsubomi「Ưm, phù, chụt, chụt chụt. Trông em có đáng yêu không?」[p]
 [舜]「Đáng yêu lắm... Tsubomi quả nhiên là một nhân tài để trở thành người mẫu đấy.」[p]
-#蕾
+#Tsubomi
 Tsubomi「Ưm, chụt, chụt, em phải cố gắng hơn nữa mới được...」[p]
 Sau khi mút mát cẩn thận cho đến khi dương vật cương cứng, Tsubomi dang rộng hai chân ra.[p]
 [舜]「Vậy thì, hôm nay cũng quay phim nhé. Anh sẽ biến em thành người nổi tiếng trên mạng luôn.」[p]
@@ -53,25 +53,25 @@ Sau khi mút mát cẩn thận cho đến khi dương vật cương cứng, Tsub
 Tôi cầm điện thoại lên, đưa ống kính về phía em ấy, rồi không chút do dự nhấn nút ghi hình.[p]
 Qua màn hình, hình ảnh Tsubomi đang dang rộng hai chân, phơi bày cô bé ướt đẫm hiện lên rõ nét.[p]
 [舜]「Nào, tự giới thiệu bản thân đi. Chúng ta đã luyện tập nhiều lắm rồi mà nhỉ?」[p]
-#蕾
+#Tsubomi
 Tsubomi「Em làm được... Em là Tsubomi, người mẫu tương lai đây ạ♡」[p]
 Tôi chầm chậm đâm vào bên trong Tsubomi khi em ấy vừa cất giọng ngọt ngào.[r]Tôi chĩa camera quay lại cảnh dương vật đang trơn tuột chìm sâu vào bên trong.[p]
 Gương mặt thanh tú dần méo mó đi vì khoái cảm đã được ghi lại rõ nét.[p]
-#蕾
+#Tsubomi
 Tsubomi「Ưm! Aaa♡ To quá♡ Hà, đâm vào tận sâu bên trong rồi...♡」[p]
 Khi tôi bắt đầu chuyển động hông, Tsubomi cất lên những tiếng rên rỉ đáng yêu như một chú cún con.[p]
 Vừa nghe tiếng dập ra dập vào, gương mặt em ấy càng lúc càng buông thả.[p]
-#蕾
+#Tsubomi
 Tsubomi「Hiu, auu♡ Tuyệt quá♡ A♡ Sướng quá đi mất ạ♡」[p]
-#蕾
+#Tsubomi
 Tsubomi「Sắp phải đi thử giọng rồi, lỡ mà có thai thì phải làm sao đây♡ Bụng em sẽ to lên mất thôi.」[p]
 Một Tsubomi từng mạnh mẽ là thế, giờ đây lại đang rên rỉ ngọt ngào trước mặt tôi, tan chảy trong khoái cảm.[p]
 Đôi lông mày nhíu lại, đôi mắt ngấn nước ngước lên nhìn tôi, những ngón tay run rẩy bám chặt lấy ga giường――[p]
 Dáng vẻ không chút phản kháng, buông thả theo bản năng của em ấy, khiến tôi thấy đáng yêu không chịu nổi, và hưng phấn đến phát điên.[p]
 [舜]「Vậy thì dừng lại nhé?」[p]
-#蕾
+#Tsubomi
 Tsubomi「......Không chịu đâu...! Em không muốn dừng lại... Nếu thế thì... làm người mẫu gì đó sao cũng được...」[p]
-#蕾
+#Tsubomi
 Tsubomi「Em chỉ muốn sống cả đời này chìm đắm trong sung sướng thôi♡」[p]
 Có thể sẽ bị nói là thiên vị người nhà, nhưng quả thực em ấy... chắc chắn là có sức hút.[p]
 Thế nhưng, vì không thể tin tưởng cho đến khi có kết quả, không thể cố gắng trụ lại đến cùng nên mới không đạt được thành quả gì.[p]
@@ -81,7 +81,7 @@ Rõ ràng là không thể nào nghe thấy tiếng lòng của tôi, vậy mà 
 Đôi mắt em ấy sáng rực lên nhưng lại vẩn đục vì khoái cảm, chẳng còn lấy một chút lý trí nào nữa.[p]
 [舜]「Nào, cảm nhận nhiều hơn nữa đi. Để cho thật nhiều người được chiêm ngưỡng "vẻ mặt sung sướng" của em chứ.」[p]
 [舜]（...Tùy vào cách biên tập, có khi lại nổi tiếng ấy chứ?）[p]
-#蕾
+#Tsubomi
 Tsubomi「Được mọi người chiêm ngưỡng sao? Em vui lắm♡ A... ra, ra mất, em ra mất thôi♡」[p]
 Không ngờ mối quan hệ giữa tôi và Tsubomi lại đi đến kết cục thế này.[p]
 Cả tình cảm dành cho Nagi, cả ước mơ của Tsubomi, những thứ đáng lẽ ra từng rất quan trọng hồi đó, [r]giờ đây dường như đã trở thành quá khứ xa xôi.[p]

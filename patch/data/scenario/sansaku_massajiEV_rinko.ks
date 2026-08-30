@@ -24,7 +24,7 @@ Bên trong tiệm khá vắng vẻ, một khoảng thời gian êm đềm vẫn 
 [_tb_end_text]
 
 [glink  color="btn_03_black"  storage="sansaku_massajiEV_rinko.ks"  size="20"  text="Bắt chuyện với Rinko"  x="415"  y="180"  width="497"  height="57"  _clickable_img=""  target="*hanasu"  ]
-[glink  color="btn_03_black"  storage="sansaku_massajiEV.ks"  size="20"  text="Massage thư giãn (Giảm Stress / -5,000 Yên)"  x="415"  y="290"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
+[glink  color="btn_03_black"  storage="sansaku_massajiEV.ks"  size="20"  text="Massage thư giãn (Giảm Stress"  x="415"  y="290"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
 [glink  color="btn_03_black"  storage="sansaku.ks"  size="20"  text="Quay về nhà"  x="415"  y="400"  width="497"  height="57"  _clickable_img=""  target="*end"  ]
 [s  ]
 *hanasu
@@ -69,7 +69,7 @@ Bên trong tiệm khá vắng vẻ, một khoảng thời gian êm đềm vẫn 
 
 [tb_start_text mode=1 ]
 [舜]「Cô Rinko ơi.」[p]
-#凛子
+#Rinko
 Rinko「A... ừm... cháu để quên thứ gì sao? Có chuyện gì vậy?」[p]
 [_tb_end_text]
 
@@ -145,7 +145,7 @@ Rinko「A... ừm... cháu để quên thứ gì sao? Có chuyện gì vậy?」
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-#凛子
+#Rinko
 Rinko「Shun-kun. Cháu vất vả rồi.[r]Có phải cháu đến để học hỏi về massage không? Khc, cháu nhiệt tình thật đấy.」[p]
 [_tb_end_text]
 
@@ -221,7 +221,7 @@ Rinko「Shun-kun. Cháu vất vả rồi.[r]Có phải cháu đến để học 
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-#凛子
+#Rinko
 Rinko「Quả nhiên là vậy. Cô đã nghĩ cách mở cửa nghe giống Shun-kun mà. Chỉ cần nghe tiếng là cô nhận ra ngay.」[p]
 [_tb_end_text]
 
@@ -236,7 +236,7 @@ Rinko「Quả nhiên là vậy. Cô đã nghĩ cách mở cửa nghe giống Shu
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-#凛子
+#Rinko
 Rinko「Chào mừng cháu. Khc, cô vừa mới nghĩ muốn gặp cháu thì cháu lại đến. Thật kỳ diệu.」[p]
 [_tb_end_text]
 
@@ -314,7 +314,7 @@ Rinko「Chào mừng cháu. Khc, cô vừa mới nghĩ muốn gặp cháu thì c
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-#凛子
+#Rinko
 Rinko「Kính chào quý khách. Quý khách đã đặt lịch trước chưa ạ?[r]Cô đùa thôi. Khc, chào cháu nhé.」[p]
 [_tb_end_text]
 

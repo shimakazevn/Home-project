@@ -268,7 +268,7 @@
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="job_daiseikou.mp3"  ]
 [tb_start_text mode=1 ]
-[舜]（Ồ, bức này...! Chụp được góc đẹp thật. Biểu cảm này của Nagi, mình muốn được ngắm nhiều hơn nữa ghê）[p]
+[font color="yellow"]Dũng khí đã tăng nhẹ[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.kankei+=1"  name="kankei"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]

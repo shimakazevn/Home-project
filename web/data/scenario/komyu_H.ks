@@ -23,7 +23,7 @@
 
 [_tb_end_tyrano_code]
 
-[glink  color="btn_05_black"  storage="komyu_H.ks"  size="20"  x="950"  y="232"  width="310"  height="58"  text="Muốn làm ở phòng Nagi"  _clickable_img=""  target="*nagi_H1_jyunai"  ]
+[glink  color="btn_05_black"  storage="komyu_H.ks"  size="20"  x="950"  y="232"  width="310"  height="58"  text="Làm ở phòng Nagi"  _clickable_img=""  target="*nagi_H1_jyunai"  ]
 [glink  color="btn_05_blue"  storage="komyu_nagi.ks"  size="20"  x="950"  y="439"  width="310"  height="58"  text="Quay lại"  _clickable_img=""  target="*top"  ]
 [tb_start_tyrano_code]
 ;ボタンの呼び出し
@@ -41,11 +41,11 @@
 [s  ]
 *nagi_H2
 
-[glink  color="btn_05_black"  storage="komyu_H.ks"  size="20"  x="950"  y="301"  width="310"  height="58"  text="Muốn làm ở bệnh viện"  _clickable_img=""  target="*nagi_H2_jyunai"  ]
+[glink  color="btn_05_black"  storage="komyu_H.ks"  size="20"  x="950"  y="301"  width="310"  height="58"  text="Làm ở bệnh viện"  _clickable_img=""  target="*nagi_H2_jyunai"  ]
 [return  ]
 *nagi_H3
 
-[glink  color="btn_05_green"  storage="komyu_H.ks"  size="20"  x="950"  y="370"  width="310"  height="58"  text="Muốn chơi cùng gel bôi trơn"  _clickable_img=""  target="*nagi_H3_jyunai"  ]
+[glink  color="btn_05_green"  storage="komyu_H.ks"  size="20"  x="950"  y="370"  width="310"  height="58"  text="Dùng gel bôi trơn"  _clickable_img=""  target="*nagi_H3_jyunai"  ]
 [return  ]
 *nagi_H1_jyunai
 
@@ -81,7 +81,7 @@ Nagi「Ừm, cứ nghĩ đến chuyện lại được gặp anh là em lại c�
 [s  ]
 *nagi_kyouai
 
-[glink  color="btn_05_black"  storage="komyu_H.ks"  size="20"  x="950"  y="232"  width="310"  height="58"  text="Muốn làm ở phòng Nagi"  _clickable_img=""  target="*nagi_H1_kyouai_talk"  ]
+[glink  color="btn_05_black"  storage="komyu_H.ks"  size="20"  x="950"  y="232"  width="310"  height="58"  text="Làm ở phòng Nagi"  _clickable_img=""  target="*nagi_H1_kyouai_talk"  ]
 [glink  color="btn_05_blue"  storage="komyu_nagi.ks"  size="20"  x="950"  y="439"  width="310"  height="58"  text="Quay lại"  _clickable_img=""  target="*top"  ]
 [tb_start_tyrano_code]
 ;ボタンの呼び出し
@@ -101,11 +101,11 @@ Nagi「Ừm, cứ nghĩ đến chuyện lại được gặp anh là em lại c�
 [s  ]
 *nagi_H2_kyouai
 
-[glink  color="btn_05_black"  storage="komyu_H.ks"  size="20"  x="950"  y="301"  width="310"  height="58"  text="Muốn làm ở ngoài ban công"  _clickable_img=""  target="*nagi_H2_kyouai_talk"  ]
+[glink  color="btn_05_black"  storage="komyu_H.ks"  size="20"  x="950"  y="301"  width="310"  height="58"  text="Làm ở ngoài ban công"  _clickable_img=""  target="*nagi_H2_kyouai_talk"  ]
 [return  ]
 *nagi_H3_kyouai
 
-[glink  color="btn_05_green"  storage="komyu_H.ks"  size="20"  x="950"  y="370"  width="310"  height="58"  text="Muốn làm ở phòng riêng của mình"  _clickable_img=""  target="*nagi_H3_kyouai_talk"  ]
+[glink  color="btn_05_green"  storage="komyu_H.ks"  size="20"  x="950"  y="370"  width="310"  height="58"  text="Làm ở phòng riêng"  _clickable_img=""  target="*nagi_H3_kyouai_talk"  ]
 [s  ]
 [return  ]
 *nagi_H1_kyouai_talk
@@ -152,7 +152,7 @@ Nagi「Có vẻ như em không thể nhịn thêm được nữa rồi...[r]Em m
 
 [_tb_end_tyrano_code]
 
-[glink  color="btn_05_black"  storage="komyu_H.ks"  size="20"  x="950"  y="301"  width="310"  height="58"  text="Muốn làm ở tiệm Massage"  _clickable_img=""  target="*rinko_H1_jyunai"  ]
+[glink  color="btn_05_black"  storage="komyu_H.ks"  size="20"  x="950"  y="301"  width="310"  height="58"  text="Làm ở tiệm massage"  _clickable_img=""  target="*rinko_H1_jyunai"  ]
 [glink  color="btn_05_blue"  storage="komyu_rinko.ks"  size="20"  x="950"  y="439"  width="310"  height="58"  text="Quay lại"  _clickable_img=""  target="*top"  ]
 [tb_start_tyrano_code]
 ;ボタンの呼び出し
@@ -165,7 +165,7 @@ Nagi「Có vẻ như em không thể nhịn thêm được nữa rồi...[r]Em m
 [s  ]
 *rinko_H2
 
-[glink  color="btn_05_black"  storage="komyu_H.ks"  size="20"  x="950"  y="370"  width="310"  height="58"  text="Muốn làm ở phòng tắm sen"  _clickable_img=""  target="*rinko_H2_jyunai"  ]
+[glink  color="btn_05_black"  storage="komyu_H.ks"  size="20"  x="950"  y="370"  width="310"  height="58"  text="Làm ở phòng tắm"  _clickable_img=""  target="*rinko_H2_jyunai"  ]
 [return  ]
 *rinko_H1_jyunai
 
@@ -187,7 +187,7 @@ Rinko「Nhưng mà, tất nhiên là phải sau khi đóng cửa tiệm đấy n
 [s  ]
 *rinko_kyouai
 
-[glink  color="btn_05_black"  storage="komyu_H.ks"  size="20"  x="950"  y="232"  width="310"  height="58"  text="Muốn làm ở tiệm Massage"  _clickable_img=""  target="*rinko_H1_kyouai_talk"  ]
+[glink  color="btn_05_black"  storage="komyu_H.ks"  size="20"  x="950"  y="232"  width="310"  height="58"  text="Làm ở tiệm massage"  _clickable_img=""  target="*rinko_H1_kyouai_talk"  ]
 [glink  color="btn_05_blue"  storage="komyu_rinko.ks"  size="20"  x="950"  y="439"  width="310"  height="58"  text="Quay lại"  _clickable_img=""  target="*top"  ]
 [tb_start_tyrano_code]
 ;ボタンの呼び出し
@@ -205,11 +205,11 @@ Rinko「Nhưng mà, tất nhiên là phải sau khi đóng cửa tiệm đấy n
 [s  ]
 *rinko_H2_kyouai
 
-[glink  color="btn_05_green"  storage="komyu_H.ks"  size="20"  x="950"  y="301"  width="310"  height="58"  text="Muốn chơi cùng gel bôi trơn"  _clickable_img=""  target="*rinko_H2_kyouai_talk"  ]
+[glink  color="btn_05_green"  storage="komyu_H.ks"  size="20"  x="950"  y="301"  width="310"  height="58"  text="Dùng gel bôi trơn"  _clickable_img=""  target="*rinko_H2_kyouai_talk"  ]
 [return  ]
 *rinko_H3_kyouai
 
-[glink  color="btn_05_green"  storage="komyu_H.ks"  size="20"  x="950"  y="370"  width="310"  height="58"  text="Muốn làm 3P cùng cả hai người"  _clickable_img=""  target="*rinko_H3_kyouai_talk"  ]
+[glink  color="btn_05_green"  storage="komyu_H.ks"  size="20"  x="950"  y="370"  width="310"  height="58"  text="Làm 3P cùng cả hai"  _clickable_img=""  target="*rinko_H3_kyouai_talk"  ]
 [return  ]
 *rinko_H1_kyouai_talk
 
@@ -266,7 +266,7 @@ Rinko「......Vậy à, cô hiểu rồi.」[p]
 [s  ]
 *tubomi_H2
 
-[glink  color="btn_05_green"  storage="komyu_H.ks"  size="20"  x="950"  y="370"  width="310"  height="58"  text="Muốn chơi cùng gel bôi trơn"  _clickable_img=""  target="*tubomi_H2_jyunai"  ]
+[glink  color="btn_05_green"  storage="komyu_H.ks"  size="20"  x="950"  y="370"  width="310"  height="58"  text="Dùng gel bôi trơn"  _clickable_img=""  target="*tubomi_H2_jyunai"  ]
 [return  ]
 *tubomi_H1_jyunai
 
@@ -308,11 +308,11 @@ Tsubomi「Cứ để đến đó rồi tận hưởng cũng được... A, tận
 [s  ]
 *tubomi_H2_kyouai
 
-[glink  color="btn_05_black"  storage="komyu_H.ks"  size="20"  x="950"  y="301"  width="310"  height="58"  text="Muốn làm ở phòng riêng của mình"  _clickable_img=""  target="*tubomi_H2_kyouai_talk"  ]
+[glink  color="btn_05_black"  storage="komyu_H.ks"  size="20"  x="950"  y="301"  width="310"  height="58"  text="Làm ở phòng riêng"  _clickable_img=""  target="*tubomi_H2_kyouai_talk"  ]
 [return  ]
 *tubomi_H3_kyouai
 
-[glink  color="btn_05_green"  storage="komyu_H.ks"  size="20"  x="950"  y="370"  width="310"  height="58"  text="Muốn làm 3P cùng cả hai người"  _clickable_img=""  target="*tubomi_H3_kyouai_talk"  ]
+[glink  color="btn_05_green"  storage="komyu_H.ks"  size="20"  x="950"  y="370"  width="310"  height="58"  text="Làm 3P cùng cả hai"  _clickable_img=""  target="*tubomi_H3_kyouai_talk"  ]
 [return  ]
 *tubomi_H1_kyouai_talk
 

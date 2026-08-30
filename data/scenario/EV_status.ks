@@ -21,7 +21,7 @@
 [bg  time="0"  method="crossfade"  storage="back_rihure_hikaesitu.png"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-Tôi hất tung đôi giày, thô bạo bước thẳng vào trong phòng.[p]
+[舜]「Nào... Bắt đầu dọn dẹp thôi」[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="hasiru3.mp3"  fadein="true"  ]
@@ -30,20 +30,20 @@ Tôi hất tung đôi giày, thô bạo bước thẳng vào trong phòng.[p]
 [stopse  time="1000"  buf="0"  ]
 [call  storage="BGM.ks"  target="*tubomi"  ]
 [tb_start_text mode=1 ]
-Tất cả các liên kết và đường dẫn đều hoạt động hoàn hảo.[p]
+Đúng lúc tôi quay lại khi nghe tiếng mở cửa, Tsubomi hoảng hốt lao thẳng vào phòng nghỉ.[p]
 Tsubomi「Nè! Khách ở Phòng 3 đang làm loạn lên kìa!」[p]
 [舜]「Hả!?」[p]
 Tsubomi「Lúc nãy gã đó định giở trò đồi bại với một bé nhân viên... Bị từ chối cái là gã quát tháo ầm ĩ rồi đá lật cả bàn... Cứ để thế này có khi có người bị thương mất...」[p]
 [chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_03c.gif"]Tsubomi「Những lúc thế này... phải làm sao bây giờ? C-Có nên báo... cảnh sát không?」[p]
-Hãy bắt đầu hành trình của bạn ngay bây giờ![p]
+[舜]（Khoan đã nào, bình tĩnh lại đã, những lúc thế này thì……）[p]
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-Thưởng thức từng câu chữ và khung hình tuyệt đẹp của tác phẩm.[p]
+[font color="yellow"]Cảm giác như “Dũng khí” của bạn đang được thử thách.[resetfont]
 [_tb_end_text]
 
 [glink  color="btn_05_black"  storage="EV_status.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Tiếp chuyện"  _clickable_img=""  target="*tubomi_a"  ]
-[glink  color="btn_05_black"  storage="EV_status.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Không làm gì cả"  _clickable_img=""  target="*tubomi_b"  ]
+[glink  color="btn_05_black"  storage="EV_status.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Không làm gì"  _clickable_img=""  target="*tubomi_b"  ]
 [s  ]
 *tubomi_a
 
@@ -64,18 +64,18 @@ Tsubomi「Ừ-Ừm... Cẩn thận nhé anh」[p]
 [call  storage="character.ks"  target="*taijyou"  ]
 [mask_off  time="500"  effect="slideOutRight"  ]
 [tb_start_text mode=1 ]
-Phiên bản phát hành v1.0.0 chính thức.[p]
+Tôi ra hiệu cho một nhân viên khác trong tiệm rồi rảo bước nhanh tới Phòng 3.[r]Vừa mở cửa ra, chiếc bàn đã bị lật tung, ly tách vỡ vương vãi khắp sàn.[p]
 Khách nam「Thằng ranh nào đây! Chỉ là nhân viên quèn mà dám lên mặt à...!」[p]
 [舜]「Thưa quý khách, hành vi này đang cản trở hoạt động kinh doanh của chúng tôi. Xin mời quý khách rời khỏi đây ngay」[p]
-Hẹn gặp lại trong các dự án tiếp theo![p]
+Khi tôi dõng dạc nói với giọng điệu kiên quyết, các nhân viên hỗ trợ liền đứng chắn ngay phía sau.[p]
 Gã đàn ông có chút chùn bước, buông lời chửi rủa cay cú rồi lủi thủi bỏ đi.[p]
 [_tb_end_text]
 
 [call  storage="character.ks"  target="*tubomi_meido_hutuu"  ]
 [tb_start_text mode=1 ]
-Nagi「Shun-chan… Hôm nay tớ hạnh phúc lắm…」[p]
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif"] [舜]「Anh cũng vậy, Nagi à」[p]
-Nagi「Hãy mãi mãi bên nhau thế này nhé anh…♡」[p]
+Tsubomi「……Khá lắm đấy chứ. Anh làm được đến mức này làm em hơi bất ngờ đấy」[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif"]Tsubomi「Em phải nhìn nhận lại anh rồi đấy. ……Nói đúng ra thì, trông anh lúc nãy khá ngầu đấy chứ」[p]
+[舜]（……Tsubomi mà lại thành thật khen mình thế này, hiếm thấy thật đấy）[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
@@ -204,7 +204,7 @@ Rinko「A… [舜]-kun. Thật ra là cô lỡ đặt nhầm số lượng hàng
 [_tb_end_text]
 
 [glink  color="btn_05_black"  storage="EV_status.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Tiếp chuyện"  _clickable_img=""  target="*rinko_a"  ]
-[glink  color="btn_05_black"  storage="EV_status.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Không làm gì cả"  _clickable_img=""  target="*rinko_b"  ]
+[glink  color="btn_05_black"  storage="EV_status.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Không làm gì"  _clickable_img=""  target="*rinko_b"  ]
 [s  ]
 *rinko_a
 
@@ -333,7 +333,7 @@ Chiếc máy tính bảng cầm trên tay màn hình tối đen như mực. Vớ
 [_tb_end_text]
 
 [glink  color="btn_05_black"  storage="EV_status.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Tiếp chuyện"  _clickable_img=""  target="*nagi_a_1"  ]
-[glink  color="btn_05_black"  storage="EV_status.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Không làm gì cả"  _clickable_img=""  target="*nagi_b"  ]
+[glink  color="btn_05_black"  storage="EV_status.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Không làm gì"  _clickable_img=""  target="*nagi_b"  ]
 [s  ]
 *nagi_a_1
 
@@ -405,7 +405,7 @@ Nhìn bóng lưng lo lắng của Nagi, tôi thầm nhủ phải cố gắng h�
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-Công việc lau dọn tại bệnh viện tiếp tục diễn ra suôn sẻ.[p]
+[font color="yellow"]Căng thẳng tăng lên[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.para_sutoresu_updated+=10"  name="para_sutoresu_updated"  cmd="+="  op="t"  val="10"  val_2="undefined"  ]
@@ -448,16 +448,16 @@ Hayato「Nói đúng ra là tiệc ghép đôi Gokon đấy! Đang thiếu con t
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-Rời khỏi bệnh viện, tôi rảo bước trở về căn nhà thân thuộc.[p]
+[font color="yellow"]Phải làm sao đây? Cảm giác như “Giao tiếp” của bạn đang được thử thách.[resetfont]
 [_tb_end_text]
 
-[glink  color="btn_05_black"  storage="EV_status.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Tham gia (-10,000 Yên)"  _clickable_img=""  target="*hayato_a"  ]
+[glink  color="btn_05_black"  storage="EV_status.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Tham gia (-10.000¥)"  _clickable_img=""  target="*hayato_a"  ]
 [glink  color="btn_05_black"  storage="EV_status.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Không tham gia"  _clickable_img=""  target="*hayato_b"  ]
 [s  ]
 *okanenasi
 
 [tb_start_text mode=1 ]
-Gió chiều mùa thu thổi nhẹ qua những tán cây bên đường mang lại cảm giác dễ chịu.[p]
+[舜]（Cứ tưởng thế nào chứ mình làm gì có tiền đâu……）[p]
 [_tb_end_text]
 
 [jump  storage="EV_status.ks"  target="*hayato_b"  ]
@@ -473,9 +473,9 @@ Hayato「Phải thế chứ. Tôi gửi bản đồ qua nhé. Tối gặp」[p]
 [wait  time="1000"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="tyakusin.mp3"  ]
 [tb_start_text mode=1 ]
-Tôi mở điện thoại kiểm tra lại lịch trình ngày mai.[p]
+[舜]（Ủa? Lần này là email từ Nagi à）[p]
 [舜]（"Mình lỡ cho Hayato địa chỉ email của [舜]-chan rồi có sao không? Cậu ấy bảo muốn kết bạn với cậu đấy!"）[p]
-Không có chỗ cho bất kỳ sai sót nào.[p]
+[舜]（…Nhưng tôi thì chẳng muốn kết bạn với nó chút nào）[p]
 [_tb_end_text]
 
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
@@ -492,7 +492,7 @@ Không có chỗ cho bất kỳ sai sót nào.[p]
 [舜]「Thôi tôi xin kiếu, tôi không giỏi mấy vụ tiệc tùng nhậu nhẹt này đâu. Để dịp khác nhé」[p]
 Hayato「Thế à? Toàn mấy em gái xinh tươi hội tụ thôi đấy nhé~」[p]
 Hayato「Mà thôi, không ép được thì đành chịu. Hẹn dịp khác nhé」[p]
-Tôi bắt đầu lên kế hoạch cho những bước tiếp theo.[p]
+（Tên này, thật sự là đã đính hôn rồi đấy à?）[p]
 [_tb_end_text]
 
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
@@ -511,11 +511,11 @@ Tôi bắt đầu lên kế hoạch cho những bước tiếp theo.[p]
 [bg  time="0"  method="crossfade"  storage="back_hankagai_yoru.png"  ]
 [mask_off  time="2000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-Trò chơi này ngày càng trở nên hấp dẫn hơn bao giờ hết.[p]
+[舜]（Toàn mấy em gái dễ thương thật sự… Nguy rồi, run quá đi mất）[p]
 [chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_01c.gif"]Hayato「Giới thiệu với mọi người, đây là [舜], bạn của tôi. Một anh chàng khá là thú vị đấy」[p]
 [舜]「Rất vui được làm quen với mọi người. Mọi người ai cũng ăn mặc sành điệu và dễ thương quá, thật tình tim tôi đang đập thình thịch luôn đây」[p]
-Rinko「Hôm nay cũng nhờ cháu nhé, [舜]-kun」[p]
-[舜]「Vâng, cháu sẽ cố gắng hết sức ạ」[p]
+Cô gái「Ôi, vui quá! [舜]-kun trông có vẻ chưa quen đi tiệc ghép đôi thế này trông đáng yêu ghê đó♡」[p]
+Cô gái khác「A~, nhắm trúng người ta nhanh thế!」[p]
 Hayato「Rồi rồi, mọi người đang hào hứng thế này nhưng chúng ta chuyển sang quán tiếp theo thôi nào」[p]
 [_tb_end_text]
 
@@ -523,7 +523,7 @@ Hayato「Rồi rồi, mọi người đang hào hứng thế này nhưng chúng 
 [mask_off  time="1000"  effect="fadeOut"  ]
 [jump  storage="EV_status.ks"  target="*hayato_sippai"  cond="f.para_komyu_display<49"  ]
 [tb_start_text mode=1 ]
-Tay nghề massage của tôi ngày càng trở nên điêu luyện và thuần thục.[p]
+[舜]（Bầu không khí vui vẻ thật, hào hứng quá chừng…）[p]
 Hayato「[舜], cừ lắm đấy! Không khí vui nhộn hẳn lên, gọi ông đi đúng là chuẩn không cần chỉnh.[r]Lần tới rủ thì nhất định phải đi đấy nhé」[p]
 Hayato「À, đương nhiên là phải giữ bí mật với Nagi đấy nhé?[r]Từ giờ chúng ta cứ là mối quan hệ WIN-WIN cùng có lợi như thế này nhé」[p]
 [_tb_end_text]
@@ -531,7 +531,7 @@ Hayato「À, đương nhiên là phải giữ bí mật với Nagi đấy nhé?[
 [call  storage="statusUP.ks"  target="*koukando_UP"  ]
 [tb_eval  exp="f.koukando_hayato+=2"  name="koukando_hayato"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
 [tb_start_text mode=1 ]
-Cô Rinko nhìn tôi với ánh mắt đầy tự hào và biết ơn.[p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng mạnh[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.tension+=3"  name="tension"  cmd="+="  op="t"  val="3"  val_2="undefined"  ]
@@ -548,7 +548,7 @@ Cô Rinko nhìn tôi với ánh mắt đầy tự hào và biết ơn.[p]
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-Rinko「Có [舜]-kun ở đây giúp đỡ, tiệm của cô phát đạt hơn hẳn」[p]
+[font color="yellow"]Đã thanh toán 10000 Yên[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.money_updated-=10000"  name="money_updated"  cmd="-="  op="t"  val="10000"  val_2="undefined"  ]
@@ -567,7 +567,7 @@ Rinko「Có [舜]-kun ở đây giúp đỡ, tiệm của cô phát đạt hơn 
 
 [call  storage="statusUP.ks"  target="*jyouken_cleared"  ]
 [tb_start_text mode=1 ]
-[舜]「Đều nhờ cô Rinko chỉ dẫn tận tình cho cháu đấy ạ」[p]
+Hayato「Phải rồi, tiền nong tôi đã thanh toán hết rồi nhé」[p]
 Hayato「Mà thôi, coi như tôi bao để cảm ơn ông giúp đỡ hàng ngày. Nhớ biết ơn tôi đấy nhé?」[p]
 [_tb_end_text]
 
@@ -578,13 +578,13 @@ Hayato「Mà thôi, coi như tôi bao để cảm ơn ông giúp đỡ hàng ng�
 [tb_start_text mode=1 ]
 [chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_04c.gif" wait="false"]Hayato「Ủa gì không có tiền luôn hả... Sao cầm từng này tiền mà dám đi nhậu vậy trời」[p]
 Hayato「Lần này tôi trả hộ cho đấy, nhưng lần tới gặp thì TUYỆT ĐỐI phải trả lại đấy nhé!」[p]
-Tsubomi từ trường học trở về, ghé vào tiệm với bộ đồng phục nữ sinh đáng yêu.[p]
+Hayato「Tuyệt đối phải trả đấy nhé!」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.money_updated-=10000"  name="money_updated"  cmd="-="  op="t"  val="10000"  val_2="undefined"  ]
 [call  storage="ui_parameter.ks"  target="*money_update"  ]
 [tb_start_text mode=1 ]
-Tsubomi「Anh [舜] hôm nay làm việc chăm chỉ ghê nhỉ」[p]
+[font color="yellow"]Đã thanh toán toàn bộ số tiền mang theo[resetfont][p]
 [_tb_end_text]
 
 [jump  storage="EV_status.ks"  target="*hayato_end"  ]
@@ -592,15 +592,15 @@ Tsubomi「Anh [舜] hôm nay làm việc chăm chỉ ghê nhỉ」[p]
 
 [wait  time="1500"  ]
 [tb_start_text mode=1 ]
-[舜]「Đương nhiên rồi, đâu có lười biếng như ai đó」[p]
-[chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_00c.gif" wait="false"] Tsubomi「Xì, em cũng học hành vất vả lắm chứ bộ!」[p]
-Hai chúng tôi lại trêu chọc nhau rôm rả như thường lệ.[p]
+[舜]（Rốt cuộc, mình chẳng thể chen nổi vào câu chuyện của mọi người…）[p]
+[chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_00c.gif" wait="false"]Hayato「Tiệc ghép đôi cũng có buổi này buổi khác mà. Đừng bận tâm quá, vui vẻ lên nào」[p]
+[舜]（Không ngờ lại có ngày bị thằng này an ủi…）[p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP"  ]
 [tb_eval  exp="f.koukando_hayato+=2"  name="koukando_hayato"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
 [tb_start_text mode=1 ]
-Không khí gia đình ấm cúng tràn ngập căn nhà nhỏ.[p]
+[font color="yellow"]Chỉ số Hưng phấn đã giảm xuống[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.tension-=1"  name="tension"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
@@ -617,7 +617,7 @@ Không khí gia đình ấm cúng tràn ngập căn nhà nhỏ.[p]
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-Nhưng ẩn sâu dưới vẻ bình yên ấy là những bí mật đen tối đang dần nảy nở.[p]
+[font color="yellow"]Đã thanh toán 10000 Yên[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.money_updated-=10000"  name="money_updated"  cmd="-="  op="t"  val="10000"  val_2="undefined"  ]

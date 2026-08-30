@@ -1,6 +1,6 @@
 {
   "version": "3.1.0",
-  "generated_at": "2026-08-31 01:05:13",
+  "generated_at": "2026-08-31 01:14:06",
   "total_files": 365,
   "files": {
     "data/asset_manifest.json": {
@@ -372,8 +372,8 @@
       "size": 11202
     },
     "data/scenario/a_Debugroom.ks": {
-      "sha256": "09989c2aea1e7daa1de175be371ec50bcafb8a660e5dccdf22ce9615bc9e60e1",
-      "size": 20430
+      "sha256": "71e78db3b0642b7caf8f2b40ee8650af7fb5d42fcd2d9c59efe1a92d836018a2",
+      "size": 20419
     },
     "data/scenario/a_taikenban.ks": {
       "sha256": "5b533cd1f7f01eba19436202c27a9a8978d21554168f323722f0a1debd9f2e12",
@@ -436,8 +436,8 @@
       "size": 6140
     },
     "data/scenario/CG_tou_complete.ks": {
-      "sha256": "7a942a901ba85bc93eee27c9598631e89240addc27b5f3ee9fe1b30866b96fa9",
-      "size": 1689
+      "sha256": "b3233ac7e8d732ab7baeec790fd7b8b8303407e22628e536d16b6e66561a6a8d",
+      "size": 1721
     },
     "data/scenario/CG_tou_top.ks": {
       "sha256": "539ee6ae59c56d1605da61d97fc02648eaa7d99f0df8a20cd2da29f895fc859a",
@@ -468,16 +468,16 @@
       "size": 1836
     },
     "data/scenario/EV_BADEND_suimin.ks": {
-      "sha256": "e31e957e7e28ad21265e4970ca10656bc92e1d2abf549c4dc40f589a03a94bca",
-      "size": 3589
+      "sha256": "987038ad7ecb431456cfd9a02546447392acdc564d4ce7f3c2788d7b675b7eba",
+      "size": 3593
     },
     "data/scenario/EV_BADEND_tubomi.ks": {
       "sha256": "7df98c0ce9b408581d8c3565ac3296850a2c435bd8603b1267e8e627cf0e3da7",
       "size": 1832
     },
     "data/scenario/EV_date.ks": {
-      "sha256": "10549349961920e44b9fe60d8a024b5686c9b5fd6a12670ebae87b392098ce10",
-      "size": 32874
+      "sha256": "75b5583874af4bf699f01de0a33241807317da754dea2c005fa1f17707692e39",
+      "size": 32841
     },
     "data/scenario/EV_deto_dinner.ks": {
       "sha256": "d6f607423ef47c641986562a6fb8d7c0926722321f0ee20713c930db03d1389c",
@@ -488,20 +488,20 @@
       "size": 6499
     },
     "data/scenario/EV_honmei.ks": {
-      "sha256": "630a2a15db9964f5516afd7aefa7fb072e722340e023fd2f4dc17bb8b1d681a8",
-      "size": 3794
+      "sha256": "ddb13fb2a2c7ec2ac0791493d6915ca8ca473836c39f09656620b57e05e173fb",
+      "size": 3740
     },
     "data/scenario/EV_Htalk.ks": {
       "sha256": "938b8bb07544f0e6ee900e9180764f14f743d61d8b2d00ae70a92296f806c579",
       "size": 11944
     },
     "data/scenario/EV_hukusyuEND_nagi.ks": {
-      "sha256": "63db510e52a44385ddfc5d9b60198f7a8f5dacd5d29dfb77bf26fe4c6350aa0a",
-      "size": 7618
+      "sha256": "6bc42c0e0f120afe2a36562675206119ffbc82e402cfd93a3a23b7fd2dd3f8a6",
+      "size": 7630
     },
     "data/scenario/EV_hukusyu_hayato.ks": {
-      "sha256": "1c1ec743173da3653b116f72b7b8c459da85ce7b60eba561fad7d634044a73ad",
-      "size": 11316
+      "sha256": "3c95514c273e0b4de0987a7f67a4b4ccc62b39bf775262bafcb0356621e9ca5b",
+      "size": 11297
     },
     "data/scenario/EV_item_biyaku.ks": {
       "sha256": "7a7efc2b70c68e18e3796aad27f9bb86ed57a1042908cbb7e108c0d46eaccd99",
@@ -516,68 +516,68 @@
       "size": 4537
     },
     "data/scenario/EV_item_Spirytus_nagi.ks": {
-      "sha256": "08845ca788c7c72b279cadf890752725e9eaa3c4659d3b8fb16803cc6a7f1fb8",
-      "size": 15197
+      "sha256": "1c033310c24dc817548e53504fbde23aab51d7dd3f0358f3ef011484245ed296",
+      "size": 15130
     },
     "data/scenario/EV_item_Spirytus_rinko.ks": {
-      "sha256": "dcad97623c1db36964955424e8952f3f34dffd40dfa9e57477ce495f9fc9e422",
-      "size": 9265
+      "sha256": "04e8f5ce43a4a1bac34a10a7af2c93a775dc268feffc8d9afa43020bb6e77f68",
+      "size": 9148
     },
     "data/scenario/EV_item_Spirytus_tubomi.ks": {
-      "sha256": "069b6bb6b0acfcc917cd6b3fe5033ef3fd0dc20d36f0e0e9d5e9efb2fca65255",
-      "size": 9917
+      "sha256": "db9107552351fbe5b524a8d58f279f2eb2e0588902ac30e1f5ffbe4c5e643d3a",
+      "size": 10351
     },
     "data/scenario/EV_item_suimin.ks": {
       "sha256": "1b559bd488c4e133c28145964a74c745168389d0eead11851ccda758bad541ec",
       "size": 3448
     },
     "data/scenario/EV_jyunaiEND_nagi.ks": {
-      "sha256": "00bbeca0a4ba9792e8c03cd448f9413068757fbcaa271e50e06eb85cbf6cdf55",
-      "size": 5788
+      "sha256": "dd7dee9b7c568f7ec2bbd8a961de91048e06ee5bc3b0400cd2b3de5b190281d2",
+      "size": 5798
     },
     "data/scenario/EV_jyunaiEND_rinko.ks": {
-      "sha256": "f50dfd4bb79554027925f82b0423cbf4fdd267ce91eecd37c8c9e61698f9aec2",
-      "size": 6765
+      "sha256": "30fef7334754f2ff31f65fca0cc74508d52e1e0efb507e6e27e05fce33c8b7ee",
+      "size": 6757
     },
     "data/scenario/EV_jyunaiEND_tubomi.ks": {
-      "sha256": "3b76d89f7bbca41772b8c8820b78d28255871294383ede23bc925d79de4766f1",
-      "size": 6730
+      "sha256": "021fc83338bd3caa73c29fe5ceb2f4a9179f544f86942c94c06f9ca1dbccb60c",
+      "size": 6806
     },
     "data/scenario/EV_kokuhaku_nagi.ks": {
-      "sha256": "b848023fb2f0f2ef22ed4255469f5b595f093836482169d206c0c361724e84cd",
-      "size": 19391
+      "sha256": "1a77f497e4bd5a08c4a556afb3a0eb94296ca1416e956dc394d9234fc9af359c",
+      "size": 19396
     },
     "data/scenario/EV_kokuhaku_rinko.ks": {
-      "sha256": "1a3075fc7f016d4da695d78f5111eafc4fa2f478320c0a0ee321146eaa31035d",
-      "size": 13368
+      "sha256": "9fdd79a4877fc97ce9830c58307fb1218a3c0d527acf324e80b51c0b9db2923a",
+      "size": 13325
     },
     "data/scenario/EV_kokuhaku_tubomi.ks": {
-      "sha256": "f064719c1235490cbdc8fa422c3717362cf6b6f8c7eaa28bc38480f53e855762",
-      "size": 12222
+      "sha256": "33654277b58c39cf5ec1b785d51a4fbad8de60463dab9921e1f888a0e5df30c8",
+      "size": 12333
     },
     "data/scenario/EV_kyouaiEND_nagi.ks": {
-      "sha256": "ea0a66a7977f1f102e66dd02273d455265ab7c33caf1f56fdc2dbac6448a09bd",
-      "size": 4957
+      "sha256": "df1d07f1f8d756ae00c67ed2389abd74a0e19521620d32cfe6674e2e4c941baa",
+      "size": 4964
     },
     "data/scenario/EV_kyouaiEND_rinko.ks": {
-      "sha256": "face64b187a5a3d6344c75f1a4bf02324f2a05c72d56f7ce294fcc5d8500d96f",
-      "size": 7911
+      "sha256": "8cea6332c77180b6633dcb3b1951489392fac1f9dbed1a73e4f3b4b52a32592d",
+      "size": 7901
     },
     "data/scenario/EV_kyouaiEND_tubomi.ks": {
-      "sha256": "37647fa3467208e87ec0baa7f88b41dc8a968dab86c082b2ab83078f019eb5a4",
-      "size": 7795
+      "sha256": "12e5f3c4de04d3b3fb1ae25df202b6cb232835485b151e0aee9d55eff5c127a2",
+      "size": 7835
     },
     "data/scenario/EV_nagi.ks": {
-      "sha256": "7d51e4c39b1a9d9704e9214ddbd8073a072a8c6bace4d81f7df6ca398d9023c7",
-      "size": 10519
+      "sha256": "8f9a768b4a542c359d5b6ed7722721c8ccbfb660338b398770716db912907807",
+      "size": 10537
     },
     "data/scenario/EV_nagi2.ks": {
-      "sha256": "c603a658269340998a79f5e9f0fbe30651260340ef4354021a038e636a0e8a8b",
-      "size": 7548
+      "sha256": "071d5e13ec40898b661034293e7fe80a7b1c0a323dca3e75f746b6a557642ca5",
+      "size": 7570
     },
     "data/scenario/EV_nagi3.ks": {
-      "sha256": "d98a64543b1ea7fa2b28b5ee2b3f1435f7682b426382cea4428f9d0336206afe",
-      "size": 11928
+      "sha256": "f3bc32508c0df3443201e1a179da12a9d200efe6c9d92e5622e1d69b230e1022",
+      "size": 11939
     },
     "data/scenario/EV_nagi_J.ks": {
       "sha256": "1df7c33c14e622989b4c05ff7c176428c787c4ce72d0cc50712e15564809cebc",
@@ -588,28 +588,28 @@
       "size": 16198
     },
     "data/scenario/EV_nikubenkiEND_nagi.ks": {
-      "sha256": "89c3aed9a447131679aa2b6fe3865b816fc2bead33d2a538b0ba7718974cf329",
-      "size": 6388
+      "sha256": "0d854b620a128a7bdbe542a53cb1b0026196a7de93eaf5ebdb46cf0dc7ae4753",
+      "size": 6394
     },
     "data/scenario/EV_nikubenkiEND_rinko_tubomi.ks": {
-      "sha256": "ef98a082d9cc004166c0b12ae18bdd0b61987d4a9bf8ac627af2c0e25b7a8f80",
-      "size": 7793
+      "sha256": "243fc07be2c9db8c4a7befa96585827959115ef3c1629e11a9b9da5f0bbbe7d2",
+      "size": 7811
     },
     "data/scenario/EV_omoidenokakera.ks": {
       "sha256": "c1d153b9a6c1c71a8b9d6c1a1a81b5e5de2ed998b38b82b3d28af6cc9a510567",
       "size": 9978
     },
     "data/scenario/EV_OP.ks": {
-      "sha256": "7f2252fa0cc9d08047238a00aef191fbdc7a88a0cefaa6b61808e061a3ac73a2",
-      "size": 12638
+      "sha256": "a31585bffab2d867561f81d98284c9274be98e73e8521320493d053aa206948f",
+      "size": 12635
     },
     "data/scenario/EV_OP2.ks": {
-      "sha256": "63b76ad89149cc9f5bd4722d215691fc6e74ba1f351c60af84c6ff89aa3d537f",
-      "size": 10970
+      "sha256": "3da0c4a514724103310e018c5a66e3d476e4b263f01e17528a5ae9f6209cc764",
+      "size": 10967
     },
     "data/scenario/EV_OP3.ks": {
-      "sha256": "4b614a60fb6d1a9144a4900c9b592fc4f9c95c66c68f9375056ff7c87db1a353",
-      "size": 10427
+      "sha256": "06b89b9e79d70d1e9dc9fb5c76cbda8aa7cc6c14ac99fb9448610b52812d32e6",
+      "size": 10439
     },
     "data/scenario/EV_OP4.ks": {
       "sha256": "b9ca321299ae31362236d31b0ec320a8864f01a96fb312d58e82a011b8fdae0f",
@@ -620,16 +620,16 @@
       "size": 4475
     },
     "data/scenario/EV_rinko.ks": {
-      "sha256": "7ca931901ffd2ac740f0759fbc280984d73103af123ed8e520a7aba1d0539e98",
-      "size": 7506
+      "sha256": "d9e151564f0a532c287f6d812d324ce70144875cdc23725c6281eded65c34360",
+      "size": 7498
     },
     "data/scenario/EV_rinko2.ks": {
-      "sha256": "5b4e73c32f246d1ea449ad78a17de5dedb8e2a45fbb918a39a0845e6010ddafd",
-      "size": 11093
+      "sha256": "63eac769462e42a9d198a4debfbd8dbd36d305163d006589d8298635262cc487",
+      "size": 11070
     },
     "data/scenario/EV_rinko3.ks": {
-      "sha256": "5694cf12cb390276825dc3c0eb966ef02f15e9528afc2aeb3bdfd98d4e9e528d",
-      "size": 9588
+      "sha256": "e382e8a00c9980a37f541c0787329290896a18773e346ca33e0c055b2fd79de5",
+      "size": 9571
     },
     "data/scenario/EV_rinko_J.ks": {
       "sha256": "7aa80b7b90ba0dbf43e7f3b234102aa6902c3cd365614ee53485e02e3211d4f5",
@@ -652,16 +652,16 @@
       "size": 3078
     },
     "data/scenario/EV_status.ks": {
-      "sha256": "73d10d56c99d2963c17fa920aa7bfabd24597dd89500dd8ec6b955a021b75975",
-      "size": 32679
+      "sha256": "a05a34eb5b2a19ea0d997af4130921279f78a78682ffa38a080da36efbeb0656",
+      "size": 33194
     },
     "data/scenario/EV_syakaisei.ks": {
-      "sha256": "1bd92fe393b0069eef5f68acc3ff9f6d652637583900038e82987c2979afa0e1",
-      "size": 6033
+      "sha256": "b49db2a977eb6f4960e676f3f0cec65ce737908dfdd6ce9344960ad2665b8f7c",
+      "size": 6440
     },
     "data/scenario/EV_tousatuCG.ks": {
-      "sha256": "8855c788ac9f2747ae38027d4da8f9e01e4cb14eb5789336ba35973753ba20c4",
-      "size": 56901
+      "sha256": "c2195b2bb486680d916ff202e2c0346d32e3ee5a0ea4053c9dac1ee63be2c57c",
+      "size": 56811
     },
     "data/scenario/EV_trap_reaction.ks": {
       "sha256": "9f43170c7a18280b9c983e768458b2738f39672fa31f933fda78bf7b62436b6f",
@@ -672,20 +672,20 @@
       "size": 10115
     },
     "data/scenario/EV_TrueEND_nagi.ks": {
-      "sha256": "06ba9e0a3f96a7ec9999b227d1796112afb8261b5bc0faa5f0c0114c641b20a8",
-      "size": 8006
+      "sha256": "323bec5b2e7851aa221302cfc3995ab90bcd2f074ff238ca58c5d0d85b9e6266",
+      "size": 8025
     },
     "data/scenario/EV_tubomi.ks": {
-      "sha256": "706dee7c301b910db1ff3fda59a252ebcc3fcdd4e73927ce9280fd187d5be5b1",
-      "size": 7906
+      "sha256": "95d0ee6c6a0ea5a14aec0ce6f1813b9c94014f0053669bd88af38600c5fa621e",
+      "size": 7982
     },
     "data/scenario/EV_tubomi2.ks": {
-      "sha256": "a5214dd83ac287a4b788c739cfea187f0b4a05168ef6184359688a109cdad97c",
-      "size": 10048
+      "sha256": "ef66d8542499558987952378eff51ed6a33cd7aa8121876cc829ab0afce5f3a4",
+      "size": 10140
     },
     "data/scenario/EV_tubomi3.ks": {
-      "sha256": "7dcaa1c8a5dd572166f49ade2ade24706747162431d5bb1b14ed137bf74bfb36",
-      "size": 8265
+      "sha256": "8802960d97adfc29b31a888389d2454c26a606a8d48e358a6c0a66dfbb0d665f",
+      "size": 8329
     },
     "data/scenario/EV_tubomi_J.ks": {
       "sha256": "c66a496e9b9aa17d4806f6a81b8c2c2be6cbdfc0f3abdefa8ae9a473d4972598",
@@ -1028,8 +1028,8 @@
       "size": 5802
     },
     "data/scenario/komyu_H.ks": {
-      "sha256": "30e14078900885002e95f1016bf2d11da9c0b87c6580a1a11576d35712b8b573",
-      "size": 15957
+      "sha256": "54009c33f534b5f5293075aa1e2e36fbf07d50eb541373b11e29a32147fafa18",
+      "size": 15795
     },
     "data/scenario/komyu_hayato.ks": {
       "sha256": "e657108c3dec0464aa21b7811339f91212a02292b42fd0b7ea6beb9d4d37fd06",
@@ -1040,8 +1040,8 @@
       "size": 31056
     },
     "data/scenario/komyu_nagi_kaeru.ks": {
-      "sha256": "9145d998c2ed16b633273842faaec11600813abf9fcf4cc9d537fe1152ad6c21",
-      "size": 46388
+      "sha256": "98fd5ce6fc0b59b47d1c13637983838508c8ebf7c217472a31a692e51da2013c",
+      "size": 46379
     },
     "data/scenario/komyu_nagi_kaeru_hato.ks": {
       "sha256": "b3f5e8436292c1e6fde72a92283d9d71835d6280625ee8aba43a956ee4c7375f",
@@ -1080,8 +1080,8 @@
       "size": 389
     },
     "data/scenario/mesi_jisui.ks": {
-      "sha256": "0be88069f9ba556dab13747e58716a2191207eb8f67349465cd28c9656921c3a",
-      "size": 666
+      "sha256": "2c50f87ba481f88d0ac94d0b26f96286a45ac22853555594ec5d3beb7c4cc5ea",
+      "size": 664
     },
     "data/scenario/minigame.ks": {
       "sha256": "97ffe977cde7e3d3dfffa5bde5673ed9b352d48a35b4dd13b85cbc02f7b2a672",
@@ -1104,12 +1104,12 @@
       "size": 6255
     },
     "data/scenario/room_asa.ks": {
-      "sha256": "431d138aa9b83523b773af249f58e0542ab8001d3c8b2b653ed073ec7d539ae6",
-      "size": 19363
+      "sha256": "e77909ed54d040773feaa6f8bf10b099c1197afefc5fcd249b597a25c4db5420",
+      "size": 16706
     },
     "data/scenario/room_Sunday.ks": {
-      "sha256": "125a6fc88e6849dc77b62de48431526256e2c4a4e12e323d8f003e11a52fd168",
-      "size": 8572
+      "sha256": "7ed70b5c9b67240d6e6dd1a695ff25885718544d790e0d1b825c8c27cd910a27",
+      "size": 8555
     },
     "data/scenario/room_yoru.ks": {
       "sha256": "ce3cf431bd3b0ecdef2939c6c4a5747249ad1e08b9b6c26c51ece802a5b8f2a3",
@@ -1128,32 +1128,32 @@
       "size": 7185
     },
     "data/scenario/sansaku_byouinEV.ks": {
-      "sha256": "27cbc415ae6bb9d5b5ccc20b439af8fbca1e0152ff99f37a8430c09c1ce040ab",
-      "size": 3633
+      "sha256": "7f777e9b1dd8fd719cb57bcbb44df72fc9a11a391af28cd5d4b77f408f8ca10b",
+      "size": 3618
     },
     "data/scenario/sansaku_byouinEV_nagi.ks": {
-      "sha256": "2d18f9a6ae3571f6756df602fa6b17e83bd66ac5c1e7ebaaf0c86a783d2f1342",
-      "size": 17634
+      "sha256": "2bdbb00997674e05ba9e72bbd688087bafa4683ba84a33d6b324814ad2eeef55",
+      "size": 17492
     },
     "data/scenario/sansaku_byouinEV_nagihayato.ks": {
-      "sha256": "ba7bfba5d34213847325112a96b076c46e4550b85bb1afc9f0e0f60696cf3631",
-      "size": 6293
+      "sha256": "df2d5cf0ed363c52fbaf77e1b819bf5e7c5c73be80aabede63d5037aef200455",
+      "size": 5875
     },
     "data/scenario/sansaku_famiresuEV.ks": {
-      "sha256": "a7c0a98d8e8ea668650424e8f4a10347b8e3c1da8ab4e4388d382778021d2054",
-      "size": 7814
+      "sha256": "7049f9dbbb10bae676b65cb8a2cf39db6977de153c222a7de2f7084661152f96",
+      "size": 7636
     },
     "data/scenario/sansaku_famiresuEV_hayato.ks": {
-      "sha256": "b024901e8986d6bdc985cd87b49f3e3ee1b7754f18a289c855bff7db61f8cefa",
-      "size": 16956
+      "sha256": "38250d3d8a7699f5299aad583c84b011b6866815394f5f8b126988dbb5532c75",
+      "size": 16812
     },
     "data/scenario/sansaku_famiresuEV_tubomi.ks": {
-      "sha256": "7e1bea1be43e214249c724e266a0dfb4e95162ca8c2a8b4ebaa184e802ed0bc9",
-      "size": 18271
+      "sha256": "669c2d75e0d120d7654a57a37cad7bb9d1110a8c7daa13308175bdc49b014ec9",
+      "size": 18175
     },
     "data/scenario/sansaku_hankagaiEV.ks": {
-      "sha256": "09527223950ebb35d85484918e679a8e9f0108e1e0dc2b1caee122c228a47b18",
-      "size": 7668
+      "sha256": "d054a04a75260e2dd9b9708448ec8e8c701dd4447f5855229b4a757c9c7f34d4",
+      "size": 7746
     },
     "data/scenario/sansaku_hankagaiEV_game.ks": {
       "sha256": "2946511af5649f3675f1a3e692c10fcbd53d2a21b19bd93c1d455cebed6e1f65",
@@ -1164,8 +1164,8 @@
       "size": 18033
     },
     "data/scenario/sansaku_hankagaiEV_nagi.ks": {
-      "sha256": "782ab5148375812c58004c6df3644e7aa97fd2abc75986bef395329d71a15d3f",
-      "size": 16135
+      "sha256": "0f3c180d4ce551dd4a8c50632edf9e316a135db3682b87003d274016493086fd",
+      "size": 16140
     },
     "data/scenario/sansaku_hankagaiEV_tubomi.ks": {
       "sha256": "300bd76b27317b3b457f7ffdba8aa60508f31b761dac76082e1582b823a32204",
@@ -1184,36 +1184,36 @@
       "size": 27517
     },
     "data/scenario/sansaku_massajiEV.ks": {
-      "sha256": "c8977910c11239d211d14ce903c03d32c33fdd15bd0f26a6732b5db428260f67",
-      "size": 3806
+      "sha256": "e561803689f43495b46c00689793eb110fa685e32dcf2c9f3f2de708e7c6076c",
+      "size": 3791
     },
     "data/scenario/sansaku_massajiEV_rinko.ks": {
-      "sha256": "08e22c5977df60cde3b467fedbd6e3e80a7528a2520047543df677057eed307c",
-      "size": 15928
+      "sha256": "76598bc98bf2f6a50f508b49e471d2b76dd34d01756455fac89e3db9e4dc0ffb",
+      "size": 15908
     },
     "data/scenario/sansaku_massajiEV_rinkohayato.ks": {
-      "sha256": "54fa8db1e2a9753e428673624dafe92dbb4573fee3c5809f6552243201447599",
-      "size": 5617
+      "sha256": "cf364f1bd868bf5ec1f2013c0e3dd939ba19a5bfce6470f5cff4048d44e57203",
+      "size": 5602
     },
     "data/scenario/sansaku_massajiEV_rinkotubomi.ks": {
-      "sha256": "2ca557034e881d5fc8e5ef32bdb33fd1686d580ee648c79b4512f9809205c2f7",
-      "size": 5881
+      "sha256": "b1eae7894936531127705b1012fdc8a2a8977994e47e93507b9ed681e39debec",
+      "size": 5866
     },
     "data/scenario/sansaku_ran.ks": {
       "sha256": "73741d7808bfe270cd051bc414076291e0bf77c75668ef7106e230b790329113",
       "size": 10913
     },
     "data/scenario/sansaku_rihureEV.ks": {
-      "sha256": "6e1550c964d147832e6c5ea71e2463ee93498ba107c9928d0990238e8654bfed",
-      "size": 3398
+      "sha256": "71ef06c3c471af12cb0b75b41b518fa2b415219403579c0856d97fd83e1c261f",
+      "size": 3383
     },
     "data/scenario/sansaku_rihureEV_tubomi.ks": {
-      "sha256": "338d553e6e788b52a53e9392bfc0533cc2ffa48043396ddd64b2260dbbe798cf",
-      "size": 2623
+      "sha256": "49957b457594bf4f6d6954d2c6fdaa09f1d325823d962054be8c6845e50b813c",
+      "size": 2608
     },
     "data/scenario/scene1.ks": {
-      "sha256": "3726c7bf7ed8e00cd6a39f4d329a8af6e64149b20c0bba33501a443f71fb1fb3",
-      "size": 289
+      "sha256": "f99a49c0ea8dd94f635e2369e414f8ade0cc74ad3305554666eb3942a2641fcf",
+      "size": 294
     },
     "data/scenario/sinnyu.ks": {
       "sha256": "ba289c8a7542b0ceabb6b5639654779c87fc7720a4e3fc253317bee1888a0e7b",
@@ -1260,12 +1260,12 @@
       "size": 3820
     },
     "data/scenario/sinnyu_comhaiti.ks": {
-      "sha256": "2897e29e659695a1dbe1c9901d8072b6e51b455be63b04f504a88c1e05aa752a",
-      "size": 28632
+      "sha256": "b79b14c16b03516561ae76b4c11fad40ac6a8753ebfcbe39aba077b2bbadcbd9",
+      "size": 27792
     },
     "data/scenario/sinnyu_item.ks": {
-      "sha256": "ee16b9c90a79aff1c5f9a7bfb93b136615a4a068cda454ce1abe9d2201d929c0",
-      "size": 28733
+      "sha256": "bede9acabe0c18053a1d8c257f5c03083d56bed9a398f2f6487c8c245301a6c1",
+      "size": 28665
     },
     "data/scenario/sinnyu_massaji.ks": {
       "sha256": "3b10ea78453f6bd5bd67016be755bf958e231763e43a92472ae4287c0c5fd784",
@@ -1396,7 +1396,7 @@
       "size": 18326
     },
     "data/scenario/title_screen.ks": {
-      "sha256": "28273c87184c0bf0519d62e7caebc4f6d24df6d27ab403ee8e1e4ae61b03bdd6",
+      "sha256": "dc94f53f00c568bd412aaee8e547cb860dc01fe9e31f91846adaa5c3c0daff87",
       "size": 9406
     },
     "data/scenario/title_sf.ks": {

@@ -24,9 +24,9 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 [舜]「Nagi đã là của anh từ lâu rồi!」[p]
-#凪
+#Nagi
 Nagi「A… a… Tớ sắp ra nữa rồi! Cùng lên đỉnh nhé Shun-chan!」[p]
 [舜]「Bắn nhé, Nagi!」[p]
 [_tb_end_text]
@@ -42,7 +42,7 @@ Nagi「A… a… Tớ sắp ra nữa rồi! Cùng lên đỉnh nhé Shun-chan!�
 [mask_off  time="1000"  effect="fadeOut"  ]
 [playbgm  volume="60"  time="1000"  loop="true"  storage="BADEND.mp3"  ]
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「――Kyaaaaaaa!」[p]
 Nagi「A a a a…!! ♡ Nóng quá… Tinh trùng của Shun-chan đang tràn vào trong tớ rồi…!」[p]
 Nagi ôm chặt lấy lưng tôi, cả cơ thể run rẩy đón nhận từng đợt sóng tinh dịch cuộn trào.[p]
@@ -50,7 +50,7 @@ Căn phòng ngập tràn men say của rượu và men tình của đôi lứa t
 Nagi「Hà… hà… Hạnh phúc quá… Tớ thuộc về Shun-chan hoàn toàn rồi…」[p]
 [舜]「Cảm ơn Nagi nhé, em tuyệt lắm」[p]
 Nagi「Lần sau… Lại cho tớ uống rượu rồi làm chuyện này nữa nhé anh…♡」[p]
-#凪
+#Nagi
 Nagi nở nụ cười ngây thơ say đắm rồi gục đầu vào ngực tôi ngủ thiếp đi.[p]
 [舜]「――...Khốn kiếp...!」[p]
 Hayato à… Người con gái cậu hằng yêu thương, giờ đây đã hoàn toàn là của tôi rồi.[p]

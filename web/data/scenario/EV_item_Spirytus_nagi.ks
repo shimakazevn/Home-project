@@ -25,7 +25,7 @@ Nụ hôn dịu dàng khép lại một buổi chiều ngập tràn hoan lạc.[
 Tôi đổ lọ thuốc kích dục vào cốc nước của Nagi.[p]
 [_tb_end_text]
 
-[glink  color="btn_05_black"  storage="EV_item_Spirytus_nagi.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Sử dụng (Viên Spirytus)"  _clickable_img=""  target="*yes"  ]
+[glink  color="btn_05_black"  storage="EV_item_Spirytus_nagi.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Sử dụng"  _clickable_img=""  target="*yes"  ]
 [glink  color="btn_05_black"  storage="EV_item_Spirytus_nagi.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Không sử dụng"  _clickable_img=""  target="*no"  ]
 [s  ]
 *no
@@ -37,8 +37,8 @@ Không màu, không mùi, hoàn toàn vô hình trong làn nước trong vắt.[
 
 [tb_start_text mode=1 ]
 Nagi uống cạn cốc nước mà không hề mảy may nghi ngờ điều gì.[p]
-Nagi「Cảm ơn [舜]-chan nhé, nước mát thật đấy」[p]
-[舜]「Không có gì đâu mà」[p]
+Đã thanh toán tiền bữa tối 　[font color="yellow"]-¥5,000[p]
+Chỉ số Hưng phấn đã tăng lên[resetfont][p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP2"  ]
@@ -74,51 +74,51 @@ Nagi「Ơ… Sao người tớ nóng thế này…」[p]
 
 [tb_start_text mode=1 ]
 Đôi gò má Nagi ửng hồng, ánh mắt bắt đầu trở nên đờ đẫn và ngập tràn dục vọng.[p]
-#凪
+#Nagi
 Nagi「Shun-chan… Tớ thấy khó chịu quá… Chỗ đó cứ ngứa ngáy thế nào ấy…」[p]
 [舜]「Để tớ giúp cậu kiểm tra xem sao nhé」[p]
-#凪
+#Nagi
 Nagi「Ưm… Giúp tớ với… Tớ không chịu nổi nữa rồi…」[p]
 Nagi chủ động kéo tay tôi đặt lên ngực mình, khẽ rên rỉ từng hồi dâm đãng.[p]
 Dưới tác dụng của thuốc kích dục, sự ngây thơ thường ngày đã hoàn toàn bị bản năng dục vọng nuốt chửng.[p]
 Nagi「A… sướng quá… Chạm vào nữa đi Shun-chan… Đút vào trong tớ đi mà…」[p]
 Tôi cởi phăng quần áo, đâm thẳng vào khe dâm đang trào dâng dâm thủy của em ấy.[p]
-#凪
+#Nagi
 Nagi「A a a a…!! ♡ Tuyệt quá…! Con cu của Shun-chan làm tớ sướng chết mất thôi…!」[p]
 Cuộc ân ái cuồng loạn dưới tác dụng của xuân dược đưa cả hai lên đỉnh cao của khoái lạc thể xác.[p]
 [_tb_end_text]
 
 [stopbgm  time="1000"  fadeout="true"  ]
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 [chara_mod name="kyara_nagi_sabun2" cross="false" time="500" storage="chara/179/ADV_nagi_01_00c.gif"] Nagi「Bắn vào trong đi anh! Hãy lấp đầy em bằng tinh trùng của anh đi!」[p]
 [_tb_end_text]
 
 [call  storage="BGM.ks"  target="*omoide"  ]
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 [舜]「Bắn nhé, Nagi!」[p]
 Tôi xuất tinh ồ ạt vào tận sâu bên trong, biến Nagi hoàn toàn thành một ả đàn bà thèm khát nhục dục.[p]
-#凪
+#Nagi
 【Thuốc Kích Dục x Nagi: Bản Năng Thức Tỉnh】[p]
-#凪
+#Nagi
 Thuốc kích dục loại mạnh thứ hai được tôi hòa tan vào cốc trà của Tsubomi.[p]
 Tsubomi uống xong liền cảm thấy trong người bùng cháy một ngọn lửa ham muốn dữ dội.[p]
 Tsubomi「A… nóng quá… Anh [舜] ơi… Cứu em với… Em nứng không chịu nổi rồi…」[p]
-#凪
+#Nagi
 [chara_mod name="kyara_nagi_sabun2" cross="false" time="500" storage="chara/179/ADV_nagi_01_03c.gif"] [舜]「Thuốc ngấm rồi đấy à? Để anh cứu em nhé」[p]
 Tsubomi không ngần ngại lao vào ôm chặt lấy tôi, tự tay lột sạch quần áo của cả hai.[p]
 Tsubomi「Đâm vào đi! Đâm nát cô bé của em đi anh! Em thèm con cu của anh đến phát điên rồi!」[p]
 Dưới tác dụng của xuân dược cực mạnh, Tsubomi trở nên dâm loạn tột cùng, tự mình nhấp hông điên cuồng trên người tôi.[p]
 Tsubomi「Sướng quá đi mất! Em là con đĩ dâm đãng của anh [舜]! Hãy bắn đầy tinh trùng vào em đi!」[p]
 Tôi giữ chặt lấy hông em ấy, thúc liên hồi cho đến khi xuất tinh ngập tràn tử cung.[p]
-#凪
+#Nagi
 [chara_mod name="kyara_nagi_sabun2" cross="false" time="500" storage="chara/179/ADV_nagi_01_04c.gif"] Tsubomi gục ngã trên ngực tôi, run rẩy trong cơn cực khoái kéo dài bất tận.[p]
 【Thuốc Kích Dục x Tsubomi: Cơn Khát Hoang Dại】[p]
-#凪
+#Nagi
 Thuốc kích dục loại ba - loại cực hạn dành cho cô Rinko.[p]
 Cô Rinko sau khi uống vào lập tức biến thành một người phụ nữ khát tình đến điên dại.[p]
-#凪
+#Nagi
 [chara_mod name="kyara_nagi_sabun2" cross="false" time="500" storage="chara/179/ADV_nagi_01_00c.gif"] Rinko「[舜]-kun… Mau lên… Cho cô đi mà… Cô không thể kìm hãm nổi con thú bên trong nữa rồi…」[p]
 Cô ấy quỳ rạp dưới chân tôi, khẩn thiết van xin được đút con cu vào miệng và hạ bộ.[p]
 Một người phụ nữ đoan trang mẫu mực giờ đây hoàn toàn bị dục vọng tha hóa dưới sự thống trị của tôi.[p]
@@ -126,7 +126,7 @@ Một người phụ nữ đoan trang mẫu mực giờ đây hoàn toàn bị d
 Từng đợt tinh dịch rót đầy vào cơ thể cô Rinko, đóng dấu sự thuần phục tuyệt đối.[p]
 【Thuốc Kích Dục x Rinko: Bản Ngã Tha Hóa】[p]
 Thuốc ngủ được chuẩn bị cẩn thận trong từng liều lượng.[p]
-#凪
+#Nagi
 Khi đối phương chìm sâu vào giấc ngủ mê mệt, căn phòng hoàn toàn trở thành thế giới riêng của tôi.[p]
 [_tb_end_text]
 
@@ -150,23 +150,23 @@ Nagi ngủ say không hề hay biết gì, để mặc cho tôi tùy ý thưởn
 [tb_start_text mode=1 ]
 Từng đường cong mềm mại đều được bàn tay tôi in dấu.[p]
 Sự bất lực và ngoan ngoãn trong vô thức của em ấy càng kích thích dục vọng chiếm đoạt trong tôi.[p]
-#凪
+#Nagi
 Tôi từ từ cởi bỏ lớp vải che đậy cuối cùng, chiêm ngưỡng toàn bộ vẻ đẹp nguyên sơ.[p]
 Không một sự kháng cự nào có thể ngăn cản bước chân tôi.[p]
-#凪
+#Nagi
 Đây chính là quyền năng tuyệt đối mà tôi nắm giữ.[p]
 Một cảm giác thỏa mãn không gì sánh bằng.[p]
 Và trò chơi này sẽ còn tiếp tục diễn ra nhiều lần nữa.[p]
 Cho đến khi mọi thứ hoàn toàn thuộc về tôi.[p]
 Mọi toan tính đều đã đem lại kết quả mỹ mãn.[p]
-#凪
+#Nagi
 Tôi mỉm cười nhìn người con gái đang ngủ say bên cạnh.[p]
 Tương lai đã hoàn toàn được định đoạt.[p]
 Không ai có thể cứu vãn được nữa rồi.[p]
 Kế hoạch đã thành công rực rỡ.[p]
 Hayato đứng trước cửa nhà, đôi mắt đỏ ngầu vì tức giận và ghen tuông.[p]
 Hayato「Mày… Rốt cuộc mày đã làm gì Nagi hả!?」[p]
-#凪
+#Nagi
 [舜]「Tôi có làm gì đâu, chỉ là yêu thương em ấy thay phần cậu thôi mà」[p]
 Hayato「Thằng khốn! Tao sẽ giết mày!」[p]
 Hayato lao vào định đấm tôi, nhưng tôi dễ dàng né tránh và phản đòn hạ gục hắn xuống đất.[p]
@@ -175,19 +175,19 @@ Hayato lao vào định đấm tôi, nhưng tôi dễ dàng né tránh và phả
 [playse  volume="100"  time="1000"  buf="0"  storage="teman1.mp3"  fadein="true"  loop="true"  ]
 [tb_start_text mode=1 ]
 [舜]「Kẻ thất bại thì nên biết điều mà cút đi. Nagi bây giờ là của tôi rồi」[p]
-#凪
+#Nagi
 Đúng lúc đó, Nagi từ trong phòng bước ra, nép sát vào người tôi với ánh mắt lạnh lùng nhìn Hayato.[p]
-#凪
+#Nagi
 Nagi「Hayato-san… Xin anh đừng đến làm phiền chúng tôi nữa. Tôi yêu Shun-chan」[p]
 Hayato như chết lặng tại chỗ, trái tim tan nát hoàn toàn trước sự thật phũ phàng.[p]
-#凪
+#Nagi
 Hayato「Không… Không thể nào… Nagi…」[p]
-#凪
+#Nagi
 Hắn ôm đầu quỳ sụp xuống đất trong tuyệt vọng tột cùng.[p]
 Tôi ôm eo Nagi, mỉm cười nhìn kẻ thù bại trận một cách thảm hại.[p]
 Sự trả thù đã hoàn tất trọn vẹn.[p]
 【BAD END Hayato: Kẻ Thua Cuộc Tuyệt Vọng】[p]
-#凪
+#Nagi
 Nagi đứng trên ban công, ánh mắt vô hồn nhìn vào khoảng không vô định.[p]
 Sự thật về tất cả những trò đùa và sự kiểm soát của tôi cuối cùng cũng bị phơi bày.[p]
 [_tb_end_text]
@@ -199,11 +199,11 @@ Sự thật về tất cả những trò đùa và sự kiểm soát của tôi 
 [wait  time="2000"  ]
 [mask_off  time="2000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「Shun-chan… Tất cả những chuyện này… Đều là dối trá sao?」[p]
 [舜]「Nagi… Hãy nghe anh giải thích đã…」[p]
 Nagi「Đừng chạm vào tôi! Tôi không muốn nhìn thấy mặt cậu nữa!」[p]
-#凪
+#Nagi
 Nagi quay lưng bỏ chạy trong làn mưa xối xả, để lại tôi một mình trong căn phòng trống rỗng.[p]
 Tôi đã thắng trong trò chơi quyền lực, nhưng lại đánh mất đi người con gái quan trọng nhất.[p]
 Một sự trống rỗng đến tột cùng bao trùm lấy tâm hồn.[p]
@@ -215,8 +215,8 @@ Cái giá của sự chiếm đoạt mù quáng chính là sự cô độc vĩnh
 [tb_replay  id="nagi_item_supiritasu"  ]
 [tb_start_text mode=1 ]
 [舜]（Nhắc mới nhớ, mình đang có sẵn viên con nhộng Spirytus）[p]
-[舜]（Lúc này nếu lén bỏ vào đồ uống của Nagi thì chắc sẽ không bị lộ đâu...）[p]
-Rinko「[舜]-kun… Sao cháu có thể tàn nhẫn đến mức này cơ chứ…」[p]
+Đã thanh toán tiền bữa tối 　[font color="yellow"]-¥5,000[p]
+Chỉ số Hưng phấn đã tăng lên[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.tension+=2"  name="tension"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
@@ -242,8 +242,8 @@ Tôi đứng nhìn căn nhà hoang tàn, nhận ra sự trả thù chỉ đem l�
 [舜]（Thôi vậy. Lần này bỏ qua đi）[p]
 Tsubomi nhìn tôi với ánh mắt khinh bỉ và căm hận tột cùng.[p]
 ...Cảm giác như đã thân thiết hơn với Nagi một chút[p]
-Đã thanh toán tiền bữa tối 　[font color="yellow"]-5.000 Yên[p]
-Chỉ số hưng phấn tăng lên[resetfont][p]
+[舜]「Ừ, cố gắng lên nhé」[p]
+Nagi「Vâng! Thế thì, hẹn gặp lại cậu sau nhé!」[p]
 【BAD END Tsubomi: Sự Khinh Bỉ Tột Cùng】[p]
 Tiếng chuông cửa vang lên dồn dập trong đêm tối.[p]
 Khi mở cửa ra, một toán cảnh sát đang đứng nghiêm nghị trước mặt tôi.[p]

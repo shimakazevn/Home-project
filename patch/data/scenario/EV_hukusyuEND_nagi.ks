@@ -40,13 +40,13 @@ Trên màn hình hiện lên cái tên 「Nagi」.[p]
 Không chút do dự, tôi không nghe máy mà cúp thẳng luôn.[p]
 Thế nhưng, vài phút sau.[p]
 Giọng nói của cô ấy đã được lưu lại trong hộp thư thoại.[p]
-#凪
+#Nagi
 Nagi「......Shun-chan...... Tớ xin cậu, mình nói chuyện một chút thôi không được sao......」[p]
-#凪
+#Nagi
 Nagi「Tớ chỉ muốn biết lý do...... tại sao cậu lại đá tớ thôi.」[p]
-#凪
+#Nagi
 Nagi「Nếu như tớ có điểm nào không tốt, tớ nhất định sẽ sửa mà.」[p]
-#凪
+#Nagi
 Nagi「Đừng lờ tớ đi...... nhé?」[p]
 Một giọng nói run rẩy, như thể đang khóc.[p]
 Trước kia, giọng nói ấy từng khiến trái tim tôi thắt lại.[p]
@@ -67,19 +67,19 @@ Bắt đầu một cuộc sống mới, nếu may mắn thì sẽ yêu đương.
 [wait  time="1000"  ]
 [mask_off  time="2000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「Shun-chan, nghe tớ nói đi.」[p]
 Ngoảnh lại, tôi thấy Nagi đang đứng đó.[p]
 Có vẻ như tôi đã quên khóa cửa mất rồi.[p]
 Nhưng, dù có vậy thì việc tự tiện xông vào thế này đúng là.[p]
 [舜]「......Chúng ta chẳng còn gì để nói với nhau nữa đâu.」[p]
-#凪
+#Nagi
 Nagi「Tớ vẫn không thể nào quên được Shun-chan. Tớ thực sự thích cậu...」[p]
 [舜]「Tôi chưa từng có hứng thú với cô, nói đúng hơn là bây giờ tôi còn chẳng muốn nhìn mặt cô nữa.」[p]
 [舜]「Thấy cô chia tay với Hayato là tôi mãn nguyện lắm rồi. Đừng có mơ mộng viển vông đến chuyện một mình hạnh phúc.」[p]
 Nhìn Nagi đang đứng chết trân, tôi bồi thêm một đòn chí mạng, lạnh lùng buông lời: 「Mau cút về đi.」[p]
 Tôi phát ngán lên được rồi. Tôi đã quá mệt mỏi với việc phải ôm lấy cả sự ghen tị lẫn lòng căm hận này.[p]
-#凪
+#Nagi
 Nagi「Cậu nói dối...... Shun-chan không thể nào nói ra những lời như vậy được......[r]Này, đừng trêu tớ nữa mà. Nói chuyện đàng hoàng với tớ đi......」[p]
 Giọng Nagi run rẩy.[p]
 [舜]（Thôi ngay...... đi cho tôi nhờ.）[p]
@@ -107,18 +107,18 @@ Chẳng thể thốt nên lời, ý thức của tôi cứ thế dần dần l�
 [bg  time="4000"  method="fadeInUp"  storage="event/nagi_hukusyuEND.png"  ]
 [tb_cg  id="cg_nagi_hukusyuEND"  ]
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「......May quá, cậu tỉnh lại rồi.」[p]
-#凪
+#Nagi
 Nagi「Tớ xin lỗi nhé. Thật may vì tớ là y tá......」[p]
 [舜]「Nagi......」[p]
 Cơ thể tôi nặng trĩu. Các đầu ngón tay hơi tê dại, không thể cử động theo ý muốn.[p]
 Chưa kịp thốt lên câu "Mau đưa đến bệnh viện..." thì Nagi đã dịu dàng ôm chầm lấy tôi.[p]
-#凪
+#Nagi
 Nagi「Bây giờ, không sao nữa rồi. Tớ sẽ luôn ở bên cạnh cậu...... Cậu không cần phải đi đâu nữa cả.」[p]
-#凪
+#Nagi
 Nagi「Từ nay chúng ta sẽ mãi mãi sống bên nhau nhé. Cùng nhau ôn lại thật nhiều chuyện ngày xưa nữa, chịu không?」[p]
-#凪
+#Nagi
 Nagi「Tớ á, thích nói chuyện với Shun-chan nhất trên đời luôn.」[p]
 Đôi mắt trông có vẻ hạnh phúc ấy, dường như chẳng còn phản chiếu bất cứ thứ gì nữa.[p]
 [舜]（......Kẻ đã dồn ép cô ấy đến bước đường này, là mình sao?）[p]

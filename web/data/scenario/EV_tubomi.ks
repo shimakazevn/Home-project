@@ -26,7 +26,7 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-#蕾
+#Tsubomi
 Tsubomi「Kính chào Chủ nhân đã về. Em là Amelia ạ.」[p]
 [_tb_end_text]
 
@@ -35,21 +35,21 @@ Tsubomi「Kính chào Chủ nhân đã về. Em là Amelia ạ.」[p]
 [tb_start_text mode=1 ]
 Giọng điệu tuy tươi sáng, nhưng không hiểu sao tôi lại nghe ra được sự tức giận ẩn chứa trong đó.[p]
 Một thái độ không thể chấp nhận được đối với một hầu gái,[r]nhưng nếu tôi mà nói ra điều đó thì chắc chắn sẽ nhận lại sự phản đòn kinh khủng.[p]
-#蕾
+#Tsubomi
 [chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_07c.gif" wait="false"]Tsubomi「Hà…… anh thì sướng rồi. Lúc nào trông cũng rảnh rỗi, ghen tị thật đấy.[r]Tôi đây từ sáng đã chạy ngược chạy xuôi, bận tối mắt tối mũi đây này.」[p]
 Vừa đóng cửa phòng lại, vẻ niềm nở của cô nàng liền biến mất, thay vào đó là cái nhăn mặt.[r]Nếu tôi mà là chủ nhân thật, tôi xin kiếu cô hầu gái đáng sợ này.[p]
 [舜]「Hẹn hò đi. Dù sao thì trên danh nghĩa chúng ta cũng làm cùng chỗ mà.」[p]
-#蕾
+#Tsubomi
 Tsubomi「Cái gì mà danh nghĩa với chả bí mật, đừng có nói kiểu kỳ quặc thế![r]Tiệm Reflex đâu phải là chỗ làm mấy trò mờ ám, công việc của tôi là giúp khách hàng thấy khỏe khoắn hơn mà!」[p]
 [舜]「Đừng có giận thế chứ. Anh biết rồi mà...!」[p]
-#蕾
+#Tsubomi
 Tsubomi「Nếu muốn hẹn hò thì mua thêm dịch vụ đi. Ở đây có cả gói hẹn hò ngoài tiệm đấy.」[p]
 Trên bảng thực đơn mà Tsubomi chỉ vào quả thực có dòng chữ 『Hẹn hò ngoài tiệm』.[p]
 Đã có cái dịch vụ này rồi mà còn khăng khăng đây là tiệm massage thì thật khiên cưỡng, nhưng tôi đành cố nhịn không nói ra.[p]
 [舜]「Được thôi, anh cũng vừa nhận lương làm thêm mà. Cho một gói hẹn hò đi.」[p]
-#蕾
+#Tsubomi
 [chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_02c.gif" wait="false"]Tsubomi「Hả? Tiền lương mẹ trả mà anh lại đem phung phí thế này, nghĩ thôi đã thấy bực mình rồi.」[p]
-#蕾
+#Tsubomi
 [chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_00c.gif" wait="false"]Tsubomi「Mà thôi kệ đi. Nhờ anh mua thêm dịch vụ mà lương tôi cũng tăng lên. Tôi đi chuẩn bị đây.[r]5 phút nữa tôi quay lại đón, ngồi đợi đi nhé?」[p]
 Bỏ lại một câu lạnh lùng như mọi khi, Tsubomi bước ra khỏi phòng.[p]
 [_tb_end_text]
@@ -69,41 +69,41 @@ Tsubomi dừng lại trước hết cửa hàng này đến cửa hàng khác, l
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-#蕾
+#Tsubomi
 Tsubomi「Cái này dễ thương quá~! Hay là mua luôn nhỉ.」[p]
 [舜]「Cô cần nhiều quần áo thế cơ à? Nãy giờ mua mấy bộ rồi đấy.」[p]
-#蕾
+#Tsubomi
 Tsubomi「Eo ôi... Câu đó lọt top 10 những câu không nên nói với con gái đấy.」[p]
 [舜]「Không, tại vì...」[p]
-#蕾
+#Tsubomi
 Tsubomi「Chi phí cần thiết! Tôi mua để mặc đi thử vai mà.」[p]
 Tsubomi thoáng lộ vẻ mặt như thể lỡ lời, rồi lập tức thở dài.[p]
-#蕾
+#Tsubomi
 Tsubomi「Định không nói rồi cơ... nhưng thà nói ra còn hơn bị coi là phung phí.」[p]
-#蕾
+#Tsubomi
 Tsubomi「Tôi muốn làm người mẫu. Từ nhỏ tôi đã muốn bước chân vào giới giải trí rồi...」[p]
-#蕾
+#Tsubomi
 Tsubomi「Thế nên tôi đang đi thử vai khắp nơi để được vào công ty quản lý.」[p]
 [舜]「Chà, lần đầu tiên anh nghe đấy.」[p]
-#蕾
+#Tsubomi
 Tsubomi「Đương nhiên rồi? Tôi đã kể cho ai nghe bao giờ đâu. Với lại tôi cũng chưa trúng tuyển lần nào...」[p]
-#蕾
+#Tsubomi
 Tsubomi「Còn chưa bước được bước đầu tiên thì sao dám nói với ai chứ.」[p]
 Tsubomi nở một nụ cười tự trào, xen lẫn nét buồn bã.[p]
 Có vẻ như cô ấy đang cảm thấy bực bội và bất lực với bản thân vì mãi không trúng tuyển.[p]
 [舜]「Việc cô bắt tay vào hành động đã là bước đầu tiên rồi còn gì.」[p]
-#蕾
+#Tsubomi
 Tsubomi「Cảm ơn anh... nhưng không trúng tuyển thì cũng vô nghĩa thôi.」[p]
-#蕾
+#Tsubomi
 Tsubomi「Tôi thừa biết là có đầy người dễ thương hơn tôi.[r]Chính vì thế nên tôi mới phải thể hiện cá tính riêng của mình chứ.」[p]
 [舜]「Hửm? Nếu vậy thì trang phục đi thử vai nên đơn giản một chút thì tốt hơn chứ nhỉ?」[p]
-#蕾
+#Tsubomi
 Tsubomi「Đồ dễ thương thì tốt hơn chứ sao? Người ta còn thấy được cá tính của mình nữa.」[p]
 [舜]「Người ta muốn xem sức hút của bản thân cô mà, nên đừng mặc đồ quá lộng lẫy thì hơn.」[p]
 Tsubomi khẽ rên lên "Ưm..." ra chiều suy nghĩ.[p]
-#蕾
+#Tsubomi
 Tsubomi「Mà thôi, tôi sẽ nghe để tham khảo. Về nhà tôi sẽ tìm hiểu thử xem.」[p]
-#蕾
+#Tsubomi
 Tsubomi「Vậy thì sang cửa hàng tiếp theo thôi! Anh đi theo cũng được đấy.」[p]
 [舜]「Cô... ! Đây là dịch vụ của tiệm đấy nhé!」[p]
 Dù cự nự như vậy, nhưng tôi vẫn ngoan ngoãn đi theo sau cô hầu gái kiêu ngạo ấy.[p]

@@ -16,16 +16,16 @@
 [tb_show_message_window  ]
 [mask_off  time="800"  effect="slideOutRight"  ]
 [tb_start_text mode=1 ]
-Hayato「Yo, cậu làm gì ở đây thế. Cậu lúc nào cũng có vẻ thảnh thơi, sướng thật đấy.」[p]
+Bên trong quán khá náo nhiệt, nhưng đâu đó vẫn phảng phất một sự tĩnh lặng dễ chịu.[p]
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-Hayato「Yo, cậu có hẹn với ai à? A, đi một mình sao... Mà, một mình thì cũng thoải mái nhỉ.」[p]
+（Có Hayato kìa. Hay là bắt chuyện thử xem sao?）
 [_tb_end_text]
 
 [glink  color="btn_03_black"  storage="sansaku_famiresuEV_hayato.ks"  size="20"  text="Bắt chuyện với Hayato"  x="410"  y="160"  width="497"  height="57"  _clickable_img=""  target="*hanasu"  ]
 [glink  color="btn_03_black"  storage="sansaku_famiresuEV.ks"  size="20"  text="Cứ thế bước vào quán"  x="410"  y="240"  width="497"  height="57"  _clickable_img=""  target="*taberu"  ]
-[glink  color="btn_03_black"  storage="sansaku_famiresuEV.ks"  size="20"  text="Làm thêm ca đêm (+4,000 Yên / Giảm Thể lực)"  x="410"  y="320"  width="497"  height="57"  _clickable_img=""  target="*baito"  ]
+[glink  color="btn_03_black"  storage="sansaku_famiresuEV.ks"  size="20"  text="Làm thêm ca đêm (+4,000 Yên"  x="410"  y="320"  width="497"  height="57"  _clickable_img=""  target="*baito"  ]
 [glink  color="btn_03_black"  storage="sansaku_hankagaiEV.ks"  size="20"  text="Quay về nhà"  x="410"  y="400"  width="497"  height="57"  _clickable_img=""  target="*kaeru"  ]
 [s  ]
 *hanasu
@@ -58,7 +58,7 @@ Hayato「Yo, cậu có hẹn với ai à? A, đi một mình sao... Mà, một m
 *aisatu1_nigate
 
 [tb_start_text mode=1 ]
-Hayato「Ồ~, khỏe không? Đang định đi đâu à? Nếu đi mua sắm thì cứ bảo tôi, tôi chỉ cho mấy tiệm hay lắm.」[p]
+Hayato「Yo, cậu làm gì ở đây thế. Cậu lúc nào cũng có vẻ thảnh thơi, sướng thật đấy」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -127,7 +127,7 @@ Hayato「Ồ~, khỏe không? Đang định đi đâu à? Nếu đi mua sắm th
 *aisatu2_hutuu
 
 [tb_start_text mode=1 ]
-Hayato「Úi chà! Chạm mắt nhau rồi thì cậu phải nhận ra trước chứ. Ha ha, mà thôi không sao.」[p]
+Hayato「Yo, cậu có hẹn với ai à? A, đi một mình sao... Mà, một mình thì cũng thoải mái nhỉ」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -196,7 +196,7 @@ Hayato「Úi chà! Chạm mắt nhau rồi thì cậu phải nhận ra trước 
 *aisatu3_yuukou
 
 [tb_start_text mode=1 ]
-Hayato「Cái này là nước tăng lực người ta vừa phát đằng kia đấy. Cho cậu này.」[p]
+Hayato「Ồ~, khỏe không? Đang định đi đâu à? Nếu đi mua sắm thì cứ bảo tôi, tôi chỉ cho mấy tiệm hay lắm」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -266,7 +266,7 @@ Hayato「Cái này là nước tăng lực người ta vừa phát đằng kia �
 *aisatu4_suki
 
 [tb_start_text mode=1 ]
-Hayato「Hồi trưa tôi đã uống một lon rồi.[r]Uống nhiều quá cũng không tốt cho sức khỏe đâu nhỉ? Nên cậu cứ lấy đi.」[p]
+Hayato「Úi chà! Chạm mắt nhau rồi thì cậu phải nhận ra trước chứ. Ha ha, mà thôi không sao」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -340,10 +340,10 @@ Hayato「Hồi trưa tôi đã uống một lon rồi.[r]Uống nhiều quá cũ
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
+Hayato「Cái này là nước tăng lực người ta vừa phát đằng kia đấy. Cho cậu này」[p]
+Hayato「Hồi trưa tôi đã uống một lon rồi.[r]Uống nhiều quá cũng không tốt cho sức khỏe đâu nhỉ? Nên cậu cứ lấy đi」[p]
 Đã nhận được nước tăng lực[p]
 [font color="yellow"]Chỉ số Hưng phấn đã tăng một chút[resetfont][p]
-Hayato「Loại nước tăng lực mới này uống vào khỏe lắm đấy.[r]A, nếu thích thì cậu uống thử một lon xem.」[p]
-Hayato「Uống xong là sinh lực với tinh thần dồi dào lắm, đừng có thừa năng lượng quá mà chạy nhảy lung tung đấy nhé?」[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
@@ -353,10 +353,10 @@ Hayato「Uống xong là sinh lực với tinh thần dồi dào lắm, đừng 
 *sasiire2
 
 [tb_start_text mode=1 ]
+Hayato「Loại nước tăng lực mới này uống vào khỏe lắm đấy.[r]A, nếu thích thì cậu uống thử một lon xem」[p]
+Hayato「Uống xong là sinh lực với tinh thần dồi dào lắm, đừng có thừa năng lượng quá mà chạy nhảy lung tung đấy nhé?」[p]
 Đã nhận được nước tăng lực[p]
 [font color="yellow"]Chỉ số Hưng phấn đã tăng một chút[resetfont][p]
-Hayato「Đúng rồi, ngày nghỉ tới mình đi đâu đó chơi đi? Đằng nào cậu cũng rảnh rỗi mà đúng không?」
-[舜]「...Ừm, cũng được thôi.」[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
@@ -389,10 +389,10 @@ Hayato「Đúng rồi, ngày nghỉ tới mình đi đâu đó chơi đi? Đằn
 *asobi
 
 [tb_start_text mode=4 ]
-[chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_01c.gif"]Hayato「Cái thái độ gì đấy! Đi với tôi làm cậu không hài lòng sao~?」[p]
+Hayato「Đúng rồi, ngày nghỉ tới mình đi đâu đó chơi đi? Đằng nào cậu cũng rảnh rỗi mà đúng không?」
 [_tb_end_text]
 
-[glink  color="btn_05_black"  storage="sansaku_famiresuEV_hayato.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Có / Đồng ý"  _clickable_img=""  target="*yes"  ]
+[glink  color="btn_05_black"  storage="sansaku_famiresuEV_hayato.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Đồng ý"  _clickable_img=""  target="*yes"  ]
 [glink  color="btn_05_black"  storage="sansaku_famiresuEV_hayato.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Không"  _clickable_img=""  target="*no"  ]
 [s  ]
 *yes
@@ -400,12 +400,12 @@ Hayato「Đúng rồi, ngày nghỉ tới mình đi đâu đó chơi đi? Đằn
 [tb_eval  exp="f.deto_hayato=1"  name="deto_hayato"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
 [cm  ]
 [tb_start_text mode=1 ]
-[舜]（Chứ còn gì nữa.）[p]
-[chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_01c.gif"] Hayato「Nhưng mà, cậu lúc nào cũng lủi thủi một mình. Thỉnh thoảng đi chơi với ai đó cũng tốt chứ sao?」[p]
-[舜]（......Lắm chuyện thật.）[p]
+[舜]「...Ừm, cũng được thôi」[p]
+[chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_01c.gif"]Hayato「Cái thái độ gì đấy! Đi với tôi làm cậu không hài lòng sao~?」[p]
+[舜]（Chứ còn gì nữa）[p]
+Hayato「Nhưng mà, cậu lúc nào cũng lủi thủi một mình. Thỉnh thoảng đi chơi với ai đó cũng tốt chứ sao?」[p]
+[舜]（……Lắm chuyện thật）[p]
 [font color="yellow"]Đã hẹn đi chơi với Hayato[resetfont][p]
-[舜]「Không... Xin lỗi nhưng tôi có việc bận rồi.」[p]
-Hayato「Vậy sao? Thấy cậu lúc nào cũng thui thủi một mình trông rõ tội, nên tôi mới tốt bụng rủ cậu đi đấy.」[p]
 [_tb_end_text]
 
 [jump  storage="sansaku_famiresuEV_hayato.ks"  target="*aisatu_end_back"  ]
@@ -413,10 +413,10 @@ Hayato「Vậy sao? Thấy cậu lúc nào cũng thui thủi một mình trông 
 
 [cm  ]
 [tb_start_text mode=1 ]
+[舜]「Không... Xin lỗi nhưng tôi có việc bận rồi」[p]
+Hayato「Vậy sao? Thấy cậu lúc nào cũng thui thủi một mình trông rõ tội, nên tôi mới tốt bụng rủ cậu đi đấy」[p]
 Hayato「Thôi được rồi, lần sau phải đi đấy nhé?」[p]
-[舜]（......Không đời nào.）[p]
-Bên trong quán khá náo nhiệt, nhưng đâu đó vẫn phảng phất một sự tĩnh lặng dễ chịu.[p]
-（Có Tsubomi kìa. Hay là bắt chuyện thử xem sao?）
+[舜]（……Không đời nào）[p]
 [_tb_end_text]
 
 [jump  storage="sansaku_famiresuEV_hayato.ks"  target="*aisatu_end_back"  ]

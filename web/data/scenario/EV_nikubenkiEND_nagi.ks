@@ -38,7 +38,7 @@ Nagi đang quỳ gối trên sàn nhà, chầm chậm ngẩng mặt lên.[p]
 [tb_start_text mode=1 ]
 Đôi mắt vô hồn không thể đọc được cảm xúc ấy, từ rất lâu rồi, đã hoàn toàn phó mặc mọi thứ cho Shun.[p]
 [舜]「Thời gian là 3 phút. Ăn không xong là tôi đổ bỏ đấy.」[p]
-#凪
+#Nagi
 Nagi「Em xin phép... ăn ạ...」[p]
 Một sự thống trị mang tính hình thức.[p]
 Không phải cưỡng ép, cũng chẳng phải cự tuyệt.[p]
@@ -51,21 +51,21 @@ Không phải là tôi mong muốn điều này. Chỉ là, vô tình trôi dạ
 Tôi cởi phăng quần áo, thay vào đó là đeo chiếc mặt nạ đang đặt trên bàn.[p]
 Rồi tôi nhấn nút ghi hình của chiếc camera ngay trước mặt.[p]
 Tôi giật mạnh sợi xích nối với vòng cổ, ép Nagi phải ngẩng mặt lên.[p]
-#凪
+#Nagi
 Nagi「Ch-Chào buổi tối... Từ bây giờ... em sẽ được dạy dỗ ạ.」[p]
 [_tb_end_text]
 
 [tb_cg  id="cg_nagi_doreiEND"  ]
 [tb_start_text mode=1 ]
 Ngay trước khi cô ấy nói xong, tôi nhét mạnh dương vật vào lỗ hậu môn của Nagi.[p]
-#凪
+#Nagi
 Nagi「Ư...!! Nguuu♡♡ Giii!」[p]
 [舜]「Này đừng có cúi gằm mặt xuống, ngẩng lên. Để tao phải nhắc lần nữa là tao "giáo dục" lại đấy nhé.」[p]
-#凪
+#Nagi
 Nagi「A, em cảm ơn anh♡ Em cảm ơn anh ạ♡」[p]
 Tôi bắt đầu dập hông dữ dội. Chắc hẳn lúc này đang có rất nhiều gã đàn ông ngoài kia dán mắt vào dáng vẻ này.[p]
 [舜]「Đây là miếng cơm manh áo của mày đấy. Ráng mà kiếm tiền cho đàng hoàng vào.」[p]
-#凪
+#Nagi
 Nagi「Vâng ạ♡ Vâng ạ♡」[p]
 Giọng Nagi càng lúc càng ngọt ngào và tan chảy.[p]
 Hồi đầu cô ta chống cự dữ dội lắm, nhưng chỉ cần dùng chút bạo lực và những tiếng quát tháo để dạy dỗ thì mọi chuyện đâu lại vào đấy.[p]
@@ -79,7 +79,7 @@ Chính vì thế, tôi mới khao khát một thứ gì đó chỉ dành riêng 
 Giờ đây, Nagi đang ở ngay trước mắt tôi, hoàn toàn ngoan ngoãn phục tùng từng lời tôi nói.[p]
 Không hề nghi ngờ, không chút phản kháng. Cứ như thể đó là điều hiển nhiên vậy.[p]
 [舜]「……Em sẽ mãi mãi ở bên cạnh anh chứ?」[p]
-#凪
+#Nagi
 Nagi「Vâng, em sẽ mãi ở bên anh ạ! ♡ Ưm…! A… a a a!! ♡」[p]
 Nagi gật đầu lia lịa không biết bao nhiêu lần.[p]
 Trong cử chỉ ấy, chẳng còn sót lại chút bối rối hay sợ hãi nào của ngày xưa nữa.[p]

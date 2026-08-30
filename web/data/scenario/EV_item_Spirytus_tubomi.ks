@@ -25,7 +25,7 @@ Xin chào và hẹn gặp lại trong những câu chuyện tiếp theo.[p]
 HOME (ROOM) - Bản Việt Hóa Hoàn Tất 100%.[p]
 [_tb_end_text]
 
-[glink  color="btn_05_black"  storage="EV_item_Spirytus_tubomi.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Sử dụng (Viên Spirytus)"  _clickable_img=""  target="*yes"  ]
+[glink  color="btn_05_black"  storage="EV_item_Spirytus_tubomi.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Sử dụng"  _clickable_img=""  target="*yes"  ]
 [glink  color="btn_05_black"  storage="EV_item_Spirytus_tubomi.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Không sử dụng"  _clickable_img=""  target="*no"  ]
 [s  ]
 *no
@@ -37,8 +37,8 @@ HOME (ROOM) - Bản Việt Hóa Hoàn Tất 100%.[p]
 
 [tb_start_text mode=1 ]
 Chúc bạn có những giờ phút trải nghiệm game thật tuyệt vời![p]
-Hẹn gặp lại trong các dự án Visual Novel tiếp theo![p]
-Chỉ số hưng phấn tăng lên[resetfont][p]
+Đã thanh toán tiền bữa tối 　[font color="yellow"]-¥5,000[p]
+Chỉ số Hưng phấn đã tăng lên[resetfont][p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP2"  ]
@@ -71,26 +71,26 @@ Hoàn tất kịch bản đặc biệt.[p]
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-#蕾
+#Tsubomi
 Tsubomi「Lần sau em muốn đi thử quầy buffet salad cơ. Ở đó á, được ăn thỏa thích luôn nha~」[p]
 Bạn có thể xem lại tất cả các cảnh trong menu Kỷ niệm.[p]
-#蕾
+#Tsubomi
 Tsubomi「Mà nói chứ, giá mà ăn nhiều cũng không bị béo thì tốt biết mấy~」[p]
-[舜]「Đầy đặn mũm mĩm một chút cũng có sao đâu?」[p]
-#蕾
+[舜]（Nếu cho em ấy uống thêm một chút nữa, khéo sẽ càng mất cảnh giác hơn cũng nên）[p]
+#Tsubomi
 [chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_01c.gif"]Tsubomi「Aahaha! Đó là suy nghĩ của riêng anh thôi đúng không hả? Fufufu」[p]
 Tất cả các kết thúc đã được mở khóa thành công.[p]
-Dữ liệu lưu trữ đã được đồng bộ hoàn tất.[p]
-#蕾
-Tsubomi「Ơ kìa? Lạ thế nhờ... Mặt đất cứ bồng bềnh bồng bềnh ấy...」[p]
+[舜]（Nhân lúc này, lén bỏ Spirytus vào đồ uống của Tsubomi thôi...）[p]
+#Tsubomi
+Đã sử dụng Spirytus[p]
 [舜]（Đúng là thuốc Spirytus tác dụng ghê thật đấy...）[p]
 Khởi động lại vòng lặp với những trải nghiệm phong phú hơn.[p]
 [舜]「Này này, nguy hiểm quá. Em thấy trong người khó chịu à?」[p]
-#蕾
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif"]Tsubomi「Không saooo hết á. Ufufu, trong người đang thấy sướng lắm luôn nè~」[p]
-Trân trọng cảm ơn tác giả gốc đã tạo nên một tác phẩm tuyệt vời.[p]
+#Tsubomi
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif"] Vừa bước ra khỏi quán, bước chân của Tsubomi đã lảo đảo loạng choạng thấy rõ.[p]
+Thế nhưng ngay sau đó em ấy bủn rủn cả chân tay như không thể bước tiếp được nữa, tôi liền vội đỡ lấy thân hình mảnh mai của em.[p]
 [舜]「Vào đâu đó nghỉ tạm một lát nhé...」[p]
-#蕾
+#Tsubomi
 Tsubomi「Đừng có bảo là vào khách sạn đấy nhá~? Tôi không thèm vào khách sạn với anh đâu đấy nhé~!」[p]
 [舜]（Chậc... Đang tính đưa vào khách sạn, thế mà chỗ này vẫn còn tỉnh táo gớm）[p]
 [舜]「Biết rồi. Ngay gần đây là tiệm Refre rồi. Đi nào. Giờ tiệm cũng đóng cửa hết khách rồi nên không sao đâu」[p]
@@ -102,19 +102,19 @@ Tsubomi「Đừng có bảo là vào khách sạn đấy nhá~? Tôi không thè
 [mask_off  time="2000"  effect="fadeOut"  ]
 [playbgm  volume="50"  time="1000"  loop="true"  storage="H3.mp3"  ]
 [tb_start_text mode=1 ]
-Chúc các bạn chơi game vui vẻ![p]
-Và hẹn gặp lại trong những tác phẩm tiếp theo![p]
+Tôi bật đèn trong tiệm lên rồi cùng Tsubomi bước vào phòng riêng.[p]
+Nơi này vốn dĩ là chỗ phục vụ khách hàng theo đúng quy định. Nhưng giờ đây, chẳng còn quy tắc hay giới hạn nào tồn tại nữa.[r]Khi tôi đặt thân thể mềm nhũn của Tsubomi nằm xuống tấm đệm, một mùi hương ngọt ngào thoang thoảng phả vào cánh mũi.[p]
 [舜]「Đến nơi rồi. Nè, uống nước đi」[p]
 Tôi đưa chai nước khoáng đặt trong tiệm cho Tsubomi.[p]
 Em ấy uống với vẻ mặt mơ màng đờ đẫn rồi thở dài một hơi thật mạnh.[p]
-#蕾
+#Tsubomi
 Tsubomi「Hình như em bị say rồi hay sao ấy… Lạ thật, rõ ràng em đâu có uống rượu đâu chứ」[p]
 [舜]「Chắc quán nước mang nhầm đồ uống có cồn ra rồi cũng nên」[p]
-#蕾
+#Tsubomi
 Tsubomi「Trời ạ~. Ghét quá… Người em nóng bừng bừng hết cả lên rồi nè」[p]
 Bị đôi mắt ươn ướt ngấn lệ của Tsubomi nhìn chằm chằm, tôi cũng đã sắp tới giới hạn chịu đựng rồi.[p]
 [舜]「Thế thì phải cởi bớt quần áo ra thôi」[p]
-#蕾
+#Tsubomi
 Tsubomi「Không chịu đâu, ơ, a, khoan đã nào…」[p]
 [_tb_end_text]
 
@@ -125,7 +125,7 @@ Tsubomi「Không chịu đâu, ơ, a, khoan đã nào…」[p]
 [tb_start_text mode=1 ]
 Tôi đè trọn cơ thể mảnh mai của em ấy xuống rồi vén chiếc áo lên.[p]
 Chiếc áo lót cũng theo đó mà xộc xệch, để lộ đôi gò bồng đảo mềm mại nảy nở trần trụi.[p]
-#蕾
+#Tsubomi
 Tsubomi「Đã bảo là không được rồi mà…」[p]
 Dù em ấy khua khoắng tay chân như muốn phản kháng, nhưng một cô gái đã say mèm thì làm sao đủ sức đẩy tôi ra được.[p]
 Làn da trắng nõn nà trên thân hình mảnh mai mềm mại. Phải thưởng thức thế nào đây──[p]
@@ -136,7 +136,7 @@ Làn da trắng nõn nà trên thân hình mảnh mai mềm mại. Phải thư�
 
 [bg  time="2000"  method="crossfade"  storage="back_rihure_sekkyaku.png"  ]
 [tb_start_text mode=1 ]
-#蕾
+#Tsubomi
 Tsubomi「Hà…♡ Hà…♡ Hà…♡ Không chịu đâu mà…♡」[p]
 Vừa run rẩy toàn thân, Tsubomi vừa lắc đầu nguầy nguậy phản đối.[p]
 Rồi cứ thế, em ấy nhắm nghiền hai mắt lại và bắt đầu thở đều đều chìm vào giấc ngủ.[p]

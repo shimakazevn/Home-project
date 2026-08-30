@@ -30,7 +30,7 @@ Bệnh viện gần nhà nhất. Đúng như trong ký ức, những bệnh nhâ
 
 [tb_start_text mode=1 ]
 [舜]（Nhắc mới nhớ, Nagi làm việc ở đây mà. Nhưng quả thật mình cũng không biết cô ấy làm ở khoa nào──）[p]
-#凪
+#Nagi
 Nagi「Bác Tanaka ơiiii! Bác có ở đây không ạ~?」[p]
 [舜]（……Có kìa!）[p]
 Trước phòng chờ khoa nội có lẽ là nơi đông đúc nhất, Nagi trong bộ đồng phục y tá đang gọi một ông lão.[p]
@@ -43,13 +43,13 @@ Ngay lúc đó, tôi có cảm giác bất chợt chạm mắt với Nagi đang 
 [call  storage="character.ks"  target="*nagi_sigotogi"  ]
 [call  storage="BGM.ks"  target="*nagi"  ]
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「Shun-chan? Quả nhiên là Shun-chan mà! [r]Tớ nhận ra ngay đấy. Bất ngờ thật, chắc cũng phải 10 năm rồi nhỉ?」[p]
-#凪
+#Nagi
 Nagi「Có phải cậu mới chuyển về đây không? Giá mà cậu nói cho tớ biết thì tốt biết mấy~」[p]
 [舜]（Á, không ngờ lại chạm mặt thế này... Mình chỉ định đứng nhìn từ xa thôi mà）[p]
 [舜]（……Hửm? Cô ấy nghĩ mình mới chuyển về quê à. Vậy là không biết chuyện mình sống thu mình rồi.）[p]
-#凪
+#Nagi
 Nagi「Nhớ ngày xưa quá, cậu vẫn khỏe chứ...? A, không phải.[r]Cậu đang ở bệnh viện mà. Xin lỗi nhé... Tớ vô ý quá.」[p]
 [舜]「Không sao, tôi chỉ hơi đau đầu nên đến lấy thuốc thôi──」[p]
 Hayato「A, Nagi...!」[p]
@@ -64,22 +64,22 @@ Hayato「A, Nagi...!」[p]
 [舜]（Hả? Sao lại là tên này nữa...!）[p]
 Hayato chạy đến chỗ Nagi, quay sang nhìn tôi với vẻ mặt ngạc nhiên "Ủa?".[p]
 Hayato「Nhân viên làm thêm ở chỗ mẹ tôi... à, [舜] đúng không.」[p]
-#凪
+#Nagi
 Nagi「Ủa, Shun-chan và anh Hayato quen nhau sao?」[p]
 Hayato「Hả? Nagi mới là người quen của cậu ta sao?」[p]
-#凪
+#Nagi
 Nagi「Ư-ừm... Em và Shun-chan là bạn thuở nhỏ. Hồi bé bọn em hay chơi chung lắm.」[p]
-#凪
+#Nagi
 Nagi「À, Shun-chan, đây là anh Naruse Hayato, người tớ đang hẹn hò.」[p]
 "Nhỉ?" cô ấy hỏi, tôi khẽ gật đầu.[p]
 Hayato, người chồng sắp cưới, thoáng lộ vẻ khó chịu nhưng ngay lập tức lấy lại nụ cười như cũ.[p]
 [chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_01c.gif"]Hayato「Giới thiệu lại nhé, tôi cũng mong được giúp đỡ. Cố gắng làm tốt công việc làm thêm nhé?」[p]
 [舜]（Tên này...! Chắc chắn hắn đang coi thường mình...）[p]
-#凪
+#Nagi
 Nagi「Không hiểu sao, hôm nay được gặp gỡ nhiều người thế này tớ vui lắm.」[p]
 Tôi nhìn thấy một nữ y tá có vẻ đanh đá đang hầm hầm bước về phía này.[p]
 Y tá phụ「Cô đang trong giờ nghỉ đấy à? Làm gì có thời gian rảnh rỗi mà đứng tán gẫu.」[p]
-#凪
+#Nagi
 [chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_00c.gif"][chara_mod name="kyara_nagi_sabun2" cross="false" time="500" storage="chara/179/ADV_nagi_01_03c.gif" wait="false" ] Nagi「X-xin lỗi chị ạ! Em sẽ quay lại làm việc ngay!」[p]
 
 [_tb_end_text]
@@ -94,10 +94,10 @@ Y tá phụ「Cô đang trong giờ nghỉ đấy à? Làm gì có thời gian r
 [bg  time="1000"  method="crossfade"  storage="event/op_3.png"  ]
 [tb_cg  id="cg_op3"  ]
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「A! Thiệt tình... sao mình lại hậu đậu thế này cơ chứ.」[p]
 Y tá phụ「Nhặt lên xong rồi quay lại làm việc đi.」[p]
-#凪
+#Nagi
 Nagi「Vâng...!」[p]
 Nagi cuống cuồng nhặt tập bệnh án lên.[p]
 Bất chợt, tôi nhìn thấy đồ lót của cô ấy lấp ló từ dưới chân.[p]
@@ -105,7 +105,7 @@ Bất chợt, tôi nhìn thấy đồ lót của cô ấy lấp ló từ dưới
 
 [bg  time="1000"  method="crossfade"  storage="back_byouin2.png"  ]
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「Vậy nhé Shun-chan, anh Hayato, hẹn gặp lại.」[p]
 Tôi có cảm giác như nghe thấy tiếng bước chân lạch bạch chạy đi của cô ấy cùng với tiếng quát "Không được chạy!" của nữ y tá.[p]
 [_tb_end_text]

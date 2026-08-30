@@ -31,14 +31,14 @@
 Hơi giật mình vì tiếng chuông điện thoại reo lên bất chợt, tôi nhìn vào màn hình.[r]Cái tên Nagi hiện lên trên đó.[p]
 [舜]（Chuyện gì vậy nhỉ......）[p]
 Bắt máy, một giọng nói dịu dàng không đổi thay từ bao giờ truyền đến tai tôi.[p]
-#凪
+#Nagi
 Nagi「......A, Shun-chan. Xin lỗi vì gọi đột ngột nhé, bây giờ cậu...... có rảnh không?」[p]
 [舜]「Ừ, có chuyện gì vậy?」[p]
-#凪
+#Nagi
 Nagi「Hôm nay tớ được nghỉ. Nên là, nếu cậu không phiền thì, chúng mình cùng đi chơi nhé?」[p]
 Nghe những lời đó, lồng ngực tôi khẽ rung lên.[p]
 [舜]「Hả? À...... tất nhiên rồi. Nếu tớ không phiền thì đi đâu cũng được.」[p]
-#凪
+#Nagi
 Nagi「Cảm ơn cậu. Vậy, lát nữa gặp nhé.」[p]
 Giọng nói ấy vẫn văng vẳng bên tai một lúc lâu sau khi cúp máy, khiến ký ức về mùa hè năm xưa chợt ùa về.[p]
 [_tb_end_text]
@@ -57,10 +57,10 @@ Tâm hồn tôi dần trở nên tĩnh lặng và trong trẻo.[r]Cảm giác nh
 
 [call  storage="character.ks"  target="*nagi_date_hutuu"  ]
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「Thật may vì chúng mình đến đúng lúc hoa nở rộ nhỉ.」[p]
 [舜]「Ừ, hồi nhỏ chúng mình cũng từng đến đây mà.」[p]
-#凪
+#Nagi
 Nagi「Ừm... Ngày xưa vì thấp bé nên cả người bị giấu nhẹm giữa đám hoa hướng dương,[r]chúng mình còn chơi trốn tìm ở đây nữa cơ.」[p]
 [舜]「Nagi bây giờ chắc vẫn bị giấu nhẹm luôn đấy chứ.」[p]
 [_tb_end_text]
@@ -78,17 +78,17 @@ Vừa cất tiếng gọi, tôi đã bị ôm chầm lấy từ phía sau.[p]
 [call  storage="character.ks"  target="*nagi_date_suki"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「Shun-chan cao quá nên lòi cả đầu ra kìa, dễ tìm lắm.[r]......Cậu lớn thật rồi. Cơ thể cũng ra dáng một người đàn ông trưởng thành rồi.」[p]
 Hơi ấm của Nagi truyền qua lưng tôi.[r]Giữa bầu không khí tĩnh lặng, tôi cảm nhận được cô ấy đang khẽ áp má vào lưng mình.[p]
-#凪
+#Nagi
 Nagi「Này...... Tớ đã từ chối lời cầu hôn của Hayato rồi. Bọn tớ chia tay rồi.」[p]
 [舜]「Thế có ổn không?」[p]
-#凪
+#Nagi
 Nagi「......Ừm. Nhưng kỳ lạ là tớ chẳng thấy hối hận chút nào. ......Cậu có thấy tớ ngốc nghếch không?」[p]
 Giọng nói của Nagi có chút gì đó vui vẻ.[p]
 Không phải là sự buồn bã, mà là giọng nói của một người đã trút bỏ được gánh nặng trong lòng.[p]
-#凪
+#Nagi
 Nagi「Shun-chan, mình chơi trốn tìm không?」[p]
 Bị bàn tay nhỏ bé ấy kéo đi, tôi nhẹ nhàng ngồi xổm xuống dưới bóng râm của những cây hoa hướng dương.[p]
 [_tb_end_text]
@@ -105,10 +105,10 @@ Những tia nắng xuyên qua khe hở giữa những thân cây khẽ lay độ
 [bg  time="3000"  method="fadeInDown"  storage="event/nagi5.png"  ]
 [tb_cg  id="cg_nagi_kokuhaku"  ]
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「Có vẻ như tớ muốn tự mình nói ra từ "thích".」[p]
 Lời nói ấy không hề bị tiếng gió lấn át, mà truyền thẳng vào trái tim tôi.[r]Nagi khẽ bước tới một bước, rút ngắn khoảng cách. Và rồi, đôi môi cô ấy dịu dàng chạm vào môi tôi.[p]
-#凪
+#Nagi
 Nagi「Tớ thích cậu, thích cậu lắm...」[p]
 Lời nói ấy không hề tan biến vào tiếng gió, mà truyền thẳng vào trái tim tôi.[p]
 [_tb_end_text]
@@ -118,7 +118,7 @@ Câu trả lời của tôi là──[p]
 [_tb_end_text]
 
 [jump  storage="EV_kokuhaku_nagi.ks"  target="*no"  cond="f.kan_keibetu_nagi==1"  ]
-[glink  color="btn_05_black"  storage="EV_kokuhaku_nagi.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Đồng ý nhận lời"  _clickable_img=""  target="*yes"  ]
+[glink  color="btn_05_black"  storage="EV_kokuhaku_nagi.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Đồng ý"  _clickable_img=""  target="*yes"  ]
 [glink  color="btn_05_black"  storage="EV_kokuhaku_nagi.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Từ chối"  _clickable_img=""  target="*no"  ]
 [s  ]
 *yes
@@ -133,17 +133,17 @@ Câu trả lời của tôi là──[p]
 [舜]「Tớ cũng thích Nagi. Tớ đã luôn thích cậu từ rất lâu rồi.」[p]
 Cuối cùng tôi cũng có thể nói ra tiếng lòng mình.[r]Cảm giác như những sợi tơ rối rắm trong sâu thẳm trái tim đang từ từ được tháo gỡ.[p]
 Từ đôi mắt Nagi, những giọt lệ tuôn rơi lã chã.[p]
-#凪
+#Nagi
 Nagi「Tớ không biết là cậu cũng nghĩ như vậy đấy... Biết thế cậu nói sớm hơn thì tốt biết mấy.」[p]
-#凪
+#Nagi
 Nagi「Không, là do cậu cố tình không nói ra đúng không. Vì Shun-chan rất tốt bụng mà.」[p]
 Tôi không hề tốt bụng.[p]
 Tôi chỉ là một kẻ hèn nhát, xảo quyệt, luôn che giấu cảm xúc thật của mình và không ngừng trốn chạy.[p]
 Nhưng──tôi sẽ không trốn chạy nữa.[r]Bởi vì cuối cùng tôi cũng đã tự mình nói ra được tình cảm này.[p]
-#凪
+#Nagi
 Nagi「Cảm ơn cậu... Từ giờ tớ sẽ không bỏ lỡ nữa đâu.」[p]
 Cuối cùng thì tình cảm này cũng được đền đáp.[r]Cảm giác như mọi cảm xúc tiêu cực trong tôi đều tan biến hết.[p]
-#凪
+#Nagi
 Nagi「Này, Shun-chan...... Hôm nay em muốn ở bên anh đến sáng. Bây giờ, em đến nhà anh được không?」[p]
 [舜]「Tất nhiên rồi.」[p]
 Ánh mắt chạm nhau ánh lên ngọn lửa khao khát.[p]
@@ -190,7 +190,7 @@ Một buổi sáng êm đềm và tĩnh lặng, tựa như đang chìm đắm tr
 [bg  time="1000"  method="crossfade"  storage="sin_nagi_DK.png"  ]
 [call  storage="character.ks"  target="*nagi_suki"  ]
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「A...... Chào buổi sáng. Anh ngủ ngon chứ. Đồ ăn sắp xong rồi, anh đợi thêm một chút nữa nhé.」[p]
 Vẫn như vậy, nhưng lại có chút gì đó khác biệt.[r]Khi ánh mắt chạm nhau, Nagi ngượng ngùng đỏ mặt, vội vàng ngoảnh đi chỗ khác.[p]
 Thế nhưng ngay khoảnh khắc tiếp theo, cô ấy lại nở nụ cười tủm tỉm như mọi khi.[p]
@@ -234,11 +234,11 @@ Một cảm giác nhột nhạt kỳ lạ xen lẫn niềm vui sướng trào d�
 
 [tb_start_text mode=1 ]
 [舜]「......Xin lỗi cậu. Tớ không thể hẹn hò với Nagi được.」[p]
-#凪
+#Nagi
 [chara_mod name="kyara_nagi_sabun2" cross="false" time="500" storage="chara/179/ADV_nagi_01_03c.gif"]Nagi「Hả......」[p]
 [舜]「Tớ không có ý đó. Chúng mình chỉ là bạn thuở nhỏ thôi mà?」[p]
 Đôi mắt Nagi mở to, rung động dữ dội.[p]
-#凪
+#Nagi
 Nagi「......Vậy sao, đúng rồi nhỉ...... Tớ xin lỗi......」[p]
 [_tb_end_text]
 

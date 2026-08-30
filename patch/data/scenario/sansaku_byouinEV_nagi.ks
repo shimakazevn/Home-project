@@ -31,7 +31,7 @@ Có lẽ vì đang là giờ ăn tối nên bệnh viện yên tĩnh hơn mọi 
 [_tb_end_text]
 
 [glink  color="btn_03_black"  storage="sansaku_byouinEV_nagi.ks"  size="20"  text="Bắt chuyện với Nagi"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*hanasu"  ]
-[glink  color="btn_03_black"  storage="sansaku_byouinEV.ks"  size="20"  text="Khám bệnh (Hồi Thể lực / -5,000 Yên)"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
+[glink  color="btn_03_black"  storage="sansaku_byouinEV.ks"  size="20"  text="Khám bệnh (Hồi Thể lực"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
 [s  ]
 *hanasu
 
@@ -72,7 +72,7 @@ Có lẽ vì đang là giờ ăn tối nên bệnh viện yên tĩnh hơn mọi 
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「A... Cậu chủ động bắt chuyện với tớ, hiếm thấy nha. Có chuyện gì thế?」[p]
 [_tb_end_text]
 
@@ -148,7 +148,7 @@ Nagi「A... Cậu chủ động bắt chuyện với tớ, hiếm thấy nha. C�
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「A, hôm nay cậu đến khám bệnh à? Gặp nhau ở bệnh viện thế này có cảm giác lạ lạ nhỉ.」[p]
 [_tb_end_text]
 
@@ -224,7 +224,7 @@ Nagi「A, hôm nay cậu đến khám bệnh à? Gặp nhau ở bệnh viện th
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「Nhìn thấy mặt Shun-chan, tự nhiên tớ thấy nhẹ nhõm hẳn. Hôm nay từ sáng đã bận rộn suốt rồi.」[p]
 [_tb_end_text]
 
@@ -301,7 +301,7 @@ Nagi「Nhìn thấy mặt Shun-chan, tự nhiên tớ thấy nhẹ nhõm hẳn. 
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「A... Cậu đến đột ngột quá. Hôm nay bận rộn nên tóc tai tớ rối bù hết cả rồi... Xấu hổ chết đi được.」[p]
 [_tb_end_text]
 
@@ -378,7 +378,7 @@ Nagi「A... Cậu đến đột ngột quá. Hôm nay bận rộn nên tóc tai 
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「Alo bệnh nhân ơi? Có phải anh vừa nhìn y tá khác không đấy? [r]Khc, cấm không được nhìn ngó lung tung đâu nhé?」[p]
 [_tb_end_text]
 
@@ -449,9 +449,9 @@ Nagi「Alo bệnh nhân ơi? Có phải anh vừa nhìn y tá khác không đấ
 
 [tb_start_text mode=1 ]
 Nagi「A, Shun-chan. Cậu có muốn ăn chút sô cô la không?」[p]
-Nagi「Lúc nào đói bụng hay mất tập trung mà ngậm một viên là tỉnh táo lại ngay đấy.[r]A, giữ bí mật với y tá trưởng nhé? Shun-chan cũng ăn thử đi.」[p]
-Nagi「À đúng rồi, cậu còn nhớ món bánh flan này không? Món bánh flan hồi nhỏ tụi mình hay ăn cùng nhau ấy. Hoài niệm quá nên tớ mua luôn.」[p]
-Nagi「Cho Shun-chan này. Ăn vào là nhớ lại chuyện ngày xưa ngay nhỉ? [r]Khc, có khi lại trở về làm trẻ con luôn ấy chứ?」[p]
+Nagi「A! [舜]-chan! Tớ đang tìm cậu mãi đấy~」[p]
+Nagi「Giờ nghỉ giải lao chắc đói bụng rồi đúng không? Nè, cho cậu bánh flan này」[p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng một chút[resetfont][p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
@@ -461,10 +461,10 @@ Nagi「Cho Shun-chan này. Ăn vào là nhớ lại chuyện ngày xưa ngay nh�
 *sasiire2
 
 [tb_start_text mode=1 ]
+Nagi「Phải rồi, cậu còn nhớ món bánh flan này không? Bánh flan hồi nhỏ tụi mình cùng ăn ấy. Hoài niệm quá nên tớ mua luôn」[p]
+Nagi「Cho [舜]-chan nữa nè. Ăn vào là nhớ lại chuyện hồi xưa nhỉ? [r]Khc, khéo lại biến thành trẻ con mất?」[p]
 Đã nhận được bánh flan[p]
 [font color="yellow"]Chỉ số Hưng phấn đã tăng một chút[resetfont][p]
-Có lẽ vì đang là giờ ăn tối nên bệnh viện yên tĩnh hơn mọi khi.[p]
-（Có Nagi và Hayato kìa. Hay là bắt chuyện thử xem sao?）
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]

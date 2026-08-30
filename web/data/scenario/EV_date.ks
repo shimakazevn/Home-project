@@ -325,8 +325,8 @@ Rinko「Khc, cháu dẻo miệng quá.」[p]
 *modoru_rinko
 
 [glink  color="btn_05_black"  storage="EV_date.ks"  size="20"  x="416"  y="180"  width="425"  height="58"  text="Set bánh kem (-5,000 Yên)"  _clickable_img=""  target="*rinko_1"  ]
-[glink  color="btn_05_black"  storage="EV_date.ks"  size="20"  x="416"  y="270"  width="425"  height="58"  text="Bánh kẹo bình dân (-1,000 Yên)"  _clickable_img=""  target="*rinko_2"  ]
-[glink  color="btn_05_black"  storage="EV_date.ks"  size="20"  x="416"  y="360"  width="425"  height="58"  text="Đi tay không (Không mang quà)"  _clickable_img=""  target="*rinko_3"  ]
+[glink  color="btn_05_black"  storage="EV_date.ks"  size="20"  x="416"  y="270"  width="425"  height="58"  text="Bánh kẹo (-1.000¥)"  _clickable_img=""  target="*rinko_2"  ]
+[glink  color="btn_05_black"  storage="EV_date.ks"  size="20"  x="416"  y="360"  width="425"  height="58"  text="Đi tay không"  _clickable_img=""  target="*rinko_3"  ]
 [s  ]
 *rinko_1
 

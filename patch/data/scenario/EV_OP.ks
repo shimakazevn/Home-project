@@ -110,15 +110,15 @@ Cánh cửa mở ra, như thể nối gót theo Nagi.[r]Và rồi, một ngườ
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「Sảnh vào hơi hẹp, xin lỗi anh nhé?」[p]
 ？？？「Không sao đâu, đây gọi là khu chung cư nhỉ... Ngày xưa anh cũng từng sống ở một nơi giống thế này.[r]Khi nào sống chung, mình hãy dọn đến một căn hộ mới nhé.」[p]
-#凪
+#Nagi
 Nagi「Ư-ừm... A, nhưng mà mẹ em xuất viện thì chỉ có một mình──」[p]
 ？？？「Tất nhiên là mẹ của Nagi cũng có thể chuyển đến sống cùng mà. Dù sao thì rồi chúng ta cũng sẽ trở thành người một nhà thôi.」[p]
 ？？？「Anh không định hối thúc em đâu. Nhưng anh đang nghĩ, giá mà chúng mình có thể tổ chức đám cưới vào khoảng mùa thu này. Nagi cũng muốn nhanh chóng làm cho mẹ yên tâm đúng không?」[p]
 ？？？「Em chỉ cần nhớ rằng anh đang suy nghĩ rất nghiêm túc về tương lai đó của chúng ta.」[p]
-#凪
+#Nagi
 Nagi「Vâng, cảm ơn anh...」[p]
 [舜]（Đám cưới vào mùa thu ư...? Cô ấy thực sự định kết hôn sao... với tên đàn ông đó.）[p]
 [_tb_end_text]
@@ -158,6 +158,6 @@ Phải hành động thế nào, trước tiên cần suy tính đã──[p]
 [font color="yellow"]Bạn có muốn lưu game không?[resetfont]
 [_tb_end_text]
 
-[glink  color="btn_05_black"  storage="EV_OP2.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Có / Đồng ý"  _clickable_img=""  target="*save"  ]
+[glink  color="btn_05_black"  storage="EV_OP2.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Đồng ý"  _clickable_img=""  target="*save"  ]
 [glink  color="btn_05_black"  storage="EV_OP2.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Không"  _clickable_img=""  target="*top"  ]
 [s  ]

@@ -33,26 +33,26 @@ Nhưng bây giờ, tôi đang cùng Nagi bắt đầu một cuộc sống mới 
 [bg  time="2000"  method="crossfade"  storage="event/nagi_jyunaiEND.png"  ]
 [tb_cg  id="cg_nagi_jyunaiEND"  ]
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「Xong rồi đây~. Anh Shun, lấy đĩa giúp em với.」[p]
 [舜]「Ồ, trông ngon quá...!」[p]
-#凪
+#Nagi
 Nagi「Khc, anh thích là em vui rồi. Anh Shun từ ngày xưa đã chẳng kén ăn gì mà nhỉ.」[p]
-#凪
+#Nagi
 Nagi「Nói đúng hơn là, hồi bé em làm món mì xào dở tệ mà anh vẫn ăn hết sạch...」[p]
-#凪
+#Nagi
 Nagi「Lúc đó, em vui lắm luôn. Anh đã cố nhịn để ăn đúng không?」[p]
 [舜]「Anh thì, có người nấu cho ăn là không bao giờ phàn nàn đâu.」[p]
-#凪
+#Nagi
 Nagi「Vậy à... Khc, anh chẳng thay đổi gì cả. Em đã luôn thích sự dịu dàng đó của anh.」[p]
-#凪
+#Nagi
 Nagi「Em chợt nhớ ra. Rằng từ trước đến nay, trở thành cô dâu của anh Shun vẫn luôn là ước mơ của em.」[p]
-#凪
+#Nagi
 Nagi「Hình như ước mơ đó thành hiện thực rồi. Bây giờ, chúng mình cứ như vợ chồng son ấy nhỉ.」[p]
 Nụ cười ngây thơ của Nagi khiến lồng ngực tôi dần nóng lên.[p]
 Một kẻ như tôi mà lại kết hôn... Đương nhiên đi kèm với đó là trách nhiệm và sự giác ngộ.[p]
 Nếu là tôi của trước kia thì chắc chắn đã bỏ chạy rồi. Nhưng mà──[p]
-#凪
+#Nagi
 Nagi「A, em xin lỗi...! Không phải là em đang đòi anh kết hôn đâu. Em chỉ là...」[p]
 [舜]「Đúng vậy nhỉ. ......Nhưng trước đó, chúng ta phải đến chào hỏi mẹ của Nagi đã chứ.」[p]
 [舜]「Anh muốn thưa đàng hoàng với bác ấy rằng, 『Cháu sẽ bảo vệ Nagi』.」[p]
@@ -64,9 +64,9 @@ Thế nhưng――trước đó, tôi muốn bày tỏ toàn bộ con người t
 Tôi thành thật thú nhận về quá khứ của mình.[p]
 Đó là chút thành ý tối thiểu của tôi.[p]
 Để nếu có vì thế mà bị Nagi ruồng bỏ, tôi cũng có thể chấp nhận.[p]
-#凪
+#Nagi
 Nagi「...Linh cảm của em cũng lờ mờ đoán được rồi. Dù vậy, em vẫn luôn thấy anh Shun cố gắng hết sức mình.」[p]
-#凪
+#Nagi
 Nagi「Chuyện trước đây không quan trọng. Em chỉ muốn được ở bên cạnh anh Shun thôi.」[p]
 Cùng với những lời đó, Nagi nở một nụ cười thật tươi.[p]
 Ngay khoảnh khắc chạm vào nụ cười ấy, những cảm xúc dồn nén trong lồng ngực tôi như muốn trào dâng.[p]

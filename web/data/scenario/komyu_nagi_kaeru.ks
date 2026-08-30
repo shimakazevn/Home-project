@@ -298,7 +298,7 @@ Nagi「Chỉ cần ở bên cậu là tớ đã thấy vui rồi. Cứ như th�
 [_tb_end_text]
 
 [glink  color="btn_03_black"  storage="komyu_nagi_kaeru.ks"  size="20"  text="Tỏ tình"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*kokuhaku2"  ]
-[glink  color="btn_03_black"  storage="komyu_nagi_kaeru.ks"  size="20"  text="Thôi, dừng lại"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*komyukomando"  ]
+[glink  color="btn_03_black"  storage="komyu_nagi_kaeru.ks"  size="20"  text="Hủy bỏ"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*komyukomando"  ]
 [s  ]
 *kokuhaku2
 

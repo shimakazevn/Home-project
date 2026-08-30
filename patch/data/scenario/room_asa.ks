@@ -119,35 +119,7 @@
 [button_ex name="hospital_icon" tip="icon_up.gif" tip_pos="static" tip_x="868" tip_y="-16"]
 
 [layopt current layer="message0" visible=true]
-[chara_ptext name=""]
 
-[free layer="message0" name="select_text" time="0"]
-[ptext current layer=message0 name="fx_select,select_text" text="【Làm việc tại nhà】<br>Ở trong phòng dán mắt vào biểu đồ giao dịch.<br>Không bị ảnh hưởng bởi Hưng phấn nhưng thu nhập bấp bênh. Tăng Dũng khí." x=140 y=580 size=19 time=0]
-[anim name="fx_select" opacity=0 time=0]
-
-[ptext current layer=message0 name="hospital_select,select_text" text="【Dọn dẹp bệnh viện】<br>Làm thêm công việc dọn dẹp tại bệnh viện.<br>Nhận thù lao và tăng Chu đáo. Thân thiết hơn một chút với Nagi." x=140 y=580 size=19 time=0]
-[anim name="hospital_select" opacity=0 time=0]
-
-[ptext current layer=message0 name="kintore_select,select_text" text="【Tập thể hình】<br>Rèn luyện thể chất và tinh thần.<br>Tăng Thể lực/Sức mạnh." x=140 y=580 size=19 time=0]
-[anim name="kintore_select" opacity=0 time=0]
-
-[ptext current layer=message0 name="soto_select,select_text" text="【Ra ngoài】<br>Đi dạo quanh thị trấn." x=140 y=580 size=19 time=0]
-[anim name="soto_select" opacity=0 time=0]
-
-[ptext current layer=message0 name="massa_select,select_text" text="【Tiệm massage】<br>Làm thêm tại tiệm massage của Rinko.<br>Nhận thù lao và tăng Giao tiếp. Thân thiết hơn một chút với Rinko." x=140 y=580 size=19 time=0]
-[anim name="massa_select" opacity=0 time=0]
-
-[ptext current layer=message0 name="drug_select,select_text" text="【Công việc văn phòng】<br>Làm thêm công việc bàn giấy tại tiệm Maid Refle.<br>Nhận thù lao và tăng Thông thái. Thân thiết hơn một chút với Tsubomi." x=140 y=580 size=19 time=0]
-[anim name="drug_select" opacity=0 time=0]
-
-[ptext current layer=message0 name="neru_select,select_text" text="【Đi ngủ】<br>Nghỉ ngơi thật tốt để hồi phục Thể lực và giảm mạnh Căng thẳng.<br>" x=140 y=580 size=19 time=0]
-[anim name="neru_select" opacity=0 time=0]
-
-[ptext current layer=message0 name="sinnyu_select,select_text" text="【Đột nhập】<br>Đột nhập vào phòng của Nagi hoặc hậu trường nơi làm thêm.<br>Có thể quay lén hoặc lục lọi phá hoại quan hệ của Nagi và Hayato. Tăng Dũng khí.<br>" x=140 y=580 size=19 time=0]
-[anim name="sinnyu_select" opacity=0 time=0]
-
-[ptext current layer=message0 name="syusyu_select,select_text" text="【Thu thập thông tin】<br>Ra ngoài nắm bắt tình hình và nghe ngóng thông tin.<br>" x=140 y=580 size=19 time=0]
-[anim name="syusyu_select" opacity=0 time=0]
 
 [iscript]
 

@@ -39,8 +39,8 @@ Trên màn hình, Nagi đang nở nụ cười ngập tràn hạnh phúc.[r]Ng�
 Có muốn trả thù Hayato không?
 [_tb_end_text]
 
-[glink  color="btn_03_black"  storage="EV_hukusyu_hayato.ks"  size="20"  text="Trả thù Hayato"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*yes"  ]
-[glink  color="btn_03_black"  storage="EV_hukusyu_hayato.ks"  size="20"  text="Bỏ qua / Quên đi"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*no"  ]
+[glink  color="btn_03_black"  storage="EV_hukusyu_hayato.ks"  size="20"  text="Trả thù"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*yes"  ]
+[glink  color="btn_03_black"  storage="EV_hukusyu_hayato.ks"  size="20"  text="Bỏ qua"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*no"  ]
 [s  ]
 *no
 

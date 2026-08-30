@@ -16,16 +16,16 @@
 [tb_show_message_window  ]
 [mask_off  time="800"  effect="slideOutRight"  ]
 [tb_start_text mode=1 ]
-[舜]「Yo.」[p]
+Bên trong quán khá náo nhiệt, nhưng đâu đó vẫn phảng phất một sự tĩnh lặng dễ chịu.[p]
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
-Tsubomi「Tên tôi không phải là 'Yo' đâu nhé? Không có việc gì thì tôi đi đây.」[p]
+（Có Tsubomi kìa. Hay là bắt chuyện thử xem sao?）
 [_tb_end_text]
 
 [glink  color="btn_03_black"  storage="sansaku_famiresuEV_tubomi.ks"  size="20"  text="Bắt chuyện với Tsubomi"  x="415"  y="160"  width="497"  height="57"  _clickable_img=""  target="*hanasu"  ]
 [glink  color="btn_03_black"  storage="sansaku_famiresuEV.ks"  size="20"  text="Cứ thế bước vào quán"  x="415"  y="240"  width="497"  height="57"  _clickable_img=""  target="*taberu"  ]
-[glink  color="btn_03_black"  storage="sansaku_famiresuEV.ks"  size="20"  text="Làm thêm ca đêm (+4,000 Yên / Giảm Thể lực)"  x="410"  y="320"  width="497"  height="57"  _clickable_img=""  target="*baito"  ]
+[glink  color="btn_03_black"  storage="sansaku_famiresuEV.ks"  size="20"  text="Làm thêm ca đêm (+4,000 Yên"  x="410"  y="320"  width="497"  height="57"  _clickable_img=""  target="*baito"  ]
 [glink  color="btn_03_black"  storage="sansaku_hankagaiEV.ks"  size="20"  text="Quay về nhà"  x="410"  y="400"  width="497"  height="57"  _clickable_img=""  target="*kaeru"  ]
 [s  ]
 *hanasu
@@ -69,9 +69,9 @@ Tsubomi「Tên tôi không phải là 'Yo' đâu nhé? Không có việc gì th�
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-Tsubomi「A, anh à... Sao thế? [r]Cứ ngó nghiêng lung tung là bị coi như kẻ khả nghi đấy nhé?」[p]
-#蕾
-Tsubomi「Anh ơi, đi hẹn hò với em không? Khc, đương nhiên là em đùa rồi.」[p]
+[舜]「Yo」[p]
+#Tsubomi
+Tsubomi「Tên tôi không phải là 'Yo' đâu nhé? Không có việc gì thì tôi đi đây」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -143,8 +143,8 @@ Tsubomi「Anh ơi, đi hẹn hò với em không? Khc, đương nhiên là em đ
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-#蕾
-Tsubomi「A! Khc, tình cờ thật đấy. Anh đang định đi đâu à? Em đi cùng cho nhé?」[p]
+#Tsubomi
+Tsubomi「A, anh à... Sao thế? [r]Cứ ngó nghiêng lung tung là bị coi như kẻ khả nghi đấy nhé?」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -217,8 +217,8 @@ Tsubomi「A! Khc, tình cờ thật đấy. Anh đang định đi đâu à? Em �
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-#蕾
-[舜]「Ủa? Tình cờ thật.」[p]
+#Tsubomi
+Tsubomi「Anh ơi, đi hẹn hò với em không? Khc, đương nhiên là em đùa rồi」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -292,8 +292,8 @@ Tsubomi「A! Khc, tình cờ thật đấy. Anh đang định đi đâu à? Em �
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-#蕾
-Tsubomi「A... Hôm nay em có linh cảm là sẽ gặp được anh. Trúng phóc luôn.[r]Có vẻ hôm nay sẽ có chuyện vui đây.」[p]
+#Tsubomi
+Tsubomi「A! Khc, tình cờ thật đấy. Anh đang định đi đâu à? Em đi cùng cho nhé?」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -367,9 +367,9 @@ Tsubomi「A... Hôm nay em có linh cảm là sẽ gặp được anh. Trúng ph
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-Tsubomi「Ủa? Sao giọng anh khàn thế? Này, cho anh kẹo ngậm ho này.」[p]
-#蕾
-Tsubomi「Bảo vệ giọng nói cũng rất quan trọng trong ngành dịch vụ đấy nhé.[r]Vị này là em đặc biệt giới thiệu đấy. Ngậm xong nhớ cho em biết cảm nhận nhé.」[p]
+[舜]「Ủa? Tình cờ thật」[p]
+#Tsubomi
+Tsubomi「A... Hôm nay em có linh cảm là sẽ gặp được anh. Trúng phóc luôn.[r]Có vẻ hôm nay sẽ có chuyện vui đây」[p]
 [_tb_end_text]
 
 [tb_start_tyrano_code]
@@ -440,10 +440,10 @@ Tsubomi「Bảo vệ giọng nói cũng rất quan trọng trong ngành dịch v
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
+Tsubomi「Ủa? Sao giọng anh khàn thế? Này, cho anh kẹo ngậm ho này」[p]
+Tsubomi「Bảo vệ giọng nói cũng rất quan trọng trong ngành dịch vụ đấy nhé.[r]Vị này là em đặc biệt giới thiệu đấy. Ngậm xong nhớ cho em biết cảm nhận nhé」[p]
 Đã nhận được kẹo ngậm ho[p]
 [font color="yellow"]Chỉ số Hưng phấn đã tăng một chút[resetfont][p]
-Tsubomi「Cái này... cho anh này... Bánh quy em tự làm đấy. Em nhờ mẹ dạy cách làm rồi tự tay làm đó.」[p]
-Tsubomi「Dù biết là mua ngoài tiệm thì vừa rẻ vừa ngon hơn.[r]Nhưng em muốn anh ăn thử...」[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]
@@ -453,10 +453,10 @@ Tsubomi「Dù biết là mua ngoài tiệm thì vừa rẻ vừa ngon hơn.[r]Nh
 *sasiire2
 
 [tb_start_text mode=1 ]
+Tsubomi「Cái này... cho anh này... Bánh quy em tự làm đấy. Em nhờ mẹ dạy cách làm rồi tự tay làm đó」[p]
+Tsubomi「Dù biết là mua ngoài tiệm thì vừa rẻ vừa ngon hơn.[r]Nhưng em muốn anh ăn thử...」[p]
 Đã nhận được bánh quy tự làm[p]
 [font color="yellow"]Chỉ số Hưng phấn đã tăng một chút[resetfont][p]
-[舜]（Vẫn đông người như mọi khi, mệt thật đấy.）[p]
-Tsubomi「Chỗ này, ngay gốc ngón tay... là vùng phản xạ của hệ thần kinh thực vật. Nếu hệ thần kinh bị rối loạn thì ấn vào sẽ khá đau đấy.」[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="money.mp3"  ]

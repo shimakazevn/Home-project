@@ -29,7 +29,7 @@
 （Hiếm khi mới thấy Nagi không có ở đây.）
 [_tb_end_text]
 
-[glink  color="btn_03_black"  storage="sansaku_byouinEV.ks"  size="20"  text="Khám bệnh (Hồi Thể lực / -5,000 Yên)"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
+[glink  color="btn_03_black"  storage="sansaku_byouinEV.ks"  size="20"  text="Khám bệnh (Hồi Thể lực"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
 [glink  color="btn_03_black"  storage="sansaku_byouinEV.ks"  size="20"  text="Quay về nhà"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*kaeru"  ]
 [s  ]
 *sinsatu

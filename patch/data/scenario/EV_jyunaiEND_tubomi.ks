@@ -33,21 +33,21 @@ Nếu mà nói ra điều này, chắc chắn sẽ bị cô bé cựu Amelia m�
 [bg  time="2000"  method="crossfade"  storage="back_room0.png"  ]
 [call  storage="BGM.ks"  target="*love1"  ]
 [tb_start_text mode=1 ]
-#蕾
+#Tsubomi
 Tsubomi「A, đã bảo là không được nhúc nhích cơ mà. Ở yên đó đi? Lỡ cắt phạm vào biểu bì là chảy máu đấy nhé.」[p]
 [舜]「Đáng sợ quá...! Em cẩn thận chút đi.」[p]
-#蕾
+#Tsubomi
 Tsubomi「Chỉ cần anh không nhúc nhích là được chứ gì!」[p]
 Em ấy cắt gọn gàng phần biểu bì quanh móng tay tôi, rồi nhanh nhẹn quét lên một lớp sơn bóng trong suốt.[p]
 [舜]（Đang tập trung kìa, tập trung kìa... Tự nhiên bảo cho em thực hành, mình còn đang thắc mắc là chuyện gì cơ chứ.）[p]
 [舜]（Nếu là chuyện này thì, lúc nào mình cũng sẵn lòng... nhỉ.）[p]
 Được ngắm nhìn Tsubomi vừa chu môi ra vừa chăm chú làm việc, quả là một khoảng thời gian hạnh phúc.[p]
-#蕾
+#Tsubomi
 Tsubomi「Hoàn thành! Sao hả? Đẹp đúng không~?」[p]
 [舜]「Ồ, móng tay bóng lộn lấp lánh luôn này. Em làm khéo tay thật đấy.」[p]
-#蕾
+#Tsubomi
 Tsubomi「Hồi trước ở quán Maid Reflex, có khách nhờ nên em hay làm sạch móng tay cho họ lắm.」[p]
-#蕾
+#Tsubomi
 Tsubomi「Thế nên em mới nghĩ chắc mình cũng có khiếu làm nail... Quả nhiên đúng là vậy thật.」[p]
 Tsubomi chớp chớp đôi mắt sáng long lanh, ghé sát vào nhìn mặt tôi.[p]
 Tôi chợt nghĩ... đôi mắt ấy còn rực rỡ và xinh đẹp hơn cả những chiếc móng tay vừa được sơn bóng của mình.[p]
@@ -57,39 +57,39 @@ Tất nhiên nếu tôi mà nói ra điều đó, [r]kiểu gì em ấy cũng s�
 [bg  time="2000"  method="crossfade"  storage="event/tubomi_jyunaiEND.png"  ]
 [tb_cg  id="cg_tubomi_jyunaiEND"  ]
 [tb_start_text mode=1 ]
-#蕾
+#Tsubomi
 Tsubomi「Em quyết định rồi. Em sẽ tự mở một tiệm cho riêng mình giống như mẹ!」[p]
-#蕾
+#Tsubomi
 Tsubomi「Em sẽ học quản lý kinh doanh, học cả làm nail nữa... rồi trở thành thợ làm nail.」[p]
-#蕾
+#Tsubomi
 Tsubomi「Em sẽ biến nó thành một tiệm nổi tiếng với lời đồn đại là massage tay cũng cực kỳ sung sướng cho xem.」[p]
 [舜]「Anh thấy ý tưởng đó rất tuyệt.」[p]
-#蕾
+#Tsubomi
 Tsubomi「Nhưng mà, như vậy là em sẽ phải từ bỏ giấc mơ làm người mẫu đấy.」[p]
 [舜]「Không đâu, chỉ là giấc mơ thay đổi một chút thôi mà, đúng không?」[p]
 Đó không phải là lời nói dối, tôi thực lòng nghĩ như vậy. Những trăn trở từ trước đến nay chắc chắn sẽ không hề uổng phí.[p]
 Nó sẽ khiến em ấy trở nên mạnh mẽ, dẻo dai hơn, và trở thành sức mạnh để em ấy tiến gần hơn đến ước mơ của mình.[p]
-#蕾
+#Tsubomi
 Tsubomi「Cảm ơn anh. Nhờ có anh mà em đã rũ bỏ được nhiều thứ, và còn tìm thấy một giấc mơ mới nữa.」[p]
-#蕾
+#Tsubomi
 Tsubomi「Đều là nhờ anh cả đấy... Thực sự cảm ơn anh nhé?」[p]
 [舜]「Tìm thấy giấc mơ mới là nhờ năng lực của Tsubomi chứ.」[p]
-#蕾
+#Tsubomi
 Tsubomi「Chỉ là Shun thôi mà dám nói những lời ngầu thế là ăn gian đấy nhé!」[p]
 [舜]「Cái con bé này, đừng có nói kiểu "Chỉ là Shun thôi" với bạn trai mình chứ...!」[p]
-#蕾
+#Tsubomi
 Tsubomi「Khc, mồ~, hẹn hò rồi mà chẳng thay đổi gì cả. Cứ tưởng sẽ ngọt ngào âu yếm lắm cơ.」[p]
-#蕾
+#Tsubomi
 Tsubomi「Nhưng thôi cũng được, như vậy mới giống hai đứa mình...」[p]
-#蕾
+#Tsubomi
 Tsubomi「Này, đến lúc em mở tiệm ấy. Em lôi kéo anh từ tiệm của mẹ sang có được không?」[p]
 [舜]「Uầy~, không được đâu.」[p]
-#蕾
+#Tsubomi
 Tsubomi「Cái gì thế! Chỗ đó anh phải trả lời là 『Được chứ』 chứ~!? Không lẽ anh thích mẹ hơn à!?」[p]
-#蕾
+#Tsubomi
 Tsubomi「Cái đồ lăng nhăng~! Thảo nào anh chẳng chịu âu yếm em gì cả.」[p]
 [舜]「Làm gì có chuyện đó!」[p]
-#蕾
+#Tsubomi
 Tsubomi「...Vậy thì, hôm nay em ngủ lại đây có được không?」[p]
 [_tb_end_text]
 
@@ -97,7 +97,7 @@ Tsubomi「...Vậy thì, hôm nay em ngủ lại đây có được không?」[p
 Đôi mắt Tsubomi đã ngấn nước từ lúc nào.[p]
 Nhìn thoáng qua cũng đủ hiểu rõ em ấy đang mong đợi điều gì.[p]
 [舜]「Tất nhiên rồi.」[p]
-#蕾
+#Tsubomi
 Tsubomi「Cấm anh lơ đãng nhìn đi chỗ khác đấy nhé? Vi phạm là phạt tiền!」[p]
 [舜]「Lại đòi tiền nữa cơ à...!」[p]
 Vừa nghĩ thầm "Chịu thua em rồi..." chúng tôi vừa trao nhau một nụ hôn.[p]

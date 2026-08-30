@@ -35,26 +35,26 @@ Trong lúc tôi đang nằm ngửa đợi trong phòng trị liệu như mọi k
 [bg  time="2000"  method="crossfade"  storage="event/rinko_kyouaiEND.png"  ]
 [tb_cg  id="cg_rinko_kyouaiEND"  ]
 [tb_start_text mode=1 ]
-#凛子
+#Rinko
 Rinko「Shun-kun, để em phải đợi rồi♡ Hôm nay mình cũng cùng nhau sướng thật nhiều nhé♡」[p]
 [舜]「Cô Rinko đúng là rất thích làm tình nhỉ.」[p]
-#凛子
+#Rinko
 Rinko「Khc, là do Shun-kun đã dạy cho chị biết thế nào là sung sướng mà♡ Em sẽ lại làm cho chị nữa đúng không?」[p]
 Từ biểu cảm của cô ấy, những cảm xúc không thể kìm nén bằng lý trí nữa đang dần tuôn trào.[p]
 [舜]「Còn tùy xem chị Rinko có biết cách nài nỉ hay không đã nhé.」[p]
-#凛子
+#Rinko
 Rinko「Chị biết rồi, chị sẽ nài nỉ mà♡」[p]
 Mỗi ngày, việc hòa quyện thể xác sau giờ làm việc thế này đã trở thành thói quen của hai chúng tôi.[p]
 Dù ban đầu cô ấy còn chống cự và lộ rõ vẻ ngượng ngùng, [r]nhưng việc hạ gục một góa phụ đang khao khát dục vọng lại quá đỗi dễ dàng.[p]
 Chỉ cần dùng dục vọng mãnh liệt của tuổi trẻ đâm xuyên qua, cô ấy đã chìm đắm trong cơn mê say chỉ trong nháy mắt.[p]
 [舜]「Hôm nay chị muốn em làm thế nào đây?」[p]
-#凛子
+#Rinko
 Rinko「Xấu hổ lắm...」[p]
 [舜]「Không nói là em không làm cho đâu đấy nhé?」[p]
-#凛子
+#Rinko
 Rinko「Không chịu đâu, chị nói, chị nói mà... Hôm nay... chị muốn được dẫn dắt Shun-kun cơ.」[p]
 [舜]「Chị nói cho dễ hiểu hơn đi nào.」[p]
-#凛子
+#Rinko
 Rinko「Chị muốn được lắc hông trên người Shun-kun...♡ Muốn đút con cu vào, rồi sướng thật nhiều cơ♡」[p]
 Cô ấy nũng nịu kề sát mặt vào tôi. Có lẽ đây mới chính là con người thật của cô ấy.[p]
 Một khi đã nhớ nhung khoái cảm được đàn ông ngoan ngoãn thuần phục, cô ấy sẽ chẳng bao giờ có thể quay lại cuộc sống thiếu vắng tôi nữa.[p]
@@ -77,7 +77,7 @@ Hayato「Mẹ ơi, mẹ có đó không? Về chuyện mấy bài đánh giá tr
 Hayato「......Mẹ......?」[p]
 Giọng nói ấy pha lẫn sự bối rối và cảm giác không muốn tin vào mắt mình, xen lẫn chút run rẩy khe khẽ.[p]
 [舜]「Bọn tôi đang yêu nhau. Đúng không, chị Rinko?」[p]
-#凛子
+#Rinko
 Rinko「......Đúng vậy. Mẹ, muốn được ở bên cạnh Shun-kun.」[p]
 Giọng cô Rinko rất bình tĩnh, nghe như đã có sự chuẩn bị tâm lý từ trước.[p]
 [chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_04c.gif"]Hayato「......Thôi đi mà...... Tại sao...... tại sao mẹ lại, như thế......」[p]
@@ -88,7 +88,7 @@ Một giọng nói như thể bị vắt kiệt.[p]
 Đó không phải là sự phẫn nộ. Cũng chẳng phải cảm giác bị phản bội hay bị cướp đoạt gì cả.[p]
 Chỉ đơn giản là, thực tế phũ phàng khi thấy "người mẹ" của mình đang được một gã đàn ông khác yêu thương với tư cách là một "người phụ nữ" ngay trước mắt,[p]
 đã đánh sập tận gốc rễ mọi giá trị quan của hắn.[p]
-#凛子
+#Rinko
 Rinko「Hayato, mẹ xin lỗi. Nhưng mà, mẹ không thể tiếp tục sống chỉ với tư cách là một "người mẹ" được nữa.」[p]
 Một câu nói nhẹ nhàng, nhưng tuyệt nhiên không hề có sự hối hận.[p]
 Hayato cứ đứng chôn chân tại chỗ, chẳng nói được lời nào, chỉ biết cúi gằm mặt xuống.[p]
@@ -102,14 +102,14 @@ Cuối cùng, hắn chầm chậm lùi lại, rồi thẫn thờ rời khỏi c�
 [mask_off  time="2000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
 [舜]「......Chị làm vậy, thực sự ổn chứ?」[p]
-#凛子
+#Rinko
 Rinko「Ừm. Dù rất đau lòng, nhưng chị không thể cứ tiếp tục nói dối mãi được.」[p]
 
 Góc nghiêng của cô ấy tuy có chút đượm buồn, nhưng đâu đó lại toát lên vẻ thanh thản.[p]
 Tôi nhẹ nhàng nắm lấy tay cô Rinko, đan những ngón tay vào nhau.[p]
 
 [舜]「Từ nay về sau, đã có em ở bên cạnh chị rồi. Thế nên, không sao đâu.」[p]
-#凛子
+#Rinko
 Rinko「......Cảm ơn em. Shun-kun♡」[p]
 
 Phía sau những lời nói được trao nhau trong tĩnh lặng ấy, một tương lai mới đang chầm chậm bắt đầu.[p]

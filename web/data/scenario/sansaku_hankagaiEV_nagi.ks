@@ -77,7 +77,7 @@
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「Ủa? Tình cờ thật đấy. Cậu đang đi dạo à. Tớ cũng đang đi mua sắm đây.」[p]
 [_tb_end_text]
 
@@ -154,7 +154,7 @@ Nagi「Ủa? Tình cờ thật đấy. Cậu đang đi dạo à. Tớ cũng đan
 
 [tb_start_text mode=1 ]
 [舜]「Yo.」[p]
-#凪
+#Nagi
 Nagi「Oái, giật cả mình. Shun-chan à, đừng có dọa tớ chứ~」[p]
 [_tb_end_text]
 
@@ -230,7 +230,7 @@ Nagi「Oái, giật cả mình. Shun-chan à, đừng có dọa tớ chứ~」[p
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「A, Shun-chan. Nhìn từ đằng sau tớ đã ngờ ngợ là cậu rồi.」[p]
 [_tb_end_text]
 
@@ -307,7 +307,7 @@ Nagi「A, Shun-chan. Nhìn từ đằng sau tớ đã ngờ ngợ là cậu rồ
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「Shun-chan! Khc, nhìn thấy bóng cậu nên tớ đuổi theo luôn đấy.」[p]
 [_tb_end_text]
 
@@ -384,7 +384,7 @@ Nagi「Shun-chan! Khc, nhìn thấy bóng cậu nên tớ đuổi theo luôn đ�
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「Khc, hôm nay tớ có linh cảm là sẽ gặp được Shun-chan. Trúng phóc luôn.」[p]
 [_tb_end_text]
 

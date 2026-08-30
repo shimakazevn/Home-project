@@ -35,26 +35,26 @@ Vừa mới tắm xong, tôi thậm chí còn chẳng buồn lau khô người m
 Mục đích chỉ có một. Không phải để dọn dẹp giường nệm, cũng chẳng phải để chuẩn bị cho ngày mai.[p]
 Cô Rinko, đang ở ngay đó.[p]
 Ngồi trên tấm nệm, chỉ quấn độc một chiếc khăn tắm mỏng manh ngước nhìn tôi.[p]
-#凛子
+#Rinko
 Rinko「Cô đợi cháu nãy giờ rồi đấy, [舜]-kun♡」[p]
 Cô Rinko đã cởi sạch quần áo từ lúc nào, ngồi trên nệm ngước nhìn tôi đắm đuối.[p]
 Hương thơm ngọt ngào của sữa tắm thoang thoảng khiến hạ bộ tôi tự động phản ứng ngay lập tức.[p]
-#凛子
+#Rinko
 Rinko「A, đã cương to lên rồi kìa. Cháu nóng vội ghê chưa♡」[p]
 [舜]（Lại dùng cái giọng ngọt xớt nũng nịu đấy áp sát vào người mình rồi…… Đàn bà con gái, sao mà hám dục đến thế không biết）[p]
-#凛子
+#Rinko
 Rinko「Mau ngồi xuống đây với cô nào…？」[p]
-#蕾
+#Tsubomi
 Tsubomi「Gì chứ, mẹ lúc nào cũng ăn gian hết á」[p]
 Đúng lúc đó, Tsubomi cũng cởi sạch đồ bước vào phòng.[p]
-#蕾
+#Tsubomi
 Tsubomi「Đừng có nhân lúc con đang chuẩn bị mà lén bắt đầu trước chứ」[p]
-#凛子
+#Rinko
 Rinko「Fufu, mẹ xin lỗi nhé, tại mẹ không kìm lòng nổi…」[p]
 [舜]「Đã thèm thuồng thì cứ nói thẳng ra đi, lằng nhằng rắc rối quá」[p]
 Không thể nhẫn nhịn thêm được nữa, cô Rinko[p]
 Dịu dàng nắm lấy dương vật đang cương cứng cong vút, rồi áp môi ngậm chặt lấy đầu khấc.[p]
-#蕾
+#Tsubomi
 Tsubomi「Mẹ ăn gian quá đi♡ Con cũng muốn liếm nữa cơ♡」[p]
 Cả hai mẹ con tranh nhau liếm mút dương vật của tôi một cách điên cuồng.[p]
 [_tb_end_text]
@@ -65,13 +65,13 @@ Cả hai mẹ con tranh nhau liếm mút dương vật của tôi một cách đ
 [tb_start_text mode=1 ]
 Để đi được đến ngày hôm nay quả là một chặng đường dài……[p]
 Dạy dỗ khoái cảm cho cả hai người họ, bóp méo mọi luân thường đạo lý, cuối cùng tôi cũng đã đạt được kết quả này.[p]
-#蕾
+#Tsubomi
 Tsubomi「Chụt, mút♡ Này anh, em mút giỏi hơn nhiều rồi đúng không? Nhìn này, em đã ngậm trọn được hết vào miệng rồi nè」[p]
 Dù khóe mắt ươn ướt ngấn lệ nhưng Tsubomi vẫn cố gắng ngậm trọn cả cây thịt đầy ắp trong khoang miệng.[p]
 Sau khi tốt nghiệp cấp ba và nghỉ việc ở quán massage thư giãn, em ấy đã chuyển sang làm việc tại tiệm của mẹ mình.[p]
 Mỗi khi chạm mặt, dù là đang trong giờ mở cửa đón khách, em ấy cũng tìm cách sờ soạng cơ thể tôi để quyến rũ.[p]
 [舜]（Đúng là tính dâm đãng thèm muốn này di truyền từ bà mẹ mà ra）[p]
-#凛子
+#Rinko
 Rinko「Phải tuốt nhẹ phần gốc cho cháu nữa chứ♡」[p]
 Đến mức đích thân dạy con gái ruột cách làm cho đàn ông sung sướng, cô Rinko đã hoàn toàn chìm đắm trong dục vọng không lối thoát.[p]
 Đó là hình ảnh không thể nào tưởng tượng nổi vào những ngày đầu tôi mới gặp cô ấy… Không, có lẽ đây mới chính là bản chất thực sự của cô ấy chăng.[p]
@@ -79,9 +79,9 @@ Rinko「Phải tuốt nhẹ phần gốc cho cháu nữa chứ♡」[p]
 [舜]（Cứ tưởng hắn ta sẽ hưng phấn lắm chứ…… Không ngờ, không ngờ hắn lại sốc đến mức suy sụp như vậy）[p]
 Sau khi trợn tròn mắt kinh hoàng, hắn ôm đầu la hét rồi lao thẳng ra khỏi tiệm massage.[p]
 Kể từ đó, hắn không bao giờ xuất hiện trước mặt tôi hay ở tiệm này nữa. Chẳng biết hắn đã trôi dạt về phương trời nào rồi?[p]
-#蕾
+#Tsubomi
 Tsubomi「Nè, anh có đang nghe em nói không đấy? Anh không thấy sướng sao?」[p]
-#凛子
+#Rinko
 Rinko「Cháu nó đang đê mê tận hưởng đấy con à. Đúng không cháu yêu?」[p]
 [舜]「……Đâu có. Chỉ là đang trốn tránh hiện thực một chút thôi」[p]
 [_tb_end_text]
@@ -97,7 +97,7 @@ Còn có thứ hạnh phúc nào hơn thế này nữa sao?[p]
 Thế mà kết cục lại trở thành thế này đây.[p]
 Cuộc đời đúng là chẳng ai có thể đoán trước được điều gì.[p]
 Rinko「A… Nóng quá… Sắp bắn rồi sao cháu yêu?」[p]
-#蕾
+#Tsubomi
 Tsubomi「Bắn vào trong em đi! Bắn đầy bụng em đi anh!」[p]
 Rinko「Không được, phải bắn vào cô chứ!」[p]
 [舜]「Cả hai người đừng có ồn ào nữa. Tôi sẽ bắn cho cả hai, lần lượt từng người một」[p]

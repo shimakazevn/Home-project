@@ -24,7 +24,7 @@ Bên trong tiệm khá vắng vẻ, một khoảng thời gian êm đềm vẫn 
 [_tb_end_text]
 
 [glink  color="btn_03_black"  storage="sansaku_massajiEV_rinkohayato.ks"  size="20"  text="Bắt chuyện với cả hai người"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*hanasu"  ]
-[glink  color="btn_03_black"  storage="sansaku_massajiEV.ks"  size="20"  text="Massage trị liệu (Hồi Thể lực / -5,000 Yên)"  x="415"  y="290"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
+[glink  color="btn_03_black"  storage="sansaku_massajiEV.ks"  size="20"  text="Massage trị liệu (Hồi Thể lực"  x="415"  y="290"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
 [s  ]
 *hanasu
 

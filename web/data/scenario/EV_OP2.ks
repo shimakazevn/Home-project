@@ -98,20 +98,20 @@ Hayato「Mẹ ơiiiii. Có người đang xem tờ thông báo tuyển nhân vi�
 [_tb_end_tyrano_code]
 
 [tb_start_text mode=1 ]
-#凛子
+#Rinko
 ？？？「Hả? Thật sao?」[p]
 Một người phụ nữ xinh đẹp với phong thái điềm đạm bước ra.[p]
 [舜]（Hả? Người đẹp thế này mà lại là mẹ của tên đó á...?）[p]
 Tuy có thể nhận thấy dấu vết tuổi tác ở khóe mắt, nhưng không thể tin được bà ấy lại cùng độ tuổi với mẹ tôi.[r]Người phụ nữ mỉm cười nói "Mời cậu vào lối này" rồi dẫn tôi vào căn phòng bên trong.[p]
-#凛子
+#Rinko
 ？？？「Hayato tự nhiên lại gọi cậu lại nhỉ. Xin lỗi cháu nhé.」[p]
-#凛子
+#Rinko
 ？？？「Cô là Naruse Rinko, chủ của cửa tiệm này.」[p]
 [舜]「V-vâng. Cháu là [日高] [舜].」[p]
-#凛子
+#Rinko
 Rinko「Vậy à, cháu là [舜]. Cái tên hay quá... Cháu đang tìm việc làm thêm sao?」[p]
 [舜]「Vâng... Cháu có chút chuyện nên đã nghỉ việc... Tạm thời cháu định tìm một công việc làm thêm ạ.」[p]
-#凛子
+#Rinko
 Rinko「Thế à... Cháu giỏi thật đấy, đã lập tức đi tìm việc ngay rồi.」[p]
 Ngay từ bên cạnh, một cô gái trẻ buộc tóc hai bên thò mặt ra.[p]
 
@@ -123,28 +123,28 @@ Ngay từ bên cạnh, một cô gái trẻ buộc tóc hai bên thò mặt ra.[
 [wait  time="1000"  ]
 [tb_start_text mode=1 ]
 Gương mặt trông có vẻ đanh đá, nhưng cũng là một thiếu nữ xinh đẹp đến ngỡ ngàng.[p]
-#蕾
+#Tsubomi
 [chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_07c.gif" wait="false"]？？？「Cỡ tuổi anh hai mà. Thế mà không có việc làm à? Có vẻ thảm hại nhỉ?」[p]
 [舜]（Hả? Con nhỏ này bị gì vậy...）[p]
-#凛子
+#Rinko
 [chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_02c.gif" wait="false" ]Rinko「Thôi nào! Tsubomi. Đừng nói thế chứ. Ai cũng có hoàn cảnh riêng mà con.」[p]
-#凛子
+#Rinko
 Rinko「Cô xin lỗi nhé [舜]. Đứa trẻ này vẫn chưa hiểu chuyện nên còn bướng bỉnh lắm.」[p]
 [舜]（Là con gái của chủ tiệm à. Nhắc mới nhớ, đôi mắt có vẻ giống nhau...）[p]
-#凛子
+#Rinko
 [chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_00c.gif" wait="false"  ]Rinko「Cô cũng nhờ con gái phụ giúp. Vì tiệm chưa có nhân viên làm thêm.」[p]
 Hayato「Mẹ tôi mới mở tiệm riêng. Dạo này bận quá nên không xuể việc.」[p]
-#凛子
+#Rinko
 Rinko「Đúng vậy. Nếu cháu có thể giúp dọn dẹp giường chiếu hay giặt khăn thì cô vui lắm.」[p]
-#凛子
+#Rinko
 Rinko「Khi nào quen việc, nếu cháu có thể tiếp khách và làm massage luôn thì tốt quá.」[p]
 [舜]（Ư... Tiếp khách à. Khoản này mình muốn né nhất đây）[p]
-#蕾
+#Tsubomi
 Tsubomi「Hả? Người này có ổn không đấy? Trông u ám thế nào ấy? Tiếp khách gì chứ──」[p]
 [舜]「L-Làm được. Xin hãy giao cho tôi.」[p]
 Cảm thấy tự ái, tôi vô tình gật đầu đồng ý.[p]
 Ngay lập tức, khuôn mặt cô Rinko sáng bừng lên.[p]
-#凛子
+#Rinko
 [chara_mod name="kyara_rinko_sabun" cross="false" time="500" storage="chara/180/ADV_rinko_00_01c.gif" wait="false" ]Rinko「Thật sao? May quá. Vậy lát nữa cháu cho cô xin thông tin liên lạc nhé?」[p]
 [chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_02c.gif" wait="false"][舜]（Chết tiệt... lỡ miệng rồi...）[p]
 Tsubomi vẫn bĩu môi nhìn tôi chằm chằm.[p]

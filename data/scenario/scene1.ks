@@ -5,7 +5,7 @@
 [bg  storage="room.jpg"  time="1000"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-#ガイド
+#Hướng dẫn
 Xin chào[p]
 Đây là một dự án mới[p]
 Hãy kéo và thả để thêm các yếu tố[p]

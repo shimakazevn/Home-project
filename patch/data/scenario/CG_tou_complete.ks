@@ -28,7 +28,7 @@
 [playse  volume="100"  time="1000"  buf="0"  storage="sistem_omoide.mp3"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-Bên cạnh người con gái tôi yêu thương và chiếm hữu.[p]
+[font color="yellow"]Chúc mừng! Bạn đã mở khóa toàn bộ Bộ sưu tập CG!![resetfont][p]
 Mọi thứ thật hoàn hảo.[p]
 [_tb_end_text]
 

@@ -98,18 +98,18 @@ Bất ngờ trước tiếng chuông điện thoại reo vang, tôi liếc nhìn
 Một khoảng lặng kéo dài. Truyền đến bên tai tôi chỉ là tiếng thở yếu ớt.[r]Đúng lúc sự bất an đang thắt chặt lồng ngực, giọng nói nhỏ bé của Nagi vang lên.[p]
 Nagi「Shun-chan……」[p]
 [舜]「……Có chuyện gì thế?」[p]
-#凪
+#Nagi
 Nagi「……Chuyện là, tớ……vừa được cầu hôn.」[p]
 Lời nói đó khiến dòng suy nghĩ của tôi đình trệ, một lúc lâu không thốt nên lời.[p]
 [舜]「……Vậy à. Chúc mừng cậu nhé.」[p]
 Phải mất một lúc tôi mới có thể thốt ra những lời kìm nén trong lòng.[r]Nhưng đến chính tôi cũng phải ngạc nhiên vì giọng mình đang run rẩy.[p]
-#凪
+#Nagi
 Nagi「Cảm ơn cậu……Nhưng mà……Tớ, không thể trả lời được.」[p]
 [舜]「……Hả?」[p]
-#凪
+#Nagi
 Nagi「Tớ không thể nói "Vâng" ngay lập tức……[r]Đầu óc tớ trống rỗng……chẳng hiểu gì nữa……」[p]
 Giọng Nagi dần trở nên run rẩy.[p]
-#凪
+#Nagi
 Nagi「Tớ……đang làm cái gì thế này……Hức, hức……[r]Xin lỗi cậu nhé, Shun-chan……vì đã kể chuyện này……」[p]
 Cuối cùng không thể kìm nén được nữa,[r]Nagi nghẹn ngào ở đầu dây bên kia, bắt đầu khóc thút thít như một đứa trẻ.[p]
 [舜]「Nagi……Đợi đó, tôi đến ngay. Cậu đang ở nhà đúng không?」[p]
@@ -155,25 +155,25 @@ Chạy dọc theo con đường nhỏ, tôi thấy Nagi đang ngồi lẻ loi �
 [wait  time="1500"  ]
 [playbgm  volume="70"  time="1000"  loop="true"  storage="love.mp3"  fadein="true"  ]
 [tb_start_text mode=1 ]
-#凪
+#Nagi
 Nagi「Shun-chan... cậu đến đón tớ sao?」[p]
 Nụ cười đó chỉ xuất hiện trong tích tắc. Ngay sau đó, bóng tối lại bao trùm khuôn mặt cô ấy.[p]
-#凪
+#Nagi
 Nagi「Tớ, đang vui mừng vì cái gì chứ...」[p]
 [舜]「Rốt cuộc là có chuyện gì vậy. Cậu được cầu hôn cơ mà.」[p]
-#凪
+#Nagi
 Nagi「Ừm……Lẽ ra, tớ phải thấy hạnh phúc mới đúng.」[p]
 [舜]「Nhưng……Trông cậu không có vẻ gì là vui cả.」[p]
-#凪
+#Nagi
 Nagi「...Cho đến bây giờ.[r]Tớ không thấy có gì sai trái khi giao phó mọi thứ cho anh Hayato, thậm chí còn thấy biết ơn nữa.」[p]
-#凪
+#Nagi
 Nagi「Nhưng, trong lúc ở cạnh Shun-chan……[r]Tớ chợt nhớ ra rằng, tớ của ngày xưa đã từng tự do lựa chọn hơn rất nhiều.[p]
 Tự mình suy nghĩ, tự mình quyết định……Những điều đó, thật sự rất vui mà.」[p]
 Những giọt nước mắt lăn dài trên khóe mắt Nagi.[p]
-#凪
+#Nagi
 Nagi「Thế nên tớ mới không thể trả lời……Tớ không ghét anh Hayato.[r]Nhưng mà, tớ vẫn chưa……tìm ra được câu trả lời.」[p]
 [舜]「Như vậy cũng tốt mà. Cho đến khi tìm ra câu trả lời, không cần phải vội đâu.」[p]
-#凪
+#Nagi
 Nagi「Ừm... Ừm...」[p]
 Khoảnh khắc đó, vẻ mặt Nagi vỡ òa, cô ấy bật khóc nức nở như một đứa trẻ.[p]
 [舜]（Vậy à……Hóa ra Nagi cũng luôn phân vân.[r]Nhìn bề ngoài cứ tưởng mọi chuyện đều thuận buồm xuôi gió, nhưng không phải vậy.）[p]

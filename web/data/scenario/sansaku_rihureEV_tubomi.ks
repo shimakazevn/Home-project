@@ -29,7 +29,7 @@ Tsubomi có vẻ đang ở đây. Có nên ghé vào thử một chút không nh
 [_tb_end_text]
 
 [glink  color="btn_03_black"  storage="sansaku_rihureEV_tubomi.ks"  size="20"  text="Bắt chuyện với Tsubomi"  x="415"  y="180"  width="497"  height="57"  _clickable_img=""  target="*hanasu"  ]
-[glink  color="btn_03_black"  storage="sansaku_rihureEV_tubomi.ks"  size="20"  text="Vào quán Maid (Tăng Dũng cảm / -5,000 Yên)"  x="415"  y="290"  width="497"  height="57"  _clickable_img=""  target="*rihure"  ]
+[glink  color="btn_03_black"  storage="sansaku_rihureEV_tubomi.ks"  size="20"  text="Vào quán Maid (Tăng Dũng cảm"  x="415"  y="290"  width="497"  height="57"  _clickable_img=""  target="*rihure"  ]
 [glink  color="btn_03_black"  storage="sansaku.ks"  size="20"  text="Quay về nhà"  x="415"  y="400"  width="497"  height="57"  _clickable_img=""  target="*end"  ]
 [s  ]
 *hanasu

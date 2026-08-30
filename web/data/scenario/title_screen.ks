@@ -208,7 +208,7 @@
 [font color="yellow"]Mở khóa toàn bộ CG, H-Scene và các Ending. Bạn có chắc chắn không?[r]※Toàn bộ Voyeur CG sẽ được mở nhưng tỷ lệ sẽ không tự nhảy lên 100%[r]※Khuyến nghị sao lưu lại dữ liệu Save trước khi thực hiện.[resetfont]
 [_tb_end_text]
 
-[glink  color="btn_05_black"  storage="title_screen.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Mở khóa toàn bộ"  _clickable_img=""  target="*zenkaihou_yes"  ]
+[glink  color="btn_05_black"  storage="title_screen.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Mở khóa tất cả"  _clickable_img=""  target="*zenkaihou_yes"  ]
 [glink  color="btn_05_black"  storage="title_screen.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Quay lại"  _clickable_img=""  target="*zenkaihou_no"  ]
 [s  ]
 *zenkaihou_yes
