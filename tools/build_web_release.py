@@ -1432,7 +1432,14 @@ def deploy_to_gh_pages():
         print(f"\n❌ Thất bại khi deploy: {e}")
     finally:
         if os.path.exists(dist_git_dir):
-            shutil.rmtree(dist_git_dir)
+            def remove_readonly(func, path, excinfo):
+                import stat
+                try:
+                    os.chmod(path, stat.S_IWRITE)
+                    func(path)
+                except Exception:
+                    pass
+            shutil.rmtree(dist_git_dir, onexc=remove_readonly)
 
 
 def build_all():
