@@ -1,4 +1,4 @@
-`‚window.tyrano_lang = {
+window.tyrano_lang = {
 
     word : {
         
@@ -33,3 +33,4 @@
     }
 
 };
+

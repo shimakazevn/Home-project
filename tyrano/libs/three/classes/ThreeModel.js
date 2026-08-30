@@ -1,4 +1,3 @@
-;
 
 //コンバート実行機能
 class ThreeModel {
@@ -314,3 +313,4 @@ class ThreeModel {
 	
 	}
 
+}

@@ -1,4 +1,3 @@
-;
 /**
  * @author takahiro / https://github.com/takahirox
  *
@@ -1986,4 +1985,4 @@ THREE.MMDLoader = ( function () {
 
 	return MMDLoader;
 
-} )()
+} )();

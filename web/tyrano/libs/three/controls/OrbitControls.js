@@ -1,4 +1,3 @@
-}
 /**
  * @author qiao / https://github.com/qiao
  * @author mrdoob / http://mrdoob.com
@@ -1148,4 +1147,4 @@ THREE.MapControls = function ( object, domElement ) {
 };
 
 THREE.MapControls.prototype = Object.create( THREE.EventDispatcher.prototype );
-THREE.MapControls.prototype.constructor = THREE.MapControls
+THREE.MapControls.prototype.constructor = THREE.MapControls;
