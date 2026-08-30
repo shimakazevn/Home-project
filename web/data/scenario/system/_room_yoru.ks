@@ -1,0 +1,5 @@
+[preload  storage="./data/bgimage/UI_menu_BG.png"  ]
+[preload  storage="./data/bgimage/back_room.png"  ]
+[preload  storage="./data/bgimage/sora.jpg"  ]
+[preload  storage="./data/bgimage/black.jpg"  ]
+[return]

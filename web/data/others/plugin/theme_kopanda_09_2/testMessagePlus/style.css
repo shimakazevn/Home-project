@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+.test_message_area {
+	position: absolute;
+	top: 542px;
+	left: 80px;
+	width: 530px;
+	height: 110px;
+	color: #eeeeee;
+	font-size: 19px;
+	font-family: 'NotoSansVN', 'Segoe UI', sans-serif !important;
+	line-height: 1.5;
+	z-index: 9999;
+}
