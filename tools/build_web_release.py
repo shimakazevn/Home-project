@@ -35,7 +35,17 @@ def build_web_distribution():
         func(path)
 
     if os.path.exists(WEB_DIST_DIR):
-        shutil.rmtree(WEB_DIST_DIR, onexc=remove_readonly)
+        for item in os.listdir(WEB_DIST_DIR):
+            if item == '.git':
+                continue
+            p = os.path.join(WEB_DIST_DIR, item)
+            if os.path.isdir(p):
+                shutil.rmtree(p, onexc=remove_readonly)
+            else:
+                try:
+                    os.unlink(p)
+                except Exception:
+                    remove_readonly(os.unlink, p, None)
     os.makedirs(WEB_DIST_DIR, exist_ok=True)
 
     # 1. Trích xuất các file tĩnh thiết yếu từ app.asar (JS engine, CSS, system)
