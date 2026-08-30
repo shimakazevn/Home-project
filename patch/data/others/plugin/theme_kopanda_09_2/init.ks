@@ -9,15 +9,48 @@ mp.font_color = mp.font_color || "0xf1f1f1";
 mp.name_color = mp.name_color || "0xf1f1f1";
 mp.frame_opacity = mp.frame_opacity || "255";
 
-// コンフィグ初期値
-if (!sf.config_default_set) {
+// Khôi phục cài đặt vĩnh viễn từ localStorage (sf) khi tải trang / reload
+if (sf.config_default_set) {
+  if (sf._system_config_bgm_volume !== undefined) {
+    let bVol = parseInt(sf._system_config_bgm_volume);
+    TYRANO.kag.config.defaultBgmVolume = bVol;
+    if (!TYRANO.kag.stat.map_bgm_volume || typeof TYRANO.kag.stat.map_bgm_volume !== 'object') TYRANO.kag.stat.map_bgm_volume = {};
+    TYRANO.kag.stat.map_bgm_volume["0"] = bVol;
+  }
+  if (sf._system_config_se_volume !== undefined) {
+    let sVol = parseInt(sf._system_config_se_volume);
+    TYRANO.kag.config.defaultSeVolume = sVol;
+    if (!TYRANO.kag.stat.map_se_volume || typeof TYRANO.kag.stat.map_se_volume !== 'object') TYRANO.kag.stat.map_se_volume = {};
+    TYRANO.kag.stat.map_se_volume["0"] = sVol;
+  }
+  if (sf._skskpnt_volume && Array.isArray(sf._skskpnt_volume)) {
+    if (!TYRANO.kag.stat.map_se_volume || typeof TYRANO.kag.stat.map_se_volume !== 'object') TYRANO.kag.stat.map_se_volume = {};
+    TYRANO.kag.stat.map_se_volume[0] = parseInt(sf._skskpnt_volume[0]) || 80;
+    TYRANO.kag.stat.map_se_volume[1] = parseInt(sf._skskpnt_volume[1]) || 80;
+    TYRANO.kag.stat.map_se_volume[2] = parseInt(sf._skskpnt_volume[2]) || 80;
+    TYRANO.kag.stat.map_se_volume[3] = parseInt(sf._skskpnt_volume[3]) || 80;
+  }
+  if (sf._system_config_ch_speed !== undefined) {
+    TYRANO.kag.config.chSpeed = parseInt(sf._system_config_ch_speed);
+  }
+  if (sf._system_config_auto_speed !== undefined) {
+    TYRANO.kag.config.autoSpeed = parseInt(sf._system_config_auto_speed);
+  }
+} else {
+  // Lần đầu mở game: thiết lập mặc định 80% và lưu vào localStorage
   TYRANO.kag.stat.map_bgm_volume = { "0": 80 };
   TYRANO.kag.stat.map_se_volume = { "0": 80, "1": 80, "2": 80, "3": 80 };
   TYRANO.kag.config.defaultBgmVolume = 80;
   TYRANO.kag.config.defaultSeVolume = 80;
   TYRANO.kag.config.chSpeed = 50;
   TYRANO.kag.config.autoSpeed = 2500;
+  sf._system_config_bgm_volume = 80;
+  sf._system_config_se_volume = 80;
+  sf._skskpnt_volume = [80, 80, 80, 80];
+  sf._system_config_ch_speed = 50;
+  sf._system_config_auto_speed = 2500;
   sf.config_default_set = true;
+  TYRANO.kag.saveSystemVariable();
 }
 
 // 既読テキストのフォントカラーを設定

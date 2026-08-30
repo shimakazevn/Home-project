@@ -22,11 +22,11 @@
 
 // TG.config.autoRecordLabel = "true";
 
-	tf.current_bgm_vol = parseInt(TG.config.defaultBgmVolume || 80);
-	tf.current_se_vol = parseInt(TG.config.defaultSeVolume || 80);
-	tf.current_voice_1_vol = parseInt((TYRANO.kag.stat.map_se_volume && TYRANO.kag.stat.map_se_volume[1]) || 80);
-	tf.current_voice_2_vol = parseInt((TYRANO.kag.stat.map_se_volume && TYRANO.kag.stat.map_se_volume[2]) || 80);
-	tf.current_voice_3_vol = parseInt((TYRANO.kag.stat.map_se_volume && TYRANO.kag.stat.map_se_volume[3]) || 80);
+	tf.current_bgm_vol = parseInt(sf._system_config_bgm_volume !== undefined ? sf._system_config_bgm_volume : (TG.config.defaultBgmVolume || 80));
+	tf.current_se_vol = parseInt(sf._system_config_se_volume !== undefined ? sf._system_config_se_volume : (TG.config.defaultSeVolume || 80));
+	tf.current_voice_1_vol = parseInt((sf._skskpnt_volume && sf._skskpnt_volume[1] !== undefined) ? sf._skskpnt_volume[1] : ((TYRANO.kag.stat.map_se_volume && TYRANO.kag.stat.map_se_volume[1]) || 80));
+	tf.current_voice_2_vol = parseInt((sf._skskpnt_volume && sf._skskpnt_volume[2] !== undefined) ? sf._skskpnt_volume[2] : ((TYRANO.kag.stat.map_se_volume && TYRANO.kag.stat.map_se_volume[2]) || 80));
+	tf.current_voice_3_vol = parseInt((sf._skskpnt_volume && sf._skskpnt_volume[3] !== undefined) ? sf._skskpnt_volume[3] : ((TYRANO.kag.stat.map_se_volume && TYRANO.kag.stat.map_se_volume[3]) || 80));
 
     if (isNaN(tf.current_bgm_vol)) tf.current_bgm_vol = 80;
     if (isNaN(tf.current_se_vol)) tf.current_se_vol = 80;
@@ -34,8 +34,8 @@
     if (isNaN(tf.current_voice_2_vol)) tf.current_voice_2_vol = 80;
     if (isNaN(tf.current_voice_3_vol)) tf.current_voice_3_vol = 80;
 
-	tf.current_ch_speed = parseInt(TG.config.chSpeed || 50);
-	tf.current_auto_speed = parseInt(TG.config.autoSpeed || 2500);
+	tf.current_ch_speed = parseInt(sf._system_config_ch_speed !== undefined ? sf._system_config_ch_speed : (TG.config.chSpeed || 50));
+	tf.current_auto_speed = parseInt(sf._system_config_auto_speed !== undefined ? sf._system_config_auto_speed : (TG.config.autoSpeed || 2500));
 
 if (sf.config_default_set !== true) {
     tf.current_bgm_vol = 80;
@@ -51,13 +51,23 @@ if (sf.config_default_set !== true) {
     TG.config.chSpeed = 50;
     TG.config.autoSpeed = 2500;
 
-    if (!TYRANO.kag.stat.map_se_volume) TYRANO.kag.stat.map_se_volume = {};
+    sf._system_config_bgm_volume = 80;
+    sf._system_config_se_volume = 80;
+    sf._skskpnt_volume = [80, 80, 80, 80];
+    sf._system_config_ch_speed = 50;
+    sf._system_config_auto_speed = 2500;
+
+    if (!TYRANO.kag.stat.map_bgm_volume || typeof TYRANO.kag.stat.map_bgm_volume !== 'object') TYRANO.kag.stat.map_bgm_volume = {};
+    TYRANO.kag.stat.map_bgm_volume[0] = 80;
+
+    if (!TYRANO.kag.stat.map_se_volume || typeof TYRANO.kag.stat.map_se_volume !== 'object') TYRANO.kag.stat.map_se_volume = {};
     TYRANO.kag.stat.map_se_volume[0] = 80;
     TYRANO.kag.stat.map_se_volume[1] = 80;
     TYRANO.kag.stat.map_se_volume[2] = 80;
     TYRANO.kag.stat.map_se_volume[3] = 80;
 
     sf.config_default_set = true;
+    TYRANO.kag.saveSystemVariable();
 }
 
 	tf.text_skip ="ON";
@@ -366,6 +376,9 @@ if (sf.config_default_set !== true) {
 ;--------------------------------------------------------------------------------
 *backtitle
 [cm]
+[iscript]
+TYRANO.kag.saveSystemVariable();
+[endscript]
 
 [layopt layer="message1" visible="false"]
 [clearfix]
