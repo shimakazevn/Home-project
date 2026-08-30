@@ -28,7 +28,7 @@
     const MASTER_BGM_SCALE = 0.90;
     const MASTER_SE_SCALE = 1.00;
 
-    // Intercept toàn diện HTMLImageElement src để không một ảnh nào bị lọt
+    // Intercept toàn diện HTMLImageElement src để không một ảnh nào bị lọt và hỗ trợ CORS cho Save Thumbnail
     try {
         const origImgSrcDesc = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, 'src');
         if (origImgSrcDesc && origImgSrcDesc.set) {
@@ -37,6 +37,7 @@
                     if (typeof val === 'string' && !val.startsWith('data:') && !val.startsWith('blob:')) {
                         let cdnUrl = window.resolveCDNUrl(val);
                         if (cdnUrl && cdnUrl !== val && cdnUrl.startsWith('http')) {
+                            this.crossOrigin = 'anonymous';
                             val = cdnUrl;
                         }
                     }
@@ -53,6 +54,7 @@
             if (name === 'src' && typeof val === 'string' && !val.startsWith('data:') && !val.startsWith('blob:')) {
                 let cdnUrl = window.resolveCDNUrl(val);
                 if (cdnUrl && cdnUrl !== val && cdnUrl.startsWith('http')) {
+                    this.crossOrigin = 'anonymous';
                     val = cdnUrl;
                 }
             }
@@ -773,7 +775,111 @@
             };
         }
 
-        console.log("[CDN Interceptor] ✅ Đã gắn hoàn tất toàn bộ Hook (bg, image, chara, button, bgmovie, audio, bgmopt).");
+        // Hook Save Thumbnail Capture (Khắc phục hoàn toàn lỗi thumbnail bị đen khi lưu game)
+        if (kag.menu) {
+            const origDisplaySave = kag.menu.displaySave;
+            kag.menu.displaySave = function(cb) {
+                const that = this;
+                // Chụp trước snapshot màn hình sạch sẽ trước khi mở giao diện Save Menu
+                that.snapSave(that.kag.stat.current_save_str || "", function() {
+                    origDisplaySave.call(that, cb);
+                });
+            };
+
+            kag.menu.snapSave = function(title, call_back, flag_thumb) {
+                const that = this;
+                const _current_order_index = that.kag.ftag.current_order_index - 1;
+                const _stat = $.extend(true, {}, $.cloneObject(that.kag.stat));
+                const three = that.kag.tmp.three;
+                const three_save = { stat: three ? three.stat : {}, evt: three ? three.evt : {}, models: {} };
+                if (three && three.models) {
+                    for (let key in three.models) {
+                        three_save.models[key] = three.models[key].toSaveObj();
+                    }
+                }
+
+                if (flag_thumb === undefined) flag_thumb = that.kag.config.configThumbnail;
+
+                const layer_obj = that.kag.layer.getLayeyHtml();
+                const completeImage = function(img_code) {
+                    const data = {
+                        title: title || _stat.current_save_str || "",
+                        stat: _stat,
+                        three: three_save,
+                        current_order_index: _current_order_index,
+                        save_date: $.getNowDate() + "　" + $.getNowTime(),
+                        img_data: img_code || "",
+                        layer: layer_obj
+                    };
+                    that.snap = $.extend(true, {}, $.cloneObject(data));
+                    if (typeof call_back === 'function') call_back();
+                };
+
+                if (flag_thumb === "false") {
+                    completeImage("");
+                    return;
+                }
+
+                if (that.kag.stat.save_img) {
+                    const img = new Image();
+                    img.crossOrigin = "anonymous";
+                    img.src = _stat.save_img;
+                    img.onload = function() {
+                        const canvas = document.createElement("canvas");
+                        canvas.width = parseInt(that.kag.config.scWidth) || 1280;
+                        canvas.height = parseInt(that.kag.config.scHeight) || 720;
+                        canvas.getContext("2d").drawImage(img, 0, 0);
+                        completeImage(that.createImgCode(canvas));
+                    };
+                    img.onerror = function() { completeImage(""); };
+                    return;
+                }
+
+                const baseElem = document.getElementById("tyrano_base");
+                if (!baseElem || typeof html2canvas === 'undefined') {
+                    completeImage("");
+                    return;
+                }
+
+                const scW = parseInt(that.kag.config.scWidth) || 1280;
+                const scH = parseInt(that.kag.config.scHeight) || 720;
+
+                const menuLayer = baseElem.querySelector('.layer_menu');
+                const prevMenuDisplay = menuLayer ? menuLayer.style.display : '';
+                if (menuLayer) menuLayer.style.display = 'none';
+
+                html2canvas(baseElem, {
+                    width: scW,
+                    height: scH,
+                    windowWidth: scW,
+                    windowHeight: scH,
+                    useCORS: true,
+                    allowTaint: true,
+                    backgroundColor: '#000000',
+                    scale: 0.35,
+                    logging: false,
+                    ignoreElements: function(element) {
+                        return element.classList && (
+                            element.classList.contains('layer_menu') ||
+                            element.classList.contains('display_save') ||
+                            element.classList.contains('display_load') ||
+                            element.classList.contains('menu_save') ||
+                            element.classList.contains('mobile-side-wing')
+                        );
+                    }
+                }).then(function(canvas) {
+                    if (menuLayer) menuLayer.style.display = prevMenuDisplay;
+                    const img_code = that.createImgCode(canvas);
+                    completeImage(img_code);
+                }).catch(function(err) {
+                    if (menuLayer) menuLayer.style.display = prevMenuDisplay;
+                    console.warn("[CDN Interceptor] Lỗi chụp thumbnail save:", err);
+                    completeImage("");
+                });
+            };
+        }
+
+        console.log("[CDN Interceptor] ✅ Đã gắn hoàn tất toàn bộ Hook (bg, image, chara, button, bgmovie, audio, bgmopt, save_thumbnail).");
         setupMobileAutoFit();
         injectMobileSideWings();
     }
