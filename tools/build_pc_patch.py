@@ -3,7 +3,7 @@
 tools/build_pc_patch.py
 =======================
 Xây dựng gói cài đặt Patch Việt Hóa Hoàn Chỉnh cho PC (Dành cho End User)
-Tựa game: HOME (ROOM) - SORAREVO [RJ01556529]
+Tựa game: HOME - SORAREVO [RJ01556529]
 
 Quy trình tự động hóa khép kín:
 1. Nạp bản dịch mới nhất từ translation/text_export.xlsx & translation/ui_export.csv.
@@ -142,7 +142,7 @@ def build_pc_patch():
     # Tạo file batch dự phòng
     bat_content = """@echo off
 chcp 65001 >nul
-title CÀI ĐẶT PATCH VIỆT HÓA - HOME (ROOM) [PC]
+title CÀI ĐẶT PATCH VIỆT HÓA - HOME [PC]
 cd /d "%~dp0"
 if exist "CAI_DAT_PATCH_VIET_HOA.exe" (
     start "" "CAI_DAT_PATCH_VIET_HOA.exe"
@@ -156,7 +156,7 @@ pause
 
     # Tạo file hướng dẫn Huong_Dan_Cai_Dat.txt
     readme_content = """============================================================
-   HƯỚNG DẪN CÀI ĐẶT PATCH VIỆT HÓA - HOME (ROOM) [PC]
+   HƯỚNG DẪN CÀI ĐẶT PATCH VIỆT HÓA - HOME [PC]
    Phát triển bởi: Shimakaze VN Translation Team
 ============================================================
 

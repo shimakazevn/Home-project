@@ -1,6 +1,6 @@
-# AGENT GUIDELINES & IRONCLAD RULES - HOME (ROOM) [RJ01556529]
+# AGENT GUIDELINES & IRONCLAD RULES - HOME [RJ01556529]
 
-This project is the Vietnamese Localization for the Visual Novel **HOME (ROOM)**.
+This project is the Vietnamese Localization for the Visual Novel **HOME**.
 All autonomous AI agents working in this workspace MUST follow the rules defined below without exception:
 
 ## 1. Single Source of Truth (SSOT)

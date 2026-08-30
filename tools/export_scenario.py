@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Script xuất dữ liệu kịch bản sang CSV và Excel (XLSX) chuẩn Google Sheets
-Dự án: HOME (ROOM) - RJ01556529
+Dự án: HOME - RJ01556529
 Tác giả: VN Patch Pipeline
 """
 

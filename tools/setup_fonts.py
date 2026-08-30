@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Script cài đặt và cấu hình font tiếng Việt (Noto Sans) & Auto-Wrap CSS cho TyranoScript
-Dự án: HOME (ROOM) - RJ01556529
+Dự án: HOME - RJ01556529
 """
 
 import os
@@ -43,7 +43,7 @@ def deploy_fonts():
     # 2. Generate font.css with @font-face and Auto-Wrap rules
     font_css_content = """/* ==========================================================================
    CẤU HÌNH FONT TIẾNG VIỆT NOTO SANS & AUTO-WRAP CHO TYRANOSCRIPT
-   Dự án: HOME (ROOM) - Việt Hóa
+   Dự án: HOME - Việt Hóa
    ========================================================================== */
 
 @font-face {
@@ -115,7 +115,7 @@ button,
     
     auto_wrap_js = """// ==========================================================================
 // Plugin Tự Động Ngắt Dòng Tiếng Việt (Auto Word Wrap) cho TyranoScript
-// Dự án: HOME (ROOM)
+// Dự án: HOME
 // ==========================================================================
 
 (function() {

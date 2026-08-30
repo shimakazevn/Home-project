@@ -1,5 +1,5 @@
 # BỘ QUY TẮC BẤT KHẢ XÂM PHẠM DÀNH CHO AI AGENT (PROJECT RULES)
-### Dự án: Việt Hóa Visual Novel HOME (ROOM) [RJ01556529]
+### Dự án: Việt Hóa Visual Novel HOME [RJ01556529]
 ### Áp dụng: Mọi AI Agent (Gemini, Antigravity, Claude, ChatGPT, Cursor, Copilot)
 
 ---

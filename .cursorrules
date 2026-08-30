@@ -1,4 +1,4 @@
-# HOME (ROOM) Localization Rules for AI Assistants
+# HOME Localization Rules for AI Assistants
 
 - Single Source of Truth: All translations must be in `translation/text_export.xlsx` and `translation/ui_export.csv`.
 - Never modify engine control tags: `[if]`, `[endif]`, `[jump]`, `[macro]`, `[endmacro]`, `[iscript]`, `[endscript]`, `[commit]`, `[playse]`.

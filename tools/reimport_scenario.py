@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Script tái nhập (Re-import) bản dịch từ CSV/XLSX vào tệp kịch bản .ks của TyranoScript
-Dự án: HOME (ROOM) - RJ01556529
+Dự án: HOME - RJ01556529
 """
 
 import os

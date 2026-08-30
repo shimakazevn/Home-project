@@ -1,6 +1,6 @@
 @echo off
 chcp 65001 >nul
-title CÀI ĐẶT PATCH VIỆT HÓA - HOME (ROOM) [PC]
+title CÀI ĐẶT PATCH VIỆT HÓA - HOME [PC]
 cd /d "%~dp0"
 
 if exist "dist_pc\CAI_DAT_PATCH_VIET_HOA.exe" (

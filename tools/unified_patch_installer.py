@@ -3,20 +3,21 @@
 tools/unified_patch_installer.py
 =================================
 Trình cài đặt & Cập nhật Patch Việt Hóa Tự Động Trực Tuyến (Online 1-Click Patcher)
-Tựa game: HOME (ROOM) - SORAREVO [RJ01556529]
+Tựa game: HOME - SORAREVO [RJ01556529]
 Nhóm dịch: Shimakaze VN Translation Team
 Thiết kế: Visual Novel Launcher HUD - Full Artwork & Minimalist Flat Dock
 
 Tính năng:
 1. Giao diện hình nền Visual Novel toàn màn hình, thanh điều khiển phẳng (Flat HUD).
 2. Tự động kết nối GitHub Releases kéo bản dịch mới nhất theo thời gian thực (Real-time).
-3. Xác thực mã băm SHA256 cho từng tệp để chống lỗi ghi đĩa và lỗi mạng tuyệt đối.
-4. Kiến trúc No-Archive & Lightweight Backup:
+3. Sử dụng động cơ tải tốc độ cao hỗ trợ Windows curl.exe chống lỗi kết nối 100%.
+4. Xác thực mã băm SHA256 cho từng tệp để chống lỗi ghi đĩa và lỗi mạng tuyệt đối.
+5. Kiến trúc No-Archive & Lightweight Backup:
    - Giải nén 1 lần app.asar -> resources/app/
    - Sao lưu chọn lọc ~17MB (loại trừ GIF)
    - Tự động dọn 16GB asar thừa
    - Vá trực tiếp vào app trong 0.16s
-5. Khôi phục bản gốc tiếng Nhật 1-Click tức thì.
+6. Khôi phục bản gốc tiếng Nhật 1-Click tức thì.
 """
 
 import os
@@ -50,8 +51,8 @@ if sys.stdout:
     except Exception:
         pass
 
-VERSION = "3.2.0"
-APP_TITLE = f"HOME (ROOM) - Bản Việt Hóa v{VERSION}"
+VERSION = "3.2.1"
+APP_TITLE = f"HOME - Bản Việt Hóa v{VERSION}"
 GITHUB_REPO_OWNER = "shimakazevn"
 GITHUB_REPO_NAME = "Home-project"
 GITHUB_API_LATEST_RELEASE = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/releases/latest"
@@ -297,90 +298,71 @@ def restore_folder_original(game_dir, log_func=print):
 
 def fetch_github_latest_info():
     """Truy vấn bản phát hành mới nhất từ GitHub Releases"""
-    req = urllib.request.Request(
-        GITHUB_API_LATEST_RELEASE,
-        headers={
-            'User-Agent': f'ShimakazeVN-Patcher/{VERSION}',
-            'Accept': 'application/vnd.github.v3+json'
-        }
-    )
+    cmd = ['curl.exe', '-L', '-s', '-H', 'Accept: application/vnd.github.v3+json', GITHUB_API_LATEST_RELEASE]
     try:
-        with urllib.request.urlopen(req, timeout=8) as resp:
-            data = json.loads(resp.read().decode('utf-8'))
+        res = subprocess.run(cmd, capture_output=True, text=True, encoding='utf-8', errors='ignore', timeout=6)
+        if res.returncode == 0 and res.stdout.strip().startswith('{'):
+            data = json.loads(res.stdout)
             tag_name = data.get('tag_name', '')
             assets = data.get('assets', [])
-            
             download_url = None
             for a in assets:
                 name = a.get('name', '').lower()
                 if ('patch' in name or 'payload' in name) and name.endswith('.zip'):
                     download_url = a.get('browser_download_url')
                     break
-                    
             if not download_url and assets:
                 download_url = assets[0].get('browser_download_url')
-                
-            return {
-                'success': True,
-                'tag_name': tag_name,
-                'download_url': download_url or GITHUB_RAW_ARCHIVE_URL
-            }
+            if download_url:
+                return {'success': True, 'tag_name': tag_name or 'Latest', 'download_url': download_url}
     except Exception:
-        return {
-            'success': True,
-            'tag_name': 'Latest (main)',
-            'download_url': GITHUB_RAW_ARCHIVE_URL
-        }
+        pass
+
+    return {
+        'success': True,
+        'tag_name': 'Latest (main)',
+        'download_url': GITHUB_RAW_ARCHIVE_URL
+    }
 
 def download_file_with_progress(url, log_func=print, progress_func=None):
-    """Tải tệp từ internet với thanh tiến trình đo MB/tốc độ"""
-    log_func(f"[*] Đang kết nối tới máy chủ GitHub...")
-    req = urllib.request.Request(
-        url,
-        headers={
-            'User-Agent': f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            'Accept': '*/*'
-        }
-    )
+    """Tải tệp từ internet với curl.exe của Windows tốc độ cao và ổn định 100%"""
+    log_func(f"[*] Đang kết nối và tải dữ liệu từ GitHub...")
     
     tmp_file = tempfile.NamedTemporaryFile(delete=False, suffix='.zip')
     tmp_path = tmp_file.name
     tmp_file.close()
-    
-    try:
-        with urllib.request.urlopen(req, timeout=35) as resp:
-            total_sz = int(resp.headers.get('content-length', 0))
-            downloaded = 0
-            CHUNK = 64 * 1024
-            last_report = 0
-            
-            with open(tmp_path, 'wb') as f_out:
-                while True:
-                    chunk = resp.read(CHUNK)
-                    if not chunk:
-                        break
-                    f_out.write(chunk)
-                    downloaded += len(chunk)
-                    
-                    now = time.time()
-                    if now - last_report >= 0.15:
-                        pct = (downloaded / total_sz * 100) if total_sz > 0 else 0
-                        if progress_func:
-                            progress_func(pct, downloaded, total_sz)
-                        last_report = now
-                        
-        if progress_func:
-            progress_func(100.0, downloaded, total_sz)
-            
-        log_func(f"[OK] Đã tải dữ liệu thành công ({downloaded/(1024*1024):.2f} MB) từ GitHub!")
-        return tmp_path
-    except Exception as e:
+
+    # Dùng curl.exe tích hợp sẵn trên Windows
+    cmd = ['curl.exe', '-L', '-f', '-s', '-o', tmp_path, url]
+    proc = subprocess.Popen(cmd)
+
+    # Ước tính kích thước tải khoảng 35MB cho repo archive
+    approx_total = 35 * 1024 * 1024
+
+    while proc.poll() is None:
+        if os.path.exists(tmp_path):
+            cur_sz = os.path.getsize(tmp_path)
+            pct = min(98.0, (cur_sz / approx_total) * 100) if approx_total > 0 else 50.0
+            if progress_func:
+                progress_func(pct, cur_sz, approx_total)
+        time.sleep(0.2)
+
+    proc.wait()
+
+    if proc.returncode != 0 or not os.path.exists(tmp_path) or os.path.getsize(tmp_path) == 0:
         if os.path.exists(tmp_path):
             try:
                 os.remove(tmp_path)
             except Exception:
                 pass
-        raise RuntimeError(f"Lỗi kết nối hoặc tải dữ liệu từ GitHub: {e}")
+        raise RuntimeError(f"Không thể tải tệp từ GitHub (curl exit code: {proc.returncode})")
+
+    final_sz = os.path.getsize(tmp_path)
+    if progress_func:
+        progress_func(100.0, final_sz, final_sz)
+
+    log_func(f"[OK] Đã tải dữ liệu thành công ({final_sz/(1024*1024):.2f} MB) từ GitHub!")
+    return tmp_path
 
 def parse_patch_from_zip(zip_path):
     """Giải nén và quét tìm toàn bộ các tệp patch data/ và tyrano/"""
@@ -479,7 +461,6 @@ def launch_gui():
         overlay = Image.new("RGBA", (w, h), (0, 0, 0, 0))
         draw = ImageDraw.Draw(overlay)
         
-        # Gradient tối dần ở 45% phía dưới
         split_y = int(h * 0.45)
         for y in range(split_y, h):
             ratio = (y - split_y) / (h - split_y)
@@ -496,7 +477,7 @@ def launch_gui():
     top_bar = tk.Frame(canvas, bg="#0e0e14", padx=16, pady=8, highlightbackground="#222230", highlightthickness=1)
     top_bar_window = canvas.create_window(380, 24, window=top_bar, width=730, height=38)
 
-    tk.Label(top_bar, text="HOME (ROOM) — PATCH VIỆT HÓA", font=("Segoe UI", 10, "bold"), fg="#ffffff", bg="#0e0e14").pack(side=tk.LEFT)
+    tk.Label(top_bar, text="HOME — PATCH VIỆT HÓA", font=("Segoe UI", 10, "bold"), fg="#ffffff", bg="#0e0e14").pack(side=tk.LEFT)
     lbl_remote_ver = tk.Label(top_bar, text="[GitHub: Đang kết nối...]", font=("Segoe UI", 8), fg="#00e676", bg="#0e0e14")
     lbl_remote_ver.pack(side=tk.RIGHT)
 
@@ -530,7 +511,7 @@ def launch_gui():
     txt_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, ipady=3, padx=(0, 6))
 
     def choose_dir():
-        d = filedialog.askdirectory(title="Chọn thư mục chứa game HOME (ROOM)")
+        d = filedialog.askdirectory(title="Chọn thư mục chứa game HOME")
         if d:
             game_dir_var.set(d)
 
@@ -610,7 +591,7 @@ def launch_gui():
     def do_install_online():
         target = game_dir_var.get().strip()
         if not target or not os.path.exists(target):
-            messagebox.showerror("Lỗi", "Vui lòng chọn đúng thư mục chứa game HOME (ROOM)!")
+            messagebox.showerror("Lỗi", "Vui lòng chọn đúng thư mục chứa game HOME!")
             return
 
         set_buttons_state(tk.DISABLED)
@@ -659,7 +640,7 @@ def launch_gui():
     def do_restore():
         target = game_dir_var.get().strip()
         if not target or not os.path.exists(target):
-            messagebox.showerror("Lỗi", "Vui lòng chọn đúng thư mục chứa game HOME (ROOM)!")
+            messagebox.showerror("Lỗi", "Vui lòng chọn đúng thư mục chứa game HOME!")
             return
 
         if not messagebox.askyesno("Xác nhận", "Bạn có chắc chắn muốn gỡ Patch và khôi phục lại bản tiếng Nhật gốc không?"):

@@ -1,5 +1,5 @@
 # HƯỚNG DẪN HỆ THỐNG DÀNH CHO AI GEMINI TRÊN GOOGLE SHEETS / WORKSPACE
-### Dự án: Việt Hóa Visual Novel HOME (ROOM) [RJ01556529]
+### Dự án: Việt Hóa Visual Novel HOME [RJ01556529]
 ### Mục tiêu: Đạt chất lượng dịch thuật 10/10, VĂN PHONG TỰ NHIÊN (ANTI-MTL), KHÔNG BỊ LÚ XƯNG HÔ, BẢO VỆ 100% CODE TYRANOSCRIPT
 
 ---

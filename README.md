@@ -1,6 +1,6 @@
-# HOME (ROOM) - Dự Án Việt Hóa Visual Novel Hoàn Chỉnh [RJ01556529]
+# HOME - Dự Án Việt Hóa Visual Novel Hoàn Chỉnh [RJ01556529]
 
-> **Tựa tác phẩm:** HOME (ROOM)  
+> **Tựa tác phẩm:** HOME  
 > **Nhà phát triển:** sorarevo (DLsite RJ01556529)  
 > **Phiên bản Patch:** v2.0.0 (Bản Windows PC Hoàn Chỉnh 100%)  
 > **Đội ngũ dịch thuật:** Shimakaze VN Translation Team  

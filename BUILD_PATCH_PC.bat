@@ -1,9 +1,9 @@
 @echo off
 chcp 65001 >nul
-title BIÊN DỊCH VÀ XÂY DỰNG PATCH VIỆT HÓA - HOME (ROOM) [PC]
-cls
+title BIÊN DỊCH VÀ XÂY DỰNG PATCH VIỆT HÓA - HOME [PC]
+color 0b
 echo ============================================================
-echo   TỰ ĐỘNG BIÊN DỊCH PATCH VIỆT HÓA - HOME (ROOM) [PC]
+echo   TỰ ĐỘNG BIÊN DỊCH PATCH VIỆT HÓA - HOME [PC]
 echo ============================================================
 echo.
 cd /d "%~dp0"
