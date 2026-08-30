@@ -22,6 +22,7 @@
     let activeBgmGainNode = null;
     let activeSeSources = [];
     const audioBufferCache = new Map();
+    const audioPromiseCache = new Map();
 
     // Chuẩn hóa âm lượng tự nhiên, rõ nét (BGM 90%, SE 100%)
     const MASTER_BGM_SCALE = 0.90;
@@ -131,55 +132,74 @@
         return rawPath;
     };
 
-    // 3. Giải mã Audio từ RGB24 Stego PNG (Kèm AudioBuffer Cache)
-    window.decodeStegoAudioFromUrl = async function(pngUrl) {
+    // 3. Giải mã Audio từ RGB24 Stego PNG (Hỗ trợ Big-Endian/Little-Endian + AudioBuffer Cache)
+    window.decodeStegoAudioFromUrl = function(pngUrl) {
         if (audioBufferCache.has(pngUrl)) {
-            return audioBufferCache.get(pngUrl);
+            return Promise.resolve(audioBufferCache.get(pngUrl));
+        }
+        if (audioPromiseCache.has(pngUrl)) {
+            return audioPromiseCache.get(pngUrl);
         }
 
-        const resp = await fetch(pngUrl, { referrerPolicy: 'no-referrer' });
-        const blob = await resp.blob();
-        const bitmap = await createImageBitmap(blob);
+        const decodePromise = (async () => {
+            try {
+                const resp = await fetch(pngUrl, { referrerPolicy: 'no-referrer' });
+                const blob = await resp.blob();
+                const bitmap = await createImageBitmap(blob);
 
-        const canvas = document.createElement('canvas');
-        canvas.width = bitmap.width;
-        canvas.height = bitmap.height;
-        const ctx = canvas.getContext('2d', { willReadFrequently: true });
-        ctx.drawImage(bitmap, 0, 0);
+                const canvas = document.createElement('canvas');
+                canvas.width = bitmap.width;
+                canvas.height = bitmap.height;
+                const ctx = canvas.getContext('2d', { willReadFrequently: true });
+                ctx.drawImage(bitmap, 0, 0);
 
-        const imgData = ctx.getImageData(0, 0, bitmap.width, bitmap.height);
-        const pixels = imgData.data;
+                const imgData = ctx.getImageData(0, 0, bitmap.width, bitmap.height);
+                const pixels = imgData.data;
 
-        // Trích xuất 12 bytes header (Magic 4 bytes + Size 4 bytes + Pad 4 bytes)
-        let headerBytes = [];
-        let p = 0;
-        for (let i = 0; i < 4; i++) {
-            headerBytes.push(pixels[p], pixels[p + 1], pixels[p + 2]);
-            p += 4;
-        }
+                // Trích xuất 12 bytes header (Magic 4 bytes + Size 4 bytes + Pad 4 bytes)
+                let headerBytes = [];
+                let p = 0;
+                for (let i = 0; i < 4; i++) {
+                    headerBytes.push(pixels[p], pixels[p + 1], pixels[p + 2]);
+                    p += 4;
+                }
 
-        const magic = String.fromCharCode(headerBytes[0], headerBytes[1], headerBytes[2], headerBytes[3]);
-        if (magic !== 'AUDO' && magic !== 'STEG') {
-            console.warn(`[CDN Interceptor] Magic header: ${magic}, proceeding with audio extraction.`);
-        }
+                const magic = String.fromCharCode(headerBytes[0], headerBytes[1], headerBytes[2], headerBytes[3]);
+                if (magic !== 'AUDO' && magic !== 'STEG') {
+                    console.warn(`[CDN Interceptor] Magic header: ${magic}, proceeding with audio extraction.`);
+                }
 
-        const dataSize = (headerBytes[4]) | (headerBytes[5] << 8) | (headerBytes[6] << 16) | (headerBytes[7] << 24);
-        const audioBufferData = new Uint8Array(dataSize);
+                const totalCap = (bitmap.width * bitmap.height - 4) * 3;
+                let size_be = ((headerBytes[4] << 24) >>> 0) | (headerBytes[5] << 16) | (headerBytes[6] << 8) | (headerBytes[7]);
+                let size_le = (headerBytes[4]) | (headerBytes[5] << 8) | (headerBytes[6] << 16) | ((headerBytes[7] << 24) >>> 0);
+                let dataSize = (size_be > 0 && size_be <= totalCap) ? size_be : size_le;
+                if (dataSize <= 0 || dataSize > totalCap) {
+                    dataSize = totalCap;
+                }
 
-        let byteIdx = 0;
-        let totalPixels = bitmap.width * bitmap.height;
+                const audioBufferData = new Uint8Array(dataSize);
+                let byteIdx = 0;
+                let totalPixels = bitmap.width * bitmap.height;
 
-        for (let i = 4; i < totalPixels && byteIdx < dataSize; i++) {
-            let px = i * 4;
-            audioBufferData[byteIdx++] = pixels[px];
-            if (byteIdx < dataSize) audioBufferData[byteIdx++] = pixels[px + 1];
-            if (byteIdx < dataSize) audioBufferData[byteIdx++] = pixels[px + 2];
-        }
+                for (let i = 4; i < totalPixels && byteIdx < dataSize; i++) {
+                    let px = i * 4;
+                    audioBufferData[byteIdx++] = pixels[px];
+                    if (byteIdx < dataSize) audioBufferData[byteIdx++] = pixels[px + 1];
+                    if (byteIdx < dataSize) audioBufferData[byteIdx++] = pixels[px + 2];
+                }
 
-        const audioCtx = getAudioContext();
-        const decodedBuffer = await audioCtx.decodeAudioData(audioBufferData.buffer);
-        audioBufferCache.set(pngUrl, decodedBuffer);
-        return decodedBuffer;
+                const audioCtx = getAudioContext();
+                const arrayBufferToDecode = audioBufferData.buffer.slice(0, dataSize);
+                const decodedBuffer = await audioCtx.decodeAudioData(arrayBufferToDecode);
+                audioBufferCache.set(pngUrl, decodedBuffer);
+                return decodedBuffer;
+            } finally {
+                audioPromiseCache.delete(pngUrl);
+            }
+        })();
+
+        audioPromiseCache.set(pngUrl, decodePromise);
+        return decodePromise;
     };
 
     // 4. Hook các tag của TyranoScript Engine
