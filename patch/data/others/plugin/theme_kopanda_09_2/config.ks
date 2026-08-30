@@ -211,9 +211,17 @@ if (sf.config_default_set !== true) {
 			TYRANO.kag.stat.map_bgm_volume = {};
 		}
 		TYRANO.kag.stat.map_bgm_volume["0"] = vol;
-		TYRANO.kag.ftag.startTag("bgmopt", {
-			volume: vol,
-		});
+		sf._system_config_bgm_volume = vol;
+		TYRANO.kag.saveSystemVariable();
+		var map_bgm = TYRANO.kag.tmp.map_bgm;
+		if (map_bgm) {
+			var new_volume = parseFloat(vol / 100);
+			for (var key in map_bgm) {
+				if (map_bgm[key] && map_bgm[key].volume) {
+					map_bgm[key].volume(new_volume);
+				}
+			}
+		}
 	};
 
 	tf.change_se = function(){
@@ -225,10 +233,12 @@ if (sf.config_default_set !== true) {
 		}
 		TYRANO.kag.stat.map_se_volume["0"] = vol;
 		if (sf._skskpnt_volume) sf._skskpnt_volume[0] = vol;
-		TYRANO.kag.ftag.startTag("seopt", {
-			buf: "0",
-			volume: vol,
-		});
+		sf._system_config_se_volume = vol;
+		TYRANO.kag.saveSystemVariable();
+		var map_se = TYRANO.kag.tmp.map_se;
+		if (map_se && map_se["0"] && map_se["0"].volume) {
+			map_se["0"].volume(parseFloat(vol / 100));
+		}
 	};
 
 	tf.change_voice_1 = function(){
@@ -239,10 +249,11 @@ if (sf.config_default_set !== true) {
 		}
 		TYRANO.kag.stat.map_se_volume["1"] = vol;
 		if (sf._skskpnt_volume) sf._skskpnt_volume[1] = vol;
-		TYRANO.kag.ftag.startTag("seopt", {
-			buf: "1",
-			volume: vol,
-		});
+		TYRANO.kag.saveSystemVariable();
+		var map_se = TYRANO.kag.tmp.map_se;
+		if (map_se && map_se["1"] && map_se["1"].volume) {
+			map_se["1"].volume(parseFloat(vol / 100));
+		}
 	};
 
 	tf.change_voice_2 = function(){
@@ -253,10 +264,11 @@ if (sf.config_default_set !== true) {
 		}
 		TYRANO.kag.stat.map_se_volume["2"] = vol;
 		if (sf._skskpnt_volume) sf._skskpnt_volume[2] = vol;
-		TYRANO.kag.ftag.startTag("seopt", {
-			buf: "2",
-			volume: vol,
-		});
+		TYRANO.kag.saveSystemVariable();
+		var map_se = TYRANO.kag.tmp.map_se;
+		if (map_se && map_se["2"] && map_se["2"].volume) {
+			map_se["2"].volume(parseFloat(vol / 100));
+		}
 	};
 
 	tf.change_voice_3 = function(){
@@ -267,10 +279,11 @@ if (sf.config_default_set !== true) {
 		}
 		TYRANO.kag.stat.map_se_volume["3"] = vol;
 		if (sf._skskpnt_volume) sf._skskpnt_volume[3] = vol;
-		TYRANO.kag.ftag.startTag("seopt", {
-			buf: "3",
-			volume: vol,
-		});
+		TYRANO.kag.saveSystemVariable();
+		var map_se = TYRANO.kag.tmp.map_se;
+		if (map_se && map_se["3"] && map_se["3"].volume) {
+			map_se["3"].volume(parseFloat(vol / 100));
+		}
 	};
 
 	tf.change_ch_speed = function(val){
@@ -278,12 +291,14 @@ if (sf.config_default_set !== true) {
 		if (isNaN(speed) || speed < 1) speed = 50;
 		tf.current_ch_speed = speed;
 		tf.slider_ch_speed = 101 - speed;
+		TYRANO.kag.stat.ch_speed = "";
 		TYRANO.kag.config.chSpeed = speed;
 		sf._system_config_ch_speed = speed;
+		sf._config_ch_speed = speed;
 		TYRANO.kag.saveSystemVariable();
-		if (TYRANO.kag.ftag && TYRANO.kag.ftag.startTag) {
-			TYRANO.kag.ftag.startTag("configdelay", { speed: speed });
-			TYRANO.kag.ftag.startTag("test_message_reset", {});
+		if (window.gMessageTester && window.gMessageTester.next) {
+			window.gMessageTester.currentTextNumber = 0;
+			window.gMessageTester.next(true);
 		}
 	};
 
@@ -294,10 +309,11 @@ if (sf.config_default_set !== true) {
 		tf.slider_auto_speed = 5001 - speed;
 		TYRANO.kag.config.autoSpeed = speed;
 		sf._system_config_auto_speed = speed;
+		sf._config_auto_speed = speed;
 		TYRANO.kag.saveSystemVariable();
-		if (TYRANO.kag.ftag && TYRANO.kag.ftag.startTag) {
-			TYRANO.kag.ftag.startTag("autoconfig", { speed: speed });
-			TYRANO.kag.ftag.startTag("test_message_reset", {});
+		if (window.gMessageTester && window.gMessageTester.next) {
+			window.gMessageTester.currentTextNumber = 0;
+			window.gMessageTester.next(true);
 		}
 	};
 	[endscript]
@@ -315,33 +331,33 @@ if (sf.config_default_set !== true) {
 ;------------------------------------------------------------------------------------------------------
 ; BGM音量
 ;------------------------------------------------------------------------------------------------------
-[slider name="bgm" storage="../others/plugin/theme_kopanda_09_2/config.ks" var="tf.current_bgm_vol" x="219" y="161" width="290" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*vol_bgm_change" exp="tf.change_bgm()"]
+[slider name="bgm" storage="../others/plugin/theme_kopanda_09_2/config.ks" var="tf.current_bgm_vol" x="219" y="161" width="290" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" exp="tf.change_bgm()"]
 [call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*mute_bgm_button" ]
 
 ;------------------------------------------------------------------------------------------------------
 ; SE音量
 ;------------------------------------------------------------------------------------------------------
-[slider name="se" storage="../others/plugin/theme_kopanda_09_2/config.ks" var="tf.current_se_vol" x="219" y="233" width="290" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*vol_se_change" exp="tf.change_se()"]
+[slider name="se" storage="../others/plugin/theme_kopanda_09_2/config.ks" var="tf.current_se_vol" x="219" y="233" width="290" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" exp="tf.change_se()"]
 [call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*mute_se_button" ]
 
 ;------------------------------------------------------------------------------------------------------
 ; ボイス音量
 ;------------------------------------------------------------------------------------------------------
-[slider name="voice_1" storage="../others/plugin/theme_kopanda_09_2/config.ks" var="tf.current_voice_1_vol" x="883" y="161" width="249" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*vol_voice_change" exp="tf.change_voice_1()"]
-[slider name="voice_2" storage="../others/plugin/theme_kopanda_09_2/config.ks" var="tf.current_voice_2_vol" x="883" y="233" width="249" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*vol_voice_change" exp="tf.change_voice_2()"]
-[slider name="voice_3" storage="../others/plugin/theme_kopanda_09_2/config.ks" var="tf.current_voice_3_vol" x="883" y="305" width="249" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*vol_voice_change" exp="tf.change_voice_3()"]
+[slider name="voice_1" storage="../others/plugin/theme_kopanda_09_2/config.ks" var="tf.current_voice_1_vol" x="883" y="161" width="249" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" exp="tf.change_voice_1()"]
+[slider name="voice_2" storage="../others/plugin/theme_kopanda_09_2/config.ks" var="tf.current_voice_2_vol" x="883" y="233" width="249" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" exp="tf.change_voice_2()"]
+[slider name="voice_3" storage="../others/plugin/theme_kopanda_09_2/config.ks" var="tf.current_voice_3_vol" x="883" y="305" width="249" height="8" min="0" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" exp="tf.change_voice_3()"]
 [call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*mute_voice_button" ]
 
 ;------------------------------------------------------------------------------------------------------
 ; テキスト速度
 ;------------------------------------------------------------------------------------------------------
-[slider name="text" storage="../others/plugin/theme_kopanda_09_2/config.ks" var="tf.slider_ch_speed" x="219" y="377" width="290" height="8" min="1" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*ch_speed_skip" exp="tf.change_ch_speed()"]
+[slider name="text" storage="../others/plugin/theme_kopanda_09_2/config.ks" var="tf.slider_ch_speed" x="219" y="377" width="290" height="8" min="1" max="100" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" exp="tf.change_ch_speed()"]
 [call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*mute_text_button" ]
 
 ;------------------------------------------------------------------------------------------------------
 ; オート速度
 ;------------------------------------------------------------------------------------------------------
-[slider name="auto" storage="../others/plugin/theme_kopanda_09_2/config.ks" var="tf.slider_auto_speed" x="219" y="449" width="290" height="8" min="1" max="5000" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" target="*auto_speed_change" exp="tf.change_auto_speed()"]
+[slider name="auto" storage="../others/plugin/theme_kopanda_09_2/config.ks" var="tf.slider_auto_speed" x="219" y="449" width="290" height="8" min="1" max="5000" step="1" thumb_img="&tf.img_path + 'bar_button.png'" thumb_width="24" thumb_height="24" base_color="transparent" active_color="transparent" exp="tf.change_auto_speed()"]
 [call storage="../others/plugin/theme_kopanda_09_2/config.ks" target="*mute_auto_button" ]
 
 ;------------------------------------------------------------------------------------------------------
