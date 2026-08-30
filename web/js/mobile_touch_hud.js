@@ -98,6 +98,360 @@
         }
         if (document.getElementById('home-gear-btn')) return;
 
+        // Stylesheet for the Control Orb & Modal Sheet. NOTE: previously this
+        // lived inside data/others/plugin/cdn_interceptor/init.js which is NOT
+        // loaded in the web build, leaving the gear button completely unstyled
+        // (an invisible full-screen <div> that blocked ALL game clicks).
+        const style = document.createElement('style');
+        style.setAttribute('data-home-hmc', '1');
+        style.textContent = `
+            #home-gear-btn {
+                position: fixed;
+                bottom: 14px;
+                left: 14px;
+                z-index: 999999;
+                width: 42px;
+                height: 42px;
+                border-radius: 50%;
+                background: rgba(30, 30, 32, 0.85);
+                backdrop-filter: blur(30px) saturate(180%);
+                -webkit-backdrop-filter: blur(30px) saturate(180%);
+                border: 0.5px solid rgba(255, 255, 255, 0.16);
+                box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                outline: none;
+                transition: transform 0.15s ease, opacity 0.15s ease;
+                opacity: 0.85;
+                user-select: none;
+                -webkit-tap-highlight-color: transparent;
+            }
+            #home-gear-btn:hover {
+                opacity: 1;
+                transform: scale(1.05);
+                background: rgba(44, 44, 46, 0.95);
+            }
+            #home-gear-btn:active {
+                transform: scale(0.92);
+                opacity: 0.7;
+            }
+            #home-gear-btn svg {
+                width: 19px;
+                height: 19px;
+                fill: none;
+                stroke: rgba(255, 255, 255, 0.9);
+                stroke-width: 1.7;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+            #home-modal-overlay {
+                position: fixed;
+                inset: 0;
+                z-index: 1000000;
+                background: rgba(0, 0, 0, 0.45);
+                backdrop-filter: blur(25px);
+                -webkit-backdrop-filter: blur(25px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 16px;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.2s ease;
+                box-sizing: border-box;
+            }
+            #home-modal-overlay.open {
+                opacity: 1;
+                pointer-events: auto;
+            }
+            #home-modal-card {
+                width: 100%;
+                max-width: 420px;
+                max-height: 88vh;
+                background: rgba(28, 28, 30, 0.94);
+                backdrop-filter: blur(50px) saturate(190%);
+                -webkit-backdrop-filter: blur(50px) saturate(190%);
+                border: 0.5px solid rgba(255, 255, 255, 0.12);
+                border-radius: 20px;
+                box-shadow: 0 28px 70px rgba(0, 0, 0, 0.6);
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                transform: scale(0.95);
+                transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+                color: #FFFFFF;
+                font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+                user-select: none;
+                box-sizing: border-box;
+            }
+            #home-modal-overlay.open #home-modal-card {
+                transform: scale(1);
+            }
+            .hmc-sheet-handle {
+                width: 36px;
+                height: 4px;
+                border-radius: 999px;
+                background: rgba(255, 255, 255, 0.2);
+                margin: 8px auto 0;
+                flex-shrink: 0;
+            }
+            .hmc-header {
+                padding: 10px 18px 12px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+                flex-shrink: 0;
+            }
+            .hmc-title {
+                font-size: 16px;
+                font-weight: 600;
+                color: #FFFFFF;
+                letter-spacing: -0.01em;
+                margin: 0;
+            }
+            .hmc-close {
+                background: rgba(120, 120, 128, 0.2);
+                border: none;
+                border-radius: 50%;
+                width: 26px;
+                height: 26px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: rgba(235, 235, 245, 0.65);
+                cursor: pointer;
+                font-size: 11px;
+                font-weight: 700;
+                transition: all 0.15s ease;
+                flex-shrink: 0;
+                outline: none;
+            }
+            .hmc-close:hover {
+                background: rgba(120, 120, 128, 0.35);
+                color: #FFFFFF;
+            }
+            .hmc-close:active {
+                transform: scale(0.92);
+            }
+            .hmc-body {
+                padding: 14px 16px 18px;
+                flex: 1 1 auto;
+                min-height: 0;
+                overflow-y: auto;
+                overflow-x: hidden;
+                -webkit-overflow-scrolling: touch;
+                touch-action: pan-y;
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                scrollbar-width: thin;
+                scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+            }
+            .hmc-body::-webkit-scrollbar {
+                width: 4px;
+            }
+            .hmc-body::-webkit-scrollbar-track {
+                background: transparent;
+            }
+            .hmc-body::-webkit-scrollbar-thumb {
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 4px;
+            }
+            .hmc-group-header {
+                font-size: 11px;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.04em;
+                color: rgba(235, 235, 245, 0.45);
+                margin: 0 0 6px 4px;
+            }
+            .hmc-inset-group {
+                background: rgba(120, 120, 128, 0.15);
+                border: 0.5px solid rgba(255, 255, 255, 0.06);
+                border-radius: 12px;
+                overflow: hidden;
+                flex-shrink: 0;
+            }
+            .hmc-row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 11px 14px;
+                position: relative;
+            }
+            .hmc-row + .hmc-row {
+                border-top: 0.5px solid rgba(255, 255, 255, 0.08);
+            }
+            .hmc-row-left {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                min-width: 0;
+            }
+            .hmc-row-label {
+                font-size: 14px;
+                font-weight: 400;
+                color: #FFFFFF;
+                letter-spacing: -0.01em;
+            }
+            .hmc-row-sublabel {
+                font-size: 11.5px;
+                color: rgba(235, 235, 245, 0.5);
+                letter-spacing: -0.01em;
+            }
+            .hmc-row-actions {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                flex-shrink: 0;
+            }
+            .hmc-pill-btn {
+                background: rgba(255, 255, 255, 0.1);
+                border: none;
+                border-radius: 999px;
+                color: #0A84FF;
+                font-size: 12.5px;
+                font-weight: 500;
+                letter-spacing: -0.01em;
+                padding: 4px 13px;
+                cursor: pointer;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.12s ease;
+                outline: none;
+                -webkit-tap-highlight-color: transparent;
+                min-height: 28px;
+            }
+            .hmc-pill-btn:hover {
+                background: rgba(255, 255, 255, 0.18);
+            }
+            .hmc-pill-btn:active {
+                opacity: 0.6;
+                transform: scale(0.96);
+            }
+            .hmc-pill-btn.pill-primary {
+                background: #0A84FF;
+                color: #FFFFFF;
+                font-weight: 600;
+            }
+            .hmc-pill-btn.pill-primary:hover {
+                background: #0071E3;
+            }
+            .hmc-pill-btn.pill-danger {
+                background: rgba(255, 69, 58, 0.15);
+                color: #FF453A;
+            }
+            .hmc-pill-btn.pill-disabled {
+                opacity: 0.35 !important;
+                cursor: not-allowed !important;
+                pointer-events: none !important;
+            }
+            .hmc-segmented.segmented-disabled {
+                opacity: 0.35 !important;
+                pointer-events: none !important;
+            }
+            .hmc-row-disabled {
+                opacity: 0.45;
+            }
+            .hmc-segmented {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                background: rgba(120, 120, 128, 0.2);
+                border-radius: 8px;
+                padding: 2px;
+                gap: 2px;
+                margin: 6px 8px;
+            }
+            .hmc-segment-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 7px 2px;
+                border-radius: 6px;
+                border: none;
+                background: transparent;
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 12px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 0.15s ease;
+                outline: none;
+                -webkit-tap-highlight-color: transparent;
+            }
+            .hmc-segment-item:hover {
+                color: #FFFFFF;
+            }
+            .hmc-segment-item:active {
+                opacity: 0.7;
+            }
+            .hmc-segment-item.active {
+                background: rgba(255, 255, 255, 0.25);
+                color: #FFFFFF;
+                font-weight: 600;
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+            }
+            .hmc-segment-item.active-warn {
+                background: #FF9F0A;
+                color: #000000;
+                font-weight: 600;
+            }
+            .hmc-segment-item.active-blue {
+                background: #0A84FF;
+                color: #FFFFFF;
+                font-weight: 600;
+            }
+            .hmc-cache-box {
+                padding: 12px 14px;
+            }
+            .hmc-bar-bg {
+                background: rgba(120, 120, 128, 0.25);
+                border-radius: 999px;
+                height: 4px;
+                margin: 8px 0 6px;
+                overflow: hidden;
+            }
+            .hmc-bar-fill {
+                height: 100%;
+                border-radius: 999px;
+                background: #0A84FF;
+                transition: width 0.3s ease;
+            }
+            .hmc-bar-fill.complete {
+                background: #30D158;
+            }
+            .hmc-cache-status {
+                font-size: 11.5px;
+                color: rgba(235, 235, 245, 0.55);
+                line-height: 1.4;
+                margin-bottom: 10px;
+            }
+            @media (max-width: 480px) {
+                #home-modal-overlay { padding: 8px; }
+                #home-modal-card { max-width: 100%; max-height: 92vh; border-radius: 18px; }
+                .hmc-header { padding: 8px 14px 10px; }
+                .hmc-title { font-size: 15px; }
+                .hmc-body { padding: 10px 12px 14px; gap: 12px; }
+                .hmc-row { padding: 9px 12px; }
+                .hmc-row-label { font-size: 13.5px; }
+                .hmc-pill-btn { padding: 4px 11px; font-size: 12px; }
+            }
+            @media (max-height: 540px) {
+                #home-modal-overlay { padding: 6px; }
+                #home-modal-card { max-height: 96vh; border-radius: 14px; max-width: 480px; }
+                .hmc-sheet-handle { display: none; }
+                .hmc-header { padding: 6px 14px; }
+                .hmc-title { font-size: 14px; }
+                .hmc-body { padding: 6px 10px 10px; gap: 8px; }
+                .hmc-row { padding: 7px 10px; }
+                .hmc-group-header { margin: 0 0 3px 4px; font-size: 10px; }
+            }
+        `;
+        document.head.appendChild(style);
+
         // 1. Nút Bánh Răng Floating Orb
         const gearBtn = document.createElement('div');
         gearBtn.id = 'home-gear-btn';

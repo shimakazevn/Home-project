@@ -1,7 +1,7 @@
 {
   "version": "3.1.0",
-  "generated_at": "2026-08-31 01:58:08",
-  "total_files": 289,
+  "generated_at": "2026-08-31 02:06:19",
+  "total_files": 290,
   "files": {
     "data/asset_manifest.json": {
       "sha256": "691e7a4c2b5ca30a8a25543b629f0d7e9c1f9646650f8c356764e14ef1f76396",
@@ -1158,6 +1158,10 @@
     "tyrano/css/font.css": {
       "sha256": "8433247c2f3ec0cc6b5e038955e97bbe2d431a14f052e32dc3b1c7aa7b454531",
       "size": 1852
+    },
+    "tyrano/plugins/kag/kag.parser.js": {
+      "sha256": "7442b9043218f19c118950110a20dc746bca5167d876e7292422a9c7d93d0a62",
+      "size": 4632
     }
   }
 }
