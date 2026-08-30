@@ -172,7 +172,103 @@
         } catch(e) {}
     }
 
-    // 3. Giải mã Audio từ RGB24 Stego PNG (Hỗ trợ Big-Endian/Little-Endian + AudioBuffer Cache)
+    // 3. Giải mã Audio Bit-Exact 100% từ PNG Stego (Không qua Canvas, không biến dạng dữ liệu)
+    async function extractStegoBytesFromPngBuffer(arrayBuffer) {
+        const buf = new Uint8Array(arrayBuffer);
+        let offset = 8;
+        const idatParts = [];
+        let width = 0, height = 0;
+
+        while (offset < buf.length) {
+            const view = new DataView(buf.buffer, buf.byteOffset + offset, 8);
+            const len = view.getUint32(0);
+            const type = String.fromCharCode(buf[offset + 4], buf[offset + 5], buf[offset + 6], buf[offset + 7]);
+            if (type === 'IHDR') {
+                const ihdrView = new DataView(buf.buffer, buf.byteOffset + offset + 8, 8);
+                width = ihdrView.getUint32(0);
+                height = ihdrView.getUint32(4);
+            } else if (type === 'IDAT') {
+                idatParts.push(buf.subarray(offset + 8, offset + 8 + len));
+            }
+            offset += 8 + len + 4;
+        }
+
+        if (idatParts.length === 0 || width === 0 || height === 0) {
+            throw new Error('Invalid PNG chunks');
+        }
+
+        let totalLen = 0;
+        for (let i = 0; i < idatParts.length; i++) totalLen += idatParts[i].length;
+        const idat = new Uint8Array(totalLen);
+        let p = 0;
+        for (let i = 0; i < idatParts.length; i++) {
+            idat.set(idatParts[i], p);
+            p += idatParts[i].length;
+        }
+
+        // Decompress raw deflate payload (bỏ 2-byte zlib header và 4-byte adler32 cuối)
+        const rawDeflate = idat.subarray(2, idat.length - 4);
+        const ds = new DecompressionStream('deflate-raw');
+        const writer = ds.writable.getWriter();
+        writer.write(rawDeflate);
+        writer.close();
+
+        const reader = ds.readable.getReader();
+        const chunks = [];
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            chunks.push(value);
+        }
+
+        let decLen = 0;
+        for (let i = 0; i < chunks.length; i++) decLen += chunks[i].length;
+        const decompressed = new Uint8Array(decLen);
+        p = 0;
+        for (let i = 0; i < chunks.length; i++) {
+            decompressed.set(chunks[i], p);
+            p += chunks[i].length;
+        }
+
+        const stride = width * 3;
+        const rawPixels = new Uint8Array(width * height * 3);
+        let prevRow = new Uint8Array(stride);
+
+        function paeth(a, b, c) {
+            const pa = Math.abs(b - c);
+            const pb = Math.abs(a - c);
+            const pc = Math.abs(a + b - 2 * c);
+            if (pa <= pb && pa <= pc) return a;
+            if (pb <= pc) return b;
+            return c;
+        }
+
+        for (let y = 0; y < height; y++) {
+            const filterType = decompressed[y * (stride + 1)];
+            const curRow = new Uint8Array(stride);
+            const srcOffset = y * (stride + 1) + 1;
+            for (let x = 0; x < stride; x++) {
+                const val = decompressed[srcOffset + x];
+                const a = x >= 3 ? curRow[x - 3] : 0;
+                const b = prevRow[x];
+                const c = x >= 3 ? prevRow[x - 3] : 0;
+                let res = val;
+                if (filterType === 1) res = (val + a) & 0xFF;
+                else if (filterType === 2) res = (val + b) & 0xFF;
+                else if (filterType === 3) res = (val + ((a + b) >> 1)) & 0xFF;
+                else if (filterType === 4) res = (val + paeth(a, b, c)) & 0xFF;
+                curRow[x] = res;
+            }
+            rawPixels.set(curRow, y * stride);
+            prevRow = curRow;
+        }
+
+        const magic = String.fromCharCode(rawPixels[0], rawPixels[1], rawPixels[2], rawPixels[3]);
+        const dataSize = ((rawPixels[4] << 24) >>> 0) | (rawPixels[5] << 16) | (rawPixels[6] << 8) | rawPixels[7];
+        const extracted = rawPixels.subarray(12, 12 + dataSize);
+        return extracted;
+    }
+
     window.decodeStegoAudioFromUrl = function(pngUrl) {
         const cacheKey = pngUrl.split('?')[0];
         if (audioBufferCache.has(cacheKey)) {
@@ -185,57 +281,36 @@
         const decodePromise = (async () => {
             try {
                 const resp = await fetch(pngUrl, { referrerPolicy: 'no-referrer' });
-                const blob = await resp.blob();
-                let bitmap;
+                const arrayBuffer = await resp.arrayBuffer();
+                let audioBytes;
                 try {
-                    bitmap = await createImageBitmap(blob, { colorSpaceConversion: 'none', premultiplyAlpha: 'none' });
+                    audioBytes = await extractStegoBytesFromPngBuffer(arrayBuffer);
                 } catch(e) {
-                    bitmap = await createImageBitmap(blob);
-                }
-
-                const canvas = document.createElement('canvas');
-                canvas.width = bitmap.width;
-                canvas.height = bitmap.height;
-                const ctx = canvas.getContext('2d', { willReadFrequently: true });
-                ctx.drawImage(bitmap, 0, 0);
-
-                const imgData = ctx.getImageData(0, 0, bitmap.width, bitmap.height);
-                const pixels = imgData.data;
-
-                // Trích xuất 12 bytes header (Magic 4 bytes + Size 4 bytes + Pad 4 bytes)
-                let headerBytes = [];
-                let p = 0;
-                for (let i = 0; i < 4; i++) {
-                    headerBytes.push(pixels[p], pixels[p + 1], pixels[p + 2]);
-                    p += 4;
-                }
-
-                const magic = String.fromCharCode(headerBytes[0], headerBytes[1], headerBytes[2], headerBytes[3]);
-                if (magic !== 'AUDO' && magic !== 'STEG') {
-                    console.warn(`[CDN Interceptor] Magic header: ${magic}, proceeding with audio extraction.`);
-                }
-
-                const totalCap = (bitmap.width * bitmap.height - 4) * 3;
-                let size_be = ((headerBytes[4] << 24) >>> 0) | (headerBytes[5] << 16) | (headerBytes[6] << 8) | (headerBytes[7]);
-                let size_le = (headerBytes[4]) | (headerBytes[5] << 8) | (headerBytes[6] << 16) | ((headerBytes[7] << 24) >>> 0);
-                let dataSize = (size_be > 0 && size_be <= totalCap) ? size_be : size_le;
-                if (dataSize <= 0 || dataSize > totalCap) {
-                    dataSize = totalCap;
-                }
-
-                const audioBufferData = new Uint8Array(dataSize);
-                let byteIdx = 0;
-                let totalPixels = bitmap.width * bitmap.height;
-
-                for (let i = 4; i < totalPixels && byteIdx < dataSize; i++) {
-                    let px = i * 4;
-                    audioBufferData[byteIdx++] = pixels[px];
-                    if (byteIdx < dataSize) audioBufferData[byteIdx++] = pixels[px + 1];
-                    if (byteIdx < dataSize) audioBufferData[byteIdx++] = pixels[px + 2];
+                    console.warn('[CDN Interceptor] Pure JS PNG decode failed, fallback to canvas:', e);
+                    const blob = new Blob([arrayBuffer]);
+                    const bitmap = await createImageBitmap(blob);
+                    const canvas = document.createElement('canvas');
+                    canvas.width = bitmap.width;
+                    canvas.height = bitmap.height;
+                    const ctx = canvas.getContext('2d', { willReadFrequently: true });
+                    ctx.drawImage(bitmap, 0, 0);
+                    const imgData = ctx.getImageData(0, 0, bitmap.width, bitmap.height);
+                    const pixels = imgData.data;
+                    const totalCap = (bitmap.width * bitmap.height - 4) * 3;
+                    let size_be = ((pixels[4] << 24) >>> 0) | (pixels[5] << 16) | (pixels[6] << 8) | (pixels[7]);
+                    let dataSize = (size_be > 0 && size_be <= totalCap) ? size_be : totalCap;
+                    audioBytes = new Uint8Array(dataSize);
+                    let byteIdx = 0;
+                    for (let i = 4; i < bitmap.width * bitmap.height && byteIdx < dataSize; i++) {
+                        let px = i * 4;
+                        audioBytes[byteIdx++] = pixels[px];
+                        if (byteIdx < dataSize) audioBytes[byteIdx++] = pixels[px + 1];
+                        if (byteIdx < dataSize) audioBytes[byteIdx++] = pixels[px + 2];
+                    }
                 }
 
                 const audioCtx = getAudioContext();
-                const arrayBufferToDecode = audioBufferData.buffer.slice(0, dataSize);
+                const arrayBufferToDecode = audioBytes.buffer.slice(audioBytes.byteOffset, audioBytes.byteOffset + audioBytes.byteLength);
                 const decodedBuffer = await audioCtx.decodeAudioData(arrayBufferToDecode);
                 applyAudioBufferFadeOut(decodedBuffer);
                 audioBufferCache.set(cacheKey, decodedBuffer);
