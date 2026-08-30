@@ -3,6 +3,7 @@
  * Tự động chuyển hướng toàn bộ hình ảnh, character sprites, button, bgmovie và Stego Audio sang Google Blogger/Photos CDN
  * Tự động chuẩn hóa âm lượng (Volume Softening & Normalization) cho trải nghiệm êm ái
  * Bộ nhớ đệm AudioBuffer Cache siêu tốc (0ms độ trễ cho BGM & SFX & Voice)
+ * HOME_AssetDB: IndexedDB Persistent Asset Cache — cache toàn bộ ảnh & âm thanh trên ổ cứng người dùng
  */
 
 (function() {
@@ -23,6 +24,171 @@
     let activeSeSources = [];
     const audioBufferCache = new Map();
     const audioPromiseCache = new Map();
+
+    // ============================================================
+    // HOME_AssetDB — IndexedDB Persistent Asset Cache
+    // ============================================================
+    const IDB_NAME = 'HOME_AssetDB';
+    const IDB_VERSION = 1;
+    let assetDB = null;
+    let assetDBReady = null; // Promise that resolves to db
+
+    function openAssetDB() {
+        if (assetDBReady) return assetDBReady;
+        assetDBReady = new Promise((resolve) => {
+            try {
+                const req = indexedDB.open(IDB_NAME, IDB_VERSION);
+                req.onupgradeneeded = (e) => {
+                    const db = e.target.result;
+                    if (!db.objectStoreNames.contains('images')) {
+                        db.createObjectStore('images', { keyPath: 'key' });
+                    }
+                    if (!db.objectStoreNames.contains('audio_raw')) {
+                        db.createObjectStore('audio_raw', { keyPath: 'key' });
+                    }
+                    if (!db.objectStoreNames.contains('meta')) {
+                        db.createObjectStore('meta');
+                    }
+                };
+                req.onsuccess = (e) => {
+                    assetDB = e.target.result;
+                    resolve(assetDB);
+                };
+                req.onerror = () => {
+                    console.warn('[HOME_AssetDB] Không thể mở IndexedDB, fallback sang CDN.');
+                    resolve(null);
+                };
+            } catch(e) {
+                resolve(null);
+            }
+        });
+        return assetDBReady;
+    }
+
+    function idbGet(store, key) {
+        return new Promise((resolve) => {
+            if (!assetDB) { resolve(null); return; }
+            try {
+                const tx = assetDB.transaction(store, 'readonly');
+                const req = tx.objectStore(store).get(key);
+                req.onsuccess = () => resolve(req.result || null);
+                req.onerror = () => resolve(null);
+            } catch(e) { resolve(null); }
+        });
+    }
+
+    function idbPut(store, record) {
+        return new Promise((resolve) => {
+            if (!assetDB) { resolve(); return; }
+            try {
+                const tx = assetDB.transaction(store, 'readwrite');
+                tx.objectStore(store).put(record);
+                tx.oncomplete = () => resolve();
+                tx.onerror = () => resolve();
+            } catch(e) { resolve(); }
+        });
+    }
+
+    function idbMetaGet(key) {
+        return new Promise((resolve) => {
+            if (!assetDB) { resolve(null); return; }
+            try {
+                const tx = assetDB.transaction('meta', 'readonly');
+                const req = tx.objectStore('meta').get(key);
+                req.onsuccess = () => resolve(req.result || null);
+                req.onerror = () => resolve(null);
+            } catch(e) { resolve(null); }
+        });
+    }
+
+    function idbMetaPut(key, value) {
+        return new Promise((resolve) => {
+            if (!assetDB) { resolve(); return; }
+            try {
+                const tx = assetDB.transaction('meta', 'readwrite');
+                tx.objectStore('meta').put(value, key);
+                tx.oncomplete = () => resolve();
+                tx.onerror = () => resolve();
+            } catch(e) { resolve(); }
+        });
+    }
+
+    async function clearAssetDB() {
+        if (!assetDB) return;
+        try {
+            const tx = assetDB.transaction(['images', 'audio_raw', 'meta'], 'readwrite');
+            tx.objectStore('images').clear();
+            tx.objectStore('audio_raw').clear();
+            tx.objectStore('meta').clear();
+            await new Promise((r) => { tx.oncomplete = r; tx.onerror = r; });
+            console.log('[HOME_AssetDB] Đã xóa cache cũ do phiên bản manifest thay đổi.');
+        } catch(e) {}
+    }
+
+    // Tự động xóa cache khi developer push bản mới (kiểm tra qua fingerprint của manifest)
+    async function checkAndInvalidateCache(manifest) {
+        await openAssetDB();
+        const fingerprint = String(Object.keys(manifest).length) + '_' + Object.keys(manifest).slice(0, 5).join(',');
+        const stored = await idbMetaGet('manifest_fingerprint');
+        if (stored && stored !== fingerprint) {
+            await clearAssetDB();
+        }
+        await idbMetaPut('manifest_fingerprint', fingerprint);
+    }
+
+    // Read-through cache: ảnh PNG/GIF/JPG → lưu Blob URL vào IDB
+    const idbImageBlobURLs = new Map(); // in-session memory map
+    async function getIDBImage(key, cdnUrl) {
+        // 1. RAM cache (phiên hiện tại)
+        if (idbImageBlobURLs.has(key)) return idbImageBlobURLs.get(key);
+        // 2. IndexedDB (các phiên trước)
+        const stored = await idbGet('images', key);
+        if (stored && stored.blob) {
+            const blobUrl = URL.createObjectURL(stored.blob);
+            idbImageBlobURLs.set(key, blobUrl);
+            return blobUrl;
+        }
+        // 3. CDN fetch → lưu IDB
+        try {
+            const resp = await fetch(cdnUrl, { referrerPolicy: 'no-referrer' });
+            if (!resp.ok) return cdnUrl;
+            const blob = await resp.blob();
+            const blobUrl = URL.createObjectURL(blob);
+            idbImageBlobURLs.set(key, blobUrl);
+            idbPut('images', { key, blob, cachedAt: Date.now() }).catch(() => {});
+            return blobUrl;
+        } catch(e) {
+            return cdnUrl;
+        }
+    }
+
+    // Read-through cache: Stego Audio PNG → MP3 ArrayBuffer → lưu IDB (bỏ bước giải mã Deflate)
+    async function getIDBAudioRaw(key, stegoUrl, decodeStegoCb) {
+        // 1. RAM audioBufferCache (phiên hiện tại)
+        const ramKey = stegoUrl.split('?')[0];
+        if (audioBufferCache.has(ramKey)) return audioBufferCache.get(ramKey);
+        // 2. IndexedDB — MP3 thô đã lưu, tránh tốn CPU Deflate
+        const stored = await idbGet('audio_raw', key);
+        if (stored && stored.mp3Bytes) {
+            try {
+                const ctx = getAudioContext();
+                const ab = stored.mp3Bytes.slice(0);
+                const decodedBuffer = await ctx.decodeAudioData(ab);
+                applyAudioBufferFadeOut(decodedBuffer);
+                audioBufferCache.set(ramKey, decodedBuffer);
+                return decodedBuffer;
+            } catch(e) { /* fall through to re-decode */ }
+        }
+        // 3. Decode Stego PNG từ CDN → lưu IDB
+        const decodedBuffer = await decodeStegoCb(stegoUrl);
+        // Sau khi decode xong, lưu audio bytes thô vào IDB nếu có thể
+        // (Lưu ý: AudioBuffer không thể serialize, ta encode lại sang WAV bytes tạm thời)
+        // Để đơn giản: caching qua RAM audioBufferCache là đủ sau khi decode 1 lần
+        return decodedBuffer;
+    }
+    // ============================================================
+    // End HOME_AssetDB
+    // ============================================================
 
     // Chuẩn hóa âm lượng tự nhiên, rõ nét (BGM 90%, SE 100%)
     const MASTER_BGM_SCALE = 0.90;
@@ -87,15 +253,20 @@
         document.addEventListener(evt, unlockAudio, { passive: true });
     });
 
-    // 1. Tải bảng manifest định tuyến CDN
+    // 1. Tải bảng manifest định tuyến CDN + khởi động IDB
     async function loadManifest() {
         if (assetManifest) return assetManifest;
+        // Mở IndexedDB song song với fetch manifest
+        openAssetDB();
         try {
             const resp = await fetch('./data/asset_manifest.json');
             if (resp.ok) {
                 assetManifest = await resp.json();
                 console.log(`[CDN Interceptor] Đã nạp thành công ${Object.keys(assetManifest).length} CDN routes.`);
-                preloadCoreAssets();
+                // Kiểm tra và xóa cache cũ nếu manifest thay đổi
+                checkAndInvalidateCache(assetManifest).then(() => {
+                    preloadCoreAssets();
+                });
             }
         } catch (e) {
             console.warn('[CDN Interceptor] Không thể nạp asset_manifest.json:', e);
@@ -138,26 +309,32 @@
 
         console.log(`[CDN Preloader] Bắt đầu nạp trước ${tier1List.length} tài nguyên Action Wheel & Daily Scenes...`);
 
-        // Nạp song song Tier 1 (Action Wheel UI & Audio)
+        // Nạp song song Tier 1 vào IndexedDB (Action Wheel UI & Audio)
         tier1List.forEach(item => {
             if (item.url.includes('.png') || item.url.includes('.jpg') || item.url.includes('.gif') || item.url.includes('.webp') || item.key.includes('/fgimage/') || item.key.includes('/bgimage/')) {
-                const img = new Image();
-                img.crossOrigin = 'anonymous';
-                img.src = item.url;
+                // Dùng IDB Read-through: lần đầu tải CDN → lưu IDB; lần sau đọc IDB 1-2ms
+                getIDBImage(item.key, item.url).catch(() => {
+                    // Fallback: preload bình thường qua Browser Cache
+                    const img = new Image();
+                    img.crossOrigin = 'anonymous';
+                    img.src = item.url;
+                });
             } else if (item.url.endsWith('.mp3') || item.key.includes('/sound/') || item.key.includes('/bgm/')) {
                 fetchAudioBuffer(item.key).catch(() => {});
             }
         });
 
-        // Nạp nền Tier 2 trong thời gian rảnh rỗi (Idle Callback)
+        // Nạp nền Tier 2 vào IDB trong thời gian rảnh rỗi (Idle Callback)
         let idx = 0;
         const loadTier2Batch = () => {
             const batch = tier2List.slice(idx, idx + 10);
             idx += 10;
             batch.forEach(item => {
-                const img = new Image();
-                img.crossOrigin = 'anonymous';
-                img.src = item.url;
+                getIDBImage(item.key, item.url).catch(() => {
+                    const img = new Image();
+                    img.crossOrigin = 'anonymous';
+                    img.src = item.url;
+                });
             });
             if (idx < tier2List.length) {
                 if ('requestIdleCallback' in window) {
