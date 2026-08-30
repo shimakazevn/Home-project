@@ -123,7 +123,13 @@ def step3_sync_engine_and_scenarios():
         with open(config_tjs_path, 'r', encoding='utf-8', errors='ignore') as f:
             cfg = f.read()
         cfg = cfg.replace(';configSave=file', ';configSave=webstorage')
-        cfg = cfg.replace(';userFace=Quicksand, 游ゴシック体, Yu Gothic, YuGothic, ヒラギノ角ゴシック Pro, Hiragino Kaku Gothic Pro, メイリオ, Meiryo, Osaka, ＭＳ Ｐゴシック, MS PGothic, sans-serif, Arial', ';userFace=-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif')
+        cfg = cfg.replace(';userFace=Quicksand, 游ゴシック体, Yu Gothic, YuGothic, ヒラギノ角ゴシック Pro, Hiragino Kaku Gothic Pro, メイリオ, Meiryo, Osaka, ＭＳ Ｐゴシック, MS PGothic, sans-serif, Arial', ';userFace=system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif')
+        cfg = cfg.replace(';defaultFontSize=21', ';defaultFontSize=26')
+        cfg = cfg.replace(';defaultLineSpacing=8', ';defaultLineSpacing=12')
+        cfg = cfg.replace(';defaultBold=false', ';defaultBold=true')
+        cfg = cfg.replace(';defaultShadow=false', ';defaultShadow=true')
+        cfg = cfg.replace(';defaultEdge=false', ';defaultEdge=true')
+        cfg = cfg.replace(';defaultEdgeColor=0x000000', ';defaultEdgeColor=0x111111')
         with open(config_tjs_path, 'w', encoding='utf-8') as f:
             f.write(cfg)
 
@@ -135,37 +141,86 @@ def step4_generate_web_core_modules():
     """Tạo bộ module Web hoàn chỉnh: Audio Engine, IndexedDB Save, CDN Interceptor, Mobile Touch HUD & CSS"""
     print("\n[4/6] ⚡ Xây dựng bộ ba Web Engine & Responsive UI Modules...")
 
-    # 1. web/css/font.css (Tận dụng font hệ thống có sẵn của iOS / Android / Windows / Mac)
+    # 1. web/css/font.css (Tận dụng font hệ thống Tiếng Việt sắc nét, tương phản cao)
     font_css = """/* ==========================================================================
-   CẤU HÌNH FONT HỆ THỐNG TỐC ĐỘ CAO (ZERO DOWNLOAD LATENCY)
-   Tận dụng font gốc của iOS / Android / Windows / macOS
+   CẤU HÌNH FONT HỆ THỐNG TIẾNG VIỆT CAO CẤP (ZERO DOWNLOAD LATENCY)
+   Tận dụng font gốc cao cấp của iOS / Android / Windows / macOS
    ========================================================================== */
+
+* {
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-rendering: optimizeLegibility !important;
+}
 
 body, div, span, p, a, input, textarea, button,
 .message_inner, .current_span, .glink_button, .button, 
 .menu_item, .ptext, .log_body, .save_list_item_text, .layer_menu {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif !important;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif !important;
 }
 
-.message_inner, .log_body, .current_span {
+/* Lời thoại Visual Novel: Chữ đậm vừa vặn, bóng đổ tương phản cao, giãn dòng đẹp mắt */
+.message_inner, .current_span, .log_body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 26px !important;
+    line-height: 1.65 !important;
+    letter-spacing: 0.02em !important;
     word-break: break-word !important;
     overflow-wrap: break-word !important;
     white-space: normal !important;
-    line-height: 1.45em !important;
+    text-shadow: 1.5px 1.5px 2.5px rgba(0, 0, 0, 0.95), -1px -1px 2px rgba(0, 0, 0, 0.9), 1px -1px 2px rgba(0, 0, 0, 0.9), -1px 1px 2px rgba(0, 0, 0, 0.9) !important;
 }
 
-.glink_button {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif !important;
-    font-weight: bold !important;
-    letter-spacing: 0.02em;
+/* Tên nhân vật (Name Plate) */
+.chara_name_area, [class*="chara_name"] {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 28px !important;
+    letter-spacing: 0.03em !important;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.95) !important;
+}
+
+/* Nút bấm lựa chọn (Glink Choice Buttons) */
+.glink_button, [class*="glink"] {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 21px !important;
+    letter-spacing: 0.03em !important;
+    background: rgba(18, 20, 32, 0.92) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 10px !important;
+    padding: 10px 26px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    color: #ffffff !important;
     word-break: keep-all !important;
     white-space: nowrap !important;
+    transition: all 0.2s ease !important;
+}
+.glink_button:hover, .glink_button:active {
+    background: rgba(45, 50, 75, 0.95) !important;
+    border-color: rgba(255, 255, 255, 0.65) !important;
+    transform: translateY(-1px) scale(1.02) !important;
+}
+
+/* Ô nhập tên nhân vật */
+.text_box, input[type="text"] {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 24px !important;
+    border-radius: 8px !important;
+    border: 2px solid rgba(255, 255, 255, 0.5) !important;
+    background: rgba(255, 255, 255, 0.92) !important;
+    color: #111111 !important;
+    padding: 4px 12px !important;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2) !important;
 }
 """
     with open(os.path.join(WEB_SRC_DIR, 'css', 'font.css'), 'w', encoding='utf-8') as f:
+        f.write(font_css)
+    with open(os.path.join(WEB_SRC_DIR, 'tyrano', 'css', 'font.css'), 'w', encoding='utf-8') as f:
         f.write(font_css)
 
 
