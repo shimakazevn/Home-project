@@ -136,21 +136,42 @@
         await idbMetaPut('manifest_fingerprint', fingerprint);
     }
 
-    // Read-through cache: ảnh PNG/GIF/JPG → lưu Blob URL vào IDB
-    const idbImageBlobURLs = new Map(); // in-session memory map
+    // --- Fetch Concurrency Limiter (tối đa 6 request song song để không nghẹt mạng khi Cold Start) ---
+    const FETCH_CONCURRENCY = 6;
+    let _fetchActive = 0;
+    const _fetchQueue = [];
+    function throttledFetch(url, opts) {
+        return new Promise((resolve, reject) => {
+            const execute = () => {
+                _fetchActive++;
+                fetch(url, opts).then(resolve, reject).finally(() => {
+                    _fetchActive--;
+                    if (_fetchQueue.length > 0) _fetchQueue.shift()();
+                });
+            };
+            if (_fetchActive < FETCH_CONCURRENCY) {
+                execute();
+            } else {
+                _fetchQueue.push(execute);
+            }
+        });
+    }
+
+    // Read-through cache: ảnh PNG/GIF/JPG → lưu Blob vào IDB, trả Blob URL
+    const idbImageBlobURLs = new Map();
     async function getIDBImage(key, cdnUrl) {
         // 1. RAM cache (phiên hiện tại)
         if (idbImageBlobURLs.has(key)) return idbImageBlobURLs.get(key);
-        // 2. IndexedDB (các phiên trước)
+        // 2. IndexedDB (các phiên trước) — đọc ổ cứng ~1ms, không cần mạng
         const stored = await idbGet('images', key);
         if (stored && stored.blob) {
             const blobUrl = URL.createObjectURL(stored.blob);
             idbImageBlobURLs.set(key, blobUrl);
             return blobUrl;
         }
-        // 3. CDN fetch → lưu IDB
+        // 3. CDN fetch (có giới hạn đồng thời) → lưu IDB cho lần sau
         try {
-            const resp = await fetch(cdnUrl, { referrerPolicy: 'no-referrer' });
+            const resp = await throttledFetch(cdnUrl, { referrerPolicy: 'no-referrer' });
             if (!resp.ok) return cdnUrl;
             const blob = await resp.blob();
             const blobUrl = URL.createObjectURL(blob);
@@ -307,45 +328,39 @@
             }
         }
 
-        console.log(`[CDN Preloader] Bắt đầu nạp trước ${tier1List.length} tài nguyên Action Wheel & Daily Scenes...`);
+        console.log(`[CDN Preloader] Xếp hàng nạp trước ${tier1List.length} Tier-1 + ${tier2List.length} Tier-2 tài nguyên (tối đa 6 fetch song song)...`);
 
-        // Nạp song song Tier 1 vào IndexedDB (Action Wheel UI & Audio)
-        tier1List.forEach(item => {
-            if (item.url.includes('.png') || item.url.includes('.jpg') || item.url.includes('.gif') || item.url.includes('.webp') || item.key.includes('/fgimage/') || item.key.includes('/bgimage/')) {
-                // Dùng IDB Read-through: lần đầu tải CDN → lưu IDB; lần sau đọc IDB 1-2ms
-                getIDBImage(item.key, item.url).catch(() => {
-                    // Fallback: preload bình thường qua Browser Cache
-                    const img = new Image();
-                    img.crossOrigin = 'anonymous';
-                    img.src = item.url;
-                });
-            } else if (item.url.endsWith('.mp3') || item.key.includes('/sound/') || item.key.includes('/bgm/')) {
-                fetchAudioBuffer(item.key).catch(() => {});
-            }
-        });
-
-        // Nạp nền Tier 2 vào IDB trong thời gian rảnh rỗi (Idle Callback)
+        // Gộp Tier-1 và Tier-2 vào 1 hàng đợi duy nhất, Tier-1 ưu tiên trước
+        // Tất cả đều dùng idle batching để KHÔNG bao giờ fire dồn dập
+        const allItems = [...tier1List, ...tier2List];
         let idx = 0;
-        const loadTier2Batch = () => {
-            const batch = tier2List.slice(idx, idx + 10);
-            idx += 10;
+        const BATCH = 8; // 8 assets mỗi lượt idle → tối đa 8 * 6 = 48 concurrent trong 1 batch
+
+        const loadNextBatch = () => {
+            const batch = allItems.slice(idx, idx + BATCH);
+            idx += BATCH;
             batch.forEach(item => {
-                getIDBImage(item.key, item.url).catch(() => {
-                    const img = new Image();
-                    img.crossOrigin = 'anonymous';
-                    img.src = item.url;
-                });
+                if (item.url.includes('.png') || item.url.includes('.jpg') || item.url.includes('.gif') || item.url.includes('.webp') || item.key.includes('/fgimage/') || item.key.includes('/bgimage/')) {
+                    getIDBImage(item.key, item.url).catch(() => {
+                        const img = new Image();
+                        img.crossOrigin = 'anonymous';
+                        img.src = item.url;
+                    });
+                } else if (item.url.endsWith('.mp3') || item.key.includes('/sound/') || item.key.includes('/bgm/')) {
+                    fetchAudioBuffer(item.key).catch(() => {});
+                }
             });
-            if (idx < tier2List.length) {
+            if (idx < allItems.length) {
                 if ('requestIdleCallback' in window) {
-                    window.requestIdleCallback(loadTier2Batch, { timeout: 1000 });
+                    window.requestIdleCallback(loadNextBatch, { timeout: 2000 });
                 } else {
-                    setTimeout(loadTier2Batch, 150);
+                    setTimeout(loadNextBatch, 200);
                 }
             }
         };
 
-        setTimeout(loadTier2Batch, 1200);
+        // Trì hoãn 2s sau khi load xong để game khởi động mượt, rồi mới bắt đầu warm-up cache
+        setTimeout(loadNextBatch, 2000);
     }
 
     // 2. Chuyển đổi đường dẫn cục bộ -> URL Blogger CDN (Hỗ trợ query strings / timestamps)
