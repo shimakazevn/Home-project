@@ -29,3 +29,13 @@ html, body {
 img[src*="workring_en.png"] {
     pointer-events: none !important;
 }
+
+/* Đảm bảo chữ trong các nút lựa chọn glink luôn hiển thị gọn gàng, không bị xuống dòng ngắt chữ xấu */
+.glink_button, .button_graphic, [class*="glink"] {
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+}

@@ -90,7 +90,7 @@
 [_tb_end_text]
 
 [glink  color="btn_03_black"  storage="sansaku_hankagaiEV.ks"  size="20"  text="Mua vé số (-10,000 Yên)"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*kuji"  ]
-[glink  color="btn_03_black"  storage="sansaku_hankagaiEV.ks"  size="20"  text="Thôi, dừng lại"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*yameru"  ]
+[glink  color="btn_03_black"  storage="sansaku_hankagaiEV.ks"  size="20"  text="Hủy"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*yameru"  ]
 [s  ]
 *kuji
 

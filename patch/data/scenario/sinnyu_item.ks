@@ -578,8 +578,8 @@
 Có sử dụng Thuốc kích dục không?
 [_tb_end_text]
 
-[glink  color="btn_05_black"  storage="sinnyu_item.ks"  size="20"  x="416"  y="230"  width="425"  height="58"  text="Sử dụng (Viên Spirytus)"  _clickable_img=""  target="*item_1_nagi_ev_yes"  ]
-[glink  color="btn_05_black"  storage="sinnyu_item.ks"  size="20"  x="416"  y="330"  width="425"  height="58"  text="Không sử dụng"  _clickable_img=""  target="*item_ev_no"  ]
+[glink  color="btn_05_black"  storage="sinnyu_item.ks"  size="20"  x="416"  y="230"  width="425"  height="58"  text="Dùng viên Spirytus"  _clickable_img=""  target="*item_1_nagi_ev_yes"  ]
+[glink  color="btn_05_black"  storage="sinnyu_item.ks"  size="20"  x="416"  y="330"  width="425"  height="58"  text="Không dùng"  _clickable_img=""  target="*item_ev_no"  ]
 [s  ]
 *biyaku_kameranasi
 
@@ -619,8 +619,8 @@ Có sử dụng Thuốc kích dục không?
 Có sử dụng Thuốc kích dục cao cấp không?
 [_tb_end_text]
 
-[glink  color="btn_05_black"  storage="sinnyu_item.ks"  size="20"  x="416"  y="230"  width="425"  height="58"  text="Sử dụng (Viên Spirytus)"  _clickable_img=""  target="*item_2_nagi_ev_yes"  ]
-[glink  color="btn_05_black"  storage="sinnyu_item.ks"  size="20"  x="416"  y="330"  width="425"  height="58"  text="Không sử dụng"  _clickable_img=""  target="*item_ev_no"  ]
+[glink  color="btn_05_black"  storage="sinnyu_item.ks"  size="20"  x="416"  y="230"  width="425"  height="58"  text="Dùng viên Spirytus"  _clickable_img=""  target="*item_2_nagi_ev_yes"  ]
+[glink  color="btn_05_black"  storage="sinnyu_item.ks"  size="20"  x="416"  y="330"  width="425"  height="58"  text="Không dùng"  _clickable_img=""  target="*item_ev_no"  ]
 [s  ]
 *bitaku2_kameranasi
 
@@ -660,8 +660,8 @@ Có sử dụng Thuốc kích dục cao cấp không?
 Bạn có muốn sử dụng kem kích dục không?
 [_tb_end_text]
 
-[glink  color="btn_05_black"  storage="sinnyu_item.ks"  size="20"  x="416"  y="230"  width="425"  height="58"  text="Sử dụng (Viên Spirytus)"  _clickable_img=""  target="*item_3_nagi_ev_yes"  ]
-[glink  color="btn_05_black"  storage="sinnyu_item.ks"  size="20"  x="416"  y="330"  width="425"  height="58"  text="Không sử dụng"  _clickable_img=""  target="*item_ev_no"  ]
+[glink  color="btn_05_black"  storage="sinnyu_item.ks"  size="20"  x="416"  y="230"  width="425"  height="58"  text="Dùng viên Spirytus"  _clickable_img=""  target="*item_3_nagi_ev_yes"  ]
+[glink  color="btn_05_black"  storage="sinnyu_item.ks"  size="20"  x="416"  y="330"  width="425"  height="58"  text="Không dùng"  _clickable_img=""  target="*item_ev_no"  ]
 [s  ]
 *biyaku3_kameranasi
 
@@ -700,8 +700,8 @@ Bạn có muốn sử dụng kem kích dục không?
 Bạn có muốn sử dụng thuốc ngủ không?
 [_tb_end_text]
 
-[glink  color="btn_05_black"  storage="sinnyu_item.ks"  size="20"  x="416"  y="230"  width="425"  height="58"  text="Sử dụng (Viên Spirytus)"  _clickable_img=""  target="*item_4_nagi_ev_yes"  ]
-[glink  color="btn_05_black"  storage="sinnyu_item.ks"  size="20"  x="416"  y="330"  width="425"  height="58"  text="Không sử dụng"  _clickable_img=""  target="*item_ev_no"  ]
+[glink  color="btn_05_black"  storage="sinnyu_item.ks"  size="20"  x="416"  y="230"  width="425"  height="58"  text="Dùng viên Spirytus"  _clickable_img=""  target="*item_4_nagi_ev_yes"  ]
+[glink  color="btn_05_black"  storage="sinnyu_item.ks"  size="20"  x="416"  y="330"  width="425"  height="58"  text="Không dùng"  _clickable_img=""  target="*item_ev_no"  ]
 [s  ]
 *item_4_nagi_ev_yes
 
