@@ -185,7 +185,9 @@
     async function playBGM(url, loop = true, rawVol = 100, buf = "0") {
         try {
             const ctx = getAudioContext();
-            if (ctx.state === 'suspended') ctx.resume();
+            if (ctx.state === 'suspended') {
+                try { ctx.resume().catch(() => {}); } catch(e) {}
+            }
 
             if (activeBgmSource) {
                 try { activeBgmSource.stop(); } catch(e) {}
@@ -236,7 +238,9 @@
     async function playSE(url, rawVol = 100, buf = "0", onEndedCb = null) {
         try {
             const ctx = getAudioContext();
-            if (ctx.state === 'suspended') ctx.resume();
+            if (ctx.state === 'suspended') {
+                try { ctx.resume().catch(() => {}); } catch(e) {}
+            }
 
             const bufStr = String(buf || "0");
 

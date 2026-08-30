@@ -538,6 +538,16 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
         with open(config_tjs_path, 'w', encoding='utf-8') as f:
             f.write(cfg)
 
+    # Vá triệt để lỗi Autoplay Video và NotAllowedError trong kag.tag_ext.js
+    tag_ext_path = os.path.join(WEB_SRC_DIR, 'tyrano', 'plugins', 'kag', 'kag.tag_ext.js')
+    if os.path.exists(tag_ext_path):
+        with open(tag_ext_path, 'r', encoding='utf-8', errors='ignore') as f:
+            ext_code = f.read()
+        ext_code = ext_code.replace('video.play()', 'video.muted=true;video.defaultMuted=true;var _pr=video.play();if(_pr!==undefined)_pr.catch(function(){});')
+        ext_code = ext_code.replace('video2.play()', 'video2.muted=true;video2.defaultMuted=true;var _pr2=video2.play();if(_pr2!==undefined)_pr2.catch(function(){});')
+        with open(tag_ext_path, 'w', encoding='utf-8') as f:
+            f.write(ext_code)
+
     # Tối ưu hóa $.loadText trong web/tyrano/libs.js: Không dùng Math.random(), ưu tiên RAM bundle
     libs_js_path = os.path.join(WEB_SRC_DIR, 'tyrano', 'libs.js')
     if os.path.exists(libs_js_path):
@@ -1349,7 +1359,9 @@ img[src*="workring_en.png"] {
     async function playBGM(url, loop = true, rawVol = 100, buf = "0") {
         try {
             const ctx = getAudioContext();
-            if (ctx.state === 'suspended') ctx.resume();
+            if (ctx.state === 'suspended') {
+                try { ctx.resume().catch(() => {}); } catch(e) {}
+            }
 
             if (activeBgmSource) {
                 try { activeBgmSource.stop(); } catch(e) {}
@@ -1400,7 +1412,9 @@ img[src*="workring_en.png"] {
     async function playSE(url, rawVol = 100, buf = "0", onEndedCb = null) {
         try {
             const ctx = getAudioContext();
-            if (ctx.state === 'suspended') ctx.resume();
+            if (ctx.state === 'suspended') {
+                try { ctx.resume().catch(() => {}); } catch(e) {}
+            }
 
             const bufStr = String(buf || "0");
 
@@ -2660,13 +2674,6 @@ img[src*="workring_en.png"] {
   <script type="text/javascript" src="./tyrano/libs/alertify/alertify.min.js"></script>
   <script type="text/javascript" src="./tyrano/libs/remodal/remodal.js"></script>
 
-  <!-- HOME In-Memory Scenario Bundle & Modular Web Extensions -->
-  <script type="text/javascript" src="./js/scenario_bundle.js?v={v_tag}"></script>
-  <script type="text/javascript" src="./js/cdn_interceptor.js?v={v_tag}"></script>
-  <script type="text/javascript" src="./js/web_audio_engine.js?v={v_tag}"></script>
-  <script type="text/javascript" src="./js/web_save_indexeddb.js?v={v_tag}"></script>
-  <script type="text/javascript" src="./js/mobile_touch_hud.js?v={v_tag}"></script>
-
   <!-- System KeyConfig & Tyrano Base -->
   <script type="text/javascript" src="./data/system/KeyConfig.js"></script>
   <script type="text/javascript" src="./tyrano/lang.js"></script>
@@ -2691,6 +2698,13 @@ img[src*="workring_en.png"] {
   <script type="text/javascript" src="./tyrano/plugins/kag/kag.tag_ar.js"></script>
   <script type="text/javascript" src="./tyrano/plugins/kag/kag.tag_three.js"></script>
   <script type="text/javascript" src="./tyrano/plugins/kag/kag.tag.js"></script>
+
+  <!-- HOME In-Memory Scenario Bundle & Modular Web Extensions (Nạp sau khi Engine sẵn sàng để Hook chính xác) -->
+  <script type="text/javascript" src="./js/scenario_bundle.js?v={v_tag}"></script>
+  <script type="text/javascript" src="./js/web_audio_engine.js?v={v_tag}"></script>
+  <script type="text/javascript" src="./js/web_save_indexeddb.js?v={v_tag}"></script>
+  <script type="text/javascript" src="./js/cdn_interceptor.js?v={v_tag}"></script>
+  <script type="text/javascript" src="./js/mobile_touch_hud.js?v={v_tag}"></script>
 
   <!-- Touch & Additional Libraries (Sau khi Kag & Tyrano đã sẵn sàng) -->
   <script type="text/javascript" src="./tyrano/libs/howler.js"></script>
