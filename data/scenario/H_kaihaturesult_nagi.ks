@@ -91,4 +91,4 @@
 *LVMAX
 
 [tb_image_show  time="0"  storage="default/result_hosi2.png"  width="70"  height="37"  x="1097"  y="218"  _clickable_img=""  ]
-[return  
+[return  ]

@@ -339,4 +339,4 @@ $('p.para_kinryoku_display').text(f.para_kinryoku_display);
 [endscript]
 
 [return  ]
-[s  
+[s  ]

@@ -445,4 +445,4 @@ Hayato「Thế thì tôi đành một mình rèn luyện để đẹp trai và s
 [舜]（Không hiểu sao Hayato lại trả tiền luôn cho mình rồi. May quá!）[p]
 [_tb_end_text]
 
-[jump  storage="sansaku_hankagaiEV_hayato.ks"  target="*atm_call"  
+[jump  storage="sansaku_hankagaiEV_hayato.ks"  target="*atm_call"  ]

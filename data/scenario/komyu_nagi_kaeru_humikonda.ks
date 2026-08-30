@@ -2072,4 +2072,4 @@ Chuyện nhạy cảm_Thích (Nagi trạng thái Xao xuyến)[p]
 
 [tb_eval  exp="f.love+=20"  name="love"  cmd="+="  op="t"  val="20"  val_2="undefined"  ]
 [call  storage="komyu_nagi_kaeru_hato.ks"  target="*update"  ]
-[return  
+[return  ]

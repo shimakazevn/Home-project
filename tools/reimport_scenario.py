@@ -195,9 +195,20 @@ def reimport_and_patch(records):
                 mod_lines[line_idx] = indent + vn_text + trailing_ws
                 has_mod = True
 
+        # Sửa chữa tự động các thẻ bị mất dấu đóng ] ở cuối tệp
+        clean_lines = []
+        for line in mod_lines:
+            s = line.strip()
+            if s == '[retur':
+                clean_lines.append('[return]\n')
+            elif s.startswith('[') and not s.startswith(';') and s.count('[') > s.count(']'):
+                clean_lines.append(line.rstrip('\r\n') + ']\n')
+            else:
+                clean_lines.append(line)
+
         # Write output file
         with open(dst_path, 'w', encoding='utf-8') as out_f:
-            out_f.writelines(mod_lines)
+            out_f.writelines(clean_lines)
             
         if has_mod:
             patched_files_count += 1

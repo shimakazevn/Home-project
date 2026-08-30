@@ -161,4 +161,4 @@ Mỗi người đều đang tập luyện đổ mồ hôi theo nhịp độ riê
 （Cũng không có gì đáng bận tâm, mình không có việc gì đặc biệt ở đây cả.）[p]
 [_tb_end_text]
 
-[jump  storage="sansaku.ks"  target="*end"  
+[jump  storage="sansaku.ks"  target="*end"  ]

@@ -125,4 +125,4 @@
 [jump target="*sentaku_top"]
 [_tb_end_tyrano_code]
 
-[jump  storage="sinnyu_rihure_sekkyaku_haiti.ks"  target="*sentaku_top"  
+[jump  storage="sinnyu_rihure_sekkyaku_haiti.ks"  target="*sentaku_top"  ]

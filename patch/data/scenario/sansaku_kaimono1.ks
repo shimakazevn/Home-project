@@ -480,4 +480,4 @@
 [舜]「Được rồi, chắc thế này là đủ.」[p]
 [_tb_end_text]
 
-[jump  storage="sansaku.ks"  target="*end"  
+[jump  storage="sansaku.ks"  target="*end"  ]

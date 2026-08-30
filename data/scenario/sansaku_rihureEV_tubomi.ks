@@ -50,4 +50,4 @@ Tsubomi có vẻ đang ở đây. Có nên ghé vào thử một chút không nh
 （Đành chịu vậy. Hôm nay đành từ bỏ thôi.）[p]
 [_tb_end_text]
 
-[jump  storage="sansaku.ks"  target="*end"  
+[jump  storage="sansaku.ks"  target="*end"  ]

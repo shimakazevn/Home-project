@@ -232,4 +232,4 @@
 [_tb_end_tyrano_code]
 
 [return  ]
-[tb_image_show  time="1000"  storage="default/d_ev.gif"  width="80"  height="80"  x="459"  y="319"  _clickable_img="sin_nagi_senmen_bussyoku.png"  
+[tb_image_show  time="1000"  storage="default/d_ev.gif"  width="80"  height="80"  x="459"  y="319"  _clickable_img="sin_nagi_senmen_bussyoku.png"  ]

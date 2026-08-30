@@ -175,4 +175,4 @@
 [tb_show_message_window  ]
 [wait  time="1000"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
-[jump  storage="sinnyu_byouin.ks"  target="*top"  
+[jump  storage="sinnyu_byouin.ks"  target="*top"  ]

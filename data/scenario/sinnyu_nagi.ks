@@ -123,4 +123,4 @@
 
 [tb_eval  exp="f.sinnyu_koudou_count=1"  name="sinnyu_koudou_count"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
 [tb_eval  exp="f.sinnyu_hajimete=3"  name="sinnyu_hajimete"  cmd="="  op="t"  val="3"  val_2="undefined"  ]
-[jump  storage="sinnyu_nagi.ks"  target="*haiti"  
+[jump  storage="sinnyu_nagi.ks"  target="*haiti"  ]

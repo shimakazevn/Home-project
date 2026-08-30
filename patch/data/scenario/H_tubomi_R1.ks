@@ -697,4 +697,4 @@ Dẫn chuyện|Tôi thúc một cú thật mạnh rồi xuất trọn dòng tinh
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="tubomi_HR1"  ]
 [call  storage="H_kaihaturesult_tubomi.ks"  target="*top"  ]
-[jump  storage="EV_tubomi_R.ks"  target="*EV1_back"  
+[jump  storage="EV_tubomi_R.ks"  target="*EV1_back"  ]

@@ -89,4 +89,4 @@ Hẹn gặp lại bạn trong những chuyến phiêu lưu kỳ thú tiếp theo
 
 [stopbgm  time="1000"  fadeout="true"  ]
 [tb_eval  exp="f.itemEV_suimin=2"  name="itemEV_suimin"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
-[jump  storage="room_yoru.ks"  target="*top"  
+[jump  storage="room_yoru.ks"  target="*top"  ]

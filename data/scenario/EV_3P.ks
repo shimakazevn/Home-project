@@ -87,4 +87,4 @@ Tsubomi cười khúc khích, vùi đầu vào ngực tôi làm nũng.[p]
 *H_END
 
 [stopbgm  time="1000"  fadeout="true"  ]
-[jump  storage="room_yoru.ks"  target="*top"  
+[jump  storage="room_yoru.ks"  target="*top"  ]

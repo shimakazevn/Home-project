@@ -169,4 +169,4 @@ Hayato... chỉ riêng tên đó, mình tuyệt đối không tha thứ.[r]Mình
 [tb_eval  exp="f.month=6"  name="month"  cmd="="  op="t"  val="6"  val_2="undefined"  ]
 [tb_eval  exp="f.week=1"  name="week"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
 [tb_eval  exp="f.mon=1"  name="mon"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
-[jump  storage="room_asa.ks"  target="*top0"  
+[jump  storage="room_asa.ks"  target="*top0"  ]

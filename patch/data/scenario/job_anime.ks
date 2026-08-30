@@ -4,4 +4,4 @@
 *wait
 
 [wait  time="2500"  ]
-[return  
+[return  ]

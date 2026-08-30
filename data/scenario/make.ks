@@ -11,4 +11,4 @@
 [call storage="volume.ks" ]
 
 ;return 必須
-[retur
+[return]

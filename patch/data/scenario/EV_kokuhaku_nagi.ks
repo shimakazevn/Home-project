@@ -329,4 +329,4 @@ Tôi cảm giác như bóng lưng ấy trông nhỏ bé hơn thường ngày m�
 [bg  time="0"  method="crossfade"  storage="black.jpg"  ]
 [call  storage="character.ks"  target="*taijyou"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
-[jump  storage="room_yoru.ks"  target="*top"  
+[jump  storage="room_yoru.ks"  target="*top"  ]

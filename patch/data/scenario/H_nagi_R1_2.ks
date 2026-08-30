@@ -690,4 +690,4 @@ Nagi「Em biết rồi...♡ Em sẽ cứ để thế này... giữ gìn tinh d�
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="nagi_HK1_2"  ]
 [call  storage="H_kaihaturesult_nagi.ks"  target="*top"  ]
-[jump  storage="EV_nagi_R.ks"  target="*EV1_back"  
+[jump  storage="EV_nagi_R.ks"  target="*EV1_back"  ]

@@ -92,4 +92,4 @@ Tsubomi「Giỏi ghê chưa...! Mà sao tự dưng em cũng thấy vui lây th�
 [bg  time="0"  method="crossfade"  storage="back_rihure_hikaesitu.png"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [call  storage="BGM.ks"  target="*jisitu"  ]
-[return  
+[return  ]

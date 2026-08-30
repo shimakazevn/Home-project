@@ -827,4 +827,4 @@ Tsubomi「Anh nói thế cũng vô ích thôi... Cảm giác sướng rơn khôn
 [_tb_end_text]
 
 [call  storage="H_serihu_rinko.ks"  target="*high2"  cond=""  ]
-[return  
+[return  ]

@@ -650,4 +650,4 @@
 [tb_eval  exp="f.kan_osananajimi_nagi=0"  name="kan_osananajimi_nagi"  cmd="="  op="t"  val="0"  ]
 [tb_eval  exp="f.kan_kininaruaite_nagi=0"  name="kan_kininaruaite_nagi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 [tb_eval  exp="f.kan_nigatenaaite_nagi=0"  name="kan_nigatenaaite_nagi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
-[return  
+[return  ]

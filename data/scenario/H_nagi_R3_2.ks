@@ -693,4 +693,4 @@ Nagi「Hà... hà...♡ Bây giờ bên trong em... đầy ứ ự mất rồi..
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="nagi_HK3_2"  ]
 [call  storage="H_kaihaturesult_nagi.ks"  target="*top"  ]
-[jump  storage="EV_nagi_R.ks"  target="*EV2_back"  
+[jump  storage="EV_nagi_R.ks"  target="*EV2_back"  ]

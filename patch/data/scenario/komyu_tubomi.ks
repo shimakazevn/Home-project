@@ -635,4 +635,4 @@ Tsubomi「Lát em gửi qua tin nhắn, anh nhớ xem nhé?」[p]
 [舜]（Tặng nhiều quá thế nào em ấy cũng được nước lấn tới cho xem.）[p]
 [_tb_end_text]
 
-[jump  storage="komyu_tubomi.ks"  target="*top"  
+[jump  storage="komyu_tubomi.ks"  target="*top"  ]

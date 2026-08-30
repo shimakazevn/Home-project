@@ -690,4 +690,4 @@ Rinko「Ưm... em bắn ra nhiều thật đấy Shun-kun...♡ Chị không ch�
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="rinko_HR2_2"  ]
 [call  storage="H_kaihaturesult_rinko.ks"  target="*top"  ]
-[jump  storage="EV_rinko_R.ks"  target="*EV1_back"  
+[jump  storage="EV_rinko_R.ks"  target="*EV1_back"  ]

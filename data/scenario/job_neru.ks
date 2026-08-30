@@ -92,4 +92,4 @@ Ngủ một giấc thật say, thể lực và tinh thần đã được hồi p
 [chara_show  name="job"  time="0"  wait="true"  storage="chara/169/job_neru.png"  width="496"  height="280"  left="368"  top="165"  reflect="false"  ]
 [wait  time="500"  ]
 [jump  storage="job_neru.ks"  target="*end"  cond="f.job_count==0"  ]
-[jump  storage="job_neru.ks"  target="*top_skip"  
+[jump  storage="job_neru.ks"  target="*top_skip"  ]

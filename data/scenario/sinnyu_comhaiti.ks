@@ -614,4 +614,4 @@
 
 [glink  color="ts09"  storage="sinnyu_rihure_sekkyaku_haiti.ks"  size="20"  text="Lắp đặt / Đặt bẫy"  x="470"  y="460"  width="85"  height="20"  _clickable_img=""  target="*com_2_setti"  ]
 [glink  color="ts09"  storage="sinnyu_rihure_sekkyaku_haiti.ks"  size="20"  text="Thôi, dừng lại"  x="680"  y="460"  width="85"  height="20"  _clickable_img=""  target="*setti_yameru"  ]
-[s  
+[s  ]

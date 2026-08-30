@@ -650,4 +650,4 @@
 [tb_eval  exp="f.kan_kirainaaite_rinko=0"  name="kan_kirainaaite_rinko"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 [tb_eval  exp="f.kan_kininaruaite_rinko=0"  name="kan_kininaruaite_rinko"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 [tb_eval  exp="f.kan_tuyoinikusimi_rinko=0"  name="kan_tuyoinikusimi_rinko"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
-[return  
+[return  ]

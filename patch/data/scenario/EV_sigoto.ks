@@ -170,4 +170,4 @@ Tsubomi「Không lẽ... anh bám đuôi tôi đấy à? Anh theo dõi tôi tớ
 [call  storage="system.ks"  target="*fade_out"  ]
 [call  storage="BGM.ks"  target="*jisitu"  ]
 [tb_eval  exp="f.EV_hatukinmu_tubomi=2"  name="EV_hatukinmu_tubomi"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
-[return  
+[return  ]

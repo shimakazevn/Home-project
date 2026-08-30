@@ -118,4 +118,4 @@ Tên của bạn là [emb exp="f.familyname"] [emb exp="f.name"] phải không?[
 [call  storage="komyuhyouka_hayato.ks"  target="*top"  ]
 [call  storage="komyuhyouka_rinko.ks"  target="*top"  ]
 [call  storage="komyuhyouka_tubomi.ks"  target="*top"  ]
-[jump  storage="EV_OP3.ks"  target="*skip"  
+[jump  storage="EV_OP3.ks"  target="*skip"  ]

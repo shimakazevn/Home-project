@@ -657,4 +657,4 @@ Nagi「Chạm đến tận sâu bên trong rồi... có khi thụ tinh mất th�
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="nagi_H0"  ]
 [call  storage="H_kaihaturesult_nagi.ks"  target="*top"  ]
-[jump  storage="EV_kokuhaku_nagi.ks"  target="*H_back"  
+[jump  storage="EV_kokuhaku_nagi.ks"  target="*H_back"  ]

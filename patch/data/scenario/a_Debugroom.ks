@@ -313,4 +313,4 @@
 [tb_eval  exp="f.mon=1"  name="mon"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
 [tb_eval  exp="f.sun=0"  name="sun"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 [tb_ptext_hide  time="0"  ]
-[jump  storage="room_asa.ks"  target="*top"  
+[jump  storage="room_asa.ks"  target="*top"  ]

@@ -741,4 +741,4 @@ Bạn có muốn sử dụng thuốc ngủ không?
 [舜]「Tạm thời hôm nay cứ thế này để xem tình hình đã. Tham lam quá mà bị lộ thì xôi hỏng bỏng không.」[p]
 [_tb_end_text]
 
-[jump  storage="sinnyu_item.ks"  target="*item_EV_end"  
+[jump  storage="sinnyu_item.ks"  target="*item_EV_end"  ]

@@ -215,4 +215,4 @@ Em ấy quay ngoắt lại rồi chạy vụt đi. Tôi đứng lặng nhìn the
 
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="tubomi_kokuhaku"  ]
-[jump  storage="room_yoru.ks"  target="*top"  
+[jump  storage="room_yoru.ks"  target="*top"  ]

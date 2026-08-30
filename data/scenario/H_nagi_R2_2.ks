@@ -692,4 +692,4 @@ Nagi「Cứ như toàn bộ cơ thể đang reo vui vậy... tận sâu bên tro
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="nagi_HK2_2"  ]
 [call  storage="H_kaihaturesult_nagi.ks"  target="*top"  ]
-[jump  storage="EV_nagi_R.ks"  target="*EV2_back"  
+[jump  storage="EV_nagi_R.ks"  target="*EV2_back"  ]

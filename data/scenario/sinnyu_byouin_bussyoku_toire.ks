@@ -127,4 +127,4 @@
 [jump target="*sentaku_top"]
 [_tb_end_tyrano_code]
 
-[s  
+[s  ]

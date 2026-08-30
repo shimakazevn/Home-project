@@ -156,4 +156,4 @@ Tôi thấy bản thân mình thật thảm hại,[r]nhưng đồng thời――
 [mask_off  time="1000"  effect="fadeOut"  ]
 [call  storage="komyuhyouka_rinko.ks"  target="*top"  ]
 [stopbgm  time="1000"  fadeout="true"  ]
-[jump  storage="room_yoru.ks"  target="*top"  
+[jump  storage="room_yoru.ks"  target="*top"  ]

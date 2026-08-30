@@ -35,4 +35,4 @@
 [chara_show  name="kankei"  time="0"  wait="true"  storage="chara/183/UI_kankeisei_04.png"  width="168"  height="160"  left="560"  top="280"  ]
 *end
 
-[return  
+[return  ]

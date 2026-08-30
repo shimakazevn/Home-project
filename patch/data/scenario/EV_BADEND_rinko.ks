@@ -45,4 +45,4 @@ location.href="./index.html";
 [endscript]
 [_tb_end_tyrano_code]
 
-[s  
+[s  ]

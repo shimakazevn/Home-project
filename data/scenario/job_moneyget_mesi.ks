@@ -47,4 +47,4 @@
 *soto
 
 [cm  ]
-[jump  storage="sansaku.ks"  target="*top"  
+[jump  storage="sansaku.ks"  target="*top"  ]

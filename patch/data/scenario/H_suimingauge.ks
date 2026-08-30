@@ -18,4 +18,4 @@ $('.suimin_active').css({
 });
 [endscript]
 
-[return  
+[return  ]

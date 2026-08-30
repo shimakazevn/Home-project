@@ -229,4 +229,4 @@ Nagi khẽ gật đầu, rồi bước đi với dáng vẻ nhẹ nhõm.[p]
 [stopbgm  time="1000"  fadeout="true"  ]
 [call  storage="character.ks"  target="*taijyou"  ]
 [bg  time="0"  method="crossfade"  storage="black.jpg"  ]
-[mask_off  time="2000"  effect="fadeOut"  
+[mask_off  time="2000"  effect="fadeOut"  ]

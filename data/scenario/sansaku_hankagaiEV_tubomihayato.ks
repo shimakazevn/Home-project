@@ -97,4 +97,4 @@ Hayato「Đùa anh à...」[p]
 
 [call  storage="komyuhyouka_tubomi.ks"  target="*top"  ]
 [call  storage="komyuhyouka_hayato.ks"  target="*top"  ]
-[jump  storage="sansaku.ks"  target="*end"  
+[jump  storage="sansaku.ks"  target="*end"  ]

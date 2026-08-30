@@ -629,4 +629,4 @@
 [tb_eval  exp="f.money_updated-=100000"  name="money_updated"  cmd="-="  op="t"  val="100000"  val_2="undefined"  ]
 [call  storage="ui_parameter.ks"  target="*money_update"  ]
 [wait  time="300"  ]
-[jump  storage="sansaku_kaimono1.ks"  target="*gift"  
+[jump  storage="sansaku_kaimono1.ks"  target="*gift"  ]

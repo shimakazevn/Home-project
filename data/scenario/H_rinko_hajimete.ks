@@ -660,4 +660,4 @@ Rinko「Bị rót vào nhiều thế này... thì có em bé mất thôi...♡ L
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="rinko_H0"  ]
 [call  storage="H_kaihaturesult_rinko.ks"  target="*top"  ]
-[jump  storage="EV_kokuhaku_rinko.ks"  target="*H_back"  
+[jump  storage="EV_kokuhaku_rinko.ks"  target="*H_back"  ]

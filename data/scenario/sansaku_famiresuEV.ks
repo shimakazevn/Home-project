@@ -147,4 +147,4 @@ Bên trong quán khá náo nhiệt, nhưng đâu đó vẫn phảng phất một
 （Có Hayato kìa. Hay là bắt chuyện thử xem sao?）
 [_tb_end_text]
 
-[jump  storage="sansaku_famiresuEV.ks"  target="*bunki"  
+[jump  storage="sansaku_famiresuEV.ks"  target="*bunki"  ]

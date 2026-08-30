@@ -650,4 +650,4 @@
 [tb_eval  exp="f.kan_kirainaaite_tubomi=0"  name="kan_kirainaaite_tubomi"  cmd="="  op="t"  val="0"  ]
 [tb_eval  exp="f.kan_kininaruaite_tubomi=0"  name="kan_kininaruaite_tubomi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 [tb_eval  exp="f.kan_tuyoinikusimi_tubomi=0"  name="kan_tuyoinikusimi_tubomi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
-[return  
+[return  ]

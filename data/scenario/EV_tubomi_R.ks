@@ -165,4 +165,4 @@ Tsubomi hướng ánh mắt rối bời đan xen giữa sự kỳ vọng và b�
 [mask_off  time="1000"  effect="fadeOut"  ]
 [call  storage="EV_honmei.ks"  target="*tubomi"  ]
 [call  storage="komyuhyouka_tubomi.ks"  target="*top"  ]
-[jump  storage="room_yoru.ks"  target="*top"  
+[jump  storage="room_yoru.ks"  target="*top"  ]

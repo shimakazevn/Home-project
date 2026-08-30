@@ -88,4 +88,4 @@ Tổng tài sản tích lũy: Đầy đủ và dư dả[p]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
 [tb_replay  id="nagi_item_biyaku3"  ]
-[return  
+[return  ]

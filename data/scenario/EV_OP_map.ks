@@ -91,4 +91,4 @@
 [舜]（Nhìn kỹ mới thấy, trong tòa nhà phức hợp này có cả [font color="yellow"]phòng tập gym[resetfont]... Mà thôi, chắc cũng chẳng liên quan gì đến mình.）[p]
 [_tb_end_text]
 
-[jump  storage="EV_OP_map.ks"  target="*top2"  
+[jump  storage="EV_OP_map.ks"  target="*top2"  ]

@@ -36,4 +36,4 @@ Thành công![p]
 [_tb_end_text]
 
 [tb_hide_message_window  ]
-[jump  storage="sansaku_hankagaiEV_game.ks"  target="*rupu"  
+[jump  storage="sansaku_hankagaiEV_game.ks"  target="*rupu"  ]

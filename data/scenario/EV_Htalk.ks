@@ -198,4 +198,4 @@ Tsubomi「Anh [舜] ơi… Em yêu anh nhiều lắm」[p]
 [stopbgm  time="1000"  fadeout="true"  ]
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
 [tb_eval  exp="f.Htalk=0"  name="Htalk"  cmd="="  op="t"  val="0"  ]
-[return  
+[return  ]
