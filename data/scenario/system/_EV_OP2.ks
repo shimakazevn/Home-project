@@ -1,0 +1,7 @@
+[preload  storage="./data/bgimage/back_room0.png"  ]
+[preload  storage="./data/bgimage/back_dantimae_hiru.png"  ]
+[preload  storage="./data/bgimage/back_hankagai.png"  ]
+[preload  storage="./data/bgimage/back_massajiten.png"  ]
+[preload  storage="./data/bgimage/back_massajiten2.png"  ]
+[preload  storage="./data/bgimage/black.jpg"  ]
+[return]

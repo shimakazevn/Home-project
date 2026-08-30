@@ -760,14 +760,29 @@ img[src*="workring_en.png"] {
         }
     }
 
+    function sanitizeStorageValue(val) {
+        if (!val) return null;
+        if (typeof val !== 'string') return val;
+        if (val === 'null' || val === 'undefined') return null;
+        if (val.startsWith('%') || val.includes('%22') || val.includes('%7B') || val.includes('%5B')) {
+            try {
+                val = decodeURIComponent(val);
+            } catch(e) {
+                try { val = unescape(val); } catch(e2) {}
+            }
+        }
+        return val;
+    }
+
     // Tiền nạp toàn bộ dữ liệu lưu từ IndexedDB vào RAM khi mở game
     async function prefillMemoryStorage() {
         try {
             const records = await dbGetAll();
             for (const r of records) {
                 if (r.key && r.value) {
-                    memoryStorageCache.set(r.key, r.value);
-                    try { localStorage.setItem(r.key, r.value); } catch(e) {}
+                    const cleanVal = sanitizeStorageValue(r.value);
+                    memoryStorageCache.set(r.key, cleanVal);
+                    try { localStorage.setItem(r.key, cleanVal); } catch(e) {}
                 }
             }
         } catch(e) {}
@@ -783,24 +798,28 @@ img[src*="workring_en.png"] {
 
         $.setStorage = function(key, val, type) {
             const strVal = (typeof val === 'object') ? JSON.stringify(val) : String(val);
-            memoryStorageCache.set(key, strVal);
-            dbSet(key, strVal);
-            try { localStorage.setItem(key, strVal); } catch(e) {}
+            const cleanVal = sanitizeStorageValue(strVal);
+            memoryStorageCache.set(key, cleanVal);
+            dbSet(key, cleanVal);
+            try { localStorage.setItem(key, cleanVal); } catch(e) {}
         };
+        $.setStorageWeb = $.setStorage;
 
         $.getStorage = function(key, type) {
+            let val = null;
             if (memoryStorageCache.has(key)) {
-                return memoryStorageCache.get(key);
+                val = memoryStorageCache.get(key);
+            } else {
+                try {
+                    val = localStorage.getItem(key);
+                    if (val) memoryStorageCache.set(key, val);
+                } catch(e) {}
             }
-            try {
-                const lsVal = localStorage.getItem(key);
-                if (lsVal) {
-                    memoryStorageCache.set(key, lsVal);
-                    return lsVal;
-                }
-            } catch(e) {}
-            return null;
+            return sanitizeStorageValue(val);
         };
+        $.getStorageWeb = $.getStorage;
+        $.getStorageCompress = $.getStorage;
+        $.getStorageFile = $.getStorage;
 
         // Ghi đè bộ chụp ảnh thumbnail save thành ảnh siêu nhẹ 160x90
         if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.menu) {
@@ -1414,67 +1433,17 @@ pause >nul
     with open(os.path.join(ROOT_DIR, 'DEPLOY_WEB.bat'), 'w', encoding='utf-8') as f:
         f.write(bat_deploy)
 
-    # Tạo file index.html ở thư mục gốc để nếu GitHub Pages chạy từ nhánh main thì tự động chuyển thẳng vào web/
-    root_redirect_html = """<!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="utf-8" />
-  <title>HOME - Visual Novel [Tiếng Việt]</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="refresh" content="0; url=./web/" />
-  <script type="text/javascript">
-    window.location.replace("./web/");
-  </script>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #000000;
-      color: #ffffff;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    .loader-box {
-      padding: 20px;
-    }
-    .spinner {
-      width: 48px;
-      height: 48px;
-      border: 4px solid rgba(255, 255, 255, 0.2);
-      border-top-color: #4fc3f7;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-      margin: 0 auto 20px auto;
-    }
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-    h2 { margin: 0 0 10px 0; font-size: 1.4rem; }
-    p { margin: 0; opacity: 0.8; font-size: 0.95rem; }
-    a { color: #4fc3f7; text-decoration: underline; }
-  </style>
-</head>
-<body>
-  <div class="loader-box">
-    <div class="spinner"></div>
-    <h2>Đang khởi động HOME Visual Novel...</h2>
-    <p>Nếu không tự chuyển, vui lòng <a href="./web/">bấm vào đây để vào Game</a>.</p>
-  </div>
-</body>
-</html>
-"""
-    with open(os.path.join(ROOT_DIR, 'index.html'), 'w', encoding='utf-8') as f:
-        f.write(root_redirect_html)
+    # Đồng bộ trực tiếp game ra thư mục gốc để GitHub Pages chạy trực tiếp không cần slug /web/
+    shutil.copy2(os.path.join(WEB_SRC_DIR, 'index.html'), os.path.join(ROOT_DIR, 'index.html'))
+    shutil.copy2(os.path.join(WEB_SRC_DIR, '.nojekyll'), os.path.join(ROOT_DIR, '.nojekyll'))
+    for item in ['css', 'js', 'data', 'tyrano']:
+        src_item = os.path.join(WEB_SRC_DIR, item)
+        dst_item = os.path.join(ROOT_DIR, item)
+        if os.path.exists(src_item):
+            shutil.copytree(src_item, dst_item, dirs_exist_ok=True)
 
-    with open(os.path.join(ROOT_DIR, '.nojekyll'), 'w', encoding='utf-8') as f:
-        f.write('')
+    print("  [OK] Đã tạo BUILD_WEB.bat, DEPLOY_WEB.bat và đồng bộ Web Game ra thư mục gốc (Root URL).")
 
-    print("  [OK] Đã tạo BUILD_WEB.bat, DEPLOY_WEB.bat và root index.html.")
 
 
 

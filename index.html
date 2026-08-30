@@ -3,50 +3,86 @@
 <head>
   <meta charset="utf-8" />
   <title>HOME - Visual Novel [Tiếng Việt]</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="refresh" content="0; url=./web/" />
-  <script type="text/javascript">
-    window.location.replace("./web/");
-  </script>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #000000;
-      color: #ffffff;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    .loader-box {
-      padding: 20px;
-    }
-    .spinner {
-      width: 48px;
-      height: 48px;
-      border: 4px solid rgba(255, 255, 255, 0.2);
-      border-top-color: #4fc3f7;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-      margin: 0 auto 20px auto;
-    }
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-    h2 { margin: 0 0 10px 0; font-size: 1.4rem; }
-    p { margin: 0; opacity: 0.8; font-size: 0.95rem; }
-    a { color: #4fc3f7; text-decoration: underline; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <!-- Typography & Core Web Stylesheets -->
+  <link href="./css/font.css" rel="stylesheet" type="text/css" />
+  <link href="./css/web_core.css" rel="stylesheet" type="text/css" />
+  <link href="./tyrano/tyrano.css" rel="stylesheet" type="text/css" />
+  <link href="./tyrano/libs/jquery-ui.css" rel="stylesheet" type="text/css" />
+
+  <!-- jQuery & Core Libraries -->
+  <script type="text/javascript" src="./tyrano/libs/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="./tyrano/libs/jquery-migrate-1.4.1.js"></script>
+  <script type="text/javascript" src="./tyrano/libs/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="./tyrano/libs/jquery.a3d.js"></script>
+  <script type="text/javascript" src="./tyrano/libs/jsrender.min.js"></script>
+  <script type="text/javascript" src="./tyrano/libs/html2canvas.js"></script>
+  <script type="text/javascript" src="./tyrano/libs/lz-string.min.js"></script>
+
+  <!-- HOME Modular Web Extensions -->
+  <script type="text/javascript" src="./js/web_audio_engine.js"></script>
+  <script type="text/javascript" src="./js/web_save_indexeddb.js"></script>
+  <script type="text/javascript" src="./js/cdn_interceptor.js"></script>
+  <script type="text/javascript" src="./js/mobile_touch_hud.js"></script>
+
+  <!-- System KeyConfig & Tyrano Base -->
+  <script type="text/javascript" src="./data/system/KeyConfig.js"></script>
+  <script type="text/javascript" src="./tyrano/lang.js"></script>
+  <script type="text/javascript" src="./tyrano/libs.js"></script>
+  <script type="text/javascript" src="./tyrano/tyrano.js"></script>
+  <script type="text/javascript" src="./tyrano/tyrano.base.js"></script>
+
+  <!-- Tyrano Plugins & Tags -->
+  <script type="text/javascript" src="./tyrano/plugins/kag/kag.js"></script>
+  <script type="text/javascript" src="./tyrano/plugins/kag/kag.event.js"></script>
+  <script type="text/javascript" src="./tyrano/plugins/kag/kag.key_mouse.js"></script>
+  <script type="text/javascript" src="./tyrano/plugins/kag/kag.layer.js"></script>
+  <script type="text/javascript" src="./tyrano/plugins/kag/kag.menu.js"></script>
+  <script type="text/javascript" src="./tyrano/plugins/kag/kag.parser.js"></script>
+  <script type="text/javascript" src="./tyrano/plugins/kag/kag.rider.js"></script>
+  <script type="text/javascript" src="./tyrano/plugins/kag/kag.studio.js"></script>
+  <script type="text/javascript" src="./tyrano/plugins/kag/kag.tag_audio.js"></script>
+  <script type="text/javascript" src="./tyrano/plugins/kag/kag.tag_camera.js"></script>
+  <script type="text/javascript" src="./tyrano/plugins/kag/kag.tag_ext.js"></script>
+  <script type="text/javascript" src="./tyrano/plugins/kag/kag.tag_system.js"></script>
+  <script type="text/javascript" src="./tyrano/plugins/kag/kag.tag_vchat.js"></script>
+  <script type="text/javascript" src="./tyrano/plugins/kag/kag.tag_ar.js"></script>
+  <script type="text/javascript" src="./tyrano/plugins/kag/kag.tag_three.js"></script>
+  <script type="text/javascript" src="./tyrano/plugins/kag/kag.tag.js"></script>
 </head>
-<body>
-  <div class="loader-box">
-    <div class="spinner"></div>
-    <h2>Đang khởi động HOME Visual Novel...</h2>
-    <p>Nếu không tự chuyển, vui lòng <a href="./web/">bấm vào đây để vào Game</a>.</p>
+
+<body onselectstart="return false" oncontextmenu="return false;" ontouchmove="event.preventDefault()">
+  <!-- Main Tyrano Canvas Frame -->
+  <div id="tyrano_base" class="tyrano_base" unselectable="on" ondragstart="return false"></div>
+  <div id="vchat_base" class="vchat_base" unselectable="on" ondragstart="return false"></div>
+
+  <!-- Audio Unlocker Overlay (Chạm để bật âm thanh) -->
+  <div id="web_audio_unlock_overlay">
+    <div class="unlock-box">
+      <div class="unlock-title">HOME - Visual Novel</div>
+      <div class="unlock-subtitle">🎵 Chạm vào màn hình để bật âm thanh & bắt đầu</div>
+    </div>
+  </div>
+
+  <!-- Mobile Landscape Orientation Helper (Nhắc xoay ngang) -->
+  <div id="orientation_overlay">
+    <div class="orientation-icon">📱 ➔ 📲</div>
+    <div class="orientation-title">VUI LÒNG XOAY NGANG MÀN HÌNH</div>
+    <div class="orientation-desc">Trò chơi được tối ưu hóa cho màn hình ngang 16:9. Hãy xoay thiết bị của bạn để có trải nghiệm tốt nhất.</div>
+  </div>
+
+  <!-- Quick Floating HUD Toolbar -->
+  <div id="web_quick_toolbar">
+    <button class="quick-btn" onclick="if(window.TYRANO&&window.TYRANO.kag&&window.TYRANO.kag.menu) window.TYRANO.kag.menu.displaySave();">💾 Lưu</button>
+    <button class="quick-btn" onclick="if(window.TYRANO&&window.TYRANO.kag&&window.TYRANO.kag.menu) window.TYRANO.kag.menu.displayLoad();">📂 Nạp</button>
+    <button class="quick-btn" onclick="window.exportCurrentSaveToFile();">⬇️ Xuất Save</button>
+    <button class="quick-btn" onclick="window.importSaveFromFile();">⬆️ Nhập Save</button>
+    <button class="quick-btn" onclick="window.toggleWebFullscreen();">⛶ Toàn màn hình</button>
   </div>
 </body>
 </html>

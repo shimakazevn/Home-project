@@ -1,0 +1,6 @@
+[preload  storage="./data/bgimage/black.jpg"  ]
+[preload  storage="./data/bgimage/3p.png"  ]
+[preload  storage="./data/bgimage/3p_1.png"  ]
+[preload  storage="./data/bgimage/3p_2.png"  ]
+[preload  storage="./data/bgimage/_pc_room_4.jpg"  ]
+[return]
