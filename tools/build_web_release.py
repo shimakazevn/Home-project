@@ -15,6 +15,7 @@ Kiến trúc Web Game:
 import os
 import sys
 import json
+import time
 import sqlite3
 import shutil
 import subprocess
@@ -1671,6 +1672,12 @@ img[src*="workring_en.png"] {
 
     // ─── Unified Control Orb & Modal Sheet ────────────────────────────────────
     function injectUnifiedGearModal() {
+        if (!document.body) {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', injectUnifiedGearModal, { once: true });
+            }
+            return;
+        }
         if (document.getElementById('home-gear-btn')) return;
 
         // 1. Nút Bánh Răng Floating Orb
@@ -1940,7 +1947,8 @@ img[src*="workring_en.png"] {
         f.write(mobile_touch_hud_js)
 
     # 7. web/index.html
-    index_html = """<!DOCTYPE html>
+    v_tag = int(time.time())
+    index_html = f"""<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="utf-8" />
@@ -1956,22 +1964,22 @@ img[src*="workring_en.png"] {
 
   <script type="text/javascript">
     // Ngăn chặn và dọn dẹp triệt để redirect cũ /web/ trên trình duyệt
-    if (window.location.pathname.indexOf('/web') !== -1) {
+    if (window.location.pathname.indexOf('/web') !== -1) {{
       var rootUrl = window.location.href.split('/web')[0] + '/';
       window.location.replace(rootUrl);
-    }
+    }}
     // Hủy đăng ký Service Worker cũ nếu có
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.getRegistrations().then(function(regs) {
-        regs.forEach(function(r) { r.unregister(); });
-      });
-    }
+    if ('serviceWorker' in navigator) {{
+      navigator.serviceWorker.getRegistrations().then(function(regs) {{
+        regs.forEach(function(r) {{ r.unregister(); }});
+      }});
+    }}
   </script>
 
   <!-- Typography & Core Web Stylesheets -->
-  <link href="./css/font.css" rel="stylesheet" type="text/css" />
-  <link href="./css/web_core.css" rel="stylesheet" type="text/css" />
-  <link href="./tyrano/tyrano.css" rel="stylesheet" type="text/css" />
+  <link href="./css/font.css?v={v_tag}" rel="stylesheet" type="text/css" />
+  <link href="./css/web_core.css?v={v_tag}" rel="stylesheet" type="text/css" />
+  <link href="./tyrano/tyrano.css?v={v_tag}" rel="stylesheet" type="text/css" />
   <link href="./tyrano/libs/jquery-ui.css" rel="stylesheet" type="text/css" />
 
   <!-- jQuery & Core Libraries -->
@@ -1984,10 +1992,10 @@ img[src*="workring_en.png"] {
   <script type="text/javascript" src="./tyrano/libs/lz-string.min.js"></script>
 
   <!-- HOME Modular Web Extensions -->
-  <script type="text/javascript" src="./js/web_audio_engine.js"></script>
-  <script type="text/javascript" src="./js/web_save_indexeddb.js"></script>
-  <script type="text/javascript" src="./js/cdn_interceptor.js"></script>
-  <script type="text/javascript" src="./js/mobile_touch_hud.js"></script>
+  <script type="text/javascript" src="./js/web_audio_engine.js?v={v_tag}"></script>
+  <script type="text/javascript" src="./js/web_save_indexeddb.js?v={v_tag}"></script>
+  <script type="text/javascript" src="./js/cdn_interceptor.js?v={v_tag}"></script>
+  <script type="text/javascript" src="./js/mobile_touch_hud.js?v={v_tag}"></script>
 
   <!-- System KeyConfig & Tyrano Base -->
   <script type="text/javascript" src="./data/system/KeyConfig.js"></script>

@@ -90,6 +90,12 @@
 
     // ─── Unified Control Orb & Modal Sheet ────────────────────────────────────
     function injectUnifiedGearModal() {
+        if (!document.body) {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', injectUnifiedGearModal, { once: true });
+            }
+            return;
+        }
         if (document.getElementById('home-gear-btn')) return;
 
         // 1. Nút Bánh Răng Floating Orb
