@@ -105,7 +105,7 @@
 ;クリ弄り_ループパターン
 
 [if exp="f.H_hit == 5 && f.H_high6 == 1"]
-[call storage=H_serihu_rinko.ks target="*supiritasu_tekoki_hit"]
+[call storage=H_serihu_rinko.ks target="*hit"]
 
 [elsif exp="f.H_supiritasu_tekoki_rinko == 0 "]
 [call storage=H_serihu_rinko.ks target="*supiritasu_kuriijiri1"]

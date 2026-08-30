@@ -85,7 +85,19 @@ $('.zettyou_active').css({
 [elsif exp="f.H_zettyou_kaisuu == 4"]
 [jump target="*zettyou5"]
 
-[elsif exp="f.H_zettyou_kaisuu >= 5"]
+[elsif exp="f.H_zettyou_kaisuu == 5"]
+[jump target="*zettyou6"]
+
+[elsif exp="f.H_zettyou_kaisuu == 6"]
+[jump target="*zettyou6"]
+
+[elsif exp="f.H_zettyou_kaisuu == 7"]
+[jump target="*zettyou6"]
+
+[elsif exp="f.H_zettyou_kaisuu == 8"]
+[jump target="*zettyou6"]
+
+[elsif exp="f.H_zettyou_kaisuu == 9"]
 [jump target="*zettyou6"]
 
 [endif]
@@ -334,7 +346,19 @@ $('.zettyou_active').css({
 [elsif exp="f.H_zettyou_kaisuu == 4"]
 [jump target="*zettyou5_nikubenki"]
 
-[elsif exp="f.H_zettyou_kaisuu >= 5"]
+[elsif exp="f.H_zettyou_kaisuu == 5"]
+[jump target="*zettyou6_nikubenki"]
+
+[elsif exp="f.H_zettyou_kaisuu == 6"]
+[jump target="*zettyou6_nikubenki"]
+
+[elsif exp="f.H_zettyou_kaisuu == 7"]
+[jump target="*zettyou6_nikubenki"]
+
+[elsif exp="f.H_zettyou_kaisuu == 8"]
+[jump target="*zettyou6_nikubenki"]
+
+[elsif exp="f.H_zettyou_kaisuu == 9"]
 [jump target="*zettyou6_nikubenki"]
 
 [endif]
@@ -564,7 +588,7 @@ $('.zettyou_active').css({
 
 [_tb_end_tyrano_code]
 
-*zettyou7_nikubenki
+*zettyou6_nikubenki
 
 [tb_start_text mode=1 ]
 [playse storage="rinko/voice_r_rinko_zettyou7_1.mp3" buf="3"]Rinko「Hà♡ Hà♡ Nooo♡ Ra mất♡ Chẳng còn biết, gì nữaaa♡ Oho♡」[p]
@@ -602,7 +626,7 @@ $('.zettyou_active').css({
 [_tb_end_tyrano_code]
 
 [return  ]
-*zettyou8_nikubenki
+*zettyou6_nikubenki
 
 [tb_start_text mode=1 ]
 [playse storage="rinko/voice_r_rinko_zettyou8_1.mp3" buf="3"]Rinko「Hức♡ O♡ O♡ Ra mất♡ Aaaa♡」[p]
@@ -640,7 +664,7 @@ $('.zettyou_active').css({
 [_tb_end_tyrano_code]
 
 [return  ]
-*zettyou9_nikubenki
+*zettyou6_nikubenki
 
 [tb_start_text mode=1 ]
 [playse storage="rinko/voice_r_rinko_zettyou9_1.mp3" buf="3"]Rinko「Aaa♡ No♡ Con cu đang giật nảy lên kìa♡ Ra mất♡ Ooo♡」[p]
@@ -678,7 +702,7 @@ $('.zettyou_active').css({
 [_tb_end_tyrano_code]
 
 [return  ]
-*zettyou10_nikubenki
+*zettyou6_nikubenki
 
 [tb_start_text mode=1 ]
 [playse storage="rinko/voice_r_rinko_zettyou10_1.mp3" buf="3"]Rinko「O♡ O♡ O♡ Cô bé♡ Sướng quá đi mấttttt♡ Ooon♡」[p]

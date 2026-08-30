@@ -392,7 +392,7 @@ Hayato「Đúng rồi, ngày nghỉ tới mình đi đâu đó chơi đi? Đằn
 [chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_01c.gif"]Hayato「Cái thái độ gì đấy! Đi với tôi làm cậu không hài lòng sao~?」[p]
 [_tb_end_text]
 
-[glink  color="btn_05_black"  storage="sansaku_famiresuEV_hayato.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Đồng ý"  _clickable_img=""  target="*yes"  ]
+[glink  color="btn_05_black"  storage="sansaku_famiresuEV_hayato.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Có / Đồng ý"  _clickable_img=""  target="*yes"  ]
 [glink  color="btn_05_black"  storage="sansaku_famiresuEV_hayato.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Không"  _clickable_img=""  target="*no"  ]
 [s  ]
 *yes

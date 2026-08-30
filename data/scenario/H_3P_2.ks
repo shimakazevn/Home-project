@@ -151,7 +151,7 @@ Tsubomi「Giữa em và mẹ, anh thích ai hơn... Hãy dùng tình dục để
 ;蕾キスループパターン
 
 [if exp="f.H_hit == 5 && f.H_high1 == 1"]
-[call storage=H_serihu_rinkotubomi.ks target="*3P_2_Dkiss_tubomi_hit"]
+[call storage=H_serihu_rinkotubomi.ks target="*3P_2_Dkiss_tubomi1"]
 
 [elsif exp="f.H_Dkiss == 0"]
 [call storage=H_serihu_rinkotubomi.ks target="*3P_2_Dkiss_tubomi1"]

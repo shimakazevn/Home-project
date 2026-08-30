@@ -38,7 +38,7 @@
 [_tb_end_text]
 
 [glink  color="btn_05_black"  storage="room_Sunday.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Đi mua sắm"  _clickable_img=""  target="*kaimono"  ]
-[glink  color="btn_05_black"  storage="room_Sunday.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Nghỉ ngơi"  _clickable_img=""  target="*neru"  ]
+[glink  color="btn_05_black"  storage="room_Sunday.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Nghỉ ngơi / Ngủ nướng"  _clickable_img=""  target="*neru"  ]
 [s  ]
 *deto
 

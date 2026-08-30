@@ -158,6 +158,6 @@ Phải hành động thế nào, trước tiên cần suy tính đã──[p]
 [font color="yellow"]Bạn có muốn lưu game không?[resetfont]
 [_tb_end_text]
 
-[glink  color="btn_05_black"  storage="EV_OP2.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Đồng ý"  _clickable_img=""  target="*save"  ]
+[glink  color="btn_05_black"  storage="EV_OP2.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Có / Đồng ý"  _clickable_img=""  target="*save"  ]
 [glink  color="btn_05_black"  storage="EV_OP2.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Không"  _clickable_img=""  target="*top"  ]
 [s  ]

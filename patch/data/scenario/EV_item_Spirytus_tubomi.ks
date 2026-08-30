@@ -25,8 +25,8 @@ Xin chào và hẹn gặp lại trong những câu chuyện tiếp theo.[p]
 HOME (ROOM) - Bản Việt Hóa Hoàn Tất 100%.[p]
 [_tb_end_text]
 
-[glink  color="btn_05_black"  storage="EV_item_Spirytus_tubomi.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Dùng viên Spirytus"  _clickable_img=""  target="*yes"  ]
-[glink  color="btn_05_black"  storage="EV_item_Spirytus_tubomi.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Không dùng"  _clickable_img=""  target="*no"  ]
+[glink  color="btn_05_black"  storage="EV_item_Spirytus_tubomi.ks"  size="20"  x="416"  y="220"  width="425"  height="60"  text="Sử dụng (Viên Spirytus)"  _clickable_img=""  target="*yes"  ]
+[glink  color="btn_05_black"  storage="EV_item_Spirytus_tubomi.ks"  size="20"  x="416"  y="340"  width="425"  height="60"  text="Không sử dụng"  _clickable_img=""  target="*no"  ]
 [s  ]
 *no
 

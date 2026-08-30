@@ -337,19 +337,8 @@ Rinko「Này... quan tâm chị nhiều hơn đi♡ Bây giờ chị đang muố
 
 [tb_eval  exp="f.H_supiritasu_tekoki_rinko=0"  name="H_supiritasu_tekoki_rinko"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 [call  storage="H_serihu_rinko.ks"  target="*low"  cond="f.H_low1==1"  ]
-*supiritasu_tekoki_hit
-*supiritasu_kuriijiri_hit
-
-[mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
-[mask_off  time="1000"  effect="fadeOut"  ]
-[tb_start_text mode=1 ]
-Rinko「A a a...♡ Sướng quá...♡ Chị không nhịn nổi nữa rồi...♡」[p]
-Rinko「Haa...♡ Haa...♡ Cứ thế này... chị sẽ làm nũng với cậu Shun nhiều hơn nữa mất thôi...♡」[p]
-[_tb_end_text]
-
-[call  storage="H_serihu_rinko.ks"  target="*hit"  cond=""  ]
+[call  storage="H_serihu_rinko.ks"  target="*high"  cond="f.H_high1==1"  ]
 [return  ]
-
 *supiritasu_pisuton_yukkuri1
 
 [tb_start_text mode=1 ]

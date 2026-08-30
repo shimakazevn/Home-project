@@ -52,12 +52,10 @@ button,
 }
 
 /* Tinh chỉnh nút lựa chọn glink button tiếng Việt */
-.glink_button, .ts09 {
+.glink_button {
     font-family: 'NotoSansVN', sans-serif !important;
     font-weight: bold !important;
     letter-spacing: 0.03em;
-    word-break: keep-all !important;
-    overflow-wrap: normal !important;
-    white-space: nowrap !important;
-    box-sizing: border-box !important;
+    word-break: break-word !important;
+    white-space: normal !important;
 }

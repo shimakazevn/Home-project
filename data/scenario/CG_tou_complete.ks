@@ -15,9 +15,9 @@
 [endif]
 [_tb_end_tyrano_code]
 
-[tb_ptext_show  x="1050"  y="11"  size="19"  color="0xffffff"  time="0"  text="Tỷ lệ thu thập:"  anim="false"  face="sans-serif"  edge="undefined"  shadow="undefined"  ]
-[tb_ptext_show  x="1200"  y="11"  size="20"  color="0xffcf0f"  time="0"  anim="false"  face="sans-serif"  text="&sf.cg_rate"  edge="undefined"  shadow="undefined"  ]
-[tb_ptext_show  x="1240"  y="11"  size="20"  color="0xffffff"  time="0"  anim="false"  face="sans-serif"  text="％"  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="1040"  y="11"  size="21"  color="0xffffff"  time="0"  text="Tỷ lệ thu thập:"  anim="false"  face="serif,'游明朝'"  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="1244"  y="11"  size="21"  color="0xffffff"  time="0"  anim="false"  face="serif,'游明朝'"  text="％"  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="1204"  y="11"  size="21"  color="0xffcf0f"  time="0"  anim="false"  face="serif,'游明朝'"  text="&sf.cg_rate"  edge="undefined"  shadow="undefined"  ]
 [return  ]
 *Complete
 

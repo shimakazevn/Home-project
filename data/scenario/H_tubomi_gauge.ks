@@ -97,7 +97,19 @@ $('.zettyou_active').css({
 [elsif exp="f.H_zettyou_kaisuu == 4"]
 [jump target="*zettyou5"]
 
-[elsif exp="f.H_zettyou_kaisuu >= 5"]
+[elsif exp="f.H_zettyou_kaisuu == 5"]
+[jump target="*zettyou6"]
+
+[elsif exp="f.H_zettyou_kaisuu == 6"]
+[jump target="*zettyou6"]
+
+[elsif exp="f.H_zettyou_kaisuu == 7"]
+[jump target="*zettyou6"]
+
+[elsif exp="f.H_zettyou_kaisuu == 8"]
+[jump target="*zettyou6"]
+
+[elsif exp="f.H_zettyou_kaisuu == 9"]
 [jump target="*zettyou6"]
 
 [endif]
@@ -346,7 +358,19 @@ $('.zettyou_active').css({
 [elsif exp="f.H_zettyou_kaisuu == 4"]
 [jump target="*zettyou5_nikubenki"]
 
-[elsif exp="f.H_zettyou_kaisuu >= 5"]
+[elsif exp="f.H_zettyou_kaisuu == 5"]
+[jump target="*zettyou6_nikubenki"]
+
+[elsif exp="f.H_zettyou_kaisuu == 6"]
+[jump target="*zettyou6_nikubenki"]
+
+[elsif exp="f.H_zettyou_kaisuu == 7"]
+[jump target="*zettyou6_nikubenki"]
+
+[elsif exp="f.H_zettyou_kaisuu == 8"]
+[jump target="*zettyou6_nikubenki"]
+
+[elsif exp="f.H_zettyou_kaisuu == 9"]
 [jump target="*zettyou6_nikubenki"]
 
 [endif]
@@ -578,7 +602,7 @@ $('.zettyou_active').css({
 [_tb_end_tyrano_code]
 
 [return  ]
-*zettyou7_nikubenki
+*zettyou6_nikubenki
 
 [tb_start_text mode=1 ]
 [playse storage="tubomi/voice_r_tubomi_zettyou7_1.mp3" buf="2"] Tsubomi「Nào, đút vào trong em đi anh... Em sẵn sàng rồi!」[p]
@@ -616,7 +640,7 @@ $('.zettyou_active').css({
 [_tb_end_tyrano_code]
 
 [return  ]
-*zettyou8_nikubenki
+*zettyou6_nikubenki
 
 [tb_start_text mode=1 ]
 [playse storage="tubomi/voice_r_tubomi_zettyou8_1.mp3" buf="2"] Tsubomi「Thúc mạnh vào đi anh! Đừng thương tiếc gì em cả!」[p]
@@ -654,7 +678,7 @@ $('.zettyou_active').css({
 [_tb_end_tyrano_code]
 
 [return  ]
-*zettyou9_nikubenki
+*zettyou6_nikubenki
 
 [tb_start_text mode=1 ]
 [playse storage="tubomi/voice_r_tubomi_zettyou9_1.mp3" buf="2"] Tsubomi「Hức... tinh dịch lại trào ra nữa rồi... Sướng mê ly luôn...♡」[p]
@@ -692,7 +716,7 @@ $('.zettyou_active').css({
 [_tb_end_tyrano_code]
 
 [return  ]
-*zettyou10_nikubenki
+*zettyou6_nikubenki
 
 [tb_start_text mode=1 ]
 [playse storage="tubomi/voice_r_tubomi_zettyou10_1.mp3" buf="2"] Tsubomi「Ngủ thôi anh... Mai chúng ta lại tiếp tục nhé♡」[p]

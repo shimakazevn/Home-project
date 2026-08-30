@@ -85,7 +85,19 @@ $('.zettyou_active').css({
 [elsif exp="f.H_zettyou_kaisuu == 4"]
 [jump target="*zettyou5"]
 
-[elsif exp="f.H_zettyou_kaisuu >= 5"]
+[elsif exp="f.H_zettyou_kaisuu == 5"]
+[jump target="*zettyou6"]
+
+[elsif exp="f.H_zettyou_kaisuu == 6"]
+[jump target="*zettyou6"]
+
+[elsif exp="f.H_zettyou_kaisuu == 7"]
+[jump target="*zettyou6"]
+
+[elsif exp="f.H_zettyou_kaisuu == 8"]
+[jump target="*zettyou6"]
+
+[elsif exp="f.H_zettyou_kaisuu == 9"]
 [jump target="*zettyou6"]
 
 [endif]
@@ -328,7 +340,19 @@ $('.zettyou_active').css({
 [elsif exp="f.H_zettyou_kaisuu == 4"]
 [jump target="*zettyou5_nikubenki"]
 
-[elsif exp="f.H_zettyou_kaisuu >= 5"]
+[elsif exp="f.H_zettyou_kaisuu == 5"]
+[jump target="*zettyou6_nikubenki"]
+
+[elsif exp="f.H_zettyou_kaisuu == 6"]
+[jump target="*zettyou6_nikubenki"]
+
+[elsif exp="f.H_zettyou_kaisuu == 7"]
+[jump target="*zettyou6_nikubenki"]
+
+[elsif exp="f.H_zettyou_kaisuu == 8"]
+[jump target="*zettyou6_nikubenki"]
+
+[elsif exp="f.H_zettyou_kaisuu == 9"]
 [jump target="*zettyou6_nikubenki"]
 
 [endif]
@@ -556,7 +580,7 @@ $('.zettyou_active').css({
 [_tb_end_tyrano_code]
 
 [return  ]
-*zettyou7_nikubenki
+*zettyou6_nikubenki
 
 [tb_start_text mode=1 ]
 [playse storage="nagi/voice_r_nagi_zettyou7_1.mp3" buf="1"]Nagi「A♡ Cô bé♡ Ra mất♡ Cảm giác sướng ập đến rồiii♡ Aaaa♡」[p]
@@ -594,7 +618,7 @@ $('.zettyou_active').css({
 [_tb_end_tyrano_code]
 
 [return  ]
-*zettyou8_nikubenki
+*zettyou6_nikubenki
 
 [tb_start_text mode=1 ]
 [playse storage="nagi/voice_r_nagi_zettyou8_1.mp3" buf="1"]Nagi「Oho♡ O♡ O♡ Cô bé♡ Ra, ra, ra mất♡ Ooo♡」[p]
@@ -632,7 +656,7 @@ $('.zettyou_active').css({
 [_tb_end_tyrano_code]
 
 [return  ]
-*zettyou9_nikubenki
+*zettyou6_nikubenki
 
 [tb_start_text mode=1 ]
 [playse storage="nagi/voice_r_nagi_zettyou9_1.mp3" buf="1"]Nagi「O♡ O♡ O♡ Ưm♡ Cô bé ra mất thôiiii♡」[p]
@@ -670,7 +694,7 @@ $('.zettyou_active').css({
 [_tb_end_tyrano_code]
 
 [return  ]
-*zettyou10_nikubenki
+*zettyou6_nikubenki
 
 [tb_start_text mode=1 ]
 [playse storage="nagi/voice_r_nagi_zettyou10_1.mp3" buf="1"]Nagi「Ưm♡ Oooo♡ Ra mất♡ Con cu sướng quá điiii♡」[p]

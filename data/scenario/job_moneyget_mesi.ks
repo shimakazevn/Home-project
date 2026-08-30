@@ -13,8 +13,6 @@
 [tb_show_message_window  ]
 *top
 
-[call storage="system.ks" target="*job_end"]
-[call storage="system.ks" target="*start_keyconfig"]
 [stopbgm  time="1000"  fadeout="true"  ]
 [tb_keyconfig  flag="1"  ]
 [tb_start_text mode=4 ]

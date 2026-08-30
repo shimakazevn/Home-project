@@ -51,7 +51,7 @@
 [jump target="*kaiwa_4suki"]
 
 [else]
-[jump target="*kaiwa_0kirai"]
+[jump target="*kaiwa_1nigate"]
 
 [endif]
 
@@ -133,7 +133,6 @@
 [tb_eval  exp="f.pure_kaisuu=0"  name="pure_kaisuu"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 [call  storage="komyuhyouka_hayato.ks"  target="*top"  ]
 [jump  storage="sansaku.ks"  target="*end2"  ]
-*kaiwa_0kirai
 *kaiwa_1nigate
 
 [tb_start_text mode=1 ]

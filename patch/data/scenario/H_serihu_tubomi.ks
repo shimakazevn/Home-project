@@ -3796,7 +3796,6 @@ Tsubomi「Thay vì mông... em muốn anh nuông chiều chăm sóc cho cô bé 
 [call  storage="H_serihu_tubomi.ks"  target="*low"  cond="f.H_low6==1"  ]
 [call  storage="H_serihu_tubomi.ks"  target="*high"  cond="f.H_high6==1"  ]
 [return  ]
-*R2_anaruseme1_hit
 *R2_anaruseme_hit
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t4.mp3"  ]

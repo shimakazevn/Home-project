@@ -292,7 +292,7 @@
 ;アナル攻めループパターン
 
 [if exp="f.H_hit == 5 && f.H_high6 == 1"]
-[call storage=H_serihu_tubomi.ks target="*R2_anaruseme1_hit"]
+[call storage=H_serihu_tubomi.ks target="*hit"]
 
 [elsif exp="f.H_anaruseme == 0"]
 [call storage=H_serihu_tubomi.ks target="*R2_anaruseme1"]

@@ -298,7 +298,7 @@ Nagi「Chỉ cần ở bên cậu là tớ đã thấy vui rồi. Cứ như th�
 [_tb_end_text]
 
 [glink  color="btn_03_black"  storage="komyu_nagi_kaeru.ks"  size="20"  text="Tỏ tình"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*kokuhaku2"  ]
-[glink  color="btn_03_black"  storage="komyu_nagi_kaeru.ks"  size="20"  text="Hủy"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*komyukomando"  ]
+[glink  color="btn_03_black"  storage="komyu_nagi_kaeru.ks"  size="20"  text="Thôi, dừng lại"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*komyukomando"  ]
 [s  ]
 *kokuhaku2
 
@@ -672,7 +672,7 @@ Rủ đi ăn (Thành công) Thích[p]
 [freeimage layer="0"]
 [_tb_end_tyrano_code]
 
-[call  storage="character.ks"  target="*nagi_sotogi"  ]
+[call  storage="character.ks" target="*nagi_sotogi"  ]
 [call  storage="ui_onoff.ks"  target="*UI_on"  ]
 [mask_off  time="700"  effect="fadeOut"  ]
 [tb_start_tyrano_code]
@@ -782,7 +782,7 @@ Nagi「Mau tới thứ Bảy đi nào.」[p]
 [freeimage layer="0"]
 [_tb_end_tyrano_code]
 
-[call  storage="character.ks"  target="*nagi_sotogi"  ]
+[call  storage="character.ks" target="*nagi_sotogi"  ]
 [call  storage="ui_onoff.ks"  target="*UI_on"  ]
 [mask_off  time="700"  effect="fadeOut"  ]
 [tb_start_tyrano_code]

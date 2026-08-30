@@ -102,17 +102,31 @@
 
 	// ----------------------------------------------------
 	// Functions for dynamic audio and slider manipulation
+	// (Supports both PC Electron & Web Audio simultaneously)
 	// ----------------------------------------------------
 	tf.change_bgm = function(val) {
 		var kag = TYRANO.kag;
 		var tf = kag.variable.tf;
+		var sf = kag.variable.sf;
 		let vol = val !== undefined ? parseInt(val) : parseInt(tf.current_bgm_vol);
 		if (isNaN(vol)) vol = 80;
 		vol = Math.max(0, Math.min(100, vol));
 		tf.current_bgm_vol = vol;
+		sf._system_config_bgm_volume = vol;
+		TG.config.defaultBgmVolume = vol;
+		if (!kag.stat.map_bgm_volume || typeof kag.stat.map_bgm_volume !== 'object') kag.stat.map_bgm_volume = {};
+		kag.stat.map_bgm_volume[0] = vol;
+
+		// 1. Native Tyrano engine tag (PC Electron)
+		if (kag.ftag && kag.ftag.startTag) {
+			kag.ftag.startTag("bgmopt", { volume: vol });
+		}
+		// 2. Web Audio hook (Web)
 		if (kag.setBgmVolume) {
 			kag.setBgmVolume(vol);
 		}
+		kag.saveSystemVariable();
+
 		if (val !== undefined && window.__update_slider_dom) {
 			window.__update_slider_dom("bgm", vol);
 		}
@@ -125,13 +139,26 @@
 	tf.change_se = function(val, playSample) {
 		var kag = TYRANO.kag;
 		var tf = kag.variable.tf;
+		var sf = kag.variable.sf;
 		let vol = val !== undefined ? parseInt(val) : parseInt(tf.current_se_vol);
 		if (isNaN(vol)) vol = 80;
 		vol = Math.max(0, Math.min(100, vol));
 		tf.current_se_vol = vol;
+		sf._system_config_se_volume = vol;
+		TG.config.defaultSeVolume = vol;
+		if (!kag.stat.map_se_volume || typeof kag.stat.map_se_volume !== 'object') kag.stat.map_se_volume = {};
+		kag.stat.map_se_volume[0] = vol;
+
+		// 1. Native Tyrano engine tag (PC Electron)
+		if (kag.ftag && kag.ftag.startTag) {
+			kag.ftag.startTag("seopt", { volume: vol, buf: "0" });
+		}
+		// 2. Web Audio hook (Web)
 		if (kag.setSeVolume) {
 			kag.setSeVolume("0", vol);
 		}
+		kag.saveSystemVariable();
+
 		if (val !== undefined && window.__update_slider_dom) {
 			window.__update_slider_dom("se", vol);
 		}
@@ -139,8 +166,12 @@
 		if (btn.length > 0) {
 			btn.find("img").attr("src", tf.img_path + (vol > 0 ? "off.gif" : "on.png"));
 		}
-		if (playSample && kag.playTestAudio) {
-			kag.playTestAudio('se', vol);
+		if (playSample) {
+			if (kag.playTestAudio) {
+				kag.playTestAudio('se', vol);
+			} else if (kag.ftag && kag.ftag.startTag) {
+				kag.ftag.startTag("playse", { storage: "se/decision1.ogg", buf: "0", stop: "true" });
+			}
 		}
 	};
 
@@ -157,57 +188,108 @@
 	tf.change_voice_1 = function(val, playSample) {
 		var kag = TYRANO.kag;
 		var tf = kag.variable.tf;
+		var sf = kag.variable.sf;
 		let vol = val !== undefined ? parseInt(val) : parseInt(tf.current_voice_1_vol);
 		if (isNaN(vol)) vol = 80;
 		vol = Math.max(0, Math.min(100, vol));
 		tf.current_voice_1_vol = vol;
+		if (!sf._skskpnt_volume) sf._skskpnt_volume = [80, 80, 80, 80];
+		sf._skskpnt_volume[1] = vol;
+		if (!kag.stat.map_se_volume || typeof kag.stat.map_se_volume !== 'object') kag.stat.map_se_volume = {};
+		kag.stat.map_se_volume[1] = vol;
+
+		// 1. Native Tyrano engine tag (PC Electron)
+		if (kag.ftag && kag.ftag.startTag) {
+			kag.ftag.startTag("seopt", { volume: vol, buf: "1" });
+		}
+		// 2. Web Audio hook (Web)
 		if (kag.setSeVolume) {
 			kag.setSeVolume("1", vol);
 		}
+		kag.saveSystemVariable();
+
 		if (val !== undefined && window.__update_slider_dom) {
 			window.__update_slider_dom("voice_1", vol);
 		}
 		tf.update_voice_mute_ui();
-		if (playSample && kag.playTestAudio) {
-			kag.playTestAudio('voice_1', vol);
+		if (playSample) {
+			if (kag.playTestAudio) {
+				kag.playTestAudio('voice_1', vol);
+			} else if (kag.ftag && kag.ftag.startTag) {
+				kag.ftag.startTag("playse", { storage: "voice/nagi_sample.ogg", buf: "1", stop: "true" });
+			}
 		}
 	};
 
 	tf.change_voice_2 = function(val, playSample) {
 		var kag = TYRANO.kag;
 		var tf = kag.variable.tf;
+		var sf = kag.variable.sf;
 		let vol = val !== undefined ? parseInt(val) : parseInt(tf.current_voice_2_vol);
 		if (isNaN(vol)) vol = 80;
 		vol = Math.max(0, Math.min(100, vol));
 		tf.current_voice_2_vol = vol;
+		if (!sf._skskpnt_volume) sf._skskpnt_volume = [80, 80, 80, 80];
+		sf._skskpnt_volume[2] = vol;
+		if (!kag.stat.map_se_volume || typeof kag.stat.map_se_volume !== 'object') kag.stat.map_se_volume = {};
+		kag.stat.map_se_volume[2] = vol;
+
+		// 1. Native Tyrano engine tag (PC Electron)
+		if (kag.ftag && kag.ftag.startTag) {
+			kag.ftag.startTag("seopt", { volume: vol, buf: "2" });
+		}
+		// 2. Web Audio hook (Web)
 		if (kag.setSeVolume) {
 			kag.setSeVolume("2", vol);
 		}
+		kag.saveSystemVariable();
+
 		if (val !== undefined && window.__update_slider_dom) {
 			window.__update_slider_dom("voice_2", vol);
 		}
 		tf.update_voice_mute_ui();
-		if (playSample && kag.playTestAudio) {
-			kag.playTestAudio('voice_2', vol);
+		if (playSample) {
+			if (kag.playTestAudio) {
+				kag.playTestAudio('voice_2', vol);
+			} else if (kag.ftag && kag.ftag.startTag) {
+				kag.ftag.startTag("playse", { storage: "voice/tubomi_sample.ogg", buf: "2", stop: "true" });
+			}
 		}
 	};
 
 	tf.change_voice_3 = function(val, playSample) {
 		var kag = TYRANO.kag;
 		var tf = kag.variable.tf;
+		var sf = kag.variable.sf;
 		let vol = val !== undefined ? parseInt(val) : parseInt(tf.current_voice_3_vol);
 		if (isNaN(vol)) vol = 80;
 		vol = Math.max(0, Math.min(100, vol));
 		tf.current_voice_3_vol = vol;
+		if (!sf._skskpnt_volume) sf._skskpnt_volume = [80, 80, 80, 80];
+		sf._skskpnt_volume[3] = vol;
+		if (!kag.stat.map_se_volume || typeof kag.stat.map_se_volume !== 'object') kag.stat.map_se_volume = {};
+		kag.stat.map_se_volume[3] = vol;
+
+		// 1. Native Tyrano engine tag (PC Electron)
+		if (kag.ftag && kag.ftag.startTag) {
+			kag.ftag.startTag("seopt", { volume: vol, buf: "3" });
+		}
+		// 2. Web Audio hook (Web)
 		if (kag.setSeVolume) {
 			kag.setSeVolume("3", vol);
 		}
+		kag.saveSystemVariable();
+
 		if (val !== undefined && window.__update_slider_dom) {
 			window.__update_slider_dom("voice_3", vol);
 		}
 		tf.update_voice_mute_ui();
-		if (playSample && kag.playTestAudio) {
-			kag.playTestAudio('voice_3', vol);
+		if (playSample) {
+			if (kag.playTestAudio) {
+				kag.playTestAudio('voice_3', vol);
+			} else if (kag.ftag && kag.ftag.startTag) {
+				kag.ftag.startTag("playse", { storage: "voice/rinko_sample.ogg", buf: "3", stop: "true" });
+			}
 		}
 	};
 
@@ -223,6 +305,9 @@
 		kag.config.chSpeed = speed;
 		sf._system_config_ch_speed = speed;
 		sf._config_ch_speed = speed;
+		if (kag.ftag && kag.ftag.startTag) {
+			kag.ftag.startTag("configdelay", { speed: speed });
+		}
 		kag.saveSystemVariable();
 		if (val !== undefined && window.__update_slider_dom) {
 			window.__update_slider_dom("text", tf.slider_ch_speed);
@@ -248,6 +333,9 @@
 		kag.config.autoSpeed = speed;
 		sf._system_config_auto_speed = speed;
 		sf._config_auto_speed = speed;
+		if (kag.ftag && kag.ftag.startTag) {
+			kag.ftag.startTag("autoconfig", { speed: speed });
+		}
 		kag.saveSystemVariable();
 		if (val !== undefined && window.__update_slider_dom) {
 			window.__update_slider_dom("auto", tf.slider_auto_speed);

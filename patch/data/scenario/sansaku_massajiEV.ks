@@ -29,7 +29,7 @@ Có nên ghé vào thử một chút không nhỉ?
 [_tb_end_text]
 
 [glink  color="btn_03_black"  storage="sansaku_massajiEV.ks"  size="20"  text="Massage thư giãn (Giảm Stress / -5,000 Yên)"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
-[glink  color="btn_03_black"  storage="sansaku_massajiEV.ks"  size="20"  text="Quay về nhà"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*kaeru"  ]
+[glink  color="btn_03_black"  storage="sansaku.ks" target="*end"  ]
 [s  ]
 *sinsatu
 
@@ -85,7 +85,4 @@ Rinko「……Cháu có vẻ hơi mệt mỏi nhỉ? Xong rồi. Ừm, sắc m�
 （Đành chịu vậy. Hôm nay đành từ bỏ thôi.）[p]
 [_tb_end_text]
 
-[jump  storage="sansaku.ks"  target="*end"  ]
-
-*kaeru
 [jump  storage="sansaku.ks"  target="*end"  ]
