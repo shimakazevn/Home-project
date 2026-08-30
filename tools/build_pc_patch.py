@@ -103,21 +103,8 @@ def build_pc_patch():
     if not is_valid:
         raise RuntimeError("Phát hiện lỗi trong dữ liệu patch! Tiến trình đóng gói bị dừng để đảm bảo an toàn.")
 
-    # 5. Đóng gói patch_payload.zip để nhúng vào installer
-    print("\n[5/7] Đóng gói payload nén patch_payload.zip...")
-    payload_zip = os.path.join(ROOT_DIR, 'patch_payload.zip')
-    with zipfile.ZipFile(payload_zip, 'w', zipfile.ZIP_DEFLATED) as z:
-        for folder in ['data', 'tyrano']:
-            f_root = os.path.join(OUTPUT_PC_DIR, folder)
-            for root, dirs, files in os.walk(f_root):
-                for file in files:
-                    abs_p = os.path.join(root, file)
-                    rel_p = os.path.relpath(abs_p, OUTPUT_PC_DIR)
-                    z.write(abs_p, rel_p)
-    print(f"  [OK] Đã tạo patch_payload.zip ({os.path.getsize(payload_zip)/(1024*1024):.2f} MB)")
-
-    # 6. Biên dịch Standalone EXE với PyInstaller
-    print("\n[6/7] Biên dịch Trình cài đặt Standalone 1-Click (CAI_DAT_PATCH_VIET_HOA.exe)...")
+    # 5. Biên dịch Trình cài đặt Online 1-Click (CAI_DAT_PATCH_VIET_HOA.exe)
+    print("\n[5/6] Biên dịch Trình cài đặt Online 1-Click (CAI_DAT_PATCH_VIET_HOA.exe)...")
     icon_candidates = [
         os.path.join(PATCH_SRC_DIR, 'tyrano.ico'),
         os.path.join(TOOLS_DIR, 'tyrano.ico'),
@@ -130,7 +117,6 @@ def build_pc_patch():
         '--clean',
         '--noconsole',
         '--name', 'CAI_DAT_PATCH_VIET_HOA',
-        '--add-data', f'{payload_zip};.',
         os.path.join(TOOLS_DIR, 'unified_patch_installer.py')
     ]
     if icon_path:
@@ -194,9 +180,9 @@ Chúc bạn có những trải nghiệm tuyệt vời cùng game HOME!
     with open(os.path.join(OUTPUT_PC_DIR, 'Huong_Dan_Cai_Dat.txt'), 'w', encoding='utf-8') as f:
         f.write(readme_content)
 
-    # 7. Đóng gói ZIP phát hành siêu nén chỉ chứa duy nhất 1 file CAI_DAT_PATCH_VIET_HOA.exe
+    # 6. Đóng gói ZIP phát hành siêu nén chỉ chứa duy nhất 1 file CAI_DAT_PATCH_VIET_HOA.exe
     zip_path = os.path.join(ROOT_DIR, 'HOME_VietHoa_PC_Patch.zip')
-    print(f"\n[7/7] Đóng gói tệp zip phát hành siêu nén (chỉ chứa 1 file EXE duy nhất): {zip_path}...")
+    print(f"\n[6/6] Đóng gói tệp zip phát hành siêu nén (chỉ chứa 1 file EXE duy nhất): {zip_path}...")
     exe_file = os.path.join(OUTPUT_PC_DIR, 'CAI_DAT_PATCH_VIET_HOA.exe')
     with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as z:
         z.write(exe_file, 'CAI_DAT_PATCH_VIET_HOA.exe')
