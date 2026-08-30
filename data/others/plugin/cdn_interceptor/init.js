@@ -200,6 +200,9 @@
         _stopFlag: false,
         _cachedCount: 0,
         _totalCount: 0,
+        _downloadedBytes: 0,
+        _totalEstimatedBytes: 0,
+        _speedSamples: [],
         _tier1Keys: new Set(),
 
         // Xây dựng danh sách ưu tiên download từ manifest
@@ -231,25 +234,94 @@
             await openAssetDB();
             const imgCached = await idbCount('images');
             const audioCached = await idbCount('audio_raw');
-            return { imgCached, audioCached, total: this._totalCount };
+            const cached = imgCached + audioCached;
+            const estimatedBytesPerItem = 485000;
+            const downloadedBytes = cached * estimatedBytesPerItem;
+            const totalBytes = (this._totalCount || 2714) * estimatedBytesPerItem;
+            return { 
+                imgCached, 
+                audioCached, 
+                cached, 
+                total: this._totalCount || 2714,
+                downloadedBytes,
+                totalBytes
+            };
+        },
+
+        formatBytes(bytes) {
+            if (!bytes || bytes <= 0) return '0 MB';
+            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+            if (bytes < 1024 * 1024 * 1024) return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+            return (bytes / (1024 * 1024 * 1024)).toFixed(2) + ' GB';
         },
 
         async startDownload(manifest, onProgress) {
             if (this._downloading) return;
             this._downloading = true;
             this._stopFlag = false;
+            this._speedSamples = [];
 
             const queue = this.buildQueue(manifest);
             this._totalCount = queue.length;
+            this._totalEstimatedBytes = queue.length * 485000; // ~1.28 GB ước lượng
 
-            // Đếm số đã cache để resume
+            // Đếm số lượng đã cache và ước lượng bytes ban đầu
             const imgCached = await idbCount('images');
             const audioCached = await idbCount('audio_raw');
             this._cachedCount = imgCached + audioCached;
+            this._downloadedBytes = this._cachedCount * 485000;
 
             let done = this._cachedCount;
-            const CONCURRENCY = 4; // Offline download: 4 parallel (nhẹ hơn game)
+            const CONCURRENCY = 6; // 6 luồng tải song song
             let idx = 0;
+            let lastUpdate = 0;
+
+            const triggerProgress = (currentKey, force) => {
+                const now = performance.now();
+                if (!force && now - lastUpdate < 80) return; // Throttling 80ms cho 60fps mượt mà
+                lastUpdate = now;
+
+                // Tính tốc độ trong cửa sổ 1.5 giây qua
+                this._speedSamples = this._speedSamples.filter(s => now - s.time <= 1500);
+                const bytesInWindow = this._speedSamples.reduce((acc, s) => acc + s.bytes, 0);
+                const windowDuration = this._speedSamples.length > 1 
+                    ? Math.max(0.2, (now - this._speedSamples[0].time) / 1000) 
+                    : 1.0;
+                const speedBps = bytesInWindow / windowDuration;
+
+                let speedStr = speedBps > 1024 ? this.formatBytes(speedBps) + '/s' : 'Đang nạp...';
+                let etaStr = '';
+                if (speedBps > 50000) {
+                    const remainingBytes = Math.max(0, this._totalEstimatedBytes - this._downloadedBytes);
+                    const remSec = Math.round(remainingBytes / speedBps);
+                    if (remSec > 60) {
+                        const m = Math.floor(remSec / 60);
+                        const s = remSec % 60;
+                        etaStr = `Còn ~${m}p ${s}s`;
+                    } else if (remSec > 0) {
+                        etaStr = `Còn ~${remSec}s`;
+                    } else {
+                        etaStr = 'Gần xong...';
+                    }
+                }
+
+                const shortName = currentKey ? currentKey.split('/').pop() : '';
+                const pct = queue.length > 0 ? ((done / queue.length) * 100).toFixed(1) : '0';
+
+                if (onProgress) {
+                    onProgress({
+                        done,
+                        total: queue.length,
+                        pct,
+                        downloadedBytes: this._downloadedBytes,
+                        totalEstimatedBytes: this._totalEstimatedBytes,
+                        sizeStr: `${this.formatBytes(this._downloadedBytes)} / ~${this.formatBytes(this._totalEstimatedBytes)}`,
+                        speedStr,
+                        etaStr,
+                        currentFile: shortName
+                    });
+                }
+            };
 
             const worker = async () => {
                 while (idx < queue.length && !this._stopFlag) {
@@ -259,17 +331,26 @@
                     const store = item.tier < 3 ? 'images' : 'audio_raw';
                     const alreadyCached = await idbHas(store, item.key);
                     if (!alreadyCached) {
-                        try {
-                            const resp = await fetch(item.url, { referrerPolicy: 'no-referrer' });
-                            if (resp.ok) {
-                                const blob = await resp.blob();
-                                await idbPut(store, { key: item.key, blob, tier: item.tier, cachedAt: Date.now() });
+                        let success = false;
+                        for (let attempt = 0; attempt < 2 && !success && !this._stopFlag; attempt++) {
+                            try {
+                                const resp = await fetch(item.url, { referrerPolicy: 'no-referrer' });
+                                if (resp.ok) {
+                                    const blob = await resp.blob();
+                                    await idbPut(store, { key: item.key, blob, tier: item.tier, cachedAt: Date.now() });
+                                    const size = blob.size || 400000;
+                                    this._downloadedBytes += size;
+                                    this._speedSamples.push({ bytes: size, time: performance.now() });
+                                    success = true;
+                                }
+                            } catch(e) {
+                                if (attempt === 0) await new Promise(r => setTimeout(r, 200));
                             }
-                        } catch(e) { /* skip failed */ }
+                        }
                     }
                     done++;
                     this._cachedCount = done;
-                    if (onProgress) onProgress(done, queue.length);
+                    triggerProgress(item.key, false);
                 }
             };
 
@@ -277,8 +358,8 @@
             await Promise.all(workers);
 
             this._downloading = false;
-            await idbMetaPut('offline_complete', !this._stopFlag);
-            if (onProgress) onProgress(done, queue.length);
+            await idbMetaPut('offline_complete', !this._stopFlag && done >= queue.length);
+            triggerProgress(null, true);
         },
 
         stopDownload() {
@@ -290,6 +371,7 @@
             this.stopDownload();
             await clearOfflineCache();
             this._cachedCount = 0;
+            this._downloadedBytes = 0;
         }
     };
 
@@ -781,10 +863,10 @@
         async function renderModal() {
             const inGame = isGameActive();
             const status = await OfflineCacheManager.getStatus();
-            const cached = status.imgCached + status.audioCached;
+            const cached = status.cached;
             const total = totalAssets;
-            const pct = total > 0 ? Math.round((cached / total) * 100) : 0;
-            const isComplete = pct >= 100;
+            const pct = total > 0 ? ((cached / total) * 100).toFixed(1) : '0';
+            const isComplete = cached >= total;
             const isDownloading = OfflineCacheManager._downloading;
 
             // Update badge
@@ -798,6 +880,9 @@
 
             const isSkip = inGame && !!(window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.stat && window.TYRANO.kag.stat.is_skip);
             const isAuto = inGame && !!(window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.stat && window.TYRANO.kag.stat.is_auto);
+
+            const sizeStr = OfflineCacheManager.formatBytes(status.downloadedBytes) + ' / ~' + OfflineCacheManager.formatBytes(status.totalBytes);
+            const speedAndEtaStr = isDownloading ? '⚡ Đang tính tốc độ...' : isComplete ? '✅ Hoàn tất' : '';
 
             const offlineStatusText = isComplete
                 ? 'Đã lưu toàn bộ dữ liệu vào thiết bị (Chơi Offline).'
@@ -855,14 +940,19 @@
                         <div class="hmc-cache-box">
                             <div style="display: flex; align-items: center; justify-content: space-between;">
                                 <div class="hmc-row-label">Chế độ Ngoại tuyến</div>
-                                <div style="font-size: 12px; font-weight: 500; color: ${isComplete ? '#30D158' : 'rgba(235, 235, 245, 0.55)'};">
+                                <div id="hmc-cache-pct" style="font-size: 12.5px; font-weight: 600; color: ${isComplete ? '#30D158' : '#0A84FF'};">
                                     ${pct}% (${cached.toLocaleString()} / ${total.toLocaleString()})
                                 </div>
                             </div>
                             <div class="hmc-bar-bg">
-                                <div class="hmc-bar-fill ${isComplete ? 'complete' : ''}" style="width: ${pct}%"></div>
+                                <div id="hmc-cache-fill" class="hmc-bar-fill ${isComplete ? 'complete' : ''}" style="width: ${pct}%"></div>
                             </div>
-                            <div class="hmc-cache-status">${offlineStatusText}</div>
+                            <!-- Stats: Size + Speed / ETA -->
+                            <div id="hmc-cache-stats-row" style="display: flex; justify-content: space-between; font-size: 11.5px; color: rgba(235, 235, 245, 0.7); margin-bottom: 5px;">
+                                <span id="hmc-cache-size">💾 ${sizeStr}</span>
+                                <span id="hmc-cache-speed">${speedAndEtaStr}</span>
+                            </div>
+                            <div id="hmc-cache-status" class="hmc-cache-status">${offlineStatusText}</div>
                             <div style="display: flex; gap: 8px;">
                                 ${isDownloading
                                     ? `<button class="hmc-pill-btn pill-danger" style="flex: 1;" id="btn_modal_stop_dl">Dừng tải</button>`
@@ -993,13 +1083,30 @@
             const startDlBtn = document.getElementById('btn_modal_start_dl');
             if (startDlBtn) {
                 startDlBtn.onclick = () => {
-                    OfflineCacheManager.startDownload(manifest, (done, total) => {
-                        const p = Math.round((done / total) * 100);
-                        const fill = body.querySelector('.hmc-bar-fill');
-                        const info = body.querySelector('.hmc-info-text');
-                        if (fill) fill.style.width = p + '%';
-                        if (info) info.textContent = `⏳ Đang tải asset về máy... ${p}% (${done.toLocaleString()} / ${total.toLocaleString()})`;
-                        if (done >= total) setTimeout(renderModal, 500);
+                    OfflineCacheManager.startDownload(manifest, (info) => {
+                        const pctElem = document.getElementById('hmc-cache-pct');
+                        const fillElem = document.getElementById('hmc-cache-fill');
+                        const sizeElem = document.getElementById('hmc-cache-size');
+                        const speedElem = document.getElementById('hmc-cache-speed');
+                        const statusElem = document.getElementById('hmc-cache-status');
+
+                        if (pctElem) {
+                            pctElem.textContent = `${info.pct}% (${info.done.toLocaleString()} / ${info.total.toLocaleString()})`;
+                            pctElem.style.color = info.done >= info.total ? '#30D158' : '#0A84FF';
+                        }
+                        if (fillElem) {
+                            fillElem.style.width = info.pct + '%';
+                            if (info.done >= info.total) fillElem.classList.add('complete');
+                        }
+                        if (sizeElem) sizeElem.textContent = `💾 ${info.sizeStr}`;
+                        if (speedElem) speedElem.textContent = `⚡ ${info.speedStr} ${info.etaStr ? '• ' + info.etaStr : ''}`;
+                        if (statusElem) {
+                            statusElem.textContent = info.done >= info.total 
+                                ? 'Đã lưu toàn bộ dữ liệu vào thiết bị (Chơi Offline).' 
+                                : `Đang tải: ${info.currentFile || 'tài nguyên...'}`;
+                        }
+
+                        if (info.done >= info.total) setTimeout(renderModal, 400);
                     }).then(renderModal);
                     renderModal();
                 };
