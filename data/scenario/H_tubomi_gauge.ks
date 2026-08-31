@@ -236,7 +236,7 @@ $('.zettyou_active').css({
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_r_tubomi_zettyou1_2.mp3" buf="2"]Tsubomi「Vâng ạ... Nhột lắm... Nhưng mà sướng vô cùng luôn á...♡」[p]
+[舜]「Gương mặt lúc em lên đỉnh dễ thương lắm đấy」[p]
 [playse storage="tubomi/voice_j_tubomi_zettyou4_2.mp3" buf="2"] [舜]「Ngoan lắm, để anh làm cho em sướng hơn nữa nhé」[p]
 [_tb_end_text]
 
@@ -459,7 +459,7 @@ $('.zettyou_active').css({
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_h_tubomi_gauge9.mp3" buf="2"]Tsubomi「Mạnh nữa lên anh! Đâm nát cô bé của em đi!」[p]
+[舜]「Ư… Bên trong em siết chặt kinh khủng luôn…!」[p]
 [playse storage="tubomi/voice_r_tubomi_zettyou3_2.mp3" buf="2"] Tsubomi「Ra mất... Em sắp lên đỉnh rồi... Cùng ra nhé anh!」[p]
 [_tb_end_text]
 
@@ -535,7 +535,7 @@ $('.zettyou_active').css({
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1800"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_h_tubomi_gauge15.mp3" buf="2"]Tsubomi「Ôm em chặt vào đi anh... Em thích mùi của anh lắm♡」[p]
+[舜]「Em không chịu chỉ cho anh biết chỗ nào làm em sướng nhất à?」[p]
 [playse storage="tubomi/voice_r_tubomi_zettyou5_2.mp3" buf="2"] Tsubomi「Hì hì, hôm nay em ngoan đúng không nè? Thưởng cho em đi chứ♡」[p]
 [_tb_end_text]
 

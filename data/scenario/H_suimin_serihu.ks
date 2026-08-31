@@ -225,7 +225,7 @@ Nagi「Khò… Khò…… Ưm」[p]
 
 [tb_start_text mode=1 ]
 [舜]「Sắp ra rồi…! Nagi…! Bắn vào nhé…!」[p]
-Nagi「Ưm… A…♡」[p]
+[舜]（Nagi ngủ say thế này chắc chẳng bao giờ ngờ tới việc bị mình làm những chuyện thế này đâu nhỉ…）[p]
 [舜]（Bắn hết sạch lên người em ấy rồi… Trông gợi cảm không chịu nổi）[p]
 [_tb_end_text]
 

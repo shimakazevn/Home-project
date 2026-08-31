@@ -319,7 +319,7 @@
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
 [playse storage="tubomi/voice_supi_tubomi_sou1.mp3" buf="2"] [舜]「Uống từ từ thôi chứ, loại này nồng độ cồn cao lắm đấy」[p]
-Tsubomi「Nhưng mà... Uống vào người thấy nóng bừng lên... Thích lắm á...♡」[p]
+[舜]「Không sao đâu, nhìn này, vào rồi đấy…」[p]
 [playse storage="tubomi/voice_supi_tubomi_sou2.mp3" buf="2"] [舜]「Trông mặt em đỏ ửng hết cả lên rồi kìa, say rồi đúng không?」[p]
 [_tb_end_text]
 
@@ -552,9 +552,9 @@ Tsubomi「Nhưng mà... Uống vào người thấy nóng bừng lên... Thích 
 
 [cm  ]
 [tb_start_text mode=1 ]
-Tsubomi「Hì hì... Em không say đâu mà... Chỉ là thấy người rạo rực ngứa ngáy thôi...♡」[p]
+[舜]「Anh bắn lên người em nhé! Bắn lên cơ thể em là được đúng không?」[p]
 Dẫn chuyện|Tsubomi vừa nói vừa tự cởi bỏ từng cúc áo, để lộ làn da ửng hồng quyến rũ.[p]
-Tsubomi「Anh [舜] ơi... Nhìn em đi này... Em nóng quá à...♡」[p]
+[舜]「Ư… Ra mất rồi! Ưm ưm!」[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="0"  fadeout="true"  ]
@@ -597,11 +597,11 @@ Tsubomi「Oa... Chỗ này của anh cương cứng ngắc rồi kìa... Thích 
 
 [cm  ]
 [tb_start_text mode=1 ]
-Tsubomi「Thế thì đừng chịu đựng nữa... Mau ăn thịt em đi mà...♡」[p]
+[舜]「A~ không chịu nổi nữa rồi, ra mất… Anh bắn vào trong nhé…!」[p]
 Dẫn chuyện|Dưới tác dụng của hơi men nồng nặc, Tsubomi trở nên táo bạo và cuồng nhiệt hơn bao giờ hết.[p]
-Tsubomi「A... a... đâm mạnh vào đi anh! Đừng để em phải chờ đợi nữa!」[p]
+[舜]「Em có thể làm nũng xin anh mà…!」[p]
 [舜]「Được thôi, chiều theo ý em hết!」[p]
-Dẫn chuyện|Cả hai quấn lấy nhau trong cơn say cuồng loạn, từng cú thúc như thiêu đốt màn đêm.[p]
+[舜]「Ra rồi…! Aaaa!」[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="0"  fadeout="true"  ]

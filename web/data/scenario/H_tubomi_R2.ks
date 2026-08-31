@@ -591,7 +591,7 @@
 [cm  ]
 [tb_start_text mode=1 ]
 Dẫn chuyện|Từng cú thúc mạnh mẽ khiến Tsubomi chỉ biết bấu chặt lấy ga giường mà rên rỉ.[p]
-Tsubomi「A... a... đâm mạnh nữa đi anh... làm em tơi bời đi mà...♡」[p]
+[舜]「Không được…! Anh tính bắn lên người em cơ! Em cũng muốn được đánh dấu bằng tinh dịch của anh đúng không!?」[p]
 Tsubomi「Đâm sâu nữa đi anh... Tới tận cùng luôn đi mà...♡」[p]
 [舜]「Bên trong em co bóp dữ dội quá... Sướng đến muốn phát điên rồi đây!」[p]
 [_tb_end_text]

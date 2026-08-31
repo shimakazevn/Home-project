@@ -634,7 +634,7 @@ Tsubomi「Đã vậy... Mùi còn đặc quánh nữa chứ♡ Trời ạ... T�
 Tsubomi「A... a...♡ Mới vừa xong thôi mà... Đã muốn làm tiếp nữa rồi sao? Dâm đãng thật đấy」[p]
 [舜]「Tại vì nhìn Tsubomi thế này gợi cảm quá... Không kìm lại được」[p]
 Tsubomi「Hết cách với anh luôn... Lần này, hãy làm cho em thật sướng đấy nhé♡」[p]
-Dẫn chuyện|Tôi giữ chặt lấy bờ mông tròn trịa của Tsubomi rồi bắt đầu đưa đẩy nhịp nhàng.[p]
+[舜]「Dù em có bảo thế thì… giờ này làm sao mà dừng lại được nữa chứ… A, ra, anh sắp ra rồi!」[p]
 Tsubomi「A... ưm... sâu quá... chạm tới tận đáy rồi...♡」[p]
 [舜]「Bên trong em nóng và khít quá... Sướng không chịu nổi」[p]
 [_tb_end_text]

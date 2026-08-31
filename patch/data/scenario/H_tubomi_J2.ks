@@ -633,7 +633,7 @@ Tsubomi「Ưm...♡ Tuyệt quá♡ Đầu khấc lại nở to lên rồi kìa�
 [舜]「Sắp ra rồi...! Rút ra nhanh đi em... Mau lên...! Anh sắp xuất tinh tới nơi rồi...!」[p]
 Tsubomi「Không chịu đâu♡ Bắn vào bên trong đi anh♡ Hãy nhìn em... Vừa ý thức được rằng anh đang bắn vào bên trong em... Vừa rót hết toàn bộ vào đây đi♡」[p]
 Tsubomi「Anh sẽ biến em... Thành người phụ nữ của anh cơ mà đúng không♡ Mau lên... Cho em đi anh♡」[p]
-Tsubomi「Anh [舜]... Mau lên... Đút vào bên trong đi mà♡」[p]
+[舜]「Hà, hà, aah! Nếu vậy thì… anh sẽ rót đầy vào tận sâu bên trong em…! Ra, sắp ra rồi! A, aaaa!」[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="0"  fadeout="true"  ]

@@ -21,12 +21,12 @@
 [tb_show_message_window  ]
 [mask_off  time="2000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[舜]「Đèn trong phòng... đã tắt rồi. Nagi ngủ rồi sao」[p]
-[舜]「...Có nên vào không? Làm sao bây giờ, nếu muốn vào thì chỉ có lúc này thôi」[p]
-Mức độ dâm đãng: Tối đa[p]
-Tình trạng quan hệ: Người yêu độc quyền của Shun[p]
-[舜]「...Không, mình phải vào. Thà làm còn hơn là hối hận vì đã bỏ lỡ cơ hội」[p]
-Mức độ thuần phục: 100% (Phục tùng tuyệt đối)[p]
+[舜]「Đèn trong phòng…… đã tắt rồi. Nagi ngủ rồi sao?」[p]
+[舜]「……Có nên vào không? Làm sao bây giờ, nếu muốn vào thì chỉ có cơ hội lúc này thôi」[p]
+Trong lòng tôi giằng xé dữ dội.[r]Mình rất muốn vào. Nhưng vào rồi thì làm gì? Chỉ nhìn ngắm thôi là đủ sao?[p]
+Trong lúc đứng chôn chân do dự, nhịp tim tôi đập ngày càng dồn dập.[p]
+[舜]「……Không, mình phải vào. Thà làm còn hơn sau này phải ôm hối hận」[p]
+Như để củng cố quyết tâm, tôi bước tới một bước.[p]
 [_tb_end_text]
 
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
@@ -36,8 +36,8 @@ Mức độ thuần phục: 100% (Phục tùng tuyệt đối)[p]
 [wait  time="2000"  ]
 [bg  time="2000"  method="crossfade"  storage="sin_nagi_DK_yoru.png"  ]
 [tb_start_text mode=1 ]
-[舜]「Nguy hiểm thật... Tim mình như sắp nhảy ra khỏi lồng ngực rồi」[p]
-Tình trạng quan hệ: Cô vợ nhỏ dâm đãng của Shun[p]
+[舜]「Nguy thật…… Tim mình như sắp nhảy ra khỏi lồng ngực rồi」[p]
+Trong căn phòng tĩnh mịch phảng phất hơi ấm và hương thơm dịu nhẹ sau khi tắm.[p]
 
 
 [_tb_end_text]
@@ -45,17 +45,17 @@ Tình trạng quan hệ: Cô vợ nhỏ dâm đãng của Shun[p]
 [bg  time="1000"  method="fadeIn"  storage="event/H01_EV1.png"  ]
 [tb_cg  id="cg_item_suimin2"  ]
 [tb_start_text mode=1 ]
-Trạng thái chỉ số nhân vật - Naruse Rinko:[p]
-[舜]「Ngủ mà không phòng bị chút nào thế này... Đúng là mời gọi người ta mà」[p]
-Mức độ dâm đãng: Tối đa (Chìm đắm trong dục vọng)[p]
+Mái tóc ướt còn chưa kịp lau khô, Nagi đang thở đều khe khẽ trong giấc ngủ say sưa.[p]
+[舜]「Em ngủ không chút phòng bị nào thế này…… Thật là gian xảo quá đi」[p]
+Cảm giác như mình vừa nhìn thấy điều tuyệt đối cấm kỵ. Dẫu vậy, tôi vẫn không tài nào dời mắt đi được.[p]
 
 [_tb_end_text]
 
 [bg  time="3000"  method="fadeInDown"  storage="event/H01_EV2.gif"  ]
 [tb_cg  id="cg_item_suimin1"  ]
 [tb_start_text mode=1 ]
-Tình trạng quan hệ: Người tình bí mật kiêm bà chủ tiệm[p]
-[舜]「Chỉ một chút thôi... Nếu chỉ chạm nhẹ một chút thì chắc không sao đâu」[p]
+Đầu ngón tay tôi nóng ran lên, một luồng căng thẳng râm ran chạy dọc sống lưng.[p]
+[舜]「Chỉ một chút thôi…… Nếu chỉ chạm nhẹ một chút thì chắc không sao đâu nhỉ」[p]
 [_tb_end_text]
 
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
@@ -64,9 +64,9 @@ Tình trạng quan hệ: Người tình bí mật kiêm bà chủ tiệm[p]
 *syasei
 
 [tb_start_text mode=1 ]
-Không còn bất kỳ mục tiêu nào chưa hoàn thành.[p]
-Bạn đã đạt danh hiệu cao quý nhất: Bá Chủ Hậu Cung.[p]
-Chúc mừng bạn đã chinh phục trọn vẹn toàn bộ các nhân vật nữ![p]
+[舜]（Hà, hà…… Cứ để thế này thì nguy hiểm thật đấy……）[p]
+[舜]（Lấy khăn giấy lau sạch rồi mặc lại quần áo cho em ấy thôi……）[p]
+Khoảnh khắc chạm vào làn da mềm mại của Nagi, cảm xúc bị kìm nén lại một lần nữa dâng trào.[r]Để chế ngự thôi thúc ấy, tôi hít một hơi thật sâu rồi từ từ thở ra.[p]
 
 [_tb_end_text]
 
@@ -75,16 +75,16 @@ Chúc mừng bạn đã chinh phục trọn vẹn toàn bộ các nhân vật n�
 
 [bg  time="2000"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
-Bảng tổng kết đánh giá cuối game: Cấp SSS.[p]
-Một màn trình diễn hoàn hảo từ đầu đến cuối.[p]
-Cảm ơn bạn đã đầu tư thời gian trải nghiệm trọn vẹn tựa game này.[p]
+[舜]（Không thể làm tới mức này được nữa…… Nguy hiểm quá rồi. Nhịn lại đi, bản thân tôi ơi!）[p]
+Khao khát muốn được chạm vào em nhiều hơn nữa, tôi đành nén sâu vào tận đáy lòng.[p]
+Như để đè nén cơn hưng phấn đang trỗi dậy, tôi hít sâu rồi thở ra thật nhẹ.[r]Hãy bình tĩnh lại, tôi tự nhủ với chính mình.[p]
 
 [_tb_end_text]
 
 *end
 
 [tb_start_text mode=1 ]
-Hẹn gặp lại bạn trong những chuyến phiêu lưu kỳ thú tiếp theo.[p]
+Không để Nagi thức giấc, tôi khẽ đứng dậy.[r]Gửi lại những tâm tư không thể chạm tới nơi đáy lòng, tôi lặng lẽ rời khỏi căn phòng.[p]
 [_tb_end_text]
 
 [stopbgm  time="1000"  fadeout="true"  ]
