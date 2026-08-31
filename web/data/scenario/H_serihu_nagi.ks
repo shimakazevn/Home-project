@@ -226,7 +226,7 @@ Nagi「Hả, nh-nhưng mà... Tận sâu bên trong... cứ như bị tê dại 
 [tb_start_text mode=1 ]
 Nagi「A...♡ Chỗ đó... nhạy cảm lắm♡ Ưm♡ B-Bị vuốt ve... em sẽ trở nên kỳ lạ mất♡」[p]
 Nagi「A♡ A♡ A♡ Á... Hông em, tự động nảy lên... A...♡」[p]
-Nagi「Phù~♡ Phù~♡ [r]Làm sao đây... sướng quá đi mất, rõ ràng là chỗ đáng xấu hổ, thế mà sướng quá[p]
+Nagi「Phù~♡ Phù~♡ [r]Làm sao đây... sướng quá đi mất, rõ ràng là không được làm chuyện này mà...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kuriijiri+=1"  name="H_kuriijiri"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]

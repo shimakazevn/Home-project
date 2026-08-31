@@ -1235,7 +1235,7 @@ Rinko「Chỗ đó, là chỗ không được... vì nhạy cảm lắm♡ Nếu
 
 [tb_start_text mode=1 ]
 Rinko「A♡ Á... mãnh liệt... ưm♡ Massage mãnh liệt thế này, lần đầu tiên...♡」[p]
-[舜]「Chẳng phải Rinko-san hay nói là không chỉ bề mặt mà còn phải xoa bóp cẩn thận tận sâu bên trong sao.」[p]
+Rinko「Đúng rồi... cọ xát như vậy sướng lắm...♡ Cứ tiếp tục nhé...」[p]
 Rinko「Đó là nói về massage bình thường... Còn cái này khác m... á♡ Aaaa♡」[p]
 [_tb_end_text]
 
@@ -3907,7 +3907,7 @@ Rinko「Từ trước đến nay, em chưa từng thấy sướng vì bị đau 
 
 [playse  volume="100"  time="1000"  buf="1"  storage="rinko/voice_r_rinko_t1.mp3"  ]
 [tb_start_text mode=1 ]
-Rinko「Ưm... A... A, a...♡ Đừng nhéo và vân vê đầu ngực em... không được đâu... chỗ đó nhạy cảm lắm...♡」」[p]
+Rinko「Ưm... A... A, a...♡ Đừng nhéo và vân vê đầu ngực em nhiều như thế mà...♡」[p]
 [舜]「Hê... Vậy thì em hãy nhìn vào gương xem mình đang bị sờ soạng thế nào đi. Nhìn này...」[p]
 Rinko「A...♡ Ưm...♡ Đừng mà... sao anh lại bắt em nhìn chứ... Xấu hổ lắm...」[p]
 [_tb_end_text]
@@ -4033,7 +4033,7 @@ Rinko「Haa...♡ A, ưm...♡ Đừng có cứ xoa bóp mãi một chỗ đó..
 
 [tb_start_text mode=1 ]
 Rinko「Haa...♡ Haa...♡ A...♡ Đừng... ng-ngón tay... đưa vào rồi đúng không? Bị chèn ép mất rồi...」[p]
-[舜]「Thấy chưa? Nó đã nhũn ra và lỏng lẻo rồi đấy... Ngậm lấy ngón tay anh dễ dàng như vậy... Dâm quá.」」[p]
+[舜]「Thấy chưa? Nó đã nhũn ra và lỏng lẻo rồi đấy... Ngậm lấy đi nào」[p]
 Rinko「Hia...♡ A... Ưm...♡ Nếu anh ngoáy ngón tay bên trong... em sẽ mất hết sức lực mất... Đủ rồi đúng không anh?」[p]
 [_tb_end_text]
 

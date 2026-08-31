@@ -81,8 +81,8 @@ Dù chỉ là một viên kim cương nhỏ xíu, nhưng với mức lương hi�
 [bg  time="2000"  method="crossfade"  storage="event/nagi_TrueEND.png"  ]
 [tb_cg  id="cg_nagi_TrueEND"  ]
 [tb_start_text mode=1 ]
-[舜]「Dù tớ không thể mua được món đồ đắt tiền...... nhưng tình cảm này, là thật.[p]
-Tớ mong rằng, từ nay về sau, chúng ta có thể cùng nhau vun đắp từng chút một.」[p]
+[舜]「Dù tớ không thể mua được món đồ đắt tiền…… nhưng tình cảm này là thật」[p]
+[舜]「Tớ mong rằng, từ nay về sau, chúng ta có thể cùng nhau vun đắp hạnh phúc」[p]
 Nagi lặng thinh một lúc lâu, cứ mải miết ngắm nhìn chiếc nhẫn.[p]
 #Nagi
 Nagi「......Ừm. Ừm. Tớ vui lắm...... Cảm ơn cậu.」[p]

@@ -167,8 +167,8 @@ Nagi「Ừm……Lẽ ra, tớ phải thấy hạnh phúc mới đúng.」[p]
 #Nagi
 Nagi「...Cho đến bây giờ.[r]Tớ không thấy có gì sai trái khi giao phó mọi thứ cho anh Hayato, thậm chí còn thấy biết ơn nữa.」[p]
 #Nagi
-Nagi「Nhưng, trong lúc ở cạnh Shun-chan……[r]Tớ chợt nhớ ra rằng, tớ của ngày xưa đã từng tự do lựa chọn hơn rất nhiều.[p]
-Tự mình suy nghĩ, tự mình quyết định……Những điều đó, thật sự rất vui mà.」[p]
+Nagi「Nhưng, trong lúc ở cạnh Shun-chan……[r]Tớ chợt nhớ ra rằng,」[p]
+Nagi「Tự mình suy nghĩ, tự mình quyết định…… Những điều đó, thật sự rất quan trọng」[p]
 Những giọt nước mắt lăn dài trên khóe mắt Nagi.[p]
 #Nagi
 Nagi「Thế nên tớ mới không thể trả lời……Tớ không ghét anh Hayato.[r]Nhưng mà, tớ vẫn chưa……tìm ra được câu trả lời.」[p]

@@ -114,7 +114,7 @@ Tsubomi cũng giúp tôi dọn dẹp phòng ốc,[r]rồi nấu bữa tối cho 
 [舜]「Anh biết rồi.」[p]
 Tôi nghĩ thầm, đây quả là một sự thay đổi khó tin so với bản thân mình của một thời gian trước.[p]
 Một cô gái đáng yêu như thế này đang ở trong phòng tôi, lại còn thích tôi nữa...[r]Hơn thế nữa──[p]
-[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif" wait="false"] Tsubomi「Này, đêm nay... chúng ta không làm sao?[p]
+[chara_mod name="kyara_tubomi_sabun" cross="false" time="500" storage="chara/181/ADV_tubomi_00_04c.gif" wait="false"] Tsubomi「Này, đêm nay... chúng ta không làm sao?」[p]
 Em ấy ngước lên nhìn tôi, vẻ mặt e thẹn.[r]Khuôn mặt ấy như đang viết rõ dòng chữ "Hãy làm chuyện sung sướng với em đi".[p]
 Những lời nói thẳng thắn của một cô gái không giỏi chơi trò tình ái khiến tôi bất giác mỉm cười.[p]
 [舜]「Làm là làm gì cơ?」[p]

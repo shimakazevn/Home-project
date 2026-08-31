@@ -49,8 +49,8 @@ Nagi「Thấy chưa, là một y tá thì việc quản lý sức khỏe của b
 [call  storage="ui_onoff.ks"  target="*tension_UP"  ]
 [tb_start_text mode=1 ]
 ...Cảm giác như tôi đã trở nên thân thiết hơn với Nagi một chút.[p]
-Đã thanh toán tiền bữa tối 　[font color="yellow"]-￥5000[p]
-Chỉ số Hưng phấn đã tăng lên[resetfont][p]
+Đã thanh toán tiền bữa tối 　[font color="yellow"]-￥5000[resetfont][p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng lên[resetfont][p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP2"  ]
@@ -97,8 +97,8 @@ Rinko「Cô đang ăn mà. Nhưng cháu thấy đấy, phụ nữ trưởng thà
 [call  storage="ui_onoff.ks"  target="*tension_UP"  ]
 [tb_start_text mode=1 ]
 ...Cảm giác như tôi đã trở nên thân thiết hơn với cô Rinko một chút.[p]
-Đã thanh toán tiền bữa tối 　[font color="yellow"]-￥5000[p]
-Chỉ số Hưng phấn đã tăng lên[resetfont][p]
+Đã thanh toán tiền bữa tối 　[font color="yellow"]-￥5000[resetfont][p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng lên[resetfont][p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP2"  ]
@@ -145,8 +145,8 @@ Tsubomi「A, đúng rồi! Sẵn có anh ở đây... chúng ta chia đôi nhé.
 [call  storage="ui_onoff.ks"  target="*tension_UP"  ]
 [tb_start_text mode=1 ]
 ...Cảm giác như tôi đã trở nên thân thiết hơn với Tsubomi một chút.[p]
-Đã thanh toán tiền bữa tối 　[font color="yellow"]-￥5000[p]
-Chỉ số Hưng phấn đã tăng lên[resetfont][p]
+Đã thanh toán tiền bữa tối 　[font color="yellow"]-￥5000[resetfont][p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng lên[resetfont][p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP2"  ]
@@ -180,8 +180,8 @@ Hayato「Chẳng được ăn món mình thích nên khổ lắm. Hôm nay tôi 
 [call  storage="ui_onoff.ks"  target="*tension_UP"  ]
 [tb_start_text mode=1 ]
 ...Cảm giác như tôi đã trở nên thân thiết hơn với Hayato một chút.[p]
-Đã thanh toán tiền bữa tối 　[font color="yellow"]-￥5000[p]
-Chỉ số Hưng phấn đã tăng lên[resetfont][p]
+Đã thanh toán tiền bữa tối 　[font color="yellow"]-￥5000[resetfont][p]
+[font color="yellow"]Chỉ số Hưng phấn đã tăng lên[resetfont][p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP2"  ]

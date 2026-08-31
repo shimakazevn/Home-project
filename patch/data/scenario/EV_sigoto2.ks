@@ -26,8 +26,8 @@ Nagi「Mình cũng không thể chịu thua được...! Chúng ta cùng cố g�
 
 [playse  volume="100"  time="1000"  buf="0"  storage="sistem_up.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]Tiền lương đã được TĂNG LÊN[p]
-Đã mở khóa「Đột nhập」vào Bệnh viện[resetfont][p]
+[font color="yellow"]Tiền lương đã được TĂNG LÊN[resetfont][p]
+[font color="yellow"]Đã mở khóa「Đột nhập」vào Bệnh viện[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.syakaisei+=1"  name="syakaisei"  cmd="+="  op="t"  val="1"  ]
@@ -53,8 +53,8 @@ Rinko「Chị cũng sẽ cố gắng để em cảm thấy thoải mái khi làm
 
 [playse  volume="100"  time="1000"  buf="0"  storage="sistem_up.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]Tiền lương đã được TĂNG LÊN[p]
-Đã mở khóa「Đột nhập」vào Tiệm mát xa[resetfont][p]
+[font color="yellow"]Tiền lương đã được TĂNG LÊN[resetfont][p]
+[font color="yellow"]Đã mở khóa「Đột nhập」vào Tiệm mát xa[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.syakaisei+=1"  name="syakaisei"  cmd="+="  op="t"  val="1"  ]
@@ -80,8 +80,8 @@ Tsubomi「Giỏi ghê chưa...! Mà sao tự dưng em cũng thấy vui lây th�
 
 [playse  volume="100"  time="1000"  buf="0"  storage="sistem_up.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]Tiền lương đã được TĂNG LÊN[p]
-Đã mở khóa「Đột nhập」vào Tiệm Maid Refre[resetfont][p]
+[font color="yellow"]Tiền lương đã được TĂNG LÊN[resetfont][p]
+[font color="yellow"]Đã mở khóa「Đột nhập」vào Tiệm Maid Refre[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.syakaisei+=1"  name="syakaisei"  cmd="+="  op="t"  val="1"  ]

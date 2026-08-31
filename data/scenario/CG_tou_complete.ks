@@ -28,8 +28,8 @@
 [playse  volume="100"  time="1000"  buf="0"  storage="sistem_omoide.mp3"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]Chúc mừng! Bạn đã thu thập đầy đủ 100% Bộ sưu tập CG![p]
-Bạn đã có thể tự do thay đổi hình nền màn hình Bắt đầu (Start Screen)[resetfont][p]
+[font color="yellow"]Chúc mừng! Bạn đã thu thập đầy đủ 100% Bộ sưu tập CG![resetfont][p]
+[font color="yellow"]Bạn đã có thể tự do thay đổi hình nền màn hình Bắt đầu (Start Screen)[resetfont][p]
 [_tb_end_text]
 
 [l  ]

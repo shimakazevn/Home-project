@@ -156,7 +156,7 @@
 
 [tb_start_text mode=1 ]
 [舜]（A, có vẻ quay được từ chỗ máy lạnh này.）[p]
-[舜]（Góc này thì chắc quay được rõ cảnh trong phòng đấy nhỉ?[p]
+[舜]（Góc này thì chắc quay được rõ cảnh trong phòng đấy nhỉ?）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_eakon+=1"  name="bussyoku_eakon"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]

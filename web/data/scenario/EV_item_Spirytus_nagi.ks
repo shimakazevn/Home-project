@@ -37,8 +37,8 @@ Có sử dụng viên nang Spirytus không? (Số lượng sở hữu: [emb exp=
 
 [tb_start_text mode=1 ]
 ・・・Cảm giác như tôi đã thân thiết hơn với Nagi một chút[p]
-Đã thanh toán tiền ăn tối 　[font color="yellow"]-￥5000[p]
-Tâm trạng hưng phấn đã tăng lên[resetfont][p]
+Đã thanh toán tiền ăn tối 　[font color="yellow"]-￥5000[resetfont][p]
+[font color="yellow"]Tâm trạng hưng phấn đã tăng lên[resetfont][p]
 [_tb_end_text]
 
 [call  storage="statusUP.ks"  target="*koukando_UP2"  ]
@@ -215,8 +215,8 @@ Cảm nhận từng cử chỉ chậm rãi của Nagi ở bên cạnh, sâu th�
 [tb_replay  id="nagi_item_supiritasu"  ]
 [tb_start_text mode=1 ]
 ・・・Cảm giác như tôi đã thân thiết hơn với Nagi một chút[p]
-Đã thanh toán tiền ăn tối 　[font color="yellow"]-￥5000[p]
-Tâm trạng hưng phấn đã tăng lên[resetfont][p]
+Đã thanh toán tiền ăn tối 　[font color="yellow"]-￥5000[resetfont][p]
+[font color="yellow"]Tâm trạng hưng phấn đã tăng lên[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.tension+=2"  name="tension"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]

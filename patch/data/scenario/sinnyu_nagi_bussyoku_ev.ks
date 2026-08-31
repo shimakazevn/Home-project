@@ -683,8 +683,8 @@ Tôi điên cuồng cọ xát dương vật đã cứng ngắc vào đũng quầ
 
 [playse  volume="80"  time="1000"  buf="0"  storage="teman1.mp3"  loop="true"  ]
 [tb_start_text mode=1 ]
-[舜]「Uầy... mượt mà quá...! Cảm giác của quần tất là thế này sao.）[p]
-[舜]「Mềm mại quá, cứ như dương vật đang được bao bọc dịu dàng vậy...）[p]
+[舜]「Uầy... mượt mà quá...! Cảm giác của quần tất là thế này sao...」[p]
+[舜]「Mềm mại quá, cứ như dương vật đang được bao bọc dịu dàng vậy...」[p]
 [_tb_end_text]
 
 [wait  time="500"  ]
@@ -770,7 +770,7 @@ Tôi điên cuồng cọ xát dương vật đã cứng ngắc vào đũng quầ
 [tb_start_text mode=1 ]
 [舜]（Túi đựng đồ trang điểm? Bên trong có gì thế? Đây là... băng vệ sinh sao.）[p]
 [舜]「Mở ra xem một chút chắc không sao đâu nhỉ... Có đủ các loại kích cỡ và hình dáng luôn à.」[p]
-[舜]「Phải dán cái này vào quần lót, làm phụ nữ vất vả thật đấy.）[p]
+[舜]「Phải dán cái này vào quần lót, làm phụ nữ vất vả thật đấy...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.bussyoku_poti+=1"  name="bussyoku_poti"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -824,7 +824,7 @@ Tôi điên cuồng cọ xát dương vật đã cứng ngắc vào đũng quầ
 
 [tb_start_text mode=1 ]
 [舜]（Cảnh vật nhìn từ đây cũng không thay đổi gì cả.）[p]
-[舜]（Nhớ hồi tắm chung, Nagi từng nói "Nhỡ có ai nhìn trộm qua cửa sổ thì sợ lắm"」[p]
+[舜]（Nhớ hồi tắm chung, Nagi từng nói "Nhỡ có ai nhìn trộm qua cửa sổ thì sao" nhỉ）[p]
 [舜]（Sợ quá nên cứ bám rịt lấy mình nhỉ.）[p]
 [_tb_end_text]
 

@@ -22,7 +22,7 @@
 [mask_off  time="2000"  effect="fadeOut"  ]
 [playbgm  volume="60"  time="1000"  loop="true"  storage="END.mp3"  ]
 [tb_start_text mode=1 ]
-Nhìn vào màn hình, tôi thấy Nagi đang tập cười trước gương.[r]...Có một cô bạn gái đáng yêu thế này đúng là hạnh phúc thật.」[p]
+Nhìn vào màn hình, tôi thấy Nagi đang tập cười trước gương.[p]
 Lúc nào cũng được quan sát Nagi thế này, thật thỏa mãn.[p]
 Hơn nữa tôi còn trở thành người yêu của cô ấy... Giờ tôi là kẻ hạnh phúc nhất trần đời.[p]
 Nhưng mà, hình như vẫn còn thiếu một thứ gì đó...[p]
