@@ -1674,9 +1674,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 *J1_2_pisuton_yukkuri3
 
 [tb_start_text mode=1 ]
-"Hà...♡ Hà...♡ Đút sâu vào trong hầu gái rồi còn say sưa lắc hông thế này... Anh đúng là biến thái mà♡"[p]
-"A...♡ Ư...♡ Hà...♡ Hà...♡ Bên trong, nảy lên rồi...♡ Anh phản ứng thái quá rồi đấy♡"[p]
-"Hiaa...♡ Ư... a...♡ Quả nhiên là anh hưng phấn với hầu gái đúng không? Ông chủ biến thái♡"[p]
+Tsubomi「Hà...♡ Hà...♡ Đút sâu vào trong hầu gái rồi còn say sưa lắc hông thế này... Anh đúng là biến thái mà♡」[p]
+Tsubomi「A...♡ Ư...♡ Hà...♡ Hà...♡ Bên trong, nảy lên rồi...♡ Anh phản ứng thái quá rồi đấy♡」[p]
+Tsubomi「Hiaa...♡ Ư... a...♡ Quả nhiên là anh hưng phấn với hầu gái đúng không? Ông chủ biến thái♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_yukkuri=0"  name="H_supiritasu_pisuton_yukkuri"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1688,9 +1688,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-"A...♡ Ưm...♡ Á... Đừng có... cứ nhắm vào chỗ nhạy cảm... mà thúc lên thế chứ♡"[p]
-"H-Hỏng mất...♡ Hỏng mất thôi...♡ Ưm...♡ Ồ...♡ Đừng có giữ chặt hông em lại chứ♡"[p]
-"Hiu...♡ Cứ bị thúc nhè nhẹ thế này... em ra mất thôi...! Khoái cảm ập đến mất rồi♡"[p]
+Tsubomi「A...♡ Ưm...♡ Á... Đừng có... cứ nhắm vào chỗ nhạy cảm... mà thúc lên thế chứ♡」[p]
+Tsubomi「H-Hỏng mất...♡ Hỏng mất thôi...♡ Ưm...♡ Ồ...♡ Đừng có giữ chặt hông em lại chứ♡」[p]
+Tsubomi「Hiu...♡ Cứ bị thúc nhè nhẹ thế này... em ra mất thôi...! Khoái cảm ập đến mất rồi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*high2"  cond="f.H_high1==1"  ]
@@ -1699,9 +1699,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 *J1_2_pisuton_hagesiku1
 
 [tb_start_text mode=1 ]
-"A...♡ A...♡ Lắc mạnh quá...♡ Thôi mà... em nát bét ra mất♡"[p]
+Tsubomi「A...♡ A...♡ Lắc mạnh quá...♡ Thôi mà... em nát bét ra mất♡」[p]
 "[舜]「Lại phải dọn dẹp lại từ đầu rồi. Nệm chắc cũng ướt nhẹp hết cả rồi đây.」[p]
-"Ưm...♡ Hà...♡ A...♡ Tại vì... [舜] làm mạnh quá mà...♡ Biết làm sao được chứ♡"[p]
+Tsubomi「Ưm...♡ Hà...♡ A...♡ Tại vì... [舜] làm mạnh quá mà...♡ Biết làm sao được chứ♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1711,9 +1711,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 *J1_2_pisuton_hagesiku2
 
 [tb_start_text mode=1 ]
-"Ư...♡ Phù, hà, hà...♡ A...♡ Mặt anh, nghiêm túc quá rồi đấy...♡"[p]
-"Khuôn mặt đàn ông này của anh... chỉ có mình em biết thôi đúng không? Háu...♡ A...♡ Cảm giác cũng không tệ đâu♡"[p]
-"A...♡ A...♡ Từ giờ trở đi cũng chỉ được cho mình em thấy thôi đấy... Cấm nhìn người khác...♡"[p]
+Tsubomi「Ư...♡ Phù, hà, hà...♡ A...♡ Mặt anh, nghiêm túc quá rồi đấy...♡」[p]
+Tsubomi「Khuôn mặt đàn ông này của anh... chỉ có mình em biết thôi đúng không? Háu...♡ A...♡ Cảm giác cũng không tệ đâu♡」[p]
+Tsubomi「A...♡ A...♡ Từ giờ trở đi cũng chỉ được cho mình em thấy thôi đấy... Cấm nhìn người khác...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku+=1"  name="H_supiritasu_pisuton_hagesiku"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1723,9 +1723,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 *J1_2_pisuton_hagesiku3
 
 [tb_start_text mode=1 ]
-"A...♡ A...♡ Ưm...♡ Khuôn mặt... rối bời này của em... cũng chỉ có anh... "[p]
-"Được độc chiếm thôi đấy♡ Không được nghĩ đến ai khác đâu nhé♡ Chỉ mình em thôi..."[p]
-"Hứa đi... A...♡ Sao tự dưng anh lại hưng phấn thế♡ To quá... hỏng mất thôi♡"[p]
+Tsubomi「A...♡ A...♡ Ưm...♡ Khuôn mặt... rối bời này của em... cũng chỉ có anh... 」[p]
+Tsubomi「Được độc chiếm thôi đấy♡ Không được nghĩ đến ai khác đâu nhé♡ Chỉ mình em thôi...」[p]
+Tsubomi「Hứa đi... A...♡ Sao tự dưng anh lại hưng phấn thế♡ To quá... hỏng mất thôi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supiritasu_pisuton_hagesiku=0"  name="H_supiritasu_pisuton_hagesiku"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1737,9 +1737,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-"Hya...♡ Ưm...♡ Ồ, ồ...♡ Hông em, nảy lên mất...♡ Ra mất thôi♡"[p]
-"Sâu trong bụng... đang nóng ran lên này...♡ Hà, a, a...♡ Chuẩn bị ra rồi♡"[p]
-"Đang chuẩn bị để tiếp nhận anh rồi đấy♡ Cơ thể cứ tự động phản ứng thôi♡"[p]
+Tsubomi「Hya...♡ Ưm...♡ Ồ, ồ...♡ Hông em, nảy lên mất...♡ Ra mất thôi♡」[p]
+Tsubomi「Sâu trong bụng... đang nóng ran lên này...♡ Hà, a, a...♡ Chuẩn bị ra rồi♡」[p]
+Tsubomi「Đang chuẩn bị để tiếp nhận anh rồi đấy♡ Cơ thể cứ tự động phản ứng thôi♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*high2"  cond=""  ]
@@ -1748,8 +1748,8 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 *J2_kaiwa1
 
 [tb_start_text mode=1 ]
-"Làm cơm ngon, cùng nhau ăn xong thì... em sẽ hầu hạ anh bằng những chuyện sung sướng thế này đây♡"[p]
-"Sống chung rồi, sớm muộn gì cũng kết hôn nhỉ♡ Cuộc sống tân hôn thế này cũng không tệ đâu ha...♡"[p]
+Tsubomi「Làm cơm ngon, cùng nhau ăn xong thì... em sẽ hầu hạ anh bằng những chuyện sung sướng thế này đây♡」[p]
+Tsubomi「Sống chung rồi, sớm muộn gì cũng kết hôn nhỉ♡ Cuộc sống tân hôn thế này cũng không tệ đâu ha...♡」[p]
 "[舜]「Không tệ... mà phải nói là tuyệt vời luôn ấy chứ...!」[p]
 [_tb_end_text]
 
@@ -1759,8 +1759,8 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 
 [tb_start_text mode=1 ]
 "[舜]「Sống chung rồi cứ thế kết hôn cũng tốt. Nhưng em còn có ước mơ mà, đâu phải lúc để kết hôn đúng không?」[p]
-"Tất nhiên, em sẽ cố gắng hết sức để thực hiện ước mơ. Thế nên, đó là chuyện của sau này cơ...♡"[p]
-"Nhưng mà... nếu anh nói muốn có em ngay lập tức nên hãy kết hôn đi... thì em sẽ suy nghĩ lại đấy♡"[p]
+Tsubomi「Tất nhiên, em sẽ cố gắng hết sức để thực hiện ước mơ. Thế nên, đó là chuyện của sau này cơ...♡」[p]
+Tsubomi「Nhưng mà... nếu anh nói muốn có em ngay lập tức nên hãy kết hôn đi... thì em sẽ suy nghĩ lại đấy♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa+=1"  name="H_kaiwa"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1768,9 +1768,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 *J2_kaiwa3
 
 [tb_start_text mode=1 ]
-"Với lại... cứ làm chuyện dâm đãng nhiều thế này, biết đâu lại có thêm thành viên mới thì sao?"[p]
-"Lúc đó, em nghĩ lui về chăm lo gia đình cũng được♡ Nếu là với anh thì chắc chắn sẽ hạnh phúc mà..."[p]
-"Không phải với ai em cũng nói thế đâu nhé? Mà phải nói là... anh là người đầu tiên làm em có suy nghĩ này đấy..."[p]
+Tsubomi「Với lại... cứ làm chuyện dâm đãng nhiều thế này, biết đâu lại có thêm thành viên mới thì sao?」[p]
+Tsubomi「Lúc đó, em nghĩ lui về chăm lo gia đình cũng được♡ Nếu là với anh thì chắc chắn sẽ hạnh phúc mà...」[p]
+Tsubomi「Không phải với ai em cũng nói thế đâu nhé? Mà phải nói là... anh là người đầu tiên làm em có suy nghĩ này đấy...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kaiwa=0"  name="H_kaiwa"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1778,9 +1778,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 *J2_kiss1
 
 [tb_start_text mode=1 ]
-"Chu... Ưm...♡ Chu chu... Môi anh, ấm quá...♡ Ưm...♡ Chu chu♡"[p]
-"Hôm nay em sẽ bám dai hơn mọi khi đấy nhé? Tại vì... em không muốn anh nhìn ai khác ngoài em đâu..."[p]
-"Này, em biết hết đấy nhé? Rằng anh vẫn còn đang để tâm đến ai đó khác, không phải em..."[p]
+Tsubomi「Chu... Ưm...♡ Chu chu... Môi anh, ấm quá...♡ Ưm...♡ Chu chu♡」[p]
+Tsubomi「Hôm nay em sẽ bám dai hơn mọi khi đấy nhé? Tại vì... em không muốn anh nhìn ai khác ngoài em đâu...」[p]
+Tsubomi「Này, em biết hết đấy nhé? Rằng anh vẫn còn đang để tâm đến ai đó khác, không phải em...」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss+=1"  name="H_kiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1790,9 +1790,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 *J2_kiss2
 
 [tb_start_text mode=1 ]
-"Chỉ nhìn mình em thôi được không? Nếu là em, em có thể trao cho anh tình cảm nhiều hơn cả những gì anh dành cho em đấy"[p]
-"Chu...♡ Chu chu♡ Thấy chưa? Chỉ qua nụ hôn thôi anh cũng cảm nhận được tình cảm của em đúng không...?"[p]
-"Hà...♡ Chu, chu chu... Bây giờ anh chưa quên được người khác cũng không sao... nhưng hãy mau để em độc chiếm anh đi♡"[p]
+Tsubomi「Chỉ nhìn mình em thôi được không? Nếu là em, em có thể trao cho anh tình cảm nhiều hơn cả những gì anh dành cho em đấy」[p]
+Tsubomi「Chu...♡ Chu chu♡ Thấy chưa? Chỉ qua nụ hôn thôi anh cũng cảm nhận được tình cảm của em đúng không...?」[p]
+Tsubomi「Hà...♡ Chu, chu chu... Bây giờ anh chưa quên được người khác cũng không sao... nhưng hãy mau để em độc chiếm anh đi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss+=1"  name="H_kiss"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1802,9 +1802,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 *J2_kiss3
 
 [tb_start_text mode=1 ]
-"Chụt, chu, chu chu...♡ Hà, hà... Ưm...♡ Chỉ hôn thôi mà cũng sướng quá...♡"[p]
+Tsubomi「Chụt, chu, chu chu...♡ Hà, hà... Ưm...♡ Chỉ hôn thôi mà cũng sướng quá...♡」[p]
 "[舜]「Phù... Tsubomi hôm nay, dâm đãng quá đấy... Nguy hiểm thật...」[p]
-"Thật á? Em sẽ chứng minh cho anh thấy em không chỉ biết hưởng thụ đâu♡ Em làm anh mê mẩn luôn nhé?"[p]
+Tsubomi「Thật á? Em sẽ chứng minh cho anh thấy em không chỉ biết hưởng thụ đâu♡ Em làm anh mê mẩn luôn nhé?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_kiss=0"  name="H_kiss"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1816,9 +1816,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-"Ưm...♡ Phù...♡ Chu chu♡ Chụt...♡ Gian xảo quá, rốt cuộc lại là em say đắm anh mất rồi..."[p]
-"Hà... Mới chỉ hôn thôi mà... người đã nóng ran lên rồi♡ Rõ ràng hôm nay em định chủ động cơ mà"[p]
-"Nhưng em vẫn chưa chịu thua đâu...♡ Em sẽ làm anh say đắm đến mức không còn nhìn thấy cô gái nào khác nữa cơ♡"[p]
+Tsubomi「Ưm...♡ Phù...♡ Chu chu♡ Chụt...♡ Gian xảo quá, rốt cuộc lại là em say đắm anh mất rồi...」[p]
+Tsubomi「Hà... Mới chỉ hôn thôi mà... người đã nóng ran lên rồi♡ Rõ ràng hôm nay em định chủ động cơ mà」[p]
+Tsubomi「Nhưng em vẫn chưa chịu thua đâu...♡ Em sẽ làm anh say đắm đến mức không còn nhìn thấy cô gái nào khác nữa cơ♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -1827,9 +1827,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-"Ưm... A...♡ Hà, a...♡ Trơn tuột hết vì tinh dầu rồi đúng không? Ưm, phù♡"[p]
-"Cảm giác không nắm bắt được... khó chịu lắm, đúng không...? Ưm...♡ A...♡ Tay anh cứ trượt đi nhỉ?"[p]
-"Hà...♡ Hà...♡ Bộ dạng anh cố gắng sờ ngực em để tóm lấy... trông tuyệt lắm đấy...♡"[p]
+Tsubomi「Ưm... A...♡ Hà, a...♡ Trơn tuột hết vì tinh dầu rồi đúng không? Ưm, phù♡」[p]
+Tsubomi「Cảm giác không nắm bắt được... khó chịu lắm, đúng không...? Ưm...♡ A...♡ Tay anh cứ trượt đi nhỉ?」[p]
+Tsubomi「Hà...♡ Hà...♡ Bộ dạng anh cố gắng sờ ngực em để tóm lấy... trông tuyệt lắm đấy...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1839,9 +1839,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 *J2_munemomi2
 
 [tb_start_text mode=1 ]
-"Ưm...♡ Hà, a...♡ Thôi mà... cảm giác trơn tuột này... làm em sướng lên mất rồi...♡"[p]
+Tsubomi「Ưm...♡ Hà, a...♡ Thôi mà... cảm giác trơn tuột này... làm em sướng lên mất rồi...♡」[p]
 "[舜]「Núm vú cũng cương cứng hết cả lên rồi này? Khác với mọi khi, chắc là nhạy cảm hơn rồi nhỉ」[p]
-"A...♡ Đừng, đừng có dùng lòng bàn tay xoa xoa núm vú em thế chứ♡ A...♡ Á...♡"[p]
+Tsubomi「A...♡ Đừng, đừng có dùng lòng bàn tay xoa xoa núm vú em thế chứ♡ A...♡ Á...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi+=1"  name="H_munemomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1852,9 +1852,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-"Đ-Đừng mà...♡ Đừng có nắn bóp ngực em nhẹ nhàng... như trêu ngươi thế chứ...♡"[p]
-"Từ ngực... truyền sâu vào trong cơ thể như có dòng điện chạy qua vậy, sướng quá đi mất... Tê dại hết cả người♡"[p]
-"Hiu...♡ A... A...♡ Đừng♡ Hông em cứ tự động nảy lên... không dừng lại được nữa rồi♡"[p]
+Tsubomi「Đ-Đừng mà...♡ Đừng có nắn bóp ngực em nhẹ nhàng... như trêu ngươi thế chứ...♡」[p]
+Tsubomi「Từ ngực... truyền sâu vào trong cơ thể như có dòng điện chạy qua vậy, sướng quá đi mất... Tê dại hết cả người♡」[p]
+Tsubomi「Hiu...♡ A... A...♡ Đừng♡ Hông em cứ tự động nảy lên... không dừng lại được nữa rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_munemomi=0"  name="H_munemomi"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1867,8 +1867,8 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-"A...♡ Hà, hà, a...♡ S-Sướng quá...♡ Bứt rứt quá đi♡"[p]
-"Cả ngực lẫn núm vú đều đang râm ran hết cả lên rồi...♡ Muốn được anh sờ nhiều hơn nữa cơ♡"[p]
+Tsubomi「A...♡ Hà, hà, a...♡ S-Sướng quá...♡ Bứt rứt quá đi♡」[p]
+Tsubomi「Cả ngực lẫn núm vú đều đang râm ran hết cả lên rồi...♡ Muốn được anh sờ nhiều hơn nữa cơ♡」[p]
 "[舜]「Hôm nay làm nũng ghê nhỉ... Đáng yêu quá đi mất. Phải chiều chuộng em thật nhiều mới được...」[p]
 [_tb_end_text]
 
@@ -1878,9 +1878,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-"Hya...♡ A...♡ A...♡ Liếm phát ra tiếng chùn chụt thế này tuyệt quá đi...♡"[p]
-"Hà...♡ A...♡ Làm em càng ý thức được mình đang bị làm gì hơn...♡ Trong đầu giờ chỉ còn mỗi chữ sướng thôi"[p]
-"Chỉ mỗi em... say đắm thế này thì ấm ức lắm♡ Anh cũng... chỉ được nghĩ đến em thôi, say đắm em đi♡"[p]
+Tsubomi「Hya...♡ A...♡ A...♡ Liếm phát ra tiếng chùn chụt thế này tuyệt quá đi...♡」[p]
+Tsubomi「Hà...♡ A...♡ Làm em càng ý thức được mình đang bị làm gì hơn...♡ Trong đầu giờ chỉ còn mỗi chữ sướng thôi」[p]
+Tsubomi「Chỉ mỗi em... say đắm thế này thì ấm ức lắm♡ Anh cũng... chỉ được nghĩ đến em thôi, say đắm em đi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiname+=1"  name="H_tikubiname"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1890,8 +1890,8 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 *J2_tikubiname2
 
 [tb_start_text mode=1 ]
-"Hiu...♡ A...♡ A...♡ Vừa liếm láp núm vú... sao lại còn nhìn chằm chằm mặt em thế...♡"[p]
-"Góc nhìn từ dưới lên, chắc chắn là xấu lắm luôn ấy♡ Mặt em đang kỳ cục lắm mà..."[p]
+Tsubomi「Hiu...♡ A...♡ A...♡ Vừa liếm láp núm vú... sao lại còn nhìn chằm chằm mặt em thế...♡」[p]
+Tsubomi「Góc nhìn từ dưới lên, chắc chắn là xấu lắm luôn ấy♡ Mặt em đang kỳ cục lắm mà...」[p]
 "[舜]「Khuôn mặt đê mê vì sung sướng này, vừa đáng yêu vừa dâm đãng lắm, nên cho anh nhìn thêm đi」[p]
 [_tb_end_text]
 
@@ -1903,9 +1903,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t4.mp3"  ]
 [tb_start_text mode=1 ]
-"Ưm...♡ Sờ ngực sướng lắm...♡ Thích núm vú lắm♡ Nữa đi, liếm nhiều hơn nữa đi...♡"[p]
+Tsubomi「Ưm...♡ Sờ ngực sướng lắm...♡ Thích núm vú lắm♡ Nữa đi, liếm nhiều hơn nữa đi...♡」[p]
 "[舜]「Thấy em nhõng nhẽo thế này cũng đáng yêu lắm cơ. Tuân lệnh, thưa tiểu thư...! Ưm...!」[p]
-"Hya...♡ Hút chùn chụt thế này sướng quá đi mất... Hà, a, sâu trong cơ thể, đang nóng ran lên rồi♡"[p]
+Tsubomi「Hya...♡ Hút chùn chụt thế này sướng quá đi mất... Hà, a, sâu trong cơ thể, đang nóng ran lên rồi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tikubiname=0"  name="H_tikubiname"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1918,9 +1918,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-"A...♡ Mới chỉ làm ngực thôi mà... em cứ tưởng mình sắp ra luôn rồi ấy♡ Không ngờ lại sướng đến thế này♡"[p]
-"Làm tình ngọt ngào tại nhà thế này... chắc là em hưng phấn lắm rồi...♡ Ướt nhẹp hết cả rồi đây này..."[p]
-"Nhưng thế cũng được đúng không? Dù cơ thể em có dâm đãng thế nào... anh cũng sẽ chấp nhận em mà, nhỉ?"[p]
+Tsubomi「A...♡ Mới chỉ làm ngực thôi mà... em cứ tưởng mình sắp ra luôn rồi ấy♡ Không ngờ lại sướng đến thế này♡」[p]
+Tsubomi「Làm tình ngọt ngào tại nhà thế này... chắc là em hưng phấn lắm rồi...♡ Ướt nhẹp hết cả rồi đây này...」[p]
+Tsubomi「Nhưng thế cũng được đúng không? Dù cơ thể em có dâm đãng thế nào... anh cũng sẽ chấp nhận em mà, nhỉ?」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -1929,9 +1929,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-"Hehe... Được anh xoa đầu thế này... có chút bất ngờ đấy♡ Nhưng mà... em vui lắm♡"[p]
+Tsubomi「Hehe... Được anh xoa đầu thế này... có chút bất ngờ đấy♡ Nhưng mà... em vui lắm♡」[p]
 "[舜]「Ủa, nhìn anh không giống kiểu người hay xoa đầu à? Nhưng đúng là trước đây anh cũng chẳng có cơ hội chạm vào con gái...」[p]
-"Mồ~, em đâu có muốn nghe mấy chuyện đó...! Em muốn nghe anh khen đáng yêu hay nói thích em cơ"[p]
+Tsubomi「Mồ~, em đâu có muốn nghe mấy chuyện đó...! Em muốn nghe anh khen đáng yêu hay nói thích em cơ」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_naderu+=1"  name="H_naderu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1941,9 +1941,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 *J2_naderu2
 
 [tb_start_text mode=1 ]
-"Dù là chuyện đương nhiên... nhưng bàn tay to lớn của đàn ông... làm em hồi hộp quá..."[p]
-"Nghĩ đến việc bàn tay này... sẽ vuốt ve những chỗ nhạy cảm... làm em nát bét ra, em lại càng..."[p]
-"Hà, ưm...♡ Em trở nên dâm đãng thế này, chắc chắn là lỗi của [舜] đấy nhé...?"[p]
+Tsubomi「Dù là chuyện đương nhiên... nhưng bàn tay to lớn của đàn ông... làm em hồi hộp quá...」[p]
+Tsubomi「Nghĩ đến việc bàn tay này... sẽ vuốt ve những chỗ nhạy cảm... làm em nát bét ra, em lại càng...」[p]
+Tsubomi「Hà, ưm...♡ Em trở nên dâm đãng thế này, chắc chắn là lỗi của [舜] đấy nhé...?」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_naderu+=1"  name="H_naderu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1954,9 +1954,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t1.mp3"  ]
 [tb_start_text mode=1 ]
-"Thôi nào... nhột quá đi mất...♡ Nhưng mà... được anh nhìn thẳng vào mắt rồi vuốt ve thế này, em vui lắm...♡"[p]
+Tsubomi「Thôi nào... nhột quá đi mất...♡ Nhưng mà... được anh nhìn thẳng vào mắt rồi vuốt ve thế này, em vui lắm...♡」[p]
 "[舜]「Anh đang nghĩ em đáng yêu quá đấy... Thấy em hạnh phúc thế này, sao anh rời mắt đi được chứ...」[p]
-"Tự dưng nói mấy câu ngầu thế làm gì chứ... Làm tim em đập thình thịch rồi đây này♡"[p]
+Tsubomi「Tự dưng nói mấy câu ngầu thế làm gì chứ... Làm tim em đập thình thịch rồi đây này♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_naderu=0"  name="H_naderu"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -1969,9 +1969,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-"Hiu...♡ Hà, a...♡ Thôi mà... mới vuốt ve thôi... cơ thể đã tê rần lên rồi..."[p]
-"Xấu hổ quá... Chắc là do cơ thể em đã chuyển sang chế độ dâm đãng mất rồi...♡"[p]
-"Muốn lắm rồi, không chịu nổi nữa đâu♡ Em... chỉ nhìn mỗi [舜] thôi đấy nhé?"[p]
+Tsubomi「Hiu...♡ Hà, a...♡ Thôi mà... mới vuốt ve thôi... cơ thể đã tê rần lên rồi...」[p]
+Tsubomi「Xấu hổ quá... Chắc là do cơ thể em đã chuyển sang chế độ dâm đãng mất rồi...♡」[p]
+Tsubomi「Muốn lắm rồi, không chịu nổi nữa đâu♡ Em... chỉ nhìn mỗi [舜] thôi đấy nhé?」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -1980,9 +1980,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-"A... tuyệt quá... cứng ngắc luôn rồi này...♡ Hehe, gì chứ, hóa ra anh cũng đang hưng phấn lắm đúng không♡"[p]
+Tsubomi「A... tuyệt quá... cứng ngắc luôn rồi này...♡ Hehe, gì chứ, hóa ra anh cũng đang hưng phấn lắm đúng không♡」[p]
 "[舜]「Đương nhiên rồi... Nhìn thấy bộ dạng dâm đãng này của Tsubomi, bảo không hưng phấn mới là lạ đấy...」[p]
-"Vui quá... Ưm...♡ Hà, a...♡ Em sẽ chiều chuộng con cu của anh thật nhiều nhé♡"[p]
+Tsubomi「Vui quá... Ưm...♡ Hà, a...♡ Em sẽ chiều chuộng con cu của anh thật nhiều nhé♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata+=1"  name="H_sumata"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -1992,9 +1992,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 *J2_sumata2
 
 [tb_start_text mode=1 ]
-"Hà...♡ Hà...♡ Ưm...♡ Trơn tuột vì tinh dầu rồi... trơn quá đi mất♡"[p]
+Tsubomi「Hà...♡ Hà...♡ Ưm...♡ Trơn tuột vì tinh dầu rồi... trơn quá đi mất♡」[p]
 "[舜]「Cái này... đâu chỉ có tinh dầu... Ư... Là từ bên trong Tsubomi trào ra đúng không?」[p]
-"Hà...♡ Hà...♡ A...♡ Tinh dầu và dâm thủy hòa quyện vào nhau, ướt nhẹp hết cả rồi...♡"[p]
+Tsubomi「Hà...♡ Hà...♡ A...♡ Tinh dầu và dâm thủy hòa quyện vào nhau, ướt nhẹp hết cả rồi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata+=1"  name="H_sumata"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2005,9 +2005,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-"A...♡ A...♡ Ưm...♡ Con cu, đang cọ vào khe dâm này♡ Anh có cảm nhận được nó nóng hổi không?"[p]
-"Hya...♡ A...♡ Ư...♡ A♡ Cứng quá đi mất... Gân guốc cũng nổi hết cả lên rồi đúng không?"[p]
-"Hà, ưm... Cọ xát thế này... sướng quá♡ Khe dâm cứ lật lên lật xuống, kích thích mạnh quá đi...♡"[p]
+Tsubomi「A...♡ A...♡ Ưm...♡ Con cu, đang cọ vào khe dâm này♡ Anh có cảm nhận được nó nóng hổi không?」[p]
+Tsubomi「Hya...♡ A...♡ Ư...♡ A♡ Cứng quá đi mất... Gân guốc cũng nổi hết cả lên rồi đúng không?」[p]
+Tsubomi「Hà, ưm... Cọ xát thế này... sướng quá♡ Khe dâm cứ lật lên lật xuống, kích thích mạnh quá đi...♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sumata=0"  name="H_sumata"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2020,9 +2020,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-"A...♡ Đừng... phần đầu con cu... đang chạm vào âm vật này♡ Cứ cọ cọ...♡"[p]
-"Cảm giác như bị ép nát vậy... Thế này, sướng quá đi♡ Thích lắm♡ A...♡"[p]
-"Hà...♡ Hà...♡ Á...♡ A...♡ Phần đầu của hai đứa, cứ như đang hôn nhau đùa giỡn vậy♡"[p]
+Tsubomi「A...♡ Đừng... phần đầu con cu... đang chạm vào âm vật này♡ Cứ cọ cọ...♡」[p]
+Tsubomi「Cảm giác như bị ép nát vậy... Thế này, sướng quá đi♡ Thích lắm♡ A...♡」[p]
+Tsubomi「Hà...♡ Hà...♡ Á...♡ A...♡ Phần đầu của hai đứa, cứ như đang hôn nhau đùa giỡn vậy♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -2031,9 +2031,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_j_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-"Hà...♡ Hà...♡ A... To quá đi mất...♡ Thấy anh sướng thế này em vui lắm♡"[p]
+Tsubomi「Hà...♡ Hà...♡ A... To quá đi mất...♡ Thấy anh sướng thế này em vui lắm♡」[p]
 "[舜]「Cái này, nguy hiểm thật... Sướng quá đi mất... Ưm... Sao em sờ giỏi thế hả...」[p]
-"A, anh đang nghĩ lỡ em làm thế này với người khác thì sao đúng không? Làm gì có chuyện đó chứ? Chỉ với anh thôi♡"[p]
+Tsubomi「A, anh đang nghĩ lỡ em làm thế này với người khác thì sao đúng không? Làm gì có chuyện đó chứ? Chỉ với anh thôi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tekoki+=1"  name="H_tekoki"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2043,9 +2043,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 *J2_tekoki2
 
 [tb_start_text mode=1 ]
-"Phần khấc ở đầu, anh thích đúng không...? Em sẽ sờ chỗ này thật nhiều nhé...♡"[p]
-"Hà...♡ Hà...♡ Hà...♡ Khuôn mặt sướng rơn của anh... trông dâm đãng lắm đấy♡"[p]
-"Hóa ra phục vụ người khác là cảm giác thế này à♡ Hehe, cũng không tệ... Cho em thấy khuôn mặt sung sướng hơn nữa đi♡"[p]
+Tsubomi「Phần khấc ở đầu, anh thích đúng không...? Em sẽ sờ chỗ này thật nhiều nhé...♡」[p]
+Tsubomi「Hà...♡ Hà...♡ Hà...♡ Khuôn mặt sướng rơn của anh... trông dâm đãng lắm đấy♡」[p]
+Tsubomi「Hóa ra phục vụ người khác là cảm giác thế này à♡ Hehe, cũng không tệ... Cho em thấy khuôn mặt sung sướng hơn nữa đi♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tekoki+=1"  name="H_tekoki"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -2055,9 +2055,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 *J2_tekoki3
 
 [tb_start_text mode=1 ]
-"Phù, phù... Ưm...♡ A, đang giật giật này... Phần đầu cũng sưng phồng lên sắp nổ tung rồi nhỉ♡"[p]
-"Đang nhức nhối muốn bắn ra lắm rồi đúng không...♡ Nhưng vẫn chưa được đâu♡ Đang sục cu mà..."[p]
-"Sục sục, sục sục sục... A, sướng lắm đúng không? Đang nghiến chặt răng kìa? Đáng yêu quá♡"[p]
+Tsubomi「Phù, phù... Ưm...♡ A, đang giật giật này... Phần đầu cũng sưng phồng lên sắp nổ tung rồi nhỉ♡」[p]
+Tsubomi「Đang nhức nhối muốn bắn ra lắm rồi đúng không...♡ Nhưng vẫn chưa được đâu♡ Đang sục cu mà...」[p]
+Tsubomi「Sục sục, sục sục sục... A, sướng lắm đúng không? Đang nghiến chặt răng kìa? Đáng yêu quá♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_tekoki=0"  name="H_tekoki"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
@@ -2070,9 +2070,9 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 [mask  time="0"  effect="fadeIn"  color="0xffffff"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-"A... A...♡ Hà, hà...♡ Đến cả em... sâu trong bụng cũng thắt lại rồi này♡"[p]
-"Cứ tưởng tượng thứ to lớn thế này mà đút vào trong thì sẽ thế nào... là em lại...♡"[p]
-"Hà...♡ Hà...♡ Cửa mình, ướt nhẹp hết cả rồi... Đút vào trong luôn cũng được đúng không♡"[p]
+Tsubomi「A... A...♡ Hà, hà...♡ Đến cả em... sâu trong bụng cũng thắt lại rồi này♡」[p]
+Tsubomi「Cứ tưởng tượng thứ to lớn thế này mà đút vào trong thì sẽ thế nào... là em lại...♡」[p]
+Tsubomi「Hà...♡ Hà...♡ Cửa mình, ướt nhẹp hết cả rồi... Đút vào trong luôn cũng được đúng không♡」[p]
 [_tb_end_text]
 
 [call  storage="H_serihu_tubomi.ks"  target="*hit"  cond=""  ]
@@ -2080,7 +2080,7 @@ Tsubomi「Bằng cô bé của Tsubomi... em sẽ làm cho nó tan chảy ra lu�
 *J2_pisuton_yukkuri1
 
 [tb_start_text mode=1 ]
-"Hà...♡ Hà...♡ A... A...♡ Ưm...♡ Sướng quá... hông em sắp không dừng lại được nữa rồi♡"[p]
+Tsubomi「Hà...♡ Hà...♡ A... A...♡ Ưm...♡ Sướng quá... hông em sắp không dừng lại được nữa rồi♡」[p]
 [舜]「Khỉ thật... Chết tiệt... Cái kiểu lắc hông dâm đãng này... em học được từ lúc nào thế hả. Anh sắp bị vắt kiệt rồi...!」[p]
 Tsubomi「Phù...♡ Phù...♡ Em chỉ bắt chước chuyển động của anh thôi... với lại, em cũng đã tưởng tượng trong đầu rồi mà...♡」[p]
 [_tb_end_text]
@@ -4065,8 +4065,8 @@ Tsubomi「Cặp vú này... đang được anh Shun xoa nắn tơi bời đây �
 
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
-Tsubomi「Ư... hức♡ Đ-Đặc điểm quyến rũ của em là... đôi gò bồng đào mềm mại và nhạy cảm vô cùng này ạ♡」[p]
-[舜]「Được đấy, tiếp tục đi. Giới thiệu xem chỗ dâm đãng dưới háng em nhạy cảm thế nào nữa xem nào」[p]
+[舜]「Không chỉ núm vú mà cả quầng vú cũng nở to phồng lên rồi này. Dâm thật đấy… Có muốn anh véo nắn cả hai bên luôn không, hả!」[p]
+Tsubomi「[舜]「Được đấy, tiếp tục đi. Giới thiệu xem chỗ dâm đãng dưới háng em nhạy cảm thế nào nữa xem nào」」[p]
 Tsubomi「Hà...♡ Vâng ạ♡ Cô bé của em... mỗi lần được chạm vào ngực là lại rỉ nước nhờn ướt sũng ra ạ♡」[p]
 [_tb_end_text]
 
@@ -4092,7 +4092,7 @@ Tsubomi「Ôi trời ơi♡ Tuyệt quá... đầu ti tê rần rần lên rồi
 [playse  volume="100"  time="1000"  buf="1"  storage="tubomi/voice_r_tubomi_t2.mp3"  ]
 [tb_start_text mode=1 ]
 Tsubomi「Cảm ơn anh nhiều lắm ạ♡ Em muốn con cu của anh đâm nát cô bé của em cơ♡」[p]
-Tsubomi「A... a... a...♡ Đút vào rồi♡ Con cu bự quá đi mất♡」[p]
+[舜]「Đâu phải, đây là phần thưởng cho em đấy chứ. Em cũng muốn được anh nâng niu vỗ về bầu ngực này mà…! Nhìn xem này! Thấy chưa!」[p]
 Tsubomi「Hà...♡ Hà...♡ Sướng quá đi... trong bụng em đầy ắp con cu của anh rồi♡」[p]
 [_tb_end_text]
 
@@ -4103,8 +4103,8 @@ Tsubomi「Hà...♡ Hà...♡ Sướng quá đi... trong bụng em đầy ắp c
 *R2_2_supankingu2
 
 [tb_start_text mode=1 ]
-Tsubomi「Đâm sâu vào nữa đi anh♡ Hãy thụ tinh cho em đi mà♡」[p]
-[舜]「Đúng là con bé dâm đãng... thích bị đâm sâu thế này cơ à?」[p]
+[舜]「Vậy thì, vừa để anh vỗ ngực vừa làm anh hưng phấn lên đi nào. Tsubomi chắc chắn làm món này giỏi lắm đúng không?」[p]
+Tsubomi「[舜]「Đúng là con bé dâm đãng... thích bị đâm sâu thế này cơ à?」」[p]
 Tsubomi「Vâng ạ♡ Em thích lắm... em muốn trở thành người đàn bà của anh Shun cơ♡」[p]
 [_tb_end_text]
 
@@ -4118,7 +4118,7 @@ Tsubomi「Vâng ạ♡ Em thích lắm... em muốn trở thành người đàn 
 [tb_start_text mode=1 ]
 Tsubomi「Ôi...♡ Ôi...♡ Nó chạm vào cổ tử cung rồi kìa♡ Sướng điếng cả người luôn á♡」[p]
 Tsubomi「A... a...♡ Bắn vào trong đi anh♡ Rót đầy tinh dịch vào trong em đi ạ♡」[p]
-[舜]「Bắn nhé... Tsubomi...! Nhận lấy toàn bộ tinh trùng của anh đi!」[p]
+Tsubomi「[舜]「Bắn nhé... Tsubomi...! Nhận lấy toàn bộ tinh trùng của anh đi!」」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_supankingu=0"  name="H_supankingu"  cmd="="  op="t"  val="0"  val_2="undefined"  ]

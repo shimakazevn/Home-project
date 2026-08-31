@@ -64,7 +64,7 @@ Tsubomi「Ừ-Ừm... Cẩn thận nhé anh」[p]
 [call  storage="character.ks"  target="*taijyou"  ]
 [mask_off  time="500"  effect="slideOutRight"  ]
 [tb_start_text mode=1 ]
-Tôi ra hiệu cho một nhân viên khác trong tiệm rồi rảo bước nhanh tới Phòng 3.[r]Vừa mở cửa ra, chiếc bàn đã bị lật tung, ly tách vỡ vương vãi khắp sàn.[p]
+[舜] ra hiệu cho một nhân viên khác trong tiệm rồi rảo bước nhanh về phía Phòng 3.[r]Vừa mở cửa ra, tôi đã thấy bàn ghế bị lật nhào, ly cốc vỡ vụn vương vãi khắp sàn nhà.[p]
 Khách nam「Thằng ranh nào đây! Chỉ là nhân viên quèn mà dám lên mặt à...!」[p]
 [舜]「Thưa quý khách, hành vi này đang cản trở hoạt động kinh doanh của chúng tôi. Xin mời quý khách rời khỏi đây ngay」[p]
 Khi tôi dõng dạc nói với giọng điệu kiên quyết, các nhân viên hỗ trợ liền đứng chắn ngay phía sau.[p]
@@ -401,7 +401,7 @@ Nagi「[舜]-chan từ xưa đã thông minh lắm rồi mà. Quả nhiên là �
 [tb_start_text mode=1 ]
 [舜]「Nagi cứ đi báo với cấp trên đi. Đừng tự trách mình nữa」[p]
 Nagi「Ừm… Tớ biết rồi. Tớ đi ngay đây」[p]
-Nhìn bóng lưng lo lắng của Nagi, tôi thầm nhủ phải cố gắng học hỏi thêm nhiều kiến thức hơn nữa.[p]
+[舜]（Mà thôi… những gì mình có thể làm chắc cũng chỉ đến mức này）[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
@@ -435,7 +435,7 @@ Nhìn bóng lưng lo lắng của Nagi, tôi thầm nhủ phải cố gắng h�
 
 [playse  volume="100"  time="1000"  buf="0"  storage="tyakusin.mp3"  ]
 [tb_start_text mode=1 ]
-Tiếng bước chân gấp gáp của các bác sĩ và y tá vang vọng khắp hành lang.[p]
+[舜]（Ủa, ai thế nhỉ? Có cuộc gọi từ số lạ đến）[p]
 [_tb_end_text]
 
 [playbgm  volume="100"  time="1000"  loop="true"  storage="hayato.mp3"  ]

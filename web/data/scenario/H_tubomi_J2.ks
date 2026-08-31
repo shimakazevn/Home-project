@@ -662,9 +662,9 @@ Tsubomi「Anh sẽ biến em... Thành người phụ nữ của anh cơ mà đ�
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[舜]「Bắn nhé...! Anh bắn vào trong đây! Nhận lấy toàn bộ tinh dịch của anh đi!」[p]
+Tsubomi「Aaaaah♡ A, bên trong… Em cảm nhận được tinh dịch đang phụt từng đợt vào trong này…♡ Tuyệt quá đi…♡」[p]
 Tsubomi「A... a... a...♡ Bên trong... Bắn ừng ực từng đợt rồi kìa♡ Sướng quá đi anh ơi♡」[p]
-[舜]「Khốn thật... Trong này nóng ran như thiêu đốt vậy...! Phê quá đi mất!」[p]
+Tsubomi「Phù♡ Phù♡ Ưm♡ Bên trong em hoàn toàn biến thành hình dạng cặc của anh rồi kìa? Fufu, hạnh phúc quá♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_nakadasi_tubomi+=1"  name="Hresult_nakadasi_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]

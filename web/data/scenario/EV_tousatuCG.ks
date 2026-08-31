@@ -6,8 +6,8 @@
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（...Đây là ảnh chụp lúc đang bấm chuông gọi y tá à. Vẫn mất cảnh giác như mọi khi...）[p]
-[舜]（...Ngủ với cái tư thế hớ hênh thế này thì có bị ai làm gì cũng chẳng cãi vào đâu được）[p]
+──Đêm hôm đó[p]
+[舜]（…Hình như camera ghi lại được gì đó rồi. Mở lên xem thử chút nào）[p]
 [_tb_end_text]
 
 [tb_hide_message_window  ]
@@ -268,7 +268,7 @@
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="job_daiseikou.mp3"  ]
 [tb_start_text mode=1 ]
-[font color="yellow"]Dũng khí đã tăng nhẹ[resetfont][p]
+[font color="yellow"]Dũng khí đã tăng lên một chút[resetfont][p]
 [_tb_end_text]
 
 [tb_eval  exp="f.kankei+=1"  name="kankei"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -292,7 +292,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/Living_high2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（...Quả nhiên Nagi dễ thương thật đấy. Để cho thằng Hayato đúng là phí của giời）[p]
+[舜]（Em ấy đang ăn cơm. Tự nấu nướng đàng hoàng giỏi ghê…）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_Living_high=2"  name="com_Living_high"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -315,7 +315,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/Living_denwa.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（...Dáng vẻ ngủ say không chút phòng bị này đúng là không cưỡng lại nổi. Chỉ muốn lao vào ngay lập tức thôi）[p]
+[舜]（Tấm lưng ấy… Quần áo rộng thùng thình trông lôi thôi thật, nhưng lại mang lại cảm giác an tâm đến lạ）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_Living_denwa=2"  name="com_Living_denwa"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -338,7 +338,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/Living_denwa2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Ồ, bức này...! Tuyệt phẩm! Dáng vẻ xấu hổ này của Nagi là của riêng một mình mình thôi nhé）[p]
+[舜]（Trông em ăn ngon lành ghê. Đang xem video gì à? …Đáng yêu quá）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.cg_tou_Living_denwa2=1"  name="cg_tou_Living_denwa2"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -360,7 +360,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/nagiroom_konsento2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Hình như ngủ gật mất rồi... Lôi thôi thật đấy. Nhưng góc chụp này lại chuẩn phết）[p]
+[舜]（Hình như ngủ gật mất rồi… Buông thả ghê. Nhưng góc quay này đẹp thật đấy）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_nagiroom_konsento=2"  name="com_nagiroom_konsento"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -383,7 +383,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/nagiroom_pc.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（...Phòng của Nagi mang lại cảm giác bình yên ghê. Cứ ngắm ảnh thế này thôi cũng thấy nhẹ nhõm rồi）[p]
+[舜]（Ở nhà trông nét mặt em dịu dàng hẳn. Lại chơi game à? Khác với lúc ở chỗ làm, nhìn như con nít vậy）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_nagiroom_pc=2"  name="com_nagiroom_pc"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -406,7 +406,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/nagiroom_tansu2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（...Bức ảnh này xứng đáng lưu trữ vĩnh viễn luôn. Dáng vẻ hớ hênh của Nagi đúng là đỉnh của chóp）[p]
+[舜]（Ngủ không chút phòng bị nào cả… Trông khác xa so với ấn tượng nghiêm túc ở nơi làm việc）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_nagiroom_tansu=2"  name="com_nagiroom_tansu"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -429,7 +429,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/nagiroom_tansu3.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Dễ thương quá... Mong chờ đến ngày hẹn hò ghê）[p]
+[舜]（Đáng yêu quá… Háo hức chờ đến ngày hẹn hò ghê）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_nagiroom_tansu=2"  name="com_nagiroom_tansu"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -452,7 +452,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/senmenjyo_kagami.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（...Nụ cười của Nagi, quả nhiên mình thích nhất. Mình muốn biến nó thành của riêng mình）[p]
+[舜]（Ồ, giờ chuẩn bị đi tắm à… Cởi phăng quần áo không chút do dự, thiếu cảnh giác thật đấy… Mà ở một mình thì ai cũng vậy thôi）[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.tou_senmenjyo_kagami=1"  name="tou_senmenjyo_kagami"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -474,7 +474,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/senmenjyo_kagami2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（...Góc này trông gợi cảm thật. Đùi của Nagi trông mềm mại ghê）[p]
+[舜]（Quần áo giặt xong phơi trong phòng à… Đậm chất sinh hoạt đời thường ghê. Không ngờ ở chỗ này em cũng hớ hênh thế… Mà trong phòng thì bình thường thôi）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_senmenjyo_kagami=2"  name="com_senmenjyo_kagami"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -497,7 +497,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/senmenjyo_konsento.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（...Khuôn mặt khi ngủ của Nagi, mình có thể ngắm mãi không chán. Tuyệt đối không cho thằng Hayato thấy đâu）[p]
+[舜]（Hoàn toàn ở chế độ thư giãn nghỉ ngơi… Chắc em chẳng bao giờ mảy may nghĩ có người đang ngắm nhìn mình đâu nhỉ. …Mà da em trắng mịn thật đấy…）[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.tou_senmenjyo_konsento=1"  name="tou_senmenjyo_konsento"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -519,7 +519,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/senmenjyo_konsento2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（...Ồ, bức này...! Biểu cảm đẹp thật. Góc khuất này của Nagi chỉ có mỗi mình biết thôi đấy）[p]
+[舜]（Phơi đồ lót trong nhà là để phòng trộm hay sao ta? Hóa ra cũng biết cảnh giác đấy chứ）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_senmenjyo_konsento=2"  name="com_senmenjyo_konsento"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -542,7 +542,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/senmenjyo_sentakuki.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（...Đặt camera trong phòng Nagi đúng là quyết định chuẩn xác. Ngày nào cũng có cái để hóng）[p]
+[舜]（…Bình tĩnh nào. Đây chỉ là một khoảnh khắc đời thường thôi mà. …Cơ mà, cô bé của em trông núng nính mềm mại gợi cảm dã man…）[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.tou_senmenjyo_sentakuki=1"  name="tou_senmenjyo_sentakuki"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -564,7 +564,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/senmenjyo_sentakuki2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（...Cứ mỗi lần xem bức ảnh này là lại thấy rạo rực. Mình muốn khám phá cơ thể Nagi nhiều hơn nữa）[p]
+[舜]（Quần lót lọt khe nhìn thấy sạch sành sanh luôn. …Đúng là đồ không biết phòng bị）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_senmenjyo_sentakuki=2"  name="com_senmenjyo_sentakuki"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -587,7 +587,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/toilet_door.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（...Được độc chiếm dáng vẻ sơ hở của Nagi thế này đúng là sướng nhất trần đời. Phải sưu tập thêm thật nhiều ảnh nữa mới được）[p]
+[舜]（Đáng yêu ghê. …Anh sẽ luôn dõi theo từng ngày của Nagi mà）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_toilet_door=2"  name="com_toilet_door"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -610,7 +610,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/toilet_seat.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Uầy... Không biết nên nhìn đi đâu nữa đây. Mà khoan, đâu việc gì phải ngại ngùng chứ. Tuyệt thật... Lộ hết toàn bộ rồi）[p]
+[舜]（Oa… Không biết nên nhìn đi đâu nữa luôn. Cơ mà, mình việc gì phải kiêng dè chứ. Đỉnh thật… Thấy hết trơn luôn rồi）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_toilet_seat=2"  name="com_toilet_seat"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -633,7 +633,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/huro_kanki.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（...Phòng Nagi đúng là thích thật. Chỉ cần nhìn trộm thế này thôi cũng có cảm giác như đang ở bên nhau rồi）[p]
+[舜]（Hồi xưa hai đứa tắm chung là chuyện bình thường như cơm bữa. Thời gian trôi qua nhanh thật đấy…）[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.tou_huro_kanki=1"  name="tou_huro_kanki"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -656,7 +656,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/huro_kanki2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（...Bức ảnh này đúng là báu vật. Dáng vẻ không chút phòng bị của Nagi, mình tuyệt đối không nhường cho ai đâu）[p]
+[舜]（Bây giờ hai đứa tắm chung được nữa không nhỉ? Không, người lớn rồi tắm chung sao được）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_huro_kanki=2"  name="com_huro_kanki"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -679,7 +679,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/huro_mado2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（...Da dẻ mịn màng thật. Dáng ngực cũng đẹp nữa）[p]
+[舜]（…Làn da mịn màng thật. Dáng ngực cũng đẹp nữa）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_huro_mado=2"  name="com_huro_mado"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -702,7 +702,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/huro_yokusou.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Uầy..., thế này... nhìn có được không ta? Không sao, không bị lộ thì cũng như chưa từng có chuyện gì thôi mà）[p]
+[舜]（Uầy… cảnh này… mình được phép xem thật sao? Không sao, không bị lộ thì coi như chưa từng có chuyện gì xảy ra thôi）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_huro_yokusou=2"  name="com_huro_yokusou"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -725,7 +725,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/hospital_high.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Một cô y tá lạ mặt đang xếp đồ. Chẳng có ai nhìn mà không thèm trốn việc một chút nào sao）[p]
+[舜]（Một cô y tá lạ mặt đang sắp xếp hàng hóa. Không có ai nhìn mà cô ấy cũng chẳng thèm lười biếng chút nào nhỉ）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_hospital_high=2"  name="com_hospital_high"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -748,7 +748,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/hospital_low.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Chân của y tá đang lọt vào khung hình. Giá mà góc quay thấp hơn một chút nữa thì ngon）[p]
+[舜]（Quay được đôi chân của y tá rồi. Giá như góc máy thấp hơn một chút nữa thì tuyệt）[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.tou_hospital_low=1"  name="tou_hospital_low"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -770,7 +770,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/hospital_low2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Phát hiện quần lót rồi nhé. Chắc không ngờ là đang bị nhìn trộm từ góc này đâu nhỉ）[p]
+[舜]（Phát hiện quần lót rồi nhé. Chắc cô ta không ngờ mình đang bị nhìn lén từ góc này đâu）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_hospital_low=2"  name="com_hospital_low"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -793,7 +793,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/hospitallocker_konsento.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Nagi đang nói chuyện với các y tá khác.[r]Hồi xưa con bé này nhút nhát lắm cơ mà... Giờ cũng hòa đồng ghê. Hay là chỉ đang cố gượng ép để hòa nhập thôi nhỉ）[p]
+[舜]（Nagi đang nói chuyện với các y tá khác.[r]Hồi xưa em nhút nhát lắm mà… Không ngờ giờ lại hòa đồng thế. Hay là em chỉ đang cố gượng ép để hòa nhập thôi nhỉ）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_hospitallocker_konsento=2"  name="com_hospitallocker_konsento"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -816,7 +816,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/hospitallocker_low.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Uầy... Góc quay đẹp quá! Mình tự phục tài phán đoán của mình luôn đấy）[p]
+[舜]（Uầy… Góc máy xuất sắc! Quả là một quyết định sáng suốt của mình）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_hospitallocker_low=2"  name="com_hospitallocker_low"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -839,7 +839,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/hospitallocker_nagirocker.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Nagi và các y tá khác đang thay đồ... Quả nhiên Nagi vẫn là dễ thương nhất）[p]
+[舜]（Nagi và các y tá khác đang thay đồ……. Quả nhiên Nagi lúc nào cũng dễ thương nhất）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_hospitallocker_nagirocker=2"  name="com_hospitallocker_nagirocker"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -862,7 +862,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/hospitaltoilet_holder.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Lộ hết rồi còn gì. Chẳng biết lúc nào ở đâu có người nhìn trộm đâu, đi vệ sinh mà mất cảnh giác thế này là không được rồi...）[p]
+[舜]（Lộ hết trơn rồi kìa. Không biết lúc nào ở đâu có người nhìn lén đâu, nên vào nhà vệ sinh cũng không được lơ là chứ…）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_hospitaltoilet_holder=2"  name="com_hospitaltoilet_holder"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -885,7 +885,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/hospitaltoilet_seat.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Ồ, bức ảnh tuyệt nhất luôn! Chắc chẳng ai ngờ đến cả nhà vệ sinh của nhân viên cũng bị nhìn trộm thế này đâu nhỉ...）[p]
+[舜]（Ồ, góc chụp đắt giá! Chắc không ai ngờ nhà vệ sinh dành riêng cho nhân viên cũng bị gắn camera đâu nhỉ…）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_hospitaltoilet_seat=2"  name="com_hospitaltoilet_seat"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -908,7 +908,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/massage_high.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Cô Rinko đang làm việc. Ở riêng một phòng kín với một gã đàn ông cởi trần... tính ra nguy hiểm thật đấy chứ）[p]
+[舜]（Cô Rinko đang làm việc. Ở chung phòng kín một đối một với gã đàn ông trần truồng… Bình thường nghĩ lại thấy nguy hiểm thật đấy）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_massage_high=2"  name="com_massage_high"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -931,7 +931,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/massage_tansu.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Cô Rinko đẹp thật đấy...[r]Biết là công việc rồi nhưng nhìn cô ấy tiếp xúc cơ thể với người đàn ông khác lại thấy ghen tuông trào dâng...）[p]
+[舜]（Cô Rinko đẹp thật đấy….[r]Dù biết là công việc, nhưng nhìn cô tiếp xúc thân mật với gã đàn ông khác làm cơn ghen tuông trong mình cứ trỗi dậy…）[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.tou_massage_tansu=1"  name="tou_massage_tansu"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -953,7 +953,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/massage_tansu2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Ặc... Cô Rinko đang bị quấy rối tình dục kìa! Lại là lão già quê mùa đó... Lần tới mà bắt gặp là tôi báo cảnh sát cho xem）[p]
+[舜]（Chết tiệt… Cô Rinko đang bị quấy rối tình dục kìa! Lại là lão già đồi bại đó… Lần tới mà bắt gặp là tôi báo cảnh sát ngay）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_massage_tansu=2"  name="com_massage_tansu"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -976,7 +976,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/massagepowder_high.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Hình như đang dọn dẹp bồn rửa mặt. Nhìn thế này mới thấy cô Rinko làm việc quần quật suốt ngày...）[p]
+[舜]（Có vẻ cô ấy đang cọ rửa bồn rửa mặt. Nhìn thế này mới thấy cô Rinko lúc nào cũng cặm cụi làm việc không ngừng nghỉ…）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_massagepowder_high=2"  name="com_massagepowder_high"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -999,7 +999,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/massagepowder_low.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Ồ... Lộ hết rồi. Trông còn kích thích hơn cả mấy pha lộ quần lót thông thường nữa chứ）[p]
+[舜]（Ồ ồ… thấy sạch hết rồi. Lộ hàng kiểu này trông còn dâm hơn cả tốc váy bình thường nữa）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_massagepowder_low=2"  name="com_massagepowder_low"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1022,7 +1022,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/massageshower_high.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Hử!? Cứ tưởng là vòi sen chỉ dành cho khách, hóa ra cô Rinko cũng dùng à. Biết được tin hời rồi nhé）[p]
+[舜]（Hử!? Cứ tưởng buồng tắm này chỉ dành riêng cho khách, không ngờ cô Rinko cũng dùng. Biết thêm một chuyện hay ho rồi）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_massageshower_high=2"  name="com_massageshower_high"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1045,7 +1045,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/massageshower_shampoo.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Uầy, body gợi tình dã man... Thân hình đẫy đà quyến rũ thế này bị người ta quấy rối cũng chẳng trách được...）[p]
+[舜]（Oa, thân hình đẫy đà dâm dật thật…. Người phụ nữ sở hữu cơ thể nuột nà thế này thì bị người ta dòm ngó quấy rối cũng là điều… khó tránh khỏi mà…）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_massageshower_shampoo=2"  name="com_massageshower_shampoo"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1068,7 +1068,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/rifure_high.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Phòng nghỉ của tiệm Maid Refre đây rồi. Toàn mấy đứa nhóc xấc xược nhưng nhìn kỹ thế này thì... đứa nào cũng dễ thương ghê）[p]
+[舜]（Phòng nghỉ của quán Maid Refle đây rồi. Toàn mấy đứa con gái xấc xược đanh đá, nhưng nhìn thế này thì… đứa nào cũng dễ thương cả）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_rifure_high=2"  name="com_rifure_high"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1091,7 +1091,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/rifure_low.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Mấy em maid đang nghỉ ngơi thư giãn kìa. Hừ, bình thường đày đọa sai bảo tao cho lắm vào... Tối nay tao sẽ dùng hình ảnh của tụi mày để sóc lọ cho coi）[p]
+[舜]（Mấy cô nàng hầu gái đang nằm thư giãn kìa. Haiz, bình thường toàn sai vặt hành hạ mình cho đã… Hôm nay tao sẽ lấy tụi mày ra sục cặc cho bõ ghét）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_rifure_low=2"  name="com_rifure_low"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1114,7 +1114,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/rifurefitting_high.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Hình như Tsubomi đang thay đồ. Bình thường chẳng muốn khen con bé này đâu nhưng mà... công nhận ngực em nó đẹp thật...）[p]
+[舜]（Hình như Tsubomi đang thay đồ. Bình thường mình chẳng muốn khen con nhỏ này đâu… mà công nhận ngực em nó đẹp thật…）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_rifurefitting_high=2"  name="com_rifurefitting_high"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1137,7 +1137,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/rifurefitting_low.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Tsubomi đang thay đồ. Tạm gác cái tính khí sang một bên thì khuôn mặt với vóc dáng của em ấy đúng là đỉnh thật...）[p]
+[舜]（Tsubomi đang thay đồ. Tạm gác tính cách sang một bên thì khuôn mặt với vóc dáng của em nó đúng là đỉnh chóp thật）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_rifurefitting_low=2"  name="com_rifurefitting_low"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1160,7 +1160,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/rifurereception_high.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Có em maid đang tiếp khách kìa. Tsubomi sao...? Không, hình như là bạn maid khác）[p]
+[舜]（Có vẻ một cô hầu gái đang tiếp khách. Tsubomi sao…? Không, hình như là hầu gái khác）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_rifurereception_high=2"  name="com_rifurereception_high"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1183,7 +1183,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/rifurereception_high2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Ặc...! Làm tình ngay trong phòng tiếp khách là tụi này đấy à! Có biết ai là người phải dọn dẹp không hả lũ khốn nạn...）[p]
+[舜]（Chết tiệt…! Ra là mấy đứa này lén làm tình trong phòng tiếp khách à! Tụi mày có biết ai là người phải đi dọn dẹp bãi chiến trường không hả đồ khốn…）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_rifurereception_high2=2"  name="com_rifurereception_high2"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1206,7 +1206,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/rifurereception_low.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Nhưng mà, bị gái maid sờ soạng đụng chạm dính người thế này mà vẫn giữ được lý trí thì cũng nể thật... Là mình thì chịu chết）[p]
+[舜]（Cơ mà, bị mấy cô hầu gái vuốt ve mơn trớn thế này mà vẫn giữ được lý trí thì cũng nể thật… Nếu là mình thì chịu thua từ lâu rồi）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_rifurereception_low=2"  name="com_rifurereception_low"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1229,7 +1229,7 @@
 [bg  time="1000"  method="crossfade"  storage="tou/rifurereception_low2.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]（Chết tiệt...! Tiệm Refre đâu phải là cái loại quán đó đâu... Thằng này tao phải cấm cửa vĩnh viễn mới được...）[p]
+[舜]（Khốn nạn…! Quán Refle đâu phải là chỗ làm mấy trò đó… Thằng này lần sau tao cấm cửa không cho bước vào quán luôn…）[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.com_rifurereception_low=2"  name="com_rifurereception_low"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1252,8 +1252,8 @@
 [bg  time="1000"  method="crossfade"  storage="tou/pan_nagi.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]「Đây là... máy quay gắn trên đồng hồ đeo tay nhỉ...」[p]
-[舜]「...Bức ảnh chụp lúc đi ăn cùng nhau à. Vẫn sơ hở như mọi khi... Chẳng biết sẽ bị nhìn trộm ở đâu và lúc nào đâu, nên tốt nhất là đừng mặc váy ngắn thế này nữa chứ」[p]
+[舜]「Đây là… hình ảnh từ camera gắn trên đồng hồ đeo tay nhỉ…」[p]
+[舜]「…Là ảnh chụp lúc đi ăn cùng nhau sao. Em lúc nào cũng hớ hênh thế này…[r]Không biết lúc nào ở đâu bị người ta dòm ngó đâu, nên đừng có mặc váy ngắn cũn cỡn như thế nữa chứ」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.itemEV_idoucam_nagi=2"  name="itemEV_idoucam_nagi"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1276,8 +1276,8 @@
 [bg  time="1000"  method="crossfade"  storage="tou/pan_rinko.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]「Đây là... máy quay gắn trên đồng hồ đeo tay nhỉ...」[p]
-[舜]「...Bức ảnh chụp lúc đi ăn cùng nhau à. Dáng ngồi toát lên vẻ quý phái ghê[r]Nhưng mà nhìn rõ mồn một luôn này... Cặp đùi trông mềm mại quyến rũ thật...」[p]
+[舜]「Đây là… hình ảnh từ camera gắn trên đồng hồ đeo tay nhỉ…」[p]
+[舜]「…Là ảnh chụp lúc đi ăn cùng nhau sao. Dáng ngồi toát lên vẻ quý phái sang trọng ghê[r]Nhưng mà nhìn thấy hết trọn vẹn rồi nhé… Cặp đùi trắng nõn trông mềm mại thật đấy…」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.itemEV_idoucam_rinko=2"  name="itemEV_idoucam_rinko"  cmd="="  op="t"  val="2"  val_2="undefined"  ]
@@ -1300,8 +1300,8 @@
 [bg  time="1000"  method="crossfade"  storage="tou/pan_tubomi.gif"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-[舜]「Đây là... máy quay gắn trên đồng hồ đeo tay nhỉ...」[p]
-[舜]「...Bức ảnh chụp lúc đi ăn cùng nhau à. Đúng là cái tính không đổi, đến cả tướng ngồi cũng ra vẻ kênh kiệu thế này[r]Hiện lên rõ nét thế này thì tha hồ mà thưởng thức nhé」[p]
+[舜]「Đây là… hình ảnh từ camera gắn trên đồng hồ đeo tay nhỉ…」[p]
+[舜]「…Là ảnh chụp lúc đi ăn cùng nhau sao. Vẫn như mọi khi, đến cả tướng ngồi cũng kênh kiệu vênh váo[r]Nhưng mà camera quay rõ mồn một thế này rồi. Tao sẽ bóc lột tình dục mày cho thỏa thích」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.itemEV_idoucam_tubomi=2"  name="itemEV_idoucam_tubomi"  cmd="="  op="t"  val="2"  val_2="undefined"  ]

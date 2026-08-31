@@ -38,7 +38,7 @@
 
 [call  storage="system.ks"  target="*fade_out"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_supi_tubomi_kaisi1.mp3" buf="2"] Tsubomi「Ưm... Ly rượu Spirytus này mạnh quá... Đầu em quay cuồng hết cả rồi...」[p]
+[playse storage="tubomi/voice_supi_tubomi_kaisi1.mp3" buf="2"] Tsubomi「Ưm~♡ Đã bảo là không được mà…♡ Anh định làm gì em thế hả~? Aah… Người nóng ran lên rồi nè…♡」[p]
 [_tb_end_text]
 
 *top2
@@ -318,9 +318,9 @@
 [jump  storage="H_tubomi_supiritasu.ks"  target="*sounyu_skip"  cond="f.H_sounyu==1"  ]
 [bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
 [tb_start_text mode=1 ]
-[playse storage="tubomi/voice_supi_tubomi_sou1.mp3" buf="2"] [舜]「Uống từ từ thôi chứ, loại này nồng độ cồn cao lắm đấy」[p]
+[playse storage="tubomi/voice_supi_tubomi_sou1.mp3" buf="2"] Tsubomi「Aaaaah♡ T-To quá…♡ Không vào hết nổi đâuuu♡」[p]
 [舜]「Không sao đâu, nhìn này, vào rồi đấy…」[p]
-[playse storage="tubomi/voice_supi_tubomi_sou2.mp3" buf="2"] [舜]「Trông mặt em đỏ ửng hết cả lên rồi kìa, say rồi đúng không?」[p]
+[playse storage="tubomi/voice_supi_tubomi_sou2.mp3" buf="2"] Tsubomi「Phù, phù…♡ Vào hết rồi kìa♡ Chật ních bên trong luôn…♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="f.H_sounyu=1"  name="H_sounyu"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
@@ -553,7 +553,7 @@
 [cm  ]
 [tb_start_text mode=1 ]
 [舜]「Anh bắn lên người em nhé! Bắn lên cơ thể em là được đúng không?」[p]
-Dẫn chuyện|Tsubomi vừa nói vừa tự cởi bỏ từng cúc áo, để lộ làn da ửng hồng quyến rũ.[p]
+Tsubomi「Bắn lên đi anh♡ Bắn lên người em đi mà♡ Em muốn toàn thân nhớp nháp mùi tinh trùng của anh cơ♡」[p]
 [舜]「Ư… Ra mất rồi! Ưm ưm!」[p]
 [_tb_end_text]
 
@@ -569,8 +569,8 @@ Dẫn chuyện|Tsubomi vừa nói vừa tự cởi bỏ từng cúc áo, để l
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-[舜]「Tsubomi... Em biết mình đang làm gì không đấy?」[p]
-Tsubomi「Biết chứ... Em đang muốn quyến rũ anh đấy... Không được sao?」[p]
+Tsubomi「A…♡ Hiuuu♡ Ưm♡ Haa♡ Haa♡ Mùi nồng nàn quyến rũ quá…♡」[p]
+Tsubomi「Phù♡ Phù♡ Phù♡ Haa…♡ Dính bết khắp người em hết trơn rồi kìa…♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_bukkake_tubomi+=1"  name="Hresult_bukkake_tubomi"  cmd="+="  op="t"  val="1"  ]
@@ -585,9 +585,9 @@ Tsubomi「Biết chứ... Em đang muốn quyến rũ anh đấy... Không đư�
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-Dẫn chuyện|Em ấy sà vào lòng tôi, đôi bàn tay mềm mại bắt đầu lần mò xuống hạ bộ.[p]
-Tsubomi「Oa... Chỗ này của anh cương cứng ngắc rồi kìa... Thích ghê á...♡」[p]
-[舜]「Tại em cứ quyến rũ thế này ai mà chịu nổi」[p]
+Tsubomi「Aaaah♡ Rót đầy tràn bên trong rồi…♡ Cứ bắn hết vào trong thế này thì…」[p]
+Tsubomi「C-Có em bé… mất thôi…♡ Ưm♡ Chết mất, cứ nghĩ tới là cơ thể lại…♡」[p]
+Tsubomi「Nơi đó của em lại bắt đầu râm ran ngứa ngáy rồi nè…♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_bukkake_tubomi+=1"  name="Hresult_bukkake_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
@@ -598,9 +598,9 @@ Tsubomi「Oa... Chỗ này của anh cương cứng ngắc rồi kìa... Thích 
 [cm  ]
 [tb_start_text mode=1 ]
 [舜]「A~ không chịu nổi nữa rồi, ra mất… Anh bắn vào trong nhé…!」[p]
-Dẫn chuyện|Dưới tác dụng của hơi men nồng nặc, Tsubomi trở nên táo bạo và cuồng nhiệt hơn bao giờ hết.[p]
+Tsubomi「V-Vào trong á? Haa, aah♡ Thôi kệ… Cứ làm theo ý anh đi♡」[p]
 [舜]「Em có thể làm nũng xin anh mà…!」[p]
-[舜]「Được thôi, chiều theo ý em hết!」[p]
+Tsubomi「Cho em xin đi mà♡ V-Vào bên trong Tsubomi đi nè♡ Bắn thật nhiều tinh dịch nóng bỏng vào trong em đi màaaa♡」[p]
 [舜]「Ra rồi…! Aaaa!」[p]
 [_tb_end_text]
 
@@ -630,8 +630,8 @@ Dẫn chuyện|Dưới tác dụng của hơi men nồng nặc, Tsubomi trở n�
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-Tsubomi「Sướng quá đi mất... Rượu ngon cùng với con cu tuyệt hảo của anh... Em lên thiên đường mất rồi...♡」[p]
-[舜]「Bắn nhé, Tsubomi!」[p]
+Tsubomi「Hiu♡ Aaaaah♡ Tuyệt vời quá♡ Ahi♡ Đang phun xối xả từng đợt vào trong kìa♡ Auuuu♡」[p]
+Tsubomi「Cặc anh giật nảy từng hồi♡ Đang nhảy múa bên trong em kìa♡ A huu♡ Aaaaah♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_nakadasi_tubomi+=1"  name="Hresult_nakadasi_tubomi"  cmd="+="  op="t"  val="1"  ]
@@ -645,9 +645,9 @@ Tsubomi「Sướng quá đi mất... Rượu ngon cùng với con cu tuyệt h�
 [wait  time="1500"  ]
 [mask_off  time="4000"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-Tsubomi「Bắn đi anh! Tưới đẫm cơn say này cho em đi!」[p]
-Dẫn chuyện|Dòng tinh dịch cuồng nhiệt phun trào, kết thúc một đêm say đắm đầy hoang dại.[p]
-Tsubomi「Hà... hà... Say rượu lẫn say tình... Em chết mê chết mệt anh mất rồi...♡」[p]
+Tsubomi「Aaaah♡ Vẫn đang chuyển động liên tục bên trong em này…♡ Haa, haa, haa♡ Bắn phụt phụt sướng quá đi♡」[p]
+Tsubomi「Nhiều thế này thì… không chứa nổi đâu mà♡ Anh bắn nhiều tinh trùng quá trời luôn…♡」[p]
+Tsubomi「Bụng em căng tròn phồng to hết cả lên rồi nèeee♡」[p]
 [_tb_end_text]
 
 [tb_eval  exp="sf.Hresult_nakadasi_tubomi+=1"  name="Hresult_nakadasi_tubomi"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
