@@ -7,15 +7,24 @@
 
 ;=========================================
 	[layopt layer="message0" visible="false"]
+	[layopt layer="message1" visible="false"]
+	[layopt layer="0" visible="false"]
+	[layopt layer="1" visible="false"]
+	[layopt layer="2" visible="false"]
+	[freeimage layer="0"]
+	[freeimage layer="1"]
+	[freeimage layer="2"]
 	[clearfix]
 	[stop_keyconfig]
-	[free_layermode time="100" wait="true"]
-	[reset_camera time="100" wait="true"]
+	[free_layermode time="0" wait="true"]
+	[reset_camera time="0" wait="true"]
 
 	[plugin name="uiparts_set" ]
 
 	[iscript]
 	$(".layer_camera").empty();
+	$(".layer_fore").not(".base_fore").empty().hide();
+	$(".message_outer, .message_inner").hide();
 	[endscript]
 
 	[hidemenubutton]
@@ -184,7 +193,7 @@
 
 [cm]
 
-	[bg storage="&tf.img_path +'bg_config.jpg'" time="286"]
+	[bg storage="&tf.img_path +'bg_config.jpg'" time="0"]
 	[button fix="true" name="config_back" graphic="&tf.img_path + 'c_btn_back.png'" enterimg="&tf.img_path + 'c_btn_back2.png'" target="*backtitle" x="1208" y="7"]
 	[button fix="true" name="config_reset" graphic="&tf.img_path + 'config_reset_off.png'" enterimg="&tf.img_path + 'config_reset_on.png'" target="*reset" x="1064" y="680" ]
 [jump target="*config_page"]
