@@ -575,7 +575,11 @@ tyrano.plugin.kag.tag.position = {
             target_layer.css("background-color", $.convertColor(this.kag.config.frameColor))
         } else if ("" != pm.frame) {
             var storage_url = ""
-            if ($.isHTTP(pm.frame)) { storage_url = pm.frame; } else if (pm.frame.indexOf("../") == 0) { storage_url = "./data/" + pm.frame.replace("../", ""); } else { storage_url = "./data/image/" + pm.frame; } if (window.resolveCDNUrl) { storage_url = window.resolveCDNUrl(storage_url); } target_layer.css("background-image", "url(" + storage_url + ")"); target_layer.css("background-repeat", "no-repeat"); target_layer.css("background-size", "100% 100%"); target_layer.css("opacity", 1); target_layer.css("background-color", "transparent");
+            storage_url = $.isHTTP(pm.frame) ? pm.frame : "./data/image/" + pm.frame
+            target_layer.css("background-image", "url(" + storage_url + ")")
+            target_layer.css("background-repeat", "no-repeat")
+            target_layer.css("opacity", 1)
+            target_layer.css("background-color", "")
         }
         "" != pm.opacity && target_layer.css("opacity", $.convertOpacity(pm.opacity))
         this.kag.setStyles(target_layer, new_style)
@@ -1327,15 +1331,9 @@ tyrano.plugin.kag.tag.button = {
                 "" != _pm.clickse && that.kag.ftag.startTag("playse", {storage: _pm.clickse, stop: !0})
                 that.kag.layer.showEventLayer()
                 if ("" == _pm.role && "true" == _pm.fix) {
-                    var stack_pm = that.kag.getStack("call")
-                    if (null != stack_pm) {
-                        that.kag.log("callスタックが残っている場合、fixボタンは反応しません")
-                        that.kag.log(stack_pm)
-                        return !1
-                    }
-                    var _auto_next = _pm.auto_next
-                    1 == that.kag.stat.is_strong_stop && (_auto_next = "stop")
-                    that.kag.ftag.startTag("call", {storage: _storage, target: _target, auto_next: _auto_next})
+                    var _target_to_jump = _target || _pm.target;
+                    var _storage_to_jump = _storage || _pm.storage;
+                    that.kag.ftag.startTag("jump", {storage: _storage_to_jump, target: _target_to_jump})
                 } else that.kag.ftag.startTag("jump", _pm)
                 "true" == that.kag.stat.skip_link ? event.stopPropagation() : (that.kag.stat.is_skip = !1)
             })

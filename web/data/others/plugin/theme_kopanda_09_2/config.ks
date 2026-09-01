@@ -199,8 +199,8 @@ if (sf.config_default_set !== true) {
 [cm]
 
 	[bg storage="&tf.img_path +'bg_config.jpg'" time="286"]
-	[button graphic="&tf.img_path + 'c_btn_back.png'" enterimg="&tf.img_path + 'c_btn_back2.png'" target="*backtitle" x="1208" y="7"]
-	[button graphic="&tf.img_path + 'config_reset_off.png'" enterimg="&tf.img_path + 'config_reset_on.png'" target="*reset" x="1064" y="680" ]
+	[button fix="true" name="config_back" graphic="&tf.img_path + 'c_btn_back.png'" enterimg="&tf.img_path + 'c_btn_back2.png'" target="*backtitle" x="1208" y="7"]
+	[button fix="true" name="config_reset" graphic="&tf.img_path + 'config_reset_off.png'" enterimg="&tf.img_path + 'config_reset_on.png'" target="*reset" x="1064" y="680" ]
 [jump target="*config_page"]
 
 
@@ -320,6 +320,8 @@ if (sf.config_default_set !== true) {
 
 [layopt layer="0" visible="true"]
 [test_message_start]
+
+*config_idle
 [s]
 
 ;--------------------------------------------------------------------------------
@@ -398,6 +400,7 @@ if (window.__update_slider_dom) {
 
 [test_message_reset]
 
+[jump target="*config_idle"]
 [s]
 
 ;================================================================================
@@ -427,8 +430,8 @@ if (window.__update_slider_dom) {
 *vol_bgm_change
 	[bgmopt volume="&tf.current_bgm_vol"]
 [call target="*mute_bgm_button" ]
-
-[return]
+[jump target="*config_idle"]
+[s]
 
 ;--------------------------------------------------------------------------------
 ; SE音量
@@ -455,8 +458,8 @@ if (window.__update_slider_dom) {
 	[endscript ]
 	[seopt buf="0" volume="&tf.current_se_vol"]
 [call target="*mute_se_button" ]
-
-[return]
+[jump target="*config_idle"]
+[s]
 
 ;--------------------------------------------------------------------------------
 ; ボイス音量
@@ -489,8 +492,8 @@ if (window.__update_slider_dom) {
 [seopt buf="2" volume="&tf.current_voice_2_vol"]
 [seopt buf="3" volume="&tf.current_voice_3_vol"]
 [call target="*mute_voice_button" ]
-
-[return]
+[jump target="*config_idle"]
+[s]
 
 
 ;---------------------------------------------------------------------------------
@@ -516,7 +519,9 @@ if (window.__update_slider_dom) {
 [configdelay speed="&tf.current_ch_speed"]
 [test_message_reset]
 [call target="*mute_text_button"]
-[return]
+[jump target="*config_idle"]
+[s]
+
 ;--------------------------------------------------------------------------------
 ; オート速度
 ;--------------------------------------------------------------------------------
@@ -539,7 +544,8 @@ if (window.__update_slider_dom) {
 [autoconfig speed="&tf.current_auto_speed"]
 [test_message_reset]
 [call target="*mute_auto_button"]
-[return]
+[jump target="*config_idle"]
+[s]
 
 ;--------------------------------------------------------------------------------
 ; スキップ処理
@@ -556,7 +562,8 @@ if (window.__update_slider_dom) {
 	[config_record_label skip="true"]
 	[endif]
 
-[return]
+[jump target="*config_idle"]
+[s]
 
 ;--------------------------------------------------------------------------------
 ; アニメON/OFF処理
@@ -566,7 +573,8 @@ if (window.__update_slider_dom) {
 f.workanime = tf.current_workanime
 [endscript ]
 [call target="*anime_button" ]
-[return]
+[jump target="*config_idle"]
+[s]
 
 
 
