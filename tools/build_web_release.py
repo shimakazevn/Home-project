@@ -1134,37 +1134,8 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
                 'that.kag.ftag.startTag("sleepgame", _pm)\n                    }',
                 'that.kag.ftag.startTag("sleepgame", _pm)\n                            break\n                        case "awakegame":\n                            j_button.trigger("mouseout")\n                            that.kag.ftag.startTag("awakegame", _pm)\n                    }'
             )
-        # Chặn mọi nút và jump/sleepgame/call mở config.ks để mở Modern In-Modal HUD Config
-        tag_code = tag_code.replace(
-            'j_button.click(function (event) {',
-            'j_button.click(function (event) {\n                if ((_pm.storage && _pm.storage.indexOf("config.ks") !== -1) || (_pm.graphic && _pm.graphic.indexOf("config") !== -1) || _pm.role === "config") {\n                    if (window.openModernConfigModal) { window.openModernConfigModal(); event.stopPropagation(); return !1; }\n                }'
-        )
-        tag_code = tag_code.replace(
-            'case "sleepgame":\n                            j_button.trigger("mouseout")',
-            'case "sleepgame":\n                            j_button.trigger("mouseout");\n                            if ((_pm.storage && _pm.storage.indexOf("config.ks") !== -1) || _pm.role === "config") {\n                                if (window.openModernConfigModal) { window.openModernConfigModal(); event.stopPropagation(); return !1; }\n                            }'
-        )
-        tag_code = tag_code.replace(
-            'tyrano.plugin.kag.tag.jump = {\n    pm: {storage: null, target: null, countpage: !0},\n    start: function (pm) {',
-            'tyrano.plugin.kag.tag.jump = {\n    pm: {storage: null, target: null, countpage: !0},\n    start: function (pm) {\n        if (pm.storage && pm.storage.indexOf("config.ks") !== -1) {\n            if (window.openModernConfigModal) { window.openModernConfigModal(); this.kag.ftag.nextOrder(); return; }\n        }'
-        )
-        tag_code = tag_code.replace(
-            'tyrano.plugin.kag.tag.call = {\n    pm: {storage: null, target: null, countpage: !0, auto_next: "yes"},\n    start: function (pm) {',
-            'tyrano.plugin.kag.tag.call = {\n    pm: {storage: null, target: null, countpage: !0, auto_next: "yes"},\n    start: function (pm) {\n        if (pm.storage && pm.storage.indexOf("config.ks") !== -1) {\n            if (window.openModernConfigModal) { window.openModernConfigModal(); this.kag.ftag.nextOrder(); return; }\n        }'
-        )
         with open(tag_js_path, 'w', encoding='utf-8') as f:
             f.write(tag_code)
-
-    # Chặn sleepgame tag trong kag.tag_system.js
-    tag_sys_path = os.path.join(WEB_SRC_DIR, 'tyrano', 'plugins', 'kag', 'kag.tag_system.js')
-    if os.path.exists(tag_sys_path):
-        with open(tag_sys_path, 'r', encoding='utf-8', errors='ignore') as f:
-            sys_code = f.read()
-        sys_code = sys_code.replace(
-            'tyrano.plugin.kag.tag.sleepgame={vital:[],pm:{storage:"",target:"",next:!0},start:function(pm){',
-            'tyrano.plugin.kag.tag.sleepgame={vital:[],pm:{storage:"",target:"",next:!0},start:function(pm){if(pm.storage&&pm.storage.indexOf("config.ks")!==-1){if(window.openModernConfigModal){window.openModernConfigModal();this.kag.ftag.nextOrder();return;}}'
-        )
-        with open(tag_sys_path, 'w', encoding='utf-8') as f:
-            f.write(sys_code)
 
     # Chuẩn hoá message_window.ks với khung gradient mờ của theme_kopanda
     clean_msg_win = """;メッセージレイヤの定義
