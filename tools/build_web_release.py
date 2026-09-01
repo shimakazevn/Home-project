@@ -124,7 +124,14 @@ TYRANO.kag.tag.awakegame_ex = {
         color: "black",
     },
     start: function(pm){
-        if (null == this.kag.tmp.sleep_game) this.kag.ftag.nextOrder();
+        if (null == this.kag.tmp.sleep_game) {
+            if (this.kag.stat.current_scenario && (this.kag.stat.current_scenario.indexOf("config.ks") !== -1)) {
+                this.kag.ftag.startTag("jump", { storage: "title_screen.ks", target: "*start" });
+            } else {
+                this.kag.ftag.nextOrder();
+            }
+            return;
+        }
         else {
             if(pm.mask == "true"){
                 TYRANO.kag.variable.tf._awakegame_ex = 0;

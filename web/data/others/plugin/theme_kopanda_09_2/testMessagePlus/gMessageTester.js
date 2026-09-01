@@ -89,7 +89,12 @@ window.gMessageTester = {
 
 	TM.update = function() {
 		if (!TM.messageArea || $(".test_message_area").length < 1) return;
-		var CO = (tyrano && tyrano.plugin && tyrano.plugin.kag && tyrano.plugin.kag.config) ? tyrano.plugin.kag.config : { chSpeed: 30, autoSpeed: 1300 };
+		var chSpeed = 30;
+		var autoSpeed = 1300;
+		if (window.TYRANO && TYRANO.kag && TYRANO.kag.config) {
+			chSpeed = parseInt(TYRANO.kag.config.chSpeed || 30);
+			autoSpeed = parseInt(TYRANO.kag.config.autoSpeed || 1300);
+		}
 
 		TM.getCurrentState();
 		TM.clearMessageArea();

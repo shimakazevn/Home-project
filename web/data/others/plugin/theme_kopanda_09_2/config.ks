@@ -199,8 +199,8 @@ if (sf.config_default_set !== true) {
 [cm]
 
 	[bg storage="&tf.img_path +'bg_config.jpg'" time="286"]
-	[button fix="true" graphic="&tf.img_path + 'c_btn_back.png'" enterimg="&tf.img_path + 'c_btn_back2.png'" target="*backtitle" x="1208" y="7"]
-	[button fix="true" graphic="&tf.img_path + 'config_reset_off.png'" enterimg="&tf.img_path + 'config_reset_on.png'" target="*reset" x="1064" y="680" ]
+	[button graphic="&tf.img_path + 'c_btn_back.png'" enterimg="&tf.img_path + 'c_btn_back2.png'" target="*backtitle" x="1208" y="7"]
+	[button graphic="&tf.img_path + 'config_reset_off.png'" enterimg="&tf.img_path + 'config_reset_on.png'" target="*reset" x="1064" y="680" ]
 [jump target="*config_page"]
 
 
@@ -368,6 +368,16 @@ tf.current_auto_speed = 2500
 tf.slider_ch_speed = 51
 tf.slider_auto_speed = 2501
 
+if (window.__update_slider_dom) {
+    window.__update_slider_dom('bgm', 50);
+    window.__update_slider_dom('se', 50);
+    window.__update_slider_dom('voice_1', 70);
+    window.__update_slider_dom('voice_2', 70);
+    window.__update_slider_dom('voice_3', 70);
+    window.__update_slider_dom('text', 51);
+    window.__update_slider_dom('auto', 2501);
+}
+
 [endscript]
 
 [bgmopt volume="50"]
@@ -386,7 +396,8 @@ tf.slider_auto_speed = 2501
 [call target="*mute_auto_button"]
 [call target="*anime_button"]
 
-[jump]
+[test_message_reset]
+
 [s]
 
 ;================================================================================
