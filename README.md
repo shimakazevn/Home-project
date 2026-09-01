@@ -12,8 +12,8 @@ Dự án bản dịch tiếng Việt cho Visual Novel **HOME** (Mã tác phẩm:
 ## 1. Hướng Dẫn Cài Đặt Bản PC
 
 ### Cách cài đặt bằng Auto-Patcher (Khuyên dùng)
-1. Tải bản phát hành mới nhất từ mục Releases hoặc lấy file `dist_pc/CAI_DAT_PATCH_VIET_HOA.exe`.
-2. Đặt file cài đặt vào cùng thư mục chứa `HOME.exe` của game gốc.
+1. Tải bộ cài đặt mới nhất tại: [https://github.com/shimakazevn/Home-project/releases](https://github.com/shimakazevn/Home-project/releases) (file `CAI_DAT_PATCH_VIET_HOA.exe`).
+2. Đặt file `CAI_DAT_PATCH_VIET_HOA.exe` vào cùng thư mục chứa `HOME.exe` của game gốc.
 3. Chạy `CAI_DAT_PATCH_VIET_HOA.exe`.
 4. Bấm nút **Cài Đặt Patch Việt Hóa**. Quá trình vá file diễn ra trực tiếp vào thư mục `resources/app/` trong chưa đầy 1 giây.
 5. Khi hoàn tất, bấm **Khởi Động Game** để bắt đầu chơi.
