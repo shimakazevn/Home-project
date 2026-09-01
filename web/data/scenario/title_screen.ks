@@ -68,6 +68,8 @@
 ;Hシーンリプレイ
 [button target=*HReplay enterimg=title_Hreplay_on.png clickimg=title_Hreplay_on.png x=16 y=590 graphic=title_Hreplay_off.png enterse=sistem_starton.mp3 name="title"]
 
+[ptext layer="1" x="910" y="694" text="Bản dịch tiếng Việt bởi Seikowo Team" size="13" color="0xFFFFFF" bold="" edge="0x000000" shadow="0x000000" name="title_credit"]
+
 [anim name="title" opacity=0 time=0]
 [anim name="title" opacity=255 time=500]
 [_tb_end_tyrano_code]
