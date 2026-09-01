@@ -335,16 +335,20 @@
         stopBGM,
         playSE,
         setBgmVolume: (vol) => {
+            const parsed = parseFloat(vol);
+            const v = isNaN(parsed) ? 80 : Math.max(0, Math.min(100, parsed));
             if (activeBgmGainNode) {
-                const norm = (parseFloat(vol) || 80) / 100.0;
-                activeBgmGainNode.gain.value = Math.max(0, Math.min(1.0, norm * MASTER_BGM_SCALE));
+                const norm = v / 100.0;
+                activeBgmGainNode.gain.value = norm * MASTER_BGM_SCALE;
             }
         },
         setSeVolume: (buf, vol) => {
             const bufStr = String(buf || "0");
+            const parsed = parseFloat(vol);
+            const v = isNaN(parsed) ? 80 : Math.max(0, Math.min(100, parsed));
             if (activeSeMap.has(bufStr)) {
-                const norm = (parseFloat(vol) || 80) / 100.0;
-                activeSeMap.get(bufStr).gainNode.gain.value = Math.max(0, Math.min(1.0, norm * MASTER_SE_SCALE));
+                const norm = v / 100.0;
+                activeSeMap.get(bufStr).gainNode.gain.value = norm * MASTER_SE_SCALE;
             }
         }
     };

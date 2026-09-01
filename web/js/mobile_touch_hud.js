@@ -567,6 +567,16 @@
 
                         <div class="hmc-row">
                             <div class="hmc-row-left">
+                                <div class="hmc-row-label">Cài đặt Hệ thống (Config)</div>
+                                <div class="hmc-row-sublabel">Chỉnh Âm lượng BGM, Voice, Tốc độ chữ</div>
+                            </div>
+                            <div class="hmc-row-actions">
+                                <button class="hmc-pill-btn" id="btn_modal_config">Mở Config</button>
+                            </div>
+                        </div>
+
+                        <div class="hmc-row">
+                            <div class="hmc-row-left">
                                 <div class="hmc-row-label">Toàn màn hình</div>
                                 <div class="hmc-row-sublabel">Tối ưu không gian hiển thị</div>
                             </div>
@@ -649,6 +659,21 @@
                 if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.layer) {
                     closeModal();
                     window.TYRANO.kag.layer.hideMessageLayers();
+                }
+            });
+            document.getElementById('btn_modal_config')?.addEventListener('click', () => {
+                if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.ftag) {
+                    closeModal();
+                    if (isGameActive()) {
+                        window.TYRANO.kag.ftag.startTag("sleepgame", {
+                            storage: "../others/plugin/theme_kopanda_09_2/config.ks",
+                            next: false
+                        });
+                    } else {
+                        window.TYRANO.kag.ftag.startTag("jump", {
+                            storage: "../others/plugin/theme_kopanda_09_2/config.ks"
+                        });
+                    }
                 }
             });
             document.getElementById('btn_modal_fullscreen')?.addEventListener('click', () => {
