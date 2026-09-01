@@ -3007,19 +3007,17 @@ img[src*="workring_en.png"] {
                 position: fixed;
                 inset: 0;
                 z-index: 1000000;
-                background: rgba(0, 0, 0, 0.45);
-                backdrop-filter: blur(25px);
-                -webkit-backdrop-filter: blur(25px);
+                background: rgba(0, 0, 0, 0.55);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                padding: 16px;
+                padding: 8px 12px;
                 opacity: 0;
                 pointer-events: none;
-                transition: opacity 0.22s ease;
-                padding: 12px;
+                transition: opacity 0.2s ease;
                 box-sizing: border-box;
-                touch-action: none;
             }
             #home-modal-overlay.open {
                 opacity: 1;
@@ -3027,20 +3025,20 @@ img[src*="workring_en.png"] {
             }
             #home-modal-card {
                 width: 100%;
-                max-width: 440px;
-                max-height: 88vh;
-                max-height: 88dvh;
-                background: rgba(26, 26, 30, 0.95);
+                max-width: 600px;
+                max-height: 94vh;
+                max-height: 94dvh;
+                background: rgba(24, 24, 28, 0.96);
                 backdrop-filter: blur(50px) saturate(190%);
                 -webkit-backdrop-filter: blur(50px) saturate(190%);
-                border: 0.5px solid rgba(255, 255, 255, 0.14);
-                border-radius: 22px;
-                box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+                border: 0.5px solid rgba(255, 255, 255, 0.16);
+                border-radius: 16px;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
                 display: flex;
                 flex-direction: column;
                 overflow: hidden;
-                transform: scale(0.95) translateY(12px);
-                transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+                transform: scale(0.96) translateY(8px);
+                transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
                 color: #FFFFFF;
                 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
                 user-select: none;
@@ -3052,25 +3050,19 @@ img[src*="workring_en.png"] {
             }
             .hmc-sheet-handle-wrap {
                 width: 100%;
-                padding: 10px 0 4px;
+                padding: 6px 0 2px;
                 display: flex;
                 justify-content: center;
-                cursor: grab;
-                touch-action: none;
                 flex-shrink: 0;
             }
             .hmc-sheet-handle {
-                width: 44px;
-                height: 5px;
+                width: 36px;
+                height: 4px;
                 border-radius: 999px;
-                background: rgba(255, 255, 255, 0.32);
-                transition: background 0.15s ease;
-            }
-            .hmc-sheet-handle-wrap:active .hmc-sheet-handle {
-                background: rgba(255, 255, 255, 0.6);
+                background: rgba(255, 255, 255, 0.25);
             }
             .hmc-header {
-                padding: 10px 18px 12px;
+                padding: 6px 16px 8px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -3078,59 +3070,63 @@ img[src*="workring_en.png"] {
                 flex-shrink: 0;
             }
             .hmc-title {
-                font-size: 16px;
+                font-size: 15px;
                 font-weight: 600;
                 color: #FFFFFF;
                 letter-spacing: -0.01em;
                 margin: 0;
             }
             .hmc-close {
-                background: rgba(120, 120, 128, 0.2);
+                background: rgba(120, 120, 128, 0.25);
                 border: none;
                 border-radius: 50%;
-                width: 26px;
-                height: 26px;
+                width: 28px;
+                height: 28px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                color: rgba(235, 235, 245, 0.65);
+                color: rgba(235, 235, 245, 0.8);
                 cursor: pointer;
-                font-size: 11px;
+                font-size: 12px;
                 font-weight: 700;
                 transition: all 0.15s ease;
                 flex-shrink: 0;
                 outline: none;
             }
             .hmc-close:hover {
-                background: rgba(120, 120, 128, 0.35);
+                background: rgba(120, 120, 128, 0.4);
                 color: #FFFFFF;
             }
             .hmc-close:active {
                 transform: scale(0.92);
             }
             .hmc-body {
-                padding: 14px 16px 18px;
+                padding: 10px 14px 14px;
                 flex: 1 1 auto;
                 min-height: 0;
-                overflow-y: auto;
+                overflow-y: scroll;
                 overflow-x: hidden;
                 -webkit-overflow-scrolling: touch;
-                touch-action: pan-y;
+                touch-action: pan-y !important;
                 display: flex;
                 flex-direction: column;
-                gap: 14px;
+                gap: 10px;
                 scrollbar-width: thin;
-                scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+                scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
             }
             .hmc-body::-webkit-scrollbar {
-                width: 4px;
+                width: 6px;
             }
             .hmc-body::-webkit-scrollbar-track {
-                background: transparent;
+                background: rgba(0, 0, 0, 0.15);
+                border-radius: 4px;
             }
             .hmc-body::-webkit-scrollbar-thumb {
-                background: rgba(255, 255, 255, 0.2);
+                background: rgba(255, 255, 255, 0.35);
                 border-radius: 4px;
+            }
+            .hmc-body::-webkit-scrollbar-thumb:hover {
+                background: rgba(255, 255, 255, 0.55);
             }
             .hmc-group-header {
                 font-size: 11px;
@@ -3491,25 +3487,76 @@ img[src*="workring_en.png"] {
             .hmc-btn-save:hover {
                 background: #0071E3;
             }
-            @media (max-width: 480px) {
-                #home-modal-overlay { padding: 0; align-items: flex-end; }
-                #home-modal-card { max-width: 100%; max-height: 92vh; max-height: 92dvh; border-radius: 24px 24px 0 0; border-bottom: none; }
-                .hmc-header { padding: 8px 14px 10px; }
-                .hmc-title { font-size: 15px; }
-                .hmc-body { padding: 10px 12px 16px; gap: 12px; }
-                .hmc-row { padding: 9px 12px; }
-                .hmc-row-label { font-size: 13.5px; }
-                .hmc-pill-btn { padding: 4px 11px; font-size: 12px; }
-            }
-            @media (max-height: 540px) {
-                #home-modal-overlay { padding: 6px; align-items: center; }
-                #home-modal-card { max-height: 96vh; max-height: 96dvh; border-radius: 14px; max-width: 520px; }
-                .hmc-sheet-handle-wrap { padding: 4px 0 2px; }
-                .hmc-header { padding: 4px 14px; }
-                .hmc-title { font-size: 13.5px; }
-                .hmc-body { padding: 6px 10px 10px; gap: 8px; }
-                .hmc-row { padding: 7px 10px; }
-                .hmc-group-header { margin: 0 0 3px 4px; font-size: 10px; }
+            /* Landscape First: Màn hình ngang trên mobile (chiều cao <= 560px) */
+            @media (max-height: 560px) {
+                #home-modal-overlay { 
+                    padding: 4px 12px; 
+                    align-items: center; 
+                }
+                #home-modal-card { 
+                    max-width: 620px;
+                    max-height: 96vh; 
+                    max-height: 96dvh; 
+                    border-radius: 14px; 
+                }
+                .hmc-sheet-handle-wrap { 
+                    padding: 3px 0 1px; 
+                }
+                .hmc-header { 
+                    padding: 4px 12px 6px; 
+                }
+                .hmc-title { 
+                    font-size: 13.5px; 
+                }
+                .hmc-close { 
+                    width: 24px; 
+                    height: 24px; 
+                    font-size: 11px; 
+                }
+                .hmc-body { 
+                    padding: 6px 12px 10px; 
+                    gap: 8px; 
+                }
+                .hmc-row { 
+                    padding: 6px 10px; 
+                }
+                .hmc-row-label { 
+                    font-size: 12.5px; 
+                }
+                .hmc-row-sublabel { 
+                    font-size: 10px; 
+                }
+                .hmc-pill-btn { 
+                    padding: 3px 10px; 
+                    font-size: 11.5px; 
+                    min-height: 24px; 
+                }
+                .hmc-group-header { 
+                    margin: 0 0 3px 4px; 
+                    font-size: 10px; 
+                }
+                .hmc-slider-row { 
+                    padding: 6px 10px; 
+                    gap: 8px; 
+                }
+                .hmc-slider-title { 
+                    font-size: 12px; 
+                }
+                .hmc-slider-sub { 
+                    font-size: 9.5px; 
+                }
+                .hmc-segmented { 
+                    gap: 4px; 
+                    padding: 3px; 
+                }
+                .hmc-segment-item { 
+                    padding: 4px 6px; 
+                    font-size: 11px; 
+                }
+                .hmc-footer-btn { 
+                    padding: 7px 12px; 
+                    font-size: 11.5px; 
+                }
             }
         `;
         document.head.appendChild(style);
@@ -3550,67 +3597,44 @@ img[src*="workring_en.png"] {
         document.getElementById('hmc-close-btn').onclick = closeModal;
         overlay.onclick = (e) => { if (e.target === overlay) closeModal(); };
 
-        // ─── Tối ưu vuốt chạm trên Mobile & Fullscreen ────────────────────────────
+        // ─── Tối ưu vuốt chạm: Chỉ đóng khi vuốt từ thanh header / handle ──────────
         let touchStartY = 0;
-        let touchCurrentY = 0;
-        let isDraggingCard = false;
+        let isDraggingHeader = false;
 
-        card.addEventListener('touchstart', (e) => {
-            if (e.touches.length !== 1) return;
-            const touch = e.touches[0];
-            touchStartY = touch.clientY;
-            touchCurrentY = touch.clientY;
-            const bodyEl = document.getElementById('hmc-dynamic-body');
-            if (e.target.closest('.hmc-sheet-handle-wrap') || e.target.closest('.hmc-header') || (bodyEl && bodyEl.scrollTop <= 0)) {
-                isDraggingCard = true;
-            }
-        }, { passive: true });
+        const handleWrap = overlay.querySelector('.hmc-sheet-handle-wrap');
+        const headerEl = overlay.querySelector('.hmc-header');
 
-        card.addEventListener('touchmove', (e) => {
-            if (!isDraggingCard || e.touches.length !== 1) return;
-            const touch = e.touches[0];
-            touchCurrentY = touch.clientY;
-            const deltaY = touchCurrentY - touchStartY;
-            if (deltaY > 0) {
-                card.style.transition = 'none';
-                card.style.transform = `translateY(${deltaY}px)`;
-                if (e.cancelable) e.preventDefault();
-            }
-        }, { passive: false });
-
-        card.addEventListener('touchend', (e) => {
-            if (!isDraggingCard) return;
-            isDraggingCard = false;
-            const deltaY = touchCurrentY - touchStartY;
-            card.style.transition = 'transform 0.22s cubic-bezier(0.16, 1, 0.3, 1)';
-            if (deltaY > 75) {
-                card.style.transform = 'translateY(100%)';
-                setTimeout(() => {
-                    closeModal();
-                    card.style.transform = '';
-                }, 180);
-            } else {
-                card.style.transform = 'scale(1) translateY(0)';
-            }
-        }, { passive: true });
-
-        // Vuốt lên từ Floating Gear Button để mở modal
-        let gearTouchStartY = 0;
-        gearBtn.addEventListener('touchstart', (e) => {
-            if (e.touches.length === 1) gearTouchStartY = e.touches[0].clientY;
-        }, { passive: true });
-        gearBtn.addEventListener('touchend', (e) => {
-            if (e.changedTouches.length === 1) {
-                const endY = e.changedTouches[0].clientY;
-                if (gearTouchStartY - endY > 25) {
-                    openModal();
+        [handleWrap, headerEl].forEach(target => {
+            if (!target) return;
+            target.addEventListener('touchstart', (e) => {
+                if (e.touches.length === 1) {
+                    touchStartY = e.touches[0].clientY;
+                    isDraggingHeader = true;
                 }
-            }
-        }, { passive: true });
+            }, { passive: true });
 
-        // Cách ly sự kiện chạm không cho lọt xuống khung game bên dưới
-        overlay.addEventListener('touchstart', (e) => e.stopPropagation(), { passive: true });
-        overlay.addEventListener('touchend', (e) => e.stopPropagation(), { passive: true });
+            target.addEventListener('touchmove', (e) => {
+                if (!isDraggingHeader || e.touches.length !== 1) return;
+                const deltaY = e.touches[0].clientY - touchStartY;
+                if (deltaY > 0) {
+                    card.style.transition = 'none';
+                    card.style.transform = `translateY(${deltaY}px)`;
+                }
+            }, { passive: true });
+
+            target.addEventListener('touchend', (e) => {
+                if (!isDraggingHeader) return;
+                isDraggingHeader = false;
+                const deltaY = (e.changedTouches[0] ? e.changedTouches[0].clientY : 0) - touchStartY;
+                card.style.transition = 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1)';
+                if (deltaY > 60) {
+                    closeModal();
+                    setTimeout(() => { card.style.transform = ''; }, 200);
+                } else {
+                    card.style.transform = 'scale(1) translateY(0)';
+                }
+            }, { passive: true });
+        });
 
         let currentModalView = 'main'; // 'main' or 'config'
 
@@ -4364,7 +4388,7 @@ img[src*="workring_en.png"] {
   <script type="text/javascript" src="./tyrano/libs/jsQR.js"></script>
 </head>
 
-<body onselectstart="return false" oncontextmenu="return false;" ontouchmove="event.preventDefault()">
+<body onselectstart="return false" oncontextmenu="return false;">
   <!-- Main Tyrano Canvas Frame -->
   <div id="tyrano_base" class="tyrano_base" unselectable="on" ondragstart="return false"></div>
   <div id="vchat_base" class="vchat_base" unselectable="on" ondragstart="return false"></div>
