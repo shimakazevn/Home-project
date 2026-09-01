@@ -29,6 +29,11 @@ html, body {
     background-color: #000000;
 }
 
+.message_outer {
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+}
+
 img[src*="workring_en.png"] {
     pointer-events: none !important;
 }

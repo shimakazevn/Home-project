@@ -1,11 +1,8 @@
 ;メッセージレイヤの定義
 
-		[position width=1430 height=474 top=417 left=20 ]
+		[position width=1280 height=275 top=447 left=0 ]
 
-
-		
-			[position page=fore margint=45 marginl=10 marginr=20 marginb=10 vertical=false opacity="180" radius="0" color="0x000000" ]
-		
+		[position page=fore margint=110 marginl=140 marginr=150 marginb=10 vertical=false frame="../others/plugin/theme_kopanda_09_2/image/frame_message.png" opacity="255" ]
 
 		[ptext name="chara_name_area" layer="message0" color=0xFFFFFF size=0 x=0 y=0 bold="" edge="undefined" shadow="undefined"]
 
@@ -18,10 +15,6 @@
 		;クリック待ちボタンについて
 		[glyph fix="false" left="0" top="0" ]
 
-		
-
 		;CG・回想用の共通項目
 		[eval exp="sf._tb_cg_noimage='button/Noimage.png'" ]
 		[eval exp="sf._tb_replay_noimage='kaisou_H/Noimage2.png'" ]
-
-		

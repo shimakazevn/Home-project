@@ -1,7 +1,7 @@
 {
   "version": "3.1.0",
-  "generated_at": "2026-08-31 22:33:26",
-  "total_files": 290,
+  "generated_at": "2026-09-01 15:25:19",
+  "total_files": 291,
   "files": {
     "data/asset_manifest.json": {
       "sha256": "691e7a4c2b5ca30a8a25543b629f0d7e9c1f9646650f8c356764e14ef1f76396",
@@ -1150,6 +1150,10 @@
     "data/scenario/_preview.ks": {
       "sha256": "798523dce6a68103263f01ace2477a750e3c91ed871c8fb8ebde5fb9c55ad6b7",
       "size": 1842
+    },
+    "data/scenario/system/message_window.ks": {
+      "sha256": "f7fc0d0be8f00f605c36eacb85aba258370f61dfaf72080f9730f39832e88a39",
+      "size": 912
     },
     "data/system/Config.tjs": {
       "sha256": "a99f22a0b7868045156f1db0eb5d9f9231c6e59b2f6769692171ce3d6182ea54",

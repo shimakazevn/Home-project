@@ -304,6 +304,26 @@
             };
         }
 
+        // Hook Position Tag & Message Window Frame
+        if (kag.tag.position) {
+            const origPosition = kag.tag.position.start;
+            kag.tag.position.start = function(pm) {
+                if (pm && pm.frame && typeof pm.frame === 'string' && pm.frame !== 'none') {
+                    let rawPath = pm.frame;
+                    if (rawPath.startsWith('../')) {
+                        rawPath = 'data/' + rawPath.substring(3);
+                    } else if (!rawPath.startsWith('data/') && !rawPath.startsWith('http')) {
+                        rawPath = `data/image/${pm.frame}`;
+                    }
+                    const cdnUrl = window.resolveCDNUrl(rawPath);
+                    if (cdnUrl && cdnUrl.startsWith('http')) {
+                        pm.frame = cdnUrl;
+                    }
+                }
+                return origPosition.apply(this, arguments);
+            };
+        }
+
         // ─── Web Audio Engine Volume Controls & Preview ──────────────────────
         kag.setBgmVolume = function(vol) {
             if (window.HOME_AudioEngine && window.HOME_AudioEngine.setBgmVolume) {

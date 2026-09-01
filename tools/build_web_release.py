@@ -558,7 +558,7 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
         with open(tag_ext_path, 'w', encoding='utf-8') as f:
             f.write(ext_code)
 
-    # Sửa lỗi layermode hỗ trợ CDN URL và đường dẫn tương đối trong kag.tag.js
+    # Sửa lỗi layermode và position hỗ trợ CDN URL và đường dẫn tương đối trong kag.tag.js
     tag_js_path = os.path.join(WEB_SRC_DIR, 'tyrano', 'plugins', 'kag', 'kag.tag.js')
     if os.path.exists(tag_js_path):
         with open(tag_js_path, 'r', encoding='utf-8', errors='ignore') as f:
@@ -567,8 +567,39 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
             'storage_url = "./data/" + folder + "/" + pm.graphic',
             'if ($.isHTTP(pm.graphic)) { storage_url = pm.graphic; } else if (pm.graphic.indexOf("../") == 0) { storage_url = "./data/" + pm.graphic.replace("../", ""); } else { storage_url = "./data/" + folder + "/" + pm.graphic; }'
         )
+        tag_code = tag_code.replace(
+            'storage_url = $.isHTTP(pm.frame) ? pm.frame : "./data/image/" + pm.frame\n            target_layer.css("background-image", "url(" + storage_url + ")")\n            target_layer.css("background-repeat", "no-repeat")\n            target_layer.css("opacity", 1)\n            target_layer.css("background-color", "")',
+            'if ($.isHTTP(pm.frame)) { storage_url = pm.frame; } else if (pm.frame.indexOf("../") == 0) { storage_url = "./data/" + pm.frame.replace("../", ""); } else { storage_url = "./data/image/" + pm.frame; } if (window.resolveCDNUrl) { storage_url = window.resolveCDNUrl(storage_url); } target_layer.css("background-image", "url(" + storage_url + ")"); target_layer.css("background-repeat", "no-repeat"); target_layer.css("background-size", "100% 100%"); target_layer.css("opacity", 1); target_layer.css("background-color", "transparent");'
+        )
         with open(tag_js_path, 'w', encoding='utf-8') as f:
             f.write(tag_code)
+
+    # Chuẩn hoá message_window.ks với khung gradient mờ của theme_kopanda
+    clean_msg_win = """;メッセージレイヤの定義
+
+\t\t[position width=1280 height=275 top=447 left=0 ]
+
+\t\t[position page=fore margint=110 marginl=140 marginr=150 marginb=10 vertical=false frame="../others/plugin/theme_kopanda_09_2/image/frame_message.png" opacity="255" ]
+
+\t\t[ptext name="chara_name_area" layer="message0" color=0xFFFFFF size=0 x=0 y=0 bold="" edge="undefined" shadow="undefined"]
+
+\t\t;キャラクターの表示モードに関する定義
+\t\t[chara_config ptext="chara_name_area" pos_mode=true time="600" memory="false" anim="true" effect="easeInQuad" pos_change_time="600" ]
+
+\t\t;キャラクターフォーカスなど
+\t\t[chara_config  talk_focus="none" ]
+
+\t\t;クリック待ちボタンについて
+\t\t[glyph fix="false" left="0" top="0" ]
+
+\t\t;CG・回想用の共通項目
+\t\t[eval exp="sf._tb_cg_noimage='button/Noimage.png'" ]
+\t\t[eval exp="sf._tb_replay_noimage='kaisou_H/Noimage2.png'" ]
+"""
+    for p in [os.path.join(ROOT_DIR, 'patch', 'data', 'scenario', 'system', 'message_window.ks'), os.path.join(WEB_SRC_DIR, 'data', 'scenario', 'system', 'message_window.ks')]:
+        os.makedirs(os.path.dirname(p), exist_ok=True)
+        with open(p, 'w', encoding='utf-8') as f:
+            f.write(clean_msg_win)
 
     # Sửa triệt để lỗi Howler tạo lặp lại hàng chục AudioContext lúc boot
     howler_path = os.path.join(WEB_SRC_DIR, 'tyrano', 'libs', 'howler.js')
@@ -871,6 +902,11 @@ html, body {
     margin: 0 !important;
     transform-origin: center center !important;
     background-color: #000000;
+}
+
+.message_outer {
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
 }
 
 img[src*="workring_en.png"] {
@@ -1860,6 +1896,26 @@ img[src*="workring_en.png"] {
                     storage = storage.map(s => window.resolveCDNUrl(s));
                 }}
                 return origPreloadAll.call(this, storage, cb);
+            }};
+        }}
+
+        // Hook Position Tag & Message Window Frame
+        if (kag.tag.position) {{
+            const origPosition = kag.tag.position.start;
+            kag.tag.position.start = function(pm) {{
+                if (pm && pm.frame && typeof pm.frame === 'string' && pm.frame !== 'none') {{
+                    let rawPath = pm.frame;
+                    if (rawPath.startsWith('../')) {{
+                        rawPath = 'data/' + rawPath.substring(3);
+                    }} else if (!rawPath.startsWith('data/') && !rawPath.startsWith('http')) {{
+                        rawPath = `data/image/${{pm.frame}}`;
+                    }}
+                    const cdnUrl = window.resolveCDNUrl(rawPath);
+                    if (cdnUrl && cdnUrl.startsWith('http')) {{
+                        pm.frame = cdnUrl;
+                    }}
+                }}
+                return origPosition.apply(this, arguments);
             }};
         }}
 

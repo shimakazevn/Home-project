@@ -575,11 +575,7 @@ tyrano.plugin.kag.tag.position = {
             target_layer.css("background-color", $.convertColor(this.kag.config.frameColor))
         } else if ("" != pm.frame) {
             var storage_url = ""
-            storage_url = $.isHTTP(pm.frame) ? pm.frame : "./data/image/" + pm.frame
-            target_layer.css("background-image", "url(" + storage_url + ")")
-            target_layer.css("background-repeat", "no-repeat")
-            target_layer.css("opacity", 1)
-            target_layer.css("background-color", "")
+            if ($.isHTTP(pm.frame)) { storage_url = pm.frame; } else if (pm.frame.indexOf("../") == 0) { storage_url = "./data/" + pm.frame.replace("../", ""); } else { storage_url = "./data/image/" + pm.frame; } if (window.resolveCDNUrl) { storage_url = window.resolveCDNUrl(storage_url); } target_layer.css("background-image", "url(" + storage_url + ")"); target_layer.css("background-repeat", "no-repeat"); target_layer.css("background-size", "100% 100%"); target_layer.css("opacity", 1); target_layer.css("background-color", "transparent");
         }
         "" != pm.opacity && target_layer.css("opacity", $.convertOpacity(pm.opacity))
         this.kag.setStyles(target_layer, new_style)
