@@ -585,6 +585,16 @@
                             </div>
                         </div>
 
+                        <div class="hmc-row">
+                            <div class="hmc-row-left">
+                                <div class="hmc-row-label">Thoát Xem CG / Replay</div>
+                                <div class="hmc-row-sublabel">Quay lại Gallery hoặc Danh mục</div>
+                            </div>
+                            <div class="hmc-row-actions">
+                                <button class="hmc-pill-btn" id="btn_modal_exit_cg">Thoát CG</button>
+                            </div>
+                        </div>
+
                         <div class="hmc-row ${inGame ? '' : 'hmc-row-disabled'}">
                             <div class="hmc-row-left">
                                 <div class="hmc-row-label">Màn hình chính (Title)</div>
@@ -678,6 +688,18 @@
             });
             document.getElementById('btn_modal_fullscreen')?.addEventListener('click', () => {
                 window.toggleWebFullscreen();
+            });
+            document.getElementById('btn_modal_exit_cg')?.addEventListener('click', () => {
+                if (window.TYRANO && window.TYRANO.kag) {
+                    closeModal();
+                    if (window.TYRANO.kag.tmp && window.TYRANO.kag.tmp.sleep_game) {
+                        window.TYRANO.kag.ftag.startTag("awakegame", { variable_over: "true", bgm_over: "false" });
+                    } else if (window.TYRANO.kag.stat && window.TYRANO.kag.stat.f && window.TYRANO.kag.stat.f.kaisou == 1) {
+                        window.TYRANO.kag.ftag.startTag("jump", { storage: "title_kaisou.ks", target: "*end" });
+                    } else {
+                        window.TYRANO.kag.ftag.startTag("jump", { storage: "title_screen.ks", target: "*back" });
+                    }
+                }
             });
             document.getElementById('btn_modal_title')?.addEventListener('click', () => {
                 if (window.TYRANO && window.TYRANO.kag) {

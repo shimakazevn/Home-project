@@ -1102,12 +1102,17 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
         )
         tag_code = tag_code.replace(
             'if ("" == _pm.role && "true" == _pm.fix) {\n                    var stack_pm = that.kag.getStack("call")\n                    if (null != stack_pm) {\n                        that.kag.log("callスタックが残っている場合、fixボタンは反応しません")\n                        that.kag.log(stack_pm)\n                        return !1\n                    }\n                    var _auto_next = _pm.auto_next\n                    1 == that.kag.stat.is_strong_stop && (_auto_next = "stop")\n                    that.kag.ftag.startTag("call", {storage: _storage, target: _target, auto_next: _auto_next})\n                } else that.kag.ftag.startTag("jump", _pm)',
-            'if ("" == _pm.role && "true" == _pm.fix) {\n                    var _target_to_jump = _target || _pm.target;\n                    var _storage_to_jump = _storage || _pm.storage;\n                    that.kag.ftag.startTag("jump", {storage: _storage_to_jump, target: _target_to_jump})\n                } else that.kag.ftag.startTag("jump", _pm)'
+            'if ("" == _pm.role && "true" == _pm.fix) {\n                    var _target_to_jump = _target || _pm.target;\n                    var _storage_to_jump = _storage || _pm.storage || that.kag.stat.current_scenario;\n                    that.kag.ftag.startTag("jump", {storage: _storage_to_jump, target: _target_to_jump})\n                } else that.kag.ftag.startTag("jump", _pm)'
         )
         tag_code = tag_code.replace(
             'button_clicked = !0\n                "" != _pm.exp',
             'if ("false" == _pm.fix) button_clicked = !0;\n                "" != _pm.exp'
         )
+        if 'case "awakegame":' not in tag_code:
+            tag_code = tag_code.replace(
+                'that.kag.ftag.startTag("sleepgame", _pm)\n                    }',
+                'that.kag.ftag.startTag("sleepgame", _pm)\n                            break\n                        case "awakegame":\n                            j_button.trigger("mouseout")\n                            that.kag.ftag.startTag("awakegame", _pm)\n                    }'
+            )
         with open(tag_js_path, 'w', encoding='utf-8') as f:
             f.write(tag_code)
 
@@ -3281,6 +3286,16 @@ img[src*="workring_en.png"] {
                             </div>
                         </div>
 
+                        <div class="hmc-row">
+                            <div class="hmc-row-left">
+                                <div class="hmc-row-label">Thoát Xem CG / Replay</div>
+                                <div class="hmc-row-sublabel">Quay lại Gallery hoặc Danh mục</div>
+                            </div>
+                            <div class="hmc-row-actions">
+                                <button class="hmc-pill-btn" id="btn_modal_exit_cg">Thoát CG</button>
+                            </div>
+                        </div>
+
                         <div class="hmc-row ${inGame ? '' : 'hmc-row-disabled'}">
                             <div class="hmc-row-left">
                                 <div class="hmc-row-label">Màn hình chính (Title)</div>
@@ -3374,6 +3389,18 @@ img[src*="workring_en.png"] {
             });
             document.getElementById('btn_modal_fullscreen')?.addEventListener('click', () => {
                 window.toggleWebFullscreen();
+            });
+            document.getElementById('btn_modal_exit_cg')?.addEventListener('click', () => {
+                if (window.TYRANO && window.TYRANO.kag) {
+                    closeModal();
+                    if (window.TYRANO.kag.tmp && window.TYRANO.kag.tmp.sleep_game) {
+                        window.TYRANO.kag.ftag.startTag("awakegame", { variable_over: "true", bgm_over: "false" });
+                    } else if (window.TYRANO.kag.stat && window.TYRANO.kag.stat.f && window.TYRANO.kag.stat.f.kaisou == 1) {
+                        window.TYRANO.kag.ftag.startTag("jump", { storage: "title_kaisou.ks", target: "*end" });
+                    } else {
+                        window.TYRANO.kag.ftag.startTag("jump", { storage: "title_screen.ks", target: "*back" });
+                    }
+                }
             });
             document.getElementById('btn_modal_title')?.addEventListener('click', () => {
                 if (window.TYRANO && window.TYRANO.kag) {

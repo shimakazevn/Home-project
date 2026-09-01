@@ -1323,6 +1323,10 @@ tyrano.plugin.kag.tag.button = {
                             that.kag.tmp.sleep_game = {}
                             _pm.next = !1
                             that.kag.ftag.startTag("sleepgame", _pm)
+                            break
+                        case "awakegame":
+                            j_button.trigger("mouseout")
+                            that.kag.ftag.startTag("awakegame", _pm)
                     }
                     "" != _pm.clickse && that.kag.ftag.startTag("playse", {storage: _pm.clickse, stop: !0})
                     event.stopPropagation()
@@ -1332,7 +1336,7 @@ tyrano.plugin.kag.tag.button = {
                 that.kag.layer.showEventLayer()
                 if ("" == _pm.role && "true" == _pm.fix) {
                     var _target_to_jump = _target || _pm.target;
-                    var _storage_to_jump = _storage || _pm.storage;
+                    var _storage_to_jump = _storage || _pm.storage || that.kag.stat.current_scenario;
                     that.kag.ftag.startTag("jump", {storage: _storage_to_jump, target: _target_to_jump})
                 } else that.kag.ftag.startTag("jump", _pm)
                 "true" == that.kag.stat.skip_link ? event.stopPropagation() : (that.kag.stat.is_skip = !1)
