@@ -27,6 +27,14 @@
                 }
             }
         },
+        updateMuteIcon: function(name, val) {
+            var v = parseFloat(val) || 0;
+            var isMuted = (v <= 0);
+            if (name === "text" || name === "auto") isMuted = (v <= 1);
+            var imgName = isMuted ? 'on.png' : 'off.gif';
+            var cdnImg = window.resolveCDNUrl ? window.resolveCDNUrl('data/others/plugin/theme_kopanda_09_2/image/config/' + imgName) : '../others/plugin/theme_kopanda_09_2/image/config/' + imgName;
+            $('.' + name + '_mute, img[name*="' + name + '_mute"]').attr('src', cdnImg);
+        },
         convertColor: function (color) {
             if (!color) return "transparent";
             return $.convertColor(color).replace("=", "#");
@@ -39,6 +47,7 @@
             input.val(val);
             var w = parseFloat(input.css("width")) || 290;
             __slider_ui.updateRange(name, w, { reverse: "false" });
+            __slider_ui.updateMuteIcon(name, val);
         }
     };
 
@@ -269,6 +278,7 @@
                 $("." + _pm.name).find(".range_tip").css({ opacity: 1 });
                 __slider_ui.updateRange(_pm.name, _pm.width, pm);
                 var val = parseFloat(this.value) || 0;
+                __slider_ui.updateMuteIcon(_pm.name, val);
                 that.kag.embScript(_pm.var + " = " + val);
 
                 // Live update audio & text speed

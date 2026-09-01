@@ -410,23 +410,21 @@ if (window.__update_slider_dom) {
 ;--------------------------------------------------------------------------------
 *vol_bgm_mute
 [iscript]
-	// ミュート
 	if( tf.isMute_bgm ){
-		f.prev_vol_list.bgm = tf.current_bgm_vol;
-		//f.prev_vol_list[1] = tf.config_num_bgm;
+		f.prev_vol_list.bgm = (tf.current_bgm_vol > 0 ? tf.current_bgm_vol : 50);
 		tf.current_bgm_vol = 0;
-		//tf.config_num_bgm  = 0;
-
-	// 解除
 	} else {
-		tf.current_bgm_vol = f.prev_vol_list.bgm;
-		//tf.config_num_bgm  = f.prev_vol_list[1];
+		tf.current_bgm_vol = f.prev_vol_list.bgm || 50;
+	}
+	if (window.__update_slider_dom) {
+		window.__update_slider_dom('bgm', tf.current_bgm_vol);
+	}
+	if (window.HOME_AudioEngine && window.HOME_AudioEngine.setBgmVolume) {
+		window.HOME_AudioEngine.setBgmVolume(tf.current_bgm_vol);
 	}
 [endscript]
 
 *vol_bgm_change
-
-	[free layer="0" name="bgmvol" time="0" wait="true"]
 	[bgmopt volume="&tf.current_bgm_vol"]
 [call target="*mute_bgm_button" ]
 
@@ -436,19 +434,18 @@ if (window.__update_slider_dom) {
 ; SE音量
 ;--------------------------------------------------------------------------------
 *vol_se_mute
-
 [iscript]
-	// ミュート
 	if( tf.isMute_se ){
-		f.prev_vol_list.se = tf.current_se_vol;
-		//f.prev_vol_list[3] = tf.config_num_se;
+		f.prev_vol_list.se = (tf.current_se_vol > 0 ? tf.current_se_vol : 50);
 		tf.current_se_vol = 0;
-		//tf.config_num_se  = 0;
-
-	// 解除
 	} else {
-		tf.current_se_vol = f.prev_vol_list.se;
-		//tf.config_num_se  = f.prev_vol_list[3];
+		tf.current_se_vol = f.prev_vol_list.se || 50;
+	}
+	if (window.__update_slider_dom) {
+		window.__update_slider_dom('se', tf.current_se_vol);
+	}
+	if (window.HOME_AudioEngine && window.HOME_AudioEngine.setSeVolume) {
+		window.HOME_AudioEngine.setSeVolume('0', tf.current_se_vol);
 	}
 [endscript]
 
@@ -456,7 +453,6 @@ if (window.__update_slider_dom) {
 	[iscript ]
 		sf._skskpnt_volume[0] = tf.current_se_vol
 	[endscript ]
-	[free layer="0" name="sevol" time="0" wait="true"]
 	[seopt buf="0" volume="&tf.current_se_vol"]
 [call target="*mute_se_button" ]
 
@@ -466,16 +462,20 @@ if (window.__update_slider_dom) {
 ; ボイス音量
 ;--------------------------------------------------------------------------------
 *vol_voice_mute
-
 [iscript]
-	// ミュート
+	var voiceIndex = tf.isMuteNum + 1;
+	var varName = "current_voice_" + voiceIndex + "_vol";
 	if( tf.isMute ){
-		f.prev_vol_list.voice[tf.isMuteNum] = tf["current_voice_" + (tf.isMuteNum + 1) + "_vol"];
-		tf["current_voice_" + (tf.isMuteNum + 1) + "_vol"] = 0;
-
-	// 解除
+		f.prev_vol_list.voice[tf.isMuteNum] = (tf[varName] > 0 ? tf[varName] : 70);
+		tf[varName] = 0;
 	} else {
-		tf["current_voice_" + (tf.isMuteNum + 1)+ "_vol"] = f.prev_vol_list.voice[tf.isMuteNum];
+		tf[varName] = f.prev_vol_list.voice[tf.isMuteNum] || 70;
+	}
+	if (window.__update_slider_dom) {
+		window.__update_slider_dom('voice_' + voiceIndex, tf[varName]);
+	}
+	if (window.HOME_AudioEngine && window.HOME_AudioEngine.setSeVolume) {
+		window.HOME_AudioEngine.setSeVolume(String(voiceIndex), tf[varName]);
 	}
 [endscript]
 
@@ -499,22 +499,20 @@ if (window.__update_slider_dom) {
 
 *vol_text_mute
 [iscript]
-	// 一括表示
 	if( tf.isMute_text ){
 		f.prev_vol_list.text = tf.current_ch_speed;
-		//f.prev_vol_list[7] = tf.config_num_ch;
 		tf.current_ch_speed = 1;
-		//tf.config_num_ch  = 10;
-
-	// 解除
+		tf.slider_ch_speed = 100;
 	} else {
-		tf.current_ch_speed = f.prev_vol_list.text;
-		//tf.config_num_ch  = f.prev_vol_list[7];
+		tf.current_ch_speed = f.prev_vol_list.text || 50;
+		tf.slider_ch_speed = 101 - tf.current_ch_speed;
+	}
+	if (window.__update_slider_dom) {
+		window.__update_slider_dom('text', tf.slider_ch_speed);
 	}
 [endscript]
 *ch_speed_skip
 *ch_speed_change
-[eval exp="tf.current_ch_speed = 101 - tf.slider_ch_speed"]
 [configdelay speed="&tf.current_ch_speed"]
 [test_message_reset]
 [call target="*mute_text_button"]
@@ -524,22 +522,20 @@ if (window.__update_slider_dom) {
 ;--------------------------------------------------------------------------------
 *vol_auto_mute
 [iscript]
-	// 一括表示
 	if( tf.isMute_auto ){
 		f.prev_vol_list.auto = tf.current_auto_speed;
-		//f.prev_vol_list[7] = tf.config_num_ch;
 		tf.current_auto_speed = 1;
-		//tf.config_num_ch  = 10;
-
-	// 解除
+		tf.slider_auto_speed = 5000;
 	} else {
-		tf.current_auto_speed = f.prev_vol_list.auto;
-		//tf.config_num_ch  = f.prev_vol_list[7];
+		tf.current_auto_speed = f.prev_vol_list.auto || 2500;
+		tf.slider_auto_speed = 5001 - tf.current_auto_speed;
+	}
+	if (window.__update_slider_dom) {
+		window.__update_slider_dom('auto', tf.slider_auto_speed);
 	}
 [endscript]
 
 *auto_speed_change
-[eval exp="tf.current_auto_speed = 5001 - tf.slider_auto_speed"]
 [autoconfig speed="&tf.current_auto_speed"]
 [test_message_reset]
 [call target="*mute_auto_button"]
@@ -594,12 +590,12 @@ f.workanime = tf.current_workanime
 
 *mute_voice_button
 [clearfix name="voice_mute" ]
-[button name="voice_mute" fix="true" x="1168" y="152" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = true;  tf.isMuteNum = 0"  cond="tf.current_voice_1_vol > 0"    ]
-[button name="voice_mute" fix="true" x="1168" y="152" graphic="&tf.img_path + 'on.png'"  width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = false; tf.isMuteNum = 0"  cond="tf.current_voice_1_vol == 0"   ]
-[button name="voice_mute" fix="true" x="1168" y="224" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = true;  tf.isMuteNum = 1"  cond="tf.current_voice_2_vol > 0"    ]
-[button name="voice_mute" fix="true" x="1168" y="224" graphic="&tf.img_path + 'on.png'"  width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = false; tf.isMuteNum = 1"  cond="tf.current_voice_2_vol == 0"   ]
-[button name="voice_mute" fix="true" x="1168" y="296" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = true;  tf.isMuteNum = 2"  cond="tf.current_voice_3_vol > 0"    ]
-[button name="voice_mute" fix="true" x="1168" y="296" graphic="&tf.img_path + 'on.png'"  width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = false; tf.isMuteNum = 2"  cond="tf.current_voice_3_vol == 0"   ]
+[button name="voice_mute voice_1_mute" fix="true" x="1168" y="152" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = true;  tf.isMuteNum = 0"  cond="tf.current_voice_1_vol > 0"    ]
+[button name="voice_mute voice_1_mute" fix="true" x="1168" y="152" graphic="&tf.img_path + 'on.png'"  width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = false; tf.isMuteNum = 0"  cond="tf.current_voice_1_vol == 0"   ]
+[button name="voice_mute voice_2_mute" fix="true" x="1168" y="224" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = true;  tf.isMuteNum = 1"  cond="tf.current_voice_2_vol > 0"    ]
+[button name="voice_mute voice_2_mute" fix="true" x="1168" y="224" graphic="&tf.img_path + 'on.png'"  width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = false; tf.isMuteNum = 1"  cond="tf.current_voice_2_vol == 0"   ]
+[button name="voice_mute voice_3_mute" fix="true" x="1168" y="296" graphic="&tf.img_path + 'off.gif'" width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = true;  tf.isMuteNum = 2"  cond="tf.current_voice_3_vol > 0"    ]
+[button name="voice_mute voice_3_mute" fix="true" x="1168" y="296" graphic="&tf.img_path + 'on.png'"  width="24" height="24" target="*vol_voice_mute" exp="tf.isMute = false; tf.isMuteNum = 2"  cond="tf.current_voice_3_vol == 0"   ]
 [return ]
 
 
