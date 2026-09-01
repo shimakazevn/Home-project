@@ -1780,20 +1780,23 @@ img[src*="workring_en.png"] {
 
         const decodePromise = (async () => {
             try {
-                const resp = await fetch(url, { referrerPolicy: 'no-referrer' });
+                const resp = await fetch(url);
+                if (!resp.ok) throw new Error(`HTTP ${resp.status} fetching ${url}`);
                 const arrayBuffer = await resp.arrayBuffer();
                 
-                let audioBytes;
-                const u8 = new Uint8Array(arrayBuffer);
+                let bufferToDecode;
+                const u8 = new Uint8Array(arrayBuffer, 0, Math.min(4, arrayBuffer.byteLength));
                 if (u8[0] === 0x89 && u8[1] === 0x50 && u8[2] === 0x4E && u8[3] === 0x47) {
-                    audioBytes = await extractStegoAudioBytes(arrayBuffer);
+                    // PNG stego: decode embedded audio bytes
+                    const audioBytes = await extractStegoAudioBytes(arrayBuffer);
+                    bufferToDecode = audioBytes.buffer.slice(audioBytes.byteOffset, audioBytes.byteOffset + audioBytes.byteLength);
                 } else {
-                    audioBytes = new Uint8Array(arrayBuffer);
+                    // Direct audio file (MP3/OGG): use buffer as-is
+                    bufferToDecode = arrayBuffer;
                 }
                 
                 const ctx = getAudioContext();
-                const arrayBufferToDecode = audioBytes.buffer.slice(audioBytes.byteOffset, audioBytes.byteOffset + audioBytes.byteLength);
-                const decodedBuffer = await ctx.decodeAudioData(arrayBufferToDecode);
+                const decodedBuffer = await ctx.decodeAudioData(bufferToDecode);
 
                 // Anti-Pop fadeout cuối file
                 try {
