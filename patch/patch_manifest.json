@@ -1,6 +1,6 @@
 {
   "version": "3.1.0",
-  "generated_at": "2026-09-01 23:02:29",
+  "generated_at": "2026-09-02 01:46:27",
   "total_files": 292,
   "files": {
     "data/asset_manifest.json": {
@@ -824,8 +824,8 @@
       "size": 8555
     },
     "data/scenario/room_yoru.ks": {
-      "sha256": "ce3cf431bd3b0ecdef2939c6c4a5747249ad1e08b9b6c26c51ece802a5b8f2a3",
-      "size": 30196
+      "sha256": "0c8879b8f4bf9373c81de30637a79c557cf4e427dc9876b63080af9e853bb81b",
+      "size": 30202
     },
     "data/scenario/room_yoru_kankei.ks": {
       "sha256": "eaa739d14da931b38b2fd978fbb3d19cbf270609d07dd9dcd74dd6e2f0407699",

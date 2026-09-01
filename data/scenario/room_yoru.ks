@@ -180,9 +180,9 @@
 [endif]
 
 ;凪宅（和室）
-[if exp="f.com_wasitu_denki == 1"]
-[jump storage="EV_tousatuCG.ks" target="*tousatu_dounyu"]
-[endif]
+; [if exp="f.com_wasitu_denki == 1"]
+; [jump storage="EV_tousatuCG.ks" target="*tousatu_dounyu"]
+; [endif]
 
 ;病院
 ;病院（裏）上
