@@ -1047,6 +1047,10 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
     if os.path.exists(ico_src):
         shutil.copy2(ico_src, os.path.join(WEB_SRC_DIR, 'favicon.ico'))
         
+    lang_src = os.path.join(ROOT_DIR, 'tyrano', 'lang.js')
+    if os.path.exists(lang_src):
+        shutil.copy2(lang_src, os.path.join(WEB_SRC_DIR, 'tyrano', 'lang.js'))
+        
     # Đồng bộ video gốc (title_bg.mp4) vào web/data/video/
     video_src_dir = os.path.join(APP_SRC_DIR, 'data', 'video')
     video_dst_dir = os.path.join(WEB_SRC_DIR, 'data', 'video')
