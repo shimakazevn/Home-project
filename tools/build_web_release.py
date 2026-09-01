@@ -4159,23 +4159,43 @@ img[src*="workring_en.png"] {
                 if (window.importSaveFromFile) window.importSaveFromFile();
             });
             document.getElementById('btn_modal_skip')?.addEventListener('click', () => {
-                if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.ftag) {
-                    if (window.TYRANO.kag.stat.is_skip) {
-                        window.TYRANO.kag.ftag.startTag("skipstop", {});
-                    } else {
-                        window.TYRANO.kag.ftag.startTag("skipstart", {});
-                    }
+                if (window.TYRANO && window.TYRANO.kag) {
+                    const kag = window.TYRANO.kag;
                     closeModal();
+                    if (kag.stat.is_skip) {
+                        kag.stat.is_skip = false;
+                    } else {
+                        kag.stat.is_auto = false;
+                        kag.stat.is_wait_auto = false;
+                        kag.stat.is_skip = true;
+                        if (kag.tmp && !kag.tmp.ready_audio && kag.readyAudio) {
+                            kag.readyAudio();
+                            kag.tmp.ready_audio = true;
+                        }
+                        if (kag.stat.is_stop || kag.stat.is_wait || (kag.layer && kag.layer.layer_event && kag.layer.layer_event.css('display') !== 'none')) {
+                            kag.ftag.nextOrder();
+                        }
+                    }
                 }
             });
             document.getElementById('btn_modal_auto')?.addEventListener('click', () => {
-                if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.ftag) {
-                    if (window.TYRANO.kag.stat.is_auto) {
-                        window.TYRANO.kag.ftag.startTag("autostop", { next: "false" });
-                    } else {
-                        window.TYRANO.kag.ftag.startTag("autostart", {});
-                    }
+                if (window.TYRANO && window.TYRANO.kag) {
+                    const kag = window.TYRANO.kag;
                     closeModal();
+                    if (kag.stat.is_auto) {
+                        kag.stat.is_auto = false;
+                        kag.stat.is_wait_auto = false;
+                    } else {
+                        kag.stat.is_skip = false;
+                        kag.stat.is_auto = true;
+                        if (kag.tmp && !kag.tmp.ready_audio && kag.readyAudio) {
+                            kag.readyAudio();
+                            kag.tmp.ready_audio = true;
+                        }
+                        if (kag.stat.is_stop || kag.stat.is_wait || (kag.layer && kag.layer.layer_event && kag.layer.layer_event.css('display') !== 'none')) {
+                            kag.ftag.nextOrder();
+                        }
+                    }
                 }
             });
             document.getElementById('btn_modal_log')?.addEventListener('click', () => {
