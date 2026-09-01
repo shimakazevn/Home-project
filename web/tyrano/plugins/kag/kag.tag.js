@@ -1262,6 +1262,9 @@ tyrano.plugin.kag.tag.button = {
                 }
             )
             j_button.click(function (event) {
+                if ((_pm.storage && _pm.storage.indexOf("config.ks") !== -1) || (_pm.graphic && _pm.graphic.indexOf("config") !== -1) || _pm.role === "config") {
+                    if (window.openModernConfigModal) { window.openModernConfigModal(); event.stopPropagation(); return !1; }
+                }
                 if ("" != _pm.clickimg) {
                     var click_img_url = ""
                     click_img_url = $.isHTTP(_pm.clickimg) ? _pm.clickimg : "./data/" + _pm.folder + "/" + _pm.clickimg

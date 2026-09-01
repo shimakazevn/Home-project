@@ -1134,7 +1134,11 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
                 'that.kag.ftag.startTag("sleepgame", _pm)\n                    }',
                 'that.kag.ftag.startTag("sleepgame", _pm)\n                            break\n                        case "awakegame":\n                            j_button.trigger("mouseout")\n                            that.kag.ftag.startTag("awakegame", _pm)\n                    }'
             )
-        # Chặn mọi nút và jump/sleepgame mở config.ks để mở Modern In-Modal HUD Config
+        # Chặn mọi nút và jump/sleepgame/call mở config.ks để mở Modern In-Modal HUD Config
+        tag_code = tag_code.replace(
+            'j_button.click(function (event) {',
+            'j_button.click(function (event) {\n                if ((_pm.storage && _pm.storage.indexOf("config.ks") !== -1) || (_pm.graphic && _pm.graphic.indexOf("config") !== -1) || _pm.role === "config") {\n                    if (window.openModernConfigModal) { window.openModernConfigModal(); event.stopPropagation(); return !1; }\n                }'
+        )
         tag_code = tag_code.replace(
             'case "sleepgame":\n                            j_button.trigger("mouseout")',
             'case "sleepgame":\n                            j_button.trigger("mouseout");\n                            if ((_pm.storage && _pm.storage.indexOf("config.ks") !== -1) || _pm.role === "config") {\n                                if (window.openModernConfigModal) { window.openModernConfigModal(); event.stopPropagation(); return !1; }\n                            }'
@@ -1142,6 +1146,10 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
         tag_code = tag_code.replace(
             'tyrano.plugin.kag.tag.jump = {\n    pm: {storage: null, target: null, countpage: !0},\n    start: function (pm) {',
             'tyrano.plugin.kag.tag.jump = {\n    pm: {storage: null, target: null, countpage: !0},\n    start: function (pm) {\n        if (pm.storage && pm.storage.indexOf("config.ks") !== -1) {\n            if (window.openModernConfigModal) { window.openModernConfigModal(); this.kag.ftag.nextOrder(); return; }\n        }'
+        )
+        tag_code = tag_code.replace(
+            'tyrano.plugin.kag.tag.call = {\n    pm: {storage: null, target: null, countpage: !0, auto_next: "yes"},\n    start: function (pm) {',
+            'tyrano.plugin.kag.tag.call = {\n    pm: {storage: null, target: null, countpage: !0, auto_next: "yes"},\n    start: function (pm) {\n        if (pm.storage && pm.storage.indexOf("config.ks") !== -1) {\n            if (window.openModernConfigModal) { window.openModernConfigModal(); this.kag.ftag.nextOrder(); return; }\n        }'
         )
         with open(tag_js_path, 'w', encoding='utf-8') as f:
             f.write(tag_code)
@@ -1416,6 +1424,27 @@ def step4_generate_web_core_modules(records=None):
                 scenario_bundle[f"data/others/plugin/theme_kopanda_09_2/html/{hf}"] = h_text
                 scenario_bundle[f"./data/others/plugin/theme_kopanda_09_2/html/{hf}"] = h_text
                 scenario_bundle[hf] = h_text
+
+    # Thêm Interceptor cho toàn bộ đường dẫn gọi config.ks
+    safe_config_ks = """; HOME Modern Config Interceptor
+[iscript]
+if (window.openModernConfigModal) {
+    window.openModernConfigModal();
+}
+if (TYRANO.kag.tmp && TYRANO.kag.tmp.sleep_game) {
+    TYRANO.kag.ftag.startTag("awakegame", { variable_over: "true", bgm_over: "false" });
+} else {
+    TYRANO.kag.ftag.startTag("jump", { storage: "title_screen.ks", target: "*back" });
+}
+[endscript]
+[s]
+"""
+    for ck in [
+        "config.ks", "./config.ks", 
+        "data/others/plugin/theme_kopanda_09_2/config.ks", "./data/others/plugin/theme_kopanda_09_2/config.ks", 
+        "../others/plugin/theme_kopanda_09_2/config.ks", "./../others/plugin/theme_kopanda_09_2/config.ks"
+    ]:
+        scenario_bundle[ck] = safe_config_ks
 
     bundle_json = json.dumps(scenario_bundle, ensure_ascii=False)
     bundle_js = f"""// HOME Visual Novel - In-Memory High-Speed Scenario & Script Bundle
