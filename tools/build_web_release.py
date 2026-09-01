@@ -2913,8 +2913,10 @@ img[src*="workring_en.png"] {
                 padding: 16px;
                 opacity: 0;
                 pointer-events: none;
-                transition: opacity 0.2s ease;
+                transition: opacity 0.22s ease;
+                padding: 12px;
                 box-sizing: border-box;
+                touch-action: none;
             }
             #home-modal-overlay.open {
                 opacity: 1;
@@ -2922,34 +2924,47 @@ img[src*="workring_en.png"] {
             }
             #home-modal-card {
                 width: 100%;
-                max-width: 420px;
+                max-width: 440px;
                 max-height: 88vh;
-                background: rgba(28, 28, 30, 0.94);
+                max-height: 88dvh;
+                background: rgba(26, 26, 30, 0.95);
                 backdrop-filter: blur(50px) saturate(190%);
                 -webkit-backdrop-filter: blur(50px) saturate(190%);
-                border: 0.5px solid rgba(255, 255, 255, 0.12);
-                border-radius: 20px;
-                box-shadow: 0 28px 70px rgba(0, 0, 0, 0.6);
+                border: 0.5px solid rgba(255, 255, 255, 0.14);
+                border-radius: 22px;
+                box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
                 display: flex;
                 flex-direction: column;
                 overflow: hidden;
-                transform: scale(0.95);
+                transform: scale(0.95) translateY(12px);
                 transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
                 color: #FFFFFF;
-                font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
                 user-select: none;
                 box-sizing: border-box;
+                will-change: transform;
             }
             #home-modal-overlay.open #home-modal-card {
-                transform: scale(1);
+                transform: scale(1) translateY(0);
+            }
+            .hmc-sheet-handle-wrap {
+                width: 100%;
+                padding: 10px 0 4px;
+                display: flex;
+                justify-content: center;
+                cursor: grab;
+                touch-action: none;
+                flex-shrink: 0;
             }
             .hmc-sheet-handle {
-                width: 36px;
-                height: 4px;
+                width: 44px;
+                height: 5px;
                 border-radius: 999px;
-                background: rgba(255, 255, 255, 0.2);
-                margin: 8px auto 0;
-                flex-shrink: 0;
+                background: rgba(255, 255, 255, 0.32);
+                transition: background 0.15s ease;
+            }
+            .hmc-sheet-handle-wrap:active .hmc-sheet-handle {
+                background: rgba(255, 255, 255, 0.6);
             }
             .hmc-header {
                 padding: 10px 18px 12px;
@@ -3330,21 +3345,21 @@ img[src*="workring_en.png"] {
                 background: #0071E3;
             }
             @media (max-width: 480px) {
-                #home-modal-overlay { padding: 8px; }
-                #home-modal-card { max-width: 100%; max-height: 92vh; border-radius: 18px; }
+                #home-modal-overlay { padding: 0; align-items: flex-end; }
+                #home-modal-card { max-width: 100%; max-height: 92vh; max-height: 92dvh; border-radius: 24px 24px 0 0; border-bottom: none; }
                 .hmc-header { padding: 8px 14px 10px; }
                 .hmc-title { font-size: 15px; }
-                .hmc-body { padding: 10px 12px 14px; gap: 12px; }
+                .hmc-body { padding: 10px 12px 16px; gap: 12px; }
                 .hmc-row { padding: 9px 12px; }
                 .hmc-row-label { font-size: 13.5px; }
                 .hmc-pill-btn { padding: 4px 11px; font-size: 12px; }
             }
             @media (max-height: 540px) {
-                #home-modal-overlay { padding: 6px; }
-                #home-modal-card { max-height: 96vh; border-radius: 14px; max-width: 480px; }
-                .hmc-sheet-handle { display: none; }
-                .hmc-header { padding: 6px 14px; }
-                .hmc-title { font-size: 14px; }
+                #home-modal-overlay { padding: 6px; align-items: center; }
+                #home-modal-card { max-height: 96vh; max-height: 96dvh; border-radius: 14px; max-width: 520px; }
+                .hmc-sheet-handle-wrap { padding: 4px 0 2px; }
+                .hmc-header { padding: 4px 14px; }
+                .hmc-title { font-size: 13.5px; }
                 .hmc-body { padding: 6px 10px 10px; gap: 8px; }
                 .hmc-row { padding: 7px 10px; }
                 .hmc-group-header { margin: 0 0 3px 4px; font-size: 10px; }
@@ -3369,7 +3384,7 @@ img[src*="workring_en.png"] {
         overlay.id = 'home-modal-overlay';
         overlay.innerHTML = `
             <div id="home-modal-card">
-                <div class="hmc-sheet-handle"></div>
+                <div class="hmc-sheet-handle-wrap"><div class="hmc-sheet-handle"></div></div>
                 <div class="hmc-header">
                     <div class="hmc-title">Cài đặt & Tiện ích</div>
                     <button class="hmc-close" id="hmc-close-btn" title="Đóng">✕</button>
@@ -3380,12 +3395,75 @@ img[src*="workring_en.png"] {
         `;
         document.body.appendChild(overlay);
 
+        const card = overlay.querySelector('#home-modal-card');
         const closeModal = () => { overlay.classList.remove('open'); };
         const openModal = () => { overlay.classList.add('open'); renderModal(); };
 
         gearBtn.onclick = openModal;
         document.getElementById('hmc-close-btn').onclick = closeModal;
         overlay.onclick = (e) => { if (e.target === overlay) closeModal(); };
+
+        // ─── Tối ưu vuốt chạm trên Mobile & Fullscreen ────────────────────────────
+        let touchStartY = 0;
+        let touchCurrentY = 0;
+        let isDraggingCard = false;
+
+        card.addEventListener('touchstart', (e) => {
+            if (e.touches.length !== 1) return;
+            const touch = e.touches[0];
+            touchStartY = touch.clientY;
+            touchCurrentY = touch.clientY;
+            const bodyEl = document.getElementById('hmc-dynamic-body');
+            if (e.target.closest('.hmc-sheet-handle-wrap') || e.target.closest('.hmc-header') || (bodyEl && bodyEl.scrollTop <= 0)) {
+                isDraggingCard = true;
+            }
+        }, { passive: true });
+
+        card.addEventListener('touchmove', (e) => {
+            if (!isDraggingCard || e.touches.length !== 1) return;
+            const touch = e.touches[0];
+            touchCurrentY = touch.clientY;
+            const deltaY = touchCurrentY - touchStartY;
+            if (deltaY > 0) {
+                card.style.transition = 'none';
+                card.style.transform = `translateY(${deltaY}px)`;
+                if (e.cancelable) e.preventDefault();
+            }
+        }, { passive: false });
+
+        card.addEventListener('touchend', (e) => {
+            if (!isDraggingCard) return;
+            isDraggingCard = false;
+            const deltaY = touchCurrentY - touchStartY;
+            card.style.transition = 'transform 0.22s cubic-bezier(0.16, 1, 0.3, 1)';
+            if (deltaY > 75) {
+                card.style.transform = 'translateY(100%)';
+                setTimeout(() => {
+                    closeModal();
+                    card.style.transform = '';
+                }, 180);
+            } else {
+                card.style.transform = 'scale(1) translateY(0)';
+            }
+        }, { passive: true });
+
+        // Vuốt lên từ Floating Gear Button để mở modal
+        let gearTouchStartY = 0;
+        gearBtn.addEventListener('touchstart', (e) => {
+            if (e.touches.length === 1) gearTouchStartY = e.touches[0].clientY;
+        }, { passive: true });
+        gearBtn.addEventListener('touchend', (e) => {
+            if (e.changedTouches.length === 1) {
+                const endY = e.changedTouches[0].clientY;
+                if (gearTouchStartY - endY > 25) {
+                    openModal();
+                }
+            }
+        }, { passive: true });
+
+        // Cách ly sự kiện chạm không cho lọt xuống khung game bên dưới
+        overlay.addEventListener('touchstart', (e) => e.stopPropagation(), { passive: true });
+        overlay.addEventListener('touchend', (e) => e.stopPropagation(), { passive: true });
 
         let currentModalView = 'main'; // 'main' or 'config'
 
