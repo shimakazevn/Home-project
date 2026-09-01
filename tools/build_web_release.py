@@ -1411,6 +1411,17 @@ body, div, span, p, a, input, textarea, button,
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif !important;
 }
 
+/* Tinh chỉnh typography tiếng Việt thanh thoát, sắc nét, không bị béo nét */
+.message_inner, .current_span, .ptext {
+    font-weight: 500 !important;
+}
+
+.glink_button {
+    font-weight: 500 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45) !important;
+    letter-spacing: 0.3px;
+}
+
 /* Tự động ngắt dòng thông minh cho văn bản tiếng Việt */
 .message_inner, .log_body, .current_span {
     word-break: break-word !important;
@@ -3385,16 +3396,18 @@ img[src*="workring_en.png"] {
             document.getElementById('btn_modal_config')?.addEventListener('click', () => {
                 if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.ftag) {
                     closeModal();
-                    if (isGameActive()) {
-                        window.TYRANO.kag.ftag.startTag("sleepgame", {
-                            storage: "../others/plugin/theme_kopanda_09_2/config.ks",
-                            next: false
-                        });
-                    } else {
-                        window.TYRANO.kag.ftag.startTag("jump", {
-                            storage: "../others/plugin/theme_kopanda_09_2/config.ks"
-                        });
+                    if (window.TYRANO.kag.stat && window.TYRANO.kag.stat.current_scenario && window.TYRANO.kag.stat.current_scenario.indexOf('config.ks') !== -1) {
+                        if (window.TYRANO.kag.tmp && window.TYRANO.kag.tmp.sleep_game) {
+                            window.TYRANO.kag.ftag.startTag("awakegame", { variable_over: "true", bgm_over: "false" });
+                        } else {
+                            window.TYRANO.kag.ftag.startTag("jump", { storage: "title_screen.ks", target: "*back" });
+                        }
+                        return;
                     }
+                    window.TYRANO.kag.ftag.startTag("sleepgame", {
+                        storage: "../others/plugin/theme_kopanda_09_2/config.ks",
+                        next: false
+                    });
                 }
             });
             document.getElementById('btn_modal_fullscreen')?.addEventListener('click', () => {
@@ -3403,6 +3416,14 @@ img[src*="workring_en.png"] {
             document.getElementById('btn_modal_exit_cg')?.addEventListener('click', () => {
                 if (window.TYRANO && window.TYRANO.kag) {
                     closeModal();
+                    if (window.TYRANO.kag.stat && window.TYRANO.kag.stat.current_scenario && window.TYRANO.kag.stat.current_scenario.indexOf('config.ks') !== -1) {
+                        if (window.TYRANO.kag.tmp && window.TYRANO.kag.tmp.sleep_game) {
+                            window.TYRANO.kag.ftag.startTag("awakegame", { variable_over: "true", bgm_over: "false" });
+                        } else {
+                            window.TYRANO.kag.ftag.startTag("jump", { storage: "title_screen.ks", target: "*back" });
+                        }
+                        return;
+                    }
                     if (window.TYRANO.kag.tmp && window.TYRANO.kag.tmp.sleep_game) {
                         window.TYRANO.kag.ftag.startTag("awakegame", { variable_over: "true", bgm_over: "false" });
                     } else if (window.TYRANO.kag.stat && window.TYRANO.kag.stat.f && window.TYRANO.kag.stat.f.kaisou == 1) {

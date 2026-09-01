@@ -14,6 +14,17 @@ body, div, span, p, a, input, textarea, button,
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif !important;
 }
 
+/* Tinh chỉnh typography tiếng Việt thanh thoát, sắc nét, không bị béo nét */
+.message_inner, .current_span, .ptext {
+    font-weight: 500 !important;
+}
+
+.glink_button {
+    font-weight: 500 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45) !important;
+    letter-spacing: 0.3px;
+}
+
 /* Tự động ngắt dòng thông minh cho văn bản tiếng Việt */
 .message_inner, .log_body, .current_span {
     word-break: break-word !important;

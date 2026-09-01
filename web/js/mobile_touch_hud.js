@@ -674,16 +674,18 @@
             document.getElementById('btn_modal_config')?.addEventListener('click', () => {
                 if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.ftag) {
                     closeModal();
-                    if (isGameActive()) {
-                        window.TYRANO.kag.ftag.startTag("sleepgame", {
-                            storage: "../others/plugin/theme_kopanda_09_2/config.ks",
-                            next: false
-                        });
-                    } else {
-                        window.TYRANO.kag.ftag.startTag("jump", {
-                            storage: "../others/plugin/theme_kopanda_09_2/config.ks"
-                        });
+                    if (window.TYRANO.kag.stat && window.TYRANO.kag.stat.current_scenario && window.TYRANO.kag.stat.current_scenario.indexOf('config.ks') !== -1) {
+                        if (window.TYRANO.kag.tmp && window.TYRANO.kag.tmp.sleep_game) {
+                            window.TYRANO.kag.ftag.startTag("awakegame", { variable_over: "true", bgm_over: "false" });
+                        } else {
+                            window.TYRANO.kag.ftag.startTag("jump", { storage: "title_screen.ks", target: "*back" });
+                        }
+                        return;
                     }
+                    window.TYRANO.kag.ftag.startTag("sleepgame", {
+                        storage: "../others/plugin/theme_kopanda_09_2/config.ks",
+                        next: false
+                    });
                 }
             });
             document.getElementById('btn_modal_fullscreen')?.addEventListener('click', () => {
@@ -692,6 +694,14 @@
             document.getElementById('btn_modal_exit_cg')?.addEventListener('click', () => {
                 if (window.TYRANO && window.TYRANO.kag) {
                     closeModal();
+                    if (window.TYRANO.kag.stat && window.TYRANO.kag.stat.current_scenario && window.TYRANO.kag.stat.current_scenario.indexOf('config.ks') !== -1) {
+                        if (window.TYRANO.kag.tmp && window.TYRANO.kag.tmp.sleep_game) {
+                            window.TYRANO.kag.ftag.startTag("awakegame", { variable_over: "true", bgm_over: "false" });
+                        } else {
+                            window.TYRANO.kag.ftag.startTag("jump", { storage: "title_screen.ks", target: "*back" });
+                        }
+                        return;
+                    }
                     if (window.TYRANO.kag.tmp && window.TYRANO.kag.tmp.sleep_game) {
                         window.TYRANO.kag.ftag.startTag("awakegame", { variable_over: "true", bgm_over: "false" });
                     } else if (window.TYRANO.kag.stat && window.TYRANO.kag.stat.f && window.TYRANO.kag.stat.f.kaisou == 1) {
