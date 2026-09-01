@@ -987,24 +987,34 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
                     label.css({ background: base });
                     label.find("div").css({ left: "0px" });
                 }
-                if (_pm.target != "") {
-                    that.kag.ftag.startTag("jump", { target: _pm.target, storage: _pm.storage });
-                }
-            });
-        },
     };
-    TYRANO.kag.ftag.master_tag.switch = TYRANO.kag.tag.switch;
-    TYRANO.kag.ftag.master_tag.switch.kag = TYRANO.kag;
+
+    if (typeof tyrano !== "undefined" && tyrano.plugin && tyrano.plugin.kag && tyrano.plugin.kag.tag) {
+        tyrano.plugin.kag.tag.slider = TYRANO.kag.tag.slider;
+        tyrano.plugin.kag.tag.switch = TYRANO.kag.tag.switch;
+    }
+    if (typeof TYRANO !== "undefined" && TYRANO.kag) {
+        if (TYRANO.kag.ftag && TYRANO.kag.ftag.master_tag) {
+            TYRANO.kag.ftag.master_tag.slider = TYRANO.kag.tag.slider;
+            TYRANO.kag.ftag.master_tag.slider.kag = TYRANO.kag;
+            TYRANO.kag.ftag.master_tag.switch = TYRANO.kag.tag.switch;
+            TYRANO.kag.ftag.master_tag.switch.kag = TYRANO.kag;
+        }
+    }
 
     const _return = TYRANO.kag.tag.return;
-    TYRANO.kag.tag.return = $.extend(true, {}, _return, {
-        start: function () {
-            $("input").prop("disabled", false);
-            _return.start.apply(this, arguments);
-        },
-    });
-    TYRANO.kag.ftag.master_tag.return = TYRANO.kag.tag.return;
-    TYRANO.kag.ftag.master_tag.return.kag = TYRANO.kag;
+    if (_return) {
+        TYRANO.kag.tag.return = $.extend(true, {}, _return, {
+            start: function () {
+                $("input").prop("disabled", false);
+                _return.start.apply(this, arguments);
+            },
+        });
+        if (TYRANO.kag.ftag && TYRANO.kag.ftag.master_tag) {
+            TYRANO.kag.ftag.master_tag.return = TYRANO.kag.tag.return;
+            TYRANO.kag.ftag.master_tag.return.kag = TYRANO.kag;
+        }
+    }
 })();
 '''
 
@@ -3558,6 +3568,8 @@ img[src*="workring_en.png"] {
   <script type="text/javascript" src="./tyrano/plugins/kag/kag.tag_ar.js"></script>
   <script type="text/javascript" src="./tyrano/plugins/kag/kag.tag_three.js"></script>
   <script type="text/javascript" src="./tyrano/plugins/kag/kag.tag.js"></script>
+  <link rel="stylesheet" href="./data/others/plugin/uiparts_set/slider.css" />
+  <script type="text/javascript" src="./data/others/plugin/uiparts_set/slider.js?v={v_tag}"></script>
 
   <!-- HOME In-Memory Scenario Bundle & Modular Web Extensions (Nạp sau khi Engine sẵn sàng để Hook chính xác) -->
   <script type="text/javascript" src="./js/scenario_bundle.js?v={v_tag}"></script>
