@@ -2355,16 +2355,39 @@ img[src*="workring_en.png"] {
         }}
         if (!url) return filePath;
 
-        // Tối ưu hóa WebP (/s0-rw/) cho toàn bộ hình ảnh thị giác (bỏ qua file audio stego)
+        // Tối ưu hóa WebP (/s0-rw/) cho ảnh tĩnh (PNG/JPG/WebP).
+        // ⚠️ GIF animation KHÔNG được dùng /s0-rw/: Google trả GIF dưới dạng Animated WebP
+        // mà iOS Safari KHÔNG hỗ trợ → làm đứng hình / không phát animation.
+        // → GIF phải giữ nguyên /s0/ (hoặc bỏ /s0-rw/) để trả đúng file GIF gốc.
         const isAudio = norm.startsWith('data/sound') || norm.startsWith('data/bgm') || norm.startsWith('data/video') ||
                         norm.endsWith('.ogg') || norm.endsWith('.mp3') || norm.endsWith('.wav') || norm.endsWith('.mp4');
-        if (!isAudio && typeof url === 'string' && url.startsWith('http')) {{
+        const isGif = /\\.gif$/i.test(norm) || /\\.gif$/i.test(url);
+        if (isGif) {{
+            url = url.replace('/s0-rw/', '/s0/').replace('/s1600-rw/', '/s1600/');
+        }} else if (!isAudio && typeof url === 'string' && url.startsWith('http')) {{
             if (url.includes('/s0/')) url = url.replace('/s0/', '/s0-rw/');
             else if (url.includes('/s1600/')) url = url.replace('/s1600/', '/s1600-rw/');
         }}
 
         return url;
     }};
+
+    // ─── iOS Fallback: khi ảnh WebP (/s0-rw/) lỗi trên iOS Safari, tự thử lại
+    //      bằng URL gốc không biến đổi (/s0/) để tránh "?" bg xanh dương.
+    function installImageErrorFallback(img) {{
+        if (!img || img.__homeFallback) return;
+        img.__homeFallback = true;
+        img.addEventListener('error', function h() {{
+            const cur = this.currentSrc || this.src || '';
+            if (cur.includes('/s0-rw/')) {{
+                const raw = cur.replace('/s0-rw/', '/s0/').replace('/s1600-rw/', '/s1600/');
+                if (raw !== cur) this.removeEventListener('error', h); this.src = raw;
+            }} else if (cur.includes('/s1600-rw/')) {{
+                const raw = cur.replace('/s1600-rw/', '/s1600/');
+                if (raw !== cur) this.removeEventListener('error', h); this.src = raw;
+            }}
+        }});
+    }}
 
     // ─── Native DOM Hooks ─────────────────────────────────────────────────────
     try {{
@@ -2377,6 +2400,7 @@ img[src*="workring_en.png"] {
                         const cdnUrl = window.resolveCDNUrl(val);
                         if (cdnUrl && cdnUrl.startsWith('http')) val = cdnUrl;
                     }}
+                    installImageErrorFallback(this);
                     return origSrcDesc.set.call(this, val);
                 }},
                 get: origSrcDesc.get,
@@ -2391,6 +2415,7 @@ img[src*="workring_en.png"] {
                 const cdnUrl = window.resolveCDNUrl(val);
                 if (cdnUrl && cdnUrl.startsWith('http')) val = cdnUrl;
             }}
+            if (name === 'src') installImageErrorFallback(this);
             return origSetAttribute.call(this, name, val);
         }};
 
@@ -2400,6 +2425,7 @@ img[src*="workring_en.png"] {
                 const cdnUrl = window.resolveCDNUrl(val);
                 if (cdnUrl && cdnUrl.startsWith('http')) val = cdnUrl;
             }}
+            if (this.tagName === 'IMG' && name === 'src') installImageErrorFallback(this);
             return origElemSetAttr.call(this, name, val);
         }};
     }} catch(e) {{}}
