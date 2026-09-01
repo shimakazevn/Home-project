@@ -429,6 +429,152 @@
                 line-height: 1.4;
                 margin-bottom: 10px;
             }
+            /* Modern HUD Config Styles */
+            .hmc-config-section {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+            .hmc-slider-row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+                padding: 8px 12px;
+                background: rgba(255, 255, 255, 0.04);
+                border: 0.5px solid rgba(255, 255, 255, 0.07);
+                border-radius: 12px;
+            }
+            .hmc-slider-left {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                min-width: 90px;
+                flex-shrink: 0;
+            }
+            .hmc-slider-title {
+                font-size: 13px;
+                font-weight: 600;
+                color: #FFFFFF;
+            }
+            .hmc-slider-sub {
+                font-size: 10.5px;
+                color: rgba(235, 235, 245, 0.55);
+            }
+            .hmc-slider-center {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+            .hmc-range-input {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 100%;
+                height: 6px;
+                border-radius: 3px;
+                background: rgba(255, 255, 255, 0.2);
+                outline: none;
+                cursor: pointer;
+                transition: background 0.15s ease;
+            }
+            .hmc-range-input::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                background: #0A84FF;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+                cursor: pointer;
+                border: 1.5px solid #FFFFFF;
+            }
+            .hmc-range-input::-moz-range-thumb {
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                background: #0A84FF;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+                cursor: pointer;
+                border: 1.5px solid #FFFFFF;
+            }
+            .hmc-slider-val {
+                font-size: 12px;
+                font-weight: 600;
+                color: rgba(255, 255, 255, 0.9);
+                min-width: 40px;
+                text-align: right;
+                font-variant-numeric: tabular-nums;
+            }
+            .hmc-mute-btn {
+                background: rgba(120, 120, 128, 0.2);
+                border: 0.5px solid rgba(255, 255, 255, 0.1);
+                border-radius: 8px;
+                padding: 4px 8px;
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 11px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 0.15s ease;
+                flex-shrink: 0;
+            }
+            .hmc-mute-btn.muted {
+                background: rgba(255, 69, 58, 0.25);
+                border-color: rgba(255, 69, 58, 0.4);
+                color: #FF453A;
+            }
+            .hmc-toggle-btn {
+                background: rgba(120, 120, 128, 0.2);
+                border: 0.5px solid rgba(255, 255, 255, 0.1);
+                border-radius: 8px;
+                padding: 5px 12px;
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 12px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.15s ease;
+            }
+            .hmc-toggle-btn.active {
+                background: rgba(48, 209, 88, 0.25);
+                border-color: rgba(48, 209, 88, 0.4);
+                color: #30D158;
+            }
+            .hmc-config-footer {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+                padding-top: 6px;
+                border-top: 0.5px solid rgba(255, 255, 255, 0.08);
+            }
+            .hmc-footer-btn {
+                flex: 1;
+                padding: 9px 14px;
+                border-radius: 10px;
+                font-size: 12.5px;
+                font-weight: 600;
+                cursor: pointer;
+                border: none;
+                transition: all 0.15s ease;
+                text-align: center;
+            }
+            .hmc-btn-reset {
+                background: rgba(255, 255, 255, 0.08);
+                color: rgba(235, 235, 245, 0.75);
+                border: 0.5px solid rgba(255, 255, 255, 0.1);
+            }
+            .hmc-btn-reset:hover {
+                background: rgba(255, 69, 58, 0.2);
+                color: #FF453A;
+                border-color: rgba(255, 69, 58, 0.3);
+            }
+            .hmc-btn-save {
+                background: #0A84FF;
+                color: #FFFFFF;
+            }
+            .hmc-btn-save:hover {
+                background: #0071E3;
+            }
             @media (max-width: 480px) {
                 #home-modal-overlay { padding: 8px; }
                 #home-modal-card { max-width: 100%; max-height: 92vh; border-radius: 18px; }
@@ -487,6 +633,140 @@
         document.getElementById('hmc-close-btn').onclick = closeModal;
         overlay.onclick = (e) => { if (e.target === overlay) closeModal(); };
 
+        let currentModalView = 'main'; // 'main' or 'config'
+
+        function getConfigState() {
+            let sf = (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.variable && window.TYRANO.kag.variable.sf) || {};
+            let TG = (window.TYRANO && window.TYRANO.kag) || {};
+            let cfg = (TG && TG.config) || {};
+            
+            let bgmVol = (sf._system_config_bgm_volume !== undefined) ? parseInt(sf._system_config_bgm_volume) : (parseInt(cfg.defaultBgmVolume) || 50);
+            let seVol = (sf._system_config_se_volume !== undefined) ? parseInt(sf._system_config_se_volume) : (parseInt(cfg.defaultSeVolume) || 50);
+            
+            let sksk = sf._skskpnt_volume || [50, 70, 70, 70];
+            let v1 = (sksk[1] !== undefined) ? parseInt(sksk[1]) : 70;
+            let v2 = (sksk[2] !== undefined) ? parseInt(sksk[2]) : 70;
+            let v3 = (sksk[3] !== undefined) ? parseInt(sksk[3]) : 70;
+
+            let chSpeed = (sf._config_ch_speed !== undefined) ? parseInt(sf._config_ch_speed) : (parseInt(cfg.chSpeed) || 50);
+            let autoSpeed = (sf._system_config_auto_speed !== undefined) ? parseInt(sf._system_config_auto_speed) : (parseInt(cfg.autoSpeed) || 2500);
+
+            let workAnime = (sf.workanime !== undefined) ? sf.workanime : (((window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.variable && window.TYRANO.kag.variable.f && window.TYRANO.kag.variable.f.workanime !== undefined)) ? window.TYRANO.kag.variable.f.workanime : 0);
+            let unreadSkip = (cfg.unReadTextSkip === "true");
+
+            return {
+                bgmVol, seVol, v1, v2, v3,
+                chSlider: Math.max(1, Math.min(100, 101 - chSpeed)),
+                autoSlider: Math.max(1, Math.min(100, Math.round((5050 - autoSpeed) / 45))),
+                workAnime: workAnime === 0,
+                unreadSkip
+            };
+        }
+
+        function applyBgm(val) {
+            val = Math.max(0, Math.min(100, parseInt(val) || 0));
+            if (!window.TYRANO || !window.TYRANO.kag) return;
+            const kag = window.TYRANO.kag;
+            if (!kag.variable.sf) kag.variable.sf = {};
+            kag.variable.sf._system_config_bgm_volume = val;
+            kag.config.defaultBgmVolume = String(val);
+            if (kag.stat.current_bgm) kag.stat.current_bgm_vol = String(val);
+            if (kag.ftag && kag.ftag.startTag) kag.ftag.startTag("bgmopt", { volume: String(val), effect: "false", buf: "0" });
+            if (window.WebAudioEngine && window.WebAudioEngine.setBgmVolume) window.WebAudioEngine.setBgmVolume(val / 100);
+        }
+
+        function applySe(val) {
+            val = Math.max(0, Math.min(100, parseInt(val) || 0));
+            if (!window.TYRANO || !window.TYRANO.kag) return;
+            const kag = window.TYRANO.kag;
+            if (!kag.variable.sf) kag.variable.sf = {};
+            kag.variable.sf._system_config_se_volume = val;
+            kag.config.defaultSeVolume = String(val);
+            if (!kag.variable.sf._skskpnt_volume) kag.variable.sf._skskpnt_volume = [50, 70, 70, 70];
+            kag.variable.sf._skskpnt_volume[0] = val;
+            if (!kag.stat.map_se_volume) kag.stat.map_se_volume = {};
+            kag.stat.map_se_volume[0] = val;
+            if (kag.ftag && kag.ftag.startTag) kag.ftag.startTag("seopt", { volume: String(val), effect: "false", buf: "0" });
+        }
+
+        function applyVoice(idx, val) {
+            idx = parseInt(idx);
+            val = Math.max(0, Math.min(100, parseInt(val) || 0));
+            if (!window.TYRANO || !window.TYRANO.kag) return;
+            const kag = window.TYRANO.kag;
+            if (!kag.variable.sf) kag.variable.sf = {};
+            if (!kag.variable.sf._skskpnt_volume) kag.variable.sf._skskpnt_volume = [50, 70, 70, 70];
+            kag.variable.sf._skskpnt_volume[idx] = val;
+            if (!kag.stat.map_se_volume) kag.stat.map_se_volume = {};
+            kag.stat.map_se_volume[idx] = val;
+            if (kag.ftag && kag.ftag.startTag) kag.ftag.startTag("seopt", { volume: String(val), effect: "false", buf: String(idx) });
+        }
+
+        function applyChSpeed(sliderVal) {
+            sliderVal = Math.max(1, Math.min(100, parseInt(sliderVal) || 50));
+            const chSpeed = Math.max(0, 101 - sliderVal);
+            if (!window.TYRANO || !window.TYRANO.kag) return;
+            const kag = window.TYRANO.kag;
+            if (!kag.variable.sf) kag.variable.sf = {};
+            kag.variable.sf._config_ch_speed = chSpeed;
+            kag.config.chSpeed = String(chSpeed);
+        }
+
+        function applyAutoSpeed(sliderVal) {
+            sliderVal = Math.max(1, Math.min(100, parseInt(sliderVal) || 50));
+            const autoSpeed = Math.max(500, Math.min(5000, 5050 - sliderVal * 45));
+            if (!window.TYRANO || !window.TYRANO.kag) return;
+            const kag = window.TYRANO.kag;
+            if (!kag.variable.sf) kag.variable.sf = {};
+            kag.variable.sf._system_config_auto_speed = autoSpeed;
+            kag.config.autoSpeed = String(autoSpeed);
+        }
+
+        function applyWorkAnime(enabled) {
+            const val = enabled ? 0 : 1;
+            if (!window.TYRANO || !window.TYRANO.kag) return;
+            const kag = window.TYRANO.kag;
+            if (!kag.variable.sf) kag.variable.sf = {};
+            kag.variable.sf.workanime = val;
+            if (kag.variable.f) kag.variable.f.workanime = val;
+        }
+
+        function applySkipUnread(enabled) {
+            if (!window.TYRANO || !window.TYRANO.kag) return;
+            const kag = window.TYRANO.kag;
+            kag.config.unReadTextSkip = enabled ? "true" : "false";
+        }
+
+        function resetConfigDefaults() {
+            applyBgm(50);
+            applySe(50);
+            applyVoice(1, 70);
+            applyVoice(2, 70);
+            applyVoice(3, 70);
+            applyChSpeed(51);
+            applyAutoSpeed(57);
+            applyWorkAnime(true);
+            applySkipUnread(false);
+            if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.saveSystemVariable) {
+                window.TYRANO.kag.saveSystemVariable();
+            }
+            renderModal();
+        }
+
+        window.openModernConfigModal = function() {
+            currentModalView = 'config';
+            overlay.classList.add('open');
+            renderModal();
+        };
+
+        window.closeModernConfigModal = function() {
+            currentModalView = 'main';
+            closeModal();
+            if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.saveSystemVariable) {
+                window.TYRANO.kag.saveSystemVariable();
+            }
+        };
+
         function isGameActive() {
             if (!window.TYRANO || !window.TYRANO.kag || !window.TYRANO.kag.stat) return false;
             const stat = window.TYRANO.kag.stat;
@@ -501,7 +781,304 @@
         function renderModal() {
             const inGame = isGameActive();
             const body = document.getElementById('hmc-dynamic-body');
-            if (!body) return;
+            const header = document.querySelector('.hmc-header');
+            if (!body || !header) return;
+
+            if (currentModalView === 'config') {
+                const cfg = getConfigState();
+                header.innerHTML = `
+                    <button class="hmc-pill-btn" id="hmc-config-back-btn" style="padding:4px 10px;font-size:12px;">← Quay lại</button>
+                    <div class="hmc-title">⚙️ Cài Đặt Trò Chơi</div>
+                    <button class="hmc-close" id="hmc-close-btn" title="Đóng">✕</button>
+                `;
+                document.getElementById('hmc-config-back-btn').onclick = () => {
+                    currentModalView = 'main';
+                    renderModal();
+                };
+                document.getElementById('hmc-close-btn').onclick = () => {
+                    window.closeModernConfigModal();
+                };
+
+                body.innerHTML = `
+                    <!-- 1. ÂM LƯỢNG NHẠC VÀ HIỆU ỨNG -->
+                    <div class="hmc-config-section">
+                        <div class="hmc-group-header">Âm Lượng & Hiệu Ứng</div>
+                        <div class="hmc-slider-row">
+                            <div class="hmc-slider-left">
+                                <div class="hmc-slider-title">🎵 Nhạc Nền</div>
+                                <div class="hmc-slider-sub">BGM Audio</div>
+                            </div>
+                            <div class="hmc-slider-center">
+                                <input type="range" class="hmc-range-input" id="cfg-bgm-slider" min="0" max="100" value="${cfg.bgmVol}">
+                                <span class="hmc-slider-val" id="cfg-bgm-val">${cfg.bgmVol}%</span>
+                            </div>
+                            <button class="hmc-mute-btn ${cfg.bgmVol === 0 ? 'muted' : ''}" id="cfg-bgm-mute">${cfg.bgmVol === 0 ? 'Bật' : 'Tắt'}</button>
+                        </div>
+                        <div class="hmc-slider-row">
+                            <div class="hmc-slider-left">
+                                <div class="hmc-slider-title">🔊 Hiệu Ứng</div>
+                                <div class="hmc-slider-sub">Âm thanh SE</div>
+                            </div>
+                            <div class="hmc-slider-center">
+                                <input type="range" class="hmc-range-input" id="cfg-se-slider" min="0" max="100" value="${cfg.seVol}">
+                                <span class="hmc-slider-val" id="cfg-se-val">${cfg.seVol}%</span>
+                            </div>
+                            <button class="hmc-mute-btn ${cfg.seVol === 0 ? 'muted' : ''}" id="cfg-se-mute">${cfg.seVol === 0 ? 'Bật' : 'Tắt'}</button>
+                        </div>
+                    </div>
+
+                    <!-- 2. LỒNG TIẾNG NHÂN VẬT -->
+                    <div class="hmc-config-section">
+                        <div class="hmc-group-header">Lồng Tiếng Nhân Vật (Voice)</div>
+                        <div class="hmc-slider-row">
+                            <div class="hmc-slider-left">
+                                <div class="hmc-slider-title">🌸 Nagi (凪)</div>
+                                <div class="hmc-slider-sub">Giọng Nữ Chính</div>
+                            </div>
+                            <div class="hmc-slider-center">
+                                <input type="range" class="hmc-range-input" id="cfg-v1-slider" min="0" max="100" value="${cfg.v1}">
+                                <span class="hmc-slider-val" id="cfg-v1-val">${cfg.v1}%</span>
+                            </div>
+                            <button class="hmc-mute-btn ${cfg.v1 === 0 ? 'muted' : ''}" id="cfg-v1-mute">${cfg.v1 === 0 ? 'Bật' : 'Tắt'}</button>
+                        </div>
+                        <div class="hmc-slider-row">
+                            <div class="hmc-slider-left">
+                                <div class="hmc-slider-title">🌺 Tsubomi (蕾)</div>
+                                <div class="hmc-slider-sub">Giọng Nữ Phụ 1</div>
+                            </div>
+                            <div class="hmc-slider-center">
+                                <input type="range" class="hmc-range-input" id="cfg-v2-slider" min="0" max="100" value="${cfg.v2}">
+                                <span class="hmc-slider-val" id="cfg-v2-val">${cfg.v2}%</span>
+                            </div>
+                            <button class="hmc-mute-btn ${cfg.v2 === 0 ? 'muted' : ''}" id="cfg-v2-mute">${cfg.v2 === 0 ? 'Bật' : 'Tắt'}</button>
+                        </div>
+                        <div class="hmc-slider-row">
+                            <div class="hmc-slider-left">
+                                <div class="hmc-slider-title">🍁 Rinko (凛子)</div>
+                                <div class="hmc-slider-sub">Giọng Nữ Phụ 2</div>
+                            </div>
+                            <div class="hmc-slider-center">
+                                <input type="range" class="hmc-range-input" id="cfg-v3-slider" min="0" max="100" value="${cfg.v3}">
+                                <span class="hmc-slider-val" id="cfg-v3-val">${cfg.v3}%</span>
+                            </div>
+                            <button class="hmc-mute-btn ${cfg.v3 === 0 ? 'muted' : ''}" id="cfg-v3-mute">${cfg.v3 === 0 ? 'Bật' : 'Tắt'}</button>
+                        </div>
+                    </div>
+
+                    <!-- 3. TỐC ĐỘ XUẤT CHỮ VÀ TỰ ĐỘNG -->
+                    <div class="hmc-config-section">
+                        <div class="hmc-group-header">Tốc Độ Đọc & Hiển Thị</div>
+                        <div class="hmc-slider-row">
+                            <div class="hmc-slider-left">
+                                <div class="hmc-slider-title">⏩ Tốc độ chữ</div>
+                                <div class="hmc-slider-sub">Chậm ➔ Tức thì</div>
+                            </div>
+                            <div class="hmc-slider-center">
+                                <input type="range" class="hmc-range-input" id="cfg-ch-slider" min="1" max="100" value="${cfg.chSlider}">
+                                <span class="hmc-slider-val" id="cfg-ch-val">${cfg.chSlider === 100 ? 'Tức thì' : cfg.chSlider + '%'}</span>
+                            </div>
+                        </div>
+                        <div class="hmc-slider-row">
+                            <div class="hmc-slider-left">
+                                <div class="hmc-slider-title">⏱️ Tự động đọc</div>
+                                <div class="hmc-slider-sub">Chậm ➔ Nhanh</div>
+                            </div>
+                            <div class="hmc-slider-center">
+                                <input type="range" class="hmc-range-input" id="cfg-auto-slider" min="1" max="100" value="${cfg.autoSlider}">
+                                <span class="hmc-slider-val" id="cfg-auto-val">${cfg.autoSlider}%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. TÙY CHỌN BỔ SUNG -->
+                    <div class="hmc-config-section">
+                        <div class="hmc-group-header">Tùy Chọn Hệ Thống</div>
+                        <div class="hmc-row">
+                            <div class="hmc-row-left">
+                                <div class="hmc-row-label">Hoạt ảnh làm việc (Job Animation)</div>
+                                <div class="hmc-row-sublabel">Hiệu ứng chạy tiến độ công việc</div>
+                            </div>
+                            <div class="hmc-row-actions">
+                                <button class="hmc-toggle-btn ${cfg.workAnime ? 'active' : ''}" id="cfg-toggle-work">${cfg.workAnime ? 'BẬT' : 'TẮT'}</button>
+                            </div>
+                        </div>
+                        <div class="hmc-row">
+                            <div class="hmc-row-left">
+                                <div class="hmc-row-label">Tua cả câu chưa đọc (Skip All)</div>
+                                <div class="hmc-row-sublabel">Tua nhanh không dừng lại</div>
+                            </div>
+                            <div class="hmc-row-actions">
+                                <button class="hmc-toggle-btn ${cfg.unreadSkip ? 'active' : ''}" id="cfg-toggle-skip">${cfg.unreadSkip ? 'BẬT' : 'TẮT'}</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FOOTER BUTTONS -->
+                    <div class="hmc-config-footer">
+                        <button class="hmc-footer-btn hmc-btn-reset" id="cfg-btn-reset">🔄 Khôi phục mặc định</button>
+                        <button class="hmc-footer-btn hmc-btn-save" id="cfg-btn-close">💾 Đóng & Tiếp tục</button>
+                    </div>
+                `;
+
+                // Sliders event listeners
+                let prevBgm = cfg.bgmVol || 50;
+                let prevSe = cfg.seVol || 50;
+                let prevV1 = cfg.v1 || 70;
+                let prevV2 = cfg.v2 || 70;
+                let prevV3 = cfg.v3 || 70;
+
+                const bgmIn = document.getElementById('cfg-bgm-slider');
+                const bgmVal = document.getElementById('cfg-bgm-val');
+                const bgmMute = document.getElementById('cfg-bgm-mute');
+                bgmIn?.addEventListener('input', (e) => {
+                    const v = parseInt(e.target.value);
+                    bgmVal.textContent = v + '%';
+                    bgmMute.textContent = (v === 0) ? 'Bật' : 'Tắt';
+                    bgmMute.classList.toggle('muted', v === 0);
+                    applyBgm(v);
+                });
+                bgmMute?.addEventListener('click', () => {
+                    const cur = parseInt(bgmIn.value);
+                    if (cur > 0) {
+                        prevBgm = cur;
+                        bgmIn.value = 0;
+                    } else {
+                        bgmIn.value = prevBgm || 50;
+                    }
+                    bgmIn.dispatchEvent(new Event('input'));
+                });
+
+                const seIn = document.getElementById('cfg-se-slider');
+                const seVal = document.getElementById('cfg-se-val');
+                const seMute = document.getElementById('cfg-se-mute');
+                seIn?.addEventListener('input', (e) => {
+                    const v = parseInt(e.target.value);
+                    seVal.textContent = v + '%';
+                    seMute.textContent = (v === 0) ? 'Bật' : 'Tắt';
+                    seMute.classList.toggle('muted', v === 0);
+                    applySe(v);
+                });
+                seMute?.addEventListener('click', () => {
+                    const cur = parseInt(seIn.value);
+                    if (cur > 0) {
+                        prevSe = cur;
+                        seIn.value = 0;
+                    } else {
+                        seIn.value = prevSe || 50;
+                    }
+                    seIn.dispatchEvent(new Event('input'));
+                });
+
+                const v1In = document.getElementById('cfg-v1-slider');
+                const v1Val = document.getElementById('cfg-v1-val');
+                const v1Mute = document.getElementById('cfg-v1-mute');
+                v1In?.addEventListener('input', (e) => {
+                    const v = parseInt(e.target.value);
+                    v1Val.textContent = v + '%';
+                    v1Mute.textContent = (v === 0) ? 'Bật' : 'Tắt';
+                    v1Mute.classList.toggle('muted', v === 0);
+                    applyVoice(1, v);
+                });
+                v1Mute?.addEventListener('click', () => {
+                    const cur = parseInt(v1In.value);
+                    if (cur > 0) {
+                        prevV1 = cur;
+                        v1In.value = 0;
+                    } else {
+                        v1In.value = prevV1 || 70;
+                    }
+                    v1In.dispatchEvent(new Event('input'));
+                });
+
+                const v2In = document.getElementById('cfg-v2-slider');
+                const v2Val = document.getElementById('cfg-v2-val');
+                const v2Mute = document.getElementById('cfg-v2-mute');
+                v2In?.addEventListener('input', (e) => {
+                    const v = parseInt(e.target.value);
+                    v2Val.textContent = v + '%';
+                    v2Mute.textContent = (v === 0) ? 'Bật' : 'Tắt';
+                    v2Mute.classList.toggle('muted', v === 0);
+                    applyVoice(2, v);
+                });
+                v2Mute?.addEventListener('click', () => {
+                    const cur = parseInt(v2In.value);
+                    if (cur > 0) {
+                        prevV2 = cur;
+                        v2In.value = 0;
+                    } else {
+                        v2In.value = prevV2 || 70;
+                    }
+                    v2In.dispatchEvent(new Event('input'));
+                });
+
+                const v3In = document.getElementById('cfg-v3-slider');
+                const v3Val = document.getElementById('cfg-v3-val');
+                const v3Mute = document.getElementById('cfg-v3-mute');
+                v3In?.addEventListener('input', (e) => {
+                    const v = parseInt(e.target.value);
+                    v3Val.textContent = v + '%';
+                    v3Mute.textContent = (v === 0) ? 'Bật' : 'Tắt';
+                    v3Mute.classList.toggle('muted', v === 0);
+                    applyVoice(3, v);
+                });
+                v3Mute?.addEventListener('click', () => {
+                    const cur = parseInt(v3In.value);
+                    if (cur > 0) {
+                        prevV3 = cur;
+                        v3In.value = 0;
+                    } else {
+                        v3In.value = prevV3 || 70;
+                    }
+                    v3In.dispatchEvent(new Event('input'));
+                });
+
+                const chIn = document.getElementById('cfg-ch-slider');
+                const chVal = document.getElementById('cfg-ch-val');
+                chIn?.addEventListener('input', (e) => {
+                    const v = parseInt(e.target.value);
+                    chVal.textContent = (v === 100) ? 'Tức thì' : v + '%';
+                    applyChSpeed(v);
+                });
+
+                const autoIn = document.getElementById('cfg-auto-slider');
+                const autoVal = document.getElementById('cfg-auto-val');
+                autoIn?.addEventListener('input', (e) => {
+                    const v = parseInt(e.target.value);
+                    autoVal.textContent = v + '%';
+                    applyAutoSpeed(v);
+                });
+
+                const toggleWork = document.getElementById('cfg-toggle-work');
+                toggleWork?.addEventListener('click', () => {
+                    const active = !toggleWork.classList.contains('active');
+                    toggleWork.classList.toggle('active', active);
+                    toggleWork.textContent = active ? 'BẬT' : 'TẮT';
+                    applyWorkAnime(active);
+                });
+
+                const toggleSkip = document.getElementById('cfg-toggle-skip');
+                toggleSkip?.addEventListener('click', () => {
+                    const active = !toggleSkip.classList.contains('active');
+                    toggleSkip.classList.toggle('active', active);
+                    toggleSkip.textContent = active ? 'BẬT' : 'TẮT';
+                    applySkipUnread(active);
+                });
+
+                document.getElementById('cfg-btn-reset')?.addEventListener('click', () => {
+                    resetConfigDefaults();
+                });
+                document.getElementById('cfg-btn-close')?.addEventListener('click', () => {
+                    window.closeModernConfigModal();
+                });
+                return;
+            }
+
+            // MAIN VIEW
+            header.innerHTML = `
+                <div class="hmc-title">Cài đặt & Tiện ích</div>
+                <button class="hmc-close" id="hmc-close-btn" title="Đóng">✕</button>
+            `;
+            document.getElementById('hmc-close-btn').onclick = closeModal;
 
             const isSkip = inGame && !!(window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.stat && window.TYRANO.kag.stat.is_skip);
             const isAuto = inGame && !!(window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.stat && window.TYRANO.kag.stat.is_auto);
@@ -567,7 +1144,7 @@
 
                         <div class="hmc-row">
                             <div class="hmc-row-left">
-                                <div class="hmc-row-label">Cài đặt Hệ thống (Config)</div>
+                                <div class="hmc-row-label">Cài đặt Trò chơi (Config)</div>
                                 <div class="hmc-row-sublabel">Chỉnh Âm lượng BGM, Voice, Tốc độ chữ</div>
                             </div>
                             <div class="hmc-row-actions">
@@ -608,7 +1185,7 @@
                 </div>
             `;
 
-            // Gắn sự kiện
+            // Gắn sự kiện Main View
             document.getElementById('btn_modal_save_menu')?.addEventListener('click', () => {
                 if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.menu) {
                     closeModal();
@@ -672,21 +1249,7 @@
                 }
             });
             document.getElementById('btn_modal_config')?.addEventListener('click', () => {
-                if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.ftag) {
-                    closeModal();
-                    if (window.TYRANO.kag.stat && window.TYRANO.kag.stat.current_scenario && window.TYRANO.kag.stat.current_scenario.indexOf('config.ks') !== -1) {
-                        if (window.TYRANO.kag.tmp && window.TYRANO.kag.tmp.sleep_game) {
-                            window.TYRANO.kag.ftag.startTag("awakegame", { variable_over: "true", bgm_over: "false" });
-                        } else {
-                            window.TYRANO.kag.ftag.startTag("jump", { storage: "title_screen.ks", target: "*back" });
-                        }
-                        return;
-                    }
-                    window.TYRANO.kag.ftag.startTag("sleepgame", {
-                        storage: "../others/plugin/theme_kopanda_09_2/config.ks",
-                        next: false
-                    });
-                }
+                window.openModernConfigModal();
             });
             document.getElementById('btn_modal_fullscreen')?.addEventListener('click', () => {
                 window.toggleWebFullscreen();

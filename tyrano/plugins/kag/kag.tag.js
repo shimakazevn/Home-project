@@ -489,6 +489,9 @@ tyrano.plugin.kag.tag.graph = {
 tyrano.plugin.kag.tag.jump = {
     pm: {storage: null, target: null, countpage: !0},
     start: function (pm) {
+        if (pm.storage && pm.storage.indexOf("config.ks") !== -1) {
+            if (window.openModernConfigModal) { window.openModernConfigModal(); this.kag.ftag.nextOrder(); return; }
+        }
         var that = this
         setTimeout(function () {
             that.kag.ftag.nextOrderWithLabel(pm.target, pm.storage)
@@ -1318,7 +1321,10 @@ tyrano.plugin.kag.tag.button = {
                             1 == that.kag.stat.is_auto ? that.kag.ftag.startTag("autostop", {next: "false"}) : that.kag.ftag.startTag("autostart", {})
                             break
                         case "sleepgame":
-                            j_button.trigger("mouseout")
+                            j_button.trigger("mouseout");
+                            if ((_pm.storage && _pm.storage.indexOf("config.ks") !== -1) || _pm.role === "config") {
+                                if (window.openModernConfigModal) { window.openModernConfigModal(); event.stopPropagation(); return !1; }
+                            }
                             if (null != that.kag.tmp.sleep_game) return !1
                             that.kag.tmp.sleep_game = {}
                             _pm.next = !1
