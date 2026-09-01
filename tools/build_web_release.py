@@ -1735,22 +1735,22 @@ img[src*="workring_en.png"] {
         // 12-byte header: [0..3] magic b'AUDO', [4..7] dataLength (uint32 big-endian), [8..11] reserved
         const magic = String.fromCharCode(rawPixels[0], rawPixels[1], rawPixels[2], rawPixels[3]);
         let dataLength = 0;
-        let offset = 0;
+        let headerOffset = 0;
 
         if (magic === 'AUDO' || magic === 'VIDO' || magic === 'BINA') {
             dataLength = (rawPixels[4] << 24) | (rawPixels[5] << 16) | (rawPixels[6] << 8) | rawPixels[7];
-            offset = 12;
+            headerOffset = 12;
         } else {
             // Fallback for legacy 4-byte length header
             dataLength = (rawPixels[0] << 24) | (rawPixels[1] << 16) | (rawPixels[2] << 8) | rawPixels[3];
-            offset = 4;
+            headerOffset = 4;
         }
 
-        if (dataLength <= 0 || dataLength > rawPixels.length - offset) {
+        if (dataLength <= 0 || dataLength > rawPixels.length - headerOffset) {
             throw new Error(`Invalid embedded audio length: ${dataLength} (magic: ${magic})`);
         }
 
-        return rawPixels.slice(offset, offset + dataLength);
+        return rawPixels.slice(headerOffset, headerOffset + dataLength);
     }
 
     async function decodeAudioFromUrl(url) {
