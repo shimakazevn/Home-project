@@ -357,10 +357,10 @@ tyrano.plugin.kag = {
         } else this.kag.stat.visible_menu_button = !0
         $("." + this.kag.define.BASE_DIV_NAME).append(button_menu_obj)
         if (this.kag.config.ScreenCentering && "false" == this.kag.config.ScreenCentering) {
-            $(".tyrano_base").css("transform-origin", "0 0")
+            $(".tyrano_base").css("transform-origin", "center center")
             $(".tyrano_base").css({margin: 0})
         } else {
-            $(".tyrano_base").css("transform-origin", "0 0")
+            $(".tyrano_base").css("transform-origin", "center center")
             $(".tyrano_base").css({margin: 0})
         }
         if ("pc" != $.userenv()) {

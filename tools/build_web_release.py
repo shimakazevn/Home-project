@@ -623,8 +623,67 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
             'AudioContext && (this.tmp.audio_context = new AudioContext())',
             'AudioContext && (this.tmp.audio_context = (window.HOME_AudioEngine && window.HOME_AudioEngine.getAudioContext) ? window.HOME_AudioEngine.getAudioContext() : (this.tmp.audio_context || new AudioContext()))'
         )
+        kag_code = kag_code.replace('$(".tyrano_base").css("transform-origin", "0 0")', '$(".tyrano_base").css("transform-origin", "center center")')
         with open(kag_js_path, 'w', encoding='utf-8') as f:
             f.write(kag_code)
+
+    # Sửa triệt để lỗi căn giữa và lệch màn hình trên mọi thiết bị trong tyrano.base.js
+    tyrano_base_js_path = os.path.join(WEB_SRC_DIR, 'tyrano', 'tyrano.base.js')
+    if os.path.exists(tyrano_base_js_path):
+        clean_tyrano_base_js = """
+tyrano.base = {
+    tyrano: null,
+    modules: [],
+    options: {},
+    init: function(tyrano) {
+        this.tyrano = tyrano;
+    },
+    setBaseSize: function(width, height) {
+        this.tyrano.get(".tyrano_base").css("width", width).css("height", height).css("background-color", "black");
+    },
+    fitBaseSize: function(width, height) {
+        var that = this;
+        this._fitBaseSize(width, height);
+        setTimeout(function() {
+            that._fitBaseSize(width, height);
+        }, 50);
+    },
+    _fitBaseSize: function(width, height) {
+        var that = this;
+        var view_width = window.innerWidth || document.documentElement.clientWidth;
+        var view_height = window.innerHeight || document.documentElement.clientHeight;
+        var scWidth = parseInt(that.tyrano.kag.config.scWidth) || 1280;
+        var scHeight = parseInt(that.tyrano.kag.config.scHeight) || 720;
+
+        var scale_f = Math.min(view_width / scWidth, view_height / scHeight);
+        if (that.tyrano.kag && that.tyrano.kag.tmp) {
+            that.tyrano.kag.tmp.base_scale = scale_f;
+        }
+
+        var base = $(".tyrano_base");
+        base.css({
+            "position": "absolute",
+            "transform-origin": "center center",
+            "top": "50%",
+            "left": "50%",
+            "margin": "0px",
+            "transform": "translate(-50%, -50%) scale(" + scale_f + ")"
+        });
+
+        if (that.tyrano.kag.config["vchat"] && that.tyrano.kag.config["vchat"] == "true") {
+            var base_height = Math.round(scHeight * scale_f);
+            var vchat_height = (view_height - base_height);
+            $("#vchat_base").css({
+                "margin-top": base_height,
+                "height": vchat_height
+            });
+        }
+    },
+    test: function() {}
+};
+"""
+        with open(tyrano_base_js_path, 'w', encoding='utf-8') as f:
+            f.write(clean_tyrano_base_js)
 
     # Tối ưu hóa $.loadText trong web/tyrano/libs.js: Không dùng Math.random(), ưu tiên RAM bundle
     libs_js_path = os.path.join(WEB_SRC_DIR, 'tyrano', 'libs.js')
@@ -806,6 +865,11 @@ html, body {
 }
 
 #tyrano_base, .tyrano_base {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    margin: 0 !important;
+    transform-origin: center center !important;
     background-color: #000000;
 }
 
@@ -2064,11 +2128,11 @@ img[src*="workring_en.png"] {
         const offsetY = Math.max(0, (winH - scaledH) / 2);
 
         base.style.position = 'absolute';
-        base.style.transformOrigin = '0 0';
-        base.style.transform = `scale(${scale})`;
-        base.style.left = `${offsetX}px`;
-        base.style.top = `${offsetY}px`;
+        base.style.transformOrigin = 'center center';
+        base.style.top = '50%';
+        base.style.left = '50%';
         base.style.margin = '0px';
+        base.style.transform = `translate(-50%, -50%) scale(${scale})`;
     }
 
     window.addEventListener('resize', autoFitGameScreen);

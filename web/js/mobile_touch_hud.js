@@ -29,11 +29,11 @@
         const offsetY = Math.max(0, (winH - scaledH) / 2);
 
         base.style.position = 'absolute';
-        base.style.transformOrigin = '0 0';
-        base.style.transform = `scale(${scale})`;
-        base.style.left = `${offsetX}px`;
-        base.style.top = `${offsetY}px`;
+        base.style.transformOrigin = 'center center';
+        base.style.top = '50%';
+        base.style.left = '50%';
         base.style.margin = '0px';
+        base.style.transform = `translate(-50%, -50%) scale(${scale})`;
     }
 
     window.addEventListener('resize', autoFitGameScreen);

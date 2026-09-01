@@ -21,6 +21,11 @@ html, body {
 }
 
 #tyrano_base, .tyrano_base {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    margin: 0 !important;
+    transform-origin: center center !important;
     background-color: #000000;
 }
 
