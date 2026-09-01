@@ -92,13 +92,30 @@ def step3_sync_engine_and_scenarios():
     plugin_dst = os.path.join(others_dst, 'plugin')
     os.makedirs(plugin_dst, exist_ok=True)
     
+    def copytree_safe(src, dst):
+        for root, dirs, files in os.walk(src):
+            rel = os.path.relpath(root, src)
+            dest_dir = os.path.join(dst, rel) if rel != '.' else dst
+            os.makedirs(dest_dir, exist_ok=True)
+            for f in files:
+                src_f = os.path.join(root, f)
+                dst_f = os.path.join(dest_dir, f)
+                try:
+                    with open(src_f, 'rb') as sf, open(dst_f, 'wb') as df:
+                        df.write(sf.read())
+                except Exception:
+                    try:
+                        shutil.copy2(src_f, dst_f)
+                    except Exception:
+                        pass
+
     orig_plugin_dir = os.path.join(ROOT_DIR, 'extracted_scripts', 'data', 'others', 'plugin')
     if os.path.exists(orig_plugin_dir):
-        shutil.copytree(orig_plugin_dir, plugin_dst, dirs_exist_ok=True)
+        copytree_safe(orig_plugin_dir, plugin_dst)
         
     patch_plugin_dir = os.path.join(ROOT_DIR, 'patch', 'data', 'others', 'plugin')
     if os.path.exists(patch_plugin_dir):
-        shutil.copytree(patch_plugin_dir, plugin_dst, dirs_exist_ok=True)
+        copytree_safe(patch_plugin_dir, plugin_dst)
 
     # Khắc phục triệt để lỗi corrupt của các plugin gốc (awakegame_ex, tb_save_img, waapi, uiparts_set)
     awakegame_init = '[loadjs storage="plugin/awakegame_ex/main.js"]\n\n[return]\n'
@@ -126,7 +143,7 @@ TYRANO.kag.tag.awakegame_ex = {
     start: function(pm){
         if (null == this.kag.tmp.sleep_game) {
             if (this.kag.stat.current_scenario && (this.kag.stat.current_scenario.indexOf("config.ks") !== -1)) {
-                this.kag.ftag.startTag("jump", { storage: "title_screen.ks", target: "*start" });
+                this.kag.ftag.startTag("jump", { storage: "title_screen.ks", target: "*back" });
             } else {
                 this.kag.ftag.nextOrder();
             }
@@ -141,7 +158,7 @@ TYRANO.kag.tag.awakegame_ex = {
             var sleep_game = this.kag.tmp.sleep_game;
             "true" == pm.variable_over && (sleep_game.stat.f = this.kag.stat.f);
             var _pm = {
-                bgm_over: pm.bgm_over
+                bgm_over: pm.bgm_over || "true"
             };
             1 == this.kag.tmp.sleep_game_next && (_pm.auto_next = "yes");
 
@@ -765,26 +782,61 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
                 __slider_ui.updateMuteIcon(_pm.name, val);
                 that.kag.embScript(_pm.var + " = " + val);
 
-                // Live update audio & text speed
+                // Live update audio & text speed & persist to sf
                 if (_pm.name === "bgm") {
                     if (that.kag.setBgmVolume) that.kag.setBgmVolume(val);
+                    if (that.kag.config) that.kag.config.defaultBgmVolume = String(val);
+                    if (that.kag.variable && that.kag.variable.sf) {
+                        that.kag.variable.sf._system_config_bgm_volume = val;
+                        that.kag.saveSystemVariable();
+                    }
                 } else if (_pm.name === "se") {
                     if (that.kag.setSeVolume) that.kag.setSeVolume("0", val);
+                    if (that.kag.config) that.kag.config.defaultSeVolume = String(val);
+                    if (that.kag.variable && that.kag.variable.sf) {
+                        that.kag.variable.sf._system_config_se_volume = val;
+                        if (!that.kag.variable.sf._skskpnt_volume) that.kag.variable.sf._skskpnt_volume = [50, 70, 70, 70];
+                        that.kag.variable.sf._skskpnt_volume[0] = val;
+                        that.kag.saveSystemVariable();
+                    }
                 } else if (_pm.name === "voice_1") {
                     if (that.kag.setSeVolume) that.kag.setSeVolume("1", val);
+                    if (that.kag.variable && that.kag.variable.sf) {
+                        if (!that.kag.variable.sf._skskpnt_volume) that.kag.variable.sf._skskpnt_volume = [50, 70, 70, 70];
+                        that.kag.variable.sf._skskpnt_volume[1] = val;
+                        that.kag.saveSystemVariable();
+                    }
                 } else if (_pm.name === "voice_2") {
                     if (that.kag.setSeVolume) that.kag.setSeVolume("2", val);
+                    if (that.kag.variable && that.kag.variable.sf) {
+                        if (!that.kag.variable.sf._skskpnt_volume) that.kag.variable.sf._skskpnt_volume = [50, 70, 70, 70];
+                        that.kag.variable.sf._skskpnt_volume[2] = val;
+                        that.kag.saveSystemVariable();
+                    }
                 } else if (_pm.name === "voice_3") {
                     if (that.kag.setSeVolume) that.kag.setSeVolume("3", val);
+                    if (that.kag.variable && that.kag.variable.sf) {
+                        if (!that.kag.variable.sf._skskpnt_volume) that.kag.variable.sf._skskpnt_volume = [50, 70, 70, 70];
+                        that.kag.variable.sf._skskpnt_volume[3] = val;
+                        that.kag.saveSystemVariable();
+                    }
                 } else if (_pm.name === "text") {
                     var chSpeed = 101 - val;
                     if (that.kag.config) that.kag.config.chSpeed = chSpeed;
                     that.kag.embScript("tf.current_ch_speed = " + chSpeed);
+                    if (that.kag.variable && that.kag.variable.sf) {
+                        that.kag.variable.sf._config_ch_speed = chSpeed;
+                        that.kag.saveSystemVariable();
+                    }
                     if (window.gMessageTester && gMessageTester.next) gMessageTester.next(true);
                 } else if (_pm.name === "auto") {
                     var autoSpeed = 5001 - val;
                     if (that.kag.config) that.kag.config.autoSpeed = autoSpeed;
                     that.kag.embScript("tf.current_auto_speed = " + autoSpeed);
+                    if (that.kag.variable && that.kag.variable.sf) {
+                        that.kag.variable.sf._system_config_auto_speed = autoSpeed;
+                        that.kag.saveSystemVariable();
+                    }
                     if (window.gMessageTester && gMessageTester.next) gMessageTester.next(true);
                 }
 
@@ -809,6 +861,8 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
                 } else if (_pm.name === "voice_3") {
                     if (that.kag.playTestAudio) that.kag.playTestAudio("voice_3", val);
                 }
+
+                if (that.kag.saveSystemVariable) that.kag.saveSystemVariable();
 
                 if (_pm.exp && _pm.exp !== "") {
                     that.kag.embScript(_pm.exp, _pm.preexp);
@@ -1049,6 +1103,10 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
         tag_code = tag_code.replace(
             'if ("" == _pm.role && "true" == _pm.fix) {\n                    var stack_pm = that.kag.getStack("call")\n                    if (null != stack_pm) {\n                        that.kag.log("callスタックが残っている場合、fixボタンは反応しません")\n                        that.kag.log(stack_pm)\n                        return !1\n                    }\n                    var _auto_next = _pm.auto_next\n                    1 == that.kag.stat.is_strong_stop && (_auto_next = "stop")\n                    that.kag.ftag.startTag("call", {storage: _storage, target: _target, auto_next: _auto_next})\n                } else that.kag.ftag.startTag("jump", _pm)',
             'if ("" == _pm.role && "true" == _pm.fix) {\n                    var _target_to_jump = _target || _pm.target;\n                    var _storage_to_jump = _storage || _pm.storage;\n                    that.kag.ftag.startTag("jump", {storage: _storage_to_jump, target: _target_to_jump})\n                } else that.kag.ftag.startTag("jump", _pm)'
+        )
+        tag_code = tag_code.replace(
+            'button_clicked = !0\n                "" != _pm.exp',
+            'if ("false" == _pm.fix) button_clicked = !0;\n                "" != _pm.exp'
         )
         with open(tag_js_path, 'w', encoding='utf-8') as f:
             f.write(tag_code)

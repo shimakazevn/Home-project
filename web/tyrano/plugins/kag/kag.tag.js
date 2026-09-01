@@ -1266,7 +1266,7 @@ tyrano.plugin.kag.tag.button = {
                 }
                 if (1 == button_clicked && "false" == _pm.fix) return !1
                 if (1 != that.kag.stat.is_strong_stop && "false" == _pm.fix) return !1
-                button_clicked = !0
+                if ("false" == _pm.fix) button_clicked = !0;
                 "" != _pm.exp && that.kag.embScript(_pm.exp, preexp)
                 if ("true" == _pm.savesnap) {
                     if (1 == that.kag.stat.is_stop) return !1

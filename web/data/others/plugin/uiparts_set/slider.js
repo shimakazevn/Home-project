@@ -281,26 +281,61 @@
                 __slider_ui.updateMuteIcon(_pm.name, val);
                 that.kag.embScript(_pm.var + " = " + val);
 
-                // Live update audio & text speed
+                // Live update audio & text speed & persist to sf
                 if (_pm.name === "bgm") {
                     if (that.kag.setBgmVolume) that.kag.setBgmVolume(val);
+                    if (that.kag.config) that.kag.config.defaultBgmVolume = String(val);
+                    if (that.kag.variable && that.kag.variable.sf) {
+                        that.kag.variable.sf._system_config_bgm_volume = val;
+                        that.kag.saveSystemVariable();
+                    }
                 } else if (_pm.name === "se") {
                     if (that.kag.setSeVolume) that.kag.setSeVolume("0", val);
+                    if (that.kag.config) that.kag.config.defaultSeVolume = String(val);
+                    if (that.kag.variable && that.kag.variable.sf) {
+                        that.kag.variable.sf._system_config_se_volume = val;
+                        if (!that.kag.variable.sf._skskpnt_volume) that.kag.variable.sf._skskpnt_volume = [50, 70, 70, 70];
+                        that.kag.variable.sf._skskpnt_volume[0] = val;
+                        that.kag.saveSystemVariable();
+                    }
                 } else if (_pm.name === "voice_1") {
                     if (that.kag.setSeVolume) that.kag.setSeVolume("1", val);
+                    if (that.kag.variable && that.kag.variable.sf) {
+                        if (!that.kag.variable.sf._skskpnt_volume) that.kag.variable.sf._skskpnt_volume = [50, 70, 70, 70];
+                        that.kag.variable.sf._skskpnt_volume[1] = val;
+                        that.kag.saveSystemVariable();
+                    }
                 } else if (_pm.name === "voice_2") {
                     if (that.kag.setSeVolume) that.kag.setSeVolume("2", val);
+                    if (that.kag.variable && that.kag.variable.sf) {
+                        if (!that.kag.variable.sf._skskpnt_volume) that.kag.variable.sf._skskpnt_volume = [50, 70, 70, 70];
+                        that.kag.variable.sf._skskpnt_volume[2] = val;
+                        that.kag.saveSystemVariable();
+                    }
                 } else if (_pm.name === "voice_3") {
                     if (that.kag.setSeVolume) that.kag.setSeVolume("3", val);
+                    if (that.kag.variable && that.kag.variable.sf) {
+                        if (!that.kag.variable.sf._skskpnt_volume) that.kag.variable.sf._skskpnt_volume = [50, 70, 70, 70];
+                        that.kag.variable.sf._skskpnt_volume[3] = val;
+                        that.kag.saveSystemVariable();
+                    }
                 } else if (_pm.name === "text") {
                     var chSpeed = 101 - val;
                     if (that.kag.config) that.kag.config.chSpeed = chSpeed;
                     that.kag.embScript("tf.current_ch_speed = " + chSpeed);
+                    if (that.kag.variable && that.kag.variable.sf) {
+                        that.kag.variable.sf._config_ch_speed = chSpeed;
+                        that.kag.saveSystemVariable();
+                    }
                     if (window.gMessageTester && gMessageTester.next) gMessageTester.next(true);
                 } else if (_pm.name === "auto") {
                     var autoSpeed = 5001 - val;
                     if (that.kag.config) that.kag.config.autoSpeed = autoSpeed;
                     that.kag.embScript("tf.current_auto_speed = " + autoSpeed);
+                    if (that.kag.variable && that.kag.variable.sf) {
+                        that.kag.variable.sf._system_config_auto_speed = autoSpeed;
+                        that.kag.saveSystemVariable();
+                    }
                     if (window.gMessageTester && gMessageTester.next) gMessageTester.next(true);
                 }
 
@@ -325,6 +360,8 @@
                 } else if (_pm.name === "voice_3") {
                     if (that.kag.playTestAudio) that.kag.playTestAudio("voice_3", val);
                 }
+
+                if (that.kag.saveSystemVariable) that.kag.saveSystemVariable();
 
                 if (_pm.exp && _pm.exp !== "") {
                     that.kag.embScript(_pm.exp, _pm.preexp);

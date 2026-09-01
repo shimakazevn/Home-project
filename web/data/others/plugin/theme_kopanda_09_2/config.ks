@@ -22,63 +22,49 @@
 
 	[iscript]
 
-// TG.config.autoRecordLabel = "true";
+    if (!sf._skskpnt_volume || !Array.isArray(sf._skskpnt_volume)) {
+        sf._skskpnt_volume = [50, 70, 70, 70];
+    }
 
-tf.current_bgm_vol = parseInt(TG.config.defaultBgmVolume);
+    tf.current_bgm_vol = (sf._system_config_bgm_volume !== undefined) ? parseInt(sf._system_config_bgm_volume) : (parseInt(TG.config.defaultBgmVolume) || 50);
+    tf.current_se_vol = (sf._system_config_se_volume !== undefined) ? parseInt(sf._system_config_se_volume) : (parseInt(TG.config.defaultSeVolume) || 50);
+    tf.current_voice_1_vol = (sf._skskpnt_volume[1] !== undefined) ? parseInt(sf._skskpnt_volume[1]) : 70;
+    tf.current_voice_2_vol = (sf._skskpnt_volume[2] !== undefined) ? parseInt(sf._skskpnt_volume[2]) : 70;
+    tf.current_voice_3_vol = (sf._skskpnt_volume[3] !== undefined) ? parseInt(sf._skskpnt_volume[3]) : 70;
 
-	tf.current_bgm_vol = parseInt(TG.config.defaultBgmVolume);
-	tf.current_se_vol = parseInt(TG.config.defaultSeVolume);
-	tf.current_voice_1_vol = parseInt(TYRANO.kag.stat.map_se_volume[1]);
-	tf.current_voice_2_vol = parseInt(TYRANO.kag.stat.map_se_volume[2]);
-	tf.current_voice_3_vol = parseInt(TYRANO.kag.stat.map_se_volume[3]);
+    tf.current_ch_speed = (sf._config_ch_speed !== undefined) ? parseInt(sf._config_ch_speed) : (parseInt(TG.config.chSpeed) || 50);
+    tf.current_auto_speed = (sf._system_config_auto_speed !== undefined) ? parseInt(sf._system_config_auto_speed) : (parseInt(TG.config.autoSpeed) || 2500);
 
-	tf.current_ch_speed = parseInt(TG.config.chSpeed);
-	tf.current_auto_speed = parseInt(TG.config.autoSpeed);
+    TG.config.defaultBgmVolume = tf.current_bgm_vol;
+    TG.config.defaultSeVolume = tf.current_se_vol;
+    TG.config.chSpeed = tf.current_ch_speed;
+    TG.config.autoSpeed = tf.current_auto_speed;
 
-if (sf.config_default_set !== true) {
-    tf.current_bgm_vol = 50;
-    tf.current_se_vol = 50;
-    tf.current_voice_1_vol = 70;
-    tf.current_voice_2_vol = 70;
-    tf.current_voice_3_vol = 70;
-    tf.current_ch_speed = 50;
-    tf.current_auto_speed = 2500;
+    if (!TYRANO.kag.stat.map_se_volume) TYRANO.kag.stat.map_se_volume = {};
+    TYRANO.kag.stat.map_se_volume[0] = tf.current_se_vol;
+    TYRANO.kag.stat.map_se_volume[1] = tf.current_voice_1_vol;
+    TYRANO.kag.stat.map_se_volume[2] = tf.current_voice_2_vol;
+    TYRANO.kag.stat.map_se_volume[3] = tf.current_voice_3_vol;
 
-    TG.config.defaultBgmVolume = 50;
-    TG.config.defaultSeVolume = 50;
-    TG.config.chSpeed = 50;
-    TG.config.autoSpeed = 2500;
-
-    TYRANO.kag.stat.map_se_volume[1] = 70;
-    TYRANO.kag.stat.map_se_volume[2] = 70;
-    TYRANO.kag.stat.map_se_volume[3] = 70;
-
-    sf.config_default_set = true;
-}
-
-	tf.text_skip ="ON";
-        	tf.slider_ch_speed = 101 - tf.current_ch_speed;
+	tf.text_skip = (TG.config.unReadTextSkip == "true") ? "ON" : "OFF";
+    tf.slider_ch_speed = 101 - tf.current_ch_speed;
 	tf.slider_auto_speed = 5001 - tf.current_auto_speed;
 
-	if(TG.config.unReadTextSkip != "true"){
-		tf.text_skip ="OFF";
-	}
-
 	if(f.workanime === undefined){
-		f.workanime = 1
+		f.workanime = (sf.workanime !== undefined) ? sf.workanime : 1;
 	}
-	tf.current_workanime = f.workanime
+	tf.current_workanime = f.workanime;
 
 	tf._old_setting_value = {
-    current_bgm_vol: 50,
-    current_se_vol: 50,
-    current_voice_1_vol: 70,
-    current_voice_2_vol: 70,
-    current_voice_3_vol: 70,
-    current_ch_speed: 50,
-    current_auto_speed: 2500,
-    current_workanime: 1,
-}
+        current_bgm_vol: tf.current_bgm_vol,
+        current_se_vol: tf.current_se_vol,
+        current_voice_1_vol: tf.current_voice_1_vol,
+        current_voice_2_vol: tf.current_voice_2_vol,
+        current_voice_3_vol: tf.current_voice_3_vol,
+        current_ch_speed: tf.current_ch_speed,
+        current_auto_speed: tf.current_auto_speed,
+        current_workanime: tf.current_workanime,
+    };
 
 	[endscript]
 
@@ -336,7 +322,7 @@ if (sf.config_default_set !== true) {
 [start_keyconfig]
 [clearstack]
 
-[awakegame_ex bgm_over="false"]
+[awakegame_ex bgm_over="true"]
 [s]
 
 
@@ -346,29 +332,35 @@ if (sf.config_default_set !== true) {
 *reset
 [iscript]
 
-f.workanime = 0
-tf.current_workanime = 0
+f.workanime = 0;
+tf.current_workanime = 0;
+sf.workanime = 0;
 
-tf.current_bgm_vol = 50
-tf.current_se_vol = 50
+tf.current_bgm_vol = 50;
+tf.current_se_vol = 50;
 
-TG.config.defaultBgmVolume = 50
-TG.config.defaultSeVolume = 50
+TG.config.defaultBgmVolume = 50;
+TG.config.defaultSeVolume = 50;
+sf._system_config_bgm_volume = 50;
+sf._system_config_se_volume = 50;
 
-tf.current_voice_1_vol = 70
-tf.current_voice_2_vol = 70
-tf.current_voice_3_vol = 70
+tf.current_voice_1_vol = 70;
+tf.current_voice_2_vol = 70;
+tf.current_voice_3_vol = 70;
 
-sf._skskpnt_volume[0] = 50
-sf._skskpnt_volume[1] = 70
-sf._skskpnt_volume[2] = 70
-sf._skskpnt_volume[3] = 70
+sf._skskpnt_volume = [50, 70, 70, 70];
 
-tf.current_ch_speed = 50
-tf.current_auto_speed = 2500
+tf.current_ch_speed = 50;
+tf.current_auto_speed = 2500;
+TG.config.chSpeed = 50;
+TG.config.autoSpeed = 2500;
+sf._config_ch_speed = 50;
+sf._system_config_auto_speed = 2500;
 
-tf.slider_ch_speed = 51
-tf.slider_auto_speed = 2501
+tf.slider_ch_speed = 51;
+tf.slider_auto_speed = 2501;
+
+TYRANO.kag.saveSystemVariable();
 
 if (window.__update_slider_dom) {
     window.__update_slider_dom('bgm', 50);
@@ -419,6 +411,9 @@ if (window.__update_slider_dom) {
 	} else {
 		tf.current_bgm_vol = f.prev_vol_list.bgm || 50;
 	}
+	TG.config.defaultBgmVolume = tf.current_bgm_vol;
+	sf._system_config_bgm_volume = tf.current_bgm_vol;
+	TYRANO.kag.saveSystemVariable();
 	if (window.__update_slider_dom) {
 		window.__update_slider_dom('bgm', tf.current_bgm_vol);
 	}
@@ -428,6 +423,11 @@ if (window.__update_slider_dom) {
 [endscript]
 
 *vol_bgm_change
+[iscript]
+	TG.config.defaultBgmVolume = tf.current_bgm_vol;
+	sf._system_config_bgm_volume = tf.current_bgm_vol;
+	TYRANO.kag.saveSystemVariable();
+[endscript]
 	[bgmopt volume="&tf.current_bgm_vol"]
 [call target="*mute_bgm_button" ]
 [jump target="*config_idle"]
@@ -444,6 +444,11 @@ if (window.__update_slider_dom) {
 	} else {
 		tf.current_se_vol = f.prev_vol_list.se || 50;
 	}
+	TG.config.defaultSeVolume = tf.current_se_vol;
+	sf._system_config_se_volume = tf.current_se_vol;
+	if (!sf._skskpnt_volume) sf._skskpnt_volume = [50, 70, 70, 70];
+	sf._skskpnt_volume[0] = tf.current_se_vol;
+	TYRANO.kag.saveSystemVariable();
 	if (window.__update_slider_dom) {
 		window.__update_slider_dom('se', tf.current_se_vol);
 	}
@@ -454,7 +459,11 @@ if (window.__update_slider_dom) {
 
 *vol_se_change
 	[iscript ]
-		sf._skskpnt_volume[0] = tf.current_se_vol
+		TG.config.defaultSeVolume = tf.current_se_vol;
+		sf._system_config_se_volume = tf.current_se_vol;
+		if (!sf._skskpnt_volume) sf._skskpnt_volume = [50, 70, 70, 70];
+		sf._skskpnt_volume[0] = tf.current_se_vol;
+		TYRANO.kag.saveSystemVariable();
 	[endscript ]
 	[seopt buf="0" volume="&tf.current_se_vol"]
 [call target="*mute_se_button" ]
@@ -474,6 +483,9 @@ if (window.__update_slider_dom) {
 	} else {
 		tf[varName] = f.prev_vol_list.voice[tf.isMuteNum] || 70;
 	}
+	if (!sf._skskpnt_volume) sf._skskpnt_volume = [50, 70, 70, 70];
+	sf._skskpnt_volume[voiceIndex] = tf[varName];
+	TYRANO.kag.saveSystemVariable();
 	if (window.__update_slider_dom) {
 		window.__update_slider_dom('voice_' + voiceIndex, tf[varName]);
 	}
@@ -484,9 +496,11 @@ if (window.__update_slider_dom) {
 
 *vol_voice_change
 [iscript ]
-	sf._skskpnt_volume[1] = tf.current_voice_1_vol
-	sf._skskpnt_volume[2] = tf.current_voice_2_vol
-	sf._skskpnt_volume[3] = tf.current_voice_3_vol
+	if (!sf._skskpnt_volume) sf._skskpnt_volume = [50, 70, 70, 70];
+	sf._skskpnt_volume[1] = tf.current_voice_1_vol;
+	sf._skskpnt_volume[2] = tf.current_voice_2_vol;
+	sf._skskpnt_volume[3] = tf.current_voice_3_vol;
+	TYRANO.kag.saveSystemVariable();
 [endscript ]
 [seopt buf="1" volume="&tf.current_voice_1_vol"]
 [seopt buf="2" volume="&tf.current_voice_2_vol"]
@@ -510,12 +524,20 @@ if (window.__update_slider_dom) {
 		tf.current_ch_speed = f.prev_vol_list.text || 50;
 		tf.slider_ch_speed = 101 - tf.current_ch_speed;
 	}
+	TG.config.chSpeed = tf.current_ch_speed;
+	sf._config_ch_speed = tf.current_ch_speed;
+	TYRANO.kag.saveSystemVariable();
 	if (window.__update_slider_dom) {
 		window.__update_slider_dom('text', tf.slider_ch_speed);
 	}
 [endscript]
 *ch_speed_skip
 *ch_speed_change
+[iscript]
+	TG.config.chSpeed = tf.current_ch_speed;
+	sf._config_ch_speed = tf.current_ch_speed;
+	TYRANO.kag.saveSystemVariable();
+[endscript]
 [configdelay speed="&tf.current_ch_speed"]
 [test_message_reset]
 [call target="*mute_text_button"]
@@ -535,12 +557,20 @@ if (window.__update_slider_dom) {
 		tf.current_auto_speed = f.prev_vol_list.auto || 2500;
 		tf.slider_auto_speed = 5001 - tf.current_auto_speed;
 	}
+	TG.config.autoSpeed = tf.current_auto_speed;
+	sf._system_config_auto_speed = tf.current_auto_speed;
+	TYRANO.kag.saveSystemVariable();
 	if (window.__update_slider_dom) {
 		window.__update_slider_dom('auto', tf.slider_auto_speed);
 	}
 [endscript]
 
 *auto_speed_change
+[iscript]
+	TG.config.autoSpeed = tf.current_auto_speed;
+	sf._system_config_auto_speed = tf.current_auto_speed;
+	TYRANO.kag.saveSystemVariable();
+[endscript]
 [autoconfig speed="&tf.current_auto_speed"]
 [test_message_reset]
 [call target="*mute_auto_button"]
@@ -561,7 +591,10 @@ if (window.__update_slider_dom) {
 	[eval exp="tf.text_skip = 'ON'"]
 	[config_record_label skip="true"]
 	[endif]
-
+[iscript]
+	sf._system_config_unread_text_skip = (tf.text_skip == 'ON' ? "true" : "false");
+	TYRANO.kag.saveSystemVariable();
+[endscript]
 [jump target="*config_idle"]
 [s]
 
@@ -570,7 +603,9 @@ if (window.__update_slider_dom) {
 ;--------------------------------------------------------------------------------
 *anime_on
 [iscript ]
-f.workanime = tf.current_workanime
+f.workanime = tf.current_workanime;
+sf.workanime = tf.current_workanime;
+TYRANO.kag.saveSystemVariable();
 [endscript ]
 [call target="*anime_button" ]
 [jump target="*config_idle"]

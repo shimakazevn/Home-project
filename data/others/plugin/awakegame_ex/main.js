@@ -22,7 +22,7 @@ TYRANO.kag.tag.awakegame_ex = {
     start: function(pm){
         if (null == this.kag.tmp.sleep_game) {
             if (this.kag.stat.current_scenario && (this.kag.stat.current_scenario.indexOf("config.ks") !== -1)) {
-                this.kag.ftag.startTag("jump", { storage: "title_screen.ks", target: "*start" });
+                this.kag.ftag.startTag("jump", { storage: "title_screen.ks", target: "*back" });
             } else {
                 this.kag.ftag.nextOrder();
             }
@@ -37,7 +37,7 @@ TYRANO.kag.tag.awakegame_ex = {
             var sleep_game = this.kag.tmp.sleep_game;
             "true" == pm.variable_over && (sleep_game.stat.f = this.kag.stat.f);
             var _pm = {
-                bgm_over: pm.bgm_over
+                bgm_over: pm.bgm_over || "true"
             };
             1 == this.kag.tmp.sleep_game_next && (_pm.auto_next = "yes");
 
