@@ -157,7 +157,7 @@ pause
     # Tạo file hướng dẫn Huong_Dan_Cai_Dat.txt
     readme_content = """============================================================
    HƯỚNG DẪN CÀI ĐẶT PATCH VIỆT HÓA - HOME [PC]
-   Phát triển bởi: Shimakaze VN Translation Team
+   Phát triển bởi: Seikowo Team
 ============================================================
 
 1. CÁCH CÀI ĐẶT CỰC KỲ ĐƠN GIẢN (1-CLICK):

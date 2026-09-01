@@ -4,7 +4,7 @@ tools/unified_patch_installer.py
 =================================
 Trình cài đặt & Cập nhật Patch Việt Hóa Tự Động Trực Tuyến (Online 1-Click Patcher)
 Tựa game: HOME - SORAREVO [RJ01556529]
-Nhóm dịch: Shimakaze VN Translation Team
+Nhóm dịch: Seikowo Team
 Thiết kế: Visual Novel Launcher HUD - Full Artwork & Minimalist Flat Dock
 
 Tính năng:
@@ -713,7 +713,7 @@ def launch_gui():
 def run_cli(target_dir=None):
     print("=" * 65)
     print(f"      {APP_TITLE}")
-    print("      Phát triển bởi Shimakaze VN | Tải Trực Tuyến Từ GitHub")
+    print("      Phát triển bởi Seikowo Team | Tải Trực Tuyến Từ GitHub")
     print("=" * 65)
 
     if not target_dir:

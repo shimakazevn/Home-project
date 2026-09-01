@@ -2,7 +2,7 @@
 
 Dự án bản dịch tiếng Việt cho Visual Novel **HOME** (Mã tác phẩm: RJ01556529, phát triển bởi sorarevo).
 
-- **Nhóm dịch**: Shimakaze VN
+- **Nhóm dịch**: Seikowo Team
 - **Trạng thái**: Hoàn thành 100% cốt truyện chính và giao diện trò chơi (10.273 câu thoại và mục UI)
 - **Hỗ trợ nền tảng**: Windows PC & Trình duyệt Web (Web Mobile & Desktop)
 - **Bản chơi online trên Web**: [https://shimakazevn.github.io/Home-project/](https://shimakazevn.github.io/Home-project/)
