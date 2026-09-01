@@ -477,41 +477,85 @@
                 color: rgba(235, 235, 245, 0.55);
             }
             .hmc-slider-center {
-                flex: 1;
+                flex: 1 1 auto;
+                min-width: 0;
                 display: flex;
                 align-items: center;
-                gap: 8px;
+                gap: 10px;
             }
+            #home-modal-card input[type="range"].hmc-range-input,
             .hmc-range-input {
-                -webkit-appearance: none;
-                appearance: none;
-                width: 100%;
-                height: 6px;
-                border-radius: 3px;
-                background: rgba(255, 255, 255, 0.2);
-                outline: none;
-                cursor: pointer;
-                transition: background 0.15s ease;
+                -webkit-appearance: none !important;
+                -moz-appearance: none !important;
+                appearance: none !important;
+                position: relative !important;
+                display: block !important;
+                flex: 1 1 auto !important;
+                width: 100% !important;
+                min-width: 60px !important;
+                height: 8px !important;
+                border-radius: 999px !important;
+                background: rgba(255, 255, 255, 0.22) !important;
+                outline: none !important;
+                cursor: pointer !important;
+                border: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                z-index: 10 !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3) !important;
             }
+            #home-modal-card input[type="range"].hmc-range-input::-webkit-slider-runnable-track,
+            .hmc-range-input::-webkit-slider-runnable-track {
+                width: 100% !important;
+                height: 8px !important;
+                border-radius: 999px !important;
+                background: rgba(255, 255, 255, 0.22) !important;
+                border: none !important;
+                cursor: pointer !important;
+            }
+            #home-modal-card input[type="range"].hmc-range-input::-moz-range-track,
+            .hmc-range-input::-moz-range-track {
+                width: 100% !important;
+                height: 8px !important;
+                border-radius: 999px !important;
+                background: rgba(255, 255, 255, 0.22) !important;
+                border: none !important;
+                cursor: pointer !important;
+            }
+            #home-modal-card input[type="range"].hmc-range-input::-webkit-slider-thumb,
             .hmc-range-input::-webkit-slider-thumb {
-                -webkit-appearance: none;
-                appearance: none;
-                width: 18px;
-                height: 18px;
-                border-radius: 50%;
-                background: #0A84FF;
-                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-                cursor: pointer;
-                border: 1.5px solid #FFFFFF;
+                -webkit-appearance: none !important;
+                appearance: none !important;
+                width: 20px !important;
+                height: 20px !important;
+                margin-top: -6px !important;
+                border-radius: 50% !important;
+                background: #0A84FF !important;
+                background-image: none !important;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+                cursor: pointer !important;
+                border: 2px solid #FFFFFF !important;
+                position: relative !important;
+                z-index: 20 !important;
+                opacity: 1 !important;
+                visibility: visible !important;
             }
+            #home-modal-card input[type="range"].hmc-range-input::-moz-range-thumb,
             .hmc-range-input::-moz-range-thumb {
-                width: 18px;
-                height: 18px;
-                border-radius: 50%;
-                background: #0A84FF;
-                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-                cursor: pointer;
-                border: 1.5px solid #FFFFFF;
+                width: 20px !important;
+                height: 20px !important;
+                border-radius: 50% !important;
+                background: #0A84FF !important;
+                background-image: none !important;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+                cursor: pointer !important;
+                border: 2px solid #FFFFFF !important;
+                position: relative !important;
+                z-index: 20 !important;
+                opacity: 1 !important;
+                visibility: visible !important;
             }
             .hmc-slider-val {
                 font-size: 12px;
