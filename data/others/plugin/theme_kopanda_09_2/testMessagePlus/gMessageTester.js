@@ -101,18 +101,17 @@ window.gMessageTester = {
 		TM.appendChar();
 		TM.increaseCharNumber();
 
+		clearTimeout(TM.timer);
 		if (TM.currentCharNumber !== 0) {
-			var delay = parseInt(CO.chSpeed || 30);
+			var delay = chSpeed;
 			if (TM.shouldHarryUp) delay = 2;
-			clearTimeout(TM.timer);
 			if (delay <= 1) {
 				TM.update();
 			} else {
 				TM.timer = setTimeout(function() { TM.update(); }, delay);
 			}
 		} else {
-			var delay = parseInt(CO.autoSpeed || 1300);
-			clearTimeout(TM.timer);
+			var delay = autoSpeed;
 			TM.timer = setTimeout(function() { TM.update(); }, delay);
 		}
 	};
