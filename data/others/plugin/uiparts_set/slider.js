@@ -52,7 +52,7 @@
     };
 
     // スライダー
-    TYRANO.kag.tag.slider = {
+    const slider_tag = {
         vital: ["x", "y", "name"],
         pm: {
             name: "",
@@ -94,12 +94,12 @@
             reverse: "false",
         },
         start: function (pm) {
-            const that = TYRANO;
+            const that = (this && this.kag) ? this : (window.TYRANO ? window.TYRANO : this);
             const _pm = pm;
             const name = _pm.name;
             const variable = that.kag.embScript(_pm.var);
 
-            const layer = TYRANO.kag.layer.getLayer("fix");
+            const layer = that.kag.layer.getLayer("fix");
 
             // Remove any existing slider with this name first to prevent duplicate elements/thumbs
             layer.find("." + name).remove();
@@ -373,11 +373,9 @@
             });
         },
     };
-    TYRANO.kag.ftag.master_tag.slider = TYRANO.kag.tag.slider;
-    TYRANO.kag.ftag.master_tag.slider.kag = TYRANO.kag;
 
     // スイッチ
-    TYRANO.kag.tag.switch = {
+    const switch_tag = {
         vital: ["x", "y", "name"],
         pm: {
             name: "",
@@ -404,7 +402,7 @@
             var: "",
         },
         start: function (pm) {
-            const that = TYRANO;
+            const that = (this && this.kag) ? this : (window.TYRANO ? window.TYRANO : this);
             const _pm = pm;
             const name = _pm.name;
             const variable = that.kag.embScript(_pm.var);
@@ -412,7 +410,7 @@
             const base = _pm.base_img != "" ? _pm.base_img : __slider_ui.convertColor(_pm.base_color);
             const color = variable ? active : base;
 
-            const layer = TYRANO.kag.layer.getLayer("fix");
+            const layer = that.kag.layer.getLayer("fix");
 
             let wrap = $('<div class="fixlayer"></div>');
             let input = $("<input type=checkbox />");
@@ -426,36 +424,33 @@
                 width: _pm.width + "px",
                 height: _pm.height + "px",
             });
-            input.attr({ id: "input_" + name });
-            input.css({ display: "none", opacity: 0, width: _pm.width + "px", height: _pm.width + "px" });
-            label.attr({ for: "input_" + name });
-
+            input.attr({
+                id: "input_" + name,
+                type: "checkbox",
+                name: name,
+            });
+            input.css({
+                display: "none",
+            });
+            label.attr({
+                for: "input_" + name,
+            });
             label.css({
-                position: "absolute",
-                cursor: "pointer",
                 background: color,
-                border: _pm.border + "px solid " + __slider_ui.convertColor(_pm.border_color),
-                "border-radius": _pm.border_radius == "0" ? "none" : _pm.border_radius + "px",
+                "box-sizing": "border-box",
+                cursor: "pointer",
+                display: "inline-block",
+                position: "relative",
                 width: _pm.width + "px",
                 height: _pm.height + "px",
-                display: "inline-block",
-                transition: "0.2s",
-                "box-sizing": "border-box",
-                "--thumb_top": ((_pm.thumb_height - _pm.height) / 2) * -1 - _pm.border / 2 + "px",
-                "--thumb-width": _pm.thumb_width + "px",
-                "--thumb-height": _pm.thumb_height + "px",
-                "--thumb-move": _pm.width / 2 + "px",
-                "--active-color": active,
+                border: _pm.border + "px solid " + __slider_ui.convertColor(_pm.border_color),
+                "border-radius": _pm.border_radius + "px",
             });
-            if (_pm.thumb_img != "") {
-                let thumbUrl = _pm.thumb_img;
-                if (!thumbUrl.startsWith("http")) {
-                    if (thumbUrl.startsWith("../")) thumbUrl = "data/" + thumbUrl.replace(/^(\.\.\/)+/, "");
-                    else if (!thumbUrl.startsWith("data/")) thumbUrl = "data/image/" + thumbUrl;
-                }
-                if (window.resolveCDNUrl) thumbUrl = window.resolveCDNUrl(thumbUrl);
-                label.css({ "--thumb-img": `url(${thumbUrl})` });
+
+            if (_pm.base_img != "" && _pm.active_img != "") {
+                label.addClass("img");
             } else {
+                label.append("<div></div>");
                 label.css({
                     "--thumb-radius": _pm.thumb_radius == "0" ? "none" : _pm.thumb_radius + "px",
                     "--thumb-color": __slider_ui.convertColor(_pm.thumb_color),
@@ -472,7 +467,7 @@
             that.kag.ftag.nextOrder();
         },
         setEvent: function (input, label, pm) {
-            const that = TYRANO;
+            const that = (this && this.kag) ? this : (window.TYRANO ? window.TYRANO : this);
             const _pm = pm;
             input.on("change", function () {
                 const active = _pm.active_img != "" ? _pm.active_img : __slider_ui.convertColor(_pm.active_color);
@@ -486,32 +481,44 @@
                     label.css({ background: base });
                     label.find("div").css({ left: "0px" });
                 }
+                if (_pm.target != "") {
+                    that.kag.ftag.startTag("jump", { target: _pm.target, storage: _pm.storage });
+                }
+            });
+        },
     };
 
-    if (typeof tyrano !== "undefined" && tyrano.plugin && tyrano.plugin.kag && tyrano.plugin.kag.tag) {
-        tyrano.plugin.kag.tag.slider = TYRANO.kag.tag.slider;
-        tyrano.plugin.kag.tag.switch = TYRANO.kag.tag.switch;
-    }
-    if (typeof TYRANO !== "undefined" && TYRANO.kag) {
-        if (TYRANO.kag.ftag && TYRANO.kag.ftag.master_tag) {
-            TYRANO.kag.ftag.master_tag.slider = TYRANO.kag.tag.slider;
-            TYRANO.kag.ftag.master_tag.slider.kag = TYRANO.kag;
-            TYRANO.kag.ftag.master_tag.switch = TYRANO.kag.tag.switch;
-            TYRANO.kag.ftag.master_tag.switch.kag = TYRANO.kag;
+    function registerActiveTags() {
+        if (typeof tyrano !== "undefined" && tyrano.plugin && tyrano.plugin.kag && tyrano.plugin.kag.tag) {
+            tyrano.plugin.kag.tag.slider = slider_tag;
+            tyrano.plugin.kag.tag.switch = switch_tag;
+        }
+        if (window.TYRANO && window.TYRANO.kag) {
+            if (!window.TYRANO.kag.tag) window.TYRANO.kag.tag = {};
+            window.TYRANO.kag.tag.slider = slider_tag;
+            window.TYRANO.kag.tag.switch = switch_tag;
+            if (window.TYRANO.kag.ftag && window.TYRANO.kag.ftag.master_tag) {
+                window.TYRANO.kag.ftag.master_tag.slider = slider_tag;
+                slider_tag.kag = window.TYRANO.kag;
+                window.TYRANO.kag.ftag.master_tag.switch = switch_tag;
+                switch_tag.kag = window.TYRANO.kag;
+            }
         }
     }
+    registerActiveTags();
+    if (typeof $ !== "undefined") {
+        $(document).ready(registerActiveTags);
+    }
+    window.addEventListener("DOMContentLoaded", registerActiveTags);
+    window.addEventListener("load", registerActiveTags);
 
-    const _return = TYRANO.kag.tag.return;
+    const _return = (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.tag) ? window.TYRANO.kag.tag.return : null;
     if (_return) {
-        TYRANO.kag.tag.return = $.extend(true, {}, _return, {
+        window.TYRANO.kag.tag.return = $.extend(true, {}, _return, {
             start: function () {
                 $("input").prop("disabled", false);
                 _return.start.apply(this, arguments);
             },
         });
-        if (TYRANO.kag.ftag && TYRANO.kag.ftag.master_tag) {
-            TYRANO.kag.ftag.master_tag.return = TYRANO.kag.tag.return;
-            TYRANO.kag.ftag.master_tag.return.kag = TYRANO.kag;
-        }
     }
 })();
