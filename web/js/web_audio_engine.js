@@ -16,9 +16,31 @@
 
     let activeBgmSource = null;
     let activeBgmGainNode = null;
-    const activeSeMap = new Map(); // bufIdx -> { source, gainNode }
+    let lastBgmScenarioVol = 0.8;
+    const activeSeMap = new Map(); // bufIdx -> { source, gainNode, isVoice, numVol }
     const MASTER_BGM_SCALE = 0.65;
     const MASTER_SE_SCALE = 0.85;
+
+    // ─── Toàn cục Multipliers (Đồng bộ vĩnh viễn trên toàn hệ thống) ──────────
+    let globalBgmMultiplier = 0.8;
+    let globalSeMultiplier = 0.8;
+    let globalVoiceMultiplier = 0.8;
+
+    try {
+        const savedAudioCfg = JSON.parse(localStorage.getItem('home_audio_global_cfg') || '{}');
+        if (savedAudioCfg.bgm !== undefined) globalBgmMultiplier = Math.max(0, Math.min(100, parseFloat(savedAudioCfg.bgm))) / 100.0;
+        if (savedAudioCfg.se !== undefined) globalSeMultiplier = Math.max(0, Math.min(100, parseFloat(savedAudioCfg.se))) / 100.0;
+        if (savedAudioCfg.voice !== undefined) globalVoiceMultiplier = Math.max(0, Math.min(100, parseFloat(savedAudioCfg.voice))) / 100.0;
+    } catch(e) {}
+
+    function isVoiceAudio(urlOrStorage) {
+        if (!urlOrStorage || typeof urlOrStorage !== 'string') return false;
+        const s = urlOrStorage.toLowerCase();
+        return s.includes('/voice') || s.includes('voice_') || 
+               s.includes('/tubomi/') || s.includes('/nagi/') || s.includes('/rinko/') ||
+               s.startsWith('tubomi/') || s.startsWith('nagi/') || s.startsWith('rinko/') ||
+               s.startsWith('voice/');
+    }
 
     function getAudioContext() {
         if (!audioCtx || audioCtx.state === 'closed') {
@@ -117,28 +139,48 @@
             return c;
         }
 
+        let srcPos = 0;
+        let dstPos = 0;
         for (let y = 0; y < height; y++) {
-            const filterType = decompressed[y * (stride + 1)];
-            const curRow = new Uint8Array(stride);
-            const srcOffset = y * (stride + 1) + 1;
-            for (let x = 0; x < stride; x++) {
-                const val = decompressed[srcOffset + x];
-                const a = x >= 3 ? curRow[x - 3] : 0;
-                const b = prevRow[x];
-                const c = x >= 3 ? prevRow[x - 3] : 0;
-                let res = val;
-                if (filterType === 1) res = (val + a) & 0xFF;
-                else if (filterType === 2) res = (val + b) & 0xFF;
-                else if (filterType === 3) res = (val + ((a + b) >> 1)) & 0xFF;
-                else if (filterType === 4) res = (val + paeth(a, b, c)) & 0xFF;
-                curRow[x] = res;
+            const filter = decompressed[srcPos++];
+            const row = rawPixels.subarray(dstPos, dstPos + stride);
+
+            if (filter === 0) { // None
+                for (let x = 0; x < stride; x++) row[x] = decompressed[srcPos++];
+            } else if (filter === 1) { // Sub
+                for (let x = 0; x < stride; x++) {
+                    const left = (x >= 3) ? row[x - 3] : 0;
+                    row[x] = (decompressed[srcPos++] + left) & 0xff;
+                }
+            } else if (filter === 2) { // Up
+                for (let x = 0; x < stride; x++) {
+                    const up = prevRow[x];
+                    row[x] = (decompressed[srcPos++] + up) & 0xff;
+                }
+            } else if (filter === 3) { // Average
+                for (let x = 0; x < stride; x++) {
+                    const left = (x >= 3) ? row[x - 3] : 0;
+                    const up = prevRow[x];
+                    row[x] = (decompressed[srcPos++] + Math.floor((left + up) / 2)) & 0xff;
+                }
+            } else if (filter === 4) { // Paeth
+                for (let x = 0; x < stride; x++) {
+                    const left = (x >= 3) ? row[x - 3] : 0;
+                    const up = prevRow[x];
+                    const upLeft = (x >= 3) ? prevRow[x - 3] : 0;
+                    row[x] = (decompressed[srcPos++] + paeth(left, up, upLeft)) & 0xff;
+                }
             }
-            rawPixels.set(curRow, y * stride);
-            prevRow = curRow;
+            prevRow.set(row);
+            dstPos += stride;
         }
 
-        const dataSize = ((rawPixels[4] << 24) >>> 0) | (rawPixels[5] << 16) | (rawPixels[6] << 8) | rawPixels[7];
-        return rawPixels.subarray(12, 12 + dataSize);
+        const dataLength = (rawPixels[0] << 24) | (rawPixels[1] << 16) | (rawPixels[2] << 8) | rawPixels[3];
+        if (dataLength <= 0 || dataLength > rawPixels.length - 4) {
+            throw new Error(`Invalid embedded audio length: ${dataLength}`);
+        }
+
+        return rawPixels.slice(4, 4 + dataLength);
     }
 
     async function decodeAudioFromUrl(url) {
@@ -154,7 +196,15 @@
             try {
                 const resp = await fetch(url, { referrerPolicy: 'no-referrer' });
                 const arrayBuffer = await resp.arrayBuffer();
-                const audioBytes = await extractStegoAudioBytes(arrayBuffer);
+                
+                let audioBytes;
+                const u8 = new Uint8Array(arrayBuffer);
+                if (u8[0] === 0x89 && u8[1] === 0x50 && u8[2] === 0x4E && u8[3] === 0x47) {
+                    audioBytes = await extractStegoAudioBytes(arrayBuffer);
+                } else {
+                    audioBytes = new Uint8Array(arrayBuffer);
+                }
+                
                 const ctx = getAudioContext();
                 const arrayBufferToDecode = audioBytes.buffer.slice(audioBytes.byteOffset, audioBytes.byteOffset + audioBytes.byteLength);
                 const decodedBuffer = await ctx.decodeAudioData(arrayBufferToDecode);
@@ -183,7 +233,7 @@
         return decodePromise;
     }
 
-    // ─── Play BGM ─────────────────────────────────────────────────────────────
+    // ─── Play BGM (Áp dụng đồng bộ Global BGM Multiplier trên mọi kịch bản) ───
     async function playBGM(url, loop = true, rawVol = 100, buf = "0") {
         try {
             const ctx = getAudioContext();
@@ -206,8 +256,9 @@
             let numVol = parseFloat(rawVol);
             if (isNaN(numVol)) numVol = 80;
             if (numVol > 1.0) numVol = numVol / 100.0;
+            lastBgmScenarioVol = numVol;
 
-            const finalVol = Math.max(0, Math.min(1.0, numVol * MASTER_BGM_SCALE));
+            const finalVol = Math.max(0, Math.min(1.0, numVol * globalBgmMultiplier * MASTER_BGM_SCALE));
             gainNode.gain.setValueAtTime(finalVol, ctx.currentTime);
 
             source.connect(gainNode);
@@ -236,7 +287,7 @@
         }
     }
 
-    // ─── Play SE / Voice ──────────────────────────────────────────────────────
+    // ─── Play SE / Voice (Tự động nhận diện Voice vs SE & Áp dụng Multiplier) ──
     async function playSE(url, rawVol = 100, buf = "0", onEndedCb = null) {
         try {
             const ctx = getAudioContext();
@@ -271,7 +322,9 @@
             if (isNaN(numVol)) numVol = 80;
             if (numVol > 1.0) numVol = numVol / 100.0;
 
-            let finalVol = Math.max(0, Math.min(1.0, numVol * MASTER_SE_SCALE));
+            const isVoice = isVoiceAudio(url);
+            const currentMult = isVoice ? globalVoiceMultiplier : globalSeMultiplier;
+            let finalVol = Math.max(0, Math.min(1.0, numVol * currentMult * MASTER_SE_SCALE));
             if (url.includes('sistem_starton.mp3')) finalVol *= 0.35;
 
             // Attack ramp 4ms chống click cơ học
@@ -283,7 +336,7 @@
             filterNode.connect(ctx.destination);
 
             source.start(0);
-            activeSeMap.set(bufStr, { source, gainNode });
+            activeSeMap.set(bufStr, { source, gainNode, isVoice, numVol });
 
             source.onended = () => {
                 if (activeSeMap.get(bufStr)?.source === source) {
@@ -337,20 +390,65 @@
         setBgmVolume: (vol) => {
             const parsed = parseFloat(vol);
             const v = isNaN(parsed) ? 80 : Math.max(0, Math.min(100, parsed));
-            if (activeBgmGainNode) {
-                const norm = v / 100.0;
-                activeBgmGainNode.gain.value = norm * MASTER_BGM_SCALE;
+            globalBgmMultiplier = v / 100.0;
+            try {
+                const cur = JSON.parse(localStorage.getItem('home_audio_global_cfg') || '{}');
+                cur.bgm = v;
+                localStorage.setItem('home_audio_global_cfg', JSON.stringify(cur));
+            } catch(e) {}
+            if (activeBgmGainNode && getAudioContext()) {
+                const ctx = getAudioContext();
+                const finalVol = Math.max(0, Math.min(1.0, lastBgmScenarioVol * globalBgmMultiplier * MASTER_BGM_SCALE));
+                activeBgmGainNode.gain.setValueAtTime(activeBgmGainNode.gain.value, ctx.currentTime);
+                activeBgmGainNode.gain.linearRampToValueAtTime(finalVol, ctx.currentTime + 0.05);
             }
         },
-        setSeVolume: (buf, vol) => {
-            const bufStr = String(buf || "0");
+        setSeVolume: (vol) => {
             const parsed = parseFloat(vol);
             const v = isNaN(parsed) ? 80 : Math.max(0, Math.min(100, parsed));
-            if (activeSeMap.has(bufStr)) {
-                const norm = v / 100.0;
-                activeSeMap.get(bufStr).gainNode.gain.value = norm * MASTER_SE_SCALE;
+            globalSeMultiplier = v / 100.0;
+            try {
+                const cur = JSON.parse(localStorage.getItem('home_audio_global_cfg') || '{}');
+                cur.se = v;
+                localStorage.setItem('home_audio_global_cfg', JSON.stringify(cur));
+            } catch(e) {}
+            if (getAudioContext()) {
+                const ctx = getAudioContext();
+                activeSeMap.forEach(item => {
+                    if (item.gainNode && !item.isVoice) {
+                        const finalVol = Math.max(0, Math.min(1.0, (item.numVol || 0.8) * globalSeMultiplier * MASTER_SE_SCALE));
+                        item.gainNode.gain.setValueAtTime(finalVol, ctx.currentTime);
+                    }
+                });
             }
-        }
+        },
+        setVoiceVolume: (vol) => {
+            const parsed = parseFloat(vol);
+            const v = isNaN(parsed) ? 80 : Math.max(0, Math.min(100, parsed));
+            globalVoiceMultiplier = v / 100.0;
+            try {
+                const cur = JSON.parse(localStorage.getItem('home_audio_global_cfg') || '{}');
+                cur.voice = v;
+                localStorage.setItem('home_audio_global_cfg', JSON.stringify(cur));
+            } catch(e) {}
+            if (getAudioContext()) {
+                const ctx = getAudioContext();
+                activeSeMap.forEach(item => {
+                    if (item.gainNode && item.isVoice) {
+                        const finalVol = Math.max(0, Math.min(1.0, (item.numVol || 0.8) * globalVoiceMultiplier * MASTER_SE_SCALE));
+                        item.gainNode.gain.setValueAtTime(finalVol, ctx.currentTime);
+                    }
+                });
+            }
+        },
+        getVolumeState: () => ({
+            bgm: Math.round(globalBgmMultiplier * 100),
+            se: Math.round(globalSeMultiplier * 100),
+            voice: Math.round(globalVoiceMultiplier * 100)
+        }),
+        getGlobalBgmMultiplier: () => globalBgmMultiplier,
+        getGlobalSeMultiplier: () => globalSeMultiplier,
+        getGlobalVoiceMultiplier: () => globalVoiceMultiplier
     };
 
     console.log('[Web Audio Engine] ✅ Đã khởi tạo hoàn tất Web Audio & Stego Engine.');

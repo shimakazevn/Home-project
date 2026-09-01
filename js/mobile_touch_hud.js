@@ -758,17 +758,14 @@
         let currentModalView = 'main'; // 'main' or 'config'
 
         function getConfigState() {
+            let audioState = (window.HOME_AudioEngine && window.HOME_AudioEngine.getVolumeState) ? window.HOME_AudioEngine.getVolumeState() : null;
             let sf = (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.variable && window.TYRANO.kag.variable.sf) || {};
             let TG = (window.TYRANO && window.TYRANO.kag) || {};
             let cfg = (TG && TG.config) || {};
             
-            let bgmVol = (sf._system_config_bgm_volume !== undefined) ? parseInt(sf._system_config_bgm_volume) : (parseInt(cfg.defaultBgmVolume) || 50);
-            let seVol = (sf._system_config_se_volume !== undefined) ? parseInt(sf._system_config_se_volume) : (parseInt(cfg.defaultSeVolume) || 50);
-            
-            let sksk = sf._skskpnt_volume || [50, 70, 70, 70];
-            let v1 = (sksk[1] !== undefined) ? parseInt(sksk[1]) : 70;
-            let v2 = (sksk[2] !== undefined) ? parseInt(sksk[2]) : 70;
-            let v3 = (sksk[3] !== undefined) ? parseInt(sksk[3]) : 70;
+            let bgmVol = (audioState && audioState.bgm !== undefined) ? audioState.bgm : ((sf._system_config_bgm_volume !== undefined) ? parseInt(sf._system_config_bgm_volume) : (parseInt(cfg.defaultBgmVolume) || 80));
+            let seVol = (audioState && audioState.se !== undefined) ? audioState.se : ((sf._system_config_se_volume !== undefined) ? parseInt(sf._system_config_se_volume) : (parseInt(cfg.defaultSeVolume) || 80));
+            let voiceVol = (audioState && audioState.voice !== undefined) ? audioState.voice : ((sf._system_config_voice_volume !== undefined) ? parseInt(sf._system_config_voice_volume) : 80);
 
             let chSpeed = (sf._config_ch_speed !== undefined) ? parseInt(sf._config_ch_speed) : (parseInt(cfg.chSpeed) || 50);
             let autoSpeed = (sf._system_config_auto_speed !== undefined) ? parseInt(sf._system_config_auto_speed) : (parseInt(cfg.autoSpeed) || 2500);
@@ -777,7 +774,7 @@
             let unreadSkip = (cfg.unReadTextSkip === "true");
 
             return {
-                bgmVol, seVol, v1, v2, v3,
+                bgmVol, seVol, voiceVol,
                 chSlider: Math.max(1, Math.min(100, 101 - chSpeed)),
                 autoSlider: Math.max(1, Math.min(100, Math.round((5050 - autoSpeed) / 45))),
                 workAnime: workAnime === 0,
@@ -787,41 +784,56 @@
 
         function applyBgm(val) {
             val = Math.max(0, Math.min(100, parseInt(val) || 0));
-            if (!window.TYRANO || !window.TYRANO.kag) return;
-            const kag = window.TYRANO.kag;
-            if (!kag.variable.sf) kag.variable.sf = {};
-            kag.variable.sf._system_config_bgm_volume = val;
-            kag.config.defaultBgmVolume = String(val);
-            if (kag.stat.current_bgm) kag.stat.current_bgm_vol = String(val);
-            if (kag.ftag && kag.ftag.startTag) kag.ftag.startTag("bgmopt", { volume: String(val), effect: "false", buf: "0" });
-            if (window.WebAudioEngine && window.WebAudioEngine.setBgmVolume) window.WebAudioEngine.setBgmVolume(val / 100);
+            if (window.HOME_AudioEngine && window.HOME_AudioEngine.setBgmVolume) {
+                window.HOME_AudioEngine.setBgmVolume(val);
+            }
+            if (window.TYRANO && window.TYRANO.kag) {
+                const kag = window.TYRANO.kag;
+                if (!kag.variable.sf) kag.variable.sf = {};
+                kag.variable.sf._system_config_bgm_volume = val;
+                kag.config.defaultBgmVolume = String(val);
+                if (kag.stat.current_bgm) kag.stat.current_bgm_vol = String(val);
+                if (kag.saveSystemVariable) kag.saveSystemVariable();
+            }
         }
 
         function applySe(val) {
             val = Math.max(0, Math.min(100, parseInt(val) || 0));
-            if (!window.TYRANO || !window.TYRANO.kag) return;
-            const kag = window.TYRANO.kag;
-            if (!kag.variable.sf) kag.variable.sf = {};
-            kag.variable.sf._system_config_se_volume = val;
-            kag.config.defaultSeVolume = String(val);
-            if (!kag.variable.sf._skskpnt_volume) kag.variable.sf._skskpnt_volume = [50, 70, 70, 70];
-            kag.variable.sf._skskpnt_volume[0] = val;
-            if (!kag.stat.map_se_volume) kag.stat.map_se_volume = {};
-            kag.stat.map_se_volume[0] = val;
-            if (kag.ftag && kag.ftag.startTag) kag.ftag.startTag("seopt", { volume: String(val), effect: "false", buf: "0" });
+            if (window.HOME_AudioEngine && window.HOME_AudioEngine.setSeVolume) {
+                window.HOME_AudioEngine.setSeVolume(val);
+            }
+            if (window.TYRANO && window.TYRANO.kag) {
+                const kag = window.TYRANO.kag;
+                if (!kag.variable.sf) kag.variable.sf = {};
+                kag.variable.sf._system_config_se_volume = val;
+                kag.config.defaultSeVolume = String(val);
+                if (!kag.variable.sf._skskpnt_volume) kag.variable.sf._skskpnt_volume = [50, 70, 70, 70];
+                kag.variable.sf._skskpnt_volume[0] = val;
+                if (!kag.stat.map_se_volume) kag.stat.map_se_volume = {};
+                kag.stat.map_se_volume[0] = val;
+                if (kag.saveSystemVariable) kag.saveSystemVariable();
+            }
         }
 
-        function applyVoice(idx, val) {
-            idx = parseInt(idx);
+        function applyVoice(val) {
             val = Math.max(0, Math.min(100, parseInt(val) || 0));
-            if (!window.TYRANO || !window.TYRANO.kag) return;
-            const kag = window.TYRANO.kag;
-            if (!kag.variable.sf) kag.variable.sf = {};
-            if (!kag.variable.sf._skskpnt_volume) kag.variable.sf._skskpnt_volume = [50, 70, 70, 70];
-            kag.variable.sf._skskpnt_volume[idx] = val;
-            if (!kag.stat.map_se_volume) kag.stat.map_se_volume = {};
-            kag.stat.map_se_volume[idx] = val;
-            if (kag.ftag && kag.ftag.startTag) kag.ftag.startTag("seopt", { volume: String(val), effect: "false", buf: String(idx) });
+            if (window.HOME_AudioEngine && window.HOME_AudioEngine.setVoiceVolume) {
+                window.HOME_AudioEngine.setVoiceVolume(val);
+            }
+            if (window.TYRANO && window.TYRANO.kag) {
+                const kag = window.TYRANO.kag;
+                if (!kag.variable.sf) kag.variable.sf = {};
+                kag.variable.sf._system_config_voice_volume = val;
+                if (!kag.variable.sf._skskpnt_volume) kag.variable.sf._skskpnt_volume = [50, 70, 70, 70];
+                kag.variable.sf._skskpnt_volume[1] = val;
+                kag.variable.sf._skskpnt_volume[2] = val;
+                kag.variable.sf._skskpnt_volume[3] = val;
+                if (!kag.stat.map_se_volume) kag.stat.map_se_volume = {};
+                kag.stat.map_se_volume[1] = val;
+                kag.stat.map_se_volume[2] = val;
+                kag.stat.map_se_volume[3] = val;
+                if (kag.saveSystemVariable) kag.saveSystemVariable();
+            }
         }
 
         function applyChSpeed(sliderVal) {
@@ -860,11 +872,9 @@
         }
 
         function resetConfigDefaults() {
-            applyBgm(50);
-            applySe(50);
-            applyVoice(1, 70);
-            applyVoice(2, 70);
-            applyVoice(3, 70);
+            applyBgm(80);
+            applySe(80);
+            applyVoice(80);
             applyChSpeed(51);
             applyAutoSpeed(57);
             applyWorkAnime(true);
@@ -910,7 +920,7 @@
                 const cfg = getConfigState();
                 header.innerHTML = `
                     <button class="hmc-pill-btn" id="hmc-config-back-btn" style="padding:4px 10px;font-size:12px;">← Quay lại</button>
-                    <div class="hmc-title">⚙️ Cài Đặt Trò Chơi</div>
+                    <div class="hmc-title">Cài Đặt Trò Chơi</div>
                     <button class="hmc-close" id="hmc-close-btn" title="Đóng">✕</button>
                 `;
                 document.getElementById('hmc-config-back-btn').onclick = () => {
@@ -927,7 +937,7 @@
                         <div class="hmc-group-header">Âm Lượng & Hiệu Ứng</div>
                         <div class="hmc-slider-row">
                             <div class="hmc-slider-left">
-                                <div class="hmc-slider-title">🎵 Nhạc Nền</div>
+                                <div class="hmc-slider-title">Nhạc nền (BGM)</div>
                                 <div class="hmc-slider-sub">BGM Audio</div>
                             </div>
                             <div class="hmc-slider-center">
@@ -938,7 +948,7 @@
                         </div>
                         <div class="hmc-slider-row">
                             <div class="hmc-slider-left">
-                                <div class="hmc-slider-title">🔊 Hiệu Ứng</div>
+                                <div class="hmc-slider-title">Hiệu ứng (SE)</div>
                                 <div class="hmc-slider-sub">Âm thanh SE</div>
                             </div>
                             <div class="hmc-slider-center">
@@ -947,52 +957,25 @@
                             </div>
                             <button class="hmc-mute-btn ${cfg.seVol === 0 ? 'muted' : ''}" id="cfg-se-mute">${cfg.seVol === 0 ? 'Bật' : 'Tắt'}</button>
                         </div>
-                    </div>
-
-                    <!-- 2. LỒNG TIẾNG NHÂN VẬT -->
-                    <div class="hmc-config-section">
-                        <div class="hmc-group-header">Lồng Tiếng Nhân Vật (Voice)</div>
                         <div class="hmc-slider-row">
                             <div class="hmc-slider-left">
-                                <div class="hmc-slider-title">🌸 Nagi (凪)</div>
-                                <div class="hmc-slider-sub">Giọng Nữ Chính</div>
+                                <div class="hmc-slider-title">Lồng tiếng (Voice)</div>
+                                <div class="hmc-slider-sub">Giọng nhân vật</div>
                             </div>
                             <div class="hmc-slider-center">
-                                <input type="range" class="hmc-range-input" id="cfg-v1-slider" min="0" max="100" value="${cfg.v1}">
-                                <span class="hmc-slider-val" id="cfg-v1-val">${cfg.v1}%</span>
+                                <input type="range" class="hmc-range-input" id="cfg-voice-slider" min="0" max="100" value="${cfg.voiceVol}">
+                                <span class="hmc-slider-val" id="cfg-voice-val">${cfg.voiceVol}%</span>
                             </div>
-                            <button class="hmc-mute-btn ${cfg.v1 === 0 ? 'muted' : ''}" id="cfg-v1-mute">${cfg.v1 === 0 ? 'Bật' : 'Tắt'}</button>
-                        </div>
-                        <div class="hmc-slider-row">
-                            <div class="hmc-slider-left">
-                                <div class="hmc-slider-title">🌺 Tsubomi (蕾)</div>
-                                <div class="hmc-slider-sub">Giọng Nữ Phụ 1</div>
-                            </div>
-                            <div class="hmc-slider-center">
-                                <input type="range" class="hmc-range-input" id="cfg-v2-slider" min="0" max="100" value="${cfg.v2}">
-                                <span class="hmc-slider-val" id="cfg-v2-val">${cfg.v2}%</span>
-                            </div>
-                            <button class="hmc-mute-btn ${cfg.v2 === 0 ? 'muted' : ''}" id="cfg-v2-mute">${cfg.v2 === 0 ? 'Bật' : 'Tắt'}</button>
-                        </div>
-                        <div class="hmc-slider-row">
-                            <div class="hmc-slider-left">
-                                <div class="hmc-slider-title">🍁 Rinko (凛子)</div>
-                                <div class="hmc-slider-sub">Giọng Nữ Phụ 2</div>
-                            </div>
-                            <div class="hmc-slider-center">
-                                <input type="range" class="hmc-range-input" id="cfg-v3-slider" min="0" max="100" value="${cfg.v3}">
-                                <span class="hmc-slider-val" id="cfg-v3-val">${cfg.v3}%</span>
-                            </div>
-                            <button class="hmc-mute-btn ${cfg.v3 === 0 ? 'muted' : ''}" id="cfg-v3-mute">${cfg.v3 === 0 ? 'Bật' : 'Tắt'}</button>
+                            <button class="hmc-mute-btn ${cfg.voiceVol === 0 ? 'muted' : ''}" id="cfg-voice-mute">${cfg.voiceVol === 0 ? 'Bật' : 'Tắt'}</button>
                         </div>
                     </div>
 
-                    <!-- 3. TỐC ĐỘ XUẤT CHỮ VÀ TỰ ĐỘNG -->
+                    <!-- 2. TỐC ĐỘ XUẤT CHỮ VÀ TỰ ĐỘNG -->
                     <div class="hmc-config-section">
                         <div class="hmc-group-header">Tốc Độ Đọc & Hiển Thị</div>
                         <div class="hmc-slider-row">
                             <div class="hmc-slider-left">
-                                <div class="hmc-slider-title">⏩ Tốc độ chữ</div>
+                                <div class="hmc-slider-title">Tốc độ xuất chữ</div>
                                 <div class="hmc-slider-sub">Chậm ➔ Tức thì</div>
                             </div>
                             <div class="hmc-slider-center">
@@ -1002,7 +985,7 @@
                         </div>
                         <div class="hmc-slider-row">
                             <div class="hmc-slider-left">
-                                <div class="hmc-slider-title">⏱️ Tự động đọc</div>
+                                <div class="hmc-slider-title">Tốc độ tự đọc (Auto)</div>
                                 <div class="hmc-slider-sub">Chậm ➔ Nhanh</div>
                             </div>
                             <div class="hmc-slider-center">
@@ -1012,7 +995,7 @@
                         </div>
                     </div>
 
-                    <!-- 4. TÙY CHỌN BỔ SUNG -->
+                    <!-- 3. TÙY CHỌN BỔ SUNG -->
                     <div class="hmc-config-section">
                         <div class="hmc-group-header">Tùy Chọn Hệ Thống</div>
                         <div class="hmc-row">
@@ -1037,17 +1020,15 @@
 
                     <!-- FOOTER BUTTONS -->
                     <div class="hmc-config-footer">
-                        <button class="hmc-footer-btn hmc-btn-reset" id="cfg-btn-reset">🔄 Khôi phục mặc định</button>
-                        <button class="hmc-footer-btn hmc-btn-save" id="cfg-btn-close">💾 Đóng & Tiếp tục</button>
+                        <button class="hmc-footer-btn hmc-btn-reset" id="cfg-btn-reset">Khôi phục mặc định</button>
+                        <button class="hmc-footer-btn hmc-btn-save" id="cfg-btn-close">Đóng & Tiếp tục</button>
                     </div>
                 `;
 
                 // Sliders event listeners
-                let prevBgm = cfg.bgmVol || 50;
-                let prevSe = cfg.seVol || 50;
-                let prevV1 = cfg.v1 || 70;
-                let prevV2 = cfg.v2 || 70;
-                let prevV3 = cfg.v3 || 70;
+                let prevBgm = cfg.bgmVol || 80;
+                let prevSe = cfg.seVol || 80;
+                let prevVoice = cfg.voiceVol || 80;
 
                 const bgmIn = document.getElementById('cfg-bgm-slider');
                 const bgmVal = document.getElementById('cfg-bgm-val');
@@ -1065,7 +1046,7 @@
                         prevBgm = cur;
                         bgmIn.value = 0;
                     } else {
-                        bgmIn.value = prevBgm || 50;
+                        bgmIn.value = prevBgm || 80;
                     }
                     bgmIn.dispatchEvent(new Event('input'));
                 });
@@ -1086,72 +1067,30 @@
                         prevSe = cur;
                         seIn.value = 0;
                     } else {
-                        seIn.value = prevSe || 50;
+                        seIn.value = prevSe || 80;
                     }
                     seIn.dispatchEvent(new Event('input'));
                 });
 
-                const v1In = document.getElementById('cfg-v1-slider');
-                const v1Val = document.getElementById('cfg-v1-val');
-                const v1Mute = document.getElementById('cfg-v1-mute');
-                v1In?.addEventListener('input', (e) => {
+                const voiceIn = document.getElementById('cfg-voice-slider');
+                const voiceVal = document.getElementById('cfg-voice-val');
+                const voiceMute = document.getElementById('cfg-voice-mute');
+                voiceIn?.addEventListener('input', (e) => {
                     const v = parseInt(e.target.value);
-                    v1Val.textContent = v + '%';
-                    v1Mute.textContent = (v === 0) ? 'Bật' : 'Tắt';
-                    v1Mute.classList.toggle('muted', v === 0);
-                    applyVoice(1, v);
+                    voiceVal.textContent = v + '%';
+                    voiceMute.textContent = (v === 0) ? 'Bật' : 'Tắt';
+                    voiceMute.classList.toggle('muted', v === 0);
+                    applyVoice(v);
                 });
-                v1Mute?.addEventListener('click', () => {
-                    const cur = parseInt(v1In.value);
+                voiceMute?.addEventListener('click', () => {
+                    const cur = parseInt(voiceIn.value);
                     if (cur > 0) {
-                        prevV1 = cur;
-                        v1In.value = 0;
+                        prevVoice = cur;
+                        voiceIn.value = 0;
                     } else {
-                        v1In.value = prevV1 || 70;
+                        voiceIn.value = prevVoice || 80;
                     }
-                    v1In.dispatchEvent(new Event('input'));
-                });
-
-                const v2In = document.getElementById('cfg-v2-slider');
-                const v2Val = document.getElementById('cfg-v2-val');
-                const v2Mute = document.getElementById('cfg-v2-mute');
-                v2In?.addEventListener('input', (e) => {
-                    const v = parseInt(e.target.value);
-                    v2Val.textContent = v + '%';
-                    v2Mute.textContent = (v === 0) ? 'Bật' : 'Tắt';
-                    v2Mute.classList.toggle('muted', v === 0);
-                    applyVoice(2, v);
-                });
-                v2Mute?.addEventListener('click', () => {
-                    const cur = parseInt(v2In.value);
-                    if (cur > 0) {
-                        prevV2 = cur;
-                        v2In.value = 0;
-                    } else {
-                        v2In.value = prevV2 || 70;
-                    }
-                    v2In.dispatchEvent(new Event('input'));
-                });
-
-                const v3In = document.getElementById('cfg-v3-slider');
-                const v3Val = document.getElementById('cfg-v3-val');
-                const v3Mute = document.getElementById('cfg-v3-mute');
-                v3In?.addEventListener('input', (e) => {
-                    const v = parseInt(e.target.value);
-                    v3Val.textContent = v + '%';
-                    v3Mute.textContent = (v === 0) ? 'Bật' : 'Tắt';
-                    v3Mute.classList.toggle('muted', v === 0);
-                    applyVoice(3, v);
-                });
-                v3Mute?.addEventListener('click', () => {
-                    const cur = parseInt(v3In.value);
-                    if (cur > 0) {
-                        prevV3 = cur;
-                        v3In.value = 0;
-                    } else {
-                        v3In.value = prevV3 || 70;
-                    }
-                    v3In.dispatchEvent(new Event('input'));
+                    voiceIn.dispatchEvent(new Event('input'));
                 });
 
                 const chIn = document.getElementById('cfg-ch-slider');

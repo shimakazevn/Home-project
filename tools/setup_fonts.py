@@ -91,14 +91,11 @@ button,
     word-break: break-word !important;
     overflow-wrap: break-word !important;
     white-space: normal !important;
-    line-height: 1.45em !important;
 }
 
 /* Tinh chỉnh nút lựa chọn glink button tiếng Việt */
 .glink_button {
     font-family: 'NotoSansVN', sans-serif !important;
-    font-weight: bold !important;
-    letter-spacing: 0.03em;
     word-break: break-word !important;
     white-space: normal !important;
 }
