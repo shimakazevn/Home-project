@@ -745,8 +745,33 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
             input.on("input", function (e) {
                 $("." + _pm.name).find(".range_tip").css({ opacity: 1 });
                 __slider_ui.updateRange(_pm.name, _pm.width, pm);
-                that.kag.embScript(_pm.var + " = " + this.value);
-                if (_pm.exp != "") {
+                var val = parseFloat(this.value) || 0;
+                that.kag.embScript(_pm.var + " = " + val);
+
+                // Live update audio & text speed
+                if (_pm.name === "bgm") {
+                    if (that.kag.setBgmVolume) that.kag.setBgmVolume(val);
+                } else if (_pm.name === "se") {
+                    if (that.kag.setSeVolume) that.kag.setSeVolume("0", val);
+                } else if (_pm.name === "voice_1") {
+                    if (that.kag.setSeVolume) that.kag.setSeVolume("1", val);
+                } else if (_pm.name === "voice_2") {
+                    if (that.kag.setSeVolume) that.kag.setSeVolume("2", val);
+                } else if (_pm.name === "voice_3") {
+                    if (that.kag.setSeVolume) that.kag.setSeVolume("3", val);
+                } else if (_pm.name === "text") {
+                    var chSpeed = 101 - val;
+                    if (that.kag.config) that.kag.config.chSpeed = chSpeed;
+                    that.kag.embScript("tf.current_ch_speed = " + chSpeed);
+                    if (window.gMessageTester && gMessageTester.next) gMessageTester.next(true);
+                } else if (_pm.name === "auto") {
+                    var autoSpeed = 5001 - val;
+                    if (that.kag.config) that.kag.config.autoSpeed = autoSpeed;
+                    that.kag.embScript("tf.current_auto_speed = " + autoSpeed);
+                    if (window.gMessageTester && gMessageTester.next) gMessageTester.next(true);
+                }
+
+                if (_pm.exp && _pm.exp !== "") {
                     that.kag.embScript(_pm.exp, _pm.preexp);
                 }
             });
@@ -754,14 +779,25 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
             // ツマミを動かし終わったとき
             input.on("change", function () {
                 $("." + _pm.name).find(".range_tip").css({ opacity: 0 });
-                that.kag.embScript(_pm.var + " = " + this.value);
-                if (_pm.exp != "") {
+                var val = parseFloat(this.value) || 0;
+                that.kag.embScript(_pm.var + " = " + val);
+
+                // Play preview sample audio when releasing volume slider
+                if (_pm.name === "se") {
+                    if (that.kag.playTestAudio) that.kag.playTestAudio("se", val);
+                } else if (_pm.name === "voice_1") {
+                    if (that.kag.playTestAudio) that.kag.playTestAudio("voice_1", val);
+                } else if (_pm.name === "voice_2") {
+                    if (that.kag.playTestAudio) that.kag.playTestAudio("voice_2", val);
+                } else if (_pm.name === "voice_3") {
+                    if (that.kag.playTestAudio) that.kag.playTestAudio("voice_3", val);
+                }
+
+                if (_pm.exp && _pm.exp !== "") {
                     that.kag.embScript(_pm.exp, _pm.preexp);
                 }
-                if (_pm.target != "") {
-                    that.kag.ftag.startTag("jump", { target: _pm.target, storage: _pm.storage });
-                }
             });
+
             input.on("mouseup touchend", function () {
                 $("." + _pm.name).find(".range_tip").css({ opacity: 0 });
             });
