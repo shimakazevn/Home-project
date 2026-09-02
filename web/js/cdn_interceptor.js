@@ -235,6 +235,8 @@
             return;
         }
 
+        const kag = window.TYRANO.kag;
+
         // Helper: ghi đè cả kag.tag lẫn kag.ftag.master_tag để đảm bảo nextOrder() gọi đúng hàm đã hook
         function overrideTag(tagName, startFn) {
             if (kag.tag && kag.tag[tagName]) {
