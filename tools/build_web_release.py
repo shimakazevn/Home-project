@@ -1298,6 +1298,14 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
             'if(1==this.kag.stat.vostart&&this.kag.stat.map_vo.vochara[pm.name]){var vochara=this.kag.stat.map_vo.vochara[pm.name]',
             'var _vm={"凪":"Nagi","Nagi":"凪","凛子":"Rinko","Rinko":"凛子","蕾":"Tsubomi","Tsubomi":"蕾","隼人":"Hayato","Hayato":"隼人"},_vch=this.kag.stat.map_vo.vochara[pm.name]||(_vm[pm.name]?this.kag.stat.map_vo.vochara[_vm[pm.name]]:null);if(1==this.kag.stat.vostart&&_vch){var vochara=_vch'
         )
+        tag_ext_code = tag_ext_code.replace(
+            'this.kag.stat.map_vo.vochara[pm.name].number=parseInt(vochara.number)+1;',
+            'vochara.number=parseInt(vochara.number)+1;'
+        )
+        tag_ext_code = tag_ext_code.replace(
+            'this.kag.stat.map_vo.vochara[pm.name].number = parseInt(vochara.number) + 1;',
+            'vochara.number = parseInt(vochara.number) + 1;'
+        )
         with open(kag_tag_ext_path, 'w', encoding='utf-8') as f:
             f.write(tag_ext_code)
 
