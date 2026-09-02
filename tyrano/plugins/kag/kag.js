@@ -570,19 +570,12 @@ tyrano.plugin.kag = {
         this.kag.tmp.num_anim++
     },
     backTitle: function () {
-        "appJsInterface" in window
-            ? appJsInterface.finishGame()
-            : "function" == typeof TyranoPlayer
-            ? webkit.messageHandlers.backHandler.postMessage("endgame")
-            : $.confirm(
-                  $.lang("go_title"),
-                  function () {
-                      location.href = "./index.html"
-                  },
-                  function () {
-                      return !1
-                  }
-              )
+        if (window.confirm("Bạn có chắc chắn muốn quay về Màn hình chính (Title) không?")) {
+            if (window.HOME_AudioEngine && window.HOME_AudioEngine.stopBGM) {
+                window.HOME_AudioEngine.stopBGM(100);
+            }
+            window.location.reload();
+        }
     },
     cutTimeWithSkip: function (time) {
         return 1 == this.kag.stat.is_skip && "true" == this.kag.config.skipEffectIgnore ? 70 : time

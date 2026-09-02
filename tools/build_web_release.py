@@ -14,6 +14,7 @@ Kiến trúc Web Game:
 
 import os
 import sys
+import re
 import json
 import time
 import sqlite3
@@ -1247,6 +1248,19 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
             'AudioContext && (this.tmp.audio_context = (window.HOME_AudioEngine && window.HOME_AudioEngine.getAudioContext) ? window.HOME_AudioEngine.getAudioContext() : (this.tmp.audio_context || new AudioContext()))'
         )
         kag_code = kag_code.replace('$(".tyrano_base").css("transform-origin", "0 0")', '$(".tyrano_base").css("transform-origin", "center center")')
+        kag_code = re.sub(
+            r'backTitle:\s*function\s*\(\)\s*\{[\s\S]*?cutTimeWithSkip:',
+            '''backTitle: function () {
+        if (window.confirm("Bạn có chắc chắn muốn quay về Màn hình chính (Title) không?")) {
+            if (window.HOME_AudioEngine && window.HOME_AudioEngine.stopBGM) {
+                window.HOME_AudioEngine.stopBGM(100);
+            }
+            window.location.reload();
+        }
+    },
+    cutTimeWithSkip:''',
+            kag_code
+        )
         with open(kag_js_path, 'w', encoding='utf-8') as f:
             f.write(kag_code)
 
@@ -3831,9 +3845,12 @@ img[src*="workring_en.png"] {
                 }
             });
             document.getElementById('btn_modal_title')?.addEventListener('click', () => {
-                if (window.TYRANO && window.TYRANO.kag) {
+                if (window.confirm("Bạn có chắc chắn muốn quay về Màn hình chính (Title) không?")) {
                     closeModal();
-                    window.TYRANO.kag.backTitle();
+                    if (window.HOME_AudioEngine && window.HOME_AudioEngine.stopBGM) {
+                        window.HOME_AudioEngine.stopBGM(100);
+                    }
+                    window.location.reload();
                 }
             });
         }

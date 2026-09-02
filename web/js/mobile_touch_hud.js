@@ -1380,9 +1380,12 @@
                 }
             });
             document.getElementById('btn_modal_title')?.addEventListener('click', () => {
-                if (window.TYRANO && window.TYRANO.kag) {
+                if (window.confirm("Bạn có chắc chắn muốn quay về Màn hình chính (Title) không?")) {
                     closeModal();
-                    window.TYRANO.kag.backTitle();
+                    if (window.HOME_AudioEngine && window.HOME_AudioEngine.stopBGM) {
+                        window.HOME_AudioEngine.stopBGM(100);
+                    }
+                    window.location.reload();
                 }
             });
         }
