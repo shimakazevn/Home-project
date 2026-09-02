@@ -210,23 +210,6 @@
         }
     }, 400);
 
-    // ─── Diagnostic badge: hiện tag đang kẹt lên màn hình để báo lỗi khi test ───
-    function homeShowStallBadge(tag, storage, line) {
-        try {
-            var base = document.getElementById('tyrano_base') || document.querySelector('.tyrano_base');
-            if (!base) return;
-            var old = document.getElementById('home-stall-badge');
-            if (old) old.remove();
-            var d = document.createElement('div');
-            d.id = 'home-stall-badge';
-            d.textContent = '\u26a0\ufe0f K\u1eb9t: ' + tag + ' @ ' + (storage || '?') + ':' + (line !== undefined ? line : '?');
-            d.style.cssText = 'position:absolute;top:4px;left:50%;transform:translateX(-50%);z-index:2147483647;background:#7a1f1f;color:#fff;padding:4px 12px;border-radius:999px;font:12px sans-serif;pointer-events:none;';
-            base.appendChild(d);
-            setTimeout(function () {
-                try { var e = document.getElementById('home-stall-badge'); if (e) e.remove(); } catch (err) {}
-            }, 7000);
-        } catch (e) {}
-    }
 
     // ─── Hook TyranoScript Tags ───────────────────────────────────────────────
     function installTyranoHooks() {
@@ -861,7 +844,6 @@
                 } catch (err) {
                     const now = Date.now();
                     if (window.console) console.error('[CDN Interceptor] ⚠️ Tag crash → skip + advance:', (kag.stat && kag.stat.__home_pending_tag) || '?', err && err.stack ? err.stack : err);
-                    try { homeShowStallBadge((kag.stat && kag.stat.__home_pending_tag) || '?', kag.stat && kag.stat.__home_pending_storage, kag.stat && kag.stat.__home_pending_line); } catch (e2) {}
                     if (now - (kag.stat.__home_crash_guard || 0) < 1000) return false;
                     kag.stat.__home_crash_guard = now;
                     const _self = this;
