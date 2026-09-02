@@ -210,6 +210,24 @@
         }
     }, 400);
 
+    // ─── Diagnostic badge: hiện tag đang kẹt lên màn hình để báo lỗi khi test ───
+    function homeShowStallBadge(tag, storage, line) {
+        try {
+            var base = document.getElementById('tyrano_base') || document.querySelector('.tyrano_base');
+            if (!base) return;
+            var old = document.getElementById('home-stall-badge');
+            if (old) old.remove();
+            var d = document.createElement('div');
+            d.id = 'home-stall-badge';
+            d.textContent = '\u26a0\ufe0f K\u1eb9t: ' + tag + ' @ ' + (storage || '?') + ':' + (line !== undefined ? line : '?');
+            d.style.cssText = 'position:absolute;top:4px;left:50%;transform:translateX(-50%);z-index:2147483647;background:#7a1f1f;color:#fff;padding:4px 12px;border-radius:999px;font:12px sans-serif;pointer-events:none;';
+            base.appendChild(d);
+            setTimeout(function () {
+                try { var e = document.getElementById('home-stall-badge'); if (e) e.remove(); } catch (err) {}
+            }, 7000);
+        } catch (e) {}
+    }
+
     // ─── Hook TyranoScript Tags ───────────────────────────────────────────────
     function installTyranoHooks() {
         if (!window.TYRANO || !window.TYRANO.kag) {
@@ -265,15 +283,21 @@
         if (kag.tag.playbgm) {
             const origPlaybgm = kag.tag.playbgm.start;
             kag.tag.playbgm.start = function(pm) {
-                if (pm && pm.storage) {
-                    const fullPath = pm.storage.includes('/') ? pm.storage : `data/bgm/${pm.storage}`;
-                    const cdnUrl = window.resolveCDNUrl(fullPath);
-                    if (cdnUrl && cdnUrl.startsWith('http')) {
-                        window.HOME_AudioEngine.playBGM(cdnUrl, pm.loop !== 'false', pm.volume, pm.buf);
-                        if (kag.layer) kag.layer.showEventLayer();
-                        if (kag.ftag) kag.ftag.nextOrder();
-                        return;
+                try {
+                    if (pm && pm.storage) {
+                        const fullPath = pm.storage.includes('/') ? pm.storage : `data/bgm/${pm.storage}`;
+                        const cdnUrl = window.resolveCDNUrl(fullPath);
+                        if (cdnUrl && cdnUrl.startsWith('http')) {
+                            if (window.HOME_AudioEngine && window.HOME_AudioEngine.playBGM) {
+                                window.HOME_AudioEngine.playBGM(cdnUrl, pm.loop !== 'false', pm.volume, pm.buf);
+                            }
+                            if (kag.layer) kag.layer.showEventLayer();
+                            if (kag.ftag) kag.ftag.nextOrder();
+                            return;
+                        }
                     }
+                } catch (e) {
+                    if (window.console) console.warn('[CDN Interceptor] playbgm hook error:', e);
                 }
                 if (kag.layer) kag.layer.showEventLayer();
                 if (kag.ftag) kag.ftag.nextOrder();
@@ -293,19 +317,31 @@
         if (kag.tag.playse) {
             const origPlayse = kag.tag.playse.start;
             kag.tag.playse.start = function(pm) {
-                if (pm && pm.storage) {
-                    const fullPath = pm.storage.includes('/') ? pm.storage : `data/sound/${pm.storage}`;
-                    const cdnUrl = window.resolveCDNUrl(fullPath);
-                    if (cdnUrl && cdnUrl.startsWith('http')) {
-                        window.HOME_AudioEngine.playSE(cdnUrl, pm.volume, pm.buf, () => {
-                            if (pm.stop === 'true' && kag.ftag) kag.ftag.nextOrder();
-                        });
-                        if (pm.stop !== 'true') {
-                            if (kag.layer) kag.layer.showEventLayer();
-                            if (kag.ftag) kag.ftag.nextOrder();
+                try {
+                    if (pm && pm.storage) {
+                        const fullPath = pm.storage.includes('/') ? pm.storage : `data/sound/${pm.storage}`;
+                        const cdnUrl = window.resolveCDNUrl(fullPath);
+                        if (cdnUrl && cdnUrl.startsWith('http')) {
+                            let seDone = false;
+                            const seAdvance = function () {
+                                if (seDone) return;
+                                seDone = true;
+                                if (kag.layer) kag.layer.showEventLayer();
+                                if (kag.ftag) kag.ftag.nextOrder();
+                            };
+                            if (window.HOME_AudioEngine && window.HOME_AudioEngine.playSE) {
+                                window.HOME_AudioEngine.playSE(cdnUrl, pm.volume, pm.buf, seAdvance);
+                            }
+                            if (pm.stop !== 'true') {
+                                seAdvance();
+                            } else {
+                                setTimeout(seAdvance, 4000);
+                            }
+                            return;
                         }
-                        return;
                     }
+                } catch (e) {
+                    if (window.console) console.warn('[CDN Interceptor] playse hook error:', e);
                 }
                 if (pm && pm.stop === 'true') {
                     if (kag.ftag) kag.ftag.nextOrder();
@@ -696,8 +732,35 @@
             kag.__homeWatchdogInstalled = true;
             const origNextOrder = kag.ftag.nextOrder;
             kag.ftag.nextOrder = function () {
-                if (kag.stat) kag.stat.__home_last_advance = Date.now();
-                return origNextOrder.apply(this, arguments);
+                if (kag.stat) {
+                    kag.stat.__home_last_advance = Date.now();
+                    try {
+                        const arr = this.array_tag;
+                        const idx = this.current_order_index + 1;
+                        if (arr && idx >= 0 && idx < arr.length && arr[idx]) {
+                            kag.stat.__home_pending_tag = arr[idx].name;
+                            kag.stat.__home_pending_storage = kag.stat.current_scenario;
+                            kag.stat.__home_pending_line = arr[idx].line;
+                        }
+                    } catch (e) {}
+                }
+                try {
+                    return origNextOrder.apply(this, arguments);
+                } catch (err) {
+                    const now = Date.now();
+                    if (window.console) console.error('[CDN Interceptor] ⚠️ Tag crash → skip + advance:', (kag.stat && kag.stat.__home_pending_tag) || '?', err && err.stack ? err.stack : err);
+                    try { homeShowStallBadge((kag.stat && kag.stat.__home_pending_tag) || '?', kag.stat && kag.stat.__home_pending_storage, kag.stat && kag.stat.__home_pending_line); } catch (e2) {}
+                    if (now - (kag.stat.__home_crash_guard || 0) < 1000) return false;
+                    kag.stat.__home_crash_guard = now;
+                    const _self = this;
+                    setTimeout(function () {
+                        try {
+                            if (_self.kag && _self.kag.layer) _self.kag.layer.showEventLayer();
+                            _self.nextOrder();
+                        } catch (e3) {}
+                    }, 16);
+                    return false;
+                }
             };
             setInterval(function () {
                 try {
@@ -714,7 +777,8 @@
                         if (kag.stat.__home_warned) return;
                         kag.stat.__home_warned = true;
                         kag.stat.__home_force_ts = Date.now();
-                        if (window.console) console.warn('[CDN Interceptor] ⚠️ Engine kẹt >8s → force nextOrder.');
+                        if (window.console) console.warn('[CDN Interceptor] ⚠️ Engine kẹt >8s → force nextOrder. Tag:', (kag.stat.__home_pending_tag || '?'), '| storage:', (kag.stat.__home_pending_storage || '?'), '| line:', (kag.stat.__home_pending_line !== undefined ? kag.stat.__home_pending_line : '?'));
+                        try { homeShowStallBadge(kag.stat.__home_pending_tag, kag.stat.__home_pending_storage, kag.stat.__home_pending_line); } catch (e) {}
                         kag.stat.__home_last_advance = Date.now();
                         if (kag.layer) kag.layer.showEventLayer();
                         try { kag.ftag.nextOrder(); } catch (e) { kag.stat.__home_warned = false; }
