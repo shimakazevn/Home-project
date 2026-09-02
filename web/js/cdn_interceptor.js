@@ -815,30 +815,6 @@
                     return false;
                 }
             };
-            setInterval(function () {
-                try {
-                    if (!kag.stat || !kag.ftag) return;
-                    const T = function (v) { return v === true || v === 1; };
-                    const last = kag.stat.__home_last_advance || 0;
-                    if (last === 0) return;
-                    const stalled = Date.now() - last > 8000;
-                    const legitWaiting = T(kag.stat.is_wait) || T(kag.stat.is_strong_stop) ||
-                                         T(kag.stat.is_adding_text) || T(kag.stat.is_wait_bgmovie) ||
-                                         (kag.tmp && (T(kag.tmp.is_vo_play) || T(kag.tmp.video_playing)));
-                    if (stalled && !legitWaiting) {
-                        if (Date.now() - (kag.stat.__home_force_ts || 0) < 3000) return;
-                        if (kag.stat.__home_warned) return;
-                        kag.stat.__home_warned = true;
-                        kag.stat.__home_force_ts = Date.now();
-                        if (window.console) console.warn('[CDN Interceptor] ⚠️ Engine kẹt >8s → force nextOrder. Tag:', (kag.stat.__home_pending_tag || '?'), '| storage:', (kag.stat.__home_pending_storage || '?'), '| line:', (kag.stat.__home_pending_line !== undefined ? kag.stat.__home_pending_line : '?'));
-                        try { homeShowStallBadge(kag.stat.__home_pending_tag, kag.stat.__home_pending_storage, kag.stat.__home_pending_line); } catch (e) {}
-                        kag.stat.__home_last_advance = Date.now();
-                        if (kag.layer) kag.layer.showEventLayer();
-                        try { kag.ftag.nextOrder(); } catch (e) { kag.stat.__home_warned = false; }
-                        setTimeout(function () { kag.stat.__home_warned = false; }, 6000);
-                    }
-                } catch (e) {}
-            }, 3000);
         }
 
         console.log('[CDN Interceptor] ✅ Đã gắn toàn bộ hook TyranoScript & Video Engine.');
