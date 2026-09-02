@@ -38,6 +38,23 @@ img[src*="workring_en.png"] {
     pointer-events: none !important;
 }
 
+/* iOS Safari: GIF trong layer đứng hình do #tyrano_base bị transform-scale (compositor bug).
+   Dùng keyframe động subpixel (vô hình với mắt) để ép compositor vẽ liên tục.
+   KHÔNG ảnh hưởng layout ảnh (dịch <1px). */
+.tyrano_base .layer img[src$=".gif"],
+.tyrano_base .layer img[src*=".gif?"],
+.tyrano_base .layer img[src*="gif"] {
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    animation: homeIosGifKick 1.1s infinite linear;
+}
+@keyframes homeIosGifKick {
+    0%   { transform: translate3d(-0.5px, 0px, 0); }
+    50%  { transform: translate3d(0px, 0px, 0); }
+    100% { transform: translate3d(-0.5px, 0px, 0); }
+}
+
 #orientation_overlay {
     display: none;
     position: fixed;

@@ -36,6 +36,7 @@
     console.log(`[CDN Interceptor] ✅ Đã nạp sẵn ${normalizedMap.size} mục từ EMBEDDED MANIFEST.`);
 
     window.resolveCDNUrl = function(filePath) {
+        try {
         if (!filePath || typeof filePath !== 'string') return filePath;
         if (filePath.startsWith('http://') || filePath.startsWith('https://') || filePath.startsWith('data:') || filePath.startsWith('blob:')) {
             return filePath;
@@ -58,21 +59,20 @@
         }
         if (!url) return filePath;
 
-        // Tối ưu hóa WebP (/s0-rw/) cho ảnh tĩnh (PNG/JPG/WebP).
-        // ⚠️ GIF animation KHÔNG được dùng /s0-rw/: Google trả GIF dưới dạng Animated WebP
-        // mà iOS Safari KHÔNG hỗ trợ → làm đứng hình / không phát animation.
-        // → GIF phải giữ nguyên /s0/ (hoặc bỏ /s0-rw/) để trả đúng file GIF gốc.
+        // ✅ Phục vụ ẢNH DƯỚI DẠNG GỐC (raw /s0/) trên MỌI trình duyệt, KHÔNG dùng WebP (/s0-rw/).
+        // Lý do: iOS 26 Safari lỗi decode một số WebP → hiện dấu "?" bg xanh dương, và
+        // luồng ảnh/GIF lỗi có thể đứng cả engine. File gốc (JPEG/PNG/GIF) tương thích 100%.
+        // ⚠️ KHÔNG áp dụng cho audio/BGM/SFX (luôn giữ nguyên URL CDN gốc).
         const isAudio = norm.startsWith('data/sound') || norm.startsWith('data/bgm') || norm.startsWith('data/video') ||
                         norm.endsWith('.ogg') || norm.endsWith('.mp3') || norm.endsWith('.wav') || norm.endsWith('.mp4');
-        const isGif = /\.gif$/i.test(norm) || /\.gif$/i.test(url);
-        if (isGif) {
+        if (!isAudio && typeof url === 'string') {
             url = url.replace('/s0-rw/', '/s0/').replace('/s1600-rw/', '/s1600/');
-        } else if (!isAudio && typeof url === 'string' && url.startsWith('http')) {
-            if (url.includes('/s0/')) url = url.replace('/s0/', '/s0-rw/');
-            else if (url.includes('/s1600/')) url = url.replace('/s1600/', '/s1600-rw/');
         }
 
         return url;
+        } catch (e) {
+            return filePath;
+        }
     };
 
     // ─── iOS Fallback: khi ảnh WebP (/s0-rw/) lỗi trên iOS Safari, tự thử lại
@@ -134,15 +134,67 @@
     } catch(e) {}
 
     // Hook jQuery fn.attr
+    // ⚠️ QUAN TRỌNG: phải truyền giá trị đã RESOLVE vào jQuery nguyên bản (không truyền arguments cũ),
+    // và bọc try/catch để lỗi hook KHÔNG BAO GIỜ làm đứng Tag Engine ([iscript] gọi .attr()).
     if (window.jQuery) {
         const origJqAttr = window.jQuery.fn.attr;
         window.jQuery.fn.attr = function(name, val) {
-            if (name === 'src' && typeof val === 'string' && !val.startsWith('http') && !val.startsWith('data:') && !val.startsWith('blob:')) {
-                const cdnUrl = window.resolveCDNUrl(val);
-                if (cdnUrl && cdnUrl.startsWith('http')) val = cdnUrl;
+            try {
+                if (typeof name === 'string' && name === 'src' && typeof val === 'string' &&
+                    !/^(https?:|data:|blob:)/i.test(val)) {
+                    const cdnUrl = window.resolveCDNUrl(val);
+                    if (typeof cdnUrl === 'string' && cdnUrl.indexOf('http') === 0) {
+                        return origJqAttr.call(this, name, cdnUrl);
+                    }
+                }
+            } catch (e) {
+                if (window.console) console.warn('[CDN Interceptor] catch attr hook:', e);
             }
             return origJqAttr.apply(this, arguments);
         };
+    }
+
+    // ─── Cache Warmup iOS: nạp sẵn frame + GIF công việc để tránh đơ/trễ frame đầu ────────────
+    function warmupAssets() {
+        try {
+            const keys = [
+                'data/fgimage/default/frame_fx.png',
+                'data/fgimage/default/frame_jim.png',
+                'data/fgimage/default/frame_kintore.png',
+                'data/fgimage/default/frame_massage.png',
+                'data/fgimage/default/frame_seisou.png',
+                'data/fgimage/default/job_seisou1.gif', 'data/fgimage/default/job_seisou2.gif', 'data/fgimage/default/job_seisou3.gif',
+                'data/fgimage/default/job_kintore1.gif', 'data/fgimage/default/job_kintore2.gif', 'data/fgimage/default/job_kintore3.gif',
+                'data/fgimage/default/job_massage1.gif', 'data/fgimage/default/job_massage2.gif', 'data/fgimage/default/job_massage3.gif',
+                'data/fgimage/default/job_massaji1.gif', 'data/fgimage/default/job_massaji2.gif', 'data/fgimage/default/job_massaji3.gif',
+                'data/fgimage/default/job_jim1.gif', 'data/fgimage/default/job_jim2.gif', 'data/fgimage/default/job_jim3.gif',
+                'data/fgimage/default/job_fx1.gif', 'data/fgimage/default/job_fx2.gif', 'data/fgimage/default/job_fx3.gif',
+                'data/fgimage/default/job_benkyou1.gif', 'data/fgimage/default/job_benkyou2.gif', 'data/fgimage/default/job_benkyou3.gif',
+                'data/fgimage/default/job_f1.gif', 'data/fgimage/default/job_f2.gif', 'data/fgimage/default/job_f3.gif',
+                'data/fgimage/default/job_neru.gif'
+            ];
+            let delay = 800;
+            for (const key of keys) {
+                const url = window.resolveCDNUrl(key);
+                if (typeof url === 'string' && url.indexOf('http') === 0) {
+                    (function (u) {
+                        setTimeout(function () {
+                            try {
+                                const im = new Image();
+                                im.onload = im.onerror = function () {};
+                                im.src = u;
+                            } catch (e) {}
+                        }, delay);
+                    })(url);
+                    delay += 250;
+                }
+            }
+        } catch (e) {}
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', warmupAssets);
+    } else {
+        warmupAssets();
     }
 
     // ─── Hook TyranoScript Tags ───────────────────────────────────────────────
@@ -569,6 +621,40 @@
                 }
             }
         };
+
+        // ─── Watchdog chống TREO ENGINE (iOS: hook lỗi/audio fail → nextOrder không bao giờ chạy) ───
+        // Nếu engine không advance tag nào >8s mà KHÔNG đang chờ hợp lệ (wait/audio/text/video),
+        // tự ép nextOrder() để game KHÔNG BAO GIỜ đứng hình (triệu chứng "chữ + gif không hiện, do script").
+        if (!kag.__homeWatchdogInstalled) {
+            kag.__homeWatchdogInstalled = true;
+            const origNextOrder = kag.ftag.nextOrder;
+            kag.ftag.nextOrder = function () {
+                kag.stat.__home_last_advance = Date.now();
+                return origNextOrder.apply(this, arguments);
+            };
+            setInterval(function () {
+                try {
+                    if (!kag.stat || !kag.ftag) return;
+                    const last = kag.stat.__home_last_advance || 0;
+                    if (last === 0) return;
+                    const stalled = Date.now() - last > 8000;
+                    const legitWaiting = kag.stat.is_wait === 1 || kag.stat.is_strong_stop === 1 ||
+                                         kag.stat.is_adding_text === 1 || kag.stat.is_wait_bgmovie === 1 ||
+                                         (kag.tmp && (kag.tmp.is_vo_play === true || kag.tmp.video_playing === true));
+                    if (stalled && !legitWaiting) {
+                        if (kag.stat.__home_force_ts && Date.now() - kag.stat.__home_force_ts < 3000) return;
+                        kag.stat.__home_force_ts = Date.now();
+                        if (kag.stat.__home_warned) return;
+                        kag.stat.__home_warned = true;
+                        if (window.console) console.warn('[CDN Interceptor] ⚠️ Engine kẹt >8s → force nextOrder.');
+                        kag.stat.__home_last_advance = Date.now();
+                        if (kag.layer) kag.layer.showEventLayer();
+                        try { kag.ftag.nextOrder(); } catch (e) { kag.stat.__home_warned = false; }
+                        setTimeout(function () { kag.stat.__home_warned = false; }, 6000);
+                    }
+                } catch (e) {}
+            }, 3000);
+        }
 
         console.log('[CDN Interceptor] ✅ Đã gắn toàn bộ hook TyranoScript & Video Engine.');
     }
