@@ -629,23 +629,24 @@
             kag.__homeWatchdogInstalled = true;
             const origNextOrder = kag.ftag.nextOrder;
             kag.ftag.nextOrder = function () {
-                kag.stat.__home_last_advance = Date.now();
+                if (kag.stat) kag.stat.__home_last_advance = Date.now();
                 return origNextOrder.apply(this, arguments);
             };
             setInterval(function () {
                 try {
                     if (!kag.stat || !kag.ftag) return;
+                    const T = function (v) { return v === true || v === 1; };
                     const last = kag.stat.__home_last_advance || 0;
                     if (last === 0) return;
                     const stalled = Date.now() - last > 8000;
-                    const legitWaiting = kag.stat.is_wait === 1 || kag.stat.is_strong_stop === 1 ||
-                                         kag.stat.is_adding_text === 1 || kag.stat.is_wait_bgmovie === 1 ||
-                                         (kag.tmp && (kag.tmp.is_vo_play === true || kag.tmp.video_playing === true));
+                    const legitWaiting = T(kag.stat.is_wait) || T(kag.stat.is_strong_stop) ||
+                                         T(kag.stat.is_adding_text) || T(kag.stat.is_wait_bgmovie) ||
+                                         (kag.tmp && (T(kag.tmp.is_vo_play) || T(kag.tmp.video_playing)));
                     if (stalled && !legitWaiting) {
-                        if (kag.stat.__home_force_ts && Date.now() - kag.stat.__home_force_ts < 3000) return;
-                        kag.stat.__home_force_ts = Date.now();
+                        if (Date.now() - (kag.stat.__home_force_ts || 0) < 3000) return;
                         if (kag.stat.__home_warned) return;
                         kag.stat.__home_warned = true;
+                        kag.stat.__home_force_ts = Date.now();
                         if (window.console) console.warn('[CDN Interceptor] ⚠️ Engine kẹt >8s → force nextOrder.');
                         kag.stat.__home_last_advance = Date.now();
                         if (kag.layer) kag.layer.showEventLayer();
