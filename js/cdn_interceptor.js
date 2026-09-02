@@ -275,23 +275,13 @@
         const origCharaPtext = (kag.tag && kag.tag.chara_ptext) ? kag.tag.chara_ptext.start : null;
         if (origCharaPtext) {
             overrideTag('chara_ptext', function(pm) {
-                if (kag.stat && kag.stat.vostart == 1 && kag.stat.map_vo) {
+                if (kag.stat && kag.stat.map_vo && kag.stat.map_vo.vochara) {
                     let voName = pm.name;
-                    let vochara = kag.stat.map_vo.vochara[voName];
-                    if (!vochara && CHARA_VOICE_MAP[voName]) {
-                        vochara = kag.stat.map_vo.vochara[CHARA_VOICE_MAP[voName]];
+                    if (!kag.stat.map_vo.vochara[voName] && CHARA_VOICE_MAP[voName] && kag.stat.map_vo.vochara[CHARA_VOICE_MAP[voName]]) {
+                        kag.stat.map_vo.vochara[voName] = kag.stat.map_vo.vochara[CHARA_VOICE_MAP[voName]];
                     }
-                    if (vochara && vochara.vostorage) {
-                        let se_storage = (vochara.vostorage || '').replace('{number}', vochara.number);
-                        se_storage = se_storage.replace(/voice_\s+/g, 'voice_');
-                        let se_pm = {
-                            loop: "false",
-                            storage: se_storage,
-                            stop: "true",
-                            buf: vochara.buf
-                        };
-                        kag.ftag.startTag("playse", se_pm);
-                        vochara.number = parseInt(vochara.number) + 1;
+                    if (kag.stat.map_vo.vochara[voName] && kag.stat.map_vo.vochara[voName].vostorage) {
+                        kag.stat.map_vo.vochara[voName].vostorage = kag.stat.map_vo.vochara[voName].vostorage.replace(/voice_\s+/g, 'voice_');
                     }
                 }
                 return origCharaPtext.call(this, pm);
