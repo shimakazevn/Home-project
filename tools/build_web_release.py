@@ -2113,6 +2113,17 @@ img[src*="workring_en.png"] {
         playBGM,
         stopBGM,
         playSE,
+        isVoiceAudio,
+        stopSE: (buf = "0") => {
+            const bufStr = String(buf || "0");
+            if (activeSeMap.has(bufStr)) {
+                const item = activeSeMap.get(bufStr);
+                if (item.source) {
+                    try { item.source.stop(); } catch(e) {}
+                }
+                activeSeMap.delete(bufStr);
+            }
+        },
         setBgmVolume: (vol) => {
             const parsed = parseFloat(vol);
             const v = isNaN(parsed) ? 80 : Math.max(0, Math.min(100, parsed));

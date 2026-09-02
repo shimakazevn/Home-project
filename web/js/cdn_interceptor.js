@@ -407,29 +407,51 @@
             });
         }
 
-        // Hook SE / Voice (Không bao giờ để audio chờ click làm treo kịch bản trên mobile)
+        // Hook SE / Voice (Đồng bộ chuẩn xác trạng thái is_vo_play & is_vo_play_wait cho Auto Mode)
         if (kag.tag.playse) {
-            const origPlayse = kag.tag.playse.start;
             overrideTag('playse', function(pm) {
                 try {
                     if (pm && pm.storage) {
+                        const isVoBuf = !!(kag.stat && kag.stat.map_vo && kag.stat.map_vo.vobuf && kag.stat.map_vo.vobuf[pm.buf]);
+                        const isVoFile = (window.HOME_AudioEngine && window.HOME_AudioEngine.isVoiceAudio) ? window.HOME_AudioEngine.isVoiceAudio(pm.storage) : (pm.storage.includes('/voice') || pm.storage.includes('voice_'));
+                        const isVoice = isVoBuf || isVoFile;
+
+                        if (kag.tmp) {
+                            kag.tmp.is_se_play = true;
+                            if (isVoice) kag.tmp.is_vo_play = true;
+                        }
+
                         const fullPath = pm.storage.includes('/') ? pm.storage : `data/sound/${pm.storage}`;
                         const cdnUrl = window.resolveCDNUrl(fullPath);
                         if (cdnUrl && cdnUrl.startsWith('http')) {
-                            let seDone = false;
-                            const seAdvance = function () {
-                                if (seDone) return;
-                                seDone = true;
-                                if (kag.layer) kag.layer.showEventLayer();
-                                if (kag.ftag) kag.ftag.nextOrder();
+                            const onAudioEnded = function() {
+                                if (kag.tmp) {
+                                    kag.tmp.is_se_play = false;
+                                    if (isVoice) {
+                                        kag.tmp.is_vo_play = false;
+                                        if (kag.tmp.is_vo_play_wait === true) {
+                                            kag.tmp.is_vo_play_wait = false;
+                                            setTimeout(function() {
+                                                if (kag.stat && (kag.stat.is_auto == 1 || kag.stat.is_auto === true) && kag.ftag) {
+                                                    kag.ftag.nextOrder();
+                                                }
+                                            }, 400);
+                                        }
+                                    }
+                                    if (kag.tmp.is_se_play_wait === true) {
+                                        kag.tmp.is_se_play_wait = false;
+                                        if (kag.ftag) kag.ftag.nextOrder();
+                                    }
+                                }
                             };
+
                             if (window.HOME_AudioEngine && window.HOME_AudioEngine.playSE) {
-                                window.HOME_AudioEngine.playSE(cdnUrl, pm.volume, pm.buf, seAdvance);
+                                window.HOME_AudioEngine.playSE(cdnUrl, pm.volume, pm.buf, onAudioEnded);
                             }
+
+                            if (kag.layer) kag.layer.showEventLayer();
                             if (pm.stop !== 'true') {
-                                seAdvance();
-                            } else {
-                                setTimeout(seAdvance, 4000);
+                                if (kag.ftag) kag.ftag.nextOrder();
                             }
                             return;
                         }
@@ -437,12 +459,26 @@
                 } catch (e) {
                     if (window.console) console.warn('[CDN Interceptor] playse hook error:', e);
                 }
-                if (pm && pm.stop === 'true') {
-                    if (kag.ftag) kag.ftag.nextOrder();
-                } else {
-                    if (kag.layer) kag.layer.showEventLayer();
-                    if (kag.ftag) kag.ftag.nextOrder();
+                if (kag.layer) kag.layer.showEventLayer();
+                if (pm && pm.stop !== 'true' && kag.ftag) {
+                    kag.ftag.nextOrder();
                 }
+            });
+        }
+
+        if (kag.tag.stopse) {
+            overrideTag('stopse', function(pm) {
+                try {
+                    const buf = (pm && pm.buf) ? pm.buf : "0";
+                    if (window.HOME_AudioEngine && window.HOME_AudioEngine.stopSE) {
+                        window.HOME_AudioEngine.stopSE(buf);
+                    }
+                    if (kag.tmp) {
+                        kag.tmp.is_se_play = false;
+                        kag.tmp.is_vo_play = false;
+                    }
+                } catch(e) {}
+                if (kag.ftag) kag.ftag.nextOrder();
             });
         }
 
