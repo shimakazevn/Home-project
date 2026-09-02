@@ -235,7 +235,15 @@
             return;
         }
 
-        const kag = window.TYRANO.kag;
+        // Helper: ghi đè cả kag.tag lẫn kag.ftag.master_tag để đảm bảo nextOrder() gọi đúng hàm đã hook
+        function overrideTag(tagName, startFn) {
+            if (kag.tag && kag.tag[tagName]) {
+                kag.tag[tagName].start = startFn;
+            }
+            if (kag.ftag && kag.ftag.master_tag && kag.ftag.master_tag[tagName]) {
+                kag.ftag.master_tag[tagName].start = startFn;
+            }
+        }
 
         // 🛡️ Safe evalScript: ngăn chặn mọi SyntaxError / RuntimeError làm crash engine
         if (kag.evalScript) {
@@ -257,32 +265,28 @@
         }
 
         // 🛡️ Safe skip tags: Đảm bảo skipstart/skipstop/cancelskip LUÔN gọi nextOrder(), không bao giờ đứng script
-        if (kag.tag) {
-            if (kag.tag.skipstart) {
-                kag.tag.skipstart.start = function(pm) {
-                    this.kag.stat.is_skip = true;
-                    if (this.kag.readyAudio) this.kag.readyAudio();
-                    this.kag.ftag.nextOrder();
-                };
-            }
-            if (kag.tag.skipstop) {
-                kag.tag.skipstop.start = function(pm) {
-                    this.kag.stat.is_skip = false;
-                    this.kag.ftag.nextOrder();
-                };
-            }
-            if (kag.tag.cancelskip) {
-                kag.tag.cancelskip.start = function(pm) {
-                    this.kag.stat.is_skip = false;
-                    this.kag.ftag.nextOrder();
-                };
-            }
-        }
+        overrideTag('skipstart', function(pm) {
+            this.kag.stat.is_adding_text = false;
+            this.kag.stat.is_click_text = false;
+            this.kag.stat.is_skip = true;
+            if (this.kag.readyAudio) this.kag.readyAudio();
+            this.kag.ftag.nextOrder();
+        });
+
+        overrideTag('skipstop', function(pm) {
+            this.kag.stat.is_skip = false;
+            this.kag.ftag.nextOrder();
+        });
+
+        overrideTag('cancelskip', function(pm) {
+            this.kag.stat.is_skip = false;
+            this.kag.ftag.nextOrder();
+        });
 
         // Hook BGM (Không bao giờ để audio chờ click làm treo kịch bản trên mobile)
         if (kag.tag.playbgm) {
             const origPlaybgm = kag.tag.playbgm.start;
-            kag.tag.playbgm.start = function(pm) {
+            overrideTag('playbgm', function(pm) {
                 try {
                     if (pm && pm.storage) {
                         const fullPath = pm.storage.includes('/') ? pm.storage : `data/bgm/${pm.storage}`;
@@ -301,22 +305,24 @@
                 }
                 if (kag.layer) kag.layer.showEventLayer();
                 if (kag.ftag) kag.ftag.nextOrder();
-            };
+            });
         }
 
         // Hook Stop BGM
         if (kag.tag.stopbgm) {
             const origStopbgm = kag.tag.stopbgm.start;
-            kag.tag.stopbgm.start = function(pm) {
-                window.HOME_AudioEngine.stopBGM(parseInt(pm?.time || 300));
+            overrideTag('stopbgm', function(pm) {
+                if (window.HOME_AudioEngine && window.HOME_AudioEngine.stopBGM) {
+                    window.HOME_AudioEngine.stopBGM(parseInt(pm?.time || 300));
+                }
                 return origStopbgm.apply(this, arguments);
-            };
+            });
         }
 
         // Hook SE / Voice (Không bao giờ để audio chờ click làm treo kịch bản trên mobile)
         if (kag.tag.playse) {
             const origPlayse = kag.tag.playse.start;
-            kag.tag.playse.start = function(pm) {
+            overrideTag('playse', function(pm) {
                 try {
                     if (pm && pm.storage) {
                         const fullPath = pm.storage.includes('/') ? pm.storage : `data/sound/${pm.storage}`;
@@ -349,13 +355,13 @@
                     if (kag.layer) kag.layer.showEventLayer();
                     if (kag.ftag) kag.ftag.nextOrder();
                 }
-            };
+            });
         }
 
         // Hook Background & Image (Prefetch non-blocking in background, proceed immediately)
         if (kag.tag.bg) {
             const origBg = kag.tag.bg.start;
-            kag.tag.bg.start = function(pm) {
+            overrideTag('bg', function(pm) {
                 if (pm && pm.storage) {
                     const fullPath = (pm.storage.startsWith('data/') || pm.storage.startsWith('http')) ? pm.storage : `data/bgimage/${pm.storage}`;
                     const cdnUrl = window.resolveCDNUrl(fullPath);
@@ -365,12 +371,12 @@
                     }
                 }
                 return origBg.apply(this, arguments);
-            };
+            });
         }
 
         if (kag.tag.image) {
             const origImage = kag.tag.image.start;
-            kag.tag.image.start = function(pm) {
+            overrideTag('image', function(pm) {
                 if (pm && pm.storage) {
                     const folder = pm.folder || 'fgimage';
                     const fullPath = (pm.storage.startsWith('data/') || pm.storage.startsWith('http')) ? pm.storage : `data/${folder}/${pm.storage}`;
@@ -381,13 +387,13 @@
                     }
                 }
                 return origImage.apply(this, arguments);
-            };
+            });
         }
 
         // Hook Layermode & Blend Layers
         if (kag.tag.layermode) {
             const origLayermode = kag.tag.layermode.start;
-            kag.tag.layermode.start = function(pm) {
+            overrideTag('layermode', function(pm) {
                 if (pm && pm.graphic) {
                     const folder = pm.folder || 'image';
                     let rawPath = pm.graphic;
@@ -403,13 +409,13 @@
                     }
                 }
                 return origLayermode.apply(this, arguments);
-            };
+            });
         }
 
         // Hook Buttons
         if (kag.tag.button) {
             const origButton = kag.tag.button.start;
-            kag.tag.button.start = function(pm) {
+            overrideTag('button', function(pm) {
                 if (pm) {
                     const folder = pm.folder || 'image';
                     ['graphic', 'enterimg', 'clickimg', 'storage'].forEach(prop => {
@@ -421,12 +427,12 @@
                     });
                 }
                 return origButton.apply(this, arguments);
-            };
+            });
         }
 
         // Hook Character Definition (Tối ưu hóa: KHÔNG preload dồn dập 40+ ảnh lúc boot game)
         if (kag.tag.chara_new) {
-            kag.tag.chara_new.start = function(pm) {
+            overrideTag('chara_new', function(pm) {
                 if (pm && pm.name) {
                     let rawPath = pm.storage || '';
                     const fullPath = (rawPath.startsWith('data/') || rawPath.startsWith('http')) ? rawPath : `data/fgimage/${rawPath}`;
@@ -441,14 +447,14 @@
                     if (pm.jname) kag.stat.jcharas[pm.jname] = pm.name;
                 }
                 if (kag.ftag) kag.ftag.nextOrder();
-            };
+            });
         }
 
         // Hook Characters Display & Parts
         ['chara_show', 'chara_mod', 'chara_face', 'chara_part'].forEach(tag => {
             if (kag.tag[tag]) {
                 const orig = kag.tag[tag].start;
-                kag.tag[tag].start = function(pm) {
+                overrideTag(tag, function(pm) {
                     if (pm) {
                         ['storage', 'face', 'default'].forEach(p => {
                             if (pm[p] && typeof pm[p] === 'string') {
@@ -459,7 +465,7 @@
                         });
                     }
                     return orig.apply(this, arguments);
-                };
+                });
             }
         });
 

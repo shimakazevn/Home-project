@@ -1221,6 +1221,22 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
         with open(kag_js_path, 'w', encoding='utf-8') as f:
             f.write(kag_code)
 
+    # 🛡️ Patch kag.tag_ext.js: Loại bỏ hoàn toàn điều kiện chặn đứng của skipstart
+    kag_tag_ext_path = os.path.join(WEB_SRC_DIR, 'tyrano', 'plugins', 'kag', 'kag.tag_ext.js')
+    if os.path.exists(kag_tag_ext_path):
+        with open(kag_tag_ext_path, 'r', encoding='utf-8', errors='ignore') as f:
+            tag_ext_code = f.read()
+        tag_ext_code = tag_ext_code.replace(
+            'if(1==this.kag.stat.is_skip||this.kag.stat.is_adding_text)return!1;',
+            'this.kag.stat.is_adding_text=!1;this.kag.stat.is_click_text=!1;'
+        )
+        tag_ext_code = tag_ext_code.replace(
+            'if (1 == this.kag.stat.is_skip || this.kag.stat.is_adding_text) return !1;',
+            'this.kag.stat.is_adding_text = !1; this.kag.stat.is_click_text = !1;'
+        )
+        with open(kag_tag_ext_path, 'w', encoding='utf-8') as f:
+            f.write(tag_ext_code)
+
     # Sửa triệt để lỗi căn giữa và lệch màn hình trên mọi thiết bị trong tyrano.base.js
     tyrano_base_js_path = os.path.join(WEB_SRC_DIR, 'tyrano', 'tyrano.base.js')
     if os.path.exists(tyrano_base_js_path):
