@@ -197,18 +197,21 @@
         warmupAssets();
     }
 
-    // ─── Watchdog tự giải phóng #input_blocker nếu bị kẹt trên iOS / Mobile ────
-    setInterval(function() {
-        const blocker = document.getElementById('input_blocker');
-        if (blocker) {
-            if (!blocker.__homeCreatedTime) {
-                blocker.__homeCreatedTime = Date.now();
-            } else if (Date.now() - blocker.__homeCreatedTime > 2500) {
-                console.warn('[CDN Interceptor] Watchdog: tự gỡ input_blocker bị kẹt');
-                blocker.remove();
+    // ─── Hook jQuery .attr('src', ...) để ánh xạ tức thì sang CDN URL (đặc biệt cho job_sd.ks GIF) ───
+    if (window.jQuery && window.jQuery.fn && window.jQuery.fn.attr) {
+        const origAttr = window.jQuery.fn.attr;
+        window.jQuery.fn.attr = function (name, value) {
+            if (name === 'src' && typeof value === 'string' && value.length > 0) {
+                let clean = value.split('?')[0];
+                if (clean.startsWith('./')) clean = clean.substring(2);
+                const cdnUrl = window.resolveCDNUrl(clean);
+                if (cdnUrl && cdnUrl.startsWith('http')) {
+                    return origAttr.call(this, name, cdnUrl);
+                }
             }
-        }
-    }, 400);
+            return origAttr.apply(this, arguments);
+        };
+    }
 
 
     // ─── Hook TyranoScript Tags ───────────────────────────────────────────────
