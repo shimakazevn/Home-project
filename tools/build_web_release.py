@@ -1294,8 +1294,24 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
             'if (1 == this.kag.stat.is_skip || this.kag.stat.is_adding_text) return !1;',
             'this.kag.stat.is_adding_text = !1; this.kag.stat.is_click_text = !1;'
         )
+        tag_ext_code = tag_ext_code.replace(
+            'if(1==this.kag.stat.vostart&&this.kag.stat.map_vo.vochara[pm.name]){var vochara=this.kag.stat.map_vo.vochara[pm.name]',
+            'var _vm={"凪":"Nagi","Nagi":"凪","凛子":"Rinko","Rinko":"凛子","蕾":"Tsubomi","Tsubomi":"蕾","隼人":"Hayato","Hayato":"隼人"},_vch=this.kag.stat.map_vo.vochara[pm.name]||(_vm[pm.name]?this.kag.stat.map_vo.vochara[_vm[pm.name]]:null);if(1==this.kag.stat.vostart&&_vch){var vochara=_vch'
+        )
         with open(kag_tag_ext_path, 'w', encoding='utf-8') as f:
             f.write(tag_ext_code)
+
+    # 🔊 Patch voconfig trong kag.tag_audio.js: Tự động map tên nhân vật Việt / Nhật
+    kag_tag_audio_path = os.path.join(WEB_SRC_DIR, 'tyrano', 'plugins', 'kag', 'kag.tag_audio.js')
+    if os.path.exists(kag_tag_audio_path):
+        with open(kag_tag_audio_path, 'r', encoding='utf-8', errors='ignore') as f:
+            tag_audio_code = f.read()
+        tag_audio_code = tag_audio_code.replace(
+            'this.kag.stat.map_vo.vochara[pm.name]=vochara}this.kag.ftag.nextOrder()',
+            'this.kag.stat.map_vo.vochara[pm.name]=vochara;var _vm={"凪":"Nagi","Nagi":"凪","凛子":"Rinko","Rinko":"凛子","蕾":"Tsubomi","Tsubomi":"蕾","隼人":"Hayato","Hayato":"隼人"};if(_vm[pm.name])this.kag.stat.map_vo.vochara[_vm[pm.name]]=vochara;}this.kag.ftag.nextOrder()'
+        )
+        with open(kag_tag_audio_path, 'w', encoding='utf-8') as f:
+            f.write(tag_audio_code)
 
     # Sửa triệt để lỗi căn giữa và lệch màn hình trên mọi thiết bị trong tyrano.base.js
     tyrano_base_js_path = os.path.join(WEB_SRC_DIR, 'tyrano', 'tyrano.base.js')

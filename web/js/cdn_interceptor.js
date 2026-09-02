@@ -247,6 +247,57 @@
             }
         }
 
+        // 🔊 Voice Alias Bridge (Bảo đảm âm thanh lồng tiếng phát 100% khi nhân vật dùng tên tiếng Việt/Romaji)
+        const CHARA_VOICE_MAP = {
+            "凪": "Nagi", "Nagi": "凪",
+            "凛子": "Rinko", "Rinko": "凛子",
+            "蕾": "Tsubomi", "Tsubomi": "蕾",
+            "隼人": "Hayato", "Hayato": "隼人"
+        };
+
+        const origVoconfig = (kag.tag && kag.tag.voconfig) ? kag.tag.voconfig.start : null;
+        overrideTag('voconfig', function(pm) {
+            if (kag.stat && kag.stat.map_vo) {
+                kag.stat.map_vo.vobuf[pm.sebuf] = 1;
+                if (pm.name) {
+                    var vochara = kag.stat.map_vo.vochara[pm.name] || { vostorage: "", buf: pm.sebuf, number: 0 };
+                    if (pm.vostorage) vochara.vostorage = pm.vostorage;
+                    if (pm.number !== undefined && pm.number !== "") vochara.number = pm.number;
+                    kag.stat.map_vo.vochara[pm.name] = vochara;
+                    if (CHARA_VOICE_MAP[pm.name]) {
+                        kag.stat.map_vo.vochara[CHARA_VOICE_MAP[pm.name]] = vochara;
+                    }
+                }
+            }
+            kag.ftag.nextOrder();
+        });
+
+        const origCharaPtext = (kag.tag && kag.tag.chara_ptext) ? kag.tag.chara_ptext.start : null;
+        if (origCharaPtext) {
+            overrideTag('chara_ptext', function(pm) {
+                if (kag.stat && kag.stat.vostart == 1 && kag.stat.map_vo) {
+                    let voName = pm.name;
+                    let vochara = kag.stat.map_vo.vochara[voName];
+                    if (!vochara && CHARA_VOICE_MAP[voName]) {
+                        vochara = kag.stat.map_vo.vochara[CHARA_VOICE_MAP[voName]];
+                    }
+                    if (vochara && vochara.vostorage) {
+                        let se_storage = (vochara.vostorage || '').replace('{number}', vochara.number);
+                        se_storage = se_storage.replace(/voice_\s+/g, 'voice_');
+                        let se_pm = {
+                            loop: "false",
+                            storage: se_storage,
+                            stop: "true",
+                            buf: vochara.buf
+                        };
+                        kag.ftag.startTag("playse", se_pm);
+                        vochara.number = parseInt(vochara.number) + 1;
+                    }
+                }
+                return origCharaPtext.call(this, pm);
+            });
+        }
+
         // 🛡️ Safe evalScript: ngăn chặn mọi SyntaxError / RuntimeError làm crash engine
         if (kag.evalScript) {
             const origEval = kag.evalScript;
