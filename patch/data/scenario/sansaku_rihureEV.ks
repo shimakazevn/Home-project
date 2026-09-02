@@ -28,7 +28,7 @@ Bầu không khí thư giãn lan tỏa tựa như một thế giới khác biệ
 Có vẻ không có người quen nào ở đây. Có nên ghé vào thử một chút không nhỉ?
 [_tb_end_text]
 
-[glink  color="btn_03_black"  storage="sansaku_rihureEV.ks"  size="20"  text="Vào quán Maid (Tăng Dũng cảm"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*rihure"  ]
+[glink  color="btn_03_black"  storage="sansaku_rihureEV.ks"  size="20"  text="Vào quán Maid (Tăng Dũng cảm)"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*rihure"  ]
 [glink  color="btn_03_black"  storage="sansaku.ks"  size="20"  text="Quay về nhà"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*end"  ]
 [s  ]
 *rihure

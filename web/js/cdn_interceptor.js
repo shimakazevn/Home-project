@@ -264,6 +264,51 @@
             };
         }
 
+        // 🛡️ Safe setLayerHtml: Đảm bảo khi load save luôn phục hồi toàn bộ Layer, CDN URL, và gỡ bỏ màn đen/mask
+        if (kag.layer && kag.layer.setLayerHtml) {
+            const origSetLayerHtml = kag.layer.setLayerHtml;
+            kag.layer.setLayerHtml = function(layer) {
+                if (!layer) return;
+                try {
+                    origSetLayerHtml.apply(this, arguments);
+                } catch(e) {
+                    console.warn('[CDN Interceptor] setLayerHtml error:', e);
+                }
+                try {
+                    $('.layer_mask').remove();
+                    $('#root_layer_game').css('opacity', 1);
+                    $('#root_layer_system').css('opacity', 1);
+                    $('#input_blocker').remove();
+                    
+                    if (window.resolveCDNUrl) {
+                        $('#root_layer_game, #root_layer_system, .fixlayer').find('*').addBack().each(function() {
+                            var bg = $(this).css('background-image');
+                            if (bg && bg.includes('url(')) {
+                                var m = bg.match(/url\(["']?([^"']+)["']?\)/);
+                                if (m && m[1] && !m[1].startsWith('http') && !m[1].startsWith('data:')) {
+                                    var clean = m[1].replace(/^\.\//, '');
+                                    var cdn = window.resolveCDNUrl(clean);
+                                    if (cdn && cdn.startsWith('http')) {
+                                        $(this).css('background-image', 'url("' + cdn + '")');
+                                    }
+                                }
+                            }
+                            if (this.tagName === 'IMG') {
+                                var src = $(this).attr('src');
+                                if (src && !src.startsWith('http') && !src.startsWith('data:')) {
+                                    var clean = src.replace(/^\.\//, '');
+                                    var cdn = window.resolveCDNUrl(clean);
+                                    if (cdn && cdn.startsWith('http')) {
+                                        $(this).attr('src', cdn);
+                                    }
+                                }
+                            }
+                        });
+                    }
+                } catch(err) {}
+            };
+        }
+
         // 🛡️ Safe skip tags: Đảm bảo skipstart/skipstop/cancelskip LUÔN gọi nextOrder(), không bao giờ đứng script
         overrideTag('skipstart', function(pm) {
             this.kag.stat.is_adding_text = false;

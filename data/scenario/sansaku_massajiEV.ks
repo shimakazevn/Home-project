@@ -28,7 +28,7 @@ Cảm giác yên bình tựa như một thế giới khác biệt hoàn toàn.[p
 Có nên ghé vào thử một chút không nhỉ?
 [_tb_end_text]
 
-[glink  color="btn_03_black"  storage="sansaku_massajiEV.ks"  size="20"  text="Massage thư giãn (Giảm Stress"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
+[glink  color="btn_03_black"  storage="sansaku_massajiEV.ks"  size="20"  text="Massage thư giãn (Giảm Stress)"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
 [glink  color="btn_03_black"  storage="sansaku.ks" target="*end"  ]
 [s  ]
 *sinsatu

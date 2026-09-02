@@ -30,7 +30,7 @@ Bên trong quán khá náo nhiệt, nhưng đâu đó vẫn phảng phất một
 [_tb_end_text]
 
 [glink  color="btn_03_black"  storage="sansaku_famiresuEV.ks"  size="20"  text="Ăn xong rồi về"  x="410"  y="200"  width="497"  height="57"  _clickable_img=""  target="*taberu"  ]
-[glink  color="btn_03_black"  storage="sansaku_famiresuEV.ks"  size="20"  text="Làm thêm ca đêm (+4,000 Yên"  x="410"  y="280"  width="497"  height="57"  _clickable_img=""  target="*baito"  ]
+[glink  color="btn_03_black"  storage="sansaku_famiresuEV.ks"  size="20"  text="Làm thêm ca đêm (+4,000 Yên)"  x="410"  y="280"  width="497"  height="57"  _clickable_img=""  target="*baito"  ]
 [glink  color="btn_03_black"  storage="sansaku_hankagaiEV.ks"  size="20"  text="Quay về nhà"  x="410"  y="360"  width="497"  height="57"  _clickable_img=""  target="*kaeru"  ]
 [s  ]
 *baito
@@ -65,9 +65,9 @@ Bên trong quán khá náo nhiệt, nhưng đâu đó vẫn phảng phất một
 （Nên ăn gì đây nhỉ）[p]
 [_tb_end_text]
 
-[glink  color="btn_03_black"  storage="sansaku_famiresuEV.ks"  size="20"  text="Uống bia tươi (Tăng Hưng phấn"  x="330"  y="160"  width="636"  height="57"  _clickable_img=""  target="*mesi1"  ]
-[glink  color="btn_03_black"  storage="sansaku_famiresuEV.ks"  size="20"  text="Set Hamburger (Tăng Dũng cảm"  x="330"  y="240"  width="636"  height="57"  _clickable_img=""  target="*mesi2"  ]
-[glink  color="btn_03_black"  storage="sansaku_famiresuEV.ks"  size="20"  text="Set Bít tết bò (Tăng Cơ bắp & Hưng phấn"  x="330"  y="320"  width="636"  height="57"  _clickable_img=""  target="*mesi3"  ]
+[glink  color="btn_03_black"  storage="sansaku_famiresuEV.ks"  size="20"  text="Uống bia tươi (Tăng Hưng phấn)"  x="330"  y="160"  width="636"  height="57"  _clickable_img=""  target="*mesi1"  ]
+[glink  color="btn_03_black"  storage="sansaku_famiresuEV.ks"  size="20"  text="Set Hamburger (Tăng Dũng cảm)"  x="330"  y="240"  width="636"  height="57"  _clickable_img=""  target="*mesi2"  ]
+[glink  color="btn_03_black"  storage="sansaku_famiresuEV.ks"  size="20"  text="Set Bít tết bò (Tăng Cơ bắp & Hưng phấn)"  x="330"  y="320"  width="636"  height="57"  _clickable_img=""  target="*mesi3"  ]
 [glink  color="btn_03_black"  storage="sansaku_hankagaiEV.ks"  size="20"  text="Quay về nhà"  x="330"  y="400"  width="636"  height="57"  _clickable_img=""  target="*kaeru"  ]
 [s  ]
 *mesi1

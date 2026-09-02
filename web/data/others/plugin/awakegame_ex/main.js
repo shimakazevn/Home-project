@@ -1,10 +1,39 @@
 // awakegame_ex main.js
 ;(function(){
 const _setLayerHtml = TYRANO.kag.layer.setLayerHtml;
-TYRANO.kag.layer.setLayerHtml = function(layer, html){
-    if(!html) return;
+TYRANO.kag.layer.setLayerHtml = function(layer){
+    if(!layer) return;
     try {
         _setLayerHtml.apply(this, arguments);
+        $('.layer_mask').remove();
+        $('#root_layer_game').css('opacity', 1);
+        $('#root_layer_system').css('opacity', 1);
+        $('#input_blocker').remove();
+        if (window.resolveCDNUrl) {
+            $('#root_layer_game, #root_layer_system, .fixlayer').find('*').addBack().each(function() {
+                var bg = $(this).css('background-image');
+                if (bg && bg.includes('url(')) {
+                    var m = bg.match(/url\(["']?([^"']+)["']?\)/);
+                    if (m && m[1] && !m[1].startsWith('http') && !m[1].startsWith('data:')) {
+                        var clean = m[1].replace(/^\.\//, '');
+                        var cdn = window.resolveCDNUrl(clean);
+                        if (cdn && cdn.startsWith('http')) {
+                            $(this).css('background-image', 'url("' + cdn + '")');
+                        }
+                    }
+                }
+                if (this.tagName === 'IMG') {
+                    var src = $(this).attr('src');
+                    if (src && !src.startsWith('http') && !src.startsWith('data:')) {
+                        var clean = src.replace(/^\.\//, '');
+                        var cdn = window.resolveCDNUrl(clean);
+                        if (cdn && cdn.startsWith('http')) {
+                            $(this).attr('src', cdn);
+                        }
+                    }
+                }
+            });
+        }
     } catch(e) {
         console.warn("[awakegame_ex] setLayerHtml suppressed error:", e);
     }

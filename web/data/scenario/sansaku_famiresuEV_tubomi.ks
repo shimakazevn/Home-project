@@ -25,7 +25,7 @@ Bên trong quán khá náo nhiệt, nhưng đâu đó vẫn phảng phất một
 
 [glink  color="btn_03_black"  storage="sansaku_famiresuEV_tubomi.ks"  size="20"  text="Bắt chuyện với Tsubomi"  x="415"  y="160"  width="497"  height="57"  _clickable_img=""  target="*hanasu"  ]
 [glink  color="btn_03_black"  storage="sansaku_famiresuEV.ks"  size="20"  text="Cứ thế bước vào quán"  x="415"  y="240"  width="497"  height="57"  _clickable_img=""  target="*taberu"  ]
-[glink  color="btn_03_black"  storage="sansaku_famiresuEV.ks"  size="20"  text="Làm thêm ca đêm (+4,000 Yên"  x="410"  y="320"  width="497"  height="57"  _clickable_img=""  target="*baito"  ]
+[glink  color="btn_03_black"  storage="sansaku_famiresuEV.ks"  size="20"  text="Làm thêm ca đêm (+4,000 Yên)"  x="410"  y="320"  width="497"  height="57"  _clickable_img=""  target="*baito"  ]
 [glink  color="btn_03_black"  storage="sansaku_hankagaiEV.ks"  size="20"  text="Quay về nhà"  x="410"  y="400"  width="497"  height="57"  _clickable_img=""  target="*kaeru"  ]
 [s  ]
 *hanasu

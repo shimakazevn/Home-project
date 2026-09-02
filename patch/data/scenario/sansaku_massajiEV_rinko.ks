@@ -24,7 +24,7 @@ Bên trong tiệm khá vắng vẻ, một khoảng thời gian êm đềm vẫn 
 [_tb_end_text]
 
 [glink  color="btn_03_black"  storage="sansaku_massajiEV_rinko.ks"  size="20"  text="Bắt chuyện với Rinko"  x="415"  y="180"  width="497"  height="57"  _clickable_img=""  target="*hanasu"  ]
-[glink  color="btn_03_black"  storage="sansaku_massajiEV.ks"  size="20"  text="Massage thư giãn (Giảm Stress"  x="415"  y="290"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
+[glink  color="btn_03_black"  storage="sansaku_massajiEV.ks"  size="20"  text="Massage thư giãn (Giảm Stress)"  x="415"  y="290"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
 [glink  color="btn_03_black"  storage="sansaku.ks"  size="20"  text="Quay về nhà"  x="415"  y="400"  width="497"  height="57"  _clickable_img=""  target="*end"  ]
 [s  ]
 *hanasu

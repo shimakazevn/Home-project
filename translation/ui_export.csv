@@ -1,4 +1,4 @@
-﻿row_id,file,line_number,entry_type,original_jp,vietnamese,notes
+row_id,file,line_number,entry_type,original_jp,vietnamese,notes
 87,EV_OP.ks,161,glink_choice,はい,Đồng ý,Lựa chọn / Giao diện hệ thống
 88,EV_OP.ks,162,glink_choice,いいえ,Không,Lựa chọn / Giao diện hệ thống
 257,name.ks,37,glink_choice,はい,Đồng ý,Lựa chọn / Giao diện hệ thống
@@ -189,31 +189,31 @@
 2714,sinnyu_item.ks,704,glink_choice,使用しない,Không sử dụng,Lựa chọn / Giao diện hệ thống
 2971,job_moneyget_mesi.ks,22,glink_choice,外出する,Ra ngoài,Lựa chọn / Giao diện hệ thống
 2972,job_moneyget_mesi.ks,23,glink_choice,家でのんびりする（体力▲ストレス▼テンション▲）,Nghỉ ngơi thư giãn ở nhà,Lựa chọn / Giao diện hệ thống
-2996,sansaku_byouinEV.ks,32,glink_choice,診察を受ける（体力▲￥5000▼）,Khám bệnh (Hồi Thể lực,Lựa chọn / Giao diện hệ thống
+2996,sansaku_byouinEV.ks,32,glink_choice,診察を受ける（体力▲￥5000▼）,Khám bệnh (Hồi Thể lực),Lựa chọn / Giao diện hệ thống
 2997,sansaku_byouinEV.ks,33,glink_choice,帰る,Quay về nhà,Lựa chọn / Giao diện hệ thống
 3006,sansaku_byouinEV_nagi.ks,33,glink_choice,凪に話しかける,Bắt chuyện với Nagi,Lựa chọn / Giao diện hệ thống
-3007,sansaku_byouinEV_nagi.ks,34,glink_choice,診察を受ける（体力▲￥5000▼）,Khám bệnh (Hồi Thể lực,Lựa chọn / Giao diện hệ thống
+3007,sansaku_byouinEV_nagi.ks,34,glink_choice,診察を受ける（体力▲￥5000▼）,Khám bệnh (Hồi Thể lực),Lựa chọn / Giao diện hệ thống
 3023,sansaku_byouinEV_nagihayato.ks,33,glink_choice,二人に話しかける,Bắt chuyện với cả hai người,Lựa chọn / Giao diện hệ thống
-3024,sansaku_byouinEV_nagihayato.ks,34,glink_choice,診察を受ける（体力▲￥5000▼）,Khám bệnh (Hồi Thể lực,Lựa chọn / Giao diện hệ thống
+3024,sansaku_byouinEV_nagihayato.ks,34,glink_choice,診察を受ける（体力▲￥5000▼）,Khám bệnh (Hồi Thể lực),Lựa chọn / Giao diện hệ thống
 3049,sansaku_famiresuEV.ks,32,glink_choice,食べて帰る,Ăn xong rồi về,Lựa chọn / Giao diện hệ thống
-3050,sansaku_famiresuEV.ks,33,glink_choice,夜間のバイトをする（▲￥4000　▼体力）,"Làm thêm ca đêm (+4,000 Yên",Lựa chọn / Giao diện hệ thống
+3050,sansaku_famiresuEV.ks,33,glink_choice,夜間のバイトをする（▲￥4000　▼体力）,"Làm thêm ca đêm (+4,000 Yên)",Lựa chọn / Giao diện hệ thống
 3051,sansaku_famiresuEV.ks,34,glink_choice,帰る,Quay về nhà,Lựa chọn / Giao diện hệ thống
-3055,sansaku_famiresuEV.ks,68,glink_choice,生ビール（テンション▲￥3000▼）,Uống bia tươi (Tăng Hưng phấn,Lựa chọn / Giao diện hệ thống
-3056,sansaku_famiresuEV.ks,69,glink_choice,ハンバーガーセット（勇気▲テンション▲￥5000▼）,Set Hamburger (Tăng Dũng cảm,Lựa chọn / Giao diện hệ thống
-3057,sansaku_famiresuEV.ks,70,glink_choice,３ポンドステーキ（筋力▲テンション▲▲￥10000▼）,Set Bít tết bò (Tăng Cơ bắp & Hưng phấn,Lựa chọn / Giao diện hệ thống
+3055,sansaku_famiresuEV.ks,68,glink_choice,生ビール（テンション▲￥3000▼）,Uống bia tươi (Tăng Hưng phấn),Lựa chọn / Giao diện hệ thống
+3056,sansaku_famiresuEV.ks,69,glink_choice,ハンバーガーセット（勇気▲テンション▲￥5000▼）,Set Hamburger (Tăng Dũng cảm),Lựa chọn / Giao diện hệ thống
+3057,sansaku_famiresuEV.ks,70,glink_choice,３ポンドステーキ（筋力▲テンション▲▲￥10000▼）,"Set Bít tết bò (Tăng Cơ bắp & Hưng phấn)",Lựa chọn / Giao diện hệ thống
 3058,sansaku_famiresuEV.ks,71,glink_choice,やっぱり帰る,Quay về nhà,Lựa chọn / Giao diện hệ thống
 3073,sansaku_famiresuEV_hayato.ks,26,glink_choice,隼人に話しかける,Bắt chuyện với Hayato,Lựa chọn / Giao diện hệ thống
 3074,sansaku_famiresuEV_hayato.ks,27,glink_choice,構わず店内に入る,Cứ thế bước vào quán,Lựa chọn / Giao diện hệ thống
-3075,sansaku_famiresuEV_hayato.ks,28,glink_choice,夜間のバイトをする（▲￥4000　▼体力）,"Làm thêm ca đêm (+4,000 Yên",Lựa chọn / Giao diện hệ thống
+3075,sansaku_famiresuEV_hayato.ks,28,glink_choice,夜間のバイトをする（▲￥4000　▼体力）,"Làm thêm ca đêm (+4,000 Yên)",Lựa chọn / Giao diện hệ thống
 3076,sansaku_famiresuEV_hayato.ks,29,glink_choice,帰る,Quay về nhà,Lựa chọn / Giao diện hệ thống
 3090,sansaku_famiresuEV_hayato.ks,395,glink_choice,はい,Đồng ý,Lựa chọn / Giao diện hệ thống
 3091,sansaku_famiresuEV_hayato.ks,396,glink_choice,いいえ,Không,Lựa chọn / Giao diện hệ thống
 3104,sansaku_famiresuEV_tubomi.ks,26,glink_choice,蕾に話しかける,Bắt chuyện với Tsubomi,Lựa chọn / Giao diện hệ thống
 3105,sansaku_famiresuEV_tubomi.ks,27,glink_choice,構わず店内に入る,Cứ thế bước vào quán,Lựa chọn / Giao diện hệ thống
-3106,sansaku_famiresuEV_tubomi.ks,28,glink_choice,夜間のバイトをする（▲￥4000　▼体力）,"Làm thêm ca đêm (+4,000 Yên",Lựa chọn / Giao diện hệ thống
+3106,sansaku_famiresuEV_tubomi.ks,28,glink_choice,夜間のバイトをする（▲￥4000　▼体力）,"Làm thêm ca đêm (+4,000 Yên)",Lựa chọn / Giao diện hệ thống
 3107,sansaku_famiresuEV_tubomi.ks,29,glink_choice,帰る,Quay về nhà,Lựa chọn / Giao diện hệ thống
 3124,sansaku_hankagaiEV.ks,36,glink_choice,宝くじ売り場に行く,Đến quầy bán vé số,Lựa chọn / Giao diện hệ thống
-3125,sansaku_hankagaiEV.ks,37,glink_choice,スポーツジムに行く（筋力▲￥5000▼）,Đến phòng Gym (Tăng Cơ bắp,Lựa chọn / Giao diện hệ thống
+3125,sansaku_hankagaiEV.ks,37,glink_choice,スポーツジムに行く（筋力▲￥5000▼）,Đến phòng Gym (Tăng Cơ bắp),Lựa chọn / Giao diện hệ thống
 3126,sansaku_hankagaiEV.ks,38,glink_choice,帰る,Quay về nhà,Lựa chọn / Giao diện hệ thống
 3131,sansaku_hankagaiEV.ks,92,glink_choice,宝くじを買う（￥10000▼）,"Mua vé số (-10,000 Yên)",Lựa chọn / Giao diện hệ thống
 3132,sansaku_hankagaiEV.ks,93,glink_choice,やめる,Hủy bỏ,Lựa chọn / Giao diện hệ thống
@@ -229,19 +229,19 @@
 3197,sansaku_hankagaiEV_tubomi.ks,27,glink_choice,街を散策する,Đi dạo quanh phố,Lựa chọn / Giao diện hệ thống
 3202,sansaku_hankagaiEV_tubomihayato.ks,26,glink_choice,二人に話しかける,Bắt chuyện với cả hai người,Lựa chọn / Giao diện hệ thống
 3203,sansaku_hankagaiEV_tubomihayato.ks,27,glink_choice,街を散策する,Đi dạo quanh phố,Lựa chọn / Giao diện hệ thống
-3275,sansaku_massajiEV.ks,31,glink_choice,マッサージを受ける（ストレス▼￥5000▼）,Massage thư giãn (Giảm Stress,Lựa chọn / Giao diện hệ thống
+3275,sansaku_massajiEV.ks,31,glink_choice,マッサージを受ける（ストレス▼￥5000▼）,Massage thư giãn (Giảm Stress),Lựa chọn / Giao diện hệ thống
 3276,sansaku_massajiEV.ks,32,glink_choice,帰る,Quay về nhà,Lựa chọn / Giao diện hệ thống
 3284,sansaku_massajiEV_rinko.ks,26,glink_choice,凛子に話しかける,Bắt chuyện với Rinko,Lựa chọn / Giao diện hệ thống
-3285,sansaku_massajiEV_rinko.ks,27,glink_choice,マッサージを受ける（ストレス▼￥5000▼）,Massage thư giãn (Giảm Stress,Lựa chọn / Giao diện hệ thống
+3285,sansaku_massajiEV_rinko.ks,27,glink_choice,マッサージを受ける（ストレス▼￥5000▼）,Massage thư giãn (Giảm Stress),Lựa chọn / Giao diện hệ thống
 3286,sansaku_massajiEV_rinko.ks,28,glink_choice,帰る,Quay về nhà,Lựa chọn / Giao diện hệ thống
 3303,sansaku_massajiEV_rinkohayato.ks,26,glink_choice,二人に話しかける,Bắt chuyện với cả hai người,Lựa chọn / Giao diện hệ thống
-3304,sansaku_massajiEV_rinkohayato.ks,27,glink_choice,マッサージを受ける（体力▲￥5000▼）,Massage trị liệu (Hồi Thể lực,Lựa chọn / Giao diện hệ thống
+3304,sansaku_massajiEV_rinkohayato.ks,27,glink_choice,マッサージを受ける（体力▲￥5000▼）,Massage trị liệu (Hồi Thể lực),Lựa chọn / Giao diện hệ thống
 3328,sansaku_massajiEV_rinkotubomi.ks,26,glink_choice,二人に話しかける,Bắt chuyện với cả hai người,Lựa chọn / Giao diện hệ thống
-3329,sansaku_massajiEV_rinkotubomi.ks,27,glink_choice,マッサージを受ける（体力▲￥5000▼）,Massage trị liệu (Hồi Thể lực,Lựa chọn / Giao diện hệ thống
-3355,sansaku_rihureEV.ks,31,glink_choice,メイドリフレに入る（勇気▲￥5000▼）,Vào quán Maid (Tăng Dũng cảm,Lựa chọn / Giao diện hệ thống
+3329,sansaku_massajiEV_rinkotubomi.ks,27,glink_choice,マッサージを受ける（体力▲￥5000▼）,Massage trị liệu (Hồi Thể lực),Lựa chọn / Giao diện hệ thống
+3355,sansaku_rihureEV.ks,31,glink_choice,メイドリフレに入る（勇気▲￥5000▼）,Vào quán Maid (Tăng Dũng cảm),Lựa chọn / Giao diện hệ thống
 3356,sansaku_rihureEV.ks,32,glink_choice,帰る,Quay về nhà,Lựa chọn / Giao diện hệ thống
 3363,sansaku_rihureEV_tubomi.ks,31,glink_choice,蕾と話す,Bắt chuyện với Tsubomi,Lựa chọn / Giao diện hệ thống
-3364,sansaku_rihureEV_tubomi.ks,32,glink_choice,メイドリフレに入る（勇気▲￥5000▼）,Vào quán Maid (Tăng Dũng cảm,Lựa chọn / Giao diện hệ thống
+3364,sansaku_rihureEV_tubomi.ks,32,glink_choice,メイドリフレに入る（勇気▲￥5000▼）,Vào quán Maid (Tăng Dũng cảm),Lựa chọn / Giao diện hệ thống
 3365,sansaku_rihureEV_tubomi.ks,33,glink_choice,帰る,Quay về nhà,Lựa chọn / Giao diện hệ thống
 3375,EV_date.ks,35,glink_choice,奢る(▼￥5000),"Bao ăn (-5,000 Yên)",Lựa chọn / Giao diện hệ thống
 3376,EV_date.ks,36,glink_choice,奢ってもらう,Để đối phương bao,Lựa chọn / Giao diện hệ thống

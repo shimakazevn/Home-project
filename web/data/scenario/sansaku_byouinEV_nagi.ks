@@ -31,7 +31,7 @@ Có lẽ vì đang là giờ ăn tối nên bệnh viện yên tĩnh hơn mọi 
 [_tb_end_text]
 
 [glink  color="btn_03_black"  storage="sansaku_byouinEV_nagi.ks"  size="20"  text="Bắt chuyện với Nagi"  x="415"  y="210"  width="497"  height="57"  _clickable_img=""  target="*hanasu"  ]
-[glink  color="btn_03_black"  storage="sansaku_byouinEV.ks"  size="20"  text="Khám bệnh (Hồi Thể lực"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
+[glink  color="btn_03_black"  storage="sansaku_byouinEV.ks"  size="20"  text="Khám bệnh (Hồi Thể lực)"  x="415"  y="320"  width="497"  height="57"  _clickable_img=""  target="*sinsatu"  ]
 [s  ]
 *hanasu
 

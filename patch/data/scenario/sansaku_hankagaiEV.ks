@@ -34,7 +34,7 @@
 *top2
 
 [glink  color="btn_03_black"  storage="sansaku_hankagaiEV.ks"  size="20"  text="Đến quầy bán vé số"  x="330"  y="200"  width="636"  height="57"  _clickable_img=""  target="*takarakuji"  ]
-[glink  color="btn_03_black"  storage="sansaku_hankagaiEV.ks"  size="20"  text="Đến phòng Gym (Tăng Cơ bắp"  x="330"  y="280"  width="636"  height="57"  _clickable_img=""  target="*sports"  ]
+[glink  color="btn_03_black"  storage="sansaku_hankagaiEV.ks"  size="20"  text="Đến phòng Gym (Tăng Cơ bắp)"  x="330"  y="280"  width="636"  height="57"  _clickable_img=""  target="*sports"  ]
 [glink  color="btn_03_black"  storage="sansaku_hankagaiEV.ks"  size="20"  text="Quay về nhà"  x="330"  y="360"  width="636"  height="57"  _clickable_img=""  target="*kaeru"  ]
 [s  ]
 *rihure

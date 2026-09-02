@@ -1,6 +1,6 @@
 {
   "version": "3.1.0",
-  "generated_at": "2026-09-02 08:35:51",
+  "generated_at": "2026-09-02 08:42:19",
   "total_files": 292,
   "files": {
     "data/asset_manifest.json": {
@@ -824,8 +824,8 @@
       "size": 8555
     },
     "data/scenario/room_yoru.ks": {
-      "sha256": "0c8879b8f4bf9373c81de30637a79c557cf4e427dc9876b63080af9e853bb81b",
-      "size": 30202
+      "sha256": "ce3cf431bd3b0ecdef2939c6c4a5747249ad1e08b9b6c26c51ece802a5b8f2a3",
+      "size": 30196
     },
     "data/scenario/room_yoru_kankei.ks": {
       "sha256": "eaa739d14da931b38b2fd978fbb3d19cbf270609d07dd9dcd74dd6e2f0407699",
@@ -840,32 +840,32 @@
       "size": 7185
     },
     "data/scenario/sansaku_byouinEV.ks": {
-      "sha256": "7f777e9b1dd8fd719cb57bcbb44df72fc9a11a391af28cd5d4b77f408f8ca10b",
-      "size": 3618
+      "sha256": "3eae91c37a687525f2d66315d20e14c92d8e47aae2ca6f6ffe87f546410a8c1e",
+      "size": 3619
     },
     "data/scenario/sansaku_byouinEV_nagi.ks": {
-      "sha256": "2bdbb00997674e05ba9e72bbd688087bafa4683ba84a33d6b324814ad2eeef55",
-      "size": 17492
+      "sha256": "04d33d0d6621660848eaa05c043f11aafa0ce39ffe80eda6b4c14cb91385f8de",
+      "size": 17493
     },
     "data/scenario/sansaku_byouinEV_nagihayato.ks": {
-      "sha256": "df2d5cf0ed363c52fbaf77e1b819bf5e7c5c73be80aabede63d5037aef200455",
-      "size": 5875
+      "sha256": "0709da34ec8ed7b47b2c36d8a77820240b9ad05db083bd781fa936d47da5bad7",
+      "size": 5876
     },
     "data/scenario/sansaku_famiresuEV.ks": {
-      "sha256": "7049f9dbbb10bae676b65cb8a2cf39db6977de153c222a7de2f7084661152f96",
-      "size": 7636
+      "sha256": "f75762f44997bc4f04fc81a8a32ceaf4b2e68356b8656042f7d6ad0141ee555d",
+      "size": 7640
     },
     "data/scenario/sansaku_famiresuEV_hayato.ks": {
-      "sha256": "38250d3d8a7699f5299aad583c84b011b6866815394f5f8b126988dbb5532c75",
-      "size": 16812
+      "sha256": "7ab19d62febb4d67c6042d25e46576a0fe098dce0dc56792205f38d7b04b5546",
+      "size": 16813
     },
     "data/scenario/sansaku_famiresuEV_tubomi.ks": {
-      "sha256": "669c2d75e0d120d7654a57a37cad7bb9d1110a8c7daa13308175bdc49b014ec9",
-      "size": 18175
+      "sha256": "f65c1ae14cb6a2126b461c0f408689dc97df5dd729e3d1e9968ed0b34818720b",
+      "size": 18176
     },
     "data/scenario/sansaku_hankagaiEV.ks": {
-      "sha256": "d054a04a75260e2dd9b9708448ec8e8c701dd4447f5855229b4a757c9c7f34d4",
-      "size": 7746
+      "sha256": "2679a6886d22cc28ab6f3afb246c837a113dbd09ec68b828aa9539af0de0b873",
+      "size": 7747
     },
     "data/scenario/sansaku_hankagaiEV_game.ks": {
       "sha256": "2946511af5649f3675f1a3e692c10fcbd53d2a21b19bd93c1d455cebed6e1f65",
@@ -896,32 +896,32 @@
       "size": 27517
     },
     "data/scenario/sansaku_massajiEV.ks": {
-      "sha256": "e561803689f43495b46c00689793eb110fa685e32dcf2c9f3f2de708e7c6076c",
-      "size": 3791
+      "sha256": "4c3a2086835e3305a190f4e638fa57baff0f9f33413babb49eec0248cb7ce29a",
+      "size": 3792
     },
     "data/scenario/sansaku_massajiEV_rinko.ks": {
-      "sha256": "76598bc98bf2f6a50f508b49e471d2b76dd34d01756455fac89e3db9e4dc0ffb",
-      "size": 15908
+      "sha256": "52996a0ecd871ddbfbb81c8be5b43fc0295e9ccf5f325bfe95d5d201e37e8f9a",
+      "size": 15909
     },
     "data/scenario/sansaku_massajiEV_rinkohayato.ks": {
-      "sha256": "cf364f1bd868bf5ec1f2013c0e3dd939ba19a5bfce6470f5cff4048d44e57203",
-      "size": 5602
+      "sha256": "5e50a22b823c8376d8a325cd9c74bcdc7f4d9672fd2661ac79fb68e83c5282e2",
+      "size": 5603
     },
     "data/scenario/sansaku_massajiEV_rinkotubomi.ks": {
-      "sha256": "b1eae7894936531127705b1012fdc8a2a8977994e47e93507b9ed681e39debec",
-      "size": 5866
+      "sha256": "a3b6c6337448d92fa586afe25a1df8d1f38df316832f90b47824ba9f903a8b8f",
+      "size": 5867
     },
     "data/scenario/sansaku_ran.ks": {
       "sha256": "73741d7808bfe270cd051bc414076291e0bf77c75668ef7106e230b790329113",
       "size": 10913
     },
     "data/scenario/sansaku_rihureEV.ks": {
-      "sha256": "71ef06c3c471af12cb0b75b41b518fa2b415219403579c0856d97fd83e1c261f",
-      "size": 3383
+      "sha256": "d4c110f95970baf785a6213f9b79572f1cc6e3c1505d37009b4b31cc8f289861",
+      "size": 3384
     },
     "data/scenario/sansaku_rihureEV_tubomi.ks": {
-      "sha256": "49957b457594bf4f6d6954d2c6fdaa09f1d325823d962054be8c6845e50b813c",
-      "size": 2608
+      "sha256": "20cf94d89c04eff98640d66857ed22dca3cfd13a748d978053559e41817d065a",
+      "size": 2609
     },
     "data/scenario/scene1.ks": {
       "sha256": "f99a49c0ea8dd94f635e2369e414f8ade0cc74ad3305554666eb3942a2641fcf",
@@ -1108,8 +1108,8 @@
       "size": 18326
     },
     "data/scenario/title_screen.ks": {
-      "sha256": "d82cc530d5828e7f17911d05186dd6f55d56e31b661c5d727b87e4fca06ea418",
-      "size": 9586
+      "sha256": "dc94f53f00c568bd412aaee8e547cb860dc01fe9e31f91846adaa5c3c0daff87",
+      "size": 9406
     },
     "data/scenario/title_sf.ks": {
       "sha256": "1e5a73d5040e179c02d579a610f080edf3ae0384afbb6c2fe9df969d5dcee731",
