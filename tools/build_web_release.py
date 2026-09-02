@@ -1287,14 +1287,6 @@ tyrano.plugin.kag.ftag.master_tag.button_ex_restore.kag = tyrano.plugin.kag;
         with open(kag_tag_ext_path, 'r', encoding='utf-8', errors='ignore') as f:
             tag_ext_code = f.read()
         tag_ext_code = tag_ext_code.replace(
-            'if(1==this.kag.stat.is_skip||this.kag.stat.is_adding_text)return!1;',
-            'this.kag.stat.is_adding_text=!1;this.kag.stat.is_click_text=!1;'
-        )
-        tag_ext_code = tag_ext_code.replace(
-            'if (1 == this.kag.stat.is_skip || this.kag.stat.is_adding_text) return !1;',
-            'this.kag.stat.is_adding_text = !1; this.kag.stat.is_click_text = !1;'
-        )
-        tag_ext_code = tag_ext_code.replace(
             'if(1==this.kag.stat.vostart&&this.kag.stat.map_vo.vochara[pm.name]){var vochara=this.kag.stat.map_vo.vochara[pm.name]',
             'var _vm={"凪":"Nagi","Nagi":"凪","凛子":"Rinko","Rinko":"凛子","蕾":"Tsubomi","Tsubomi":"蕾","隼人":"Hayato","Hayato":"隼人"},_vch=this.kag.stat.map_vo.vochara[pm.name]||(_vm[pm.name]?this.kag.stat.map_vo.vochara[_vm[pm.name]]:null);if(1==this.kag.stat.vostart&&_vch){var vochara=_vch'
         )
@@ -3280,14 +3272,12 @@ img[src*="workring_en.png"] {
             let autoSpeed = (sf._system_config_auto_speed !== undefined) ? parseInt(sf._system_config_auto_speed) : (parseInt(cfg.autoSpeed) || 2500);
 
             let workAnime = (sf.workanime !== undefined) ? sf.workanime : (((window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.variable && window.TYRANO.kag.variable.f && window.TYRANO.kag.variable.f.workanime !== undefined)) ? window.TYRANO.kag.variable.f.workanime : 0);
-            let unreadSkip = (cfg.unReadTextSkip === "true");
 
             return {
                 bgmVol, seVol, voiceVol,
                 chSlider: Math.max(1, Math.min(100, 101 - chSpeed)),
                 autoSlider: Math.max(1, Math.min(100, Math.round((5050 - autoSpeed) / 45))),
-                workAnime: workAnime === 0,
-                unreadSkip
+                workAnime: workAnime === 0
             };
         }
 
@@ -3374,12 +3364,6 @@ img[src*="workring_en.png"] {
             if (kag.variable.f) kag.variable.f.workanime = val;
         }
 
-        function applySkipUnread(enabled) {
-            if (!window.TYRANO || !window.TYRANO.kag) return;
-            const kag = window.TYRANO.kag;
-            kag.config.unReadTextSkip = enabled ? "true" : "false";
-        }
-
         function resetConfigDefaults() {
             applyBgm(80);
             applySe(80);
@@ -3387,7 +3371,6 @@ img[src*="workring_en.png"] {
             applyChSpeed(51);
             applyAutoSpeed(57);
             applyWorkAnime(true);
-            applySkipUnread(false);
             if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.saveSystemVariable) {
                 window.TYRANO.kag.saveSystemVariable();
             }
@@ -3516,15 +3499,6 @@ img[src*="workring_en.png"] {
                                 <button class="hmc-toggle-btn ${cfg.workAnime ? 'active' : ''}" id="cfg-toggle-work">${cfg.workAnime ? 'BẬT' : 'TẮT'}</button>
                             </div>
                         </div>
-                        <div class="hmc-row">
-                            <div class="hmc-row-left">
-                                <div class="hmc-row-label">Tua cả câu chưa đọc (Skip All)</div>
-                                <div class="hmc-row-sublabel">Tua nhanh không dừng lại</div>
-                            </div>
-                            <div class="hmc-row-actions">
-                                <button class="hmc-toggle-btn ${cfg.unreadSkip ? 'active' : ''}" id="cfg-toggle-skip">${cfg.unreadSkip ? 'BẬT' : 'TẮT'}</button>
-                            </div>
-                        </div>
                     </div>
 
                     <!-- FOOTER BUTTONS -->
@@ -3624,14 +3598,6 @@ img[src*="workring_en.png"] {
                     toggleWork.classList.toggle('active', active);
                     toggleWork.textContent = active ? 'BẬT' : 'TẮT';
                     applyWorkAnime(active);
-                });
-
-                const toggleSkip = document.getElementById('cfg-toggle-skip');
-                toggleSkip?.addEventListener('click', () => {
-                    const active = !toggleSkip.classList.contains('active');
-                    toggleSkip.classList.toggle('active', active);
-                    toggleSkip.textContent = active ? 'BẬT' : 'TẮT';
-                    applySkipUnread(active);
                 });
 
                 document.getElementById('cfg-btn-reset')?.addEventListener('click', () => {

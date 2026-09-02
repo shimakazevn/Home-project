@@ -352,24 +352,6 @@
             };
         }
 
-        // 🛡️ Safe skip tags: Đảm bảo skipstart/skipstop/cancelskip LUÔN gọi nextOrder(), không bao giờ đứng script
-        overrideTag('skipstart', function(pm) {
-            this.kag.stat.is_adding_text = false;
-            this.kag.stat.is_click_text = false;
-            this.kag.stat.is_skip = true;
-            if (this.kag.readyAudio) this.kag.readyAudio();
-            this.kag.ftag.nextOrder();
-        });
-
-        overrideTag('skipstop', function(pm) {
-            this.kag.stat.is_skip = false;
-            this.kag.ftag.nextOrder();
-        });
-
-        overrideTag('cancelskip', function(pm) {
-            this.kag.stat.is_skip = false;
-            this.kag.ftag.nextOrder();
-        });
 
         // Hook BGM (Không bao giờ để audio chờ click làm treo kịch bản trên mobile)
         if (kag.tag.playbgm) {
