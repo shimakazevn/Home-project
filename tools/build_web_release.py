@@ -326,7 +326,11 @@ tyrano.plugin.kag.tag.button_ex = {
             });
             parent_button.attr("src", _absolute);
 
-            $.setName(j_button, pm.name);
+            if (parent_button.attr("class")) {
+                j_button.attr("class", parent_button.attr("class"));
+            } else {
+                $.setName(j_button, pm.name);
+            }
             if (parent_button.hasClass("fixlayer")) {
                 j_button.addClass("fixlayer");
             }
@@ -364,18 +368,10 @@ tyrano.plugin.kag.tag.button_ex = {
             'shinnyu_on.png': { w: 80, h: 80 }
         };
 
-        const getKnownSize = (src) => {
-            if (!src) return null;
-            for (const [k, v] of Object.entries(KNOWN_SIZES)) {
-                if (src.endsWith(k) || src.includes(k)) return v;
-            }
-            return null;
-        };
-
-        const known = getKnownSize(pm.src);
-        if (known) {
-            pm.p_width = known.w;
-            pm.p_height = known.h;
+        let baseImg = (pm.src || '').split('/').pop().split('?')[0];
+        if (KNOWN_SIZES[baseImg]) {
+            pm.p_width = KNOWN_SIZES[baseImg].w;
+            pm.p_height = KNOWN_SIZES[baseImg].h;
             button_set(j_button, parent_button, pm);
             return;
         }
@@ -466,6 +462,24 @@ tyrano.plugin.kag.tag.button_ex = {
                 // 3. Trigger hover on parent & targets for scenario script handlers (e.g. $(".fx_select").css("opacity", "1"))
                 parent_button.trigger("mouseenter").trigger("mouseover");
                 $("." + csscls).not(j_button).trigger("mouseenter").trigger("mouseover");
+
+                // 4. Directly show action description if in room_asa wheel
+                if (j_button.hasClass("fx_icon")) $(".fx_select").css("opacity", "1");
+                if (j_button.hasClass("kintore_icon")) $(".kintore_select").css("opacity", "1");
+                if (j_button.hasClass("neru_icon")) $(".neru_select").css("opacity", "1");
+                if (j_button.hasClass("sinnyu_icon")) $(".sinnyu_select").css("opacity", "1");
+                if (j_button.hasClass("hospital_icon")) {
+                    if (j_button.hasClass("on_icon")) $(".hospital_select").css("opacity", "1");
+                    else $(".syusyu_select").css("opacity", "1");
+                }
+                if (j_button.hasClass("massa_icon")) {
+                    if (j_button.hasClass("on_icon")) $(".massa_select").css("opacity", "1");
+                    else $(".syusyu_select").css("opacity", "1");
+                }
+                if (j_button.hasClass("drug_icon")) {
+                    if (j_button.hasClass("on_icon")) $(".drug_select").css("opacity", "1");
+                    else $(".syusyu_select").css("opacity", "1");
+                }
             },
             function (ev) {
                 if (pm.disable && that.kag.embScript(pm.disable)) {
@@ -486,6 +500,9 @@ tyrano.plugin.kag.tag.button_ex = {
                 // Trigger mouseleave on parent & targets
                 parent_button.trigger("mouseleave").trigger("mouseout");
                 $("." + csscls).not(j_button).trigger("mouseleave").trigger("mouseout");
+
+                // Directly hide action descriptions
+                $(".select_text").css("opacity", "0");
             }
         );
 
@@ -1681,83 +1698,44 @@ img[src*="workring_en.png"] {
             if (AudioContextClass) {
                 audioCtx = new AudioContextClass();
                 if (window.Howler) Howler.ctx = audioCtx;
-                setupAudioContextEvents(audioCtx);
             }
         }
         return audioCtx;
     }
 
-    function setupAudioContextEvents(ctx) {
-        if (!ctx || ctx.__homeEventsAttached) return;
-        ctx.__homeEventsAttached = true;
-        try {
-            ctx.onstatechange = function() {
-                if (ctx.state === 'suspended' || ctx.state === 'interrupted') {
-                    if (!document.hidden) {
-                        restoreAudioContext();
-                    }
-                }
-            };
-        } catch(e) {}
-    }
-
-    function playSilentBuffer(ctx) {
-        try {
-            const buffer = ctx.createBuffer(1, 1, 22050);
-            const src = ctx.createBufferSource();
-            src.buffer = buffer;
-            src.connect(ctx.destination);
-            src.start(0);
-        } catch(e) {}
-    }
-
-    let _restoringAudio = false;
     let currentBgmInfo = null;
 
-    async function restoreAudioContext() {
+    function unlockAudioContext() {
         const ctx = getAudioContext();
         if (!ctx) return;
-        if (_restoringAudio) return;
-        _restoringAudio = true;
-        try {
-            if (ctx.state === 'suspended' || ctx.state === 'interrupted') {
-                playSilentBuffer(ctx);
-                await ctx.resume().catch(() => {});
-            }
-            if (ctx.state === 'running') {
+        if (ctx.state === 'suspended' || ctx.state === 'interrupted') {
+            ctx.resume().then(() => {
                 isUnlocked = true;
-            }
-            // Khôi phục BGM nếu bị ngắt khi qua ứng dụng khác / đa nhiệm
-            if (currentBgmInfo && (!activeBgmSource || ctx.state === 'interrupted')) {
-                if (!document.hidden) {
-                    playBGM(currentBgmInfo.url, currentBgmInfo.loop, currentBgmInfo.rawVol, currentBgmInfo.buf);
+                if (currentBgmInfo && (!activeBgmSource || ctx.state === 'interrupted')) {
+                    if (!document.hidden) {
+                        playBGM(currentBgmInfo.url, currentBgmInfo.loop, currentBgmInfo.rawVol, currentBgmInfo.buf);
+                    }
                 }
-            }
-        } catch(e) {
-            console.warn('[Web Audio Engine] restoreAudioContext notice:', e);
-        } finally {
-            _restoringAudio = false;
+            }).catch(() => {});
+        } else if (ctx.state === 'running') {
+            isUnlocked = true;
         }
     }
 
-    function unlockAudioContext() {
-        restoreAudioContext();
-    }
-
-    // ─── Lifecycle & Gesture Listeners (Đảm bảo âm thanh sống lại 100% khi đa nhiệm quay lại) ───
+    // ─── Lifecycle & Gesture Listeners ─────────────────────────────────────────
     document.addEventListener('visibilitychange', () => {
         if (!document.hidden) {
-            restoreAudioContext();
+            unlockAudioContext();
         }
     });
     window.addEventListener('pageshow', () => {
-        restoreAudioContext();
+        unlockAudioContext();
     });
     window.addEventListener('focus', () => {
-        restoreAudioContext();
+        unlockAudioContext();
     });
     ['pointerdown', 'touchstart', 'touchend', 'click', 'keydown'].forEach(evt => {
-        window.addEventListener(evt, unlockAudioContext, { passive: true, once: false });
+        window.addEventListener(evt, unlockAudioContext, { passive: true });
     });
 
     // ─── Giải mã Bit-Exact Pure JS PNG Stego ──────────────────────────────────
@@ -1915,7 +1893,14 @@ img[src*="workring_en.png"] {
                 }
                 
                 const ctx = getAudioContext();
-                const decodedBuffer = await ctx.decodeAudioData(bufferToDecode);
+                let decodedBuffer;
+                try {
+                    decodedBuffer = await ctx.decodeAudioData(bufferToDecode.slice(0));
+                } catch(decodeErr) {
+                    decodedBuffer = await new Promise((resolve, reject) => {
+                        ctx.decodeAudioData(bufferToDecode.slice(0), resolve, reject);
+                    });
+                }
 
                 // Anti-Pop fadeout cuối file
                 try {

@@ -110,7 +110,11 @@ tyrano.plugin.kag.tag.button_ex = {
             })
             parent_button.attr("src", "./data/others/plugin/button_ex/blank.png")
 
-            $.setName(j_button, pm.name)
+            if (parent_button.attr("class")) {
+                j_button.attr("class", parent_button.attr("class"))
+            } else {
+                $.setName(j_button, pm.name)
+            }
             if (parent_button.hasClass("fixlayer")) {
                 j_button.addClass("fixlayer")
             }
@@ -352,6 +356,24 @@ tyrano.plugin.kag.tag.button_ex = {
                     })
                 }
                 parent_button.trigger("mouseover")
+
+                // Directly show action description if in room_asa wheel
+                if (j_button.hasClass("fx_icon")) $(".fx_select").css("opacity", "1");
+                if (j_button.hasClass("kintore_icon")) $(".kintore_select").css("opacity", "1");
+                if (j_button.hasClass("neru_icon")) $(".neru_select").css("opacity", "1");
+                if (j_button.hasClass("sinnyu_icon")) $(".sinnyu_select").css("opacity", "1");
+                if (j_button.hasClass("hospital_icon")) {
+                    if (j_button.hasClass("on_icon")) $(".hospital_select").css("opacity", "1");
+                    else $(".syusyu_select").css("opacity", "1");
+                }
+                if (j_button.hasClass("massa_icon")) {
+                    if (j_button.hasClass("on_icon")) $(".massa_select").css("opacity", "1");
+                    else $(".syusyu_select").css("opacity", "1");
+                }
+                if (j_button.hasClass("drug_icon")) {
+                    if (j_button.hasClass("on_icon")) $(".drug_select").css("opacity", "1");
+                    else $(".syusyu_select").css("opacity", "1");
+                }
             },
             function (ev) {
                 if (pm.disable && that.kag.embScript(pm.disable)) {
@@ -373,6 +395,9 @@ tyrano.plugin.kag.tag.button_ex = {
                     tip.remove()
                 })
                 parent_button.trigger("mouseleave")
+
+                // Directly hide action descriptions
+                $(".select_text").css("opacity", "0");
             }
         )
 

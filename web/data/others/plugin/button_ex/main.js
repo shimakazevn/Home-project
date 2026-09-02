@@ -84,7 +84,11 @@ tyrano.plugin.kag.tag.button_ex = {
             });
             parent_button.attr("src", _absolute);
 
-            $.setName(j_button, pm.name);
+            if (parent_button.attr("class")) {
+                j_button.attr("class", parent_button.attr("class"));
+            } else {
+                $.setName(j_button, pm.name);
+            }
             if (parent_button.hasClass("fixlayer")) {
                 j_button.addClass("fixlayer");
             }
@@ -122,18 +126,10 @@ tyrano.plugin.kag.tag.button_ex = {
             'shinnyu_on.png': { w: 80, h: 80 }
         };
 
-        const getKnownSize = (src) => {
-            if (!src) return null;
-            for (const [k, v] of Object.entries(KNOWN_SIZES)) {
-                if (src.endsWith(k) || src.includes(k)) return v;
-            }
-            return null;
-        };
-
-        const known = getKnownSize(pm.src);
-        if (known) {
-            pm.p_width = known.w;
-            pm.p_height = known.h;
+        let baseImg = (pm.src || '').split('/').pop().split('?')[0];
+        if (KNOWN_SIZES[baseImg]) {
+            pm.p_width = KNOWN_SIZES[baseImg].w;
+            pm.p_height = KNOWN_SIZES[baseImg].h;
             button_set(j_button, parent_button, pm);
             return;
         }
@@ -224,6 +220,24 @@ tyrano.plugin.kag.tag.button_ex = {
                 // 3. Trigger hover on parent & targets for scenario script handlers (e.g. $(".fx_select").css("opacity", "1"))
                 parent_button.trigger("mouseenter").trigger("mouseover");
                 $("." + csscls).not(j_button).trigger("mouseenter").trigger("mouseover");
+
+                // 4. Directly show action description if in room_asa wheel
+                if (j_button.hasClass("fx_icon")) $(".fx_select").css("opacity", "1");
+                if (j_button.hasClass("kintore_icon")) $(".kintore_select").css("opacity", "1");
+                if (j_button.hasClass("neru_icon")) $(".neru_select").css("opacity", "1");
+                if (j_button.hasClass("sinnyu_icon")) $(".sinnyu_select").css("opacity", "1");
+                if (j_button.hasClass("hospital_icon")) {
+                    if (j_button.hasClass("on_icon")) $(".hospital_select").css("opacity", "1");
+                    else $(".syusyu_select").css("opacity", "1");
+                }
+                if (j_button.hasClass("massa_icon")) {
+                    if (j_button.hasClass("on_icon")) $(".massa_select").css("opacity", "1");
+                    else $(".syusyu_select").css("opacity", "1");
+                }
+                if (j_button.hasClass("drug_icon")) {
+                    if (j_button.hasClass("on_icon")) $(".drug_select").css("opacity", "1");
+                    else $(".syusyu_select").css("opacity", "1");
+                }
             },
             function (ev) {
                 if (pm.disable && that.kag.embScript(pm.disable)) {
@@ -244,6 +258,9 @@ tyrano.plugin.kag.tag.button_ex = {
                 // Trigger mouseleave on parent & targets
                 parent_button.trigger("mouseleave").trigger("mouseout");
                 $("." + csscls).not(j_button).trigger("mouseleave").trigger("mouseout");
+
+                // Directly hide action descriptions
+                $(".select_text").css("opacity", "0");
             }
         );
 

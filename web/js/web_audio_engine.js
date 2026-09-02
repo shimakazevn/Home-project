@@ -48,83 +48,44 @@
             if (AudioContextClass) {
                 audioCtx = new AudioContextClass();
                 if (window.Howler) Howler.ctx = audioCtx;
-                setupAudioContextEvents(audioCtx);
             }
         }
         return audioCtx;
     }
 
-    function setupAudioContextEvents(ctx) {
-        if (!ctx || ctx.__homeEventsAttached) return;
-        ctx.__homeEventsAttached = true;
-        try {
-            ctx.onstatechange = function() {
-                if (ctx.state === 'suspended' || ctx.state === 'interrupted') {
-                    if (!document.hidden) {
-                        restoreAudioContext();
-                    }
-                }
-            };
-        } catch(e) {}
-    }
-
-    function playSilentBuffer(ctx) {
-        try {
-            const buffer = ctx.createBuffer(1, 1, 22050);
-            const src = ctx.createBufferSource();
-            src.buffer = buffer;
-            src.connect(ctx.destination);
-            src.start(0);
-        } catch(e) {}
-    }
-
-    let _restoringAudio = false;
     let currentBgmInfo = null;
 
-    async function restoreAudioContext() {
+    function unlockAudioContext() {
         const ctx = getAudioContext();
         if (!ctx) return;
-        if (_restoringAudio) return;
-        _restoringAudio = true;
-        try {
-            if (ctx.state === 'suspended' || ctx.state === 'interrupted') {
-                playSilentBuffer(ctx);
-                await ctx.resume().catch(() => {});
-            }
-            if (ctx.state === 'running') {
+        if (ctx.state === 'suspended' || ctx.state === 'interrupted') {
+            ctx.resume().then(() => {
                 isUnlocked = true;
-            }
-            // Khôi phục BGM nếu bị ngắt khi qua ứng dụng khác / đa nhiệm
-            if (currentBgmInfo && (!activeBgmSource || ctx.state === 'interrupted')) {
-                if (!document.hidden) {
-                    playBGM(currentBgmInfo.url, currentBgmInfo.loop, currentBgmInfo.rawVol, currentBgmInfo.buf);
+                if (currentBgmInfo && (!activeBgmSource || ctx.state === 'interrupted')) {
+                    if (!document.hidden) {
+                        playBGM(currentBgmInfo.url, currentBgmInfo.loop, currentBgmInfo.rawVol, currentBgmInfo.buf);
+                    }
                 }
-            }
-        } catch(e) {
-            console.warn('[Web Audio Engine] restoreAudioContext notice:', e);
-        } finally {
-            _restoringAudio = false;
+            }).catch(() => {});
+        } else if (ctx.state === 'running') {
+            isUnlocked = true;
         }
     }
 
-    function unlockAudioContext() {
-        restoreAudioContext();
-    }
-
-    // ─── Lifecycle & Gesture Listeners (Đảm bảo âm thanh sống lại 100% khi đa nhiệm quay lại) ───
+    // ─── Lifecycle & Gesture Listeners ─────────────────────────────────────────
     document.addEventListener('visibilitychange', () => {
         if (!document.hidden) {
-            restoreAudioContext();
+            unlockAudioContext();
         }
     });
     window.addEventListener('pageshow', () => {
-        restoreAudioContext();
+        unlockAudioContext();
     });
     window.addEventListener('focus', () => {
-        restoreAudioContext();
+        unlockAudioContext();
     });
     ['pointerdown', 'touchstart', 'touchend', 'click', 'keydown'].forEach(evt => {
-        window.addEventListener(evt, unlockAudioContext, { passive: true, once: false });
+        window.addEventListener(evt, unlockAudioContext, { passive: true });
     });
 
     // ─── Giải mã Bit-Exact Pure JS PNG Stego ──────────────────────────────────
@@ -282,7 +243,14 @@
                 }
                 
                 const ctx = getAudioContext();
-                const decodedBuffer = await ctx.decodeAudioData(bufferToDecode);
+                let decodedBuffer;
+                try {
+                    decodedBuffer = await ctx.decodeAudioData(bufferToDecode.slice(0));
+                } catch(decodeErr) {
+                    decodedBuffer = await new Promise((resolve, reject) => {
+                        ctx.decodeAudioData(bufferToDecode.slice(0), resolve, reject);
+                    });
+                }
 
                 // Anti-Pop fadeout cuối file
                 try {

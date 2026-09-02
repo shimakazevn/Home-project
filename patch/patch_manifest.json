@@ -1,6 +1,6 @@
 {
   "version": "3.1.0",
-  "generated_at": "2026-09-02 08:45:46",
+  "generated_at": "2026-09-02 08:51:01",
   "total_files": 292,
   "files": {
     "data/asset_manifest.json": {
@@ -40,8 +40,8 @@
       "size": 55
     },
     "data/others/plugin/button_ex/main.js": {
-      "sha256": "b4a8191a3d996a60f12b795b9aa89e1fb9063d9820cf3120d0f27ad5a9fe1d5d",
-      "size": 18440
+      "sha256": "a437f4e010d9e5b562c832066a828de3835efa230ac0615cbe8c15ec99b3d84c",
+      "size": 19850
     },
     "data/others/plugin/button_ex/readme.txt": {
       "sha256": "259b0fc2f018effd4564216edd5de769e7aa6f7a6f3c3a4dd0f9d66004c5e7ee",
@@ -816,8 +816,8 @@
       "size": 6255
     },
     "data/scenario/room_asa.ks": {
-      "sha256": "e77909ed54d040773feaa6f8bf10b099c1197afefc5fcd249b597a25c4db5420",
-      "size": 16706
+      "sha256": "56590b1a9f81747d975b47d91eae128511752d98a7594c27988e8f540197aeab",
+      "size": 19424
     },
     "data/scenario/room_Sunday.ks": {
       "sha256": "7ed70b5c9b67240d6e6dd1a695ff25885718544d790e0d1b825c8c27cd910a27",
