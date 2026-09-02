@@ -1622,22 +1622,81 @@ img[src*="workring_en.png"] {
             if (AudioContextClass) {
                 audioCtx = new AudioContextClass();
                 if (window.Howler) Howler.ctx = audioCtx;
+                setupAudioContextEvents(audioCtx);
             }
         }
         return audioCtx;
     }
 
-    function unlockAudioContext() {
+    function setupAudioContextEvents(ctx) {
+        if (!ctx || ctx.__homeEventsAttached) return;
+        ctx.__homeEventsAttached = true;
+        try {
+            ctx.onstatechange = function() {
+                if (ctx.state === 'suspended' || ctx.state === 'interrupted') {
+                    if (!document.hidden) {
+                        restoreAudioContext();
+                    }
+                }
+            };
+        } catch(e) {}
+    }
+
+    function playSilentBuffer(ctx) {
+        try {
+            const buffer = ctx.createBuffer(1, 1, 22050);
+            const src = ctx.createBufferSource();
+            src.buffer = buffer;
+            src.connect(ctx.destination);
+            src.start(0);
+        } catch(e) {}
+    }
+
+    let _restoringAudio = false;
+    let currentBgmInfo = null;
+
+    async function restoreAudioContext() {
         const ctx = getAudioContext();
-        if (ctx && ctx.state === 'suspended') {
-            ctx.resume().then(() => {
+        if (!ctx) return;
+        if (_restoringAudio) return;
+        _restoringAudio = true;
+        try {
+            if (ctx.state === 'suspended' || ctx.state === 'interrupted') {
+                playSilentBuffer(ctx);
+                await ctx.resume().catch(() => {});
+            }
+            if (ctx.state === 'running') {
                 isUnlocked = true;
-            }).catch(() => {});
-        } else if (ctx && ctx.state === 'running') {
-            isUnlocked = true;
+            }
+            // Khôi phục BGM nếu bị ngắt khi qua ứng dụng khác / đa nhiệm
+            if (currentBgmInfo && (!activeBgmSource || ctx.state === 'interrupted')) {
+                if (!document.hidden) {
+                    playBGM(currentBgmInfo.url, currentBgmInfo.loop, currentBgmInfo.rawVol, currentBgmInfo.buf);
+                }
+            }
+        } catch(e) {
+            console.warn('[Web Audio Engine] restoreAudioContext notice:', e);
+        } finally {
+            _restoringAudio = false;
         }
     }
 
+    function unlockAudioContext() {
+        restoreAudioContext();
+    }
+
+    // ─── Lifecycle & Gesture Listeners (Đảm bảo âm thanh sống lại 100% khi đa nhiệm quay lại) ───
+    document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) {
+            restoreAudioContext();
+        }
+    });
+    window.addEventListener('pageshow', () => {
+        restoreAudioContext();
+    });
+    window.addEventListener('focus', () => {
+        restoreAudioContext();
+    });
     ['pointerdown', 'touchstart', 'touchend', 'click', 'keydown'].forEach(evt => {
         window.addEventListener(evt, unlockAudioContext, { passive: true, once: false });
     });
@@ -1826,8 +1885,9 @@ img[src*="workring_en.png"] {
     // ─── Play BGM (Áp dụng đồng bộ Global BGM Multiplier trên mọi kịch bản) ───
     async function playBGM(url, loop = true, rawVol = 100, buf = "0") {
         try {
+            currentBgmInfo = { url, loop, rawVol, buf };
             const ctx = getAudioContext();
-            if (ctx.state === 'suspended') {
+            if (ctx.state === 'suspended' || ctx.state === 'interrupted') {
                 try { ctx.resume().catch(() => {}); } catch(e) {}
             }
 
@@ -1857,12 +1917,27 @@ img[src*="workring_en.png"] {
             source.start(0);
             activeBgmSource = source;
             activeBgmGainNode = gainNode;
+
+            source.onended = () => {
+                if (activeBgmSource === source) {
+                    activeBgmSource = null;
+                    activeBgmGainNode = null;
+                    if (currentBgmInfo && !document.hidden && currentBgmInfo.loop !== false && currentBgmInfo.loop !== "false") {
+                        setTimeout(() => {
+                            if (currentBgmInfo && !activeBgmSource && !document.hidden) {
+                                playBGM(currentBgmInfo.url, currentBgmInfo.loop, currentBgmInfo.rawVol, currentBgmInfo.buf);
+                            }
+                        }, 100);
+                    }
+                }
+            };
         } catch(err) {
             console.warn('[Web Audio Engine] BGM play error:', err);
         }
     }
 
     function stopBGM(fadeMs = 1500) {
+        currentBgmInfo = null;
         if (activeBgmGainNode && activeBgmSource) {
             const ctx = getAudioContext();
             const fadeSec = fadeMs / 1000.0;
@@ -1872,6 +1947,7 @@ img[src*="workring_en.png"] {
                 if (activeBgmSource) {
                     try { activeBgmSource.stop(); } catch(e) {}
                     activeBgmSource = null;
+                    activeBgmGainNode = null;
                 }
             }, fadeMs);
         }
@@ -1881,7 +1957,7 @@ img[src*="workring_en.png"] {
     async function playSE(url, rawVol = 100, buf = "0", onEndedCb = null) {
         try {
             const ctx = getAudioContext();
-            if (ctx.state === 'suspended') {
+            if (ctx.state === 'suspended' || ctx.state === 'interrupted') {
                 try { ctx.resume().catch(() => {}); } catch(e) {}
             }
 
