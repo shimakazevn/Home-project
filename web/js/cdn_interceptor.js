@@ -173,7 +173,7 @@
                 'data/fgimage/default/job_f1.gif', 'data/fgimage/default/job_f2.gif', 'data/fgimage/default/job_f3.gif',
                 'data/fgimage/default/job_neru.gif'
             ];
-            let delay = 800;
+            let delay = 0;
             for (const key of keys) {
                 const url = window.resolveCDNUrl(key);
                 if (typeof url === 'string' && url.indexOf('http') === 0) {
@@ -186,7 +186,7 @@
                             } catch (e) {}
                         }, delay);
                     })(url);
-                    delay += 250;
+                    delay += 80;
                 }
             }
         } catch (e) {}
@@ -197,6 +197,19 @@
         warmupAssets();
     }
 
+    // ─── Watchdog tự giải phóng #input_blocker nếu bị kẹt trên iOS / Mobile ────
+    setInterval(function() {
+        const blocker = document.getElementById('input_blocker');
+        if (blocker) {
+            if (!blocker.__homeCreatedTime) {
+                blocker.__homeCreatedTime = Date.now();
+            } else if (Date.now() - blocker.__homeCreatedTime > 2500) {
+                console.warn('[CDN Interceptor] Watchdog: tự gỡ input_blocker bị kẹt');
+                blocker.remove();
+            }
+        }
+    }, 400);
+
     // ─── Hook TyranoScript Tags ───────────────────────────────────────────────
     function installTyranoHooks() {
         if (!window.TYRANO || !window.TYRANO.kag) {
@@ -206,7 +219,49 @@
 
         const kag = window.TYRANO.kag;
 
-        // Hook BGM
+        // 🛡️ Safe evalScript: ngăn chặn mọi SyntaxError / RuntimeError làm crash engine
+        if (kag.evalScript) {
+            const origEval = kag.evalScript;
+            kag.evalScript = function(str) {
+                try {
+                    var TG = this,
+                        f = this.stat.f,
+                        sf = this.variable.sf,
+                        tf = this.variable.tf,
+                        mp = this.stat.mp;
+                    eval(str);
+                    this.saveSystemVariable();
+                    if (this.kag && this.kag.is_studio) this.kag.studio.notifyChangeVariable();
+                } catch(e) {
+                    console.warn('[CDN Interceptor] ⚠️ Suppressed evalScript error:', e, str);
+                }
+            };
+        }
+
+        // 🛡️ Safe skip tags: Đảm bảo skipstart/skipstop/cancelskip LUÔN gọi nextOrder(), không bao giờ đứng script
+        if (kag.tag) {
+            if (kag.tag.skipstart) {
+                kag.tag.skipstart.start = function(pm) {
+                    this.kag.stat.is_skip = true;
+                    if (this.kag.readyAudio) this.kag.readyAudio();
+                    this.kag.ftag.nextOrder();
+                };
+            }
+            if (kag.tag.skipstop) {
+                kag.tag.skipstop.start = function(pm) {
+                    this.kag.stat.is_skip = false;
+                    this.kag.ftag.nextOrder();
+                };
+            }
+            if (kag.tag.cancelskip) {
+                kag.tag.cancelskip.start = function(pm) {
+                    this.kag.stat.is_skip = false;
+                    this.kag.ftag.nextOrder();
+                };
+            }
+        }
+
+        // Hook BGM (Không bao giờ để audio chờ click làm treo kịch bản trên mobile)
         if (kag.tag.playbgm) {
             const origPlaybgm = kag.tag.playbgm.start;
             kag.tag.playbgm.start = function(pm) {
@@ -220,7 +275,8 @@
                         return;
                     }
                 }
-                return origPlaybgm.apply(this, arguments);
+                if (kag.layer) kag.layer.showEventLayer();
+                if (kag.ftag) kag.ftag.nextOrder();
             };
         }
 
@@ -233,7 +289,7 @@
             };
         }
 
-        // Hook SE / Voice
+        // Hook SE / Voice (Không bao giờ để audio chờ click làm treo kịch bản trên mobile)
         if (kag.tag.playse) {
             const origPlayse = kag.tag.playse.start;
             kag.tag.playse.start = function(pm) {
@@ -251,18 +307,26 @@
                         return;
                     }
                 }
-                return origPlayse.apply(this, arguments);
+                if (pm && pm.stop === 'true') {
+                    if (kag.ftag) kag.ftag.nextOrder();
+                } else {
+                    if (kag.layer) kag.layer.showEventLayer();
+                    if (kag.ftag) kag.ftag.nextOrder();
+                }
             };
         }
 
-        // Hook Background & Image
+        // Hook Background & Image (Prefetch non-blocking in background, proceed immediately)
         if (kag.tag.bg) {
             const origBg = kag.tag.bg.start;
             kag.tag.bg.start = function(pm) {
                 if (pm && pm.storage) {
                     const fullPath = (pm.storage.startsWith('data/') || pm.storage.startsWith('http')) ? pm.storage : `data/bgimage/${pm.storage}`;
                     const cdnUrl = window.resolveCDNUrl(fullPath);
-                    if (cdnUrl && cdnUrl.startsWith('http')) pm.storage = cdnUrl;
+                    if (cdnUrl && cdnUrl.startsWith('http')) {
+                        pm.storage = cdnUrl;
+                        try { const im = new Image(); im.src = cdnUrl; } catch(e) {}
+                    }
                 }
                 return origBg.apply(this, arguments);
             };
@@ -275,7 +339,10 @@
                     const folder = pm.folder || 'fgimage';
                     const fullPath = (pm.storage.startsWith('data/') || pm.storage.startsWith('http')) ? pm.storage : `data/${folder}/${pm.storage}`;
                     const cdnUrl = window.resolveCDNUrl(fullPath);
-                    if (cdnUrl && cdnUrl.startsWith('http')) pm.storage = cdnUrl;
+                    if (cdnUrl && cdnUrl.startsWith('http')) {
+                        pm.storage = cdnUrl;
+                        try { const im = new Image(); im.src = cdnUrl; } catch(e) {}
+                    }
                 }
                 return origImage.apply(this, arguments);
             };
