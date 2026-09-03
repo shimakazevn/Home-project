@@ -1,0 +1,5 @@
+[preload  storage="./data/bgimage/event/op_1.gif"  ]
+[preload  storage="./data/bgimage/black.jpg"  ]
+[preload  storage="./data/bgimage/sin_nagi_nagiroom.png"  ]
+[preload  storage="./data/bgimage/back_dantimae_hiru.png"  ]
+[return]

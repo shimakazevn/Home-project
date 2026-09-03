@@ -1,0 +1,63 @@
+
+[_tb_system_call storage=system/_EV_yuujyouEND_hayato.ks]
+
+[tb_start_tyrano_code]
+[macro name="日高"]
+[emb exp="f.familyname"]
+[endmacro]
+
+[macro name="舜"]
+[emb exp="f.name"]
+[endmacro]
+[_tb_end_tyrano_code]
+
+[tb_show_message_window  ]
+*top
+
+[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
+[bg  time="0"  method="crossfade"  storage="back_byouin.png"  ]
+[mask_off  time="2000"  effect="fadeOut"  ]
+[playbgm  volume="70"  time="1000"  loop="true"  storage="kodomo.mp3"  ]
+[tb_start_text mode=1 ]
+Kể từ đó, rốt cuộc Nagi không kết hôn với Hayato mà tiếp tục làm việc với tư cách là một y tá.[r]Thế nhưng, điều đó không có nghĩa là em ấy chọn tôi.[p]
+Cuộc đời quả nhiên đâu có dễ dàng màu hồng như truyện tranh hay anime.[p]
+[舜]（Nan giải thật đấy… Không ngờ bệnh viện lại là nơi khó bước vào đến thế này…）[p]
+Dạo gần đây thấy mũi cứ ngứa ngáy nghi là viêm mũi hay dị ứng phấn hoa nên tôi đến bệnh viện khám,[r]nhưng vừa thoáng thấy bóng dáng Nagi là tôi đành quay đầu bước ra ngay.[p]
+Chợt nhìn thấy một bóng người quen mặt đứng trước cổng bệnh viện, tôi khựng bước lại.[p]
+[_tb_end_text]
+
+[call  storage="character.ks"  target="*hayato_hudangi_hutuu"  ]
+[tb_start_text mode=1 ]
+Hayato「Yo, sao thế? Bị Nagi đá rồi à?」[p]
+[舜]「Mày mới là thằng bị đá ấy」[p]
+[chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_01c.gif"]Hayato「A haha, kẻ tám lạng người nửa cân thôi. Tao vừa tới định nói chuyện với Nagi thì bị cô ấy đuổi khéo vì đang trong giờ làm việc đây này」[p]
+[舜]「Dũng cảm ghê ha. Tao còn chẳng có can đảm để nhìn mặt em ấy đây」[p]
+[chara_mod name="kyara_hayato_sabun" cross="false" time="500" storage="chara/177/ADV_hayato_00c.gif"]Hayato「Thảm hại thật chứ~. Mà khoan, rốt cuộc đứa nào thảm hại hơn ta?」[p]
+[舜]「Mày chứ ai」[p]
+Hai đứa chúng tôi nhìn nhau với vẻ mặt thiểu não rồi cùng bật cười gượng gạo.[r]Hai gã đàn ông bị nữ chính từ chối một cách ngoạn mục xem ra chỉ còn nước ngồi tự liếm vết thương cho nhau thôi.[p]
+Hayato「Đi kiếm gì ăn không? Tao bao. Dù sao kinh tế tao cũng khá giả hơn mày mà」[p]
+[舜]「Không, để tao bao cho. Vết thương lòng của tao nhẹ hơn mày nhiều」[p]
+Tình yêu không thành, mà mục đích "phá hoại hạnh phúc của Nagi" cũng chẳng đạt được điều gì…[p]
+Thế nhưng cảm giác cuộc sống hiện tại ý nghĩa và trọn vẹn hơn trước đây rất nhiều.[p]
+[舜]「Mà thôi, thế này xem ra cũng không tồi chút nào」[p]
+Hayato「Cái vẻ thản nhiên của mày làm tao ngứa mắt thật đấy」[p]
+Vừa được Hayato vỗ vai bôm bốp, hai chúng tôi vừa rảo bước về phía khu phố sầm uất.[p]
+[_tb_end_text]
+
+[chara_hide  name="kyara_hayato_sabun"  time="0"  wait="false"  pos_mode="false"  ]
+[call  storage="character.ks"  target="*taijyou"  ]
+[bg  time="2000"  method="crossfade"  storage="black.jpg"  ]
+[tb_start_text mode=1 ]
+【TÌNH BẠN END - Đồng Minh Bị Từ Chối】[p]
+[_tb_end_text]
+
+[l  ]
+[stopbgm  time="500"  fadeout="true"  ]
+[wait  time="3000"  ]
+[tb_start_tyrano_code]
+[iscript]
+location.href="./index.html";
+[endscript]
+[_tb_end_tyrano_code]
+
+[s  ]

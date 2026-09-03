@@ -1,0 +1,6 @@
+[preload  storage="./data/bgimage/back_byouin.png"  ]
+[preload  storage="./data/bgimage/back_byouin2.png"  ]
+[preload  storage="./data/bgimage/event/op_3.png"  ]
+[preload  storage="./data/bgimage/black.jpg"  ]
+[preload  storage="./data/bgimage/back_room0.png"  ]
+[return]

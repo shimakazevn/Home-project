@@ -1,0 +1,120 @@
+
+
+[_tb_system_call storage=system/_EV_kyouaiEND_tubomi.ks]
+
+[tb_start_tyrano_code]
+[macro name="日高"]
+[emb exp="f.familyname"]
+[endmacro]
+
+[macro name="舜"]
+[emb exp="f.name"]
+[endmacro]
+[_tb_end_tyrano_code]
+
+[tb_show_message_window  ]
+*top
+
+[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
+[bg  time="0"  method="crossfade"  storage="back_room_yoru0.png"  ]
+[mask_off  time="1000"  effect="fadeOut"  ]
+[playbgm  volume="50"  time="1000"  loop="true"  storage="END.mp3"  ]
+[tb_start_tyrano_code]
+;蕾音声開始
+[voconfig sebuf=2 name="蕾" vostorage="tubomi/voice_END2_tubomi{number}.mp3" number=1]
+[vostart]
+[_tb_end_tyrano_code]
+
+[tb_start_text mode=1 ]
+Thử sức ở buổi thử giọng của công ty giải trí rồi bị đánh trượt, đây đã là lần thứ mấy rồi không biết.[p]
+Chính bản thân Tsubomi dường như cũng「chẳng còn nhớ nổi nữa」rồi.[p]
+Mỗi lần bị đánh trượt ở vòng phỏng vấn hay xét duyệt, trái tim em ấy lại dần dần bị gặm nhấm.[p]
+Đến khi nhận ra, em ấy thậm chí còn chẳng biết bản thân mình là ai nữa──.[p]
+[舜]「Vậy hôm nay chúng ta lại tập tạo dáng nhé. Cởi quần áo ra rồi ngồi xổm xuống đi.」[p]
+Vì vẫn chưa thể từ bỏ, em ấy ngày nào cũng chấp nhận 『khóa học』 do tôi đề xuất.[p]
+#Tsubomi
+Tsubomi「Em biết rồi... Nhờ anh ạ.」[p]
+[舜]「Em còn nhớ phải làm thế nào không?」[p]
+Tsubomi cởi bỏ quần áo, phơi bày cơ thể mảnh mai rồi quỳ gối xuống trước mặt tôi.[p]
+Em ấy ngậm lấy dương vật của tôi một cách đầy quen thuộc, rồi bắt đầu mút mát.[r]Vừa phát ra tiếng chùn chụt, em ấy vừa ngước đôi mắt lên nhìn tôi.[p]
+[舜]「A~, giỏi lắm giỏi lắm. Góc độ đẹp đấy... Anh hưng phấn lắm rồi.」[p]
+#Tsubomi
+Tsubomi「Ưm, phù, chụt, chụt chụt. Trông em có đáng yêu không?」[p]
+[舜]「Đáng yêu lắm... Tsubomi quả nhiên là một nhân tài để trở thành người mẫu đấy.」[p]
+#Tsubomi
+Tsubomi「Ưm, chụt, chụt, em phải cố gắng hơn nữa mới được...」[p]
+Sau khi mút mát cẩn thận cho đến khi dương vật cương cứng, Tsubomi dang rộng hai chân ra.[p]
+[舜]「Vậy thì, hôm nay cũng quay phim nhé. Anh sẽ biến em thành người nổi tiếng trên mạng luôn.」[p]
+[_tb_end_text]
+
+[bg  time="2000"  method="fadeInUp"  storage="event/tubomi_kyouaiEND.png"  ]
+[tb_cg  id="cg_tubomi_kyouaiEND"  ]
+[tb_start_text mode=1 ]
+Tôi cầm điện thoại lên, đưa ống kính về phía em ấy, rồi không chút do dự nhấn nút ghi hình.[p]
+Qua màn hình, hình ảnh Tsubomi đang dang rộng hai chân, phơi bày cô bé ướt đẫm hiện lên rõ nét.[p]
+[舜]「Nào, tự giới thiệu bản thân đi. Chúng ta đã luyện tập nhiều lắm rồi mà nhỉ?」[p]
+#Tsubomi
+Tsubomi「Em làm được... Em là Tsubomi, người mẫu tương lai đây ạ♡」[p]
+Tôi chầm chậm đâm vào bên trong Tsubomi khi em ấy vừa cất giọng ngọt ngào.[r]Tôi chĩa camera quay lại cảnh dương vật đang trơn tuột chìm sâu vào bên trong.[p]
+Gương mặt thanh tú dần méo mó đi vì khoái cảm đã được ghi lại rõ nét.[p]
+#Tsubomi
+Tsubomi「Ưm! Aaa♡ To quá♡ Hà, đâm vào tận sâu bên trong rồi...♡」[p]
+Khi tôi bắt đầu chuyển động hông, Tsubomi cất lên những tiếng rên rỉ đáng yêu như một chú cún con.[p]
+Vừa nghe tiếng dập ra dập vào, gương mặt em ấy càng lúc càng buông thả.[p]
+#Tsubomi
+Tsubomi「Hiu, auu♡ Tuyệt quá♡ A♡ Sướng quá đi mất ạ♡」[p]
+#Tsubomi
+Tsubomi「Sắp phải đi thử giọng rồi, lỡ mà có thai thì phải làm sao đây♡ Bụng em sẽ to lên mất thôi.」[p]
+Một Tsubomi từng mạnh mẽ là thế, giờ đây lại đang rên rỉ ngọt ngào trước mặt tôi, tan chảy trong khoái cảm.[p]
+Đôi lông mày nhíu lại, đôi mắt ngấn nước ngước lên nhìn tôi, những ngón tay run rẩy bám chặt lấy ga giường――[p]
+Dáng vẻ không chút phản kháng, buông thả theo bản năng của em ấy, khiến tôi thấy đáng yêu không chịu nổi, và hưng phấn đến phát điên.[p]
+[舜]「Vậy thì dừng lại nhé?」[p]
+#Tsubomi
+Tsubomi「......Không chịu đâu...! Em không muốn dừng lại... Nếu thế thì... làm người mẫu gì đó sao cũng được...」[p]
+#Tsubomi
+Tsubomi「Em chỉ muốn sống cả đời này chìm đắm trong sung sướng thôi♡」[p]
+Có thể sẽ bị nói là thiên vị người nhà, nhưng quả thực em ấy... chắc chắn là có sức hút.[p]
+Thế nhưng, vì không thể tin tưởng cho đến khi có kết quả, không thể cố gắng trụ lại đến cùng nên mới không đạt được thành quả gì.[p]
+Điều đó, một kẻ cũng từng không thể tìm được chỗ đứng cho mình như tôi rất hiểu.[r]Nhưng mà... tôi tuyệt đối sẽ không nói cho em ấy biết đâu.[p]
+[舜]（Cứ thế này thì, em sẽ mãi mãi ở bên cạnh tôi đúng không? Đúng vậy nhỉ, Tsubomi...!）[p]
+Rõ ràng là không thể nào nghe thấy tiếng lòng của tôi, vậy mà Tsubomi lại gật đầu lia lịa với gương mặt đê mê.[p]
+Đôi mắt em ấy sáng rực lên nhưng lại vẩn đục vì khoái cảm, chẳng còn lấy một chút lý trí nào nữa.[p]
+[舜]「Nào, cảm nhận nhiều hơn nữa đi. Để cho thật nhiều người được chiêm ngưỡng "vẻ mặt sung sướng" của em chứ.」[p]
+[舜]（...Tùy vào cách biên tập, có khi lại nổi tiếng ấy chứ?）[p]
+#Tsubomi
+Tsubomi「Được mọi người chiêm ngưỡng sao? Em vui lắm♡ A... ra, ra mất, em ra mất thôi♡」[p]
+Không ngờ mối quan hệ giữa tôi và Tsubomi lại đi đến kết cục thế này.[p]
+Cả tình cảm dành cho Nagi, cả ước mơ của Tsubomi, những thứ đáng lẽ ra từng rất quan trọng hồi đó, [r]giờ đây dường như đã trở thành quá khứ xa xôi.[p]
+Điều quan trọng nhất với tôi lúc này, chỉ là hơi ấm của Tsubomi và những khoảng thời gian ân ái ngọt ngào, dâm đãng của hai đứa.[p]
+Chỉ cần buông mình vào hơi ấm đó, mọi thứ trong tôi đều được lấp đầy.[p]
+Tôi chẳng cần gì khác nữa.[p]
+Vừa nghe giọng nói ngọt ngào như tan chảy của Tsubomi, tôi cũng bắn tinh dịch vào sâu bên trong em ấy.[p]
+[_tb_end_text]
+
+[bg  time="2000"  method="crossfade"  storage="black.jpg"  ]
+[wait  time="1000"  ]
+[tb_start_text mode=1 ]
+【Tsubomi_Cuồng Ái END　Mặt trái của giấc mơ】[p]
+[_tb_end_text]
+
+[wait  time="3000"  ]
+[jump  storage="title_kaisou.ks"  target="*end"  cond="f.kaisou==1"  ]
+[tb_replay  id="tubomi_kyouaiEND"  ]
+[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
+[bg  time="0"  method="crossfade"  storage="event_fin2.jpg"  ]
+[tb_hide_message_window  ]
+[tb_eval  exp="sf.zenkaihou=1"  name="zenkaihou"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
+[mask_off  time="3000"  effect="fadeOut"  ]
+[tb_hide_message_window  ]
+[wait  time="2000"  ]
+[l  ]
+[bg  time="3000"  method="crossfade"  storage="event_fin.jpg"  ]
+[wait  time="3000"  ]
+[l  ]
+[stopbgm  time="500"  fadeout="true"  ]
+[bg  time="1000"  method="crossfade"  storage="black.jpg"  ]
+[tb_start_tyrano_code]
+[iscript]
+location.href="./index.html";
+[endscript]
+[_tb_end_tyrano_code]

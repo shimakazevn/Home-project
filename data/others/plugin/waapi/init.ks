@@ -1,0 +1,2 @@
+; Plugin waapi stub
+[return]

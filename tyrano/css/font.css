@@ -1,0 +1,22 @@
+/* ==========================================================================
+   CẤU HÌNH FONT TIẾNG VIỆT CHO BẢN WEB
+   ========================================================================== */
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body, div, span, p, a, input, textarea, button,
+.message_inner, .current_span, .glink_button, .button, 
+.menu_item, .ptext, .log_body, .save_list_item_text, .layer_menu {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif !important;
+}
+
+/* Tự động ngắt dòng thông minh cho văn bản tiếng Việt */
+.message_inner, .log_body, .current_span {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+}
