@@ -1,6 +1,6 @@
 {
   "version": "3.1.0",
-  "generated_at": "2026-09-02 09:56:27",
+  "generated_at": "2026-09-04 03:20:11",
   "total_files": 292,
   "files": {
     "data/asset_manifest.json": {
@@ -1064,8 +1064,8 @@
       "size": 2395
     },
     "data/scenario/sinnyu_PC.ks": {
-      "sha256": "e68b946eb0b28af69498945baeb7f7c01e4e8c549d9260abe9d571fee4aa7c0a",
-      "size": 21704
+      "sha256": "204a7bfedab2e150bd7ead7af4603eeccd9668b3d223052bd24512bc74a52a42",
+      "size": 11523
     },
     "data/scenario/sinnyu_rihure.ks": {
       "sha256": "09c045055a562bc4cb0683c8811669d056acb472bc815aacfaae2ca056234c9d",

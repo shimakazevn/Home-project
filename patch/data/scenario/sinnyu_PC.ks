@@ -11,6 +11,135 @@
 [endmacro]
 [_tb_end_tyrano_code]
 
+[iscript]
+window.HOME_initSlideViewer = function(minY, jumpTarget) {
+    if (window.HOME_cleanupSlideViewer) window.HOME_cleanupSlideViewer();
+    
+    var base = document.getElementById('tyrano_base') || document.body;
+    var slideY = 0;
+    var moveStep = 60;
+    var maxY = 0;
+    var jumped = false;
+    
+    // 1. Tạo nút Thoát (Exit Button) với giao diện hiện đại, phản hồi chạm tức thì
+    var oldBtn = document.getElementById('slide_exit_btn');
+    if (oldBtn) oldBtn.remove();
+    
+    var exitBtn = document.createElement('div');
+    exitBtn.id = 'slide_exit_btn';
+    exitBtn.textContent = 'Thoát ✕';
+    exitBtn.style.cssText = 'position:absolute;right:24px;bottom:24px;width:120px;height:44px;line-height:44px;text-align:center;background:rgba(0,0,0,0.85);color:#fff;border:2px solid rgba(255,255,255,0.85);border-radius:22px;font-size:16px;font-weight:bold;cursor:pointer;z-index:99999999;box-shadow:0 4px 16px rgba(0,0,0,0.6);user-select:none;-webkit-tap-highlight-color:transparent;';
+    
+    function doJump() {
+        if (jumped) return;
+        jumped = true;
+        if (window.HOME_cleanupSlideViewer) window.HOME_cleanupSlideViewer();
+        if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.ftag) {
+            window.TYRANO.kag.ftag.startTag("jump", { target: jumpTarget });
+        }
+    }
+    
+    exitBtn.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); doJump(); });
+    exitBtn.addEventListener('touchend', function(e) { e.preventDefault(); e.stopPropagation(); doJump(); }, { passive: false });
+    base.appendChild(exitBtn);
+    
+    // 2. Hàm di chuyển slide ảnh
+    function moveSlide(nextY, dir) {
+        var prevY = slideY;
+        nextY = Math.max(minY, Math.min(maxY, nextY));
+        slideY = nextY;
+        
+        if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.ftag) {
+            window.TYRANO.kag.ftag.startTag("anim", {
+                layer: 2,
+                name: "slide_img",
+                top: slideY,
+                time: 120
+            });
+        }
+        
+        // Tự động kết thúc khi cuộn hết ảnh xuống dưới cùng
+        if (!jumped && dir === 'up' && prevY > minY && slideY <= minY + 25) {
+            jumped = true;
+            if (window.HOME_cleanupSlideViewer) window.HOME_cleanupSlideViewer();
+            setTimeout(function() {
+                if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.ftag) {
+                    window.TYRANO.kag.ftag.startTag("jump", { target: jumpTarget });
+                }
+            }, 140);
+        }
+    }
+    
+    // 3. Touch Drag / Vuốt cảm ứng trên Mobile (iOS / Android)
+    var touchStartY = 0;
+    var touchStartSlideY = 0;
+    var isTouching = false;
+    
+    function onTouchStart(e) {
+        if (e.touches && e.touches.length === 1) {
+            touchStartY = e.touches[0].clientY;
+            touchStartSlideY = slideY;
+            isTouching = true;
+        }
+    }
+    
+    function onTouchMove(e) {
+        if (!isTouching || !e.touches || e.touches.length !== 1) return;
+        var diffY = e.touches[0].clientY - touchStartY;
+        var targetY = touchStartSlideY + diffY * 1.5;
+        moveSlide(targetY, diffY < 0 ? 'up' : 'down');
+        if (e.preventDefault) e.preventDefault();
+    }
+    
+    function onTouchEnd(e) {
+        isTouching = false;
+    }
+    
+    base.addEventListener('touchstart', onTouchStart, { passive: true, capture: true });
+    base.addEventListener('touchmove', onTouchMove, { passive: false, capture: true });
+    base.addEventListener('touchend', onTouchEnd, { passive: true, capture: true });
+    
+    // 4. Mouse Wheel (PC)
+    function onWheel(e) {
+        if (e.deltaY < 0) {
+            moveSlide(slideY + moveStep, 'down');
+        } else if (e.deltaY > 0) {
+            moveSlide(slideY - moveStep, 'up');
+        }
+        if (e.preventDefault) e.preventDefault();
+        if (e.stopPropagation) e.stopPropagation();
+    }
+    
+    base.addEventListener('wheel', onWheel, { passive: false, capture: true });
+    base.addEventListener('mousewheel', onWheel, { passive: false, capture: true });
+    base.addEventListener('DOMMouseScroll', onWheel, { passive: false, capture: true });
+    
+    // 5. Bàn phím (PC: Mũi tên lên / xuống)
+    function onKeyDown(e) {
+        if (e.keyCode === 38) {
+            moveSlide(slideY + moveStep, 'down');
+        } else if (e.keyCode === 40) {
+            moveSlide(slideY - moveStep, 'up');
+        }
+    }
+    window.addEventListener('keydown', onKeyDown);
+    
+    // 6. Cleanup function
+    window.HOME_cleanupSlideViewer = function() {
+        var btn = document.getElementById('slide_exit_btn');
+        if (btn) btn.remove();
+        base.removeEventListener('touchstart', onTouchStart, { passive: true, capture: true });
+        base.removeEventListener('touchmove', onTouchMove, { passive: false, capture: true });
+        base.removeEventListener('touchend', onTouchEnd, { passive: true, capture: true });
+        base.removeEventListener('wheel', onWheel, { passive: false, capture: true });
+        base.removeEventListener('mousewheel', onWheel, { passive: false, capture: true });
+        base.removeEventListener('DOMMouseScroll', onWheel, { passive: false, capture: true });
+        window.removeEventListener('keydown', onKeyDown);
+        window.HOME_cleanupSlideViewer = null;
+    };
+};
+[endscript]
+
 *1
 
 [tb_start_text mode=1 ]
@@ -20,110 +149,14 @@
 [mask  time="500"  effect="fadeIn"  color="0x000000"  ]
 [chara_hide_all  time="0"  wait="false"  ]
 [tb_start_tyrano_code]
-[image layer="2" x=" 0" y=" 0" storage="default/sns1.png" time="0" name="slide_img" time="0" ]
+[image layer="2" x=" 0" y=" 0" storage="default/sns1.png" time="0" name="slide_img" ]
 [_tb_end_tyrano_code]
 
 [tb_hide_message_window  ]
 [mask_off  time="1500"  effect="fadeOut"  ]
-[tb_ptext_show  x="1008"  y="6"  size="20"  color="0xffffff"  time="1000"  text="Cuộn con lăn chuột"  anim="false"  face="NotoSansVN, sans-serif"  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="920"  y="6"  size="20"  color="0xffffff"  time="1000"  text="Cuộn chuột hoặc vuốt để xem"  anim="false"  face="NotoSansVN, sans-serif"  edge="undefined"  shadow="undefined"  ]
 [iscript]
-// ====== 救済用「終了」ボタン ======
-$("#slide_exit_btn").remove();
-var exitBtn = $('<div id="slide_exit_btn">Thoát</div>');
-exitBtn.css({
-position: "absolute",
-right: "30px",
-bottom: "30px",
-width: "140px",
-height: "50px",
-lineHeight: "50px",
-textAlign: "center",
-background: "rgba(0,0,0,0.75)",
-color: "#fff",
-border: "1px solid #fff",
-borderRadius: "8px",
-fontSize: "20px",
-cursor: "pointer",
-zIndex: 999999
-});
-exitBtn.on("click", function(e){
-e.preventDefault();
-e.stopPropagation();
-// 二重実行防止
-if (jumped) return;
-jumped = true;
-// ボタン削除
-$("#slide_exit_btn").remove();
-// 強制的に次へ
-TYRANO.kag.ftag.startTag("jump", {
-target: jumpTarget
-});
-});
-$("#tyrano_base").append(exitBtn);
-// ↑↓キー & ホイール：画像を上下スライド（最北端でジャンプ）
-var slideY   = 0;      // 現在位置（初期が最下端なら0）
-var moveStep = 50;     // 移動量
-// 範囲：最北端(負)→最下端(0)
-var minY = -389;       // ★最北端
-var maxY = 0;          // 最下端
-var jumpTarget = "*comment";   // ←ジャンプ先ラベル
-var jumped = false;               // 二重ジャンプ防止
-function moveSlide(nextY, dir){   // dir: 'up' | 'down'
-var prevY = slideY;                             // 直前位置
-nextY = Math.max(minY, Math.min(maxY, nextY));  // クランプ
-slideY = nextY;
-TYRANO.kag.ftag.startTag("anim", {
-layer: 2,
-name: "slide_img",
-top: slideY,
-time: 150
-});
-// ====== 最北端でジャンプ ======
-// 直前は最北端より下（prevY > minY）で、今回「上方向操作」かつ 最北端へ到達（slideY <= minY + 1）
-if (!jumped && dir === 'up' && prevY > minY && slideY <= minY + 18) {
-jumped = true;
-// ★ここだけ追加
-$("#slide_exit_btn").remove();
-setTimeout(function(){
-TYRANO.kag.ftag.startTag("jump", { target: jumpTarget });
-}, 160); // animのtimeより少し長め
-}
-}
-// ---- キーボード（↑=38 上 / ↓=40 下）----
-$(document).off("keydown.ty_slide").on("keydown.ty_slide", function(e){
-if (e.keyCode === 38) {            // 上へ
-moveSlide(slideY - moveStep, 'up');
-} else if (e.keyCode === 40) {     // 下へ
-moveSlide(slideY + moveStep, 'down');
-}
-});
-// ---- ホイール（バックログ抑止のキャプチャ登録）----
-(function(){
-var base = document.getElementById('tyrano_base') || document;
-// 既存解除
-if (window._tySlideWheelHandler) {
-base.removeEventListener('wheel', window._tySlideWheelHandler, {passive:false, capture:true});
-base.removeEventListener('mousewheel', window._tySlideWheelHandler, {passive:false, capture:true});
-base.removeEventListener('DOMMouseScroll', window._tySlideWheelHandler, {passive:false, capture:true});
-window._tySlideWheelHandler = null;
-}
-function _tySlideWheelHandler(e){
-if (e.deltaY < 0) {              // 上へ
-moveSlide(slideY - moveStep, 'up');
-} else if (e.deltaY > 0) {       // 下へ
-moveSlide(slideY + moveStep, 'down');
-} else {
-return;
-}
-if (e.preventDefault) e.preventDefault();
-if (e.stopPropagation) e.stopPropagation();
-if (e.stopImmediatePropagation) e.stopImmediatePropagation();
-}
-window._tySlideWheelHandler = _tySlideWheelHandler;
-base.addEventListener('wheel', _tySlideWheelHandler, {passive:false, capture:true});
-base.addEventListener('mousewheel', _tySlideWheelHandler, {passive:false, capture:true});
-base.addEventListener('DOMMouseScroll', window._tySlideWheelHandler, {passive:false, capture:true});
-})();
+window.HOME_initSlideViewer(-389, "*comment");
 [endscript]
 
 [s  ]
@@ -138,14 +171,7 @@ base.addEventListener('DOMMouseScroll', window._tySlideWheelHandler, {passive:fa
 *end
 
 [iscript]
-$(document).off("keydown.ty_slide");
-var base = document.getElementById('tyrano_base') || document;
-if (window._tySlideWheelHandler) {
-base.removeEventListener('wheel', window._tySlideWheelHandler, {passive:false, capture:true});
-base.removeEventListener('mousewheel', window._tySlideWheelHandler, {passive:false, capture:true});
-base.removeEventListener('DOMMouseScroll', window._tySlideWheelHandler, {passive:false, capture:true});
-window._tySlideWheelHandler = null;
-}
+if (window.HOME_cleanupSlideViewer) window.HOME_cleanupSlideViewer();
 [endscript]
 
 [mask  time="500"  effect="fadeIn"  color="0x000000"  ]
@@ -166,110 +192,14 @@ window._tySlideWheelHandler = null;
 [mask  time="500"  effect="fadeIn"  color="0x000000"  ]
 [chara_hide_all  time="0"  wait="false"  ]
 [tb_start_tyrano_code]
-[image layer="2" x=" 0" y=" 0" storage="default/sns2.png" time="0" name="slide_img" time="0" ]
+[image layer="2" x=" 0" y=" 0" storage="default/sns2.png" time="0" name="slide_img" ]
 [_tb_end_tyrano_code]
 
 [tb_hide_message_window  ]
 [mask_off  time="1500"  effect="fadeOut"  ]
-[tb_ptext_show  x="1008"  y="6"  size="20"  color="0xffffff"  time="1000"  text="Cuộn con lăn chuột"  anim="false"  face="NotoSansVN, sans-serif"  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="920"  y="6"  size="20"  color="0xffffff"  time="1000"  text="Cuộn chuột hoặc vuốt để xem"  anim="false"  face="NotoSansVN, sans-serif"  edge="undefined"  shadow="undefined"  ]
 [iscript]
-// ====== 救済用「終了」ボタン ======
-$("#slide_exit_btn").remove();
-var exitBtn = $('<div id="slide_exit_btn">Thoát</div>');
-exitBtn.css({
-position: "absolute",
-right: "30px",
-bottom: "30px",
-width: "140px",
-height: "50px",
-lineHeight: "50px",
-textAlign: "center",
-background: "rgba(0,0,0,0.75)",
-color: "#fff",
-border: "1px solid #fff",
-borderRadius: "8px",
-fontSize: "20px",
-cursor: "pointer",
-zIndex: 999999
-});
-exitBtn.on("click", function(e){
-e.preventDefault();
-e.stopPropagation();
-// 二重実行防止
-if (jumped) return;
-jumped = true;
-// ボタン削除
-$("#slide_exit_btn").remove();
-// 強制的に次へ
-TYRANO.kag.ftag.startTag("jump", {
-target: jumpTarget
-});
-});
-$("#tyrano_base").append(exitBtn);
-// ↑↓キー & ホイール：画像を上下スライド（最北端でジャンプ）
-var slideY   = 0;      // 現在位置（初期が最下端なら0）
-var moveStep = 50;     // 移動量
-// 範囲：最北端(負)→最下端(0)
-var minY = -389;       // ★最北端
-var maxY = 0;          // 最下端
-var jumpTarget = "*comment2";   // ←ジャンプ先ラベル
-var jumped = false;               // 二重ジャンプ防止
-function moveSlide(nextY, dir){   // dir: 'up' | 'down'
-var prevY = slideY;                             // 直前位置
-nextY = Math.max(minY, Math.min(maxY, nextY));  // クランプ
-slideY = nextY;
-TYRANO.kag.ftag.startTag("anim", {
-layer: 2,
-name: "slide_img",
-top: slideY,
-time: 150
-});
-// ====== 最北端でジャンプ ======
-// 直前は最北端より下（prevY > minY）で、今回「上方向操作」かつ 最北端へ到達（slideY <= minY + 1）
-if (!jumped && dir === 'up' && prevY > minY && slideY <= minY + 18) {
-jumped = true;
-// ★ここだけ追加
-$("#slide_exit_btn").remove();
-setTimeout(function(){
-TYRANO.kag.ftag.startTag("jump", { target: jumpTarget });
-}, 160); // animのtimeより少し長め
-}
-}
-// ---- キーボード（↑=38 上 / ↓=40 下）----
-$(document).off("keydown.ty_slide").on("keydown.ty_slide", function(e){
-if (e.keyCode === 38) {            // 上へ
-moveSlide(slideY - moveStep, 'up');
-} else if (e.keyCode === 40) {     // 下へ
-moveSlide(slideY + moveStep, 'down');
-}
-});
-// ---- ホイール（バックログ抑止のキャプチャ登録）----
-(function(){
-var base = document.getElementById('tyrano_base') || document;
-// 既存解除
-if (window._tySlideWheelHandler) {
-base.removeEventListener('wheel', window._tySlideWheelHandler, {passive:false, capture:true});
-base.removeEventListener('mousewheel', window._tySlideWheelHandler, {passive:false, capture:true});
-base.removeEventListener('DOMMouseScroll', window._tySlideWheelHandler, {passive:false, capture:true});
-window._tySlideWheelHandler = null;
-}
-function _tySlideWheelHandler(e){
-if (e.deltaY < 0) {              // 上へ
-moveSlide(slideY - moveStep, 'up');
-} else if (e.deltaY > 0) {       // 下へ
-moveSlide(slideY + moveStep, 'down');
-} else {
-return;
-}
-if (e.preventDefault) e.preventDefault();
-if (e.stopPropagation) e.stopPropagation();
-if (e.stopImmediatePropagation) e.stopImmediatePropagation();
-}
-window._tySlideWheelHandler = _tySlideWheelHandler;
-base.addEventListener('wheel', _tySlideWheelHandler, {passive:false, capture:true});
-base.addEventListener('mousewheel', _tySlideWheelHandler, {passive:false, capture:true});
-base.addEventListener('DOMMouseScroll', window._tySlideWheelHandler, {passive:false, capture:true});
-})();
+window.HOME_initSlideViewer(-389, "*comment2");
 [endscript]
 
 [s  ]
@@ -279,7 +209,6 @@ base.addEventListener('DOMMouseScroll', window._tySlideWheelHandler, {passive:fa
 [tb_start_text mode=1 ]
 [舜]「Quà lưu niệm là bánh cuộn sao? Hừm... Tên Hayato đó cũng nhiệt tình gớm nhỉ.」[p]
 [舜]「Cái khí thế đó không biết kéo dài được bao lâu... Để tôi đứng từ xa xem kịch hay vậy.」[p]
-
 [_tb_end_text]
 
 [jump  storage="sinnyu_PC.ks"  target="*end"  ]
@@ -292,110 +221,14 @@ base.addEventListener('DOMMouseScroll', window._tySlideWheelHandler, {passive:fa
 [mask  time="500"  effect="fadeIn"  color="0x000000"  ]
 [chara_hide_all  time="0"  wait="false"  ]
 [tb_start_tyrano_code]
-[image layer="2" x=" 0" y=" 0" storage="default/sns3.png" time="0" name="slide_img" time="0" ]
+[image layer="2" x=" 0" y=" 0" storage="default/sns3.png" time="0" name="slide_img" ]
 [_tb_end_tyrano_code]
 
 [tb_hide_message_window  ]
 [mask_off  time="1500"  effect="fadeOut"  ]
-[tb_ptext_show  x="1008"  y="6"  size="20"  color="0xffffff"  time="1000"  text="Cuộn con lăn chuột"  anim="false"  face="NotoSansVN, sans-serif"  edge="undefined"  shadow="undefined"  ]
+[tb_ptext_show  x="920"  y="6"  size="20"  color="0xffffff"  time="1000"  text="Cuộn chuột hoặc vuốt để xem"  anim="false"  face="NotoSansVN, sans-serif"  edge="undefined"  shadow="undefined"  ]
 [iscript]
-// ====== 救済用「終了」ボタン ======
-$("#slide_exit_btn").remove();
-var exitBtn = $('<div id="slide_exit_btn">Thoát</div>');
-exitBtn.css({
-position: "absolute",
-right: "30px",
-bottom: "30px",
-width: "140px",
-height: "50px",
-lineHeight: "50px",
-textAlign: "center",
-background: "rgba(0,0,0,0.75)",
-color: "#fff",
-border: "1px solid #fff",
-borderRadius: "8px",
-fontSize: "20px",
-cursor: "pointer",
-zIndex: 999999
-});
-exitBtn.on("click", function(e){
-e.preventDefault();
-e.stopPropagation();
-// 二重実行防止
-if (jumped) return;
-jumped = true;
-// ボタン削除
-$("#slide_exit_btn").remove();
-// 強制的に次へ
-TYRANO.kag.ftag.startTag("jump", {
-target: jumpTarget
-});
-});
-$("#tyrano_base").append(exitBtn);
-// ↑↓キー & ホイール：画像を上下スライド（最北端でジャンプ）
-var slideY   = 0;      // 現在位置（初期が最下端なら0）
-var moveStep = 50;     // 移動量
-// 範囲：最北端(負)→最下端(0)
-var minY = -389;       // ★最北端
-var maxY = 0;          // 最下端
-var jumpTarget = "*comment3";   // ←ジャンプ先ラベル
-var jumped = false;               // 二重ジャンプ防止
-function moveSlide(nextY, dir){   // dir: 'up' | 'down'
-var prevY = slideY;                             // 直前位置
-nextY = Math.max(minY, Math.min(maxY, nextY));  // クランプ
-slideY = nextY;
-TYRANO.kag.ftag.startTag("anim", {
-layer: 2,
-name: "slide_img",
-top: slideY,
-time: 150
-});
-// ====== 最北端でジャンプ ======
-// 直前は最北端より下（prevY > minY）で、今回「上方向操作」かつ 最北端へ到達（slideY <= minY + 1）
-if (!jumped && dir === 'up' && prevY > minY && slideY <= minY + 18) {
-jumped = true;
-// ★ここだけ追加
-$("#slide_exit_btn").remove();
-setTimeout(function(){
-TYRANO.kag.ftag.startTag("jump", { target: jumpTarget });
-}, 160); // animのtimeより少し長め
-}
-}
-// ---- キーボード（↑=38 上 / ↓=40 下）----
-$(document).off("keydown.ty_slide").on("keydown.ty_slide", function(e){
-if (e.keyCode === 38) {            // 上へ
-moveSlide(slideY - moveStep, 'up');
-} else if (e.keyCode === 40) {     // 下へ
-moveSlide(slideY + moveStep, 'down');
-}
-});
-// ---- ホイール（バックログ抑止のキャプチャ登録）----
-(function(){
-var base = document.getElementById('tyrano_base') || document;
-// 既存解除
-if (window._tySlideWheelHandler) {
-base.removeEventListener('wheel', window._tySlideWheelHandler, {passive:false, capture:true});
-base.removeEventListener('mousewheel', window._tySlideWheelHandler, {passive:false, capture:true});
-base.removeEventListener('DOMMouseScroll', window._tySlideWheelHandler, {passive:false, capture:true});
-window._tySlideWheelHandler = null;
-}
-function _tySlideWheelHandler(e){
-if (e.deltaY < 0) {              // 上へ
-moveSlide(slideY - moveStep, 'up');
-} else if (e.deltaY > 0) {       // 下へ
-moveSlide(slideY + moveStep, 'down');
-} else {
-return;
-}
-if (e.preventDefault) e.preventDefault();
-if (e.stopPropagation) e.stopPropagation();
-if (e.stopImmediatePropagation) e.stopImmediatePropagation();
-}
-window._tySlideWheelHandler = _tySlideWheelHandler;
-base.addEventListener('wheel', _tySlideWheelHandler, {passive:false, capture:true});
-base.addEventListener('mousewheel', _tySlideWheelHandler, {passive:false, capture:true});
-base.addEventListener('DOMMouseScroll', window._tySlideWheelHandler, {passive:false, capture:true});
-})();
+window.HOME_initSlideViewer(-389, "*comment3");
 [endscript]
 
 [s  ]
@@ -405,7 +238,6 @@ base.addEventListener('DOMMouseScroll', window._tySlideWheelHandler, {passive:fa
 [tb_start_text mode=1 ]
 [舜]「Ủa? Phản ứng của Nagi có vẻ nhạt nhòa đi rồi nhỉ? ...Hừ, thấy được sự nóng vội của Hayato rồi đấy.」[p]
 [舜]「Phải mình thì nản lòng rồi đấy... Mà, cứ xem thêm chút nữa vậy.」[p]
-
 [_tb_end_text]
 
 [jump  storage="sinnyu_PC.ks"  target="*end"  ]
@@ -418,74 +250,14 @@ base.addEventListener('DOMMouseScroll', window._tySlideWheelHandler, {passive:fa
 [mask  time="500"  effect="fadeIn"  color="0x000000"  ]
 [chara_hide_all  time="0"  wait="false"  ]
 [tb_start_tyrano_code]
-[image layer="2" x=" 0" y=" 0" storage="default/sns4.png" time="0" name="slide_img" time="0" ]
+[image layer="2" x=" 0" y=" 0" storage="default/sns4.png" time="0" name="slide_img" ]
 [_tb_end_tyrano_code]
 
 [tb_hide_message_window  ]
 [mask_off  time="1500"  effect="fadeOut"  ]
+[tb_ptext_show  x="920"  y="6"  size="20"  color="0xffffff"  time="1000"  text="Cuộn chuột hoặc vuốt để xem"  anim="false"  face="NotoSansVN, sans-serif"  edge="undefined"  shadow="undefined"  ]
 [iscript]
-// ↑↓キー & ホイール：画像を上下スライド（最北端でジャンプ）
-var slideY   = 0;      // 現在位置（初期が最下端なら0）
-var moveStep = 50;     // 移動量
-// 範囲：最北端(負)→最下端(0)
-var minY = -990;       // ★最北端
-var maxY = 0;          // 最下端
-var jumpTarget = "*comment4";   // ←ジャンプ先ラベル
-var jumped = false;               // 二重ジャンプ防止
-function moveSlide(nextY, dir){   // dir: 'up' | 'down'
-var prevY = slideY;                             // 直前位置
-nextY = Math.max(minY, Math.min(maxY, nextY));  // クランプ
-slideY = nextY;
-TYRANO.kag.ftag.startTag("anim", {
-layer: 2,
-name: "slide_img",
-top: slideY,
-time: 150
-});
-// ====== 最北端でジャンプ ======
-// 直前は最北端より下（prevY > minY）で、今回「上方向操作」かつ 最北端へ到達（slideY <= minY + 1）
-if (!jumped && dir === 'up' && prevY > minY && slideY <= minY + 20) {
-jumped = true;
-setTimeout(function(){
-TYRANO.kag.ftag.startTag("jump", { target: jumpTarget });
-}, 160); // animのtimeより少し長め
-}
-}
-// ---- キーボード（↑=38 上 / ↓=40 下）----
-$(document).off("keydown.ty_slide").on("keydown.ty_slide", function(e){
-if (e.keyCode === 38) {            // 上へ
-moveSlide(slideY - moveStep, 'up');
-} else if (e.keyCode === 40) {     // 下へ
-moveSlide(slideY + moveStep, 'down');
-}
-});
-// ---- ホイール（バックログ抑止のキャプチャ登録）----
-(function(){
-var base = document.getElementById('tyrano_base') || document;
-// 既存解除
-if (window._tySlideWheelHandler) {
-base.removeEventListener('wheel', window._tySlideWheelHandler, {passive:false, capture:true});
-base.removeEventListener('mousewheel', window._tySlideWheelHandler, {passive:false, capture:true});
-base.removeEventListener('DOMMouseScroll', window._tySlideWheelHandler, {passive:false, capture:true});
-window._tySlideWheelHandler = null;
-}
-function _tySlideWheelHandler(e){
-if (e.deltaY < 0) {              // 上へ
-moveSlide(slideY - moveStep, 'up');
-} else if (e.deltaY > 0) {       // 下へ
-moveSlide(slideY + moveStep, 'down');
-} else {
-return;
-}
-if (e.preventDefault) e.preventDefault();
-if (e.stopPropagation) e.stopPropagation();
-if (e.stopImmediatePropagation) e.stopImmediatePropagation();
-}
-window._tySlideWheelHandler = _tySlideWheelHandler;
-base.addEventListener('wheel', _tySlideWheelHandler, {passive:false, capture:true});
-base.addEventListener('mousewheel', _tySlideWheelHandler, {passive:false, capture:true});
-base.addEventListener('DOMMouseScroll', _tySlideWheelHandler, {passive:false, capture:true});
-})();
+window.HOME_initSlideViewer(-990, "*comment4");
 [endscript]
 
 [s  ]
@@ -495,7 +267,6 @@ base.addEventListener('DOMMouseScroll', _tySlideWheelHandler, {passive:false, ca
 [tb_start_text mode=1 ]
 [舜]「Cuộc trò chuyện ngày càng một chiều rồi đấy... Fufu, bắt đầu thú vị rồi đây.」[p]
 [舜]「Nhìn Hayato tuyệt vọng níu kéo... thấy cũng hơi thảm hại nhưng đúng là cảnh tượng không tồi.」[p]
-
 [_tb_end_text]
 
 [jump  storage="sinnyu_PC.ks"  target="*end"  ]
@@ -508,74 +279,14 @@ base.addEventListener('DOMMouseScroll', _tySlideWheelHandler, {passive:false, ca
 [mask  time="500"  effect="fadeIn"  color="0x000000"  ]
 [chara_hide_all  time="0"  wait="false"  ]
 [tb_start_tyrano_code]
-[image layer="2" x=" 0" y=" 0" storage="default/sns5.png" time="0" name="slide_img" time="0" ]
+[image layer="2" x=" 0" y=" 0" storage="default/sns5.png" time="0" name="slide_img" ]
 [_tb_end_tyrano_code]
 
 [tb_hide_message_window  ]
 [mask_off  time="1500"  effect="fadeOut"  ]
+[tb_ptext_show  x="920"  y="6"  size="20"  color="0xffffff"  time="1000"  text="Cuộn chuột hoặc vuốt để xem"  anim="false"  face="NotoSansVN, sans-serif"  edge="undefined"  shadow="undefined"  ]
 [iscript]
-// ↑↓キー & ホイール：画像を上下スライド（最北端でジャンプ）
-var slideY   = 0;      // 現在位置（初期が最下端なら0）
-var moveStep = 50;     // 移動量
-// 範囲：最北端(負)→最下端(0)
-var minY = -1100;       // ★最北端
-var maxY = 0;          // 最下端
-var jumpTarget = "*comment5";   // ←ジャンプ先ラベル
-var jumped = false;               // 二重ジャンプ防止
-function moveSlide(nextY, dir){   // dir: 'up' | 'down'
-var prevY = slideY;                             // 直前位置
-nextY = Math.max(minY, Math.min(maxY, nextY));  // クランプ
-slideY = nextY;
-TYRANO.kag.ftag.startTag("anim", {
-layer: 2,
-name: "slide_img",
-top: slideY,
-time: 150
-});
-// ====== 最北端でジャンプ ======
-// 直前は最北端より下（prevY > minY）で、今回「上方向操作」かつ 最北端へ到達（slideY <= minY + 1）
-if (!jumped && dir === 'up' && prevY > minY && slideY <= minY + 30) {
-jumped = true;
-setTimeout(function(){
-TYRANO.kag.ftag.startTag("jump", { target: jumpTarget });
-}, 160); // animのtimeより少し長め
-}
-}
-// ---- キーボード（↑=38 上 / ↓=40 下）----
-$(document).off("keydown.ty_slide").on("keydown.ty_slide", function(e){
-if (e.keyCode === 38) {            // 上へ
-moveSlide(slideY - moveStep, 'up');
-} else if (e.keyCode === 40) {     // 下へ
-moveSlide(slideY + moveStep, 'down');
-}
-});
-// ---- ホイール（バックログ抑止のキャプチャ登録）----
-(function(){
-var base = document.getElementById('tyrano_base') || document;
-// 既存解除
-if (window._tySlideWheelHandler) {
-base.removeEventListener('wheel', window._tySlideWheelHandler, {passive:false, capture:true});
-base.removeEventListener('mousewheel', window._tySlideWheelHandler, {passive:false, capture:true});
-base.removeEventListener('DOMMouseScroll', window._tySlideWheelHandler, {passive:false, capture:true});
-window._tySlideWheelHandler = null;
-}
-function _tySlideWheelHandler(e){
-if (e.deltaY < 0) {              // 上へ
-moveSlide(slideY - moveStep, 'up');
-} else if (e.deltaY > 0) {       // 下へ
-moveSlide(slideY + moveStep, 'down');
-} else {
-return;
-}
-if (e.preventDefault) e.preventDefault();
-if (e.stopPropagation) e.stopPropagation();
-if (e.stopImmediatePropagation) e.stopImmediatePropagation();
-}
-window._tySlideWheelHandler = _tySlideWheelHandler;
-base.addEventListener('wheel', _tySlideWheelHandler, {passive:false, capture:true});
-base.addEventListener('mousewheel', _tySlideWheelHandler, {passive:false, capture:true});
-base.addEventListener('DOMMouseScroll', _tySlideWheelHandler, {passive:false, capture:true});
-})();
+window.HOME_initSlideViewer(-1100, "*comment5");
 [endscript]
 
 [s  ]
